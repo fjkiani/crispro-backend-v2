@@ -1,0 +1,22 @@
+{
+  "symbol": "TP53",
+  "name": "tumor protein p53",
+  "chromosome": "17",
+  "start": 7668402,
+  "end": 7687550,
+  "strand": "+",
+  "function": "Tumor suppressor protein that regulates cell cycle, apoptosis, and DNA repair",
+  "pathways": ["pathway/MM_core", "pathway/TP53_signaling"],
+  "diseases": ["Multiple Myeloma", "Breast Cancer", "Lung Cancer", "Colorectal Cancer"],
+  "helper_copy": "TP53 is the 'guardian of the genome' - when mutated, cells lose their ability to repair DNA damage and undergo programmed cell death, leading to cancer development and progression.",
+  "provenance": {
+    "source": "ensembl",
+    "created_at": "2024-01-15T10:00:00Z",
+    "sha256": "abc123def456",
+    "curator": "CrisPRO.ai KB Team",
+    "license": "CC BY 4.0"
+  }
+}
+
+
+

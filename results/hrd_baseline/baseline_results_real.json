@@ -1,0 +1,43 @@
+{
+  "cohort": {
+    "study": "ov_tcga",
+    "n_samples": 100,
+    "positives": 69,
+    "prevalence": 0.69
+  },
+  "ablations": {
+    "baseline": {
+      "ablation_mode": "baseline",
+      "profile": "baseline",
+      "enable_fusion": false,
+      "n_variants": 100,
+      "n_predictions": 87,
+      "auroc": 0.44035087719298244,
+      "auprc": 0.6316653703223576,
+      "positives": 57,
+      "prevalence": 0.6551724137931034
+    },
+    "richer_s": {
+      "ablation_mode": "richer_s",
+      "profile": "richer_s",
+      "enable_fusion": false,
+      "n_variants": 100,
+      "n_predictions": 89,
+      "auroc": 0.4440677966101695,
+      "auprc": 0.6408171842473355,
+      "positives": 59,
+      "prevalence": 0.6629213483146067
+    },
+    "spe_full": {
+      "ablation_mode": "SPE",
+      "profile": "full",
+      "enable_fusion": false,
+      "n_variants": 100,
+      "n_predictions": 89,
+      "auroc": 0.44887005649717515,
+      "auprc": 0.6468495796718992,
+      "positives": 59,
+      "prevalence": 0.6629213483146067
+    }
+  }
+}

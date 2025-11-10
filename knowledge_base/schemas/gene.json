@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["symbol", "name", "provenance"],
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "description": "Gene symbol (e.g., TP53, BRAF)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full gene name"
+    },
+    "chromosome": {
+      "type": "string",
+      "description": "Chromosome location"
+    },
+    "start": {
+      "type": "integer",
+      "description": "Genomic start position"
+    },
+    "end": {
+      "type": "integer",
+      "description": "Genomic end position"
+    },
+    "strand": {
+      "type": "string",
+      "enum": ["+", "-"],
+      "description": "DNA strand orientation"
+    },
+    "function": {
+      "type": "string",
+      "description": "Brief functional description"
+    },
+    "pathways": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Associated pathway IDs"
+    },
+    "diseases": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Associated disease terms"
+    },
+    "helper_copy": {
+      "type": "string",
+      "description": "What this tells you - user-friendly explanation"
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source", "created_at"],
+      "properties": {
+        "source": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "sha256": {"type": "string"},
+        "curator": {"type": "string"},
+        "license": {"type": "string"}
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["name", "type", "provenance"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Disease name"
+    },
+    "type": {
+      "type": "string",
+      "description": "Disease type (cancer, genetic, etc.)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Disease description"
+    },
+    "genes": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Associated gene symbols"
+    },
+    "pathways": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Associated pathway IDs"
+    },
+    "drugs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Associated drug names"
+    },
+    "helper_copy": {
+      "type": "string",
+      "description": "What this tells you - user-friendly explanation"
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source", "created_at"],
+      "properties": {
+        "source": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "sha256": {"type": "string"},
+        "curator": {"type": "string"},
+        "license": {"type": "string"}
+      }
+    }
+  }
+}
+
+
+

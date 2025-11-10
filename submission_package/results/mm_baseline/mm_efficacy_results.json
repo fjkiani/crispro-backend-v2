@@ -1,0 +1,411 @@
+{
+  "test_variants": [
+    {
+      "gene": "BRAF",
+      "hgvs_p": "V600E",
+      "chrom": "7",
+      "pos": 140453136,
+      "ref": "T",
+      "alt": "A",
+      "expected_high": true,
+      "drug": "BRAF inhibitor"
+    },
+    {
+      "gene": "BRAF",
+      "hgvs_p": "V600K",
+      "chrom": "7",
+      "pos": 140453136,
+      "ref": "T",
+      "alt": "G",
+      "expected_high": true,
+      "drug": "BRAF inhibitor"
+    },
+    {
+      "gene": "KRAS",
+      "hgvs_p": "G12D",
+      "chrom": "12",
+      "pos": 25245350,
+      "ref": "C",
+      "alt": "T",
+      "expected_high": true,
+      "drug": "MEK inhibitor"
+    },
+    {
+      "gene": "KRAS",
+      "hgvs_p": "G12V",
+      "chrom": "12",
+      "pos": 25245350,
+      "ref": "C",
+      "alt": "A",
+      "expected_high": true,
+      "drug": "MEK inhibitor"
+    },
+    {
+      "gene": "NRAS",
+      "hgvs_p": "Q61K",
+      "chrom": "1",
+      "pos": 114713909,
+      "ref": "G",
+      "alt": "T",
+      "expected_high": true,
+      "drug": "MEK inhibitor"
+    },
+    {
+      "gene": "TP53",
+      "hgvs_p": "R248W",
+      "chrom": "17",
+      "pos": 7577538,
+      "ref": "C",
+      "alt": "T",
+      "expected_high": false,
+      "drug": "None"
+    },
+    {
+      "gene": "TP53",
+      "hgvs_p": "R273H",
+      "chrom": "17",
+      "pos": 7577120,
+      "ref": "G",
+      "alt": "A",
+      "expected_high": false,
+      "drug": "None"
+    }
+  ],
+  "results": [
+    {
+      "variant": "BRAF V600E",
+      "expected_drug": "BRAF inhibitor",
+      "expected_high": true,
+      "drugs": {
+        "BRAF inhibitor": {
+          "confidence": 0.453,
+          "efficacy_score": 0.215,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "MEK inhibitor": {
+          "confidence": 0.447,
+          "efficacy_score": 0.234,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Proteasome inhibitor": {
+          "confidence": 0.318,
+          "efficacy_score": 0.119,
+          "evidence_tier": "consider",
+          "badges": []
+        },
+        "IMiD": {
+          "confidence": 0.314,
+          "efficacy_score": 0.099,
+          "evidence_tier": "consider",
+          "badges": []
+        },
+        "Anti-CD38": {
+          "confidence": 0.223,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient",
+          "badges": []
+        }
+      }
+    },
+    {
+      "variant": "BRAF V600K",
+      "expected_drug": "BRAF inhibitor",
+      "expected_high": true,
+      "drugs": {
+        "BRAF inhibitor": {
+          "confidence": 0.515,
+          "efficacy_score": 0.465,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "MEK inhibitor": {
+          "confidence": 0.505,
+          "efficacy_score": 0.465,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Proteasome inhibitor": {
+          "confidence": 0.477,
+          "efficacy_score": 0.351,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "IMiD": {
+          "confidence": 0.452,
+          "efficacy_score": 0.254,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Anti-CD38": {
+          "confidence": 0.378,
+          "efficacy_score": 0.158,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "KRAS G12D",
+      "expected_drug": "MEK inhibitor",
+      "expected_high": true,
+      "drugs": {
+        "MEK inhibitor": {
+          "confidence": 0.53,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "BRAF inhibitor": {
+          "confidence": 0.52,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "IMiD": {
+          "confidence": 0.52,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Proteasome inhibitor": {
+          "confidence": 0.52,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Anti-CD38": {
+          "confidence": 0.52,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "KRAS G12V",
+      "expected_drug": "MEK inhibitor",
+      "expected_high": true,
+      "drugs": {
+        "MEK inhibitor": {
+          "confidence": 0.53,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "BRAF inhibitor": {
+          "confidence": 0.52,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "IMiD": {
+          "confidence": 0.52,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Proteasome inhibitor": {
+          "confidence": 0.52,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Anti-CD38": {
+          "confidence": 0.52,
+          "efficacy_score": 0.51,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "NRAS Q61K",
+      "expected_drug": "MEK inhibitor",
+      "expected_high": true,
+      "drugs": {
+        "MEK inhibitor": {
+          "confidence": 0.52,
+          "efficacy_score": 0.48,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "BRAF inhibitor": {
+          "confidence": 0.51,
+          "efficacy_score": 0.48,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "IMiD": {
+          "confidence": 0.51,
+          "efficacy_score": 0.48,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Proteasome inhibitor": {
+          "confidence": 0.51,
+          "efficacy_score": 0.48,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Anti-CD38": {
+          "confidence": 0.51,
+          "efficacy_score": 0.48,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "TP53 R248W",
+      "expected_drug": "None",
+      "expected_high": false,
+      "drugs": {
+        "IMiD": {
+          "confidence": 0.555,
+          "efficacy_score": 0.515,
+          "evidence_tier": "consider",
+          "badges": [
+            "ClinVar-Moderate",
+            "PathwayAligned"
+          ]
+        },
+        "Proteasome inhibitor": {
+          "confidence": 0.555,
+          "efficacy_score": 0.515,
+          "evidence_tier": "consider",
+          "badges": [
+            "ClinVar-Moderate",
+            "PathwayAligned"
+          ]
+        },
+        "BRAF inhibitor": {
+          "confidence": 0.549,
+          "efficacy_score": 0.491,
+          "evidence_tier": "consider",
+          "badges": [
+            "ClinVar-Moderate",
+            "PathwayAligned"
+          ]
+        },
+        "MEK inhibitor": {
+          "confidence": 0.501,
+          "efficacy_score": 0.301,
+          "evidence_tier": "consider",
+          "badges": [
+            "ClinVar-Moderate",
+            "PathwayAligned"
+          ]
+        },
+        "Anti-CD38": {
+          "confidence": 0.501,
+          "efficacy_score": 0.301,
+          "evidence_tier": "consider",
+          "badges": [
+            "ClinVar-Moderate",
+            "PathwayAligned"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "TP53 R273H",
+      "expected_drug": "None",
+      "expected_high": false,
+      "drugs": {
+        "BRAF inhibitor": {
+          "confidence": 0.505,
+          "efficacy_score": 0.465,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "IMiD": {
+          "confidence": 0.505,
+          "efficacy_score": 0.465,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Proteasome inhibitor": {
+          "confidence": 0.505,
+          "efficacy_score": 0.465,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "MEK inhibitor": {
+          "confidence": 0.5,
+          "efficacy_score": 0.444,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        },
+        "Anti-CD38": {
+          "confidence": 0.5,
+          "efficacy_score": 0.444,
+          "evidence_tier": "consider",
+          "badges": [
+            "PathwayAligned"
+          ]
+        }
+      }
+    }
+  ],
+  "metrics": {
+    "accuracy": 1.0,
+    "avg_confidence": 0.4867999999999999,
+    "n_tested": 7,
+    "mapk_correct": 5,
+    "mapk_total": 5
+  }
+}

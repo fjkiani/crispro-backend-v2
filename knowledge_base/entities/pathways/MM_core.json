@@ -1,0 +1,20 @@
+{
+  "id": "MM_core",
+  "name": "Multiple Myeloma Core Pathways",
+  "description": "Essential pathways involved in multiple myeloma pathogenesis and therapeutic targeting",
+  "genes": ["TP53", "BRAF", "KRAS", "NRAS", "MYC", "CCND1", "RB1", "ATM", "BRCA1", "BRCA2"],
+  "diseases": ["Multiple Myeloma", "Plasma Cell Disorders"],
+  "drug_targets": ["BRAF", "MEK", "PARP", "CDK4/6", "BCL2"],
+  "mechanism": "Multiple myeloma is driven by dysregulation of cell cycle control (TP53, RB1), MAPK signaling (BRAF, RAS), DNA repair (BRCA1/2, ATM), and apoptosis (BCL2). These pathways represent key therapeutic targets.",
+  "helper_copy": "Multiple myeloma involves multiple interconnected pathways. Understanding which pathways are disrupted helps predict which treatments will be most effective and identify resistance mechanisms.",
+  "provenance": {
+    "source": "synthetic_demo",
+    "created_at": "2024-01-15T10:00:00Z",
+    "sha256": "mno345pqr678",
+    "curator": "CrisPRO.ai KB Team",
+    "license": "Internal use only"
+  }
+}
+
+
+

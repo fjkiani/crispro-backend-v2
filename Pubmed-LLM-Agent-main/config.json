@@ -1,0 +1,19 @@
+{
+  "general": {
+    "max_results": 10000,
+    "llm_rerank": true,
+    "pmc_only": false,
+    "no_abstracts": false,
+    "only_trials": false,
+    "batch_size": 30,
+    "extra_filters": null
+  },
+  "llm": {
+    "model": "gemini-2.5-flash",
+    "api_key": "GEMINI_API_KEY"
+  },
+  "pubmed": {
+    "email": "youremail@address.com",
+    "api_key": "NCBI_API_KEY"
+  }
+}

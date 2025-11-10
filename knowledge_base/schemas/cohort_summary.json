@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["study", "filters", "n_samples", "by_gene", "provenance"],
+  "properties": {
+    "study": {
+      "type": "string",
+      "description": "Study identifier"
+    },
+    "filters": {
+      "type": "object",
+      "description": "Applied filters (genes, variants, etc.)"
+    },
+    "n_samples": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of samples"
+    },
+    "n_variants": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of variants"
+    },
+    "by_gene": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["gene", "n", "prevalence"],
+        "properties": {
+          "gene": {"type": "string"},
+          "n": {"type": "integer", "minimum": 0},
+          "prevalence": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      },
+      "description": "Gene-level coverage statistics"
+    },
+    "coverage_summary": {
+      "type": "object",
+      "description": "Overall coverage statistics"
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source", "created_at"],
+      "properties": {
+        "source": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "sha256": {"type": "string"},
+        "curator": {"type": "string"},
+        "license": {"type": "string"},
+        "run_id": {"type": "string"},
+        "mode": {"type": "string"}
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,50 @@
+{
+  "cohort": {
+    "study": "ov_tcga",
+    "n_samples": 500,
+    "positives": 378,
+    "prevalence": 0.756
+  },
+  "ablations": {
+    "baseline": {
+      "ablation_mode": "baseline",
+      "profile": "baseline",
+      "n_variants": 500,
+      "auroc": 0.5,
+      "auprc": 0.15,
+      "note": "STUB - Replace with real efficacy predictions and sklearn metrics"
+    },
+    "S_only": {
+      "ablation_mode": "S_only",
+      "profile": "baseline",
+      "n_variants": 500,
+      "auroc": 0.5,
+      "auprc": 0.15,
+      "note": "STUB - Replace with real efficacy predictions and sklearn metrics"
+    },
+    "P_only": {
+      "ablation_mode": "P_only",
+      "profile": "baseline",
+      "n_variants": 500,
+      "auroc": 0.5,
+      "auprc": 0.15,
+      "note": "STUB - Replace with real efficacy predictions and sklearn metrics"
+    },
+    "E_only": {
+      "ablation_mode": "E_only",
+      "profile": "baseline",
+      "n_variants": 500,
+      "auroc": 0.5,
+      "auprc": 0.15,
+      "note": "STUB - Replace with real efficacy predictions and sklearn metrics"
+    },
+    "SPE": {
+      "ablation_mode": "SPE",
+      "profile": "baseline",
+      "n_variants": 500,
+      "auroc": 0.5,
+      "auprc": 0.15,
+      "note": "STUB - Replace with real efficacy predictions and sklearn metrics"
+    }
+  }
+}

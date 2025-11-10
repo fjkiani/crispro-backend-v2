@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["name", "weights", "gates", "flags", "version", "provenance"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Profile name (e.g., baseline_v1, fusion_v1)"
+    },
+    "weights": {
+      "type": "object",
+      "description": "Scoring weights for different components"
+    },
+    "gates": {
+      "type": "object",
+      "description": "Threshold gates for different criteria"
+    },
+    "flags": {
+      "type": "object",
+      "description": "Feature flags and toggles"
+    },
+    "version": {
+      "type": "string",
+      "description": "Profile version"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Profile description and notes"
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source", "created_at"],
+      "properties": {
+        "source": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "sha256": {"type": "string"},
+        "curator": {"type": "string"},
+        "license": {"type": "string"}
+      }
+    }
+  }
+}
+
+
+

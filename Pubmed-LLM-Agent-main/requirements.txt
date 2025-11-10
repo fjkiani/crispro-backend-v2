@@ -1,0 +1,6 @@
+google-genai
+requests
+tqdm
+lxml
+numpy
+scikit-learn

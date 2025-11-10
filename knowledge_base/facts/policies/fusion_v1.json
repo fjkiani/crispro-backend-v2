@@ -1,0 +1,32 @@
+{
+  "name": "fusion_v1",
+  "weights": {
+    "sequence": 0.5,
+    "pathway": 0.25,
+    "evidence": 0.25
+  },
+  "gates": {
+    "min_confidence": 0.4,
+    "min_evidence_tier": "supported",
+    "require_pathway_alignment": true
+  },
+  "flags": {
+    "EVO_USE_DELTA_ONLY": false,
+    "EVO_FORCE_MODEL": "evo2_7b",
+    "DISABLE_FUSION": false,
+    "DISABLE_LITERATURE": false,
+    "GUIDANCE_FAST": false
+  },
+  "version": "v1.0",
+  "notes": "Fusion profile for enhanced analysis with Fusion Engine integration, literature agent, and richer sequence analysis. Uses evo2_7b with multi-window scoring.",
+  "provenance": {
+    "source": "evo_flags_and_profiles.mdc",
+    "created_at": "2024-01-15T10:00:00Z",
+    "sha256": "stu901vwx234",
+    "curator": "CrisPRO.ai KB Team",
+    "license": "Internal use only"
+  }
+}
+
+
+

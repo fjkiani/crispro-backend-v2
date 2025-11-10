@@ -1,0 +1,17 @@
+Protein Change	Annotation	Custom Driver	Custom Driver Tiers	Mutation Type	(A) BRCA1	(B) BRCA2	Log2 Ratio	p-Value	q-Value	Enriched in	MS
+C711*	OncoKB: Likely Oncogenic, level_1, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Nonsense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+S1882*	OncoKB: Likely Oncogenic, level_1, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Nonsense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+S2697Kfs*31	OncoKB: Likely Oncogenic, level_1, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Frame_Shift_Del	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+L3172Afs*44	OncoKB: Likely Oncogenic, level_1, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Frame_Shift_Del	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+E2906*	OncoKB: Likely Oncogenic, level_1, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Nonsense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+K1406Nfs*3	OncoKB: Likely Oncogenic, level_1, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Frame_Shift_Del	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+S1230Lfs*9	OncoKB: Likely Oncogenic, level_1, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Frame_Shift_Del	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+T2517Hfs*22	OncoKB: Likely Oncogenic, level_1, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Frame_Shift_Ins	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+V3283Afs*2	OncoKB: Likely Oncogenic, level_1, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Frame_Shift_Ins	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+N1906I	OncoKB: Unknown, level NA, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Missense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+Q1934K	OncoKB: Unknown, level NA, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Missense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+T1354M	OncoKB: Inconclusive, level NA, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Missense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+K1638E	OncoKB: Unknown, level NA, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Missense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+V3079I	OncoKB: Likely Neutral, level NA, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Missense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+T1225K	OncoKB: Unknown, level NA, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Missense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.
+N1910S	OncoKB: Unknown, level NA, resistance NA;CIViC: NA;CancerHotspot: no;3DHotspot: no			Missense_Mutation	0 (0.00%)	1 (6.67%)	<-10	0.455	0.455	(B) BRCA2	.

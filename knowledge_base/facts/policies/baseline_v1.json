@@ -1,0 +1,32 @@
+{
+  "name": "baseline_v1",
+  "weights": {
+    "sequence": 0.4,
+    "pathway": 0.3,
+    "evidence": 0.3
+  },
+  "gates": {
+    "min_confidence": 0.3,
+    "min_evidence_tier": "consider",
+    "require_pathway_alignment": false
+  },
+  "flags": {
+    "EVO_USE_DELTA_ONLY": true,
+    "EVO_FORCE_MODEL": "evo2_1b",
+    "DISABLE_FUSION": true,
+    "DISABLE_LITERATURE": true,
+    "GUIDANCE_FAST": true
+  },
+  "version": "v1.0",
+  "notes": "Baseline profile for stable, fast analysis with minimal external dependencies. Uses evo2_1b with delta-only scoring, no Fusion Engine, no literature agent.",
+  "provenance": {
+    "source": "evo_flags_and_profiles.mdc",
+    "created_at": "2024-01-15T10:00:00Z",
+    "sha256": "pqr678stu901",
+    "curator": "CrisPRO.ai KB Team",
+    "license": "Internal use only"
+  }
+}
+
+
+

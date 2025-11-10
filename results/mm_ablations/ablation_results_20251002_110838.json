@@ -1,0 +1,471 @@
+{
+  "timestamp": "2025-10-02T11:08:38.230402",
+  "ablation_modes": [
+    "S",
+    "P",
+    "E",
+    "SP",
+    "SE",
+    "PE",
+    "SPE"
+  ],
+  "summary": {
+    "S": {
+      "pathway_accuracy": 0.4,
+      "avg_confidence": 0.24900000000000005,
+      "avg_margin": 0.0,
+      "mapk_correct": 2,
+      "mapk_total": 5
+    },
+    "P": {
+      "pathway_accuracy": 0.4,
+      "avg_confidence": 0.45000000000000007,
+      "avg_margin": 0.0,
+      "mapk_correct": 2,
+      "mapk_total": 5
+    },
+    "E": {
+      "pathway_accuracy": 0.4,
+      "avg_confidence": 0.19999999999999998,
+      "avg_margin": 0.0,
+      "mapk_correct": 2,
+      "mapk_total": 5
+    },
+    "SP": {
+      "pathway_accuracy": 1.0,
+      "avg_confidence": 0.46714285714285714,
+      "avg_margin": 0.010000000000000009,
+      "mapk_correct": 5,
+      "mapk_total": 5
+    },
+    "SE": {
+      "pathway_accuracy": 0.4,
+      "avg_confidence": 0.24900000000000005,
+      "avg_margin": 0.0,
+      "mapk_correct": 2,
+      "mapk_total": 5
+    },
+    "PE": {
+      "pathway_accuracy": 0.4,
+      "avg_confidence": 0.5071428571428571,
+      "avg_margin": 0.0,
+      "mapk_correct": 2,
+      "mapk_total": 5
+    },
+    "SPE": {
+      "pathway_accuracy": 1.0,
+      "avg_confidence": 0.5242857142857142,
+      "avg_margin": 0.010000000000000009,
+      "mapk_correct": 5,
+      "mapk_total": 5
+    }
+  },
+  "per_variant_details": {
+    "S": [
+      {
+        "variant": "BRAF V600E",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.217,
+        "tier": "insufficient",
+        "correct": true
+      },
+      {
+        "variant": "BRAF V600K",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.217,
+        "tier": "insufficient",
+        "correct": true
+      },
+      {
+        "variant": "KRAS G12D",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.32,
+        "tier": "insufficient",
+        "correct": false
+      },
+      {
+        "variant": "KRAS G12V",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.32,
+        "tier": "insufficient",
+        "correct": false
+      },
+      {
+        "variant": "NRAS Q61K",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.217,
+        "tier": "insufficient",
+        "correct": false
+      },
+      {
+        "variant": "TP53 R248W",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.235,
+        "tier": "insufficient",
+        "correct": null
+      },
+      {
+        "variant": "TP53 R273H",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.217,
+        "tier": "insufficient",
+        "correct": null
+      }
+    ],
+    "P": [
+      {
+        "variant": "BRAF V600E",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.45,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "BRAF V600K",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.45,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "KRAS G12D",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.45,
+        "tier": "consider",
+        "correct": false
+      },
+      {
+        "variant": "KRAS G12V",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.45,
+        "tier": "consider",
+        "correct": false
+      },
+      {
+        "variant": "NRAS Q61K",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.45,
+        "tier": "consider",
+        "correct": false
+      },
+      {
+        "variant": "TP53 R248W",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.45,
+        "tier": "consider",
+        "correct": null
+      },
+      {
+        "variant": "TP53 R273H",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.45,
+        "tier": "consider",
+        "correct": null
+      }
+    ],
+    "E": [
+      {
+        "variant": "BRAF V600E",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.2,
+        "tier": "insufficient",
+        "correct": true
+      },
+      {
+        "variant": "BRAF V600K",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.2,
+        "tier": "insufficient",
+        "correct": true
+      },
+      {
+        "variant": "KRAS G12D",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.2,
+        "tier": "insufficient",
+        "correct": false
+      },
+      {
+        "variant": "KRAS G12V",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.2,
+        "tier": "insufficient",
+        "correct": false
+      },
+      {
+        "variant": "NRAS Q61K",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.2,
+        "tier": "insufficient",
+        "correct": false
+      },
+      {
+        "variant": "TP53 R248W",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.2,
+        "tier": "insufficient",
+        "correct": null
+      },
+      {
+        "variant": "TP53 R273H",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.2,
+        "tier": "insufficient",
+        "correct": null
+      }
+    ],
+    "SP": [
+      {
+        "variant": "BRAF V600E",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.465,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "BRAF V600K",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.465,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "KRAS G12D",
+        "expected": "MEK inhibitor",
+        "predicted": "MEK inhibitor",
+        "confidence": 0.48,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "KRAS G12V",
+        "expected": "MEK inhibitor",
+        "predicted": "MEK inhibitor",
+        "confidence": 0.48,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "NRAS Q61K",
+        "expected": "MEK inhibitor",
+        "predicted": "MEK inhibitor",
+        "confidence": 0.465,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "TP53 R248W",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.46,
+        "tier": "consider",
+        "correct": null
+      },
+      {
+        "variant": "TP53 R273H",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.455,
+        "tier": "consider",
+        "correct": null
+      }
+    ],
+    "SE": [
+      {
+        "variant": "BRAF V600E",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.217,
+        "tier": "insufficient",
+        "correct": true
+      },
+      {
+        "variant": "BRAF V600K",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.217,
+        "tier": "insufficient",
+        "correct": true
+      },
+      {
+        "variant": "KRAS G12D",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.32,
+        "tier": "insufficient",
+        "correct": false
+      },
+      {
+        "variant": "KRAS G12V",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.32,
+        "tier": "insufficient",
+        "correct": false
+      },
+      {
+        "variant": "NRAS Q61K",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.217,
+        "tier": "insufficient",
+        "correct": false
+      },
+      {
+        "variant": "TP53 R248W",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.235,
+        "tier": "insufficient",
+        "correct": null
+      },
+      {
+        "variant": "TP53 R273H",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.217,
+        "tier": "insufficient",
+        "correct": null
+      }
+    ],
+    "PE": [
+      {
+        "variant": "BRAF V600E",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.5,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "BRAF V600K",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.5,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "KRAS G12D",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.5,
+        "tier": "consider",
+        "correct": false
+      },
+      {
+        "variant": "KRAS G12V",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.5,
+        "tier": "consider",
+        "correct": false
+      },
+      {
+        "variant": "NRAS Q61K",
+        "expected": "MEK inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.5,
+        "tier": "consider",
+        "correct": false
+      },
+      {
+        "variant": "TP53 R248W",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.55,
+        "tier": "consider",
+        "correct": null
+      },
+      {
+        "variant": "TP53 R273H",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.5,
+        "tier": "consider",
+        "correct": null
+      }
+    ],
+    "SPE": [
+      {
+        "variant": "BRAF V600E",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.515,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "BRAF V600K",
+        "expected": "BRAF inhibitor",
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.515,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "KRAS G12D",
+        "expected": "MEK inhibitor",
+        "predicted": "MEK inhibitor",
+        "confidence": 0.53,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "KRAS G12V",
+        "expected": "MEK inhibitor",
+        "predicted": "MEK inhibitor",
+        "confidence": 0.53,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "NRAS Q61K",
+        "expected": "MEK inhibitor",
+        "predicted": "MEK inhibitor",
+        "confidence": 0.515,
+        "tier": "consider",
+        "correct": true
+      },
+      {
+        "variant": "TP53 R248W",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.56,
+        "tier": "consider",
+        "correct": null
+      },
+      {
+        "variant": "TP53 R273H",
+        "expected": null,
+        "predicted": "BRAF inhibitor",
+        "confidence": 0.505,
+        "tier": "consider",
+        "correct": null
+      }
+    ]
+  }
+}

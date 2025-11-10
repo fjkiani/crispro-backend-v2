@@ -1,0 +1,27 @@
+{
+  "gene": "BRAF",
+  "hgvs_p": "V600E",
+  "hgvs_c": "c.1799T>A",
+  "hgvs_g": "g.140753336T>A",
+  "chrom": "7",
+  "pos": 140753336,
+  "ref": "T",
+  "alt": "A",
+  "consequence": "missense_variant",
+  "am_covered": true,
+  "clinvar_prior": "pathogenic (criteria provided)",
+  "mechanism": "Constitutively activates BRAF kinase, leading to hyperactivation of the MAPK pathway and uncontrolled cell proliferation",
+  "pathogenicity_score": 0.95,
+  "references": ["PMID:16625153", "PMID:17932292"],
+  "helper_copy": "BRAF V600E is a 'hotspot' mutation that makes the BRAF protein always active, like a stuck accelerator pedal. This drives cancer growth and makes cells resistant to normal growth controls.",
+  "provenance": {
+    "source": "clinvar",
+    "created_at": "2024-01-15T10:00:00Z",
+    "sha256": "ghi789jkl012",
+    "curator": "CrisPRO.ai KB Team",
+    "license": "CC BY 4.0"
+  }
+}
+
+
+

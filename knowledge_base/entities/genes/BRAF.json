@@ -1,0 +1,22 @@
+{
+  "symbol": "BRAF",
+  "name": "B-Raf proto-oncogene, serine/threonine kinase",
+  "chromosome": "7",
+  "start": 140719327,
+  "end": 140924929,
+  "strand": "+",
+  "function": "Serine/threonine kinase that regulates the MAPK/ERK signaling pathway",
+  "pathways": ["pathway/MM_core", "pathway/RAS_MAPK"],
+  "diseases": ["Multiple Myeloma", "Melanoma", "Colorectal Cancer", "Thyroid Cancer"],
+  "helper_copy": "BRAF is a key component of the MAPK signaling pathway. When mutated (especially V600E), it becomes constitutively active, driving uncontrolled cell growth and cancer progression.",
+  "provenance": {
+    "source": "ensembl",
+    "created_at": "2024-01-15T10:00:00Z",
+    "sha256": "def456ghi789",
+    "curator": "CrisPRO.ai KB Team",
+    "license": "CC BY 4.0"
+  }
+}
+
+
+

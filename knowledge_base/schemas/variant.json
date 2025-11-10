@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["gene", "hgvs_p", "provenance"],
+  "properties": {
+    "gene": {
+      "type": "string",
+      "description": "Gene symbol"
+    },
+    "hgvs_p": {
+      "type": "string",
+      "description": "HGVS protein notation (e.g., V600E, R175H)"
+    },
+    "hgvs_c": {
+      "type": "string",
+      "description": "HGVS coding notation"
+    },
+    "hgvs_g": {
+      "type": "string",
+      "description": "HGVS genomic notation"
+    },
+    "chrom": {
+      "type": "string",
+      "description": "Chromosome"
+    },
+    "pos": {
+      "type": "integer",
+      "description": "Genomic position"
+    },
+    "ref": {
+      "type": "string",
+      "description": "Reference allele"
+    },
+    "alt": {
+      "type": "string",
+      "description": "Alternate allele"
+    },
+    "consequence": {
+      "type": "string",
+      "description": "Variant consequence (missense, nonsense, etc.)"
+    },
+    "am_covered": {
+      "type": "boolean",
+      "description": "AlphaMissense coverage status"
+    },
+    "clinvar_prior": {
+      "type": "string",
+      "description": "ClinVar classification"
+    },
+    "mechanism": {
+      "type": "string",
+      "description": "Functional mechanism description"
+    },
+    "pathogenicity_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Pathogenicity score (0-1)"
+    },
+    "references": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "PubMed IDs or other references"
+    },
+    "helper_copy": {
+      "type": "string",
+      "description": "What this tells you - user-friendly explanation"
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source", "created_at"],
+      "properties": {
+        "source": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "sha256": {"type": "string"},
+        "curator": {"type": "string"},
+        "license": {"type": "string"}
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "type", "content", "provenance"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Evidence item identifier"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["mechanism", "citation", "clinical_trial", "preclinical"],
+      "description": "Evidence type"
+    },
+    "content": {
+      "type": "string",
+      "description": "Evidence content/description"
+    },
+    "entities": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Related entity IDs (genes, variants, drugs)"
+    },
+    "references": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "PubMed IDs or other references"
+    },
+    "strength": {
+      "type": "string",
+      "enum": ["weak", "moderate", "strong", "very_strong"],
+      "description": "Evidence strength"
+    },
+    "tags": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Evidence tags for categorization"
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source", "created_at"],
+      "properties": {
+        "source": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "sha256": {"type": "string"},
+        "curator": {"type": "string"},
+        "license": {"type": "string"}
+      }
+    }
+  }
+}
+
+
+

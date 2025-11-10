@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["name", "class", "provenance"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Drug name"
+    },
+    "class": {
+      "type": "string",
+      "description": "Drug class (e.g., BRAF inhibitor, MEK inhibitor)"
+    },
+    "mechanism": {
+      "type": "string",
+      "description": "Mechanism of action"
+    },
+    "targets": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Target gene symbols"
+    },
+    "indications": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Approved indications"
+    },
+    "resistance_mechanisms": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Known resistance mechanisms"
+    },
+    "helper_copy": {
+      "type": "string",
+      "description": "What this tells you - user-friendly explanation"
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source", "created_at"],
+      "properties": {
+        "source": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "sha256": {"type": "string"},
+        "curator": {"type": "string"},
+        "license": {"type": "string"}
+      }
+    }
+  }
+}
+
+
+

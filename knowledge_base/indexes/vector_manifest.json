@@ -1,0 +1,16 @@
+{
+  "embedding_model": "text-embedding-3-large",
+  "dimensions": 3072,
+  "redis_keys": {
+    "prefix": "kb:vector:",
+    "index_name": "kb_vectors"
+  },
+  "created_at": "2024-01-15T10:00:00Z",
+  "last_updated": "2024-01-15T10:00:00Z",
+  "total_vectors": 0,
+  "status": "disabled",
+  "notes": "Vector search disabled in v1. Enable when REDIS_URL is configured."
+}
+
+
+

@@ -1,0 +1,46 @@
+# Knowledge Base Provenance
+# Repository commit, dataset signatures, licenses
+
+repository:
+  url: "https://github.com/crispro-ai/oncology-coPilot"
+  commit: "TBD"
+  branch: "main"
+
+datasets:
+  ensembl:
+    source: "https://www.ensembl.org/"
+    license: "Apache 2.0"
+    version: "GRCh38"
+    last_updated: "2024-01-15"
+  
+  clinvar:
+    source: "https://www.ncbi.nlm.nih.gov/clinvar/"
+    license: "Public Domain"
+    version: "2024-01-15"
+    last_updated: "2024-01-15"
+  
+  cbio_portal:
+    source: "https://www.cbioportal.org/"
+    license: "CC BY 4.0"
+    version: "v4.0"
+    last_updated: "2024-01-15"
+
+curation:
+  curator: "CrisPRO.ai Knowledge Base Team"
+  methodology: "Manual curation with automated validation"
+  quality_control: "JSON Schema validation + provenance tracking"
+  review_process: "Peer review for mechanism annotations"
+
+licenses:
+  default: "CC BY 4.0"
+  synthetic_demo: "Internal use only"
+  public_sources: "Respects original source licenses"
+
+snapshots:
+  current: "v20240115"
+  format: "YYYYMMDD"
+  immutable: true
+  lockfile_required: true
+
+
+

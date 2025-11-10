@@ -1,0 +1,2562 @@
+[
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25245351 C>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12579",
+      "rcv_accession": "RCV000013408|RCV000013407|RCV000154401|RCV001356365|RCV002513010|RCV004813033|RCV004668722",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12579/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25244751-25245951"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25245347 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12580",
+      "rcv_accession": "RCV000013409|RCV000038269|RCV000144967|RCV000144968|RCV001526657|RCV001857340|RCV004549358|RCV001092389|RCV001266168|RCV000791297|RCV004668723|RCV001813183|RCV001839444|RCV004813034",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12580/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25244747-25245947"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25245350 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12582",
+      "rcv_accession": "RCV000013411|RCV000022799|RCV000029214|RCV000029215|RCV000144969|RCV000144970|RCV000150896|RCV000150897|RCV000548006|RCV000585796|RCV000662266|RCV000272938|RCV000433573|RCV005007840|RCV000856666|RCV001839445|RCV004554600|RCV004668724|RCV001799604|RCV002508117|RCV003327361|RCV004018620|RCV005251035",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12582/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25244750-25245950"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25245350 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12583",
+      "rcv_accession": "RCV000013413|RCV000029216|RCV000150895|RCV000154262|RCV000157944|RCV003455987|RCV004668725|RCV000585801|RCV002291496|RCV003322589|RCV003539760",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12583/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25244750-25245950"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25245351 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12584",
+      "rcv_accession": "RCV000013414|RCV000119790|RCV000038264|RCV000144971|RCV000782191|RCV001851824|RCV004562205|RCV004668726|RCV004795403",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12584/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25244751-25245951"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25227346 C>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12586",
+      "rcv_accession": "RCV000013416|RCV000157935|RCV000254661|RCV000521390|RCV003313917|RCV000844635|RCV001267316|RCV005252123",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12586/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25226746-25227946"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25209904 T>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12587",
+      "rcv_accession": "RCV000013418|RCV000013417|RCV000157940|RCV000212501|RCV000844634|RCV000507330|RCV000763307|RCV003450634|RCV004018621",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12587/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25209304-25210504"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25227351 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12588",
+      "rcv_accession": "RCV000013419|RCV000157933|RCV000211785|RCV000704828",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12588/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25226751-25227951"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25245345 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12589",
+      "rcv_accession": "RCV000013420|RCV000212499|RCV000119792|RCV000157945|RCV000844637|RCV001266727|RCV001813184",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12589/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25244745-25245945"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25245284 G>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12590",
+      "rcv_accession": "RCV000043674|RCV000207495|RCV000211723|RCV000850569|RCV001851825|RCV005252679",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12590/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25244684-25245884"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25227160 A>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "1253268",
+      "rcv_accession": "RCV001650730",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1253268/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25226560-25227760"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25227137 T>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "1263524",
+      "rcv_accession": "RCV001672341",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1263524/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25226537-25227737"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25227137 T>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "1279239",
+      "rcv_accession": "RCV001690960",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1279239/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25226537-25227737"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25225522 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "1247750",
+      "rcv_accession": "RCV001649711",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1247750/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25224922-25226122"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25209920 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40464",
+      "rcv_accession": "RCV000038272|RCV000299618|RCV000477053|RCV001573230",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40464/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25209320-25210520"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25209618 A>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40467",
+      "rcv_accession": "RCV000382642|RCV001520594|RCV000860174|RCV001813239",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40467/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25209018-25210218"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25209843 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "41449",
+      "rcv_accession": "RCV000038277|RCV000378737|RCV000522387|RCV000680290|RCV002336109",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/41449/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25209243-25210443"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25245361 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "45119",
+      "rcv_accession": "RCV000038261|RCV000521225|RCV000994879|RCV002477100|RCV002426568",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/45119/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25244761-25245961"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25215528 T>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "46538",
+      "rcv_accession": "RCV000039808|RCV000149847|RCV001811280|RCV002336141",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/46538/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25214928-25216128"
+    }
+  },
+  {
+    "gene": "KRAS",
+    "hgvs_p": "",
+    "variant_info": "chr12:25215476 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "46540",
+      "rcv_accession": "RCV000039810|RCV000587678|RCV004018896|RCV004549474",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/46540/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=12%3A25214876-25216076"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114716124 C>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13899",
+      "rcv_accession": "RCV000014913|RCV000114743|RCV000438070|RCV001781267|RCV005251038|RCV004767008",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13899/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114715524-114716724"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114713908 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13900",
+      "rcv_accession": "RCV000014914|RCV000032847|RCV000114744|RCV000114745|RCV000037574|RCV000413804|RCV000148032|RCV003992155|RCV004668730|RCV005603586|RCV005251039|RCV005604774",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13900/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114713308-114714508"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114716123 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13901",
+      "rcv_accession": "RCV000014915|RCV000022690|RCV000144962|RCV000157672|RCV001293767|RCV005089258|RCV005229792",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13901/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114715523-114716723"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114713941 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13902",
+      "rcv_accession": "RCV000014916|RCV000211835|RCV000208537|RCV000463185",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13902/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114713341-114714541"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114713911 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13903",
+      "rcv_accession": "RCV000014917|RCV000208552|RCV000158982|RCV001382056|RCV003415702|RCV004984642",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13903/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114713311-114714511"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114716126 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "39648",
+      "rcv_accession": "RCV000144963|RCV000032849|RCV000158980|RCV003415756|RCV004018703|RCV001852659|RCV001781333|RCV001813214|RCV005603591|RCV003221788",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/39648/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114715526-114716726"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114716127 C>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40469",
+      "rcv_accession": "RCV000158985|RCV001526619|RCV001781335",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40469/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114715527-114716727"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114716126 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40470",
+      "rcv_accession": "RCV000037576|RCV000158986|RCV001377735|RCV004668746|RCV005603592",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40470/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114715526-114716726"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114716127 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "177778",
+      "rcv_accession": "RCV000158978|RCV001066799|RCV000212761|RCV005229987|RCV001813397|RCV003998247|RCV005603601",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/177778/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114715527-114716727"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114716126 C>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "219097",
+      "rcv_accession": "RCV000203450|RCV000380895|RCV001324275|RCV001813426|RCV005603610",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/219097/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114715526-114716726"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114709659 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40476",
+      "rcv_accession": "RCV000037577|RCV000587570|RCV001100796|RCV001080827|RCV001813240|RCV002453281",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40476/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114709059-114710259"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114709736 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "44575",
+      "rcv_accession": "RCV000037575|RCV000862599|RCV001707515",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/44575/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114709136-114710336"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114713986 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "138538",
+      "rcv_accession": "RCV000127228|RCV000588495|RCV001101050|RCV001089307|RCV003905211|RCV001813388",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/138538/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114713386-114714586"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114716690 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "138539",
+      "rcv_accession": "RCV000127229|RCV000377346|RCV004710538",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/138539/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114716090-114717290"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114713865 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "178104",
+      "rcv_accession": "RCV000154799|RCV000157673|RCV000320449|RCV001086742|RCV003952766|RCV002444638",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/178104/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114713265-114714465"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114713931 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "164807",
+      "rcv_accession": "RCV000151574|RCV000534894|RCV003952724|RCV001594857|RCV004019821",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/164807/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114713331-114714531"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114705432 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "291954",
+      "rcv_accession": "RCV000272399|RCV004713502",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/291954/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114704832-114706032"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114707678 T>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "291972",
+      "rcv_accession": "RCV000313412|RCV004710701",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/291972/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114707078-114708278"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114716848 A>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "291980",
+      "rcv_accession": "RCV000288966|RCV001582914",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/291980/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114716248-114717448"
+    }
+  },
+  {
+    "gene": "NRAS",
+    "hgvs_p": "",
+    "variant_info": "chr1:114705427 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "291953",
+      "rcv_accession": "RCV000364455|RCV004714647",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/291953/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=1%3A114704827-114706027"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140781617 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13964",
+      "rcv_accession": "RCV000014997|RCV000033304|RCV000207512|RCV000844618|RCV001261044",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13964/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140781017-140782217"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140801536 C>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13965",
+      "rcv_accession": "RCV000014998|RCV000033285|RCV000208416|RCV000235118|RCV000678900|RCV001047900|RCV003150930|RCV003338381",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13965/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140800936-140802136"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140753346 G>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13969",
+      "rcv_accession": "RCV000015003|RCV000030948|RCV000033333|RCV000208539|RCV000505705|RCV001813207|RCV002271369|RCV002513056|RCV005222683",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13969/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140752746-140753946"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140781603 C>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13970",
+      "rcv_accession": "RCV000015004|RCV000033306|RCV001778653",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13970/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140781003-140782203"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140801502 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13973",
+      "rcv_accession": "RCV000015007|RCV000033289|RCV000080904|RCV000208766|RCV001027771|RCV001813208|RCV001813744|RCV004018628|RCV001261967|RCV003224098|RCV001329219|RCV004752707",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13973/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140800902-140802102"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140781602 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13974",
+      "rcv_accession": "RCV000015008|RCV000033307|RCV000212152|RCV000506575|RCV000211748|RCV001813209|RCV003450641|RCV002287336",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13974/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140781002-140782202"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140778053 C>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13975",
+      "rcv_accession": "RCV000015009|RCV000208764|RCV000211749|RCV000680805|RCV001849264|RCV003415705|RCV004018629|RCV001172276",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13975/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140777453-140778653"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140778013 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13976",
+      "rcv_accession": "RCV000015010|RCV000207517|RCV000779848|RCV001813210|RCV004795412",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13976/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140777413-140778613"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140778007 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13977",
+      "rcv_accession": "RCV000015011|RCV000033315|RCV000207513|RCV000844616|RCV004018630",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13977/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140777407-140778607"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140778006 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13978",
+      "rcv_accession": "RCV000015012|RCV000211750|RCV000414915|RCV000207518|RCV001273349|RCV000808147",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13978/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140777406-140778606"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140924668 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40333",
+      "rcv_accession": "RCV000033265|RCV000283347|RCV000380281|RCV000590400|RCV001813215|RCV002345261|RCV003944862",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40333/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140924068-140925268"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140924640 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40335",
+      "rcv_accession": "RCV000037950|RCV000590699|RCV000520051|RCV000853030|RCV001160946|RCV001160947|RCV001813216|RCV002354178|RCV003904885",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40335/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140924040-140925240"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140924626 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40337",
+      "rcv_accession": "RCV000033269|RCV000037961|RCV000224291|RCV000289594|RCV000381670|RCV000659284|RCV001813217|RCV001095196|RCV002415445",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40337/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140924026-140925226"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140834714 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40342",
+      "rcv_accession": "RCV000033275|RCV000779847|RCV001719716|RCV002371806|RCV002496496",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40342/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140834114-140835314"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140808137 A>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40344",
+      "rcv_accession": "RCV001539957",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40344/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140807537-140808737"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140801621 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "1292353",
+      "rcv_accession": "RCV001717064",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1292353/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140801021-140802221"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140800335 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40354",
+      "rcv_accession": "RCV000243784|RCV001538574",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40354/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140799735-140800935"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140787694 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "1270731",
+      "rcv_accession": "RCV001680252",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1270731/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140787094-140788294"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140783108 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40360",
+      "rcv_accession": "RCV000033298|RCV000037908|RCV000290490|RCV000349078|RCV002362605|RCV000680284|RCV001813218",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40360/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140782508-140783708"
+    }
+  },
+  {
+    "gene": "BRAF",
+    "hgvs_p": "",
+    "variant_info": "chr7:140781711 A>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40361",
+      "rcv_accession": "RCV000157664|RCV002054535|RCV003736547|RCV002482940",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40361/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=7%3A140781111-140782311"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674221 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12347",
+      "rcv_accession": "RCV000013140|RCV000213057|RCV000168242|RCV000115735|RCV000438698|RCV000785485|RCV001255674|RCV003318332|RCV003460463|RCV001271100|RCV001374442|RCV003149569|RCV003105772|RCV003162243|RCV005357116|RCV004745154",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12347/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673621-7674821"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674191 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12348",
+      "rcv_accession": "RCV000013141|RCV000161071|RCV000582699|RCV000772122|RCV000785291|RCV000792895",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12348/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673591-7674791"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674230 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12349",
+      "rcv_accession": "RCV000013142|RCV000161025|RCV000633397|RCV000492412|RCV001271056|RCV004668714",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12349/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673630-7674830"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674216 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12352",
+      "rcv_accession": "RCV000013145|RCV000013146|RCV000464372|RCV000579519|RCV000785491|RCV001270276|RCV001562247|RCV004018617|RCV003996089|RCV005229780",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12352/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673616-7674816"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7675143 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12353",
+      "rcv_accession": "RCV000013147|RCV000566103|RCV000794324|RCV000785500|RCV004668716|RCV001823095|RCV003128570|RCV005229781",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12353/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7674543-7675743"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674238 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12354",
+      "rcv_accession": "RCV000013148|RCV000129809|RCV000231770|RCV000785282|RCV002288484|RCV003314552|RCV002247332",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12354/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673638-7674838"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674229 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12355",
+      "rcv_accession": "RCV000013149|RCV000206683|RCV000164465|RCV000785472|RCV000986053|RCV003473082",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12355/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673629-7674829"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674220 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12356",
+      "rcv_accession": "RCV000013150|RCV000115736|RCV000148913|RCV000235221|RCV000197114|RCV000424869|RCV000426606|RCV000763417|RCV000790860|RCV000785344|RCV001255671|RCV001257519|RCV001270275|RCV001554245|RCV001527465|RCV003162244|RCV003332079|RCV003466852|RCV004745155|RCV003996090|RCV004794335|RCV004813032|RCV005016259",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12356/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673620-7674820"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7675214 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12357",
+      "rcv_accession": "RCV000013151|RCV000492130|RCV001383051|RCV004786255",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12357/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7674614-7675814"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7673806 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12358",
+      "rcv_accession": "RCV000013152|RCV000164988|RCV001221969",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12358/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673206-7674406"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7676154 G>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "12351",
+      "rcv_accession": "RCV000013144|RCV000034639|RCV000132165|RCV000144668|RCV000079202|RCV000300782|RCV002225263|RCV001255631|RCV002496335|RCV002510562|RCV004668715",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/12351/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7675554-7676754"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7676230 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "43588",
+      "rcv_accession": "RCV000036530|RCV000131567|RCV000172826|RCV000590436|RCV000991144|RCV001355028|RCV002225273|RCV002496568|RCV003149630",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/43588/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7675630-7676830"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674892 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "43591",
+      "rcv_accession": "RCV000036533|RCV000162403|RCV000206135|RCV000203086|RCV001357034|RCV001572845|RCV002307374",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/43591/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7674292-7675492"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7670616 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "80708",
+      "rcv_accession": "RCV003894916|RCV000129635|RCV001358057|RCV000701624|RCV001127281",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/80708/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7670016-7671216"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7673523 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "93325",
+      "rcv_accession": "RCV000079206|RCV000130599|RCV000610122|RCV001650902|RCV002225283|RCV001518058|RCV001357901|RCV001798278",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/93325/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7672923-7674123"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7676567 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "127806",
+      "rcv_accession": "RCV000115717|RCV000203717|RCV000235217|RCV000662410|RCV000989729|RCV000781916|RCV003905099",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/127806/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7675967-7677167"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7676040 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "127808",
+      "rcv_accession": "RCV000115719|RCV000122182|RCV000228299|RCV000409407|RCV000589869|RCV001358219|RCV004745188",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/127808/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7675440-7676640"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674959 G>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "127816",
+      "rcv_accession": "RCV000122174|RCV000205751|RCV000219468|RCV000662561|RCV000766937",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/127816/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7674359-7675559"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7674259 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "127821",
+      "rcv_accession": "RCV000115733|RCV000122177|RCV000148915|RCV000590586|RCV000663295|RCV000989714|RCV000991139|RCV003952552|RCV001798339",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/127821/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673659-7674859"
+    }
+  },
+  {
+    "gene": "TP53",
+    "hgvs_p": "",
+    "variant_info": "chr17:7673773 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "127824",
+      "rcv_accession": "RCV000115739|RCV000122178|RCV000200641|RCV000238755|RCV000148912|RCV001357872|RCV000585912|RCV002477279|RCV004776274",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/127824/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A7673173-7674373"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179234297 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13652",
+      "rcv_accession": "RCV000014624|RCV000014626|RCV000014627|RCV000014628|RCV000014622|RCV000014623|RCV000024621|RCV000154516|RCV000201231|RCV000438435|RCV000487449|RCV000709691|RCV001092442|RCV001255686|RCV001327968|RCV001728091|RCV001729349|RCV001730472|RCV001705589|RCV001705590|RCV001807727|RCV001836707|RCV001526648|RCV002508124|RCV003128082|RCV003325939|RCV004527290|RCV004527291|RCV004737153|RCV005051734",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13652/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179233697-179234897"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179234297 A>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13653",
+      "rcv_accession": "RCV000014629|RCV000201235|RCV000032905|RCV000626894|RCV000422323|RCV000709692|RCV000987367|RCV001253236|RCV001728092|RCV001526597|RCV002254265|RCV001807728|RCV004527292|RCV004668728|RCV004649064",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13653/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179233697-179234897"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179218303 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13655",
+      "rcv_accession": "RCV000014633|RCV000014636|RCV000014631|RCV000014632|RCV000038671|RCV000055930|RCV000119356|RCV000422210|RCV001092440|RCV001262721|RCV001327963|RCV001290591|RCV001730473|RCV001705591|RCV001374447|RCV001786329|RCV002508125|RCV003764575|RCV004527293|RCV004527294|RCV004527295|RCV004668729|RCV004698419",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13655/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179217703-179218903"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179218294 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "31944",
+      "rcv_accession": "RCV000024622|RCV000151649|RCV000154513|RCV000416776|RCV000709693|RCV001255687|RCV001728093|RCV001327962|RCV001730477|RCV001836714|RCV003987334|RCV004532404|RCV002513230|RCV004698785|RCV003764635|RCV004527296|RCV003458190|RCV004668742",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/31944/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179217694-179218894"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179210192 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "31945",
+      "rcv_accession": "RCV000024623|RCV000201232|RCV000154512|RCV000709694|RCV001327960|RCV001526612|RCV004527297|RCV001705599|RCV005603590|RCV002054475|RCV003588566|RCV004668743",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/31945/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179209592-179210792"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179230077 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "39703",
+      "rcv_accession": "RCV000032907|RCV000414672|RCV001327966|RCV001836717|RCV003233078|RCV001594376|RCV004798751|RCV004737167|RCV004955261|RCV005222712|RCV001852661|RCV002254272|RCV002274888",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/39703/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179229477-179230677"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179204576 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "39704",
+      "rcv_accession": "RCV000032908|RCV000201233|RCV000806643|RCV005229840|RCV005241335|RCV004532477",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/39704/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179203976-179205176"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179234296 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "39705",
+      "rcv_accession": "RCV000032909|RCV000038675|RCV000698423|RCV000763508|RCV001092441|RCV001705625|RCV003233079|RCV002226661|RCV003882732|RCV004698336|RCV004955262",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/39705/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179233696-179234896"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179218307 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "45466",
+      "rcv_accession": "RCV000038672|RCV001327965|RCV004668762|RCV003458193|RCV002254273",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/45466/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179217707-179218907"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179234230 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "45467",
+      "rcv_accession": "RCV000038673|RCV002254274|RCV003458194|RCV001526503",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/45467/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179233630-179234830"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179234232 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "45468",
+      "rcv_accession": "RCV000038674|RCV000469313|RCV001541434|RCV003315570",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/45468/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179233632-179234832"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179209622 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "135038",
+      "rcv_accession": "RCV000121811|RCV001682835|RCV001725125|RCV004668785|RCV001517745|RCV003315764",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/135038/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179209022-179210222"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179199700 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "220946",
+      "rcv_accession": "RCV000206083|RCV001579917|RCV001711361|RCV003316147|RCV004530242|RCV002453746",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/220946/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179199100-179200300"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179219152 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "223914",
+      "rcv_accession": "RCV000209425|RCV003316158|RCV001682919",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/223914/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179218552-179219752"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179234393 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "246606",
+      "rcv_accession": "RCV000235680|RCV000998164|RCV004535201",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/246606/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179233793-179234993"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179219562 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "246679",
+      "rcv_accession": "RCV000235538|RCV000987360|RCV001689764",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/246679/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179218962-179220162"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179203786 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "246680",
+      "rcv_accession": "RCV000658981|RCV001086660|RCV002411077|RCV003316315|RCV004535202",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/246680/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179203186-179204386"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179199038 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "246683",
+      "rcv_accession": "RCV001457698|RCV003298311",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/246683/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179198438-179199638"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179221151 A>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "246684",
+      "rcv_accession": "RCV000237071|RCV001538365|RCV002429160|RCV003316316",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/246684/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179220551-179221751"
+    }
+  },
+  {
+    "gene": "PIK3CA",
+    "hgvs_p": "",
+    "variant_info": "chr3:179224703 T>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "246686",
+      "rcv_accession": "RCV000236279|RCV001579833|RCV001582799|RCV002446468|RCV005235204",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/246686/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=3%3A179224103-179225303"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1804392 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16327",
+      "rcv_accession": "RCV000017724|RCV000029207|RCV000763121|RCV000255750|RCV001807732|RCV002276551|RCV005209487|RCV001266979|RCV003227605|RCV004545731|RCV004798732|RCV004783725",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16327/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1803792-1804992"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1804392 G>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16328",
+      "rcv_accession": "RCV000017725|RCV000727147|RCV000987394|RCV004532375|RCV004795424",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16328/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1803792-1804992"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1804426 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16329",
+      "rcv_accession": "RCV000194803|RCV000017726|RCV000414319|RCV000623005",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16329/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1803826-1805026"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1806162 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16331",
+      "rcv_accession": "RCV000017730|RCV000017729|RCV000017728|RCV004532376|RCV000255799|RCV003234912|RCV003317039|RCV003155029|RCV005031441",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16331/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1805562-1806762"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1801837 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16332",
+      "rcv_accession": "RCV000017731|RCV000017732|RCV000017733|RCV000017734|RCV000017735|RCV000327823|RCV000414822|RCV001196297|RCV001804739|RCV002276552|RCV001526641|RCV001849270|RCV003388567|RCV003155030|RCV003332082|RCV004798733|RCV004795425|RCV000763118|RCV002243648|RCV005025063",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16332/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1801237-1802437"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1804365 A>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16333",
+      "rcv_accession": "RCV000017736|RCV000757295|RCV001528646",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16333/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1803765-1804965"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1807260 T>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16334",
+      "rcv_accession": "RCV000017737|RCV000493112|RCV003155031",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16334/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1806660-1807860"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1807260 T>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16335",
+      "rcv_accession": "RCV000017738|RCV000520562|RCV002504801",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16335/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1806660-1807860"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1805644 C>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16337",
+      "rcv_accession": "RCV000017740|RCV000255928|RCV000353403|RCV002273932|RCV004786271|RCV004541008",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16337/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1805044-1806244"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1805644 C>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "16338",
+      "rcv_accession": "RCV000017741|RCV000255372|RCV000415460|RCV000622950|RCV000763122|RCV001332222|RCV001804740|RCV002276553|RCV004737156|RCV005411260",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/16338/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1805044-1806244"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1806149 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "132959",
+      "rcv_accession": "RCV000119361|RCV002483203|RCV001650977",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/132959/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1805549-1806749"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1799274 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134397",
+      "rcv_accession": "RCV000121071|RCV000641214|RCV002517590",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134397/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1798674-1799874"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1799313 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134398",
+      "rcv_accession": "RCV000121072|RCV001650979",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134398/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1798713-1799913"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1799337 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134399",
+      "rcv_accession": "RCV000121073|RCV001668274",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134399/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1798737-1799937"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1804404 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134404",
+      "rcv_accession": "RCV000121079|RCV000987395|RCV000442867|RCV002277184|RCV002483215",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134404/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1803804-1805004"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1806664 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134408",
+      "rcv_accession": "RCV000121083|RCV000419889|RCV004530001",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134408/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1806064-1807264"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1804902 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134409",
+      "rcv_accession": "RCV000121084|RCV000437628|RCV000987396|RCV002277185",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134409/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1804302-1805502"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1804906 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134410",
+      "rcv_accession": "RCV000121085|RCV000755538",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134410/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1804306-1805506"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1799492 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "196220",
+      "rcv_accession": "RCV000176993|RCV002277385|RCV001573046|RCV002492768",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/196220/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1798892-1800092"
+    }
+  },
+  {
+    "gene": "FGFR3",
+    "hgvs_p": "",
+    "variant_info": "chr4:1801524 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "197628",
+      "rcv_accession": "RCV000178712|RCV002228791",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/197628/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=4%3A1800924-1802124"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66435104 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13350",
+      "rcv_accession": "RCV000014278|RCV000158002|RCV000520164|RCV004760331",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13350/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66434504-66435704"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66436843 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13351",
+      "rcv_accession": "RCV000043672|RCV000208757|RCV000763362|RCV000207506|RCV004532347|RCV000541525|RCV001197351|RCV003450638|RCV004984640|RCV005229789",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13351/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66436243-66437443"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66436837 G>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "13352",
+      "rcv_accession": "RCV000043673|RCV000211725|RCV000207493|RCV001234104",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13352/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66436237-66437437"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66436825 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40744",
+      "rcv_accession": "RCV000037595|RCV001542689|RCV000680623|RCV002513329|RCV001813306",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40744/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66436225-66437425"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66436842 T>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40747",
+      "rcv_accession": "RCV000037596|RCV000623628|RCV001811234",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40747/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66436242-66437442"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66435115 A>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40779",
+      "rcv_accession": "RCV000037591|RCV000158014",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40779/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66434515-66435715"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66435145 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40781",
+      "rcv_accession": "RCV000192193|RCV000158004|RCV000212506|RCV000208771|RCV001095724|RCV003224114|RCV000844673|RCV002415455|RCV000754677|RCV004760352",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40781/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66434545-66435745"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66435221 T>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "44588",
+      "rcv_accession": "RCV000158005|RCV000522848|RCV001813322|RCV004760354",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/44588/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66434621-66435821"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66481794 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "167260",
+      "rcv_accession": "RCV000153454|RCV000824938|RCV001250390",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/167260/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66481194-66482394"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66435117 G>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "223140",
+      "rcv_accession": "RCV000208748|RCV002051691|RCV002254287|RCV005251094",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/223140/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66434517-66435717"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66387263 G>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "1286889",
+      "rcv_accession": "RCV001708514",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1286889/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66386663-66387863"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66387346 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40738",
+      "rcv_accession": "RCV000080030|RCV002433489|RCV000860593|RCV002513328|RCV001813303",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40738/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66386746-66387946"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66387353 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40739",
+      "rcv_accession": "RCV000037598|RCV000525445|RCV001813304|RCV001636615|RCV002371810",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40739/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66386753-66387953"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66436850 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40748",
+      "rcv_accession": "RCV000195548|RCV003298039|RCV001682723",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40748/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66436250-66437450"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66436912 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40749",
+      "rcv_accession": "RCV000157670|RCV001668149|RCV001775547|RCV002054547",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40749/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66436312-66437512"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66443213 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "1224838",
+      "rcv_accession": "RCV001608296",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1224838/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66442613-66443813"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66443272 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40751",
+      "rcv_accession": "RCV000215465|RCV001682724|RCV001460330|RCV004532501",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40751/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66442672-66443872"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66485007 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40754",
+      "rcv_accession": "RCV000037599|RCV000205637|RCV001705632|RCV002371811|RCV001813307",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40754/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66484407-66485607"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66485144 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "40756",
+      "rcv_accession": "RCV000037602|RCV000519375|RCV001719721|RCV004532502|RCV004018723",
+      "review_status": "reviewed by expert panel",
+      "clinical_significance": "Benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/40756/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66484544-66485744"
+    }
+  },
+  {
+    "gene": "MAP2K1",
+    "hgvs_p": "",
+    "variant_info": "chr15:66487232 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "1260568",
+      "rcv_accession": "RCV001669385|RCV002073141|RCV002370259",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/1260568/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=15%3A66486632-66487832"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31258500 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "336",
+      "rcv_accession": "RCV000000364|RCV000626644|RCV000489593|RCV000762990|RCV002305424|RCV003460397|RCV002310992|RCV004798706",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/336/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31257900-31259100"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31334927 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "343",
+      "rcv_accession": "RCV000000371|RCV000492774|RCV000762995|RCV003460398|RCV004562178|RCV004668704|RCV000418287|RCV004558221|RCV001009602|RCV004547450",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/343/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31334327-31335527"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31249093 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "344",
+      "rcv_accession": "RCV000000372|RCV000483061|RCV000492495|RCV002504730",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/344/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31248493-31249693"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31230383 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "345",
+      "rcv_accession": "RCV000000373|RCV000680818|RCV001009591|RCV001018701|RCV002381233|RCV004547451",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/345/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31229783-31230983"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31258406 A>T",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "348",
+      "rcv_accession": "RCV000000376|RCV001810827|RCV002326656",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/348/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31257806-31259006"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31261810 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "350",
+      "rcv_accession": "RCV000000378|RCV000660063|RCV001007974",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/350/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31261210-31262410"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31221842 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "352",
+      "rcv_accession": "RCV000000380|RCV000190422",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/352/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31221242-31222442"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31235729 G>C",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "353",
+      "rcv_accession": "RCV000000381|RCV002267796|RCV002354143",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic/Likely_pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/353/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31235129-31236329"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31214524 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "354",
+      "rcv_accession": "RCV000000382|RCV000492667|RCV000757556|RCV001009573|RCV001257527|RCV001813925|RCV002504731|RCV004737131|RCV003460400|RCV004783716",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/354/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31213924-31215124"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31201486 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": true,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "356",
+      "rcv_accession": "RCV000000384|RCV001547975",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Pathogenic",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/356/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31200886-31202086"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31326019 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "41672",
+      "rcv_accession": "RCV000034584|RCV000121634|RCV000168431|RCV000129642|RCV000305917|RCV000345616|RCV000360704|RCV002490459",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/41672/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31325419-31326619"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31352394 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "41678",
+      "rcv_accession": "RCV000034590|RCV000130730|RCV000989823|RCV000480111|RCV002390138|RCV001122667|RCV001122668|RCV001122669|RCV005394199",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/41678/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31351794-31352994"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31225182 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134880",
+      "rcv_accession": "RCV000121627|RCV000130724|RCV000206514|RCV000286004|RCV000301396|RCV000341061|RCV000680336|RCV002492433",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134880/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31224582-31225782"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31163353 A>G",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134886",
+      "rcv_accession": "RCV000121635|RCV000223487|RCV000233135|RCV001538321",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134886/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31162753-31163953"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31352330 G>C",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "134889",
+      "rcv_accession": "RCV000121639|RCV000130554|RCV000680358|RCV001082666|RCV002498574|RCV004551188|RCV004558316",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/134889/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31351730-31352930"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31359006 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "141033",
+      "rcv_accession": "RCV000129364|RCV000206206|RCV000216274|RCV000310315|RCV000590571|RCV000270629|RCV000362723|RCV005394469",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/141033/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31358406-31359606"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31163237 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "141237",
+      "rcv_accession": "RCV000129656|RCV000198193|RCV000244766|RCV000311849|RCV000315541|RCV000398971|RCV000680345|RCV002492496|RCV005359209",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/141237/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31162637-31163837"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31182670 G>A",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "141338",
+      "rcv_accession": "RCV000129823|RCV000459107|RCV002371976|RCV001420819|RCV001553065",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/141338/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31182070-31183270"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31226657 G>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "141637",
+      "rcv_accession": "RCV000130233|RCV000533490|RCV001567731|RCV004551253|RCV002426694|RCV002298479",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/141637/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31226057-31227257"
+    }
+  },
+  {
+    "gene": "NF1",
+    "hgvs_p": "",
+    "variant_info": "chr17:31226455 C>T",
+    "build": "hg38",
+    "label_is_pathogenic": false,
+    "provenance": {
+      "source": "ClinVar",
+      "variation_id": "141819",
+      "rcv_accession": "RCV000130488|RCV000218285|RCV000680333|RCV001081129|RCV003315893|RCV002483263",
+      "review_status": "criteria provided, multiple submitters, no conflicts",
+      "clinical_significance": "Benign/Likely_benign",
+      "clinvar_url": "https://www.ncbi.nlm.nih.gov/clinvar/variation/141819/",
+      "ensembl_region_url": "https://www.ensembl.org/Homo_sapiens/Location/View?r=17%3A31225855-31227055"
+    }
+  }
+]

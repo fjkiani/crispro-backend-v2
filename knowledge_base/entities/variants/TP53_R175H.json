@@ -1,0 +1,27 @@
+{
+  "gene": "TP53",
+  "hgvs_p": "R175H",
+  "hgvs_c": "c.524G>A",
+  "hgvs_g": "g.7673802G>A",
+  "chrom": "17",
+  "pos": 7673802,
+  "ref": "G",
+  "alt": "A",
+  "consequence": "missense_variant",
+  "am_covered": true,
+  "clinvar_prior": "pathogenic (criteria provided)",
+  "mechanism": "Disrupts DNA binding domain, impairing p53's ability to regulate target genes involved in cell cycle arrest and apoptosis",
+  "pathogenicity_score": 0.92,
+  "references": ["PMID:10521311", "PMID:11283244"],
+  "helper_copy": "TP53 R175H is a 'hotspot' mutation that breaks the tumor suppressor function of p53. Cells with this mutation can't properly respond to DNA damage, leading to genomic instability and cancer.",
+  "provenance": {
+    "source": "clinvar",
+    "created_at": "2024-01-15T10:00:00Z",
+    "sha256": "jkl012mno345",
+    "curator": "CrisPRO.ai KB Team",
+    "license": "CC BY 4.0"
+  }
+}
+
+
+

@@ -1,0 +1,50 @@
+{
+  "study": "ov_tcga_pan_can_atlas_2018",
+  "filters": {
+    "genes": ["TP53", "BRAF", "KRAS", "NRAS"],
+    "variant_types": ["missense", "nonsense", "frameshift"],
+    "min_allele_frequency": 0.01
+  },
+  "n_samples": 584,
+  "n_variants": 1247,
+  "by_gene": [
+    {
+      "gene": "TP53",
+      "n": 312,
+      "prevalence": 0.534
+    },
+    {
+      "gene": "KRAS",
+      "n": 89,
+      "prevalence": 0.152
+    },
+    {
+      "gene": "NRAS",
+      "n": 45,
+      "prevalence": 0.077
+    },
+    {
+      "gene": "BRAF",
+      "n": 23,
+      "prevalence": 0.039
+    }
+  ],
+  "coverage_summary": {
+    "total_genes_analyzed": 4,
+    "genes_with_variants": 4,
+    "avg_prevalence": 0.201,
+    "platinum_exposure_labeled": true
+  },
+  "provenance": {
+    "source": "cbioportal",
+    "created_at": "2024-01-15T10:00:00Z",
+    "sha256": "vwx234yza567",
+    "curator": "CrisPRO.ai KB Team",
+    "license": "CC BY 4.0",
+    "run_id": "demo_run_001",
+    "mode": "extract_only"
+  }
+}
+
+
+
