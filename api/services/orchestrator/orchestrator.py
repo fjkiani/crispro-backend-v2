@@ -1,0 +1,1265 @@
+"""
+MOAT Orchestrator - Central coordination for the patient care pipeline.
+
+Coordinates all agents, manages state, handles events.
+
+Usage:
+    orchestrator = get_orchestrator()
+    result = await orchestrator.run_full_pipeline(
+        mutations=[{"gene": "BRAF", "hgvs_p": "p.V600E"}],
+        disease="ovarian"
+    )
+"""
+
+from typing import Optional, Dict, Any, List, BinaryIO
+from datetime import datetime
+import asyncio
+import logging
+import uuid
+
+from .state import PatientState, StatePhase, AlertSeverity
+from .state_store import StateStore, get_state_store
+from .message_bus import MessageBus, get_message_bus
+
+logger = logging.getLogger(__name__)
+
+
+class Orchestrator:
+    """
+    Central orchestrator for the patient care pipeline.
+    
+    Responsibilities:
+    - Coordinate agent execution in correct order
+    - Manage patient state across all agents
+    - Handle parallel execution where dependencies allow
+    - Provide error handling and recovery
+    - Track execution for audit trail
+    
+    Pipeline Phases:
+    1. EXTRACTING: Parse uploaded files, extract mutations
+    2. ANALYZING: Run Biomarker, Resistance, Nutrition agents (parallel)
+    3. RANKING: Drug efficacy ranking
+    4. MATCHING: Trial matching
+    5. PLANNING: Care plan generation
+    6. MONITORING: Set up continuous monitoring
+    7. COMPLETE: All done!
+    """
+    
+    def __init__(
+        self,
+        state_store: StateStore = None,
+        message_bus: MessageBus = None,
+        api_base: str = "http://127.0.0.1:8000"
+    ):
+        self.state_store = state_store or get_state_store()
+        self.message_bus = message_bus or get_message_bus()
+        self.api_base = api_base
+        
+        # Agent instances (lazy loaded)
+        self._agents = {}
+    
+    # ========================================================================
+    # MAIN PIPELINE
+    # ========================================================================
+    
+    async def run_full_pipeline(
+        self,
+        # Option 1: Provide mutations directly
+        mutations: List[Dict] = None,
+        disease: str = None,
+        
+        # Option 2: Provide file for extraction
+        file: BinaryIO = None,
+        file_type: str = None,
+        
+        # Option 3: Provide existing patient profile
+        patient_profile: Dict = None,
+        
+        # Patient context
+        patient_id: str = None,
+        cytogenetics: Dict = None,
+        treatment_line: int = 1,
+        prior_therapies: List[str] = None,
+        current_regimen: str = None,
+        
+        # Options
+        run_async: bool = False,
+        skip_agents: List[str] = None
+    ) -> PatientState:
+        """
+        Run the complete end-to-end pipeline.
+        
+        Three ways to invoke:
+        1. Provide mutations directly: mutations=[{"gene": "BRAF", ...}]
+        2. Provide file for extraction: file=uploaded_file, file_type='vcf'
+        3. Provide patient profile: patient_profile={...}
+        
+        Args:
+            mutations: List of mutation dicts
+            disease: Disease type (ovarian, myeloma)
+            file: Uploaded file for extraction
+            file_type: Type of file (vcf, maf, pdf, json)
+            patient_profile: Pre-parsed patient profile
+            patient_id: Optional patient ID (auto-generated if not provided)
+            cytogenetics: MM-specific cytogenetics
+            treatment_line: Current treatment line
+            prior_therapies: List of prior drug classes
+            current_regimen: Current treatment regimen
+            run_async: Return immediately with job ID
+            skip_agents: List of agents to skip
+        
+        Returns:
+            Final PatientState with all agent outputs
+        """
+        # Generate patient ID if not provided
+        if not patient_id:
+            patient_id = self._generate_patient_id()
+        
+        # Create initial state
+        state = PatientState(patient_id=patient_id)
+        state.disease = disease
+        
+        # Set mutations if provided directly
+        if mutations:
+            state.mutations = mutations
+            state.patient_profile = {
+                'patient_id': patient_id,
+                'disease': disease,
+                'mutations': mutations,
+                'cytogenetics': cytogenetics,
+                'treatment_line': treatment_line,
+                'prior_therapies': prior_therapies,
+                'current_regimen': current_regimen
+            }
+        
+        await self.state_store.save(state)
+        
+        logger.info(f"Starting pipeline for patient {patient_id} (disease: {disease})")
+        
+        skip_agents = skip_agents or []
+        
+        try:
+            # Phase 1: Data Extraction (if file provided)
+            if file:
+                state = await self._run_extraction_phase(state, file, file_type)
+            elif patient_profile:
+                state.patient_profile = patient_profile
+                state.mutations = patient_profile.get('mutations', [])
+                state.disease = patient_profile.get('disease', disease)
+            
+            # Validate we have data to work with
+            if not state.mutations and not state.patient_profile:
+                raise ValueError("No patient data provided - need mutations, file, or patient_profile")
+            
+            # Phase 2: Parallel Analysis (Biomarker, Resistance, Nutrition)
+            state = await self._run_analysis_phase(state, skip_agents)
+            
+            # Phase 3: Drug Efficacy Ranking
+            if 'drug_efficacy' not in skip_agents:
+                state = await self._run_drug_efficacy_phase(state)
+            
+            # Phase 3.5: Synthetic Lethality & Essentiality
+            if 'synthetic_lethality' not in skip_agents:
+                state = await self._run_synthetic_lethality_phase(state)
+            
+            # Phase 4: Trial Matching
+            if 'trial_matching' not in skip_agents:
+                state = await self._run_trial_matching_phase(state)
+            
+            # Phase 5: Care Plan Generation
+            if 'care_plan' not in skip_agents:
+                state = await self._run_care_plan_phase(state)
+            
+            # Phase 6: Monitoring Setup
+            if 'monitoring' not in skip_agents:
+                state = await self._run_monitoring_phase(state)
+            
+            # Complete!
+            state.phase = StatePhase.COMPLETE
+            await self.state_store.save(state)
+            
+            logger.info(f"Pipeline complete for {patient_id} in {self._get_duration(state)}ms")
+            
+            return state
+            
+        except Exception as e:
+            state.phase = StatePhase.ERROR
+            state.add_alert(
+                alert_type='pipeline_error',
+                message=str(e),
+                severity=AlertSeverity.CRITICAL,
+                source_agent='orchestrator'
+            )
+            await self.state_store.save(state)
+            logger.error(f"Pipeline failed for {patient_id}: {e}")
+            raise
+    
+    # ========================================================================
+    # PIPELINE PHASES
+    # ========================================================================
+    
+    async def _run_extraction_phase(
+        self,
+        state: PatientState,
+        file: BinaryIO,
+        file_type: str
+    ) -> PatientState:
+        """Phase 1: Extract data from uploaded file."""
+        from ..extraction import DataExtractionAgent
+        
+        state.phase = StatePhase.EXTRACTING
+        await self.state_store.save(state)
+        
+        execution = state.start_agent('extraction')
+        
+        try:
+            # Run extraction agent
+            agent = DataExtractionAgent()
+            profile = await agent.extract(
+                file=file,
+                file_type=file_type,
+                metadata={'patient_id': state.patient_id}
+            )
+            
+            # Convert PatientProfile to dict for storage
+            state.patient_profile = profile.to_dict()
+            state.mutations = [m.to_dict() for m in profile.mutations]
+            state.disease = profile.disease
+            
+            # Update state
+            state.update('patient_profile', state.patient_profile, agent='extraction', reason='File extraction complete')
+            state.update('mutations', state.mutations, agent='extraction', reason='Mutations extracted')
+            state.update('disease', state.disease, agent='extraction', reason='Disease identified')
+            
+            execution.complete({
+                'mutation_count': len(state.mutations),
+                'disease': state.disease,
+                'extraction_method': profile.extraction_provenance.get('extraction_method'),
+                'confidence': profile.extraction_provenance.get('confidence', 0)
+            })
+            logger.info(f"Extraction complete: {len(state.mutations)} mutations, disease={state.disease}")
+            
+        except Exception as e:
+            execution.fail(str(e))
+            state.add_alert(
+                alert_type='extraction_error',
+                message=str(e),
+                severity=AlertSeverity.WARNING,
+                source_agent='extraction'
+            )
+            logger.error(f"Extraction failed: {e}")
+            raise
+        
+        await self.state_store.save(state)
+        return state
+    
+    async def _run_analysis_phase(
+        self,
+        state: PatientState,
+        skip_agents: List[str]
+    ) -> PatientState:
+        """Phase 2: Run analysis agents in parallel."""
+        state.phase = StatePhase.ANALYZING
+        await self.state_store.save(state)
+        
+        tasks = []
+        task_names = []
+        
+        # Biomarker agent
+        if 'biomarker' not in skip_agents:
+            tasks.append(self._run_biomarker_agent(state))
+            task_names.append('biomarker')
+        
+        # Resistance agent
+        if 'resistance' not in skip_agents:
+            tasks.append(self._run_resistance_agent(state))
+            task_names.append('resistance')
+        
+        # Nutrition agent (can run in parallel)
+        if 'nutrition' not in skip_agents:
+            tasks.append(self._run_nutrition_agent(state))
+            task_names.append('nutrition')
+        
+        # Run in parallel
+        if tasks:
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+            
+            for name, result in zip(task_names, results):
+                if isinstance(result, Exception):
+                    logger.error(f"Agent {name} failed: {result}")
+                    state.add_alert(
+                        alert_type=f'{name}_error',
+                        message=str(result),
+                        severity=AlertSeverity.WARNING,
+                        source_agent=name
+                    )
+                else:
+                    if name == 'biomarker':
+                        state.biomarker_profile = result
+                    elif name == 'resistance':
+                        state.resistance_prediction = result
+                    elif name == 'nutrition':
+                        state.nutrition_plan = result
+        
+        await self.state_store.save(state)
+        return state
+    
+    async def _run_drug_efficacy_phase(self, state: PatientState) -> PatientState:
+        """Phase 3: Drug efficacy ranking."""
+        state.phase = StatePhase.RANKING
+        await self.state_store.save(state)
+        
+        execution = state.start_agent('drug_efficacy')
+        
+        try:
+            result = await self._run_drug_efficacy_agent(state)
+            state.drug_ranking = result.get('ranked_drugs', [])
+            state.mechanism_vector = result.get('mechanism_vector', [0.0] * 7)
+            
+            execution.complete({
+                'drugs_ranked': len(state.drug_ranking),
+                'top_drug': state.drug_ranking[0]['drug_name'] if state.drug_ranking else None
+            })
+            
+        except Exception as e:
+            execution.fail(str(e))
+            state.add_alert(
+                alert_type='drug_efficacy_error',
+                message=str(e),
+                severity=AlertSeverity.WARNING,
+                source_agent='drug_efficacy'
+            )
+        
+        await self.state_store.save(state)
+        return state
+    
+    async def _run_synthetic_lethality_phase(self, state: PatientState) -> PatientState:
+        """Phase 3.5: Synthetic lethality & essentiality analysis."""
+        state.phase = StatePhase.RANKING  # Same phase as drug efficacy
+        await self.state_store.save(state)
+        
+        execution = state.start_agent('synthetic_lethality')
+        
+        try:
+            result = await self._run_synthetic_lethality_agent(state)
+            
+            # Store in state
+            state.synthetic_lethality_result = result
+            
+            execution.complete({
+                'sl_detected': result.get('synthetic_lethality_detected', False),
+                'genes_scored': len(result.get('essentiality_scores', [])),
+                'drugs_recommended': len(result.get('recommended_drugs', [])),
+                'calculation_time_ms': result.get('calculation_time_ms', 0)
+            })
+            
+        except Exception as e:
+            execution.fail(str(e))
+            state.add_alert(
+                alert_type='synthetic_lethality_error',
+                message=str(e),
+                severity=AlertSeverity.WARNING,
+                source_agent='synthetic_lethality'
+            )
+        
+        await self.state_store.save(state)
+        return state
+    
+    async def _run_trial_matching_phase(self, state: PatientState) -> PatientState:
+        """Phase 4: Clinical trial matching."""
+        state.phase = StatePhase.MATCHING
+        await self.state_store.save(state)
+        
+        execution = state.start_agent('trial_matching')
+        
+        try:
+            result = await self._run_trial_matching_agent(state)
+            state.update('trial_matches', result.get('matches', []), agent='trial_matching', reason='Trial matching complete')
+            
+            execution.complete({
+                'trials_matched': len(state.trial_matches),
+                'top_trial': state.trial_matches[0].get('nct_id') if state.trial_matches else None,
+                'queries_used': len(result.get('queries_used', [])),
+                'search_time_ms': result.get('search_time_ms', 0)
+            })
+            
+        except Exception as e:
+            execution.fail(str(e))
+            state.add_alert(
+                alert_type='trial_matching_error',
+                message=str(e),
+                severity=AlertSeverity.WARNING,
+                source_agent='trial_matching'
+            )
+        
+        await self.state_store.save(state)
+        return state
+    
+    async def _run_care_plan_phase(self, state: PatientState) -> PatientState:
+        """Phase 5: Care plan generation."""
+        state.phase = StatePhase.PLANNING
+        await self.state_store.save(state)
+        
+        execution = state.start_agent('care_plan')
+        
+        try:
+            result = await self._run_care_plan_agent(state)
+            state.care_plan = result
+            
+            execution.complete({'sections': len(result.get('sections', []))})
+            
+        except Exception as e:
+            execution.fail(str(e))
+            # Care plan is important - escalate error
+            state.add_alert(
+                alert_type='care_plan_error',
+                message=str(e),
+                severity=AlertSeverity.CRITICAL,
+                source_agent='care_plan'
+            )
+        
+        await self.state_store.save(state)
+        return state
+    
+    async def _run_monitoring_phase(self, state: PatientState) -> PatientState:
+        """Phase 6: Set up monitoring."""
+        state.phase = StatePhase.MONITORING
+        await self.state_store.save(state)
+        
+        execution = state.start_agent('monitoring')
+        
+        try:
+            result = await self._run_monitoring_agent(state)
+            state.monitoring_config = result
+            
+            execution.complete({'configured': True})
+            
+        except Exception as e:
+            execution.fail(str(e))
+            state.add_alert(
+                alert_type='monitoring_error',
+                message=str(e),
+                severity=AlertSeverity.WARNING,
+                source_agent='monitoring'
+            )
+        
+        await self.state_store.save(state)
+        return state
+    
+    # ========================================================================
+    # AGENT RUNNERS
+    # ========================================================================
+    
+    async def _run_biomarker_agent(self, state: PatientState) -> Dict:
+        """Run the biomarker calculation agent."""
+        execution = state.start_agent('biomarker')
+        
+        try:
+            # Enhanced biomarker calculation from mutations
+            mutations = state.mutations
+            
+            # Enhanced TMB calculation (mutations per Mb, excluding silent variants)
+            exome_size = 38.0  # Mb
+            # Filter out silent/synonymous variants for TMB
+            nonsilent_mutations = [
+                m for m in mutations 
+                if m.get('consequence') and 'synonymous' not in m.get('consequence', '').lower()
+            ]
+            tmb = len(nonsilent_mutations) / exome_size if nonsilent_mutations else 0
+            
+            # Enhanced dMMR gene panel (includes EPCAM)
+            dmmr_genes = {'MLH1', 'MSH2', 'MSH6', 'PMS2', 'EPCAM'}
+            mutated_dmmr = [m['gene'] for m in mutations if m.get('gene', '').upper() in dmmr_genes]
+            # MSI-H if 2+ dMMR genes mutated OR if specific high-impact mutations
+            msi_status = 'MSI-H' if (len(mutated_dmmr) >= 2 or any(
+                m.get('consequence', '').lower() in ['frameshift', 'nonsense', 'splice'] 
+                for m in mutations if m.get('gene', '').upper() in dmmr_genes
+            )) else 'MSS'
+            
+            # Enhanced HRD gene panel (comprehensive DDR pathway)
+            hrd_genes = {
+                'BRCA1', 'BRCA2', 'ATM', 'ATR', 'PALB2', 'RAD51C', 'RAD51D',
+                'CHEK1', 'CHEK2', 'FANCA', 'FANCD2', 'FANCL', 'BRIP1', 'BARD1'
+            }
+            mutated_hrd = [m['gene'] for m in mutations if m.get('gene', '').upper() in hrd_genes]
+            # HRD+ if any HRD gene mutated with high-impact variant
+            hrd_high_impact = any(
+                m.get('consequence', '').lower() in ['frameshift', 'nonsense', 'splice', 'stop_gained']
+                for m in mutations 
+                if m.get('gene', '').upper() in hrd_genes
+            )
+            hrd_status = 'HRD+' if (mutated_hrd and hrd_high_impact) else ('HRD-' if not mutated_hrd else 'HRD-uncertain')
+            
+            # PD-L1 eligibility (TMB-H or MSI-H)
+            io_eligible = tmb >= 10 or msi_status == 'MSI-H'
+            
+            # PARP eligibility (HRD+ or BRCA1/2 mutations)
+            parp_eligible = hrd_status == 'HRD+' or any(
+                m.get('gene', '').upper() in {'BRCA1', 'BRCA2'} 
+                for m in mutations
+            )
+            
+            result = {
+                'tmb': {
+                    'value': round(tmb, 2),
+                    'classification': 'TMB-H' if tmb >= 10 else ('TMB-M' if tmb >= 5 else 'TMB-L'),
+                    'threshold_used': 10.0,
+                    'mutation_count': len(nonsilent_mutations),
+                    'total_mutations': len(mutations),
+                    'exome_size_mb': exome_size,
+                    'method': 'nonsilent_variants_per_mb'
+                },
+                'msi': {
+                    'status': msi_status,
+                    'dmmr_genes_mutated': mutated_dmmr,
+                    'method': 'gene_panel_with_impact',
+                    'confidence': 'high' if len(mutated_dmmr) >= 2 else 'moderate'
+                },
+                'hrd': {
+                    'status': hrd_status,
+                    'genes_mutated': mutated_hrd,
+                    'method': 'comprehensive_ddr_panel',
+                    'high_impact_detected': hrd_high_impact,
+                    'confidence': 'high' if hrd_high_impact else 'moderate'
+                },
+                'io_eligible': io_eligible,
+                'parp_eligible': parp_eligible,
+                'provenance': {
+                    'calculation_method': 'enhanced_gene_panel',
+                    'timestamp': datetime.utcnow().isoformat(),
+                    'disease': state.disease
+                }
+            }
+            
+            execution.complete(result)
+            return result
+            
+        except Exception as e:
+            execution.fail(str(e))
+            logger.error(f"Biomarker calculation failed: {e}")
+            # Return safe defaults on error
+            return {
+                'tmb': {'value': 0.0, 'classification': 'TMB-L', 'error': str(e)},
+                'msi': {'status': 'MSS', 'error': str(e)},
+                'hrd': {'status': 'HRD-', 'error': str(e)},
+                'io_eligible': False,
+                'parp_eligible': False
+            }
+    
+    async def _run_resistance_agent(self, state: PatientState) -> Dict:
+        """Run the resistance prediction agent."""
+        execution = state.start_agent('resistance')
+        
+        try:
+            from dataclasses import asdict, is_dataclass
+            
+            # Import and call resistance service
+            from ..resistance_prophet_service import get_resistance_prophet_service
+            from ..resistance_playbook_service import get_resistance_playbook_service
+            
+            prophet = get_resistance_prophet_service()
+            playbook = get_resistance_playbook_service()
+            
+            # Build request
+            mutations = state.mutations
+            disease = state.disease or 'ovarian'
+            profile = state.patient_profile or {}
+            
+            # Call resistance prediction
+            if disease in ['myeloma', 'mm']:
+                prediction_obj = await prophet.predict_mm_resistance(
+                    mutations=mutations,
+                    drug_class=profile.get('current_drug_class'),
+                    treatment_line=profile.get('treatment_line', 1),
+                    prior_therapies=profile.get('prior_therapies'),
+                    cytogenetics=profile.get('cytogenetics')
+                )
+            else:
+                prediction_obj = await prophet.predict_platinum_resistance(
+                    mutations=mutations
+                )
+            
+            # Convert dataclass to dict if needed
+            if is_dataclass(prediction_obj) and not isinstance(prediction_obj, type):
+                prediction = self._dataclass_to_dict(prediction_obj)
+            elif isinstance(prediction_obj, dict):
+                prediction = prediction_obj
+            else:
+                prediction = {'error': 'Unknown prediction format'}
+            
+            # Get playbook recommendations
+            detected_genes = prediction.get('detected_genes', [])
+            if not detected_genes and prediction.get('signals_detected'):
+                # Extract genes from signals
+                detected_genes = [
+                    {'gene': s.get('gene') or s.get('signal_type', 'UNKNOWN')}
+                    for s in prediction.get('signals_detected', [])
+                    if s.get('detected', True)
+                ]
+            
+            if detected_genes:
+                try:
+                    next_line = await playbook.get_next_line_options(
+                        disease=disease,
+                        detected_resistance=[g.get('gene', 'UNKNOWN') for g in detected_genes],
+                        current_regimen=profile.get('current_regimen'),
+                        treatment_line=profile.get('treatment_line', 1),
+                        cytogenetics=profile.get('cytogenetics'),
+                        prior_therapies=profile.get('prior_therapies')
+                    )
+                    prediction['next_line_options'] = next_line
+                except Exception as e:
+                    logger.warning(f"Playbook lookup failed: {e}")
+            
+            # Add detected_genes to prediction for downstream use
+            prediction['detected_genes'] = detected_genes
+            
+            execution.complete({
+                'risk_level': prediction.get('risk_level'),
+                'genes_detected': len(detected_genes)
+            })
+            
+            return prediction
+            
+        except Exception as e:
+            execution.fail(str(e))
+            raise
+    
+    def _dataclass_to_dict(self, obj) -> Dict:
+        """Convert a dataclass to dict, handling nested objects."""
+        from dataclasses import is_dataclass, fields
+        from enum import Enum
+        
+        if is_dataclass(obj) and not isinstance(obj, type):
+            result = {}
+            for f in fields(obj):
+                value = getattr(obj, f.name)
+                result[f.name] = self._convert_value(value)
+            return result
+        return obj
+    
+    def _convert_value(self, value):
+        """Convert a value to JSON-serializable format."""
+        from dataclasses import is_dataclass
+        from enum import Enum
+        
+        if value is None:
+            return None
+        if isinstance(value, Enum):
+            return value.value
+        if is_dataclass(value) and not isinstance(value, type):
+            return self._dataclass_to_dict(value)
+        if isinstance(value, list):
+            return [self._convert_value(v) for v in value]
+        if isinstance(value, dict):
+            return {k: self._convert_value(v) for k, v in value.items()}
+        if isinstance(value, datetime):
+            return value.isoformat()
+        return value
+    
+    async def _run_nutrition_agent(self, state: PatientState) -> Dict:
+        """Run the nutrition planning agent."""
+        execution = state.start_agent('nutrition')
+        
+        try:
+            from ..nutrition import NutritionAgent
+            
+            # Extract germline genes from patient profile
+            germline_genes = []
+            if state.patient_profile:
+                germline_panel = state.patient_profile.get('germline_panel', {})
+                if isinstance(germline_panel, dict):
+                    variants = germline_panel.get('variants', [])
+                    germline_genes = [v.get('gene', '') for v in variants if v.get('gene')]
+                elif hasattr(germline_panel, 'variants'):
+                    germline_genes = [v.gene for v in germline_panel.variants if hasattr(v, 'gene')]
+            
+            # Get current drugs from patient profile, drug_ranking, or state
+            current_drugs = []
+            if state.patient_profile:
+                current_regimen = state.patient_profile.get('current_regimen', '')
+                if current_regimen:
+                    # Simple parsing - split by common separators
+                    current_drugs = [d.strip() for d in current_regimen.replace(',', ' ').replace('+', ' ').split() if d.strip()]
+            
+            # Fallback: Extract from drug_ranking if available
+            if not current_drugs and state.drug_ranking:
+                for drug in state.drug_ranking[:3]:  # Top 3 drugs
+                    if isinstance(drug, dict):
+                        drug_name = (drug.get('name') or 
+                                   drug.get('drug_name') or 
+                                   drug.get('drug') or
+                                   drug.get('compound'))
+                        if drug_name:
+                            current_drugs.append(str(drug_name))
+            
+            # Also extract germline genes from mutations if not in patient_profile
+            if not germline_genes and state.mutations:
+                for mut in state.mutations:
+                    if isinstance(mut, dict) and mut.get('gene'):
+                        gene = mut['gene']
+                        if gene not in germline_genes:
+                            germline_genes.append(gene)
+            
+            # Get treatment line
+            treatment_line = None
+            if state.patient_profile:
+                line = state.patient_profile.get('treatment_line', 1)
+                if isinstance(line, int):
+                    treatment_line = f"{line}-line"
+            
+            # Run nutrition agent
+            agent = NutritionAgent(enable_llm=True)
+            nutrition_plan = await agent.generate_nutrition_plan(
+                patient_id=state.patient_id,
+                mutations=state.mutations,
+                germline_genes=germline_genes,
+                current_drugs=current_drugs,
+                disease=state.disease,
+                treatment_line=treatment_line
+            )
+            
+            # Convert to dict
+            result = nutrition_plan.to_dict()
+            
+            execution.complete(result)
+            return result
+            
+        except Exception as e:
+            execution.fail(str(e))
+            logger.warning(f"Nutrition agent failed: {e}, returning placeholder")
+            # Return placeholder on error
+            return {
+                'patient_id': state.patient_id,
+                'treatment': 'unknown',
+                'supplements': [],
+                'foods_to_prioritize': [],
+                'foods_to_avoid': [],
+                'drug_food_interactions': [],
+                'timing_rules': {},
+                'provenance': {'method': 'error_fallback', 'error': str(e)}
+            }
+    
+    async def _run_drug_efficacy_agent(self, state: PatientState) -> Dict:
+        """Run the drug efficacy ranking agent."""
+        from ..efficacy_orchestrator import EfficacyOrchestrator, EfficacyRequest
+        
+        # Build mutations list for EfficacyRequest
+        mutations = []
+        for m in state.mutations:
+            mut_dict = {
+                'gene': m.get('gene', ''),
+                'hgvs_p': m.get('hgvs_p'),
+                'hgvs_c': m.get('hgvs_c'),
+                'chrom': m.get('chrom'),
+                'pos': m.get('pos'),
+                'ref': m.get('ref'),
+                'alt': m.get('alt'),
+                'consequence': m.get('consequence')
+            }
+            # Remove None values
+            mutations.append({k: v for k, v in mut_dict.items() if v is not None})
+        
+        # Build request
+        request = EfficacyRequest(
+            mutations=mutations,
+            disease=state.disease or 'unknown',
+            model_id='evo2_7b',
+            options={'adaptive': True, 'ensemble': True},
+            api_base=self.api_base
+        )
+        
+        # Run efficacy orchestrator
+        orchestrator = EfficacyOrchestrator()
+        response = await orchestrator.predict(request)
+        
+        # Extract mechanism vector from pathway scores
+        mechanism_vector = [0.0] * 7
+        pathway_scores = response.provenance.get('confidence_breakdown', {}).get('pathway_disruption', {})
+        if pathway_scores:
+            # Map pathway scores to 7D mechanism vector
+            # [DDR, MAPK, PI3K, VEGF, HER2, IO, Efflux]
+            pathway_mapping = {
+                'ddr': 0,
+                'ras_mapk': 1,
+                'pi3k': 2,
+                'vegf': 3,
+                'her2': 4,
+                'io': 5,
+                'efflux': 6
+            }
+            for pathway, score in pathway_scores.items():
+                pathway_lower = pathway.lower()
+                if pathway_lower in pathway_mapping:
+                    idx = pathway_mapping[pathway_lower]
+                    mechanism_vector[idx] = float(score)
+        
+        # Convert drugs to ranked list
+        ranked_drugs = []
+        for drug in response.drugs:
+            ranked_drugs.append({
+                'drug_name': drug.get('name', ''),
+                'moa': drug.get('moa', ''),
+                'efficacy_score': drug.get('efficacy_score', 0.0),
+                'confidence': drug.get('confidence', 0.0),
+                'evidence_tier': drug.get('evidence_tier', 'insufficient'),
+                'badges': drug.get('badges', []),
+                'rationale': drug.get('rationale', [])
+            })
+        
+        # Sort by efficacy score descending
+        ranked_drugs.sort(key=lambda x: x['efficacy_score'], reverse=True)
+        
+        return {
+            'ranked_drugs': ranked_drugs,
+            'mechanism_vector': mechanism_vector,
+            'evidence_tier': response.evidence_tier,
+            'run_signature': response.run_signature,
+            'provenance': response.provenance
+        }
+    
+    async def _run_synthetic_lethality_agent(self, state: PatientState) -> Dict:
+        """Run the synthetic lethality & essentiality agent."""
+        from ..synthetic_lethality import SyntheticLethalityAgent, SyntheticLethalityRequest, MutationInput, SLOptions
+        
+        # Build mutation inputs
+        mutations = [
+            MutationInput(
+                gene=m.get('gene', ''),
+                hgvs_p=m.get('hgvs_p'),
+                hgvs_c=m.get('hgvs_c'),
+                consequence=m.get('consequence'),
+                chrom=m.get('chrom'),
+                pos=m.get('pos'),
+                ref=m.get('ref'),
+                alt=m.get('alt')
+            )
+            for m in state.mutations
+        ]
+        
+        # Build request
+        request = SyntheticLethalityRequest(
+            disease=state.disease or 'unknown',
+            mutations=mutations,
+            options=SLOptions(
+                model_id='evo2_7b',
+                include_explanations=True,
+                explanation_audience='clinician'
+            )
+        )
+        
+        # Run agent
+        agent = SyntheticLethalityAgent()
+        result = await agent.analyze(request)
+        
+        # Convert to dict for storage
+        return self._convert_sl_result_to_dict(result)
+    
+    def _convert_sl_result_to_dict(self, result) -> Dict:
+        """Convert SyntheticLethalityResult to dict."""
+        return {
+            'patient_id': result.patient_id,
+            'disease': result.disease,
+            'synthetic_lethality_detected': result.synthetic_lethality_detected,
+            'double_hit_description': result.double_hit_description,
+            'essentiality_scores': [
+                {
+                    'gene': s.gene,
+                    'essentiality_score': s.essentiality_score,
+                    'essentiality_level': s.essentiality_level.value,
+                    'sequence_disruption': s.sequence_disruption,
+                    'pathway_impact': s.pathway_impact,
+                    'functional_consequence': s.functional_consequence,
+                    'flags': s.flags,
+                    'confidence': s.confidence
+                }
+                for s in result.essentiality_scores
+            ],
+            'broken_pathways': [
+                {
+                    'pathway_name': p.pathway_name,
+                    'pathway_id': p.pathway_id,
+                    'status': p.status.value,
+                    'genes_affected': p.genes_affected,
+                    'disruption_score': p.disruption_score,
+                    'description': p.description
+                }
+                for p in result.broken_pathways
+            ],
+            'essential_pathways': [
+                {
+                    'pathway_name': p.pathway_name,
+                    'pathway_id': p.pathway_id,
+                    'status': p.status.value,
+                    'description': p.description
+                }
+                for p in result.essential_pathways
+            ],
+            'recommended_drugs': [
+                {
+                    'drug_name': d.drug_name,
+                    'drug_class': d.drug_class,
+                    'target_pathway': d.target_pathway,
+                    'confidence': d.confidence,
+                    'mechanism': d.mechanism,
+                    'fda_approved': d.fda_approved,
+                    'evidence_tier': d.evidence_tier,
+                    'rationale': d.rationale
+                }
+                for d in result.recommended_drugs
+            ],
+            'suggested_therapy': result.suggested_therapy,
+            'explanation': {
+                'audience': result.explanation.audience,
+                'summary': result.explanation.summary,
+                'full_explanation': result.explanation.full_explanation,
+                'key_points': result.explanation.key_points
+            } if result.explanation else None,
+            'calculation_time_ms': result.calculation_time_ms,
+            'evo2_used': result.evo2_used,
+            'provenance': result.provenance
+        }
+    
+    async def _run_trial_matching_agent(self, state: PatientState) -> Dict:
+        """Run the clinical trial matching agent."""
+        from ..trials import TrialMatchingAgent
+        
+        # Build patient profile dict
+        patient_profile = {
+            'patient_id': state.patient_id,
+            'disease': state.disease,
+            'mutations': state.mutations,
+            'germline_status': getattr(state, 'germline_status', None),
+            'tumor_context': getattr(state, 'tumor_context', None)
+        }
+        
+        # Build biomarker profile dict
+        biomarker_profile = None
+        if state.biomarker_profile:
+            biomarker_profile = state.biomarker_profile if isinstance(state.biomarker_profile, dict) else {
+                'tmb': getattr(state.biomarker_profile, 'tmb', {}),
+                'msi': getattr(state.biomarker_profile, 'msi', {}),
+                'hrd': getattr(state.biomarker_profile, 'hrd', {})
+            }
+        
+        # Get mechanism vector from drug ranking
+        mechanism_vector = state.mechanism_vector if hasattr(state, 'mechanism_vector') else None
+        
+        # Run trial matching agent
+        agent = TrialMatchingAgent()
+        result = await agent.match(
+            patient_profile=patient_profile,
+            biomarker_profile=biomarker_profile,
+            mechanism_vector=mechanism_vector,
+            max_results=10
+        )
+        
+        # Convert TrialMatch objects to dicts for storage
+        matches = []
+        for match in result.matches:
+            matches.append({
+                'nct_id': match.nct_id,
+                'title': match.title,
+                'brief_summary': match.brief_summary,
+                'phase': match.phase.value,
+                'status': match.status.value,
+                'mechanism_fit_score': match.mechanism_fit_score,
+                'eligibility_score': match.eligibility_score,
+                'combined_score': match.combined_score,
+                'trial_moa': match.trial_moa.to_vector(),
+                'mechanism_alignment': match.mechanism_alignment,
+                'why_matched': match.why_matched,
+                'url': match.url,
+                'locations': match.locations,
+                'contact': match.contact
+            })
+        
+        return {
+            'matches': matches,
+            'queries_used': result.queries_used,
+            'trials_found': result.trials_found,
+            'trials_ranked': result.trials_ranked,
+            'top_match': {
+                'nct_id': result.top_match.nct_id,
+                'title': result.top_match.title,
+                'combined_score': result.top_match.combined_score
+            } if result.top_match else None,
+            'search_time_ms': result.search_time_ms,
+            'provenance': result.provenance
+        }
+    
+    async def _run_care_plan_agent(self, state: PatientState) -> Dict:
+        """Run the care plan generation agent."""
+        execution = state.start_agent('care_plan')
+        
+        try:
+            # Enhanced care plan aggregation with better organization
+            generated_at = datetime.utcnow().isoformat()
+            
+            # Build executive summary
+            executive_summary = {
+                'patient_id': state.patient_id,
+                'disease': state.disease or 'unknown',
+                'mutation_count': len(state.mutations),
+                'top_mutations': [
+                    {'gene': m.get('gene'), 'hgvs_p': m.get('hgvs_p')}
+                    for m in state.mutations[:5]
+                ] if state.mutations else [],
+                'biomarker_summary': {
+                    'tmb': state.biomarker_profile.get('tmb', {}).get('classification', 'TMB-L') if state.biomarker_profile else 'TMB-L',
+                    'msi': state.biomarker_profile.get('msi', {}).get('status', 'MSS') if state.biomarker_profile else 'MSS',
+                    'hrd': state.biomarker_profile.get('hrd', {}).get('status', 'HRD-') if state.biomarker_profile else 'HRD-',
+                    'io_eligible': state.biomarker_profile.get('io_eligible', False) if state.biomarker_profile else False,
+                    'parp_eligible': state.biomarker_profile.get('parp_eligible', False) if state.biomarker_profile else False
+                } if state.biomarker_profile else {},
+                'top_drug': state.drug_ranking[0] if (state.drug_ranking and len(state.drug_ranking) > 0) else None,
+                'trial_count': len(state.trial_matches) if state.trial_matches else 0,
+                'risk_level': state.resistance_prediction.get('risk_level', 'LOW') if state.resistance_prediction else 'LOW'
+            }
+            
+            # Build comprehensive sections
+            sections = []
+            
+            # Section 1: Patient Summary
+            sections.append({
+                'title': 'Patient Summary',
+                'order': 1,
+                'content': {
+                    'patient_id': state.patient_id,
+                    'disease': state.disease,
+                    'mutations': {
+                        'count': len(state.mutations),
+                        'list': state.mutations[:10]  # Top 10
+                    },
+                    'biomarkers': state.biomarker_profile
+                }
+            })
+            
+            # Section 2: Genomic Analysis
+            if state.biomarker_profile:
+                sections.append({
+                    'title': 'Genomic Biomarkers',
+                    'order': 2,
+                    'content': state.biomarker_profile
+                })
+            
+            # Section 3: Resistance Assessment
+            if state.resistance_prediction:
+                sections.append({
+                    'title': 'Resistance Assessment',
+                    'order': 3,
+                    'content': state.resistance_prediction
+                })
+            
+            # Section 4: Drug Recommendations
+            if state.drug_ranking:
+                sections.append({
+                    'title': 'Drug Recommendations',
+                    'order': 4,
+                    'content': {
+                        'ranked_drugs': state.drug_ranking[:10],  # Top 10
+                        'total_drugs': len(state.drug_ranking),
+                        'mechanism_vector': state.mechanism_vector
+                    }
+                })
+            
+            # Section 5: Synthetic Lethality (if available)
+            if state.synthetic_lethality_result:
+                sections.append({
+                    'title': 'Synthetic Lethality Analysis',
+                    'order': 5,
+                    'content': {
+                        'synthetic_lethality_detected': state.synthetic_lethality_result.get('synthetic_lethality_detected', False),
+                        'recommended_drugs': state.synthetic_lethality_result.get('recommended_drugs', [])[:5],
+                        'broken_pathways': state.synthetic_lethality_result.get('broken_pathways', [])
+                    }
+                })
+            
+            # Section 6: Clinical Trial Options
+            if state.trial_matches:
+                sections.append({
+                    'title': 'Clinical Trial Options',
+                    'order': 6,
+                    'content': {
+                        'matches': state.trial_matches[:10],  # Top 10
+                        'total_matches': len(state.trial_matches)
+                    }
+                })
+            
+            # Section 7: Nutrition Plan
+            if state.nutrition_plan:
+                sections.append({
+                    'title': 'Nutrition & Supportive Care',
+                    'order': 7,
+                    'content': state.nutrition_plan
+                })
+            
+            # Section 8: Monitoring Plan
+            if state.monitoring_config:
+                sections.append({
+                    'title': 'Monitoring Plan',
+                    'order': 8,
+                    'content': state.monitoring_config
+                })
+            
+            # Build complete care plan
+            care_plan = {
+                'patient_id': state.patient_id,
+                'disease': state.disease,
+                'generated_at': generated_at,
+                'executive_summary': executive_summary,
+                'sections': sections,
+                'alerts': [a.to_dict() for a in state.alerts],
+                'provenance': {
+                    'pipeline_version': '2.0',
+                    'generated_by': 'MOAT Orchestrator',
+                    'agents_executed': [ex.agent_name for ex in state.agent_executions],
+                    'execution_time_ms': sum(ex.duration_ms or 0 for ex in state.agent_executions),
+                    'data_quality_flags': state.data_quality_flags
+                }
+            }
+            
+            execution.complete(care_plan)
+            return care_plan
+            
+        except Exception as e:
+            execution.fail(str(e))
+            logger.error(f"Care plan generation failed: {e}")
+            # Return minimal care plan on error
+            return {
+                'patient_id': state.patient_id,
+                'disease': state.disease,
+                'generated_at': datetime.utcnow().isoformat(),
+                'error': str(e),
+                'sections': []
+            }
+    
+    async def _run_monitoring_agent(self, state: PatientState) -> Dict:
+        """Run the monitoring setup agent."""
+        execution = state.start_agent('monitoring')
+        
+        try:
+            # Enhanced monitoring configuration based on multiple factors
+            resistance = state.resistance_prediction or {}
+            biomarker_profile = state.biomarker_profile or {}
+            risk_level = resistance.get('risk_level', 'LOW')
+            
+            # Determine disease-specific primary biomarker
+            disease = state.disease or 'unknown'
+            primary_biomarker = 'CA-125'  # Default for ovarian
+            if 'prostate' in disease.lower():
+                primary_biomarker = 'PSA'
+            elif 'colorectal' in disease.lower() or 'colon' in disease.lower():
+                primary_biomarker = 'CEA'
+            elif 'breast' in disease.lower():
+                primary_biomarker = 'CA 15-3'
+            
+            # Enhanced frequency based on risk and biomarkers
+            if risk_level == 'HIGH' or biomarker_profile.get('tmb', {}).get('classification') == 'TMB-H':
+                frequency = 'weekly'
+                biomarkers = [primary_biomarker, 'ctDNA', 'LDH']
+                imaging_frequency = 'CT every 2 months'
+            elif risk_level == 'MEDIUM' or biomarker_profile.get('hrd', {}).get('status') == 'HRD+':
+                frequency = 'biweekly'
+                biomarkers = [primary_biomarker, 'ctDNA']
+                imaging_frequency = 'CT every 3 months'
+            else:
+                frequency = 'monthly'
+                biomarkers = [primary_biomarker]
+                imaging_frequency = 'CT every 6 months'
+            
+            # Enhanced escalation thresholds
+            escalation_thresholds = {
+                'biomarker_rise_percent': 25 if risk_level == 'HIGH' else 50,
+                'new_lesion': True,
+                'symptom_worsening': True,
+                'performance_status_drop': True
+            }
+            
+            # Add ctDNA monitoring if TMB-H or high risk
+            ctDNA_config = {}
+            if biomarker_profile.get('tmb', {}).get('classification') == 'TMB-H' or risk_level == 'HIGH':
+                ctDNA_config = {
+                    'enabled': True,
+                    'frequency': 'monthly',
+                    'target_mutations': [m.get('gene') for m in state.mutations[:5] if m.get('gene')]
+                }
+            
+            result = {
+                'frequency': frequency,
+                'biomarkers': biomarkers,
+                'primary_biomarker': primary_biomarker,
+                'imaging': imaging_frequency,
+                'alerts_enabled': True,
+                'escalation_thresholds': escalation_thresholds,
+                'ctdna_monitoring': ctDNA_config,
+                'risk_level': risk_level,
+                'provenance': {
+                    'configured_at': datetime.utcnow().isoformat(),
+                    'based_on': {
+                        'resistance_risk': risk_level,
+                        'tmb_status': biomarker_profile.get('tmb', {}).get('classification', 'TMB-L'),
+                        'hrd_status': biomarker_profile.get('hrd', {}).get('status', 'HRD-')
+                    }
+                }
+            }
+            
+            execution.complete(result)
+            return result
+            
+        except Exception as e:
+            execution.fail(str(e))
+            logger.error(f"Monitoring configuration failed: {e}")
+            # Return safe defaults
+            return {
+                'frequency': 'monthly',
+                'biomarkers': ['CA-125'],
+                'imaging': 'CT every 6 months',
+                'alerts_enabled': True,
+                'escalation_thresholds': {'biomarker_rise_percent': 50, 'new_lesion': True},
+                'error': str(e)
+            }
+    
+    # ========================================================================
+    # UTILITIES
+    # ========================================================================
+    
+    def _generate_patient_id(self) -> str:
+        """Generate a unique patient ID."""
+        return f"PT-{uuid.uuid4().hex[:8].upper()}"
+    
+    def _get_duration(self, state: PatientState) -> float:
+        """Get total pipeline duration in ms."""
+        return (datetime.utcnow() - state.created_at).total_seconds() * 1000
+    
+    # ========================================================================
+    # STATE QUERIES
+    # ========================================================================
+    
+    async def get_state(self, patient_id: str) -> Optional[PatientState]:
+        """Get current state for a patient."""
+        return await self.state_store.get(patient_id)
+    
+    async def get_all_states(self, limit: int = 50, phase: str = None) -> List[PatientState]:
+        """Get all patient states with optional filtering."""
+        return await self.state_store.get_all(limit=limit, phase=phase)
+    
+    async def get_care_plan(self, patient_id: str) -> Optional[Dict]:
+        """Get just the care plan for a patient."""
+        state = await self.state_store.get(patient_id)
+        if state:
+            return state.care_plan
+        return None
+
+
+# Singleton instance
+_orchestrator: Optional[Orchestrator] = None
+
+
+def get_orchestrator() -> Orchestrator:
+    """Get the global orchestrator instance."""
+    global _orchestrator
+    if _orchestrator is None:
+        _orchestrator = Orchestrator()
+    return _orchestrator
+
