@@ -1,0 +1,469 @@
+{
+  "extraction_date": "2025-12-31T00:39:54.308064",
+  "sources": {
+    "pubmed": [
+      {
+        "case_id": "LIT-DPYD-001",
+        "source": "PubMed",
+        "pmid": "41133273",
+        "gene": "DPYD",
+        "status": "needs_curation",
+        "extraction_date": "2025-12-31T00:39:54.565865"
+      },
+      {
+        "case_id": "LIT-DPYD-002",
+        "source": "PubMed",
+        "pmid": "39376610",
+        "gene": "DPYD",
+        "status": "needs_curation",
+        "extraction_date": "2025-12-31T00:39:54.565876"
+      },
+      {
+        "case_id": "LIT-DPYD-003",
+        "source": "PubMed",
+        "pmid": "38528593",
+        "gene": "DPYD",
+        "status": "needs_curation",
+        "extraction_date": "2025-12-31T00:39:54.565878"
+      },
+      {
+        "case_id": "LIT-DPYD-004",
+        "source": "PubMed",
+        "pmid": "36160401",
+        "gene": "DPYD",
+        "status": "needs_curation",
+        "extraction_date": "2025-12-31T00:39:54.565879"
+      },
+      {
+        "case_id": "LIT-DPYD-005",
+        "source": "PubMed",
+        "pmid": "31486738",
+        "gene": "DPYD",
+        "status": "needs_curation",
+        "extraction_date": "2025-12-31T00:39:54.565880"
+      },
+      {
+        "case_id": "LIT-DPYD-006",
+        "source": "PubMed",
+        "pmid": "31382864",
+        "gene": "DPYD",
+        "status": "needs_curation",
+        "extraction_date": "2025-12-31T00:39:54.565883"
+      },
+      {
+        "case_id": "LIT-DPYD-007",
+        "source": "PubMed",
+        "pmid": "31149530",
+        "gene": "DPYD",
+        "status": "needs_curation",
+        "extraction_date": "2025-12-31T00:39:54.565885"
+      },
+      {
+        "case_id": "LIT-DPYD-008",
+        "source": "PubMed",
+        "pmid": "30915274",
+        "gene": "DPYD",
+        "status": "needs_curation",
+        "extraction_date": "2025-12-31T00:39:54.565886"
+      },
+      {
+        "case_id": "LIT-DPYD-009",
+        "source": "PubMed",
+        "pmid": "28929491",
+        "gene": "DPYD",
+        "status": "needs_curation",
+        "extraction_date": "2025-12-31T00:39:54.565887"
+      }
+    ],
+    "cbioportal": [
+      {
+        "case_id": "CBIO-coad_cptac_gdc-11CO036",
+        "source": "cBioPortal",
+        "study_id": "coad_cptac_gdc",
+        "patient_id": "11CO036",
+        "gene": "DPYD",
+        "variant": "A348T",
+        "clinical": {},
+        "status": "needs_treatment_data",
+        "extraction_date": "2025-12-31T00:40:08.490836"
+      }
+    ],
+    "gdc": [
+      {
+        "case_id": "GDC-TCGA-COAD-001",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "a8b4284d-cbbb-43e3-897b-d04af4bfba74",
+        "submitter_id": "TCGA-AZ-6598",
+        "gene": "DPYD",
+        "variant": "chr1:g.97079055T>C",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291572"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-002",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "3758f4f7-ac2f-4f9d-bee2-526196f8129a",
+        "submitter_id": "TCGA-CK-5913",
+        "gene": "DPYD",
+        "variant": "chr1:g.97305373C>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291581"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-003",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "35c295c2-37d1-44b2-87a3-1039645e5bae",
+        "submitter_id": "TCGA-AA-3510",
+        "gene": "DPYD",
+        "variant": "chr1:g.97450071G>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291583"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-004",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "de287a25-981d-49f8-81af-fe0300e4cd31",
+        "submitter_id": "TCGA-AZ-4315",
+        "gene": "DPYD",
+        "variant": "chr1:g.97720896G>A",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291585"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-005",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "7ad0617e-bc4a-4869-8419-744f04d9b7a3",
+        "submitter_id": "TCGA-AZ-6601",
+        "gene": "DPYD",
+        "variant": "chr1:g.97573760C>A",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291586"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-006",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "db246424-3979-4f23-b316-8d30c449ee15",
+        "submitter_id": "TCGA-AA-3984",
+        "gene": "DPYD",
+        "variant": "chr1:g.97193231C>A",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291588"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-007",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "35c295c2-37d1-44b2-87a3-1039645e5bae",
+        "submitter_id": "TCGA-AA-3510",
+        "gene": "DPYD",
+        "variant": "chr1:g.97193169T>A",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291589"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-008",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "cc22913d-2dda-48bb-82aa-9960b73f3e44",
+        "submitter_id": "TCGA-NH-A5IV",
+        "gene": "DPYD",
+        "variant": "chr1:g.97306235delA",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291591"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-009",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "2900eadd-7e27-4371-94e5-7d58cdff0138",
+        "submitter_id": "TCGA-F4-6461",
+        "gene": "DPYD",
+        "variant": "chr1:g.97679174G>A",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291592"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-010",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "c8d7eb0f-2502-4277-a8ef-435b08f3c863",
+        "submitter_id": "TCGA-CM-4743",
+        "gene": "DPYD",
+        "variant": "chr1:g.97828158C>A",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291594"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-011",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "268c01b3-d2ce-44c0-a2fe-ea846a1253cc",
+        "submitter_id": "TCGA-CA-6717",
+        "gene": "DPYD",
+        "variant": "chr1:g.97573967C>A",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291595"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-012",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "a8b4284d-cbbb-43e3-897b-d04af4bfba74",
+        "submitter_id": "TCGA-AZ-6598",
+        "gene": "DPYD",
+        "variant": "chr1:g.97721603A>G",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291596"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-013",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "57a2044d-20cc-4d02-b268-ce570a0fabe3",
+        "submitter_id": "TCGA-AA-3713",
+        "gene": "DPYD",
+        "variant": "chr1:g.97079145G>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291598"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-014",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "fbb69964-f962-4b89-b59b-dd05f8faf61a",
+        "submitter_id": "TCGA-AZ-6599",
+        "gene": "DPYD",
+        "variant": "chr1:g.97306282G>A",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291599"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-015",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "4c6c8d3d-e4a3-490a-9211-cfbe7e6ee25b",
+        "submitter_id": "TCGA-A6-5665",
+        "gene": "DPYD",
+        "variant": "chr1:g.97593336A>G",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291601"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-016",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "bc42fe2d-1a33-428d-a601-b1871f4c8d9b",
+        "submitter_id": "TCGA-AA-3966",
+        "gene": "DPYD",
+        "variant": "chr1:g.97306235delA",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291602"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-017",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "bc02f801-081b-489b-87cb-d275c70299d5",
+        "submitter_id": "TCGA-AA-3845",
+        "gene": "DPYD",
+        "variant": "chr1:g.97573918C>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291604"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-018",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "2c30dc20-18a8-44f9-ab10-558c1e5634dc",
+        "submitter_id": "TCGA-AY-6196",
+        "gene": "DPYD",
+        "variant": "chr1:g.97079073C>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291605"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-019",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "35c295c2-37d1-44b2-87a3-1039645e5bae",
+        "submitter_id": "TCGA-AA-3510",
+        "gene": "DPYD",
+        "variant": "chr1:g.97883365C>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291606"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-020",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "b823d6e5-54b0-43d3-95e2-9be33dc6f734",
+        "submitter_id": "TCGA-DM-A0XF",
+        "gene": "DPYD",
+        "variant": "chr1:g.97679126T>G",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291608"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-021",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "2db3c23d-c591-4ea0-b0a8-ed9c4343c80e",
+        "submitter_id": "TCGA-CK-4951",
+        "gene": "DPYD",
+        "variant": "chr1:g.97082458T>C",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291609"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-022",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "cc53bf9e-5e27-4305-a08b-552120c10aa5",
+        "submitter_id": "TCGA-AA-3950",
+        "gene": "DPYD",
+        "variant": "chr1:g.97721543A>G",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291610"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-023",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "db246424-3979-4f23-b316-8d30c449ee15",
+        "submitter_id": "TCGA-AA-3984",
+        "gene": "DPYD",
+        "variant": "chr1:g.97699457G>A",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291612"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-024",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "2a971e32-b0e7-4a3f-8c40-62d69c0307d8",
+        "submitter_id": "TCGA-AA-A03F",
+        "gene": "DPYD",
+        "variant": "chr1:g.97515906T>G",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291613"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-025",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "bc42fe2d-1a33-428d-a601-b1871f4c8d9b",
+        "submitter_id": "TCGA-AA-3966",
+        "gene": "DPYD",
+        "variant": "chr1:g.97234900A>G",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291614"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-026",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "de287a25-981d-49f8-81af-fe0300e4cd31",
+        "submitter_id": "TCGA-AZ-4315",
+        "gene": "DPYD",
+        "variant": "chr1:g.97721569A>C",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291616"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-027",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "35c295c2-37d1-44b2-87a3-1039645e5bae",
+        "submitter_id": "TCGA-AA-3510",
+        "gene": "DPYD",
+        "variant": "chr1:g.97549703G>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291617"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-028",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "0712566e-3371-4715-95f1-5b792e72d758",
+        "submitter_id": "TCGA-AA-A010",
+        "gene": "DPYD",
+        "variant": "chr1:g.97595138G>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291618"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-029",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "a8b4284d-cbbb-43e3-897b-d04af4bfba74",
+        "submitter_id": "TCGA-AZ-6598",
+        "gene": "DPYD",
+        "variant": "chr1:g.97306195C>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291620"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-030",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "bc02f801-081b-489b-87cb-d275c70299d5",
+        "submitter_id": "TCGA-AA-3845",
+        "gene": "DPYD",
+        "variant": "chr1:g.97515899delG",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291621"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-031",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "268c01b3-d2ce-44c0-a2fe-ea846a1253cc",
+        "submitter_id": "TCGA-CA-6717",
+        "gene": "DPYD",
+        "variant": "chr1:g.97699431T>C",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291622"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-032",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "db246424-3979-4f23-b316-8d30c449ee15",
+        "submitter_id": "TCGA-AA-3984",
+        "gene": "DPYD",
+        "variant": "chr1:g.97098520A>C",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291624"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-033",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "39b6ae01-c97b-4234-8a28-208fdf170432",
+        "submitter_id": "TCGA-A6-6649",
+        "gene": "DPYD",
+        "variant": "chr1:g.97079031G>T",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291625"
+      },
+      {
+        "case_id": "GDC-TCGA-COAD-034",
+        "source": "GDC/TCGA",
+        "project": "TCGA-COAD",
+        "case_id_gdc": "4beee9d4-ee52-4fed-bcc4-d300f5ddd4d0",
+        "submitter_id": "TCGA-A6-5661",
+        "gene": "DPYD",
+        "variant": "chr1:g.97573950T>C",
+        "status": "needs_treatment_outcome_data",
+        "extraction_date": "2025-12-31T00:40:15.291627"
+      }
+    ]
+  },
+  "total_cases": 44
+}

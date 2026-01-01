@@ -1,0 +1,1983 @@
+{
+  "validation_date": "2025-12-31T01:17:31.739034",
+  "validation_mode": "offline",
+  "total_cases": 59,
+  "cases_with_predictions": 59,
+  "metrics": {
+    "total_cases": 59,
+    "by_gene": {
+      "DPYD": 44,
+      "TPMT": 9,
+      "UGT1A1": 6
+    },
+    "concordance": {
+      "matches": 53,
+      "total": 59
+    },
+    "toxicity_prediction": {
+      "tp": 0,
+      "tn": 59,
+      "fp": 0,
+      "fn": 0
+    },
+    "prevented_possible": 0,
+    "sensitivity": 0,
+    "specificity": 1.0,
+    "concordance_rate": 0.8983050847457628
+  },
+  "cases": [
+    {
+      "case_id": "LIT-DPYD-001",
+      "source": "PubMed",
+      "pmid": "41133273",
+      "gene": "DPYD",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.575849",
+      "fetched_title": "Severe fluoropyrimidine toxicity in a patient with rectal adenocarcinoma with DPYD c.2846A>T heterozygous mutation: A case report.",
+      "fetched_abstract": "Dihydropyrimidine dehydrogenase (DPD) is the key enzyme involved in fluoropyrimidine metabolism. Variants in the DPYD gene can lead to DPD deficiency, markedly increasing the risk of toxicity. The present report describes a case of a patient with rectal cancer treated with the CAPOX regimen (capecitabine and oxaliplatin) who developed grade 3 mucositis, fever, diarrhea and multi-organ dysfunction, necessitating prolonged intensive care unit support. The patient was managed with aggressive intravenous fluid therapy, a broad spectrum of antibiotics, antivirals and antifungal agents, extended use of granulocyte colony-stimulating factor and intensive anti-diarrheal treatment. Full clinical recovery was achieved, and the patient was discharged. Genetic analysis revealed a heterozygous c.2845A>T DPYD variant, known to be associated with fluoropyrimidine-related toxicity. The present case underscores the importance of early recognition of potential DPD deficiency and the essential role of prompt, intensive supportive care in managing severe fluoropyrimidine-related toxicities.",
+      "toxicity_occurred": true,
+      "toxicity_confidence": "high",
+      "abstract_analyzed": true,
+      "concordance": {
+        "matched_clinical_decision": false,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)"
+      },
+      "concordance_details": {
+        "concordant": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)",
+        "toxicity_occurred": true,
+        "our_recommendation_safer": false
+      },
+      "curated_date": "2025-12-31T01:15:27.199006",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "LIT-DPYD-002",
+      "source": "PubMed",
+      "pmid": "39376610",
+      "gene": "DPYD",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.575857",
+      "fetched_title": "Case report: A case of severe capecitabine toxicity due to confirmed in trans compound heterozygosity of a common and rare DPYD variant.",
+      "fetched_abstract": "Variations in the activity of the enzyme dihydropyrimidine dehydrogenase (DPD) are associated with toxicity to fluoropyrimidine-containing chemotherapy. Testing of DPD deficiency either by targeted genotyping of the corresponding DPYD gene or by quantification of plasma concentration of uracil and dihydrouracil (phenotyping approach) are the two main methods capable of predicting reduced enzymatic activity in order to reduce adverse reactions after fluoropyrimidine treatment. In this paper, we describe a patient with locally advanced colon carcinoma with severe toxicity following capecitabine therapy. Whereas targeted genotyping for the 4 most common DPYD variants analysis revealed heterozygous presence of the c.2846A>T variant, which is a relatively common variant associated with a partial deficiency, additional phenotyping was compatible with a complete DPD deficiency. Subsequent sequencing of the whole DPYD gene revealed the additional presence of the rare c.2872A>G variant, which is associated with a total loss of DPD activity. A clinical case of in trans compound heterozygosity of a common and a rare DPYD variant (c.2846A>T and c.2872A>G) has, to the best of our knowledge, not been previously described. Our case report shows the importance of performing either preemptive phenotyping or preemptive complete genetic analysis of the DPYD gene for patients planned for systemic fluoropyrimidines to identify rare and low frequency variants responsible for potentially life-threatening toxic reactions.",
+      "toxicity_occurred": true,
+      "toxicity_confidence": "high",
+      "abstract_analyzed": true,
+      "concordance": {
+        "matched_clinical_decision": false,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)"
+      },
+      "concordance_details": {
+        "concordant": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)",
+        "toxicity_occurred": true,
+        "our_recommendation_safer": false
+      },
+      "curated_date": "2025-12-31T01:15:27.492544",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "LIT-DPYD-003",
+      "source": "PubMed",
+      "pmid": "38528593",
+      "gene": "DPYD",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.575859",
+      "fetched_title": "A novel large intragenic DPYD deletion causing dihydropyrimidine dehydrogenase deficiency: a case report.",
+      "fetched_abstract": "Dihydropyrimidine dehydrogenase (DPD), is the initial and rate-limiting enzyme in the catabolic pathway of pyrimidines. Deleterious variants in the DPYD gene cause DPD deficiency, a rare autosomal recessive disorder. The clinical spectrum of affected individuals is wide ranging from asymptomatic to severely affected patients presenting with intellectual disability, motor retardation, developmental delay and seizures. DPD is also important as the main enzyme in the catabolism of 5-fluorouracil (5-FU) which is extensively used as a chemotherapeutic agent. Even in the absence of clinical symptoms, individuals with either complete or partial DPD deficiency face a high risk of severe and even fatal fluoropyrimidine-associated toxicity. The identification of causative genetic variants in DPYD is therefore gaining increasing attention due to their potential use as predictive markers of fluoropyrimidine toxicity.",
+      "toxicity_occurred": true,
+      "toxicity_confidence": "high",
+      "abstract_analyzed": true,
+      "concordance": {
+        "matched_clinical_decision": false,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)"
+      },
+      "concordance_details": {
+        "concordant": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)",
+        "toxicity_occurred": true,
+        "our_recommendation_safer": false
+      },
+      "curated_date": "2025-12-31T01:15:27.709793",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "LIT-DPYD-004",
+      "source": "PubMed",
+      "pmid": "36160401",
+      "gene": "DPYD",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.575860",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "Needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:27.835077",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "LIT-DPYD-005",
+      "source": "PubMed",
+      "pmid": "31486738",
+      "gene": "DPYD",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.575862",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "Needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:27.958003",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "LIT-DPYD-006",
+      "source": "PubMed",
+      "pmid": "31382864",
+      "gene": "DPYD",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.575865",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "Needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.064936",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "LIT-DPYD-007",
+      "source": "PubMed",
+      "pmid": "31149530",
+      "gene": "DPYD",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.575866",
+      "fetched_title": "Severe adverse events due to dihydropyrimidine dehydrogenase deficiency in a Japanese patient with colon cancer taking capecitabine: a case report.",
+      "fetched_abstract": "Fluoropyrimidine has been commonly used not only in unresectable cases of metastatic colorectal cancer, but also in adjuvant therapy. Dihydropyrimidine dehydrogenase (DPD) is an enzyme encoded by the DPYD gene, which is responsible for the rate-limiting step in pyrimidine catabolism and breaks down more than 80% of standard doses of 5-fluorouracil (5-FU) and capecitabine, an oral prodrug of 5-FU. The lack of enzymatic activity increases the half-life of the drug, resulting in excess drug accumulation and toxicity which may lead to life-threatening side effects. There have been several published case reports about DPD deficiency in patients with colorectal cancer in Western countries. However, case reports of DPD deficiency in Japanese patients with colorectal cancer are rare because measuring DPD activity is not covered by public medical insurance in Japan, and it is not examined in our daily clinical practice currently. Therefore, we think that it is important to accumulate such case reports for further understanding. This report describes the case of a Japanese patient with colon cancer who experienced severe side effects while taking capecitabine, due to DPD deficiency. A 68-year-old man with ascending colon cancer underwent curative laparoscopic right hemicolectomy. Because final pathologic staging was Stage IIIa, standard adjuvant chemotherapy with capecitabine (3600\u00a0mg/body/day, days 1-14, every 3\u00a0weeks) was started on postoperative day 50. After 2\u00a0weeks, he started to experience Grade 3 diarrhea and was admitted to the hospital on postoperative day 66. On day 70, the patient had Grade 4 febrile neutropenia. Antibiotics and granulocyte-colony-stimulating factor were administered until his blood tests recovered to the normal degree. After 1\u00a0week of diarrhea, antidiarrheal agents were administered, and the patient gradually recovered. During the occurrence of diarrhea, specimen cultures were negative for infection. He was discharged on day 21 of the hospital stay. DPD deficiency was suspected, and 2\u00a0weeks later the DPD activity of the peripheral blood mononucleocytes was examined. The result was 10.3\u00a0U/mg protein which was remarkedly low (reference range 22.6-183.6\u00a0U/mg protein), and DPD deficiency was diagnosed. We always must consider the possibility of DPD deficiency in patients who experience severe side effects while taking capecitabine.",
+      "toxicity_occurred": true,
+      "toxicity_confidence": "moderate",
+      "abstract_analyzed": true,
+      "concordance": {
+        "matched_clinical_decision": false,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)"
+      },
+      "concordance_details": {
+        "concordant": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)",
+        "toxicity_occurred": true,
+        "our_recommendation_safer": false
+      },
+      "curated_date": "2025-12-31T01:15:28.249505",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "LIT-DPYD-008",
+      "source": "PubMed",
+      "pmid": "30915274",
+      "gene": "DPYD",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.575868",
+      "fetched_title": "Rare Dihydropyrimidine Dehydrogenase Variants and Toxicity by Floropyrimidines: A Case Report.",
+      "fetched_abstract": "Variations in the activity, up to absolute deficiency, of the enzyme dihydropyrimidine dehydrogenase (DPD), result in the occurrence of adverse reactions to chemotherapy, and have been included among the pharmacogenetic factors underlying inter-individual variability in response to fluoropyrimidines. The study of single-nucleotide polymorphisms of the DPYD gene, which encodes the DPD enzyme, is one of the main parameters capable of predicting reduced enzymatic activity and the consequent influence on fluoropyrimidine treatment, in terms of reduction of both adverse reactions and therapeutic efficacy in disease control. In this paper, we describe a patient with metastatic breast cancer showing signs of increased toxicity following capecitabine therapy. The DPD enzyme activity analysis revealed a partial deficiency. The study of the most frequent polymorphisms of the DPYD gene suggested a wild-type genotype but indicated a novel variant c.1903A>G (p.Asn635Asp), not previously described, proximal to the splice donor site of exon 14. After excluding the potential pathogenic feature of the newly-identified variant, we performed cDNA sequencing of the entire DPYD coding sequence. This analysis identified the variants c.85T>C and c.496A>G, which were previously described as pivotal components of the haplotype associated with decreased enzyme activity and suggested that both variant alleles are related to DPD deficiency. The clinical case findings described in this study emphasize the importance of performing complete genetic analysis of the DPYD gene in order to identify rare and low frequency variants potentially responsible for toxic reactions to fluoropyrimidine treatment.",
+      "toxicity_occurred": true,
+      "toxicity_confidence": "moderate",
+      "abstract_analyzed": true,
+      "concordance": {
+        "matched_clinical_decision": false,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)"
+      },
+      "concordance_details": {
+        "concordant": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)",
+        "toxicity_occurred": true,
+        "our_recommendation_safer": false
+      },
+      "curated_date": "2025-12-31T01:15:28.433903",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "LIT-DPYD-009",
+      "source": "PubMed",
+      "pmid": "28929491",
+      "gene": "DPYD",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.575869",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "Needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.600510",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "LIT-TPMT-001",
+      "source": "PubMed",
+      "pmid": "31464791",
+      "gene": "TPMT",
+      "status": "needs_curation",
+      "extraction_date": "2025-12-31T00:47:11.934670",
+      "fetched_title": "Severe pancytopenia and aspergillosis caused by thioguanine in a thiopurine S-methyltransferase deficient patient: a case report.",
+      "fetched_abstract": "Azathioprine and mercaptopurine are widely used in the treatment of inflammatory bowel disease. However, its use is limited by adverse drug event related to the relatively narrow therapeutic index of the active metabolites. Several patients discontinue treatment because of intolerable adverse events or toxicity such as leucopenia and hepatotoxicity. High 6-thioguanine nucleotides and 6-methylmercaptopurine ribonucleotides levels are associated with toxicity. Variations in the thiopurine S-methyltransferase (TPMT) gene can lead to diminished TPMT enzyme activity and to an increased incidence of myelotoxicity due to high 6-methylmercaptopurine ribonucleotides levels after treatment with azathioprine and mercaptopurine. Unlike azathioprine and mercaptopurine, thioguanine is more directly metabolized to the active metabolites without formation of the toxic 6-methylmercaptopurine ribonucleotides. Taking this into account, it seems likely that thioguanine is less associated with myelotoxicity due to TPMT deficiency. However, we report the case of a Crohn's disease patient with life-threatening complications on 6TG treatment due to TPMT deficiency. Our patient developed a severe pancytopenia on thioguanine therapy, with 6-thioguanine nucleotides levels more than 10 times higher than the upper limit of the therapeutic window and was found to be a TPMT poor metabolizer (TPMT *3A/*3A). This case strongly illustrates that knowledge of TPMT enzyme activity is very important in the use of all thiopurines, including thioguanine. In conclusion, clinicians should be aware of the impact of TPMT deficiency on the metabolism of thioguanine and should consider performing preemptive TPMT genotyping in combination with frequent blood test monitoring when using thiopurines in general.",
+      "toxicity_occurred": true,
+      "toxicity_confidence": "moderate",
+      "abstract_analyzed": true,
+      "concordance": {
+        "matched_clinical_decision": false,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)"
+      },
+      "concordance_details": {
+        "concordant": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Toxicity occurred; our prediction did not recommend dose reduction (missed case)",
+        "toxicity_occurred": true,
+        "our_recommendation_safer": false
+      },
+      "curated_date": "2025-12-31T01:15:28.783903",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for TPMT + 6-mercaptopurine. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "CBIO-coad_cptac_gdc-11CO036",
+      "source": "cBioPortal",
+      "study_id": "coad_cptac_gdc",
+      "patient_id": "11CO036",
+      "gene": "DPYD",
+      "variant": "A348T",
+      "clinical": {},
+      "status": "needs_treatment_data",
+      "extraction_date": "2025-12-31T00:47:24.528373",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.783934",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-001",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "a8b4284d-cbbb-43e3-897b-d04af4bfba74",
+      "submitter_id": "TCGA-AZ-6598",
+      "gene": "DPYD",
+      "variant": "chr1:g.97079055T>C",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906471",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.783938",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-002",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "3758f4f7-ac2f-4f9d-bee2-526196f8129a",
+      "submitter_id": "TCGA-CK-5913",
+      "gene": "DPYD",
+      "variant": "chr1:g.97305373C>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906491",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.783940",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-003",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "35c295c2-37d1-44b2-87a3-1039645e5bae",
+      "submitter_id": "TCGA-AA-3510",
+      "gene": "DPYD",
+      "variant": "chr1:g.97450071G>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906496",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.783942",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-004",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "de287a25-981d-49f8-81af-fe0300e4cd31",
+      "submitter_id": "TCGA-AZ-4315",
+      "gene": "DPYD",
+      "variant": "chr1:g.97720896G>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906501",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.783944",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-005",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "7ad0617e-bc4a-4869-8419-744f04d9b7a3",
+      "submitter_id": "TCGA-AZ-6601",
+      "gene": "DPYD",
+      "variant": "chr1:g.97573760C>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906507",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.783946",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-006",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "db246424-3979-4f23-b316-8d30c449ee15",
+      "submitter_id": "TCGA-AA-3984",
+      "gene": "DPYD",
+      "variant": "chr1:g.97193231C>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906511",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.783955",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-007",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "35c295c2-37d1-44b2-87a3-1039645e5bae",
+      "submitter_id": "TCGA-AA-3510",
+      "gene": "DPYD",
+      "variant": "chr1:g.97193169T>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906516",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.783957",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-008",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "cc22913d-2dda-48bb-82aa-9960b73f3e44",
+      "submitter_id": "TCGA-NH-A5IV",
+      "gene": "DPYD",
+      "variant": "chr1:g.97306235delA",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906521",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.783959",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-009",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "2900eadd-7e27-4371-94e5-7d58cdff0138",
+      "submitter_id": "TCGA-F4-6461",
+      "gene": "DPYD",
+      "variant": "chr1:g.97679174G>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906526",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784062",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-010",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "c8d7eb0f-2502-4277-a8ef-435b08f3c863",
+      "submitter_id": "TCGA-CM-4743",
+      "gene": "DPYD",
+      "variant": "chr1:g.97828158C>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906531",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784070",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-011",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "268c01b3-d2ce-44c0-a2fe-ea846a1253cc",
+      "submitter_id": "TCGA-CA-6717",
+      "gene": "DPYD",
+      "variant": "chr1:g.97573967C>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906536",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784072",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-012",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "a8b4284d-cbbb-43e3-897b-d04af4bfba74",
+      "submitter_id": "TCGA-AZ-6598",
+      "gene": "DPYD",
+      "variant": "chr1:g.97721603A>G",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906541",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784073",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-013",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "57a2044d-20cc-4d02-b268-ce570a0fabe3",
+      "submitter_id": "TCGA-AA-3713",
+      "gene": "DPYD",
+      "variant": "chr1:g.97079145G>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906546",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784075",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-014",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "fbb69964-f962-4b89-b59b-dd05f8faf61a",
+      "submitter_id": "TCGA-AZ-6599",
+      "gene": "DPYD",
+      "variant": "chr1:g.97306282G>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906551",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784077",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-015",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "4c6c8d3d-e4a3-490a-9211-cfbe7e6ee25b",
+      "submitter_id": "TCGA-A6-5665",
+      "gene": "DPYD",
+      "variant": "chr1:g.97593336A>G",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906555",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784173",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-016",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "bc42fe2d-1a33-428d-a601-b1871f4c8d9b",
+      "submitter_id": "TCGA-AA-3966",
+      "gene": "DPYD",
+      "variant": "chr1:g.97306235delA",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906560",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784188",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-017",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "bc02f801-081b-489b-87cb-d275c70299d5",
+      "submitter_id": "TCGA-AA-3845",
+      "gene": "DPYD",
+      "variant": "chr1:g.97573918C>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906565",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784256",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-018",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "2c30dc20-18a8-44f9-ab10-558c1e5634dc",
+      "submitter_id": "TCGA-AY-6196",
+      "gene": "DPYD",
+      "variant": "chr1:g.97079073C>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906570",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784257",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-019",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "35c295c2-37d1-44b2-87a3-1039645e5bae",
+      "submitter_id": "TCGA-AA-3510",
+      "gene": "DPYD",
+      "variant": "chr1:g.97883365C>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906574",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784259",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-020",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "b823d6e5-54b0-43d3-95e2-9be33dc6f734",
+      "submitter_id": "TCGA-DM-A0XF",
+      "gene": "DPYD",
+      "variant": "chr1:g.97679126T>G",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906579",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784260",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-021",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "2db3c23d-c591-4ea0-b0a8-ed9c4343c80e",
+      "submitter_id": "TCGA-CK-4951",
+      "gene": "DPYD",
+      "variant": "chr1:g.97082458T>C",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906584",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784262",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-022",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "cc53bf9e-5e27-4305-a08b-552120c10aa5",
+      "submitter_id": "TCGA-AA-3950",
+      "gene": "DPYD",
+      "variant": "chr1:g.97721543A>G",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906588",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784263",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-023",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "db246424-3979-4f23-b316-8d30c449ee15",
+      "submitter_id": "TCGA-AA-3984",
+      "gene": "DPYD",
+      "variant": "chr1:g.97699457G>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906593",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784265",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-024",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "2a971e32-b0e7-4a3f-8c40-62d69c0307d8",
+      "submitter_id": "TCGA-AA-A03F",
+      "gene": "DPYD",
+      "variant": "chr1:g.97515906T>G",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906598",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784267",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-025",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "bc42fe2d-1a33-428d-a601-b1871f4c8d9b",
+      "submitter_id": "TCGA-AA-3966",
+      "gene": "DPYD",
+      "variant": "chr1:g.97234900A>G",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906603",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784269",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-026",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "de287a25-981d-49f8-81af-fe0300e4cd31",
+      "submitter_id": "TCGA-AZ-4315",
+      "gene": "DPYD",
+      "variant": "chr1:g.97721569A>C",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906608",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784270",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-027",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "35c295c2-37d1-44b2-87a3-1039645e5bae",
+      "submitter_id": "TCGA-AA-3510",
+      "gene": "DPYD",
+      "variant": "chr1:g.97549703G>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906612",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784272",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-028",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "0712566e-3371-4715-95f1-5b792e72d758",
+      "submitter_id": "TCGA-AA-A010",
+      "gene": "DPYD",
+      "variant": "chr1:g.97595138G>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906617",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784273",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-029",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "a8b4284d-cbbb-43e3-897b-d04af4bfba74",
+      "submitter_id": "TCGA-AZ-6598",
+      "gene": "DPYD",
+      "variant": "chr1:g.97306195C>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906622",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784274",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-030",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "bc02f801-081b-489b-87cb-d275c70299d5",
+      "submitter_id": "TCGA-AA-3845",
+      "gene": "DPYD",
+      "variant": "chr1:g.97515899delG",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906627",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784276",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-031",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "268c01b3-d2ce-44c0-a2fe-ea846a1253cc",
+      "submitter_id": "TCGA-CA-6717",
+      "gene": "DPYD",
+      "variant": "chr1:g.97699431T>C",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906632",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784278",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-032",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "db246424-3979-4f23-b316-8d30c449ee15",
+      "submitter_id": "TCGA-AA-3984",
+      "gene": "DPYD",
+      "variant": "chr1:g.97098520A>C",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906637",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784279",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-033",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "39b6ae01-c97b-4234-8a28-208fdf170432",
+      "submitter_id": "TCGA-A6-6649",
+      "gene": "DPYD",
+      "variant": "chr1:g.97079031G>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906642",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784281",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-034",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "4beee9d4-ee52-4fed-bcc4-d300f5ddd4d0",
+      "submitter_id": "TCGA-A6-5661",
+      "gene": "DPYD",
+      "variant": "chr1:g.97573950T>C",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:30.906647",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784282",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for DPYD + 5-fluorouracil. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-001",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "ebc5a6f8-34fd-48c1-a2b9-7f60f45fbf27",
+      "submitter_id": "TCGA-D5-6537",
+      "gene": "UGT1A1",
+      "variant": "chr2:g.233767137C>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.199166",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784284",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for UGT1A1 + irinotecan. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-002",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "7f6898e2-a840-4ad1-80f7-783f8b766fcc",
+      "submitter_id": "TCGA-WS-AB45",
+      "gene": "UGT1A1",
+      "variant": "chr2:g.233760401C>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.199200",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784285",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for UGT1A1 + irinotecan. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-003",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "a6f98ee5-9638-4ebe-804b-fba54aea9f90",
+      "submitter_id": "TCGA-CK-6746",
+      "gene": "UGT1A1",
+      "variant": "chr2:g.233760419T>C",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.199211",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784287",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for UGT1A1 + irinotecan. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-004",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "654c6f5c-3e5c-49f0-b53f-87cd9797d7c9",
+      "submitter_id": "TCGA-AA-3947",
+      "gene": "UGT1A1",
+      "variant": "chr2:g.233760477G>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.199220",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784288",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for UGT1A1 + irinotecan. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-005",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "6baf61b6-ae5b-42f0-adc9-0d26fda231f7",
+      "submitter_id": "TCGA-AY-4070",
+      "gene": "UGT1A1",
+      "variant": "chr2:g.233767161A>C",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.199229",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784290",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for UGT1A1 + irinotecan. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-006",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "e394e9ec-7288-4ede-9ef8-41b631d100dd",
+      "submitter_id": "TCGA-AA-3715",
+      "gene": "UGT1A1",
+      "variant": "chr2:g.233768289G>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.199238",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784291",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for UGT1A1 + irinotecan. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-001",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "df5ab6cc-6f68-4b6b-95e2-954c6b57ba9c",
+      "submitter_id": "TCGA-CA-6718",
+      "gene": "TPMT",
+      "variant": "chr6:g.18139713G>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.535777",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784292",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for TPMT + 6-mercaptopurine. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-002",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "613aa3e8-a70b-45a9-9c08-0c2346c8bf00",
+      "submitter_id": "TCGA-AD-A5EJ",
+      "gene": "TPMT",
+      "variant": "chr6:g.18130698delA",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.535811",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784294",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for TPMT + 6-mercaptopurine. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-003",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "c113808a-773f-4179-82d6-9083518404b5",
+      "submitter_id": "TCGA-AD-6548",
+      "gene": "TPMT",
+      "variant": "chr6:g.18149023G>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.535819",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784295",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for TPMT + 6-mercaptopurine. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-004",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "2c0a725a-e829-4d84-89d9-d0d47f6cfa37",
+      "submitter_id": "TCGA-G4-6628",
+      "gene": "TPMT",
+      "variant": "chr6:g.18130729C>T",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.535826",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784297",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for TPMT + 6-mercaptopurine. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-005",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "fa83dfb5-7386-4a35-9861-aa866478d5f1",
+      "submitter_id": "TCGA-D5-6533",
+      "gene": "TPMT",
+      "variant": "chr6:g.18133864G>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.535832",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784298",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for TPMT + 6-mercaptopurine. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-006",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "e394e9ec-7288-4ede-9ef8-41b631d100dd",
+      "submitter_id": "TCGA-AA-3715",
+      "gene": "TPMT",
+      "variant": "chr6:g.18143662delA",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.535839",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784300",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for TPMT + 6-mercaptopurine. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-007",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "8c0894fb-5e78-40ae-be0b-329ca30f758a",
+      "submitter_id": "TCGA-DM-A1HB",
+      "gene": "TPMT",
+      "variant": "chr6:g.18143717C>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.535845",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784301",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for TPMT + 6-mercaptopurine. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-008",
+      "source": "GDC/TCGA",
+      "project": "TCGA-COAD",
+      "case_id_gdc": "4beee9d4-ee52-4fed-bcc4-d300f5ddd4d0",
+      "submitter_id": "TCGA-A6-5661",
+      "gene": "TPMT",
+      "variant": "chr6:g.18130763G>A",
+      "status": "needs_treatment_outcome_data",
+      "extraction_date": "2025-12-31T00:47:31.535851",
+      "toxicity_occurred": null,
+      "toxicity_confidence": "unknown",
+      "abstract_analyzed": false,
+      "concordance": {
+        "matched_clinical_decision": true,
+        "our_recommendation_safer": false,
+        "prevented_toxicity_possible": false,
+        "notes": "Standard care matched"
+      },
+      "concordance_details": {
+        "notes": "No outcome data available - needs manual review"
+      },
+      "curated_date": "2025-12-31T01:15:28.784302",
+      "our_prediction": {
+        "recommended_dose": "No CPIC guideline available for TPMT + 6-mercaptopurine. Standard dosing per institutional protocol.",
+        "adjustment_factor": 1.0,
+        "risk_level": "LOW",
+        "would_have_flagged": false,
+        "alternatives": [],
+        "cpic_level": "UNKNOWN",
+        "adjustment_type": "standard_dose"
+      }
+    }
+  ]
+}

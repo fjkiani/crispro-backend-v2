@@ -1,0 +1,82 @@
+{
+  "timestamp": "2025-12-30T23:48:36.772108",
+  "passed": 13,
+  "failed": 2,
+  "tests": [
+    {
+      "name": "Import CBioportalClient",
+      "passed": true,
+      "details": "Module loaded"
+    },
+    {
+      "name": "List studies",
+      "passed": true,
+      "details": "Found 516 studies"
+    },
+    {
+      "name": "Find colorectal studies",
+      "passed": true,
+      "details": "Found 23 colorectal studies"
+    },
+    {
+      "name": "Get mutation profile",
+      "passed": true,
+      "details": "Profile: msk_impact_2017_mutations"
+    },
+    {
+      "name": "Get samples",
+      "passed": true,
+      "details": "Testing with 100 samples"
+    },
+    {
+      "name": "Pharmacogene filtering",
+      "passed": false,
+      "details": "Client error '400 ' for url 'https://www.cbioportal.org/api/molecular-profiles/msk_impact_2017_mutations/mutations?sampleIds=P-0000004-T01-IM3&sampleIds=P-0000015-T01-IM3&sampleIds=P-0000023-T01-IM3&sampleIds=P-0000024-T01-IM3&sampleIds=P-0000025-T01-IM3&sampleIds=P-0000025-T02-IM5&sampleIds=P-0000026-T01-IM3&sampleIds=P-0000027-T01-IM3&sampleIds=P-0000030-T01-IM3&sampleIds=P-0000034-T01-IM3&sampleIds=P-0000036-T01-IM3&sampleIds=P-0000037-T01-IM3&sampleIds=P-0000037-T02-IM3&sampleIds=P-0000039-T01-IM3&sampleIds=P-0000041-T01-IM3&sampleIds=P-0000042-T01-IM3&sampleIds=P-0000043-T02-IM3&sampleIds=P-0000047-T01-IM3&sampleIds=P-0000053-T01-IM3&sampleIds=P-0000055-T01-IM3&sampleIds=P-0000056-T01-IM3&sampleIds=P-0000057-T01-IM3&sampleIds=P-0000058-T01-IM3&sampleIds=P-0000059-T01-IM3&sampleIds=P-0000060-T01-IM3&sampleIds=P-0000061-T01-IM3&sampleIds=P-0000062-T01-IM3&sampleIds=P-0000063-T01-IM3&sampleIds=P-0000064-T02-IM3&sampleIds=P-0000065-T01-IM3&sampleIds=P-0000066-T01-IM3&sampleIds=P-0000066-T02-IM5&sampleIds=P-0000067-T01-IM3&sampleIds=P-0000067-T02-IM5&sampleIds=P-0000068-T01-IM3&sampleIds=P-0000069-T01-IM3&sampleIds=P-0000071-T01-IM3&sampleIds=P-0000073-T01-IM3&sampleIds=P-0000075-T01-IM3&sampleIds=P-0000076-T01-IM3&sampleIds=P-0000077-T01-IM3&sampleIds=P-0000079-T01-IM3&sampleIds=P-0000080-T01-IM3&sampleIds=P-0000081-T01-IM3&sampleIds=P-0000082-T01-IM3&sampleIds=P-0000083-T01-IM3&sampleIds=P-0000084-T01-IM3&sampleIds=P-0000085-T02-IM3&sampleIds=P-0000086-T01-IM3&sampleIds=P-0000088-T01-IM3&sampleIds=P-0000092-T01-IM3&sampleIds=P-0000093-T01-IM3&sampleIds=P-0000095-T01-IM3&sampleIds=P-0000096-T01-IM3&sampleIds=P-0000098-T01-IM3&sampleIds=P-0000100-T02-IM3&sampleIds=P-0000102-T02-IM3&sampleIds=P-0000103-T01-IM3&sampleIds=P-0000104-T01-IM3&sampleIds=P-0000105-T01-IM3&sampleIds=P-0000106-T01-IM3&sampleIds=P-0000107-T01-IM3&sampleIds=P-0000108-T01-IM3&sampleIds=P-0000110-T01-IM3&sampleIds=P-0000112-T01-IM3&sampleIds=P-0000113-T01-IM3&sampleIds=P-0000114-T01-IM3&sampleIds=P-0000114-T02-IM3&sampleIds=P-0000115-T01-IM3&sampleIds=P-0000116-T01-IM3&sampleIds=P-0000117-T01-IM3&sampleIds=P-0000118-T01-IM3&sampleIds=P-0000119-T01-IM3&sampleIds=P-0000120-T01-IM3&sampleIds=P-0000121-T01-IM3&sampleIds=P-0000122-T01-IM3&sampleIds=P-0000123-T01-IM3&sampleIds=P-0000125-T01-IM3&sampleIds=P-0000126-T01-IM3&sampleIds=P-0000127-T01-IM3&sampleIds=P-0000127-T02-IM3&sampleIds=P-0000129-T01-IM3&sampleIds=P-0000130-T01-IM3&sampleIds=P-0000131-T01-IM3&sampleIds=P-0000132-T01-IM3&sampleIds=P-0000133-T01-IM3&sampleIds=P-0000134-T01-IM3&sampleIds=P-0000134-T02-IM3&sampleIds=P-0000135-T01-IM3&sampleIds=P-0000136-T01-IM3&sampleIds=P-0000137-T01-IM3&sampleIds=P-0000138-T01-IM3&sampleIds=P-0000138-T02-IM3&sampleIds=P-0000140-T01-IM3&sampleIds=P-0000141-T01-IM3&sampleIds=P-0000142-T01-IM3&sampleIds=P-0000143-T01-IM3&sampleIds=P-0000144-T01-IM3&sampleIds=P-0000145-T01-IM3&sampleIds=P-0000146-T01-IM3&projection=DETAILED&pageSize=10000'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+    },
+    {
+      "name": "Query TCGA-COAD cases",
+      "passed": true,
+      "details": "Found 10 cases (limited to 10)"
+    },
+    {
+      "name": "Query germline files",
+      "passed": true,
+      "details": "Found 5 germline variation files"
+    },
+    {
+      "name": "Query DPYD SSM occurrences",
+      "passed": true,
+      "details": "Found 10 DPYD mutations across all TCGA"
+    },
+    {
+      "name": "Search DPYD case reports",
+      "passed": false,
+      "details": "HTTPSConnectionPool(host='eutils.ncbi.nlm.nih.gov', port=443): Max retries exceeded with url: /entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22DPYD+deficiency%22+OR+%22DPD+deficiency%22%29+AND+%22fluoropyrimidine%22+AND+%22case+report%22&retmax=20&retmode=json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x104af1040>: Failed to establish a new connection: [Errno 12] Cannot allocate memory'))"
+    },
+    {
+      "name": "Search UGT1A1 irinotecan cases",
+      "passed": true,
+      "details": "Found 10 articles"
+    },
+    {
+      "name": "Patient fields",
+      "passed": true,
+      "details": "Required: ['patient_id']"
+    },
+    {
+      "name": "Pharmacogenomics fields",
+      "passed": true,
+      "details": "Required: ['gene', 'variant', 'zygosity', 'predicted_phenotype']"
+    },
+    {
+      "name": "Treatment fields",
+      "passed": true,
+      "details": "Required: ['drug', 'standard_dose', 'actual_dose_given']"
+    },
+    {
+      "name": "Outcome fields",
+      "passed": true,
+      "details": "Required: ['toxicity_occurred', 'toxicity_grade', 'toxicity_type']"
+    }
+  ]
+}
