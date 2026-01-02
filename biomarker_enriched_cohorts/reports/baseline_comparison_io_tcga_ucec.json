@@ -1,0 +1,69 @@
+{
+  "tag": "tcga_ucec",
+  "generated_at": "2026-01-02T01:43:23Z",
+  "cohort": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/data/ucec_tcga_pan_can_atlas_2018_enriched_v1.json",
+  "cohort_sha256": "3cf180238e9d78f107c4e8b645489be894c010de7f0e2833fd48bf69aa75f494",
+  "endpoint": {
+    "time_col": "os_days",
+    "event_col": "os_event"
+  },
+  "tmb_threshold": 20.0,
+  "min_group_size": 20,
+  "results": {
+    "tmb_only": {
+      "n": 516,
+      "n_positive": 120,
+      "n_negative": 396,
+      "events": 85,
+      "logrank_p": 0.0010453813970284487,
+      "logrank_stat": 10.745412444556289,
+      "median_days_negative": null,
+      "median_days_positive": null,
+      "cox_hr_pos_vs_neg": 0.3156687650248199,
+      "cox_ci": [
+        0.15239608158142687,
+        0.6538670035230048
+      ],
+      "cox_p": 0.0019128324549786023,
+      "approx_logrank_power": 0.9943149515411573
+    },
+    "msi_only": {
+      "n": 527,
+      "n_positive": 174,
+      "n_negative": 353,
+      "events": 87,
+      "logrank_p": 0.007320339714802769,
+      "logrank_stat": 7.1926352090620345,
+      "median_days_negative": 3351.2571100625,
+      "median_days_positive": null,
+      "cox_hr_pos_vs_neg": 0.4908423710739222,
+      "cox_ci": [
+        0.2886319648280601,
+        0.8347177811196042
+      ],
+      "cox_p": 0.008618249543774088,
+      "approx_logrank_power": 0.8772927736827175
+    },
+    "or_gate": {
+      "n": 527,
+      "n_positive": 210,
+      "n_negative": 317,
+      "events": 87,
+      "logrank_p": 0.0001675846027058217,
+      "logrank_stat": 14.16356312502058,
+      "median_days_negative": 3351.2571100625,
+      "median_days_positive": null,
+      "cox_hr_pos_vs_neg": 0.38896078126868117,
+      "cox_ci": [
+        0.2335848350920686,
+        0.6476896897245533
+      ],
+      "cox_p": 0.00028408738697393194,
+      "approx_logrank_power": 0.9906667187400587
+    }
+  },
+  "notes": [
+    "Baseline comparison is a cohort suitability sanity-check for IO biomarker prevalence/power.",
+    "Not a claim of IO treatment benefit."
+  ]
+}

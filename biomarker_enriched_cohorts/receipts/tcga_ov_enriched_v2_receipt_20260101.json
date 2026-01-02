@@ -1,0 +1,58 @@
+{
+  "extraction_date": "2026-01-01T00:21:03.157198",
+  "base_cohort": "oncology-coPilot/oncology-backend-minimal/data/cohorts/tcga_ov_outcomes_v1.json",
+  "n_patients": 585,
+  "coverage": {
+    "tmb": {
+      "n": 523,
+      "pct": 89.4
+    },
+    "msi_score_mantis": {
+      "n": 436,
+      "pct": 74.5
+    },
+    "msi_sensor_score": {
+      "n": 512,
+      "pct": 87.5
+    },
+    "aneuploidy_score": {
+      "n": 552,
+      "pct": 94.4
+    },
+    "fraction_genome_altered": {
+      "n": 574,
+      "pct": 98.1
+    },
+    "brca_somatic": {
+      "n": 33,
+      "pct": 5.6
+    }
+  },
+  "derived_status": {
+    "msi_h_count": 18,
+    "hrd_high_count": 233
+  },
+  "biomarkers": [
+    "tmb",
+    "msi_score_mantis",
+    "msi_sensor_score",
+    "msi_status",
+    "aneuploidy_score",
+    "fraction_genome_altered",
+    "hrd_proxy",
+    "brca_somatic",
+    "germline_brca_status"
+  ],
+  "provenance": {
+    "base_cohort": "oncology-coPilot/oncology-backend-minimal/data/cohorts/tcga_ov_outcomes_v1.json",
+    "biomarkers_source": "cBioPortal API (ov_tcga_pan_can_atlas_2018)",
+    "brca_source": "cBioPortal mutations API",
+    "tmb_field": "TMB_NONSYNONYMOUS (mutations/Mb)",
+    "msi_fields": [
+      "MSI_SCORE_MANTIS",
+      "MSI_SENSOR_SCORE"
+    ],
+    "msi_status_derivation": "MANTIS > 0.4 or MSIsensor > 3.5 = MSI-H",
+    "hrd_proxy_derivation": "Aneuploidy >= 15 AND FGA >= 0.4 = HRD-High"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "run": {
+    "generated_at": "2026-01-01T20:42:10Z",
+    "script": "validate_confidence_caps.py",
+    "root": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts"
+  },
+  "inputs": {
+    "cohort_path": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/data/tcga_ov_enriched_v2.json",
+    "cohort_sha256": "11f5428eb7c3d238efa8b2329ee8f8d6942f98a162898099ad93f7b1d2f2791d",
+    "endpoint": "os_days",
+    "tier_definition": {
+      "L0": "missing TMB AND missing MSI scores AND missing aneuploidy+FGA",
+      "L2": "at least 2 of [TMB, MSI (either score), aneuploidy+FGA] present",
+      "L1": "else"
+    }
+  },
+  "coverage": {
+    "os_days": {
+      "n": 571,
+      "pct": 97.6068376068376
+    },
+    "tmb": {
+      "n": 523,
+      "pct": 89.40170940170941
+    },
+    "msi_score_mantis": {
+      "n": 436,
+      "pct": 74.52991452991454
+    },
+    "msi_sensor_score": {
+      "n": 512,
+      "pct": 87.52136752136752
+    },
+    "aneuploidy_score": {
+      "n": 552,
+      "pct": 94.35897435897435
+    },
+    "fraction_genome_altered": {
+      "n": 574,
+      "pct": 98.11965811965811
+    }
+  },
+  "usable": {
+    "n": 571,
+    "tier_counts": {
+      "L2": 547,
+      "L1": 21,
+      "L0": 3
+    }
+  },
+  "variability": {
+    "L0": {
+      "n": 3,
+      "median": 338.0,
+      "iqr": 384.0,
+      "mean": 567.3333333333334,
+      "std": 432.32086849160237,
+      "cv": 0.7620226824176305
+    },
+    "L1": {
+      "n": 21,
+      "median": 1452.0,
+      "iqr": 833.0,
+      "mean": 1384.0,
+      "std": 743.4032553062974,
+      "cv": 0.5371410804236253
+    },
+    "L2": {
+      "n": 547,
+      "median": 1000.0,
+      "iqr": 1198.5,
+      "mean": 1180.0237659963436,
+      "std": 939.7660985303543,
+      "cv": 0.796395907956032
+    }
+  },
+  "notes": [
+    "This validates that completeness tiers are computable from available biomarkers.",
+    "It does not validate a specific confidence cap number (0.4/0.6); those are safety-policy caps."
+  ]
+}

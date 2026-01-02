@@ -1,0 +1,47 @@
+{
+  "run": {
+    "generated_at": "2026-01-01T20:39:37Z",
+    "script": "validate_parp_gating.py",
+    "root": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts"
+  },
+  "inputs": {
+    "cohort_path": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/data/tcga_ov_enriched_v2.json",
+    "cohort_sha256": "11f5428eb7c3d238efa8b2329ee8f8d6942f98a162898099ad93f7b1d2f2791d",
+    "hrd_threshold": 0.42,
+    "endpoint": {
+      "time_col": "os_days",
+      "event_col": "os_event"
+    }
+  },
+  "coverage": {
+    "os_days": {
+      "n": 571,
+      "pct": 97.6068376068376
+    },
+    "os_event": {
+      "n": 574,
+      "pct": 98.11965811965811
+    },
+    "hrd_proxy": {
+      "n": 585,
+      "pct": 100.0
+    }
+  },
+  "groups": {
+    "n_total": 585,
+    "n_usable": 548,
+    "n_hrd_high": 520,
+    "n_hrd_low": 28
+  },
+  "results": {
+    "logrank_p": 0.553471338306195,
+    "test_statistic": 0.351134996393581,
+    "median_days_hrd_high": 1374.0,
+    "median_days_hrd_low": 1449.0,
+    "figure": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_parp_hrd_proxy_os.png"
+  },
+  "notes": [
+    "HRD proxy is derived (aneuploidy + FGA).",
+    "This analysis tests stratification of survival endpoints, not treatment response to PARP inhibitors."
+  ]
+}

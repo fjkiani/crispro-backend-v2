@@ -1,0 +1,5500 @@
+{
+  "metadata": {
+    "created_at": "2026-01-02T17:44:04.928073Z",
+    "study_id": "ov_tcga_pan_can_atlas_2018",
+    "cohort_type": "hypoxia_enriched",
+    "n_patients": 203,
+    "n_platinum_resistant": 33,
+    "n_platinum_sensitive": 170,
+    "resistance_rate": 0.1625615763546798
+  },
+  "thresholds": {
+    "buffa_median": 11.0,
+    "platinum_resistance_pfs_months": 6
+  },
+  "cohort": {
+    "patients": [
+      {
+        "patient_id": "TCGA-04-1348",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 10.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 18.90390242,
+          "pfs_event": true,
+          "pfs_days": 575.4347896648001,
+          "os_months": 48.75563008,
+          "os_event": true,
+          "os_days": 1484.1213796352001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 44.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Low",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-04-1362",
+        "hypoxia": {
+          "buffa_score": -3.0,
+          "ragnum_score": 0.0,
+          "winter_score": -14.0
+        },
+        "outcomes": {
+          "pfs_months": 7.331426505,
+          "pfs_event": true,
+          "pfs_days": 223.1686228122,
+          "os_months": 44.31732255,
+          "os_event": true,
+          "os_days": 1349.019298422
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 59.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-04-1364",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 12.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 9.468389388,
+          "pfs_event": true,
+          "pfs_days": 288.21777297072003,
+          "os_months": 33.66538449,
+          "os_event": true,
+          "os_days": 1024.7743038756
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 61.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-04-1365",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 16.0,
+          "winter_score": 38.0
+        },
+        "outcomes": {
+          "pfs_months": 43.65979551,
+          "pfs_event": true,
+          "pfs_days": 1329.0041753244002,
+          "os_months": 76.5690239,
+          "os_event": false,
+          "os_days": 2330.7610875160003
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 87.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-04-1514",
+        "hypoxia": {
+          "buffa_score": -5.0,
+          "ragnum_score": 16.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 40.14202584,
+          "pfs_event": true,
+          "pfs_days": 1221.9232665696002,
+          "os_months": 56.54732551,
+          "os_event": true,
+          "os_days": 1721.3005885244002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-04-1519",
+        "hypoxia": {
+          "buffa_score": 1.0,
+          "ragnum_score": -6.0,
+          "winter_score": -4.0
+        },
+        "outcomes": {
+          "pfs_months": 0.789032449,
+          "pfs_event": false,
+          "pfs_days": 24.01814774756,
+          "os_months": 0.789032449,
+          "os_event": false,
+          "os_days": 24.01814774756
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 48.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-1659",
+        "hypoxia": {
+          "buffa_score": 31.0,
+          "ragnum_score": 12.0,
+          "winter_score": 32.0
+        },
+        "outcomes": {
+          "pfs_months": 9.99441102,
+          "pfs_event": true,
+          "pfs_days": 304.2298714488,
+          "os_months": 9.99441102,
+          "os_event": true,
+          "os_days": 304.2298714488
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 51.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-1662",
+        "hypoxia": {
+          "buffa_score": 1.0,
+          "ragnum_score": 6.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 34.38866423,
+          "pfs_event": true,
+          "pfs_days": 1046.7909391612002,
+          "os_months": 89.32504849,
+          "os_event": true,
+          "os_days": 2719.0544760356
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 58.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-1666",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 6.0,
+          "winter_score": -4.0
+        },
+        "outcomes": {
+          "pfs_months": 15.78064898,
+          "pfs_event": true,
+          "pfs_days": 480.36295495120004,
+          "os_months": 57.59936877,
+          "os_event": false,
+          "os_days": 1753.3247853588
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-1667",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 10.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 15.12312194,
+          "pfs_event": true,
+          "pfs_days": 460.34783185360004,
+          "os_months": 61.87329454,
+          "os_event": false,
+          "os_days": 1883.4230857976002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 61.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-1668",
+        "hypoxia": {
+          "buffa_score": 1.0,
+          "ragnum_score": 6.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 55.36377684,
+          "pfs_event": false,
+          "pfs_days": 1685.2733670096002,
+          "os_months": 55.36377684,
+          "os_event": false,
+          "os_days": 1685.2733670096002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-1669",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 18.0,
+          "winter_score": 32.0
+        },
+        "outcomes": {
+          "pfs_months": 30.50925469,
+          "pfs_event": false,
+          "pfs_days": 928.7017127636,
+          "os_months": 30.50925469,
+          "os_event": false,
+          "os_days": 928.7017127636
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 54.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-1670",
+        "hypoxia": {
+          "buffa_score": -3.0,
+          "ragnum_score": 2.0,
+          "winter_score": -16.0
+        },
+        "outcomes": {
+          "pfs_months": 17.98336457,
+          "pfs_event": true,
+          "pfs_days": 547.4136175108,
+          "os_months": 17.98336457,
+          "os_event": false,
+          "os_days": 547.4136175108
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "Unknown",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-09-1673",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 4.0,
+          "winter_score": -6.0
+        },
+        "outcomes": {
+          "pfs_months": 3.024624388,
+          "pfs_event": false,
+          "pfs_days": 92.06956637072,
+          "os_months": 3.024624388,
+          "os_event": false,
+          "os_days": 92.06956637072
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 50.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-1674",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 10.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 8.54785153,
+          "pfs_event": false,
+          "pfs_days": 260.19660057320004,
+          "os_months": 8.54785153,
+          "os_event": false,
+          "os_days": 260.19660057320004
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 79.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-2044",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 8.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 6.115001479,
+          "pfs_event": false,
+          "pfs_days": 186.14064502076002,
+          "os_months": 6.115001479,
+          "os_event": false,
+          "os_days": 186.14064502076002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 77.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA2",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-2045",
+        "hypoxia": {
+          "buffa_score": -25.0,
+          "ragnum_score": -16.0,
+          "winter_score": -26.0
+        },
+        "outcomes": {
+          "pfs_months": 20.74497814,
+          "pfs_event": true,
+          "pfs_days": 631.4771345816,
+          "os_months": 35.14482033,
+          "os_event": true,
+          "os_days": 1069.8083308452
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 50.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "Unknown",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-09-2051",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 4.0,
+          "winter_score": 6.0
+        },
+        "outcomes": {
+          "pfs_months": 19.16691324,
+          "pfs_event": true,
+          "pfs_days": 583.4408390256,
+          "os_months": 63.08971957,
+          "os_event": false,
+          "os_days": 1920.4510637108
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 42.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-09-2054",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 18.0,
+          "winter_score": 4.0
+        },
+        "outcomes": {
+          "pfs_months": 20.94223625,
+          "pfs_event": true,
+          "pfs_days": 637.48167145,
+          "os_months": 20.94223625,
+          "os_event": true,
+          "os_days": 637.48167145
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 58.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1403",
+        "hypoxia": {
+          "buffa_score": 31.0,
+          "ragnum_score": 12.0,
+          "winter_score": 28.0
+        },
+        "outcomes": {
+          "pfs_months": 13.74231515,
+          "pfs_event": true,
+          "pfs_days": 418.316073166,
+          "os_months": 77.09504553,
+          "os_event": true,
+          "os_days": 2346.7731859332
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 48.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1405",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 10.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 7.495808265,
+          "pfs_event": true,
+          "pfs_days": 228.1724035866,
+          "os_months": 28.53667357,
+          "os_event": true,
+          "os_days": 868.6563434708
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 49.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1410",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 2.0,
+          "winter_score": -8.0
+        },
+        "outcomes": {
+          "pfs_months": 10.4875563,
+          "pfs_event": true,
+          "pfs_days": 319.241213772,
+          "os_months": 81.00733143,
+          "os_event": false,
+          "os_days": 2465.8631687292
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1411",
+        "hypoxia": {
+          "buffa_score": 11.0,
+          "ragnum_score": 4.0,
+          "winter_score": 6.0
+        },
+        "outcomes": {
+          "pfs_months": 7.824571786,
+          "pfs_event": true,
+          "pfs_days": 238.17996516584,
+          "os_months": 17.45734293,
+          "os_event": true,
+          "os_days": 531.4015187892
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 81.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1481",
+        "hypoxia": {
+          "buffa_score": 23.0,
+          "ragnum_score": 8.0,
+          "winter_score": 30.0
+        },
+        "outcomes": {
+          "pfs_months": 87.0565802,
+          "pfs_event": false,
+          "pfs_days": 2650.002301288,
+          "os_months": 87.0565802,
+          "os_event": true,
+          "os_days": 2650.002301288
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 76.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA2",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1489",
+        "hypoxia": {
+          "buffa_score": 37.0,
+          "ragnum_score": 12.0,
+          "winter_score": 34.0
+        },
+        "outcomes": {
+          "pfs_months": 26.49833974,
+          "pfs_event": true,
+          "pfs_days": 806.6094616856,
+          "os_months": 83.93332676,
+          "os_event": true,
+          "os_days": 2554.9304665744003
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 70.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA1",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1497",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 14.0,
+          "winter_score": 0.0
+        },
+        "outcomes": {
+          "pfs_months": 26.72847421,
+          "pfs_event": true,
+          "pfs_days": 813.6147549524001,
+          "os_months": 127.2643588,
+          "os_event": false,
+          "os_days": 3873.927081872
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 47.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1498",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 4.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 17.55597199,
+          "pfs_event": true,
+          "pfs_days": 534.4037873756,
+          "os_months": 66.1472203,
+          "os_event": true,
+          "os_days": 2013.5213859320002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 73.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1505",
+        "hypoxia": {
+          "buffa_score": -1.0,
+          "ragnum_score": 10.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 51.31998553,
+          "pfs_event": true,
+          "pfs_days": 1562.1803595331999,
+          "os_months": 65.68695138,
+          "os_event": false,
+          "os_days": 1999.5108000072
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 63.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1506",
+        "hypoxia": {
+          "buffa_score": 35.0,
+          "ragnum_score": 20.0,
+          "winter_score": 34.0
+        },
+        "outcomes": {
+          "pfs_months": 21.89565046,
+          "pfs_event": true,
+          "pfs_days": 666.5036000024,
+          "os_months": 34.15852977,
+          "os_event": true,
+          "os_days": 1039.7856461988001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1507",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 2.0,
+          "winter_score": 24.0
+        },
+        "outcomes": {
+          "pfs_months": 10.65193806,
+          "pfs_event": true,
+          "pfs_days": 324.24499454640005,
+          "os_months": 65.52256962,
+          "os_event": true,
+          "os_days": 1994.5070192328
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 77.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1511",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 14.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 15.09024559,
+          "pfs_event": true,
+          "pfs_days": 459.34707575960005,
+          "os_months": 54.24598087,
+          "os_event": true,
+          "os_days": 1651.2476576828
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 52.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-1512",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 14.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 14.03820232,
+          "pfs_event": true,
+          "pfs_days": 427.3228786208,
+          "os_months": 14.5313476,
+          "os_event": false,
+          "os_days": 442.33422094400004
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 49.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-2060",
+        "hypoxia": {
+          "buffa_score": 11.0,
+          "ragnum_score": 12.0,
+          "winter_score": 6.0
+        },
+        "outcomes": {
+          "pfs_months": 48.49261926,
+          "pfs_event": true,
+          "pfs_days": 1476.1153302744,
+          "os_months": 77.88407798,
+          "os_event": false,
+          "os_days": 2370.7913337112
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 51.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-13-A5FT",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 10.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 70.45402242,
+          "pfs_event": false,
+          "pfs_days": 2144.6204424648,
+          "os_months": 70.45402242,
+          "os_event": false,
+          "os_days": 2144.6204424648
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 67.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-20-1682",
+        "hypoxia": {
+          "buffa_score": 23.0,
+          "ragnum_score": 22.0,
+          "winter_score": 18.0
+        },
+        "outcomes": {
+          "pfs_months": 27.51750666,
+          "pfs_event": false,
+          "pfs_days": 837.6329027304,
+          "os_months": 27.51750666,
+          "os_event": false,
+          "os_days": 837.6329027304
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 56.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA1",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-20-1683",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 14.0,
+          "winter_score": 0.0
+        },
+        "outcomes": {
+          "pfs_months": 20.31758556,
+          "pfs_event": true,
+          "pfs_days": 618.4673044464,
+          "os_months": 25.38054378,
+          "os_event": false,
+          "os_days": 772.5837526632
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 65.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-20-1684",
+        "hypoxia": {
+          "buffa_score": 7.0,
+          "ragnum_score": 18.0,
+          "winter_score": 4.0
+        },
+        "outcomes": {
+          "pfs_months": 19.10116054,
+          "pfs_event": false,
+          "pfs_days": 581.4393268376,
+          "os_months": 19.10116054,
+          "os_event": false,
+          "os_days": 581.4393268376
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 51.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-20-1685",
+        "hypoxia": {
+          "buffa_score": 11.0,
+          "ragnum_score": 14.0,
+          "winter_score": 0.0
+        },
+        "outcomes": {
+          "pfs_months": 16.70118684,
+          "pfs_event": false,
+          "pfs_days": 508.38412740959996,
+          "os_months": 16.70118684,
+          "os_event": false,
+          "os_days": 508.38412740959996
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-20-1687",
+        "hypoxia": {
+          "buffa_score": -5.0,
+          "ragnum_score": -14.0,
+          "winter_score": -12.0
+        },
+        "outcomes": {
+          "pfs_months": 2.662984515,
+          "pfs_event": false,
+          "pfs_days": 81.06124863660001,
+          "os_months": 2.662984515,
+          "os_event": false,
+          "os_days": 81.06124863660001
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 46.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1023",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 22.0,
+          "winter_score": 42.0
+        },
+        "outcomes": {
+          "pfs_months": 16.1094125,
+          "pfs_event": true,
+          "pfs_days": 490.37051650000006,
+          "os_months": 40.53654207,
+          "os_event": false,
+          "os_days": 1233.9323406108
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 65.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Low",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1026",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 4.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 26.20245258,
+          "pfs_event": true,
+          "pfs_days": 797.6026565352,
+          "os_months": 26.82710327,
+          "os_event": false,
+          "os_days": 816.6170235388
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Low",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1027",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 6.0,
+          "winter_score": 30.0
+        },
+        "outcomes": {
+          "pfs_months": 3.747904133,
+          "pfs_event": true,
+          "pfs_days": 114.08620180852,
+          "os_months": 32.08731959,
+          "os_event": true,
+          "os_days": 976.7380083196
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 48.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1029",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 6.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 8.810862347,
+          "pfs_event": false,
+          "pfs_days": 268.20264984268005,
+          "os_months": 8.810862347,
+          "os_event": false,
+          "os_days": 268.20264984268005
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 46.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1109",
+        "hypoxia": {
+          "buffa_score": -3.0,
+          "ragnum_score": 10.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 32.44895946,
+          "pfs_event": true,
+          "pfs_days": 987.7463259624,
+          "os_months": 51.35286189,
+          "os_event": true,
+          "os_days": 1563.1811159316
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 62.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1111",
+        "hypoxia": {
+          "buffa_score": 3.0,
+          "ragnum_score": 0.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 3.2218825,
+          "pfs_event": false,
+          "pfs_days": 98.0741033,
+          "os_months": 3.2218825,
+          "os_event": false,
+          "os_days": 98.0741033
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 63.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1114",
+        "hypoxia": {
+          "buffa_score": -13.0,
+          "ragnum_score": 4.0,
+          "winter_score": 18.0
+        },
+        "outcomes": {
+          "pfs_months": 20.84360719,
+          "pfs_event": true,
+          "pfs_days": 634.4794028636001,
+          "os_months": 68.67869941,
+          "os_event": true,
+          "os_days": 2090.5796100404
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 55.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1120",
+        "hypoxia": {
+          "buffa_score": -9.0,
+          "ragnum_score": 10.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 4.273925765,
+          "pfs_event": false,
+          "pfs_days": 130.09830028660002,
+          "os_months": 4.273925765,
+          "os_event": false,
+          "os_days": 130.09830028660002
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 60.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1122",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 14.0,
+          "winter_score": 34.0
+        },
+        "outcomes": {
+          "pfs_months": 14.69572936,
+          "pfs_event": true,
+          "pfs_days": 447.3380017184,
+          "os_months": 39.08998258,
+          "os_event": true,
+          "os_days": 1189.8990697351999
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 53.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "Unknown",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1123",
+        "hypoxia": {
+          "buffa_score": -5.0,
+          "ragnum_score": 4.0,
+          "winter_score": -20.0
+        },
+        "outcomes": {
+          "pfs_months": 33.46812638,
+          "pfs_event": true,
+          "pfs_days": 1018.7697670072001,
+          "os_months": 33.46812638,
+          "os_event": true,
+          "os_days": 1018.7697670072001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 59.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-1809",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 16.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 0.526021633,
+          "pfs_event": false,
+          "pfs_days": 16.01209850852,
+          "os_months": 0.526021633,
+          "os_event": false,
+          "os_days": 16.01209850852
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 63.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-2077",
+        "hypoxia": {
+          "buffa_score": -3.0,
+          "ragnum_score": 0.0,
+          "winter_score": -6.0
+        },
+        "outcomes": {
+          "pfs_months": 40.50366571,
+          "pfs_event": true,
+          "pfs_days": 1232.9315842124001,
+          "os_months": 115.8891409,
+          "os_event": false,
+          "os_days": 3527.665448996
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-2078",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 14.0,
+          "winter_score": 32.0
+        },
+        "outcomes": {
+          "pfs_months": 87.48397278,
+          "pfs_event": false,
+          "pfs_days": 2663.0121314232,
+          "os_months": 87.48397278,
+          "os_event": false,
+          "os_days": 2663.0121314232
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 66.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-2081",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 6.0,
+          "winter_score": 20.0
+        },
+        "outcomes": {
+          "pfs_months": 76.99641648,
+          "pfs_event": true,
+          "pfs_days": 2343.7709176512,
+          "os_months": 76.99641648,
+          "os_event": true,
+          "os_days": 2343.7709176512
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 49.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-23-2084",
+        "hypoxia": {
+          "buffa_score": 23.0,
+          "ragnum_score": 10.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 20.35046191,
+          "pfs_event": true,
+          "pfs_days": 619.4680605404001,
+          "os_months": 49.84054969,
+          "os_event": true,
+          "os_days": 1517.1463325636003
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1103",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": 12.0,
+          "winter_score": 26.0
+        },
+        "outcomes": {
+          "pfs_months": 22.29016668,
+          "pfs_event": true,
+          "pfs_days": 678.5126737392,
+          "os_months": 54.11447546,
+          "os_event": true,
+          "os_days": 1647.2446330024002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 50.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA2",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1413",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 6.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 6.312259592,
+          "pfs_event": false,
+          "pfs_days": 192.14518198048,
+          "os_months": 6.312259592,
+          "os_event": false,
+          "os_days": 192.14518198048
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 51.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1416",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": -2.0,
+          "winter_score": -4.0
+        },
+        "outcomes": {
+          "pfs_months": 6.378012296,
+          "pfs_event": false,
+          "pfs_days": 194.14669429024,
+          "os_months": 6.378012296,
+          "os_event": false,
+          "os_days": 194.14669429024
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 34.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1417",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 10.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 7.824571786,
+          "pfs_event": false,
+          "pfs_days": 238.17996516584,
+          "os_months": 7.824571786,
+          "os_event": false,
+          "os_days": 238.17996516584
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 54.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1418",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 12.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 7.988953546,
+          "pfs_event": false,
+          "pfs_days": 243.18374594024002,
+          "os_months": 7.988953546,
+          "os_event": false,
+          "os_days": 243.18374594024002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 68.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1419",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 10.0,
+          "winter_score": 4.0
+        },
+        "outcomes": {
+          "pfs_months": 7.857448138,
+          "pfs_event": false,
+          "pfs_days": 239.18072132072,
+          "os_months": 7.857448138,
+          "os_event": false,
+          "os_days": 239.18072132072
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 62.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1423",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 4.0,
+          "winter_score": -4.0
+        },
+        "outcomes": {
+          "pfs_months": 6.246506888,
+          "pfs_event": false,
+          "pfs_days": 190.14366967072002,
+          "os_months": 6.246506888,
+          "os_event": false,
+          "os_days": 190.14366967072002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 61.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1424",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 16.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 6.016372423,
+          "pfs_event": false,
+          "pfs_days": 183.13837655612,
+          "os_months": 6.016372423,
+          "os_event": false,
+          "os_days": 183.13837655612
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 67.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1425",
+        "hypoxia": {
+          "buffa_score": 1.0,
+          "ragnum_score": 2.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 5.950619719,
+          "pfs_event": false,
+          "pfs_days": 181.13686424636,
+          "os_months": 5.950619719,
+          "os_event": false,
+          "os_days": 181.13686424636
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1427",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 8.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 4.83282375,
+          "pfs_event": false,
+          "pfs_days": 147.11115495,
+          "os_months": 4.83282375,
+          "os_event": false,
+          "os_days": 147.11115495
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 58.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1428",
+        "hypoxia": {
+          "buffa_score": 35.0,
+          "ragnum_score": 8.0,
+          "winter_score": 18.0
+        },
+        "outcomes": {
+          "pfs_months": 14.72860571,
+          "pfs_event": true,
+          "pfs_days": 448.33875781240005,
+          "os_months": 17.39159023,
+          "os_event": false,
+          "os_days": 529.4000066012
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 50.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1430",
+        "hypoxia": {
+          "buffa_score": -1.0,
+          "ragnum_score": 6.0,
+          "winter_score": 4.0
+        },
+        "outcomes": {
+          "pfs_months": 14.76148207,
+          "pfs_event": true,
+          "pfs_days": 449.3395142108,
+          "os_months": 28.37229181,
+          "os_event": true,
+          "os_days": 863.6525626964001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 68.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1434",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 10.0,
+          "winter_score": 32.0
+        },
+        "outcomes": {
+          "pfs_months": 11.07933064,
+          "pfs_event": true,
+          "pfs_days": 337.25482468160004,
+          "os_months": 18.67376796,
+          "os_event": true,
+          "os_days": 568.4294967024
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 59.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1435",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 12.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 16.60255778,
+          "pfs_event": true,
+          "pfs_days": 505.38185882320005,
+          "os_months": 43.5282901,
+          "os_event": true,
+          "os_days": 1325.001150644
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1436",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 12.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 8.54785153,
+          "pfs_event": true,
+          "pfs_days": 260.19660057320004,
+          "os_months": 8.54785153,
+          "os_event": true,
+          "os_days": 260.19660057320004
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1463",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": 20.0,
+          "winter_score": 20.0
+        },
+        "outcomes": {
+          "pfs_months": 31.92293783,
+          "pfs_event": true,
+          "pfs_days": 971.7342275452,
+          "os_months": 72.91974883,
+          "os_event": true,
+          "os_days": 2219.6771543852
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 70.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1467",
+        "hypoxia": {
+          "buffa_score": -15.0,
+          "ragnum_score": 2.0,
+          "winter_score": -8.0
+        },
+        "outcomes": {
+          "pfs_months": 41.19406911,
+          "pfs_event": true,
+          "pfs_days": 1253.9474637084002,
+          "os_months": 105.993359,
+          "os_event": true,
+          "os_days": 3226.43784796
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 51.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1469",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 16.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 9.106749515,
+          "pfs_event": false,
+          "pfs_days": 277.20945523660004,
+          "os_months": 9.106749515,
+          "os_event": false,
+          "os_days": 277.20945523660004
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 71.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1474",
+        "hypoxia": {
+          "buffa_score": -3.0,
+          "ragnum_score": 10.0,
+          "winter_score": -8.0
+        },
+        "outcomes": {
+          "pfs_months": 10.91494888,
+          "pfs_event": true,
+          "pfs_days": 332.2510439072,
+          "os_months": 22.22441398,
+          "os_event": true,
+          "os_days": 676.5111615512001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1544",
+        "hypoxia": {
+          "buffa_score": 1.0,
+          "ragnum_score": -2.0,
+          "winter_score": 18.0
+        },
+        "outcomes": {
+          "pfs_months": 21.13949436,
+          "pfs_event": true,
+          "pfs_days": 643.4862083184,
+          "os_months": 26.95860867,
+          "os_event": true,
+          "os_days": 820.6200479148
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 71.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1545",
+        "hypoxia": {
+          "buffa_score": -7.0,
+          "ragnum_score": 0.0,
+          "winter_score": -8.0
+        },
+        "outcomes": {
+          "pfs_months": 28.30653911,
+          "pfs_event": true,
+          "pfs_days": 861.6510505084,
+          "os_months": 57.40211066,
+          "os_event": true,
+          "os_days": 1747.3202484904
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 69.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1546",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": -2.0,
+          "winter_score": 20.0
+        },
+        "outcomes": {
+          "pfs_months": 64.27326824,
+          "pfs_event": false,
+          "pfs_days": 1956.4782852255998,
+          "os_months": 64.27326824,
+          "os_event": true,
+          "os_days": 1956.4782852255998
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 46.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1548",
+        "hypoxia": {
+          "buffa_score": 7.0,
+          "ragnum_score": 12.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 6.805404872,
+          "pfs_event": true,
+          "pfs_days": 207.15652430368002,
+          "os_months": 16.20804156,
+          "os_event": true,
+          "os_days": 493.3727850864001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1549",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 12.0,
+          "winter_score": 6.0
+        },
+        "outcomes": {
+          "pfs_months": 34.25715883,
+          "pfs_event": true,
+          "pfs_days": 1042.7879147852002,
+          "os_months": 56.58020186,
+          "os_event": true,
+          "os_days": 1722.3013446184002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 58.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1550",
+        "hypoxia": {
+          "buffa_score": 33.0,
+          "ragnum_score": 10.0,
+          "winter_score": 44.0
+        },
+        "outcomes": {
+          "pfs_months": 29.32570602,
+          "pfs_event": true,
+          "pfs_days": 892.6744912488,
+          "os_months": 41.0625637,
+          "os_event": true,
+          "os_days": 1249.944439028
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 49.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1551",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 14.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 25.11753296,
+          "pfs_event": true,
+          "pfs_days": 764.5777033024,
+          "os_months": 51.91175987,
+          "os_event": true,
+          "os_days": 1580.1939704428
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 53.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1552",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": 10.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 13.24916987,
+          "pfs_event": true,
+          "pfs_days": 403.3047308428,
+          "os_months": 41.39132722,
+          "os_event": true,
+          "os_days": 1259.9520005768002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 77.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1553",
+        "hypoxia": {
+          "buffa_score": -19.0,
+          "ragnum_score": -10.0,
+          "winter_score": -26.0
+        },
+        "outcomes": {
+          "pfs_months": 18.18062268,
+          "pfs_event": true,
+          "pfs_days": 553.4181543792,
+          "os_months": 58.09251406,
+          "os_event": true,
+          "os_days": 1768.3361279864
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 53.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1555",
+        "hypoxia": {
+          "buffa_score": 7.0,
+          "ragnum_score": -2.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 51.84600717,
+          "pfs_event": true,
+          "pfs_days": 1578.1924582548002,
+          "os_months": 88.50313969,
+          "os_event": true,
+          "os_days": 2694.0355721636
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 50.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1556",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 4.0,
+          "winter_score": 0.0
+        },
+        "outcomes": {
+          "pfs_months": 17.72035375,
+          "pfs_event": true,
+          "pfs_days": 539.4075681500001,
+          "os_months": 70.61840418,
+          "os_event": true,
+          "os_days": 2149.6242232392
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 50.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1557",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 4.0,
+          "winter_score": -8.0
+        },
+        "outcomes": {
+          "pfs_months": 14.69572936,
+          "pfs_event": true,
+          "pfs_days": 447.3380017184,
+          "os_months": 39.87901502,
+          "os_event": true,
+          "os_days": 1213.9172172088
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 49.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1558",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 14.0,
+          "winter_score": -6.0
+        },
+        "outcomes": {
+          "pfs_months": 8.975244107,
+          "pfs_event": true,
+          "pfs_days": 273.20643061708,
+          "os_months": 19.52855311,
+          "os_event": true,
+          "os_days": 594.4491566684001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 73.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1560",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 14.0,
+          "winter_score": 18.0
+        },
+        "outcomes": {
+          "pfs_months": 4.701318342,
+          "pfs_event": true,
+          "pfs_days": 143.10813033048,
+          "os_months": 44.08718809,
+          "os_event": true,
+          "os_days": 1342.0140054596
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 51.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "Unknown",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1562",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 10.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 7.528684617,
+          "pfs_event": true,
+          "pfs_days": 229.17315974148,
+          "os_months": 45.50087122,
+          "os_event": true,
+          "os_days": 1385.0465199368
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 67.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1563",
+        "hypoxia": {
+          "buffa_score": 29.0,
+          "ragnum_score": 14.0,
+          "winter_score": 24.0
+        },
+        "outcomes": {
+          "pfs_months": 13.01903541,
+          "pfs_event": true,
+          "pfs_days": 396.29943788040003,
+          "os_months": 47.70358681,
+          "os_event": true,
+          "os_days": 1452.0971824964
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 66.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1564",
+        "hypoxia": {
+          "buffa_score": -7.0,
+          "ragnum_score": 6.0,
+          "winter_score": -4.0
+        },
+        "outcomes": {
+          "pfs_months": 7.265673801,
+          "pfs_event": true,
+          "pfs_days": 221.16711050244,
+          "os_months": 25.87368906,
+          "os_event": true,
+          "os_days": 787.5950949864
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 67.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1567",
+        "hypoxia": {
+          "buffa_score": 11.0,
+          "ragnum_score": 8.0,
+          "winter_score": 24.0
+        },
+        "outcomes": {
+          "pfs_months": 10.4875563,
+          "pfs_event": true,
+          "pfs_days": 319.241213772,
+          "os_months": 17.22720847,
+          "os_event": true,
+          "os_days": 524.3962258268
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 54.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1603",
+        "hypoxia": {
+          "buffa_score": 31.0,
+          "ragnum_score": 16.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 32.61334122,
+          "pfs_event": true,
+          "pfs_days": 992.7501067368001,
+          "os_months": 90.14695729,
+          "os_event": true,
+          "os_days": 2744.0733799076
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 53.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1604",
+        "hypoxia": {
+          "buffa_score": -7.0,
+          "ragnum_score": -10.0,
+          "winter_score": -14.0
+        },
+        "outcomes": {
+          "pfs_months": 88.37163428,
+          "pfs_event": true,
+          "pfs_days": 2690.0325474832,
+          "os_months": 88.37163428,
+          "os_event": true,
+          "os_days": 2690.0325474832
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 66.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1616",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 4.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 13.31492258,
+          "pfs_event": true,
+          "pfs_days": 405.3062433352,
+          "os_months": 38.23519742,
+          "os_event": true,
+          "os_days": 1163.8794094648001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 56.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1842",
+        "hypoxia": {
+          "buffa_score": 37.0,
+          "ragnum_score": 14.0,
+          "winter_score": 24.0
+        },
+        "outcomes": {
+          "pfs_months": 8.317717066,
+          "pfs_event": false,
+          "pfs_days": 253.19130748904,
+          "os_months": 8.317717066,
+          "os_event": false,
+          "os_days": 253.19130748904
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 49.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1843",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 18.0,
+          "winter_score": 20.0
+        },
+        "outcomes": {
+          "pfs_months": 3.484893316,
+          "pfs_event": false,
+          "pfs_days": 106.08015253904,
+          "os_months": 3.484893316,
+          "os_event": false,
+          "os_days": 106.08015253904
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 66.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1844",
+        "hypoxia": {
+          "buffa_score": 11.0,
+          "ragnum_score": 2.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 3.715027781,
+          "pfs_event": false,
+          "pfs_days": 113.08544565364,
+          "os_months": 3.715027781,
+          "os_event": false,
+          "os_days": 113.08544565364
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 64.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1846",
+        "hypoxia": {
+          "buffa_score": -1.0,
+          "ragnum_score": 4.0,
+          "winter_score": 0.0
+        },
+        "outcomes": {
+          "pfs_months": 4.372554821,
+          "pfs_event": false,
+          "pfs_days": 133.10056875124,
+          "os_months": 4.372554821,
+          "os_event": false,
+          "os_days": 133.10056875124
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA1",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1847",
+        "hypoxia": {
+          "buffa_score": 23.0,
+          "ragnum_score": 10.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 11.27658875,
+          "pfs_event": false,
+          "pfs_days": 343.25936155,
+          "os_months": 11.27658875,
+          "os_event": false,
+          "os_days": 343.25936155
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA1",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1849",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 4.0,
+          "winter_score": 20.0
+        },
+        "outcomes": {
+          "pfs_months": 5.786237959,
+          "pfs_event": false,
+          "pfs_days": 176.13308347196002,
+          "os_months": 5.786237959,
+          "os_event": false,
+          "os_days": 176.13308347196002
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 80.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Low",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1850",
+        "hypoxia": {
+          "buffa_score": 33.0,
+          "ragnum_score": 18.0,
+          "winter_score": 38.0
+        },
+        "outcomes": {
+          "pfs_months": 5.523227143,
+          "pfs_event": false,
+          "pfs_days": 168.12703423292,
+          "os_months": 5.523227143,
+          "os_event": false,
+          "os_days": 168.12703423292
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 72.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1924",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 10.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 10.52043265,
+          "pfs_event": true,
+          "pfs_days": 320.24196986600003,
+          "os_months": 30.21336753,
+          "os_event": true,
+          "os_days": 919.6949076132
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 65.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "Unknown",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1928",
+        "hypoxia": {
+          "buffa_score": 3.0,
+          "ragnum_score": 10.0,
+          "winter_score": -4.0
+        },
+        "outcomes": {
+          "pfs_months": 2.301344643,
+          "pfs_event": true,
+          "pfs_days": 70.05293093292,
+          "os_months": 11.04645429,
+          "os_event": true,
+          "os_days": 336.2540685876
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 77.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-1930",
+        "hypoxia": {
+          "buffa_score": 1.0,
+          "ragnum_score": -4.0,
+          "winter_score": -6.0
+        },
+        "outcomes": {
+          "pfs_months": 17.88473551,
+          "pfs_event": true,
+          "pfs_days": 544.4113489243999,
+          "os_months": 81.10596048,
+          "os_event": true,
+          "os_days": 2468.8654370112
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 53.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2019",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 16.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 4.865700102,
+          "pfs_event": false,
+          "pfs_days": 148.11191110488,
+          "os_months": 4.865700102,
+          "os_event": false,
+          "os_days": 148.11191110488
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 46.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2020",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 14.0,
+          "winter_score": 26.0
+        },
+        "outcomes": {
+          "pfs_months": 23.76960253,
+          "pfs_event": true,
+          "pfs_days": 723.5467010132,
+          "os_months": 152.0202518,
+          "os_event": true,
+          "os_days": 4627.496464792001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 67.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2023",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 6.0,
+          "winter_score": 6.0
+        },
+        "outcomes": {
+          "pfs_months": 35.14482033,
+          "pfs_event": true,
+          "pfs_days": 1069.8083308452,
+          "os_months": 44.84334418,
+          "os_event": true,
+          "os_days": 1365.0313968392002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 54.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2024",
+        "hypoxia": {
+          "buffa_score": -5.0,
+          "ragnum_score": 2.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 13.84094421,
+          "pfs_event": true,
+          "pfs_days": 421.31834175240004,
+          "os_months": 58.15826676,
+          "os_event": true,
+          "os_days": 1770.3376401744
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 72.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2026",
+        "hypoxia": {
+          "buffa_score": 7.0,
+          "ragnum_score": 2.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 34.81605681,
+          "pfs_event": false,
+          "pfs_days": 1059.8007692964,
+          "os_months": 34.81605681,
+          "os_event": true,
+          "os_days": 1059.8007692964
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 79.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2027",
+        "hypoxia": {
+          "buffa_score": 7.0,
+          "ragnum_score": 20.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 20.28470921,
+          "pfs_event": true,
+          "pfs_days": 617.4665483524,
+          "os_months": 109.7083868,
+          "os_event": true,
+          "os_days": 3339.5232941920003
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 51.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2033",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 2.0,
+          "winter_score": 24.0
+        },
+        "outcomes": {
+          "pfs_months": 11.53959957,
+          "pfs_event": true,
+          "pfs_days": 351.26541091080003,
+          "os_months": 18.47650985,
+          "os_event": true,
+          "os_days": 562.424959834
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 87.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2035",
+        "hypoxia": {
+          "buffa_score": -13.0,
+          "ragnum_score": 8.0,
+          "winter_score": -16.0
+        },
+        "outcomes": {
+          "pfs_months": 9.435513036,
+          "pfs_event": true,
+          "pfs_days": 287.21701681584,
+          "os_months": 28.1750337,
+          "os_event": true,
+          "os_days": 857.6480258280001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 65.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2038",
+        "hypoxia": {
+          "buffa_score": -29.0,
+          "ragnum_score": -20.0,
+          "winter_score": -20.0
+        },
+        "outcomes": {
+          "pfs_months": 38.43245554,
+          "pfs_event": true,
+          "pfs_days": 1169.8839466376,
+          "os_months": 44.51458066,
+          "os_event": true,
+          "os_days": 1355.0238352904
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 68.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Low",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2254",
+        "hypoxia": {
+          "buffa_score": -9.0,
+          "ragnum_score": 4.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 19.92306934,
+          "pfs_event": true,
+          "pfs_days": 606.4582307096001,
+          "os_months": 57.07334714,
+          "os_event": true,
+          "os_days": 1737.3126869416
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 66.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2261",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 8.0,
+          "winter_score": 0.0
+        },
+        "outcomes": {
+          "pfs_months": 0.789032449,
+          "pfs_event": true,
+          "pfs_days": 24.01814774756,
+          "os_months": 0.789032449,
+          "os_event": true,
+          "os_days": 24.01814774756
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 76.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2262",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 22.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 0.361639872,
+          "pfs_event": true,
+          "pfs_days": 11.00831770368,
+          "os_months": 0.361639872,
+          "os_event": true,
+          "os_days": 11.00831770368
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2267",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 6.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 16.83269224,
+          "pfs_event": true,
+          "pfs_days": 512.3871517856,
+          "os_months": 47.53920505,
+          "os_event": true,
+          "os_days": 1447.093401722
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 58.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2271",
+        "hypoxia": {
+          "buffa_score": -15.0,
+          "ragnum_score": -8.0,
+          "winter_score": -6.0
+        },
+        "outcomes": {
+          "pfs_months": 27.18874314,
+          "pfs_event": true,
+          "pfs_days": 827.6253411816,
+          "os_months": 31.62705066,
+          "os_event": true,
+          "os_days": 962.7274220904
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 55.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2281",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 16.0,
+          "winter_score": 26.0
+        },
+        "outcomes": {
+          "pfs_months": 44.61320972,
+          "pfs_event": false,
+          "pfs_days": 1358.0261038768,
+          "os_months": 44.61320972,
+          "os_event": false,
+          "os_days": 1358.0261038768
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 68.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2288",
+        "hypoxia": {
+          "buffa_score": 23.0,
+          "ragnum_score": 10.0,
+          "winter_score": 18.0
+        },
+        "outcomes": {
+          "pfs_months": 0.821908801,
+          "pfs_event": true,
+          "pfs_days": 25.01890390244,
+          "os_months": 0.821908801,
+          "os_event": true,
+          "os_days": 25.01890390244
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 70.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2289",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 2.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 18.67376796,
+          "pfs_event": true,
+          "pfs_days": 568.4294967024,
+          "os_months": 67.36364533,
+          "os_event": true,
+          "os_days": 2050.5493638452
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 68.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2290",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 8.0,
+          "winter_score": 24.0
+        },
+        "outcomes": {
+          "pfs_months": 10.65193806,
+          "pfs_event": true,
+          "pfs_days": 324.24499454640005,
+          "os_months": 36.22973995,
+          "os_event": true,
+          "os_days": 1102.8332840780001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 56.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2293",
+        "hypoxia": {
+          "buffa_score": -5.0,
+          "ragnum_score": 10.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 16.63543413,
+          "pfs_event": false,
+          "pfs_days": 506.38261491720004,
+          "os_months": 16.63543413,
+          "os_event": true,
+          "os_days": 506.38261491720004
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 47.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2297",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 12.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 55.85692212,
+          "pfs_event": false,
+          "pfs_days": 1700.2847093328,
+          "os_months": 55.85692212,
+          "os_event": true,
+          "os_days": 1700.2847093328
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 56.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-24-2298",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 4.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 15.41900911,
+          "pfs_event": true,
+          "pfs_days": 469.3546373084,
+          "os_months": 53.25969031,
+          "os_event": true,
+          "os_days": 1621.2249730364001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 55.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1312",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 8.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 1.019166913,
+          "pfs_event": false,
+          "pfs_days": 31.023440831720002,
+          "os_months": 1.019166913,
+          "os_event": true,
+          "os_days": 31.023440831720002
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 69.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1313",
+        "hypoxia": {
+          "buffa_score": -15.0,
+          "ragnum_score": -8.0,
+          "winter_score": -30.0
+        },
+        "outcomes": {
+          "pfs_months": 12.9532827,
+          "pfs_event": true,
+          "pfs_days": 394.29792538800007,
+          "os_months": 26.95860867,
+          "os_event": true,
+          "os_days": 820.6200479148
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 62.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1314",
+        "hypoxia": {
+          "buffa_score": 11.0,
+          "ragnum_score": -2.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 9.008120459,
+          "pfs_event": true,
+          "pfs_days": 274.20718677196004,
+          "os_months": 33.00785745,
+          "os_event": true,
+          "os_days": 1004.7591807780001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 42.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1315",
+        "hypoxia": {
+          "buffa_score": 31.0,
+          "ragnum_score": 14.0,
+          "winter_score": 28.0
+        },
+        "outcomes": {
+          "pfs_months": 5.030081862,
+          "pfs_event": true,
+          "pfs_days": 153.11569187928,
+          "os_months": 52.04326528,
+          "os_event": true,
+          "os_days": 1584.1969951232002
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 50.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1316",
+        "hypoxia": {
+          "buffa_score": -11.0,
+          "ragnum_score": 4.0,
+          "winter_score": -18.0
+        },
+        "outcomes": {
+          "pfs_months": 9.073873163,
+          "pfs_event": true,
+          "pfs_days": 276.20869908172,
+          "os_months": 42.04885426,
+          "os_event": true,
+          "os_days": 1279.9671236744
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 55.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1317",
+        "hypoxia": {
+          "buffa_score": -1.0,
+          "ragnum_score": 12.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 2.005457474,
+          "pfs_event": false,
+          "pfs_days": 61.04612550856,
+          "os_months": 2.005457474,
+          "os_event": true,
+          "os_days": 61.04612550856
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 66.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1318",
+        "hypoxia": {
+          "buffa_score": 11.0,
+          "ragnum_score": 2.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 6.082125127,
+          "pfs_event": true,
+          "pfs_days": 185.13988886588,
+          "os_months": 34.98043857,
+          "os_event": true,
+          "os_days": 1064.8045500708
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 54.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1319",
+        "hypoxia": {
+          "buffa_score": 7.0,
+          "ragnum_score": 8.0,
+          "winter_score": 4.0
+        },
+        "outcomes": {
+          "pfs_months": 23.99973699,
+          "pfs_event": true,
+          "pfs_days": 730.5519939756,
+          "os_months": 64.99654798,
+          "os_event": true,
+          "os_days": 1978.4949205112002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 73.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1320",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 14.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 13.93957327,
+          "pfs_event": true,
+          "pfs_days": 424.3206103388,
+          "os_months": 37.97218661,
+          "os_event": true,
+          "os_days": 1155.8733604084
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 65.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA2",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1321",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 6.0,
+          "winter_score": -4.0
+        },
+        "outcomes": {
+          "pfs_months": 14.92586383,
+          "pfs_event": true,
+          "pfs_days": 454.34329498520003,
+          "os_months": 33.96127166,
+          "os_event": true,
+          "os_days": 1033.7811093304
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 65.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1322",
+        "hypoxia": {
+          "buffa_score": 11.0,
+          "ragnum_score": 14.0,
+          "winter_score": -8.0
+        },
+        "outcomes": {
+          "pfs_months": 2.991748036,
+          "pfs_event": true,
+          "pfs_days": 91.06881021584,
+          "os_months": 2.991748036,
+          "os_event": true,
+          "os_days": 91.06881021584
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 62.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1323",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 12.0,
+          "winter_score": 26.0
+        },
+        "outcomes": {
+          "pfs_months": 11.9998685,
+          "pfs_event": true,
+          "pfs_days": 365.27599714,
+          "os_months": 12.98615906,
+          "os_event": true,
+          "os_days": 395.29868178640004
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 72.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1324",
+        "hypoxia": {
+          "buffa_score": -9.0,
+          "ragnum_score": 12.0,
+          "winter_score": -20.0
+        },
+        "outcomes": {
+          "pfs_months": 34.02702436,
+          "pfs_event": false,
+          "pfs_days": 1035.7826215184,
+          "os_months": 34.02702436,
+          "os_event": true,
+          "os_days": 1035.7826215184
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 74.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "Unknown",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1326",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": 8.0,
+          "winter_score": 6.0
+        },
+        "outcomes": {
+          "pfs_months": 13.01903541,
+          "pfs_event": true,
+          "pfs_days": 396.29943788040003,
+          "os_months": 41.0625637,
+          "os_event": true,
+          "os_days": 1249.944439028
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 61.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "Unknown",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1328",
+        "hypoxia": {
+          "buffa_score": -15.0,
+          "ragnum_score": -18.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 8.021829898,
+          "pfs_event": true,
+          "pfs_days": 244.18450209512002,
+          "os_months": 66.04859125,
+          "os_event": true,
+          "os_days": 2010.5191176500002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 38.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "Unknown",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1329",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": 8.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 15.02449288,
+          "pfs_event": false,
+          "pfs_days": 457.3455632672,
+          "os_months": 15.02449288,
+          "os_event": true,
+          "os_days": 457.3455632672
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 76.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1623",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 20.0,
+          "winter_score": 34.0
+        },
+        "outcomes": {
+          "pfs_months": 11.2437124,
+          "pfs_event": true,
+          "pfs_days": 342.258605456,
+          "os_months": 18.5751389,
+          "os_event": true,
+          "os_days": 565.427228116
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 71.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1625",
+        "hypoxia": {
+          "buffa_score": -9.0,
+          "ragnum_score": -8.0,
+          "winter_score": -6.0
+        },
+        "outcomes": {
+          "pfs_months": 17.29296117,
+          "pfs_event": true,
+          "pfs_days": 526.3977380148001,
+          "os_months": 27.61613571,
+          "os_event": true,
+          "os_days": 840.6351710124
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 66.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1626",
+        "hypoxia": {
+          "buffa_score": -3.0,
+          "ragnum_score": 4.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 10.45467995,
+          "pfs_event": true,
+          "pfs_days": 318.240457678,
+          "os_months": 17.02995036,
+          "os_event": true,
+          "os_days": 518.3916889584001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 65.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1627",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 8.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 12.9532827,
+          "pfs_event": false,
+          "pfs_days": 394.29792538800007,
+          "os_months": 12.9532827,
+          "os_event": true,
+          "os_days": 394.29792538800007
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 73.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1628",
+        "hypoxia": {
+          "buffa_score": -1.0,
+          "ragnum_score": 10.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 9.435513036,
+          "pfs_event": true,
+          "pfs_days": 287.21701681584,
+          "os_months": 20.61347273,
+          "os_event": true,
+          "os_days": 627.4741099012001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 67.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1630",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 16.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 38.20232107,
+          "pfs_event": false,
+          "pfs_days": 1162.8786533708,
+          "os_months": 38.20232107,
+          "os_event": true,
+          "os_days": 1162.8786533708
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 73.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1631",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 8.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 0.295887168,
+          "pfs_event": false,
+          "pfs_days": 9.00680539392,
+          "os_months": 0.295887168,
+          "os_event": true,
+          "os_days": 9.00680539392
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 73.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1632",
+        "hypoxia": {
+          "buffa_score": -9.0,
+          "ragnum_score": -2.0,
+          "winter_score": 18.0
+        },
+        "outcomes": {
+          "pfs_months": 17.65460105,
+          "pfs_event": true,
+          "pfs_days": 537.406055962,
+          "os_months": 59.14455732,
+          "os_event": true,
+          "os_days": 1800.3603248208
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 68.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1633",
+        "hypoxia": {
+          "buffa_score": -1.0,
+          "ragnum_score": -10.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 20.25183286,
+          "pfs_event": true,
+          "pfs_days": 616.4657922584,
+          "os_months": 62.16918171,
+          "os_event": true,
+          "os_days": 1892.4298912524
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 64.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1634",
+        "hypoxia": {
+          "buffa_score": -11.0,
+          "ragnum_score": 4.0,
+          "winter_score": -8.0
+        },
+        "outcomes": {
+          "pfs_months": 12.49301378,
+          "pfs_event": true,
+          "pfs_days": 380.2873394632,
+          "os_months": 35.86810008,
+          "os_event": true,
+          "os_days": 1091.8249664352
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 75.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1635",
+        "hypoxia": {
+          "buffa_score": 3.0,
+          "ragnum_score": 8.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 20.18608015,
+          "pfs_event": true,
+          "pfs_days": 614.464279766,
+          "os_months": 52.04326528,
+          "os_event": true,
+          "os_days": 1584.1969951232002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 71.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1870",
+        "hypoxia": {
+          "buffa_score": -25.0,
+          "ragnum_score": -14.0,
+          "winter_score": -30.0
+        },
+        "outcomes": {
+          "pfs_months": 7.988953546,
+          "pfs_event": true,
+          "pfs_days": 243.18374594024002,
+          "os_months": 14.95874018,
+          "os_event": true,
+          "os_days": 455.3440510792
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 59.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-1871",
+        "hypoxia": {
+          "buffa_score": 3.0,
+          "ragnum_score": 8.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 7.561560969,
+          "pfs_event": true,
+          "pfs_days": 230.17391589636003,
+          "os_months": 24.98602755,
+          "os_event": true,
+          "os_days": 760.574678622
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 70.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2042",
+        "hypoxia": {
+          "buffa_score": -5.0,
+          "ragnum_score": 2.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 13.01903541,
+          "pfs_event": true,
+          "pfs_days": 396.29943788040003,
+          "os_months": 13.01903541,
+          "os_event": true,
+          "os_days": 396.29943788040003
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 60.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2391",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 8.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 49.05151724,
+          "pfs_event": false,
+          "pfs_days": 1493.1281847856,
+          "os_months": 49.05151724,
+          "os_event": true,
+          "os_days": 1493.1281847856
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2392",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 6.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 1.019166913,
+          "pfs_event": false,
+          "pfs_days": 31.023440831720002,
+          "os_months": 1.019166913,
+          "os_event": true,
+          "os_days": 31.023440831720002
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 75.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2393",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 16.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 10.02728737,
+          "pfs_event": true,
+          "pfs_days": 305.2306275428,
+          "os_months": 38.03793931,
+          "os_event": true,
+          "os_days": 1157.8748725964
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 81.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2396",
+        "hypoxia": {
+          "buffa_score": 1.0,
+          "ragnum_score": 2.0,
+          "winter_score": -12.0
+        },
+        "outcomes": {
+          "pfs_months": 3.024624388,
+          "pfs_event": false,
+          "pfs_days": 92.06956637072,
+          "os_months": 3.024624388,
+          "os_event": true,
+          "os_days": 92.06956637072
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 71.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2397",
+        "hypoxia": {
+          "buffa_score": 23.0,
+          "ragnum_score": 4.0,
+          "winter_score": 4.0
+        },
+        "outcomes": {
+          "pfs_months": 11.9998685,
+          "pfs_event": false,
+          "pfs_days": 365.27599714,
+          "os_months": 11.9998685,
+          "os_event": true,
+          "os_days": 365.27599714
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 59.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2398",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": 6.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 18.96965513,
+          "pfs_event": true,
+          "pfs_days": 577.4363021572,
+          "os_months": 45.00772594,
+          "os_event": true,
+          "os_days": 1370.0351776136001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 71.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2399",
+        "hypoxia": {
+          "buffa_score": 17.0,
+          "ragnum_score": 16.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 7.988953546,
+          "pfs_event": true,
+          "pfs_days": 243.18374594024002,
+          "os_months": 19.98882204,
+          "os_event": true,
+          "os_days": 608.4597428976
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 80.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Low",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2400",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 4.0,
+          "winter_score": -10.0
+        },
+        "outcomes": {
+          "pfs_months": 18.96965513,
+          "pfs_event": true,
+          "pfs_days": 577.4363021572,
+          "os_months": 42.01597791,
+          "os_event": true,
+          "os_days": 1278.9663675804
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 76.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2401",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 4.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 2.958871684,
+          "pfs_event": false,
+          "pfs_days": 90.06805406096001,
+          "os_months": 2.958871684,
+          "os_event": true,
+          "os_days": 90.06805406096001
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 64.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2404",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 14.0,
+          "winter_score": 18.0
+        },
+        "outcomes": {
+          "pfs_months": 14.00532597,
+          "pfs_event": true,
+          "pfs_days": 426.3221225268,
+          "os_months": 29.02981885,
+          "os_event": true,
+          "os_days": 883.6676857940001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 38.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-25-2409",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": 0.0,
+          "winter_score": 18.0
+        },
+        "outcomes": {
+          "pfs_months": 9.99441102,
+          "pfs_event": true,
+          "pfs_days": 304.2298714488,
+          "os_months": 26.99148503,
+          "os_event": true,
+          "os_days": 821.6208043132
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 71.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "Unknown",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1688",
+        "hypoxia": {
+          "buffa_score": 29.0,
+          "ragnum_score": 12.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 6.049248775,
+          "pfs_event": true,
+          "pfs_days": 184.139132711,
+          "os_months": 78.9032449,
+          "os_event": true,
+          "os_days": 2401.814774756
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 39.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1690",
+        "hypoxia": {
+          "buffa_score": 3.0,
+          "ragnum_score": -8.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 47.60495775,
+          "pfs_event": true,
+          "pfs_days": 1449.09491391,
+          "os_months": 47.60495775,
+          "os_event": true,
+          "os_days": 1449.09491391
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 66.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Low",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1691",
+        "hypoxia": {
+          "buffa_score": 7.0,
+          "ragnum_score": 10.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 20.1532038,
+          "pfs_event": true,
+          "pfs_days": 613.4635236720001,
+          "os_months": 48.3282375,
+          "os_event": true,
+          "os_days": 1471.1115495000001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 51.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1693",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": 0.0,
+          "winter_score": 28.0
+        },
+        "outcomes": {
+          "pfs_months": 22.81618832,
+          "pfs_event": true,
+          "pfs_days": 694.5247724608,
+          "os_months": 101.7851859,
+          "os_event": false,
+          "os_days": 3098.341058796
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 72.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA2",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1694",
+        "hypoxia": {
+          "buffa_score": 9.0,
+          "ragnum_score": -2.0,
+          "winter_score": -6.0
+        },
+        "outcomes": {
+          "pfs_months": 39.02422987,
+          "pfs_event": true,
+          "pfs_days": 1187.8975572428,
+          "os_months": 39.02422987,
+          "os_event": true,
+          "os_days": 1187.8975572428
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1695",
+        "hypoxia": {
+          "buffa_score": -5.0,
+          "ragnum_score": 12.0,
+          "winter_score": 0.0
+        },
+        "outcomes": {
+          "pfs_months": 40.40503666,
+          "pfs_event": false,
+          "pfs_days": 1229.9293159304,
+          "os_months": 40.40503666,
+          "os_event": true,
+          "os_days": 1229.9293159304
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 62.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1696",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": -6.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 11.2437124,
+          "pfs_event": true,
+          "pfs_days": 342.258605456,
+          "os_months": 33.92839531,
+          "os_event": true,
+          "os_days": 1032.7803532364
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 43.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1697",
+        "hypoxia": {
+          "buffa_score": 29.0,
+          "ragnum_score": 22.0,
+          "winter_score": 32.0
+        },
+        "outcomes": {
+          "pfs_months": 16.43817602,
+          "pfs_event": true,
+          "pfs_days": 500.37807804880003,
+          "os_months": 31.19965809,
+          "os_event": true,
+          "os_days": 949.7175922596
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 62.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1698",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 8.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 5.950619719,
+          "pfs_event": true,
+          "pfs_days": 181.13686424636,
+          "os_months": 68.31705954,
+          "os_event": false,
+          "os_days": 2079.5712923976002
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 53.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1699",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 0.0,
+          "winter_score": 26.0
+        },
+        "outcomes": {
+          "pfs_months": 36.36124536,
+          "pfs_event": false,
+          "pfs_days": 1106.8363087584,
+          "os_months": 36.36124536,
+          "os_event": true,
+          "os_days": 1106.8363087584
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 57.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1701",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 14.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 9.797152908,
+          "pfs_event": true,
+          "pfs_days": 298.22533451952,
+          "os_months": 16.9313213,
+          "os_event": true,
+          "os_days": 515.389420372
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 56.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1702",
+        "hypoxia": {
+          "buffa_score": 11.0,
+          "ragnum_score": 4.0,
+          "winter_score": 4.0
+        },
+        "outcomes": {
+          "pfs_months": 9.402636683,
+          "pfs_event": true,
+          "pfs_days": 286.21626063052,
+          "os_months": 23.93398429,
+          "os_event": true,
+          "os_days": 728.5504817876001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 84.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1703",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 2.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 10.65193806,
+          "pfs_event": true,
+          "pfs_days": 324.24499454640005,
+          "os_months": 59.67057895,
+          "os_event": true,
+          "os_days": 1816.372423238
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 56.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1705",
+        "hypoxia": {
+          "buffa_score": 21.0,
+          "ragnum_score": 10.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 9.304007627,
+          "pfs_event": true,
+          "pfs_days": 283.21399216588003,
+          "os_months": 18.24637538,
+          "os_event": true,
+          "os_days": 555.4196665672
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 47.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1710",
+        "hypoxia": {
+          "buffa_score": -13.0,
+          "ragnum_score": -10.0,
+          "winter_score": -16.0
+        },
+        "outcomes": {
+          "pfs_months": 10.35605089,
+          "pfs_event": true,
+          "pfs_days": 315.2381890916,
+          "os_months": 31.26541079,
+          "os_event": true,
+          "os_days": 951.7191044476001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 54.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1711",
+        "hypoxia": {
+          "buffa_score": 1.0,
+          "ragnum_score": -4.0,
+          "winter_score": -4.0
+        },
+        "outcomes": {
+          "pfs_months": 34.6187987,
+          "pfs_event": false,
+          "pfs_days": 1053.796232428,
+          "os_months": 34.6187987,
+          "os_event": false,
+          "os_days": 1053.796232428
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 45.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1761",
+        "hypoxia": {
+          "buffa_score": 35.0,
+          "ragnum_score": 6.0,
+          "winter_score": 42.0
+        },
+        "outcomes": {
+          "pfs_months": 17.35871388,
+          "pfs_event": true,
+          "pfs_days": 528.3992505072,
+          "os_months": 17.35871388,
+          "os_event": true,
+          "os_days": 528.3992505072
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 80.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1762",
+        "hypoxia": {
+          "buffa_score": 25.0,
+          "ragnum_score": 16.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 45.20498406,
+          "pfs_event": true,
+          "pfs_days": 1376.0397147864,
+          "os_months": 86.59631127,
+          "os_event": true,
+          "os_days": 2635.9917150588003
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 59.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA2",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1763",
+        "hypoxia": {
+          "buffa_score": -9.0,
+          "ragnum_score": 2.0,
+          "winter_score": 0.0
+        },
+        "outcomes": {
+          "pfs_months": 14.07107867,
+          "pfs_event": true,
+          "pfs_days": 428.32363471480005,
+          "os_months": 66.80474735,
+          "os_event": false,
+          "os_days": 2033.5365093340001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 43.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1770",
+        "hypoxia": {
+          "buffa_score": 29.0,
+          "ragnum_score": 10.0,
+          "winter_score": 40.0
+        },
+        "outcomes": {
+          "pfs_months": 12.39438472,
+          "pfs_event": true,
+          "pfs_days": 377.28507087680003,
+          "os_months": 24.36137686,
+          "os_event": false,
+          "os_days": 741.5603116184001
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 54.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1776",
+        "hypoxia": {
+          "buffa_score": -7.0,
+          "ragnum_score": -10.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 11.83548673,
+          "pfs_event": false,
+          "pfs_days": 360.2722160612,
+          "os_months": 11.83548673,
+          "os_event": false,
+          "os_days": 360.2722160612
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 63.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA1",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1778",
+        "hypoxia": {
+          "buffa_score": -9.0,
+          "ragnum_score": -4.0,
+          "winter_score": -14.0
+        },
+        "outcomes": {
+          "pfs_months": 14.92586383,
+          "pfs_event": false,
+          "pfs_days": 454.34329498520003,
+          "os_months": 14.92586383,
+          "os_event": false,
+          "os_days": 454.34329498520003
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 77.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1781",
+        "hypoxia": {
+          "buffa_score": 31.0,
+          "ragnum_score": 12.0,
+          "winter_score": 22.0
+        },
+        "outcomes": {
+          "pfs_months": 8.38346977,
+          "pfs_event": false,
+          "pfs_days": 255.1928197988,
+          "os_months": 8.38346977,
+          "os_event": false,
+          "os_days": 255.1928197988
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 69.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1783",
+        "hypoxia": {
+          "buffa_score": 7.0,
+          "ragnum_score": -4.0,
+          "winter_score": -2.0
+        },
+        "outcomes": {
+          "pfs_months": 7.232797449,
+          "pfs_event": false,
+          "pfs_days": 220.16635434756003,
+          "os_months": 7.232797449,
+          "os_event": false,
+          "os_days": 220.16635434756003
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 58.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1784",
+        "hypoxia": {
+          "buffa_score": 29.0,
+          "ragnum_score": 14.0,
+          "winter_score": 24.0
+        },
+        "outcomes": {
+          "pfs_months": 5.358845383,
+          "pfs_event": false,
+          "pfs_days": 163.12325345852003,
+          "os_months": 5.358845383,
+          "os_event": false,
+          "os_days": 163.12325345852003
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 55.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-1785",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": 6.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 15.55051452,
+          "pfs_event": true,
+          "pfs_days": 473.35766198880003,
+          "os_months": 36.29549265,
+          "os_event": true,
+          "os_days": 1104.834796266
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 55.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Low",
+          "brca_mutated": false,
+          "hrd_high": false
+        }
+      },
+      {
+        "patient_id": "TCGA-29-2425",
+        "hypoxia": {
+          "buffa_score": -7.0,
+          "ragnum_score": 4.0,
+          "winter_score": -6.0
+        },
+        "outcomes": {
+          "pfs_months": 51.84600717,
+          "pfs_event": true,
+          "pfs_days": 1578.1924582548002,
+          "os_months": 64.99654798,
+          "os_event": false,
+          "os_days": 1978.4949205112002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 60.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-2427",
+        "hypoxia": {
+          "buffa_score": 5.0,
+          "ragnum_score": 6.0,
+          "winter_score": -14.0
+        },
+        "outcomes": {
+          "pfs_months": 52.01038893,
+          "pfs_event": true,
+          "pfs_days": 1583.1962390292,
+          "os_months": 62.46506888,
+          "os_event": false,
+          "os_days": 1901.4366967072
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 60.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA1",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-2428",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 6.0,
+          "winter_score": 30.0
+        },
+        "outcomes": {
+          "pfs_months": 45.106355,
+          "pfs_event": false,
+          "pfs_days": 1373.0374462,
+          "os_months": 45.106355,
+          "os_event": false,
+          "os_days": 1373.0374462
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 58.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-29-A5NZ",
+        "hypoxia": {
+          "buffa_score": -9.0,
+          "ragnum_score": 10.0,
+          "winter_score": -10.0
+        },
+        "outcomes": {
+          "pfs_months": 11.76973403,
+          "pfs_event": true,
+          "pfs_days": 358.27070387320003,
+          "os_months": 35.76947102,
+          "os_event": true,
+          "os_days": 1088.8226978487999
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 66.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-30-1718",
+        "hypoxia": {
+          "buffa_score": 15.0,
+          "ragnum_score": 8.0,
+          "winter_score": 2.0
+        },
+        "outcomes": {
+          "pfs_months": 29.45721143,
+          "pfs_event": true,
+          "pfs_days": 896.6775159292,
+          "os_months": 51.91175987,
+          "os_event": true,
+          "os_days": 1580.1939704428
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 44.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-30-1855",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 12.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 2.465726403,
+          "pfs_event": true,
+          "pfs_days": 75.05671170732,
+          "os_months": 2.465726403,
+          "os_event": true,
+          "os_days": 75.05671170732
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 61.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-30-1857",
+        "hypoxia": {
+          "buffa_score": 13.0,
+          "ragnum_score": 0.0,
+          "winter_score": 14.0
+        },
+        "outcomes": {
+          "pfs_months": 0.263010816,
+          "pfs_event": true,
+          "pfs_days": 8.00604923904,
+          "os_months": 0.263010816,
+          "os_event": true,
+          "os_days": 8.00604923904
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 64.0
+        },
+        "biomarkers": {
+          "brca_somatic": "BRCA1",
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": true,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-30-1860",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 12.0,
+          "winter_score": 16.0
+        },
+        "outcomes": {
+          "pfs_months": 13.05191176,
+          "pfs_event": true,
+          "pfs_days": 397.3001939744,
+          "os_months": 44.90909689,
+          "os_event": true,
+          "os_days": 1367.0329093316
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 58.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-30-1861",
+        "hypoxia": {
+          "buffa_score": 19.0,
+          "ragnum_score": 12.0,
+          "winter_score": 12.0
+        },
+        "outcomes": {
+          "pfs_months": 34.78318046,
+          "pfs_event": false,
+          "pfs_days": 1058.8000132024,
+          "os_months": 34.78318046,
+          "os_event": true,
+          "os_days": 1058.8000132024
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 74.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-30-1862",
+        "hypoxia": {
+          "buffa_score": 1.0,
+          "ragnum_score": -6.0,
+          "winter_score": 8.0
+        },
+        "outcomes": {
+          "pfs_months": 6.115001479,
+          "pfs_event": true,
+          "pfs_days": 186.14064502076002,
+          "os_months": 6.115001479,
+          "os_event": true,
+          "os_days": 186.14064502076002
+        },
+        "platinum_resistant": false,
+        "demographics": {
+          "age": 65.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-High",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      },
+      {
+        "patient_id": "TCGA-30-1891",
+        "hypoxia": {
+          "buffa_score": 27.0,
+          "ragnum_score": 2.0,
+          "winter_score": 10.0
+        },
+        "outcomes": {
+          "pfs_months": 5.950619719,
+          "pfs_event": true,
+          "pfs_days": 181.13686424636,
+          "os_months": 30.04898577,
+          "os_event": true,
+          "os_days": 914.6911268388001
+        },
+        "platinum_resistant": true,
+        "demographics": {
+          "age": 61.0
+        },
+        "biomarkers": {
+          "brca_somatic": null,
+          "brca_germline": "unknown",
+          "hrd_proxy": "HRD-Intermediate",
+          "brca_mutated": false,
+          "hrd_high": true
+        }
+      }
+    ]
+  }
+}

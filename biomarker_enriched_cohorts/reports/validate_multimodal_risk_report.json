@@ -1,0 +1,70 @@
+{
+  "run": {
+    "generated_at": "2026-01-01T20:42:12Z",
+    "script": "validate_multimodal_risk.py",
+    "root": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts"
+  },
+  "inputs": {
+    "cohort_path": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/data/tcga_ov_enriched_v2.json",
+    "cohort_sha256": "11f5428eb7c3d238efa8b2329ee8f8d6942f98a162898099ad93f7b1d2f2791d",
+    "endpoint": {
+      "time_col": "os_days",
+      "event_col": "os_event"
+    },
+    "tmb_threshold": 20.0,
+    "hrd_high_label": "HRD-High",
+    "tier_definition": {
+      "Favorable": "BRCA_somatic OR (HRD-High AND (TMB-high OR MSI-H))",
+      "Intermediate": "HRD-High OR TMB-high OR MSI-H",
+      "Unfavorable": "else"
+    }
+  },
+  "coverage": {
+    "os_days": {
+      "n": 571,
+      "pct": 97.6068376068376
+    },
+    "os_event": {
+      "n": 574,
+      "pct": 98.11965811965811
+    },
+    "tmb": {
+      "n": 523,
+      "pct": 89.40170940170941
+    },
+    "msi_status": {
+      "n": 585,
+      "pct": 100.0
+    },
+    "hrd_proxy": {
+      "n": 585,
+      "pct": 100.0
+    },
+    "brca_somatic": {
+      "n": 33,
+      "pct": 5.641025641025641
+    }
+  },
+  "usable": {
+    "n": 571,
+    "counts": {
+      "Unfavorable": 302,
+      "Intermediate": 231,
+      "Favorable": 38
+    }
+  },
+  "results": {
+    "logrank_p": 0.024835377386229134,
+    "test_statistic": 7.390972269594442,
+    "median_days_by_tier": {
+      "Favorable": 2635.0,
+      "Intermediate": 1204.0,
+      "Unfavorable": 1471.0
+    },
+    "figure": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_multimodal_risk_os.png"
+  },
+  "notes": [
+    "This is a retrospective stratification check, not proof of treatment effect.",
+    "Germline BRCA is unknown in this cohort; BRCA_somatic is used as a proxy stratifier."
+  ]
+}

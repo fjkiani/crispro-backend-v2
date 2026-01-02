@@ -1,0 +1,45 @@
+{
+  "extraction_date": "2026-01-01T00:11:48.432793",
+  "base_cohort": {
+    "source": "cbioportal",
+    "study_id": "ov_tcga_pan_can_atlas_2018",
+    "n_patients": 585
+  },
+  "enrichment": {
+    "version": "v1",
+    "biomarkers": [
+      "hrd_score",
+      "tmb",
+      "msi_status",
+      "germline_brca_status"
+    ]
+  },
+  "coverage": {
+    "hrd_score": {
+      "n_available": 0,
+      "n_total": 585,
+      "coverage_pct": 0.0
+    },
+    "tmb": {
+      "n_available": 0,
+      "n_total": 585,
+      "coverage_pct": 0.0
+    },
+    "msi_status": {
+      "n_available": 0,
+      "n_total": 585,
+      "coverage_pct": 0.0
+    },
+    "germline_brca_status": {
+      "n_available": 0,
+      "n_total": 585,
+      "coverage_pct": 0.0
+    }
+  },
+  "provenance": {
+    "hrd_source": "cBioPortal GISTIC data",
+    "tmb_source": "Calculated from mutations or clinical data",
+    "msi_source": "cBioPortal clinical attributes",
+    "germline_brca_source": "Inferred from mutations (defaults to 'unknown' if not available)"
+  }
+}

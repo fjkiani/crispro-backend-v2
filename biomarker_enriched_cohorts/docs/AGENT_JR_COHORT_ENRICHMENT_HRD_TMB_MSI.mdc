@@ -1,0 +1,194 @@
+---
+title: AGENT JR – Cohort Enrichment (HRD + TMB + MSI + Germline Proxies) for Outcome-Labeled TCGA Cohorts
+status: DRAFT
+owner: JR (Data)
+created: 2026-01-01
+---
+
+# Mission
+Augment the v1 outcome-labeled TCGA-OV cohort (`tcga_ov_outcomes_v1.json`) with **biomarker fields needed to validate sporadic-gates logic**, with **receipt-driven reproducibility** and **no credentials committed**.
+
+# Why this exists
+The v1 join (Tier3 platinum labels + cBioPortal OS/PFS) can validate **DDR proxy ↔ outcomes**.  
+To validate the **actual sporadic gates**, we need additional cohort fields:
+- **HRD score** (to test HRD≥42 rescue behavior)
+- **TMB** (to test IO boosts)
+- **MSI status** (to test IO boosts)
+- **Germline BRCA status** (often missing; must be explicit if unknown)
+
+# What already exists (use before building)
+## HRD workflows already in repo
+- `tools/benchmarks/HRD_EXTRACTION_WORKFLOW.md`
+- `scripts/data_acquisition/download_tcga_hrd.py`
+- `scripts/data_acquisition/merge_hrd_scores.py`
+- `tools/benchmarks/extract_gdc_hrd_cohort.py`
+- `tools/benchmarks/extract_cbioportal_hrd_cohort.py`
+
+## TMB utilities already in repo
+- `scripts/data_acquisition/utils/tmb_calculator.py`
+- (Optional) derive TMB from `ov_tcga.patients[*].mutations` already present in `data/benchmarks/cbioportal_trial_datasets_latest.json`
+
+## Existing outcomes cohort to enrich
+- `oncology-coPilot/oncology-backend-minimal/data/cohorts/tcga_ov_outcomes_v1.json`
+
+# Scope (v1)
+Add **best-effort** enrichment fields and be explicit about missingness:
+- `hrd_score` (float, 0–100 or cohort-native scale)
+- `tmb` (float, mutations/Mb; record the denominator used)
+- `msi_status` (string: `MSI-H|MSS|Unknown`)
+- `germline_brca_status` (string: `positive|negative|unknown`) — default `unknown` unless a trustworthy source is found
+
+If a field cannot be sourced reproducibly from public artifacts, set it to `null` and record a provenance note.
+
+# Deliverables
+1. **Enricher script**: `oncology-coPilot/oncology-backend-minimal/scripts/cohorts/enrich_tcga_ov_biomarkers.py`
+2. **Enriched cohort artifact**: `oncology-coPilot/oncology-backend-minimal/data/cohorts/tcga_ov_enriched_v2.json`
+3. **Receipt**: `oncology-coPilot/oncology-backend-minimal/data/cohorts/receipts/tcga_ov_enriched_v2_receipt_YYYYMMDD.json`
+4. **README update**: document field meanings + label/version policy in `oncology-coPilot/oncology-backend-minimal/data/cohorts/README.md`
+
+# Acceptance Criteria
+- **Reproducibility**: deterministic cohort output (except receipt timestamp).
+- **Coverage summary**: receipt reports `n_patients` and `coverage.{field}.{n,pct}` for each biomarker field.
+- **No overclaims**: if MSI/germline cannot be sourced, fields remain null/unknown and manuscript copy must not imply validation of those gates.
+
+# Implementation notes
+- Prefer **joining by TCGA patient/case ID** exactly as used in `tcga_ov_outcomes_v1.json`.
+- Store per-field provenance in the cohort metadata (e.g., `biomarker_sources` map).
+- Do not call paid APIs; do not require secrets.
+
+# Report back
+
+- **Artifacts**: paths to `tcga_ov_enriched_v2.json` + receipt
+- **Coverage**: paste the receipt `coverage` table (n + pct per field)
+- **Notes**: any thresholds used to derive `msi_status` / `hrd_proxy`
+
+
+
+## ✅ **MISSION COMPLETE: DATA EXTRACTED SUCCESSFULLY**
+
+**Status**: ✅ **COMPLETE** (Executed: 2026-01-01 00:22:11)
+
+### **FINAL COVERAGE ACHIEVED**:
+
+| Biomarker | Coverage | Notes |
+|-----------|----------|-------|
+| TMB | **523/585 (89.4%)** | TMB_NONSYNONYMOUS from PanCancer Atlas |
+| MSI (MANTIS) | **436/585 (74.5%)** | MSI_SCORE_MANTIS |
+| MSI (Sensor) | **512/585 (87.5%)** | MSI_SENSOR_SCORE |
+| Aneuploidy | **552/585 (94.4%)** | HRD proxy |
+| FGA | **574/585 (98.1%)** | Fraction Genome Altered |
+| BRCA Somatic | **33/585 (5.6%)** | 18 BRCA1 + 15 BRCA2 |
+
+### **DERIVED BIOMARKERS**:
+
+- **MSI Status**: MSI-H = 18 patients, MSS = rest (derived from MANTIS > 0.4 or Sensor > 3.5)
+- **HRD Proxy**: HRD-High = 233 patients (Aneuploidy >= 15 AND FGA >= 0.4)
+- **Germline BRCA**: "unknown" for all (TCGA is tumor-only sequencing)
+
+### **OUTPUT FILES**:
+
+1. **Enriched Cohort**: `oncology-coPilot/oncology-backend-minimal/data/cohorts/tcga_ov_enriched_v2.json`
+2. **Receipt**: `oncology-coPilot/oncology-backend-minimal/data/cohorts/receipts/tcga_ov_enriched_v2_receipt_20260101.json`
+3. **Raw Biomarkers**: `oncology-coPilot/oncology-backend-minimal/data/cohorts/tcga_ov_biomarkers_raw.json`
+4. **BRCA Mutations**: `oncology-coPilot/oncology-backend-minimal/data/cohorts/tcga_ov_brca_mutations.json`
+
+### **Output schema**
+- Patients are located at `cohort.patients[]` (not top-level).
+- Each patient contains:
+  - `patient_id`
+  - `outcomes.{os_days, os_event, pfs_days, pfs_event}`
+  - biomarker fields: `tmb`, `msi_*`, `msi_status`, `aneuploidy_score`, `fraction_genome_altered`, `hrd_proxy`, `brca_somatic`, `germline_brca_status`
+
+### **Receipt schema**
+- v2 receipt keys: `extraction_date`, `base_cohort`, `n_patients`, `coverage`, `derived_status`, `biomarkers`, `provenance`
+
+### **SAMPLE ENRICHED PATIENT**:
+
+```json
+{
+  "patient_id": "TCGA-04-1331",
+  "outcomes": {
+    "os_days": 1337,
+    "os_event": true,
+    "pfs_days": 459,
+    "pfs_event": true
+  },
+  "tmb": 4.5,
+  "msi_score_mantis": 0.2781,
+  "msi_sensor_score": 0.75,
+  "msi_status": "MSS",
+  "aneuploidy_score": 7.0,
+  "fraction_genome_altered": 0.4372,
+  "hrd_proxy": "HRD-Intermediate",
+  "brca_somatic": "BRCA2",
+  "germline_brca_status": "unknown"
+}
+```
+
+### **WHY PREVIOUS EXTRACTION FAILED**:
+
+The previous agent used the wrong study and wrong approach:
+1. Looked for clinical attributes like "HRD_SCORE" that don't exist directly
+2. Used `ov_tcga` instead of `ov_tcga_pan_can_atlas_2018` which has the biomarker data
+3. Didn't check for equivalent/proxy attributes
+
+### **WHAT WE DID DIFFERENTLY**:
+
+1. Used **PanCancer Atlas** study (`ov_tcga_pan_can_atlas_2018`) which has biomarker data
+2. Found actual available attributes: `TMB_NONSYNONYMOUS`, `MSI_SCORE_MANTIS`, `MSI_SENSOR_SCORE`, `ANEUPLOIDY_SCORE`
+3. Fetched BRCA1/BRCA2 mutations directly from mutation profile
+4. Created derived fields (MSI status, HRD proxy) from available data
+
+### **PROVENANCE**:
+
+- **TMB**: TMB_NONSYNONYMOUS (mutations/Mb) from cBioPortal clinical data
+- **MSI**: Derived from MANTIS (>0.4) and MSIsensor (>3.5) scores
+- **HRD**: Proxy from Aneuploidy score + Fraction Genome Altered
+- **BRCA**: Somatic mutations from cBioPortal mutation profile
+
+---
+
+
+## ✅ **PHASE 1 COMPLETE: TEST & VALIDATE SCRIPTS**
+
+**Status**: ✅ **COMPLETE** (Executed: 2026-01-01 00:12:47)
+
+### **Scripts Tested & Validated**:
+
+1. ✅ **`extract_tcga_outcomes.py`**:
+   - **Status**: ✅ **PASSING**
+   - **Output**: `tcga_ov_outcomes_v1.json` (585 patients)
+   - **Receipt**: Generated successfully
+   - **Issues Fixed**: 
+     - `prprint` typo → `print`
+     - `PROJECT_ROOT` path calculation
+     - `OUTPUT_DIR` and `RECEIPTS_DIR` paths
+
+2. ✅ **`enrich_tcga_ov_biomarkers.py`**:
+   - **Status**: ✅ **PASSING**
+   - **Output**: `tcga_ov_outcomes_v1_enriched.json` (585 patieceipt**: Generated successfully
+   - **Issues Fixed**:
+     - Missing `generate_receipt()` function → Added
+     - Missing `datetime` import → Added
+     - Nested structure handling (`cohort.patients`) → Fixed
+     - Variable name mismatches (`brca_statuses` → `germline_brca`, `enriched_pat` → `enriched_patient`) → Fixed
+     - Output structure to match nested format → Fixed
+
+### **Test Results**:
+
+- **Base Cohort**: 585 patients extracted successfully
+- **Enriched Cohort**: 585 patients enriched (structure correct, biomarkers defaulted)
+- **Coverage**: 0% for all biomarkers (expected - see "Known Limitations" below)
+- **Output Files**: Both JSON and receipt files generated successfully
+
+### **Known Limitations (As Expected)**:
+
+- **HRD Coverage**: 0% - No HRD attributes found in cBioPortal clinical data for TCGA-OV
+- **TMB Coverage**: 0% - TMB extraction from clinical data failed (needs alternative source)
+- **MSI Coverage**: 0% - MSI status not found in cBioPortal for TCGA-OV
+- **Germline BRCA Coveraaults to "unknown" (germline testing not available in TCGA)
+
+**Note**: These limitations are expected and documented. The next agent should focus on Phase 2 (Handle Missing Data) to improve coverage.
+
+---
+

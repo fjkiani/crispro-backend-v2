@@ -1,0 +1,114 @@
+{
+  "tag": "tcga_coadread",
+  "generated_at": "2026-01-02T01:43:25Z",
+  "cohort": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/data/coadread_tcga_pan_can_atlas_2018_enriched_v1.json",
+  "cohort_sha256": "8d78e14e30bccba3697fc2906b54881900015c534d416e88c87d12487274bee1",
+  "endpoint": {
+    "time_col": "os_days",
+    "event_col": "os_event"
+  },
+  "thresholds": [
+    10.0,
+    15.0,
+    20.0,
+    25.0,
+    30.0
+  ],
+  "min_group_size": 20,
+  "rows": [
+    {
+      "tmb_threshold": 10.0,
+      "n": 530,
+      "n_low": 447,
+      "n_high": 83,
+      "logrank_p": 0.976788077134641,
+      "logrank_stat": 0.0008465734840425472,
+      "median_days_low": 2822.901256035625,
+      "median_days_high": 2135.438241671875,
+      "cox_hr_high_vs_low": 1.0076511469667147,
+      "cox_ci": [
+        0.6075448288941292,
+        1.6712525326427763
+      ],
+      "cox_p": 0.9764448055392915,
+      "events_total": 120,
+      "approx_logrank_power": 0.026826992581324757
+    },
+    {
+      "tmb_threshold": 15.0,
+      "n": 530,
+      "n_low": 451,
+      "n_high": 79,
+      "logrank_p": 0.965704868072071,
+      "logrank_stat": 0.0018486403064908992,
+      "median_days_low": 2822.901256035625,
+      "median_days_high": 2135.438241671875,
+      "cox_hr_high_vs_low": 0.9888898262528559,
+      "cox_ci": [
+        0.5891180625086833,
+        1.6599441617901336
+      ],
+      "cox_p": 0.9662782346724595,
+      "events_total": 120,
+      "approx_logrank_power": 0.02765859108914421
+    },
+    {
+      "tmb_threshold": 20.0,
+      "n": 530,
+      "n_low": 453,
+      "n_high": 77,
+      "logrank_p": 0.9310311851606123,
+      "logrank_stat": 0.007490472586056059,
+      "median_days_low": 2822.901256035625,
+      "median_days_high": 2135.438241671875,
+      "cox_hr_high_vs_low": 1.0232572221883556,
+      "cox_ci": [
+        0.6095248685305454,
+        1.7178221871158288
+      ],
+      "cox_p": 0.9306875513717233,
+      "events_total": 120,
+      "approx_logrank_power": 0.030657667195525866
+    },
+    {
+      "tmb_threshold": 25.0,
+      "n": 530,
+      "n_low": 455,
+      "n_high": 75,
+      "logrank_p": 0.860983362955601,
+      "logrank_stat": 0.030667897164420116,
+      "median_days_low": 2822.901256035625,
+      "median_days_high": 2135.438241671875,
+      "cox_hr_high_vs_low": 1.04747745761659,
+      "cox_ci": [
+        0.6238685218710438,
+        1.7587183609204646
+      ],
+      "cox_p": 0.8607345998765583,
+      "events_total": 120,
+      "approx_logrank_power": 0.03730451239756666
+    },
+    {
+      "tmb_threshold": 30.0,
+      "n": 530,
+      "n_low": 461,
+      "n_high": 69,
+      "logrank_p": 0.6927783514105781,
+      "logrank_stat": 0.15609409216900985,
+      "median_days_low": 2822.901256035625,
+      "median_days_high": 2135.438241671875,
+      "cox_hr_high_vs_low": 1.1131029774428443,
+      "cox_ci": [
+        0.6544125291898353,
+        1.8932984671396933
+      ],
+      "cox_p": 0.6925629068219583,
+      "events_total": 120,
+      "approx_logrank_power": 0.058794748083922065
+    }
+  ],
+  "notes": [
+    "Post-hoc power is an approximation derived from Cox HR (Schoenfeld/log-rank).",
+    "It is provided as a sanity-check, not a prospective power plan."
+  ]
+}

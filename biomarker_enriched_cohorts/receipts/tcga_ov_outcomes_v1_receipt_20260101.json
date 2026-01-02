@@ -1,0 +1,29 @@
+{
+  "extraction_date": "2026-01-01T00:07:03.950960",
+  "study_id": "ov_tcga_pan_can_atlas_2018",
+  "cohort_size": 585,
+  "os_labels": 571,
+  "pfs_labels": 571,
+  "pfi_labels": 44,
+  "label_definitions_version": "v1",
+  "time_origin": "diagnosis_date",
+  "censoring_policy": "Standard survival analysis: events = 1, censored = 0",
+  "source_columns": {
+    "os_days": "OS_MONTHS (converted \u00d730.44)",
+    "os_event": "OS_STATUS (parsed)",
+    "pfs_days": "PFS_MONTHS (converted \u00d730.44)",
+    "pfs_event": "PFS_STATUS (parsed)",
+    "pfi": "PFS proxy (if progression < 6 months)"
+  },
+  "missingness": {
+    "os_missing": 14,
+    "pfs_missing": 14,
+    "pfi_missing": 541
+  },
+  "validation_checks": {
+    "os_days_range": "0-5000 days (outliers counted)",
+    "os_event_boolean": "All non-null values are boolean",
+    "pfs_days_range": "0-5000 days (outliers counted)",
+    "pfs_ent_boolean": "All non-null values are boolean"
+  }
+}

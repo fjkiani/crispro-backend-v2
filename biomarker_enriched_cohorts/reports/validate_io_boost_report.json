@@ -1,0 +1,65 @@
+{
+  "run": {
+    "generated_at": "2026-01-01T20:40:48Z",
+    "script": "validate_io_boost.py",
+    "root": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts"
+  },
+  "inputs": {
+    "cohort_path": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/data/tcga_ov_enriched_v2.json",
+    "cohort_sha256": "11f5428eb7c3d238efa8b2329ee8f8d6942f98a162898099ad93f7b1d2f2791d",
+    "endpoint": {
+      "time_col": "os_days",
+      "event_col": "os_event"
+    },
+    "tmb_threshold": 20.0,
+    "msi_source": "msi_status"
+  },
+  "coverage": {
+    "os_days": {
+      "n": 571,
+      "pct": 97.6068376068376
+    },
+    "os_event": {
+      "n": 574,
+      "pct": 98.11965811965811
+    },
+    "tmb": {
+      "n": 523,
+      "pct": 89.40170940170941
+    },
+    "msi_status": {
+      "n": 585,
+      "pct": 100.0
+    },
+    "msi_score_mantis": {
+      "n": 436,
+      "pct": 74.52991452991454
+    },
+    "msi_sensor_score": {
+      "n": 512,
+      "pct": 87.52136752136752
+    }
+  },
+  "tmb": {
+    "n": 519,
+    "n_high": 3,
+    "n_low": 516,
+    "logrank_p": 0.49021287781052103,
+    "median_days_high": 2438.0,
+    "median_days_low": 1367.0,
+    "figure": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_io_tmb_os.png"
+  },
+  "msi": {
+    "n": 508,
+    "n_msi_h": 18,
+    "n_mss": 490,
+    "logrank_p": 0.451248821709356,
+    "median_days_msi_h": 887.0,
+    "median_days_mss": 1364.0,
+    "figure": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_io_msi_os.png"
+  },
+  "notes": [
+    "These are retrospective stratification checks, not causal claims of IO benefit.",
+    "Ovarian cancer is commonly IO-cold; MSI-H/TMB-high subsets may be small."
+  ]
+}

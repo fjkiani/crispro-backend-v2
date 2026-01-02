@@ -1,0 +1,38 @@
+{
+  "run": {
+    "generated_at": "2026-01-02T01:43:12Z",
+    "study_id": "ucec_tcga_pan_can_atlas_2018",
+    "out_path": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/data/ucec_tcga_pan_can_atlas_2018_enriched_v1.json"
+  },
+  "coverage": {
+    "os_days": {
+      "n": 528,
+      "pct": 99.8
+    },
+    "pfs_days": {
+      "n": 528,
+      "pct": 99.8
+    },
+    "tmb": {
+      "n": 517,
+      "pct": 97.7
+    },
+    "msi_score_mantis": {
+      "n": 526,
+      "pct": 99.4
+    },
+    "msi_sensor_score": {
+      "n": 528,
+      "pct": 99.8
+    },
+    "aneuploidy_score": {
+      "n": 516,
+      "pct": 97.5
+    },
+    "fraction_genome_altered": {
+      "n": 519,
+      "pct": 98.1
+    }
+  },
+  "n_patients": 529
+}

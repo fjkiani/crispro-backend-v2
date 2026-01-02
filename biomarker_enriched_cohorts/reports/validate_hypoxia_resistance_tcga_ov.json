@@ -1,0 +1,142 @@
+{
+  "run": {
+    "generated_at": "2026-01-02T18:12:24Z",
+    "cohort_path": "../data/tcga_ov_hypoxia_enriched.json",
+    "tag": "tcga_ov",
+    "hypoxia_score_used": "BUFFA",
+    "median_threshold": 11.0
+  },
+  "cohort": {
+    "n_total": 203,
+    "n_high_hypoxia": 101,
+    "n_low_hypoxia": 102,
+    "n_resistant": 33,
+    "n_sensitive": 170
+  },
+  "survival_analysis": {
+    "n_analyzed": 203,
+    "logrank_p_value": 0.7733389237649865,
+    "logrank_statistic": 0.08294988065040577,
+    "median_pfs_low_days": 547.4136175108,
+    "median_pfs_high_days": 473.35766198880003,
+    "cox_hr_high_vs_low": 1.0495018893243726,
+    "cox_hr_ci": [
+      0.7526397774620062,
+      1.4634546946344862
+    ],
+    "cox_p_value": 0.7757848095545007
+  },
+  "classification_validation": {
+    "n_analyzed": 203,
+    "hypoxia_alone": {
+      "name": "BUFFA Hypoxia Alone",
+      "predictors": [
+        "buffa_hypoxia_score"
+      ],
+      "auroc": 0.4952762923351158,
+      "auroc_ci": [
+        0.394710338680927,
+        0.5921256684491978
+      ],
+      "sensitivity": 0.48484848484848486,
+      "specificity": 0.5882352941176471,
+      "ppv": 0.18604651162790697,
+      "npv": 0.8547008547008547
+    },
+    "baseline_model": {
+      "name": "BRCA/HRD Alone",
+      "predictors": [
+        "brca_mutated",
+        "hrd_high"
+      ],
+      "auroc": 0.42914438502673796,
+      "auroc_ci": [
+        0.32566622103386805,
+        0.5440619429590018
+      ],
+      "sensitivity": 0.0,
+      "specificity": 1.0,
+      "ppv": 0.0,
+      "npv": 0.8374384236453202
+    },
+    "combined_model": {
+      "name": "BUFFA Hypoxia + BRCA/HRD",
+      "predictors": [
+        "buffa_hypoxia_score",
+        "brca_mutated",
+        "hrd_high"
+      ],
+      "auroc": 0.4646167557932264,
+      "auroc_ci": [
+        0.36450311942959,
+        0.5638346702317291
+      ],
+      "sensitivity": 0.48484848484848486,
+      "specificity": 0.5823529411764706,
+      "ppv": 0.1839080459770115,
+      "npv": 0.853448275862069
+    },
+    "model_comparison": {
+      "hypoxia_vs_baseline": {
+        "baseline": {
+          "name": "BRCA/HRD Alone",
+          "auroc": 0.43921568627450985
+        },
+        "surrogate": {
+          "name": "Hypoxia Alone",
+          "auroc": 0.5087344028520498
+        },
+        "comparison": {
+          "improvement": 0.06951871657754,
+          "improvement_pct": 15.827922077922052,
+          "is_significant": false
+        },
+        "delong_test": {
+          "auc_a": 0.43921568627450985,
+          "auc_b": 0.5087344028520498,
+          "difference": 0.06951871657754,
+          "z_statistic": 0.39232077217417716,
+          "p_value": 0.6948212174160118,
+          "se_diff": 0.17719866371662837
+        },
+        "interpretation": {
+          "summary": "Hypoxia Alone AUROC: 0.509 vs BRCA/HRD Alone AUROC: 0.439",
+          "improvement": "Improvement: +0.070 (+15.8%)",
+          "significance": "p-value: 0.6948 (not significant)"
+        }
+      },
+      "combined_vs_baseline": {
+        "baseline": {
+          "name": "BRCA/HRD Alone",
+          "auroc": 0.43921568627450985
+        },
+        "surrogate": {
+          "name": "Hypoxia + BRCA/HRD",
+          "auroc": 0.4868983957219251
+        },
+        "comparison": {
+          "improvement": 0.04768270944741526,
+          "improvement_pct": 10.85633116883115,
+          "is_significant": false
+        },
+        "delong_test": {
+          "auc_a": 0.43921568627450985,
+          "auc_b": 0.4868983957219251,
+          "difference": 0.04768270944741526,
+          "z_statistic": 0.2723850404557053,
+          "p_value": 0.7853259739908163,
+          "se_diff": 0.1750562709598192
+        },
+        "interpretation": {
+          "summary": "Hypoxia + BRCA/HRD AUROC: 0.487 vs BRCA/HRD Alone AUROC: 0.439",
+          "improvement": "Improvement: +0.048 (+10.9%)",
+          "significance": "p-value: 0.7853 (not significant)"
+        }
+      }
+    }
+  },
+  "figures": {
+    "km_curves": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_hypoxia_km_curves_tcga_ov.png",
+    "roc_curves": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_hypoxia_roc_curves_tcga_ov.png"
+  }
+}

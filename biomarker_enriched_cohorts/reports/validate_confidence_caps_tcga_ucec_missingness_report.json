@@ -1,0 +1,82 @@
+{
+  "run": {
+    "generated_at": "2026-01-02T01:43:28Z",
+    "script": "validate_confidence_caps.py",
+    "root": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts",
+    "tag": "tcga_ucec_missingness"
+  },
+  "inputs": {
+    "cohort_path": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/data/ucec_tcga_pan_can_atlas_2018_enriched_v1_missingness.json",
+    "cohort_sha256": "54cc8e04917b097e7f1ee888dd262f4a8eae4d4ea41651f3682313ce4b23429a",
+    "endpoint": "os_days",
+    "tier_definition": {
+      "L0": "missing TMB AND missing MSI scores AND missing aneuploidy+FGA",
+      "L2": "at least 2 of [TMB, MSI (either score), aneuploidy+FGA] present",
+      "L1": "else"
+    }
+  },
+  "coverage": {
+    "os_days": {
+      "n": 528,
+      "pct": 99.8109640831758
+    },
+    "tmb": {
+      "n": 225,
+      "pct": 42.53308128544423
+    },
+    "msi_score_mantis": {
+      "n": 259,
+      "pct": 48.96030245746692
+    },
+    "msi_sensor_score": {
+      "n": 259,
+      "pct": 48.96030245746692
+    },
+    "aneuploidy_score": {
+      "n": 229,
+      "pct": 43.28922495274102
+    },
+    "fraction_genome_altered": {
+      "n": 233,
+      "pct": 44.045368620037806
+    }
+  },
+  "usable": {
+    "n": 528,
+    "tier_counts": {
+      "L2": 228,
+      "L1": 214,
+      "L0": 86
+    }
+  },
+  "variability": {
+    "L0": {
+      "n": 86,
+      "median": 930.6267875853125,
+      "iqr": 1280.3623385664064,
+      "mean": 1338.482878687256,
+      "std": 1164.8560844910617,
+      "cv": 0.8702809001438387
+    },
+    "L1": {
+      "n": 214,
+      "median": 912.1143193121875,
+      "iqr": 922.6213959798436,
+      "mean": 1074.9062044741936,
+      "std": 809.8117804727581,
+      "cv": 0.7533790177245182
+    },
+    "L2": {
+      "n": 228,
+      "median": 906.6106123884374,
+      "iqr": 1229.8283032626564,
+      "mean": 1145.2274640062653,
+      "std": 883.7896561226369,
+      "cv": 0.7717153874662945
+    }
+  },
+  "notes": [
+    "This validates that completeness tiers are computable from available biomarkers.",
+    "It does not validate a specific confidence cap number (0.4/0.6); those are safety-policy caps."
+  ]
+}

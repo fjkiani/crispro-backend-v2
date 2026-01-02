@@ -1,0 +1,66 @@
+{
+  "run": {
+    "generated_at": "2026-01-02T01:43:19Z",
+    "script": "validate_io_boost.py",
+    "root": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts",
+    "tag": "tcga_coadread"
+  },
+  "inputs": {
+    "cohort_path": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/data/coadread_tcga_pan_can_atlas_2018_enriched_v1.json",
+    "cohort_sha256": "8d78e14e30bccba3697fc2906b54881900015c534d416e88c87d12487274bee1",
+    "endpoint": {
+      "time_col": "os_days",
+      "event_col": "os_event"
+    },
+    "tmb_threshold": 20.0,
+    "msi_source": "msi_status"
+  },
+  "coverage": {
+    "os_days": {
+      "n": 590,
+      "pct": 99.32659932659934
+    },
+    "os_event": {
+      "n": 591,
+      "pct": 99.4949494949495
+    },
+    "tmb": {
+      "n": 534,
+      "pct": 89.8989898989899
+    },
+    "msi_status": {
+      "n": 594,
+      "pct": 100.0
+    },
+    "msi_score_mantis": {
+      "n": 557,
+      "pct": 93.77104377104376
+    },
+    "msi_sensor_score": {
+      "n": 584,
+      "pct": 98.31649831649831
+    }
+  },
+  "tmb": {
+    "n": 530,
+    "n_high": 77,
+    "n_low": 453,
+    "logrank_p": 0.9310311851606116,
+    "median_days_high": 2135.438241671875,
+    "median_days_low": 2822.901256035625,
+    "figure": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_io_tmb_tcga_coadread_os.png"
+  },
+  "msi": {
+    "n": 588,
+    "n_msi_h": 107,
+    "n_mss": 481,
+    "logrank_p": 0.7564597234812143,
+    "median_days_msi_h": 2135.438241671875,
+    "median_days_mss": 2476.66806394375,
+    "figure": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_io_msi_tcga_coadread_os.png"
+  },
+  "notes": [
+    "These are retrospective stratification checks, not causal claims of IO benefit.",
+    "Cohort biology may limit MSI-H/TMB-high prevalence; interpret group sizes first (tag=tcga_coadread)."
+  ]
+}
