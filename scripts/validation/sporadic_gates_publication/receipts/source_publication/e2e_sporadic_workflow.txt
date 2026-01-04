@@ -1,0 +1,27 @@
+=
+SPORADIC CANCER E2E WORKFLOW TEST
+=
+API Base: http://localhost:8000
+
+1. Creating TumorContext via Quick Intake...
+   ✅ TumorContext created: TMB=5.2, HRD=42.0, MSI=None, completeness=0.5
+
+2. Running efficacy prediction with sporadic context...
+
+3. Checking PARP penalty and sporadic gates...
+   ⚠️ pembrolizumab: efficacy=0.03, NO sporadic provenance
+   ✅ olaparib: efficacy=0.03, sporadic_provenance=YES
+      → PARP penalty likely applied (low efficacy suggests HRD < 42)
+   ✅ niraparib: efficacy=0.03, sporadic_provenance=YES
+      → PARP penalty likely applied (low efficacy suggests HRD < 42)
+   ✅ rucaparib: efficacy=0.03, sporadic_provenance=YES
+      → PARP penalty likely applied (low efficacy suggests HRD < 42)
+
+=
+E2E TEST COMPLETE
+=
+
+Outputs saved to: scripts/validation/out/e2e_sporadic
+  - tumor_context.json
+  - efficacy_response.json
+  - test.log

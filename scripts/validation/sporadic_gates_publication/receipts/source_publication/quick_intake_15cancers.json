@@ -1,0 +1,141 @@
+{
+  "generated_utc": "20251231_084914",
+  "n": 15,
+  "rows": [
+    {
+      "cancer_type": "ovarian_hgs",
+      "ok": true,
+      "tmb": 5.2,
+      "msi_status": null,
+      "hrd_score": 42.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "breast_tnbc",
+      "ok": true,
+      "tmb": 1.8,
+      "msi_status": null,
+      "hrd_score": 28.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "colorectal",
+      "ok": true,
+      "tmb": 3.5,
+      "msi_status": null,
+      "hrd_score": 18.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "lung_nsclc",
+      "ok": true,
+      "tmb": 8.5,
+      "msi_status": null,
+      "hrd_score": 12.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "pancreatic",
+      "ok": true,
+      "tmb": 1.2,
+      "msi_status": null,
+      "hrd_score": 15.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "prostate_adenocarcinoma",
+      "ok": true,
+      "tmb": 0.8,
+      "msi_status": null,
+      "hrd_score": 18.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "melanoma_cutaneous",
+      "ok": true,
+      "tmb": 15.0,
+      "msi_status": null,
+      "hrd_score": 10.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "bladder_urothelial",
+      "ok": true,
+      "tmb": 6.5,
+      "msi_status": null,
+      "hrd_score": 22.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "endometrial_uterine",
+      "ok": true,
+      "tmb": 4.5,
+      "msi_status": null,
+      "hrd_score": 25.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "gastric_adenocarcinoma",
+      "ok": true,
+      "tmb": 3.8,
+      "msi_status": null,
+      "hrd_score": 18.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "esophageal_adenocarcinoma",
+      "ok": true,
+      "tmb": 4.2,
+      "msi_status": null,
+      "hrd_score": 15.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "head_neck_squamous",
+      "ok": true,
+      "tmb": 3.5,
+      "msi_status": null,
+      "hrd_score": 12.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "glioblastoma_multiforme",
+      "ok": true,
+      "tmb": 1.5,
+      "msi_status": null,
+      "hrd_score": 10.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "renal_clear_cell",
+      "ok": true,
+      "tmb": 1.8,
+      "msi_status": null,
+      "hrd_score": 15.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    },
+    {
+      "cancer_type": "acute_myeloid_leukemia",
+      "ok": true,
+      "tmb": 0.5,
+      "msi_status": null,
+      "hrd_score": 8.0,
+      "completeness_score": 0.5,
+      "level": "L0"
+    }
+  ]
+}

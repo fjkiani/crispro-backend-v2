@@ -1,0 +1,16 @@
+============================================================
+SPORADIC GATES VALIDATION
+============================================================
+
+✅ PARP penalty: PASS (0.70 → 0.42, 0.6x penalty)
+✅ HRD rescue: PASS (0.70 → 0.70, no penalty)
+✅ TMB boost: PASS (0.60 → 0.81, 1.3x+ boost)
+✅ MSI boost: PASS (0.60 → 0.78, 1.3x+ boost)
+✅ TMB+MSI (TMB precedence): PASS (0.60 → 0.81, 1.35x TMB boost applied)
+✅ Confidence caps: PASS (L0=0.40, L1=0.60, L2=0.90)
+
+============================================================
+RESULTS: 6/6 tests passed
+============================================================
+
+Report saved to: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/out/sporadic_gates/report.json

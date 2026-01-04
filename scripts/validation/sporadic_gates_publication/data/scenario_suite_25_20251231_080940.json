@@ -1,0 +1,1088 @@
+{
+  "generated_utc": "20251231_080940",
+  "n_cases": 25,
+  "cases": [
+    {
+      "case_id": "SC001",
+      "label": "PARP_gate",
+      "input": {
+        "drug_name": "Olaparib",
+        "drug_class": "PARP inhibitor",
+        "moa": "PARP1/2 inhibition",
+        "efficacy_score": 0.7,
+        "confidence": 0.8,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.5
+        }
+      },
+      "output": {
+        "efficacy_score": 0.5599999999999999,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "PARP_UNKNOWN_HRD",
+            "verdict": "CONSERVATIVE",
+            "penalty": 0.8,
+            "reason": "Germline negative, HRD unknown \u2192 PARP conservative penalty 0.8x"
+          },
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.5,
+            "reason": "Level 1 data (completeness=0.50) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L1",
+            "completeness": 0.5,
+            "original_efficacy": 0.7,
+            "final_efficacy": 0.5599999999999999,
+            "efficacy_delta": -0.14,
+            "original_confidence": 0.8,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.20000000000000007,
+            "gates_applied": [
+              "PARP_UNKNOWN_HRD",
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC002",
+      "label": "PARP_gate",
+      "input": {
+        "drug_name": "Olaparib",
+        "drug_class": "PARP inhibitor",
+        "moa": "PARP1/2 inhibition",
+        "efficacy_score": 0.7,
+        "confidence": 0.8,
+        "germline_status": "negative",
+        "tumor_context": {
+          "hrd_score": 10.0,
+          "completeness_score": 0.5
+        }
+      },
+      "output": {
+        "efficacy_score": 0.42,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "PARP_HRD_LOW",
+            "verdict": "REDUCED",
+            "penalty": 0.6,
+            "hrd_score": 10.0,
+            "reason": "Germline negative, HRD<42 (score=10.0) \u2192 PARP reduced to 0.6x"
+          },
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.5,
+            "reason": "Level 1 data (completeness=0.50) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L1",
+            "completeness": 0.5,
+            "original_efficacy": 0.7,
+            "final_efficacy": 0.42,
+            "efficacy_delta": -0.27999999999999997,
+            "original_confidence": 0.8,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.20000000000000007,
+            "gates_applied": [
+              "PARP_HRD_LOW",
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC003",
+      "label": "PARP_gate",
+      "input": {
+        "drug_name": "Olaparib",
+        "drug_class": "PARP inhibitor",
+        "moa": "PARP1/2 inhibition",
+        "efficacy_score": 0.7,
+        "confidence": 0.8,
+        "germline_status": "negative",
+        "tumor_context": {
+          "hrd_score": 25.0,
+          "completeness_score": 0.5
+        }
+      },
+      "output": {
+        "efficacy_score": 0.42,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "PARP_HRD_LOW",
+            "verdict": "REDUCED",
+            "penalty": 0.6,
+            "hrd_score": 25.0,
+            "reason": "Germline negative, HRD<42 (score=25.0) \u2192 PARP reduced to 0.6x"
+          },
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.5,
+            "reason": "Level 1 data (completeness=0.50) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L1",
+            "completeness": 0.5,
+            "original_efficacy": 0.7,
+            "final_efficacy": 0.42,
+            "efficacy_delta": -0.27999999999999997,
+            "original_confidence": 0.8,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.20000000000000007,
+            "gates_applied": [
+              "PARP_HRD_LOW",
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC004",
+      "label": "PARP_gate",
+      "input": {
+        "drug_name": "Olaparib",
+        "drug_class": "PARP inhibitor",
+        "moa": "PARP1/2 inhibition",
+        "efficacy_score": 0.7,
+        "confidence": 0.8,
+        "germline_status": "negative",
+        "tumor_context": {
+          "hrd_score": 41.0,
+          "completeness_score": 0.5
+        }
+      },
+      "output": {
+        "efficacy_score": 0.42,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "PARP_HRD_LOW",
+            "verdict": "REDUCED",
+            "penalty": 0.6,
+            "hrd_score": 41.0,
+            "reason": "Germline negative, HRD<42 (score=41.0) \u2192 PARP reduced to 0.6x"
+          },
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.5,
+            "reason": "Level 1 data (completeness=0.50) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L1",
+            "completeness": 0.5,
+            "original_efficacy": 0.7,
+            "final_efficacy": 0.42,
+            "efficacy_delta": -0.27999999999999997,
+            "original_confidence": 0.8,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.20000000000000007,
+            "gates_applied": [
+              "PARP_HRD_LOW",
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC005",
+      "label": "PARP_gate",
+      "input": {
+        "drug_name": "Olaparib",
+        "drug_class": "PARP inhibitor",
+        "moa": "PARP1/2 inhibition",
+        "efficacy_score": 0.7,
+        "confidence": 0.8,
+        "germline_status": "negative",
+        "tumor_context": {
+          "hrd_score": 42.0,
+          "completeness_score": 0.5
+        }
+      },
+      "output": {
+        "efficacy_score": 0.7,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "PARP_HRD_RESCUE",
+            "verdict": "RESCUED",
+            "penalty": 1.0,
+            "hrd_score": 42.0,
+            "reason": "Germline negative BUT HRD-high (\u226542): score=42.0 \u2192 PARP rescued! \u2694\ufe0f"
+          },
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.5,
+            "reason": "Level 1 data (completeness=0.50) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L1",
+            "completeness": 0.5,
+            "original_efficacy": 0.7,
+            "final_efficacy": 0.7,
+            "efficacy_delta": 0.0,
+            "original_confidence": 0.8,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.20000000000000007,
+            "gates_applied": [
+              "PARP_HRD_RESCUE",
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC006",
+      "label": "PARP_gate",
+      "input": {
+        "drug_name": "Olaparib",
+        "drug_class": "PARP inhibitor",
+        "moa": "PARP1/2 inhibition",
+        "efficacy_score": 0.7,
+        "confidence": 0.8,
+        "germline_status": "negative",
+        "tumor_context": {
+          "hrd_score": 58.0,
+          "completeness_score": 0.5
+        }
+      },
+      "output": {
+        "efficacy_score": 0.7,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "PARP_HRD_RESCUE",
+            "verdict": "RESCUED",
+            "penalty": 1.0,
+            "hrd_score": 58.0,
+            "reason": "Germline negative BUT HRD-high (\u226542): score=58.0 \u2192 PARP rescued! \u2694\ufe0f"
+          },
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.5,
+            "reason": "Level 1 data (completeness=0.50) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L1",
+            "completeness": 0.5,
+            "original_efficacy": 0.7,
+            "final_efficacy": 0.7,
+            "efficacy_delta": 0.0,
+            "original_confidence": 0.8,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.20000000000000007,
+            "gates_applied": [
+              "PARP_HRD_RESCUE",
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC007",
+      "label": "PARP_gate",
+      "input": {
+        "drug_name": "Olaparib",
+        "drug_class": "PARP inhibitor",
+        "moa": "PARP1/2 inhibition",
+        "efficacy_score": 0.7,
+        "confidence": 0.8,
+        "germline_status": "positive",
+        "tumor_context": {
+          "hrd_score": 10.0,
+          "completeness_score": 0.5
+        }
+      },
+      "output": {
+        "efficacy_score": 0.7,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "PARP_GERMLINE",
+            "verdict": "FULL_EFFECT",
+            "penalty": 1.0,
+            "reason": "Germline BRCA1/2 positive \u2192 PARP inhibitor appropriate"
+          },
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.5,
+            "reason": "Level 1 data (completeness=0.50) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "positive",
+            "level": "L1",
+            "completeness": 0.5,
+            "original_efficacy": 0.7,
+            "final_efficacy": 0.7,
+            "efficacy_delta": 0.0,
+            "original_confidence": 0.8,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.20000000000000007,
+            "gates_applied": [
+              "PARP_GERMLINE",
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC008",
+      "label": "PARP_gate",
+      "input": {
+        "drug_name": "Olaparib",
+        "drug_class": "PARP inhibitor",
+        "moa": "PARP1/2 inhibition",
+        "efficacy_score": 0.7,
+        "confidence": 0.8,
+        "germline_status": "unknown",
+        "tumor_context": {
+          "completeness_score": 0.2
+        }
+      },
+      "output": {
+        "efficacy_score": 0.5599999999999999,
+        "confidence": 0.4,
+        "rationale": [
+          {
+            "gate": "PARP_UNKNOWN_GERMLINE",
+            "verdict": "CONSERVATIVE",
+            "penalty": 0.8,
+            "reason": "Germline status unknown \u2192 PARP conservative penalty 0.8x"
+          },
+          {
+            "gate": "CONFIDENCE_CAP_L0",
+            "verdict": "CAPPED",
+            "cap": 0.4,
+            "level": "L0",
+            "completeness": 0.2,
+            "reason": "Level 0 data (completeness=0.20) \u2192 confidence capped at 0.4"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "unknown",
+            "level": "L0",
+            "completeness": 0.2,
+            "original_efficacy": 0.7,
+            "final_efficacy": 0.5599999999999999,
+            "efficacy_delta": -0.14,
+            "original_confidence": 0.8,
+            "final_confidence": 0.4,
+            "confidence_delta": -0.4,
+            "gates_applied": [
+              "PARP_UNKNOWN_GERMLINE",
+              "CONFIDENCE_CAP_L0"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC009",
+      "label": "PARP_gate",
+      "input": {
+        "drug_name": "Olaparib",
+        "drug_class": "PARP inhibitor",
+        "moa": "PARP1/2 inhibition",
+        "efficacy_score": 0.7,
+        "confidence": 0.8,
+        "germline_status": "unknown",
+        "tumor_context": {
+          "hrd_score": 60.0,
+          "completeness_score": 0.9
+        }
+      },
+      "output": {
+        "efficacy_score": 0.5599999999999999,
+        "confidence": 0.8,
+        "rationale": [
+          {
+            "gate": "PARP_UNKNOWN_GERMLINE",
+            "verdict": "CONSERVATIVE",
+            "penalty": 0.8,
+            "reason": "Germline status unknown \u2192 PARP conservative penalty 0.8x"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "unknown",
+            "level": "L2",
+            "completeness": 0.9,
+            "original_efficacy": 0.7,
+            "final_efficacy": 0.5599999999999999,
+            "efficacy_delta": -0.14,
+            "original_confidence": 0.8,
+            "final_confidence": 0.8,
+            "confidence_delta": 0.0,
+            "gates_applied": [
+              "PARP_UNKNOWN_GERMLINE"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC010",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "tmb": 5.0,
+          "msi_status": "MSS"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "rationale": []
+      }
+    },
+    {
+      "case_id": "SC011",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "tmb": 10.0,
+          "msi_status": "MSS"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "rationale": []
+      }
+    },
+    {
+      "case_id": "SC012",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "tmb": 19.0,
+          "msi_status": "MSS"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "rationale": []
+      }
+    },
+    {
+      "case_id": "SC013",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "tmb": 20.0,
+          "msi_status": "MSS"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.81,
+        "confidence": 0.7,
+        "rationale": [
+          {
+            "gate": "IO_TMB_BOOST",
+            "verdict": "BOOSTED",
+            "boost": 1.35,
+            "tmb": 20.0,
+            "reason": "TMB-high (\u226520): 20.0 mut/Mb \u2192 Checkpoint inhibitor boost 1.35x"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L2",
+            "completeness": 0.9,
+            "original_efficacy": 0.6,
+            "final_efficacy": 0.81,
+            "efficacy_delta": 0.21000000000000008,
+            "original_confidence": 0.7,
+            "final_confidence": 0.7,
+            "confidence_delta": 0.0,
+            "gates_applied": [
+              "IO_TMB_BOOST"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC014",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "tmb": 25.0,
+          "msi_status": "MSS"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.81,
+        "confidence": 0.7,
+        "rationale": [
+          {
+            "gate": "IO_TMB_BOOST",
+            "verdict": "BOOSTED",
+            "boost": 1.35,
+            "tmb": 25.0,
+            "reason": "TMB-high (\u226520): 25.0 mut/Mb \u2192 Checkpoint inhibitor boost 1.35x"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L2",
+            "completeness": 0.9,
+            "original_efficacy": 0.6,
+            "final_efficacy": 0.81,
+            "efficacy_delta": 0.21000000000000008,
+            "original_confidence": 0.7,
+            "final_confidence": 0.7,
+            "confidence_delta": 0.0,
+            "gates_applied": [
+              "IO_TMB_BOOST"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC015",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "tmb": 5.0,
+          "msi_status": "MSI-High"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.78,
+        "confidence": 0.7,
+        "rationale": [
+          {
+            "gate": "IO_MSI_BOOST",
+            "verdict": "BOOSTED",
+            "boost": 1.3,
+            "msi_status": "MSI-High",
+            "reason": "MSI-High (MSI-High) \u2192 Checkpoint inhibitor boost 1.30x"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L2",
+            "completeness": 0.9,
+            "original_efficacy": 0.6,
+            "final_efficacy": 0.78,
+            "efficacy_delta": 0.18000000000000005,
+            "original_confidence": 0.7,
+            "final_confidence": 0.7,
+            "confidence_delta": 0.0,
+            "gates_applied": [
+              "IO_MSI_BOOST"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC016",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "tmb": 5.0,
+          "msi_status": "MSI-H"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.78,
+        "confidence": 0.7,
+        "rationale": [
+          {
+            "gate": "IO_MSI_BOOST",
+            "verdict": "BOOSTED",
+            "boost": 1.3,
+            "msi_status": "MSI-H",
+            "reason": "MSI-High (MSI-H) \u2192 Checkpoint inhibitor boost 1.30x"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L2",
+            "completeness": 0.9,
+            "original_efficacy": 0.6,
+            "final_efficacy": 0.78,
+            "efficacy_delta": 0.18000000000000005,
+            "original_confidence": 0.7,
+            "final_confidence": 0.7,
+            "confidence_delta": 0.0,
+            "gates_applied": [
+              "IO_MSI_BOOST"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC017",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "tmb": 25.0,
+          "msi_status": "MSI-High"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.81,
+        "confidence": 0.7,
+        "rationale": [
+          {
+            "gate": "IO_TMB_BOOST",
+            "verdict": "BOOSTED",
+            "boost": 1.35,
+            "tmb": 25.0,
+            "reason": "TMB-high (\u226520): 25.0 mut/Mb \u2192 Checkpoint inhibitor boost 1.35x"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L2",
+            "completeness": 0.9,
+            "original_efficacy": 0.6,
+            "final_efficacy": 0.81,
+            "efficacy_delta": 0.21000000000000008,
+            "original_confidence": 0.7,
+            "final_confidence": 0.7,
+            "confidence_delta": 0.0,
+            "gates_applied": [
+              "IO_TMB_BOOST"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC018",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "tmb": 25.0,
+          "msi_status": "MSI-H"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.81,
+        "confidence": 0.7,
+        "rationale": [
+          {
+            "gate": "IO_TMB_BOOST",
+            "verdict": "BOOSTED",
+            "boost": 1.35,
+            "tmb": 25.0,
+            "reason": "TMB-high (\u226520): 25.0 mut/Mb \u2192 Checkpoint inhibitor boost 1.35x"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L2",
+            "completeness": 0.9,
+            "original_efficacy": 0.6,
+            "final_efficacy": 0.81,
+            "efficacy_delta": 0.21000000000000008,
+            "original_confidence": 0.7,
+            "final_confidence": 0.7,
+            "confidence_delta": 0.0,
+            "gates_applied": [
+              "IO_TMB_BOOST"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC019",
+      "label": "IO_gate",
+      "input": {
+        "drug_name": "Pembrolizumab",
+        "drug_class": "checkpoint_inhibitor",
+        "moa": "PD-1 inhibition",
+        "efficacy_score": 0.6,
+        "confidence": 0.7,
+        "germline_status": "negative",
+        "tumor_context": {
+          "completeness_score": 0.9,
+          "msi_status": "MSI-High"
+        }
+      },
+      "output": {
+        "efficacy_score": 0.78,
+        "confidence": 0.7,
+        "rationale": [
+          {
+            "gate": "IO_MSI_BOOST",
+            "verdict": "BOOSTED",
+            "boost": 1.3,
+            "msi_status": "MSI-High",
+            "reason": "MSI-High (MSI-High) \u2192 Checkpoint inhibitor boost 1.30x"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "negative",
+            "level": "L2",
+            "completeness": 0.9,
+            "original_efficacy": 0.6,
+            "final_efficacy": 0.78,
+            "efficacy_delta": 0.18000000000000005,
+            "original_confidence": 0.7,
+            "final_confidence": 0.7,
+            "confidence_delta": 0.0,
+            "gates_applied": [
+              "IO_MSI_BOOST"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC020",
+      "label": "CONF_cap",
+      "input": {
+        "drug_name": "Carboplatin",
+        "drug_class": "platinum",
+        "moa": "DNA crosslinking",
+        "efficacy_score": 0.75,
+        "confidence": 0.9,
+        "germline_status": "unknown",
+        "tumor_context": {
+          "completeness_score": 0.1
+        }
+      },
+      "output": {
+        "efficacy_score": 0.75,
+        "confidence": 0.4,
+        "rationale": [
+          {
+            "gate": "CONFIDENCE_CAP_L0",
+            "verdict": "CAPPED",
+            "cap": 0.4,
+            "level": "L0",
+            "completeness": 0.1,
+            "reason": "Level 0 data (completeness=0.10) \u2192 confidence capped at 0.4"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "unknown",
+            "level": "L0",
+            "completeness": 0.1,
+            "original_efficacy": 0.75,
+            "final_efficacy": 0.75,
+            "efficacy_delta": 0.0,
+            "original_confidence": 0.9,
+            "final_confidence": 0.4,
+            "confidence_delta": -0.5,
+            "gates_applied": [
+              "CONFIDENCE_CAP_L0"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC021",
+      "label": "CONF_cap",
+      "input": {
+        "drug_name": "Carboplatin",
+        "drug_class": "platinum",
+        "moa": "DNA crosslinking",
+        "efficacy_score": 0.75,
+        "confidence": 0.5,
+        "germline_status": "unknown",
+        "tumor_context": {
+          "completeness_score": 0.25
+        }
+      },
+      "output": {
+        "efficacy_score": 0.75,
+        "confidence": 0.4,
+        "rationale": [
+          {
+            "gate": "CONFIDENCE_CAP_L0",
+            "verdict": "CAPPED",
+            "cap": 0.4,
+            "level": "L0",
+            "completeness": 0.25,
+            "reason": "Level 0 data (completeness=0.25) \u2192 confidence capped at 0.4"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "unknown",
+            "level": "L0",
+            "completeness": 0.25,
+            "original_efficacy": 0.75,
+            "final_efficacy": 0.75,
+            "efficacy_delta": 0.0,
+            "original_confidence": 0.5,
+            "final_confidence": 0.4,
+            "confidence_delta": -0.09999999999999998,
+            "gates_applied": [
+              "CONFIDENCE_CAP_L0"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC022",
+      "label": "CONF_cap",
+      "input": {
+        "drug_name": "Carboplatin",
+        "drug_class": "platinum",
+        "moa": "DNA crosslinking",
+        "efficacy_score": 0.75,
+        "confidence": 0.9,
+        "germline_status": "unknown",
+        "tumor_context": {
+          "completeness_score": 0.3
+        }
+      },
+      "output": {
+        "efficacy_score": 0.75,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.3,
+            "reason": "Level 1 data (completeness=0.30) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "unknown",
+            "level": "L1",
+            "completeness": 0.3,
+            "original_efficacy": 0.75,
+            "final_efficacy": 0.75,
+            "efficacy_delta": 0.0,
+            "original_confidence": 0.9,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.30000000000000004,
+            "gates_applied": [
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC023",
+      "label": "CONF_cap",
+      "input": {
+        "drug_name": "Carboplatin",
+        "drug_class": "platinum",
+        "moa": "DNA crosslinking",
+        "efficacy_score": 0.75,
+        "confidence": 0.65,
+        "germline_status": "unknown",
+        "tumor_context": {
+          "completeness_score": 0.5
+        }
+      },
+      "output": {
+        "efficacy_score": 0.75,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.5,
+            "reason": "Level 1 data (completeness=0.50) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "unknown",
+            "level": "L1",
+            "completeness": 0.5,
+            "original_efficacy": 0.75,
+            "final_efficacy": 0.75,
+            "efficacy_delta": 0.0,
+            "original_confidence": 0.65,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.050000000000000044,
+            "gates_applied": [
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC024",
+      "label": "CONF_cap",
+      "input": {
+        "drug_name": "Carboplatin",
+        "drug_class": "platinum",
+        "moa": "DNA crosslinking",
+        "efficacy_score": 0.75,
+        "confidence": 0.95,
+        "germline_status": "unknown",
+        "tumor_context": {
+          "completeness_score": 0.69
+        }
+      },
+      "output": {
+        "efficacy_score": 0.75,
+        "confidence": 0.6,
+        "rationale": [
+          {
+            "gate": "CONFIDENCE_CAP_L1",
+            "verdict": "CAPPED",
+            "cap": 0.6,
+            "level": "L1",
+            "completeness": 0.69,
+            "reason": "Level 1 data (completeness=0.69) \u2192 confidence capped at 0.6"
+          },
+          {
+            "gate": "SPORADIC_SUMMARY",
+            "germline_status": "unknown",
+            "level": "L1",
+            "completeness": 0.69,
+            "original_efficacy": 0.75,
+            "final_efficacy": 0.75,
+            "efficacy_delta": 0.0,
+            "original_confidence": 0.95,
+            "final_confidence": 0.6,
+            "confidence_delta": -0.35,
+            "gates_applied": [
+              "CONFIDENCE_CAP_L1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "SC025",
+      "label": "CONF_cap",
+      "input": {
+        "drug_name": "Carboplatin",
+        "drug_class": "platinum",
+        "moa": "DNA crosslinking",
+        "efficacy_score": 0.75,
+        "confidence": 0.95,
+        "germline_status": "unknown",
+        "tumor_context": {
+          "completeness_score": 0.7
+        }
+      },
+      "output": {
+        "efficacy_score": 0.75,
+        "confidence": 0.95,
+        "rationale": []
+      }
+    }
+  ]
+}

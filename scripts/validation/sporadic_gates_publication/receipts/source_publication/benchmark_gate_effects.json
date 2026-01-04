@@ -1,0 +1,264 @@
+{
+  "stats": {
+    "n_cases": 25,
+    "scenario_file": "data/scenario_suite_25_20251231_080940.json",
+    "changed_eff_cases": 13,
+    "changed_conf_cases": 13,
+    "mean_abs_eff_delta": 0.10560000000000003,
+    "mean_abs_conf_delta": 0.12400000000000004,
+    "agreement_naive_vs_system_eff": 23,
+    "agreement_naive_vs_system_conf": 25
+  },
+  "per_case": [
+    {
+      "case_id": "SC001",
+      "label": "PARP_gate",
+      "baseline_eff": 0.7,
+      "system_eff": 0.5599999999999999,
+      "naive_eff": 0.5599999999999999,
+      "baseline_conf": 0.8,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC002",
+      "label": "PARP_gate",
+      "baseline_eff": 0.7,
+      "system_eff": 0.42,
+      "naive_eff": 0.42,
+      "baseline_conf": 0.8,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC003",
+      "label": "PARP_gate",
+      "baseline_eff": 0.7,
+      "system_eff": 0.42,
+      "naive_eff": 0.42,
+      "baseline_conf": 0.8,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC004",
+      "label": "PARP_gate",
+      "baseline_eff": 0.7,
+      "system_eff": 0.42,
+      "naive_eff": 0.42,
+      "baseline_conf": 0.8,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC005",
+      "label": "PARP_gate",
+      "baseline_eff": 0.7,
+      "system_eff": 0.7,
+      "naive_eff": 0.7,
+      "baseline_conf": 0.8,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC006",
+      "label": "PARP_gate",
+      "baseline_eff": 0.7,
+      "system_eff": 0.7,
+      "naive_eff": 0.7,
+      "baseline_conf": 0.8,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC007",
+      "label": "PARP_gate",
+      "baseline_eff": 0.7,
+      "system_eff": 0.7,
+      "naive_eff": 0.7,
+      "baseline_conf": 0.8,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC008",
+      "label": "PARP_gate",
+      "baseline_eff": 0.7,
+      "system_eff": 0.5599999999999999,
+      "naive_eff": 0.5599999999999999,
+      "baseline_conf": 0.8,
+      "system_conf": 0.4,
+      "naive_conf": 0.4
+    },
+    {
+      "case_id": "SC009",
+      "label": "PARP_gate",
+      "baseline_eff": 0.7,
+      "system_eff": 0.5599999999999999,
+      "naive_eff": 0.5599999999999999,
+      "baseline_conf": 0.8,
+      "system_conf": 0.8,
+      "naive_conf": 0.8
+    },
+    {
+      "case_id": "SC010",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.6,
+      "naive_eff": 0.6,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC011",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.6,
+      "naive_eff": 0.75,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC012",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.6,
+      "naive_eff": 0.75,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC013",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.81,
+      "naive_eff": 0.81,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC014",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.81,
+      "naive_eff": 0.81,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC015",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.78,
+      "naive_eff": 0.78,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC016",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.78,
+      "naive_eff": 0.78,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC017",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.81,
+      "naive_eff": 0.81,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC018",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.81,
+      "naive_eff": 0.81,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC019",
+      "label": "IO_gate",
+      "baseline_eff": 0.6,
+      "system_eff": 0.78,
+      "naive_eff": 0.78,
+      "baseline_conf": 0.7,
+      "system_conf": 0.7,
+      "naive_conf": 0.7
+    },
+    {
+      "case_id": "SC020",
+      "label": "CONF_cap",
+      "baseline_eff": 0.75,
+      "system_eff": 0.75,
+      "naive_eff": 0.75,
+      "baseline_conf": 0.9,
+      "system_conf": 0.4,
+      "naive_conf": 0.4
+    },
+    {
+      "case_id": "SC021",
+      "label": "CONF_cap",
+      "baseline_eff": 0.75,
+      "system_eff": 0.75,
+      "naive_eff": 0.75,
+      "baseline_conf": 0.5,
+      "system_conf": 0.4,
+      "naive_conf": 0.4
+    },
+    {
+      "case_id": "SC022",
+      "label": "CONF_cap",
+      "baseline_eff": 0.75,
+      "system_eff": 0.75,
+      "naive_eff": 0.75,
+      "baseline_conf": 0.9,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC023",
+      "label": "CONF_cap",
+      "baseline_eff": 0.75,
+      "system_eff": 0.75,
+      "naive_eff": 0.75,
+      "baseline_conf": 0.65,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC024",
+      "label": "CONF_cap",
+      "baseline_eff": 0.75,
+      "system_eff": 0.75,
+      "naive_eff": 0.75,
+      "baseline_conf": 0.95,
+      "system_conf": 0.6,
+      "naive_conf": 0.6
+    },
+    {
+      "case_id": "SC025",
+      "label": "CONF_cap",
+      "baseline_eff": 0.75,
+      "system_eff": 0.75,
+      "naive_eff": 0.75,
+      "baseline_conf": 0.95,
+      "system_conf": 0.95,
+      "naive_conf": 0.95
+    }
+  ]
+}
