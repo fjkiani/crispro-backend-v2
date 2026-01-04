@@ -57,7 +57,10 @@ cp -f scripts/validation/out/e2e_sporadic/efficacy_response.json "$LATEST_DIR/e2
 cp -f scripts/validation/out/e2e_sporadic/test.log "$OUT_DIR/e2e_sporadic_workflow.txt"
 cp -f scripts/validation/out/e2e_sporadic/test.log "$LATEST_DIR/e2e_sporadic_workflow.txt"
 
-# 4) Scenario-suite benchmark (system vs naive)
+# 4) Real cohort behavioral validation
+python3 scripts/validation/sporadic_gates_publication/scripts/validate_on_real_cohort.py
+
+# 5) Scenario-suite benchmark (system vs naive)
 python3 scripts/validation/sporadic_gates_publication/scripts/compute_benchmark_gate_effects.py \
   --scenario scripts/validation/sporadic_gates_publication/data/scenario_suite_25_20251231_080940.json \
   --out "$OUT_DIR/benchmark_gate_effects.json"
