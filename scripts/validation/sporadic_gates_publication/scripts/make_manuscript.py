@@ -74,7 +74,7 @@ def main() -> int:
         "**Results (non-outcome validation):** We validate behavioral correctness and reproducibility, not clinical outcomes. "
         + f"A {n_cases}-case scenario suite exercising threshold boundaries (`{scenario_rel}`) shows sporadic gates modified efficacy in **{changed_eff}/{n_cases}** cases and confidence in **{changed_conf}/{n_cases}** cases, with conformance to a naive reference implementation in **{agree_eff}/{n_cases}** efficacy outcomes and **{agree_conf}/{n_cases}** confidence outcomes (receipt `receipts/benchmark_gate_effects.json`). "
         + "Quick Intake executed successfully for **15/15** cancer types (receipt `receipts/quick_intake_15cancers.json`). "
-        + "An end-to-end smoke test (Quick Intake → efficacy prediction) produced provenance-bearing drug outputs (receipts `receipts/e2e_tumor_context.json`, `receipts/e2e_ficacy_response.json`, `receipts/e2e_sporadic_workflow.txt`)."
+        + "An end-to-end smoke test (Quick Intake → efficacy prediction) produced provenance-bearing drug outputs (receipts `receipts/e2e_tumor_context.json`, `receipts/e2e_efficacy_response.json`, `receipts/e2e_sporadic_workflow.txt`)."
     )
     md.append("")
 
@@ -192,7 +192,7 @@ def main() -> int:
     md.append("")
     md.append("From the repo root:")
     md.append("")
-    md.append("```bh")
+    md.append("```bash")
     md.append("python3 publications/sporadic_cancer/make_figures.py")
     md.append("python3 publications/sporadic_cancer/make_manuscript.py")
     md.append("```")
