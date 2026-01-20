@@ -13,7 +13,7 @@ from .drug_scorer import DrugScorer
 from .cohort_signals import compute_cohort_signals, apply_cohort_lifts
 from .calibration_snapshot import compute_calibration_snapshot, get_percentile_lift
 from .sporadic_gates import apply_sporadic_gates  # NEW: Sporadic Cancer Strategy (Day 2)
-from ..pathway import get_default_panel, aggregate_pathways
+from ..pathway import get_panel_for_disease, aggregate_pathways
 from ..insights import bundle as bundle_insights, InsightsBundle
 from ..evidence import literature, clinvar_prior
 from ..confidence import create_confidence_config
@@ -79,8 +79,18 @@ class EfficacyOrchestrator:
         )
         
         try:
-            # Get drug panel
-            panel = get_default_panel()
+            # Get disease-specific drug panel
+            panel_disease = request.disease or ""
+            panel = get_panel_for_disease(panel_disease)
+
+            # Publication/benchmark panel override
+            try:
+                panel_id = str((request.options or {}).get("panel_id") or "").strip()
+            except Exception:
+                panel_id = ""
+            if panel_id:
+                panel_disease = panel_id
+                panel = get_panel_for_disease(panel_id)
 
             # Optional: limit panel size for fast-mode runs to reduce work
             limit_n = 0
@@ -100,6 +110,30 @@ class EfficacyOrchestrator:
             
             if not seq_scores:
                 return response
+
+            # IMPORTANT: Ordering of seq_scores matters.
+            # - DrugScorer uses seq_scores[0] as the "primary" variant for Sequence (S) component
+            # - Evidence + ClinVar are gathered ONLY for this primary variant
+            #
+            # If upstream provides mutations in arbitrary order (common in cohorts),
+            # we can gather evidence for a passenger variant and artificially suppress
+            # tier/confidence. Promote the most impactful variant to index 0.
+            try:
+                seq_scores = sorted(
+                    seq_scores,
+                    key=lambda s: (
+                        float(getattr(s, "calibrated_seq_percentile", 0.0) or 0.0),
+                        float(getattr(s, "sequence_disruption", 0.0) or 0.0),
+                    ),
+                    reverse=True,
+                )
+                response.provenance["primary_variant_selection"] = {
+                    "strategy": "max(calibrated_seq_percentile, sequence_disruption)",
+                    "primary_gene": (seq_scores[0].variant or {}).get("gene"),
+                    "primary_hgvs_p": (seq_scores[0].variant or {}).get("hgvs_p"),
+                }
+            except Exception:
+                response.provenance["primary_variant_selection"] = {"strategy": "fallback_original_order"}
             
             # 2) Pathway aggregation
             pathway_scores = aggregate_pathways([self.drug_scorer.seq_score_to_dict(score) for score in seq_scores])
@@ -121,7 +155,8 @@ class EfficacyOrchestrator:
                     evidence_tasks.append(
                         literature(
                             request.api_base, primary_gene, hgvs_p,
-                            drug["name"], drug["moa"]
+                            drug["name"], drug["moa"],
+                            disease=request.disease or ""
                         )
                     )
                 # ClinVar prior
@@ -200,7 +235,7 @@ class EfficacyOrchestrator:
                 drug_result = await self.drug_scorer.score_drug(
                     drug, masked_seq_scores, masked_pathway_scores,
                     masked_evidence, clinvar_result if use_E else None,
-                    insights, confidence_config, request.disease or "",
+                    insights, confidence_config, panel_disease,
                     include_fda_badges=bool((request.options or {}).get("include_fda_badges", False))
                 )
                 
@@ -212,12 +247,22 @@ class EfficacyOrchestrator:
                     )
                 
                 # NEW: Apply sporadic cancer gates (Day 2 - Module M3)
+                # Only apply when tumor context is actually provided OR germline_status is explicitly set
+                # Skip when both are default/None to avoid capping confidence unnecessarily
                 sporadic_gates_provenance = None
-                if hasattr(request, 'germline_status') or hasattr(request, 'tumor_context'):
+                germline_status = getattr(request, 'germline_status', 'unknown')
+                tumor_context_data = getattr(request, 'tumor_context', None)
+                
+                # Only apply sporadic gates if:
+                # 1. Tumor context is provided (not None/empty), OR
+                # 2. Germline status is explicitly set (not default "unknown")
+                should_apply_sporadic_gates = (
+                    (tumor_context_data is not None and tumor_context_data) or
+                    (germline_status and germline_status != "unknown")
+                )
+                
+                if should_apply_sporadic_gates:
                     try:
-                        # Extract germline status and tumor context from request
-                        germline_status = getattr(request, 'germline_status', 'unknown')
-                        tumor_context_data = getattr(request, 'tumor_context', None)
                         
                         # Convert TumorContext object to dict if needed
                         tumor_context_dict = None
@@ -228,6 +273,9 @@ class EfficacyOrchestrator:
                                 tumor_context_dict = tumor_context_data
                         
                         # Apply sporadic gates
+                        original_efficacy = drug_result.efficacy_score
+                        original_confidence = drug_result.confidence
+                        
                         adjusted_efficacy, adjusted_confidence, sporadic_rationale = apply_sporadic_gates(
                             drug_name=drug["name"],
                             drug_class=drug.get("class", ""),
@@ -239,17 +287,18 @@ class EfficacyOrchestrator:
                         )
                         
                         # Update drug result if gates changed anything
-                        if adjusted_efficacy != drug_result.efficacy_score or adjusted_confidence != drug_result.confidence:
+                        if adjusted_efficacy != original_efficacy or adjusted_confidence != original_confidence:
                             drug_result.efficacy_score = adjusted_efficacy
                             drug_result.confidence = adjusted_confidence
-                            
-                            # Track provenance
+                        
+                        # Always track provenance when sporadic gates are applied (even if no change)
+                        if sporadic_rationale:
                             sporadic_gates_provenance = {
                                 "germline_status": germline_status,
                                 "level": sporadic_rationale[-1].get("level", "L0") if sporadic_rationale else "L0",
                                 "gates_applied": [r["gate"] for r in sporadic_rationale if "gate" in r],
-                                "efficacy_delta": adjusted_efficacy - drug_result.efficacy_score,
-                                "confidence_delta": adjusted_confidence - drug_result.confidence,
+                                "efficacy_delta": adjusted_efficacy - original_efficacy,
+                                "confidence_delta": adjusted_confidence - original_confidence,
                                 "rationale": sporadic_rationale
                             }
                     except Exception as e:
@@ -324,7 +373,8 @@ class EfficacyOrchestrator:
                     "rationale": top_drug.get("rationale", []),
                     "S_contribution": next((r.get("percentile", 0) for r in top_drug.get("rationale", []) if r.get("type") == "sequence"), 0),
                     "P_contribution": next((r.get("percentile", 0) for r in top_drug.get("rationale", []) if r.get("type") == "pathway"), 0),
-                    "E_contribution": next((r.get("strength", 0) for r in top_drug.get("rationale", []) if r.get("type") == "evidence"), 0)
+                    "E_contribution": next((r.get("strength", 0) for r in top_drug.get("rationale", []) if r.get("type") == "evidence"), 0),
+                    "pathway_disruption": pathway_scores  # Added for MBD4+TP53 analysis (mechanism vector conversion)
                 }
             
             # 8) Extract SAE features if requested (P2 feature)

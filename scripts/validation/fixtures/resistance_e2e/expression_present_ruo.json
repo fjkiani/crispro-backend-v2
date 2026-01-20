@@ -1,0 +1,38 @@
+{
+  "description": "Expression data present (RUO - Research Use Only; should not be required for MVP, but if present, enables MFAP4/EMT rules)",
+  "expected_input_level": "L1",
+  "expected_confidence_cap": 0.6,
+  "expected_flags": ["INPUT_LEVEL_L1", "MISSING_CA125_HISTORY"],
+  "patient_profile": {
+    "patient_id": "fixture-ov-expression-001",
+    "disease": "ovarian_cancer_hgs",
+    "tumor_context": {
+      "somatic_mutations": [
+        {
+          "gene": "TP53",
+          "hgvs_p": "p.Arg175His",
+          "consequence": "missense_variant"
+        }
+      ]
+    },
+    "biomarker_history": {
+      "ca125_history": [
+        {
+          "date": "2025-01-15",
+          "value": 350.0,
+          "unit": "U/mL"
+        }
+      ]
+    },
+    "hrd_score": 38.0,
+    "expression_data": {
+      "mfap4": 2.3,
+      "vimentin": 1.8,
+      "e_cadherin": 0.5,
+      "source": "RNA-seq",
+      "normalization": "TPM"
+    }
+  },
+  "notes": "Expression data enables MFAP4/EMT resistance rules (GSE63885 validated), but MVP must work without it"
+}
+

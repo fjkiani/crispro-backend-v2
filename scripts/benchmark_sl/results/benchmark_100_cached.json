@@ -1,0 +1,410 @@
+{
+  "summary": {
+    "total_cases": 100,
+    "correct": 7,
+    "accuracy": 0.07,
+    "cache_used": true
+  },
+  "predictions": [
+    {
+      "case_id": "SL_001",
+      "correct": true
+    },
+    {
+      "case_id": "SL_002",
+      "correct": true
+    },
+    {
+      "case_id": "SL_003",
+      "correct": true
+    },
+    {
+      "case_id": "SL_004",
+      "correct": true
+    },
+    {
+      "case_id": "SL_005",
+      "correct": true
+    },
+    {
+      "case_id": "SL_006",
+      "correct": false
+    },
+    {
+      "case_id": "SL_007",
+      "correct": false
+    },
+    {
+      "case_id": "SL_008",
+      "correct": true
+    },
+    {
+      "case_id": "SL_009",
+      "correct": false
+    },
+    {
+      "case_id": "SL_010",
+      "correct": true
+    },
+    {
+      "case_id": "SL_011",
+      "correct": false
+    },
+    {
+      "case_id": "SL_012",
+      "correct": false
+    },
+    {
+      "case_id": "SL_013",
+      "correct": false
+    },
+    {
+      "case_id": "SL_014",
+      "correct": false
+    },
+    {
+      "case_id": "SL_015",
+      "correct": false
+    },
+    {
+      "case_id": "SL_016",
+      "correct": false
+    },
+    {
+      "case_id": "SL_017",
+      "correct": false
+    },
+    {
+      "case_id": "SL_018",
+      "correct": false
+    },
+    {
+      "case_id": "SL_019",
+      "correct": false
+    },
+    {
+      "case_id": "SL_020",
+      "correct": false
+    },
+    {
+      "case_id": "SL_021",
+      "correct": false
+    },
+    {
+      "case_id": "SL_022",
+      "correct": false
+    },
+    {
+      "case_id": "SL_023",
+      "correct": false
+    },
+    {
+      "case_id": "SL_024",
+      "correct": false
+    },
+    {
+      "case_id": "SL_025",
+      "correct": false
+    },
+    {
+      "case_id": "SL_026",
+      "correct": false
+    },
+    {
+      "case_id": "SL_027",
+      "correct": false
+    },
+    {
+      "case_id": "SL_028",
+      "correct": false
+    },
+    {
+      "case_id": "SL_029",
+      "correct": false
+    },
+    {
+      "case_id": "SL_030",
+      "correct": false
+    },
+    {
+      "case_id": "SL_031",
+      "correct": false
+    },
+    {
+      "case_id": "SL_032",
+      "correct": false
+    },
+    {
+      "case_id": "SL_033",
+      "correct": false
+    },
+    {
+      "case_id": "SL_034",
+      "correct": false
+    },
+    {
+      "case_id": "SL_035",
+      "correct": false
+    },
+    {
+      "case_id": "SL_036",
+      "correct": false
+    },
+    {
+      "case_id": "SL_037",
+      "correct": false
+    },
+    {
+      "case_id": "SL_038",
+      "correct": false
+    },
+    {
+      "case_id": "SL_039",
+      "correct": false
+    },
+    {
+      "case_id": "SL_040",
+      "correct": false
+    },
+    {
+      "case_id": "SL_041",
+      "correct": false
+    },
+    {
+      "case_id": "SL_042",
+      "correct": false
+    },
+    {
+      "case_id": "SL_043",
+      "correct": false
+    },
+    {
+      "case_id": "SL_044",
+      "correct": false
+    },
+    {
+      "case_id": "SL_045",
+      "correct": false
+    },
+    {
+      "case_id": "SL_046",
+      "correct": false
+    },
+    {
+      "case_id": "SL_047",
+      "correct": false
+    },
+    {
+      "case_id": "SL_048",
+      "correct": false
+    },
+    {
+      "case_id": "SL_049",
+      "correct": false
+    },
+    {
+      "case_id": "SL_050",
+      "correct": false
+    },
+    {
+      "case_id": "SL_051",
+      "correct": false
+    },
+    {
+      "case_id": "SL_052",
+      "correct": false
+    },
+    {
+      "case_id": "SL_053",
+      "correct": false
+    },
+    {
+      "case_id": "SL_054",
+      "correct": false
+    },
+    {
+      "case_id": "SL_055",
+      "correct": false
+    },
+    {
+      "case_id": "SL_056",
+      "correct": false
+    },
+    {
+      "case_id": "SL_057",
+      "correct": false
+    },
+    {
+      "case_id": "SL_058",
+      "correct": false
+    },
+    {
+      "case_id": "SL_059",
+      "correct": false
+    },
+    {
+      "case_id": "SL_060",
+      "correct": false
+    },
+    {
+      "case_id": "SL_061",
+      "correct": false
+    },
+    {
+      "case_id": "SL_062",
+      "correct": false
+    },
+    {
+      "case_id": "SL_063",
+      "correct": false
+    },
+    {
+      "case_id": "SL_064",
+      "correct": false
+    },
+    {
+      "case_id": "SL_065",
+      "correct": false
+    },
+    {
+      "case_id": "SL_066",
+      "correct": false
+    },
+    {
+      "case_id": "SL_067",
+      "correct": false
+    },
+    {
+      "case_id": "SL_068",
+      "correct": false
+    },
+    {
+      "case_id": "SL_069",
+      "correct": false
+    },
+    {
+      "case_id": "SL_070",
+      "correct": false
+    },
+    {
+      "case_id": "SL_071",
+      "correct": false
+    },
+    {
+      "case_id": "SL_072",
+      "correct": false
+    },
+    {
+      "case_id": "SL_073",
+      "correct": false
+    },
+    {
+      "case_id": "SL_074",
+      "correct": false
+    },
+    {
+      "case_id": "SL_075",
+      "correct": false
+    },
+    {
+      "case_id": "SL_076",
+      "correct": false
+    },
+    {
+      "case_id": "SL_077",
+      "correct": false
+    },
+    {
+      "case_id": "SL_078",
+      "correct": false
+    },
+    {
+      "case_id": "SL_079",
+      "correct": false
+    },
+    {
+      "case_id": "SL_080",
+      "correct": false
+    },
+    {
+      "case_id": "SL_081",
+      "correct": false
+    },
+    {
+      "case_id": "SL_082",
+      "correct": false
+    },
+    {
+      "case_id": "SL_083",
+      "correct": false
+    },
+    {
+      "case_id": "SL_084",
+      "correct": false
+    },
+    {
+      "case_id": "SL_085",
+      "correct": false
+    },
+    {
+      "case_id": "SL_086",
+      "correct": false
+    },
+    {
+      "case_id": "SL_087",
+      "correct": false
+    },
+    {
+      "case_id": "SL_088",
+      "correct": false
+    },
+    {
+      "case_id": "SL_089",
+      "correct": false
+    },
+    {
+      "case_id": "SL_090",
+      "correct": false
+    },
+    {
+      "case_id": "SL_091",
+      "correct": false
+    },
+    {
+      "case_id": "SL_092",
+      "correct": false
+    },
+    {
+      "case_id": "SL_093",
+      "correct": false
+    },
+    {
+      "case_id": "SL_094",
+      "correct": false
+    },
+    {
+      "case_id": "SL_095",
+      "correct": false
+    },
+    {
+      "case_id": "SL_096",
+      "correct": false
+    },
+    {
+      "case_id": "SL_097",
+      "correct": false
+    },
+    {
+      "case_id": "SL_098",
+      "correct": false
+    },
+    {
+      "case_id": "SL_099",
+      "correct": false
+    },
+    {
+      "case_id": "SL_100",
+      "correct": false
+    }
+  ]
+}

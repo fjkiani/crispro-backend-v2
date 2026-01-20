@@ -1,0 +1,216 @@
+# Brain (Primary CNS Tumors) Disease Module Configuration
+# Based on Manager's Mechanistic Trial Matching Blueprint
+# Note: Brain is heterogeneous; engine must be diagnosis-specific (GBM vs low-grade glioma vs metastatic)
+
+disease: "brain_cancer"
+aliases: ["brain", "CNS", "glioblastoma", "GBM", "glioma"]
+
+# Mechanism axes that matter (GBM-forward)
+mechanism_axes:
+  idh_axis:
+    name: "IDH"
+    vector_index: 0
+    biomarkers: ["IDH1", "IDH2", "IDH1 R132H", "IDH mutation"]
+    pathways: ["IDH", "metabolism"]
+    interventions: ["ivosidenib", "enasidenib", "IDH inhibitor", "vorasidenib"]
+    priority: "high"
+    description: "IDH1/2 mutation (glioma subtype)"
+    dominance_condition: "IDH1 OR IDH2"
+    
+  egfr_rtk:
+    name: "EGFR/RTK"
+    vector_index: 1
+    biomarkers: ["EGFR", "EGFR amplification", "EGFRvIII", "RTK"]
+    pathways: ["EGFR", "RTK", "PI3K"]
+    interventions: ["EGFR inhibitor", "EGFRvIII vaccine", "erlotinib", "gefitinib"]
+    priority: "high"
+    description: "EGFR amplification/EGFRvIII"
+    dominance_condition: "EGFR amplification OR EGFRvIII"
+    
+  mgmt_methylation:
+    name: "MGMT Methylation"
+    vector_index: 2
+    biomarkers: ["MGMT", "MGMT methylated", "MGMT promoter"]
+    pathways: ["DNA repair", "alkylation"]
+    interventions: ["temozolomide", "TMZ"]
+    priority: "high"
+    description: "MGMT promoter methylation (predictive for temozolomide benefit)"
+    dominance_condition: "MGMT methylated"
+    
+  cell_cycle_cdk:
+    name: "Cell Cycle/CDK"
+    vector_index: 3
+    biomarkers: ["CDKN2A", "CDKN2B", "CDK4", "CDK6", "p16"]
+    pathways: ["cell cycle", "CDK"]
+    interventions: ["CDK4/6 inhibitor", "palbociclib", "ribociclib"]
+    priority: "medium"
+    description: "CDKN2A/B loss, CDK4/6"
+    dominance_condition: "CDKN2A OR CDKN2B"
+    
+  angiogenesis_vegf:
+    name: "Angiogenesis/VEGF"
+    vector_index: 4
+    biomarkers: ["VEGF", "angiogenesis"]
+    pathways: ["VEGF", "angiogenesis"]
+    interventions: ["bevacizumab", "avastin", "VEGF inhibitor"]
+    priority: "medium"
+    description: "bevacizumab-like approaches"
+    dominance_condition: null
+    
+  pi3k_pten:
+    name: "PI3K/PTEN"
+    vector_index: 5
+    biomarkers: ["PTEN", "PI3K", "AKT"]
+    pathways: ["PI3K", "AKT", "PTEN"]
+    interventions: ["PI3K inhibitor", "AKT inhibitor"]
+    priority: "low"
+    description: "PTEN loss, PI3K pathway"
+    dominance_condition: "PTEN loss"
+    
+  io_tmb:
+    name: "IO/TMB"
+    vector_index: 6
+    biomarkers: ["TMB-high", "PD-L1", "MSI-H"]
+    pathways: ["checkpoint", "IO"]
+    interventions: ["pembrolizumab", "nivolumab", "PD-1"]
+    priority: "low"
+    description: "IO is generally weaker in GBM unless specific markers; treat carefully"
+    dominance_condition: "TMB-high OR MSI-H"
+
+# Evidence gates
+evidence_gates:
+  idh_strong:
+    name: "IDH Strong"
+    condition: "IDH1 R132H OR IDH2"
+    boosts:
+      idh_axis: 1.0
+    rationale: "IDH1 R132H etc."
+    
+  egfr_strong:
+    name: "EGFR Strong"
+    condition: "EGFR amplification OR EGFRvIII"
+    boosts:
+      egfr_rtk: 1.0
+    rationale: "amplification/EGFRvIII"
+    
+  mgmt_gate:
+    name: "MGMT Gate"
+    condition: "MGMT methylated"
+    boosts:
+      mgmt_methylation: 1.0
+    rationale: "MGMT methylation is a treatment stratifier gate (not a mechanism vector boost)"
+    
+  io_weak:
+    name: "IO Weak"
+    condition: "PD-L1 positive AND NOT (TMB-high OR MSI-H)"
+    boosts:
+      io_tmb: 0.2
+    rationale: "Avoid over-weighting IO unless there's strong supporting evidence (TMB-high rare in primary CNS)"
+
+# Dominance policies
+dominance_policies:
+  idh_dominance:
+    name: "IDH-Mut Glioma Dominance"
+    condition: "IDH1 OR IDH2"
+    prioritize_axis: "idh_axis"
+    rationale: "IDH-mut glioma: IDH inhibitor trials dominate"
+    
+  egfr_dominance:
+    name: "EGFR-Ampl/vIII Dominance"
+    condition: "EGFR amplification OR EGFRvIII"
+    prioritize_axis: "egfr_rtk"
+    rationale: "EGFR-ampl/vIII: EGFR-targeted / vaccine trials dominate"
+    
+  io_caution:
+    name: "IO Caution"
+    condition: "NOT (TMB-high OR MSI-H)"
+    deprioritize_axis: "io_tmb"
+    rationale: "Avoid over-weighting IO unless there's strong supporting evidence (TMB-high rare in primary CNS)"
+
+# Query templates
+query_templates:
+  egfr_gbm_trials:
+    name: "EGFRvIII GBM trials"
+    query: '("glioblastoma" OR "GBM") AND (EGFRvIII OR "EGFR amplification") AND (vaccine OR "EGFR inhibitor")'
+    condition: "glioblastoma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "egfr_rtk"
+    priority: 1
+    
+  idh_glioma_trials:
+    name: "IDH glioma trials"
+    query: '("glioma") AND (IDH1 OR "IDH inhibitor" OR vorasidenib)'
+    condition: "glioma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "idh_axis"
+    priority: 1
+    
+  cdk_gbm_trials:
+    name: "CDK4/6 GBM trials"
+    query: '("glioblastoma" OR "GBM") AND ("CDK4/6" OR "cell cycle") AND inhibitor'
+    condition: "glioblastoma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "cell_cycle_cdk"
+    priority: 2
+    
+  mgmt_tmz_trials:
+    name: "MGMT methylated TMZ trials"
+    query: '("glioblastoma" OR "GBM") AND ("MGMT methylated") AND temozolomide AND maintenance'
+    condition: "glioblastoma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "mgmt_methylation"
+    priority: 1
+    
+  vegf_gbm_trials:
+    name: "VEGF GBM trials"
+    query: '("glioblastoma" OR "GBM") AND (bevacizumab OR VEGF)'
+    condition: "glioblastoma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "angiogenesis_vegf"
+    priority: 2
+
+# Subtype discrimination (REQUIRED)
+subtypes:
+  - name: "glioblastoma"
+    keywords: ["GBM", "glioblastoma", "grade IV"]
+    priority: 1
+    
+  - name: "low_grade_glioma"
+    keywords: ["low grade", "grade II", "grade III", "astrocytoma", "oligodendroglioma"]
+    priority: 1
+    
+  - name: "idh_mutant_glioma"
+    keywords: ["IDH1", "IDH2", "IDH mutant"]
+    priority: 1
+    
+  - name: "metastatic_brain"
+    keywords: ["metastatic", "brain metastasis", "CNS metastasis"]
+    priority: 2
+
+# Eligibility patterns
+eligibility_patterns:
+  ecog: ["ECOG", "KPS", "Karnofsky"]
+  organ_function: ["bilirubin", "creatinine", "ALT", "AST"]
+  prior_treatment: ["prior", "previous", "recurrent", "relapsed"]
+  mgmt_testing: ["MGMT", "methylation"]
+  idh_testing: ["IDH1", "IDH2", "IDH"]
+
+# Safety layer
+contraindications:
+  - biomarker: "MGMT unmethylated"
+    prefer_interventions: ["bevacizumab", "VEGF inhibitor"]
+    rationale: "MGMT unmethylated → TMZ less effective, consider alternatives"
+    
+  - biomarker: "IDH wild type"
+    exclude_interventions: ["IDH inhibitor", "ivosidenib"]
+    rationale: "IDH WT → IDH inhibitors not indicated"
+
+# Explainability contract
+explainability_fields:
+  - "dominant_pathway_match"
+  - "gate_evidence"
+  - "whats_missing"
+  - "mechanism_vector_scores"
+  - "dominance_policy_applied"
+  - "subtype_classification"
+  - "mgmt_status"

@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-01-03T13:05:49.018663",
+  "validation_phases": {
+    "phase_1_framework": {
+      "status": "COMPLETE",
+      "results": {
+        "detection_sensitivity": "100% (6/6)",
+        "detection_specificity": "100% (0 FP on N=53)",
+        "cpic_concordance": "100% (N=59)",
+        "receipts": [
+          "dosing_guidance_validation/reports/validation_report.json",
+          "dosing_guidance_validation/reports/cpic_concordance_report.json"
+        ]
+      }
+    },
+    "phase_2_literature": {
+      "status": "COMPLETE",
+      "results": {
+        "prevention_rates": {
+          "DPYD": "70-85%",
+          "TPMT": "80-85%",
+          "UGT1A1": "40-50%"
+        },
+        "source": "CPIC guidelines + published studies",
+        "medwatch_reduction_estimate": "~6% of severe AEs"
+      }
+    },
+    "phase_3_data_exploration": {
+      "status": "COMPLETE",
+      "results": {
+        "cbioportal": {
+          "status": "INSUFFICIENT",
+          "reason": "PGx variants are germline, TCGA is somatic",
+          "mutations_found": 0
+        },
+        "project_data_sphere": {
+          "status": "SUCCESS",
+          "gastric_caslibs_found": 4,
+          "total_files": 21,
+          "clinical_data_files": 16,
+          "raw_data_zips": 2,
+          "linked_sas_files_examined": 2,
+          "linked_files_rows": {
+            "linked_gastric143": 192,
+            "linked_gastric130": 483
+          },
+          "note": "Linked files contain survey/QoL data, not clinical trial data"
+        }
+      }
+    }
+  },
+  "key_findings": {
+    "raw_clinical_data_location": [
+      "Gastric_MerckKG_2008_130/EMR200048-052_Expand_Raw Data control arm.zip (5.2 MB)",
+      "Gastric_SanofiU_1999_143/sanofi_xrp6976_tax325_datasets_and_readme.zip (1.8 MB)"
+    ],
+    "data_dictionaries_available": [
+      "Dataset Contents and Variable Crosswalk.xlsx (2 caslibs)",
+      "Proc Contents Data Dictionary PDFs (2 caslibs)",
+      "Data Dictionary.pdf (1 caslib)"
+    ],
+    "next_steps": [
+      "Extract ZIP files to access raw clinical data",
+      "Examine data dictionaries for column definitions",
+      "Search for treatment, outcome, and PGx columns",
+      "Extract and analyze if PGx + treatment + outcome data exists"
+    ]
+  },
+  "validation_status": {
+    "framework": "VALIDATED (100% sens/spec, 100% CPIC)",
+    "prevention_rates": "LITERATURE-BACKED (70-85%)",
+    "real_world_outcomes": "PENDING (needs ZIP extraction + analysis)",
+    "medwatch_reduction": "ESTIMATED (~6% from literature)"
+  }
+}

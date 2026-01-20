@@ -1,0 +1,75 @@
+{
+  "timestamp": "2025-12-26T06:36:23.790042",
+  "validator": "validate_ov_nf1_playbook",
+  "fixture": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/patient_states/OV-NF1-001.json",
+  "overall_passed": true,
+  "checks": [
+    {
+      "name": "nf1_playbook_static",
+      "passed": true,
+      "details": "NF1 playbook entry present with expected RR/source/alternatives",
+      "metrics": {
+        "relative_risk": 2.1,
+        "validation_source": "TCGA_OV_469",
+        "alt_drugs": [
+          "bevacizumab",
+          "olaparib",
+          "trametinib"
+        ]
+      }
+    },
+    {
+      "name": "nf1_playbook_service",
+      "passed": true,
+      "details": "Playbook service returns expected NF1 alternatives + provenance",
+      "metrics": {
+        "alternatives_count": 3,
+        "alt_drugs": [
+          "bevacizumab",
+          "olaparib",
+          "trametinib"
+        ],
+        "regimen_changes_count": 1,
+        "monitoring_changes": {
+          "mrd_frequency": null,
+          "ctdna_targets": null,
+          "imaging_frequency": "CT every 2-3 months",
+          "biomarker_frequency": "CA-125 every 2 weeks",
+          "bone_marrow_frequency": null
+        },
+        "provenance": {
+          "service_version": "resistance_playbook_v1.0_dry",
+          "disease": "ovarian",
+          "detected_resistance": [
+            "NF1"
+          ],
+          "cytogenetics": null,
+          "treatment_line": 1,
+          "prior_therapies": [],
+          "line_multiplier_applied": 1.0,
+          "cross_resistance_detected": [],
+          "playbook_source": "OV_RESISTANCE_PLAYBOOK",
+          "alternatives_count": 3,
+          "regimen_changes_count": 1
+        }
+      }
+    },
+    {
+      "name": "nf1_regimen_monitoring",
+      "passed": true,
+      "details": "NF1 includes regimen change + intensified monitoring guidance",
+      "metrics": {
+        "regimen_changes": [
+          {
+            "from_regimen": "carboplatin/paclitaxel",
+            "to_regimen": "carboplatin/paclitaxel + bevacizumab",
+            "rationale": "Add bevacizumab for high-risk disease",
+            "evidence_level": "VALIDATED"
+          }
+        ],
+        "biomarker_frequency": "CA-125 every 2 weeks",
+        "imaging_frequency": "CT every 2-3 months"
+      }
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "validation_suite": "risk_benefit_composition",
+  "version": "1.0",
+  "timestamp": "2026-01-03T02:42:50.841541",
+  "summary": {
+    "total_cases": 15,
+    "passed": 15,
+    "failed": 0,
+    "pass_rate": 100.0,
+    "status": "PASS"
+  },
+  "group_statistics": {
+    "A_HIGH_TOXICITY": {
+      "total": 3,
+      "passed": 3,
+      "rate": 100.0
+    },
+    "B_MODERATE_TOXICITY": {
+      "total": 4,
+      "passed": 4,
+      "rate": 100.0
+    },
+    "C_LOW_TOXICITY": {
+      "total": 5,
+      "passed": 5,
+      "rate": 100.0
+    },
+    "D_EDGE_CASES": {
+      "total": 3,
+      "passed": 3,
+      "rate": 100.0
+    }
+  },
+  "transparency_notice": {
+    "what_this_proves": [
+      "Composition logic is deterministically correct",
+      "All toxicity tiers handled as specified",
+      "Edge cases handled gracefully"
+    ],
+    "what_this_does_not_prove": [
+      "The policy improves patient outcomes",
+      "The weights are optimal",
+      "The system generalizes to unseen patients"
+    ]
+  },
+  "detailed_results": [
+    {
+      "case_id": "SYN-001",
+      "group": "A_HIGH_TOXICITY",
+      "description": "DPYD *2A/*2A patient with 5-FU - contraindicated",
+      "passed": true,
+      "expected_composite": 0.0,
+      "actual_composite": 0.0,
+      "expected_label": "AVOID / HIGH-RISK",
+      "actual_label": "AVOID / HIGH-RISK",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-002",
+      "group": "A_HIGH_TOXICITY",
+      "description": "DPYD *13 patient with Capecitabine - contraindicated",
+      "passed": true,
+      "expected_composite": 0.0,
+      "actual_composite": 0.0,
+      "expected_label": "AVOID / HIGH-RISK",
+      "actual_label": "AVOID / HIGH-RISK",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-003",
+      "group": "A_HIGH_TOXICITY",
+      "description": "TPMT *3A/*3A patient with 6-Mercaptopurine - contraindicated",
+      "passed": true,
+      "expected_composite": 0.0,
+      "actual_composite": 0.0,
+      "expected_label": "AVOID / HIGH-RISK",
+      "actual_label": "AVOID / HIGH-RISK",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-004",
+      "group": "B_MODERATE_TOXICITY",
+      "description": "DPYD c.2846A>T patient with 5-FU - dose reduction required",
+      "passed": true,
+      "expected_composite": 0.375,
+      "actual_composite": 0.375,
+      "expected_label": "CONSIDER WITH MONITORING",
+      "actual_label": "CONSIDER WITH MONITORING",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-005",
+      "group": "B_MODERATE_TOXICITY",
+      "description": "TPMT *3A/*1 patient with 6-Mercaptopurine - dose reduction required",
+      "passed": true,
+      "expected_composite": 0.42,
+      "actual_composite": 0.42,
+      "expected_label": "CONSIDER WITH MONITORING",
+      "actual_label": "CONSIDER WITH MONITORING",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-006",
+      "group": "B_MODERATE_TOXICITY",
+      "description": "UGT1A1 *28/*28 patient with Irinotecan - dose reduction required",
+      "passed": true,
+      "expected_composite": 0.504,
+      "actual_composite": 0.504,
+      "expected_label": "CONSIDER WITH MONITORING",
+      "actual_label": "CONSIDER WITH MONITORING",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-007",
+      "group": "B_MODERATE_TOXICITY",
+      "description": "CYP2D6 *4/*4 patient with Tamoxifen - reduced efficacy",
+      "passed": true,
+      "expected_composite": 0.34,
+      "actual_composite": 0.34,
+      "expected_label": "CONSIDER WITH MONITORING",
+      "actual_label": "CONSIDER WITH MONITORING",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-008",
+      "group": "C_LOW_TOXICITY",
+      "description": "BRCA2 patient with Olaparib - strong synthetic lethality",
+      "passed": true,
+      "expected_composite": 0.85,
+      "actual_composite": 0.85,
+      "expected_label": "PREFERRED",
+      "actual_label": "PREFERRED",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-009",
+      "group": "C_LOW_TOXICITY",
+      "description": "HRD+ patient with Niraparib - validated benefit",
+      "passed": true,
+      "expected_composite": 0.82,
+      "actual_composite": 0.82,
+      "expected_label": "PREFERRED",
+      "actual_label": "PREFERRED",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-010",
+      "group": "C_LOW_TOXICITY",
+      "description": "BRCA1 patient with Carboplatin - enhanced DNA damage sensitivity",
+      "passed": true,
+      "expected_composite": 0.8,
+      "actual_composite": 0.8,
+      "expected_label": "PREFERRED",
+      "actual_label": "PREFERRED",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-011",
+      "group": "C_LOW_TOXICITY",
+      "description": "MBD4+TP53 patient with Olaparib - DDR-deficient",
+      "passed": true,
+      "expected_composite": 0.8,
+      "actual_composite": 0.8,
+      "expected_label": "PREFERRED",
+      "actual_label": "PREFERRED",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-012",
+      "group": "C_LOW_TOXICITY",
+      "description": "BRAF V600E melanoma with Vemurafenib - direct target",
+      "passed": true,
+      "expected_composite": 0.88,
+      "actual_composite": 0.88,
+      "expected_label": "PREFERRED",
+      "actual_label": "PREFERRED",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-013",
+      "group": "D_EDGE_CASES",
+      "description": "Patient with no PGx data available",
+      "passed": true,
+      "expected_composite": 0.7,
+      "actual_composite": 0.7,
+      "expected_label": "PREFERRED (PGx UNSCREENED)",
+      "actual_label": "PREFERRED (PGx UNSCREENED)",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-014",
+      "group": "D_EDGE_CASES",
+      "description": "KRAS G12D patient with Cetuximab - low efficacy due to negative predictor",
+      "passed": true,
+      "expected_composite": 0.2,
+      "actual_composite": 0.2,
+      "expected_label": "PREFERRED",
+      "actual_label": "PREFERRED",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    },
+    {
+      "case_id": "SYN-015",
+      "group": "D_EDGE_CASES",
+      "description": "BRCA2 patient with 5-FU and wild-type DPYD - safe combination",
+      "passed": true,
+      "expected_composite": 0.65,
+      "actual_composite": 0.65,
+      "expected_label": "PREFERRED",
+      "actual_label": "PREFERRED",
+      "composite_match": true,
+      "label_match": true,
+      "notes": ""
+    }
+  ],
+  "failed_cases": []
+}

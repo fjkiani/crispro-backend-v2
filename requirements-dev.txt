@@ -1,0 +1,38 @@
+# Development dependencies for MOAT Orchestration Backend
+# Install with: pip install -r requirements-dev.txt
+
+# Testing (required for Ring-0 validation)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

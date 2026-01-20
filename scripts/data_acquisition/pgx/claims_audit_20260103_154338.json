@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-01-03T15:43:38.974468",
+  "results": {
+    "top3_accuracy": {
+      "claimed": "1.0",
+      "found": 1.0,
+      "matches": true,
+      "status": "VALIDATED"
+    },
+    "mrr": {
+      "claimed": "0.75",
+      "found": 0.75,
+      "matches": true,
+      "status": "VALIDATED"
+    },
+    "toxicity_sensitivity": {
+      "claimed": "1.0",
+      "found": 1.0,
+      "matches": true,
+      "status": "VALIDATED"
+    },
+    "toxicity_specificity": {
+      "claimed": "1.0",
+      "found": 1.0,
+      "matches": true,
+      "status": "VALIDATED"
+    },
+    "cpic_concordance": {
+      "claimed": "1.0",
+      "found": 0.1694915254237288,
+      "matches": false,
+      "status": "MISMATCH",
+      "note": "10/59 cases concordant"
+    },
+    "pathway_alignment": {
+      "claimed": "1.0",
+      "found": 1.0,
+      "matches": true,
+      "status": "VALIDATED"
+    }
+  },
+  "summary": {
+    "validated": 5,
+    "issues": 1,
+    "total": 6
+  }
+}

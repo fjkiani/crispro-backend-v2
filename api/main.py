@@ -7,10 +7,15 @@ from typing import Dict, Any
 import httpx
 import time
 import asyncio
+import logging
+import os
+
+logger = logging.getLogger(__name__)
 
 from .config import EVO_TIMEOUT, MODEL_TO_BASE, USE_CASES, SUPABASE_URL, SUPABASE_KEY, get_api_flags
 from .services.supabase_service import _supabase_select, _supabase_event
 from .routers import health, myeloma, evo, evidence, efficacy
+from api.routers import personalized_outreach
 from .routers import fusion as fusion_router
 from .routers import guidance as guidance_router
 from .routers import datasets as datasets_router
@@ -20,6 +25,9 @@ from .routers import command_center as command_router
 from .routers import sessions as sessions_router
 from .routers import auth as auth_router
 from .routers import admin as admin_router
+from .routers import patient as patient_router
+from .routers import doctor as doctor_router
+from .routers import dsr as dsr_router  # NEW: Data Subject Requests (GDPR compliance) (Jan 2025)
 from .routers import toxicity as toxicity_router
 from .routers import safety as safety_router
 from .routers import metastasis as metastasis_router
@@ -28,19 +36,59 @@ from .routers import metastasis as metastasis_router
 from .routers.kb import router as kb_router
 from .routers import acmg as acmg_router
 from .routers import pharmgkb as pharmgkb_router
+from .routers import pgx_health as pgx_health_router
+from .routers import dosing as dosing_router
+from .routers import supplements as supplements_router
 from .routers import clinical_trials as clinical_trials_router
 from .routers import trials as trials_router  # NEW: Search and refresh endpoints
 from .routers import trials_graph as trials_graph_router  # NEW: Graph-optimized search
 from .routers import trials_agent as trials_agent_router  # NEW: Autonomous trial agent
+from .routers import advanced_trial_queries as advanced_trial_queries_router  # NEW: Advanced multi-criteria query endpoint
 from .routers import resistance as resistance_router
 from .routers import nccn as nccn_router
 from .routers import clinical_genomics as clinical_genomics_router
+from .routers import llm as llm_router
 # from .routers import offtarget as offtarget_router  # TODO: Not created yet
 from .routers import kg as kg_router
 from .routers import hypothesis_validator as hypothesis_validator_router
 from .routers import ayesha_twin_demo as ayesha_twin_demo_router
 from .routers import ayesha as ayesha_router
 from .routers import tumor as tumor_router  # NEW: Sporadic Cancer Strategy (Day 1)
+from .routers import care as care_router  # NEW: Resistance Playbook (Section 17)
+from .routers import ayesha_trials as ayesha_trials_router  # NEW: Ayesha clinical trials (Jan 13, 2025)
+from .routers import ayesha_orchestrator_v2 as ayesha_orchestrator_v2_router  # NEW: Complete care v2 orchestrator (Jan 13, 2025)
+from .routers import complete_care_universal as complete_care_universal_router  # NEW: Universal complete care orchestrator (Jan 2025)
+from .routers import biomarker_intelligence as biomarker_intelligence_router  # NEW: Universal biomarker intelligence (Jan 2025)
+from .routers import dossiers as dossiers_router  # NEW: JR2 dossier generation pipeline (Jan 13, 2025)
+from .routers import ayesha_dossiers as ayesha_dossiers_router  # NEW: Ayesha dossier browser API (Nov 17, 2025)
+from .routers import dossiers_intelligence as dossiers_intelligence_router  # NEW: Universal dossier intelligence API (Nov 2025)
+from .routers import agents as agents_router  # NEW: Zeta Agent system (Jan 13, 2025)
+from .routers import sae as sae_router  # NEW: SAE (Sparse Autoencoder) feature extraction (Jan 14, 2025)
+from .routers import expression as expression_router  # NEW: Expression ingest (RUO) (Dec 2025)
+from .routers import orchestrator as orchestrator_router  # NEW: MOAT Orchestration - State Management & Pipeline (Jan 2025)
+# GPT router is optional; some deployments don't include it.
+try:
+    from .routers import gpt as gpt_router  # type: ignore
+except Exception as _gpt_import_err:
+    gpt_router = None  # type: ignore
+    logger.warning(f"⚠️ GPT router unavailable - skipping: {_gpt_import_err}")
+
+from .routers import research_intelligence as research_intelligence_router
+from .routers import patient_kb as patient_kb_router  # NEW: Patient Knowledge Base Agent (Jan 2026)
+from .routers import holistic_score as holistic_score_router  # NEW: Holistic Score Router (Jan 2026)
+
+# Optional imports - these routers may not exist yet
+try:
+    from .routers import surrogate_validator as surrogate_validator_router
+except ImportError:
+    surrogate_validator_router = None
+    logger.warning("⚠️ surrogate_validator router not available - skipping")
+
+try:
+    from .routers import vus as vus_router
+except ImportError:
+    vus_router = None
+    logger.warning("⚠️ vus router not available - skipping")
 # Copilot orchestrator removed - RAG integration is via evidence.router (evidence/rag.py)
 
 # Mock responses for basic endpoints
@@ -49,26 +97,108 @@ MOCK_FORGE_RESPONSE = {"therapeutics": [{"name": "CRISPR-Cas9 Guide RNA", "targe
 MOCK_GAUNTLET_RESPONSE = {"trial_results": {"success_rate": 0.87, "safety_profile": "ACCEPTABLE"}}
 MOCK_DOSSIER_RESPONSE = {"dossier_id": "IND-2024-001", "status": "GENERATED", "pages": 847}
 
+# Mock patient data for Mutation Explorer
+MOCK_PATIENT_DATA = {
+    "PAT12345": {
+        "patient_id": "PAT12345",
+        "mutations": [
+            {
+                "hugo_gene_symbol": "BRAF",
+                "protein_change": "V600E",
+                "variant_type": "missense_variant",
+                "genomic_coordinate_hg38": "chr7:140753336-140753336",
+                "chrom": "7",
+                "pos": 140753336,
+                "ref": "T",
+                "alt": "A",
+                "hgvs_p": "V600E"
+            },
+            {
+                "hugo_gene_symbol": "TP53",
+                "protein_change": "R175H",
+                "variant_type": "missense_variant",
+                "genomic_coordinate_hg38": "chr17:7673802-7673802",
+                "chrom": "17",
+                "pos": 7673802,
+                "ref": "C",
+                "alt": "T",
+                "hgvs_p": "R175H"
+            },
+            {
+                "hugo_gene_symbol": "KRAS",
+                "protein_change": "G12D",
+                "variant_type": "missense_variant",
+                "genomic_coordinate_hg38": "chr12:25245350-25245350",
+                "chrom": "12",
+                "pos": 25245350,
+                "ref": "C",
+                "alt": "T",
+                "hgvs_p": "G12D"
+            }
+        ]
+    },
+    "PAT67890": {
+        "patient_id": "PAT67890",
+        "mutations": [
+            {
+                "hugo_gene_symbol": "KRAS",
+                "protein_change": "G12D",
+                "variant_type": "missense_variant",
+                "genomic_coordinate_hg38": "chr12:25245350-25245350",
+                "chrom": "12",
+                "pos": 25245350,
+                "ref": "C",
+                "alt": "T",
+                "hgvs_p": "G12D"
+            },
+            {
+                "hugo_gene_symbol": "NRAS",
+                "protein_change": "Q61K",
+                "variant_type": "missense_variant",
+                "genomic_coordinate_hg38": "chr1:114716127-114716127",
+                "chrom": "1",
+                "pos": 114716127,
+                "ref": "T",
+                "alt": "G",
+                "hgvs_p": "Q61K"
+            }
+        ]
+    }
+}
+
 app = FastAPI(
     title="Oncology Backend API",
     description="Modular FastAPI backend for CRISPR-based precision oncology",
     version="2.0.0"
 )
 
-# CORS middleware
+# CORS middleware - Security: Use specific origins instead of wildcard
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:5173").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[origin.strip() for origin in ALLOWED_ORIGINS],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allow_headers=["*"],
 )
+
+# Security headers middleware
+from .middleware.security_headers import SecurityHeadersMiddleware
+app.add_middleware(SecurityHeadersMiddleware)
+
+# HIPAA/PII detection middleware (only when HIPAA_MODE=true)
+HIPAA_MODE = os.getenv("HIPAA_MODE", "false").lower() == "true"
+if HIPAA_MODE:
+    from .middleware.hipaa_pii import HIPAAPIIMiddleware
+    app.add_middleware(HIPAAPIIMiddleware)
+    logger.info("✅ HIPAA/PII protection middleware enabled")
 
 # Include routers
 app.include_router(health.router)
 app.include_router(myeloma.router)
 app.include_router(evo.router)
 app.include_router(evidence.router)
+app.include_router(personalized_outreach.router)
 app.include_router(efficacy.router)
 app.include_router(guidance_router.router)
 app.include_router(fusion_router.router)
@@ -98,30 +228,69 @@ if _api_flags.get("command_center"):
 app.include_router(datasets_router.router)
 app.include_router(acmg_router.router)
 app.include_router(pharmgkb_router.router)
+app.include_router(pgx_health_router.router)
+app.include_router(dosing_router.router)
+app.include_router(supplements_router.router)  # NEW: Supplement recommendations based on drugs + treatment line (Jan 2026)
 app.include_router(clinical_trials_router.router)
 app.include_router(trials_router.router)  # NEW: /api/search-trials and /api/trials/refresh_status
 app.include_router(trials_graph_router.router)  # NEW: /api/trials/search-optimized (hybrid graph search)
 app.include_router(trials_agent_router.router)  # NEW: /api/trials/agent/search (autonomous agent)
+app.include_router(advanced_trial_queries_router.router)  # NEW: /api/trials/advanced-query (complex multi-criteria queries)
 app.include_router(resistance_router.router)
 app.include_router(nccn_router.router)
 app.include_router(clinical_genomics_router.router)
+app.include_router(llm_router.router)  # LLM endpoints for AI explanations
 # app.include_router(offtarget_router.router)  # TODO: Not created yet
 app.include_router(kg_router.router)
 app.include_router(hypothesis_validator_router.router)
 app.include_router(ayesha_twin_demo_router.router)
 app.include_router(ayesha_router.router)
 app.include_router(tumor_router.router)  # NEW: Sporadic Cancer Strategy (Day 1-7)
+app.include_router(care_router.router)  # NEW: Resistance Playbook (Section 17)
+app.include_router(ayesha_trials_router.router)  # NEW: Ayesha clinical trials - FOR AYESHA'S LIFE (Jan 13, 2025)
+app.include_router(patient_router.router)  # NEW: Patient session & context management - FOR AYESHA (Jan 13, 2025)
+app.include_router(doctor_router.router)  # NEW: Doctor/Oncologist profile management (Jan 2025)
+app.include_router(dsr_router.router)  # NEW: Data Subject Requests (GDPR compliance) (Jan 2025)
+app.include_router(ayesha_orchestrator_v2_router.router)  # NEW: Complete care v2 orchestrator - UNIFIED FOR CO-PILOT (Jan 13, 2025)
+app.include_router(complete_care_universal_router.router)  # NEW: Universal complete care orchestrator - ANY PATIENT (Jan 2025)
+app.include_router(biomarker_intelligence_router.router)  # NEW: Universal biomarker intelligence - ANY BIOMARKER (Jan 2025)
+app.include_router(ayesha_dossiers_router.router)  # NEW: Ayesha dossier browser API - DISPLAY ALL 60 TRIALS (Nov 17, 2025)
+app.include_router(dossiers_intelligence_router.router)  # NEW: Universal dossier intelligence API - ANY PATIENT (Nov 2025)
+app.include_router(dossiers_router.router)  # NEW: JR2 dossier generation pipeline (Jan 13, 2025)
+app.include_router(agents_router.router)  # NEW: Zeta Agent system - AUTONOMOUS INTELLIGENCE (Jan 13, 2025)
+app.include_router(sae_router.router)  # NEW: SAE (Sparse Autoencoder) for mechanistic interpretability - PHASE 1 (Jan 14, 2025)
+app.include_router(expression_router.router)  # NEW: Expression ingest endpoints (RUO) (Dec 2025)
+app.include_router(orchestrator_router.router)  # NEW: MOAT Orchestration - State Management & Pipeline Coordination (Jan 2025)
+if gpt_router is not None:
+    app.include_router(gpt_router.router)  # optional
+app.include_router(research_intelligence_router.router)
+app.include_router(patient_kb_router.router)  # NEW: Patient Knowledge Base Agent - Autonomous KB building (Jan 2026)
+app.include_router(holistic_score_router.router)  # NEW: Holistic Score Router - Unified Patient-Trial-Dose Feasibility Score (Jan 2026)
+if surrogate_validator_router is not None:
+    app.include_router(surrogate_validator_router.router)  # NEW: Surrogate Validation Platform  # NEW: Research Intelligence - Full LLM-based research framework (Jan 2025)
+if vus_router is not None:
+    app.include_router(vus_router.router)  # NEW: VUS (Variant of Uncertain Significance) identification and resolution (Jan 2025)
 # Co-Pilot conversational endpoint is via evidence.router → evidence/rag.py → /api/evidence/rag-query
 
 @app.on_event("startup")
 async def _on_startup():
-    """Initialize background services (calibration preload, refresh)."""
+    """Initialize background services (calibration preload, refresh, agent scheduler)."""
     try:
         from .startup import startup_tasks
         await startup_tasks()
     except Exception:
         # Do not block app startup on background init failures
         pass
+    
+    # Start agent scheduler
+    try:
+        from .services.agent_scheduler import get_scheduler
+        scheduler = get_scheduler()
+        await scheduler.start()
+        logger.info("✅ Agent scheduler started")
+    except Exception as e:
+        logger.warning(f"⚠️ Agent scheduler failed to start: {e}")
+        # Do not block app startup
 
 @app.on_event("shutdown")
 async def _on_shutdown():
@@ -129,6 +298,15 @@ async def _on_shutdown():
     try:
         from .startup import shutdown_tasks
         await shutdown_tasks()
+    except Exception:
+        pass
+    
+    # Stop agent scheduler
+    try:
+        from .services.agent_scheduler import get_scheduler
+        scheduler = get_scheduler()
+        await scheduler.stop()
+        logger.info("🛑 Agent scheduler stopped")
     except Exception:
         pass
 
@@ -308,10 +486,52 @@ async def clinvar_context(request: Dict[str, Any]):
         from .routers.evidence import clinvar_context as _clinvar_context
         return await _clinvar_context(request)
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"clinvar_context failed: {e}") 
+        raise HTTPException(status_code=400, detail=f"clinvar_context failed: {e}")
 
-        # Import from evidence router
-        from .routers.evidence import clinvar_context as _clinvar_context
-        return await _clinvar_context(request)
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=f"clinvar_context failed: {e}") 
+# Patient data endpoint for Mutation Explorer
+@app.get("/api/patients/{patient_id}")
+async def get_patient(patient_id: str):
+    """Get patient mutations data for Mutation Explorer"""
+    # Case-insensitive lookup
+    patient_key = patient_id.upper()
+    
+    if patient_key in MOCK_PATIENT_DATA:
+        return {
+            "success": True,
+            "data": MOCK_PATIENT_DATA[patient_key]
+        }
+    else:
+        raise HTTPException(status_code=404, detail=f"Patient ID {patient_id} not found in the database.")
+
+# Mutation analysis endpoint for Mutation Explorer
+@app.post("/api/research/mutation-analysis")
+async def mutation_analysis(request: Dict[str, Any]):
+    """Mock mutation analysis endpoint for VUS Explorer"""
+    patient_id = request.get("patient_id", "")
+    prompt = request.get("prompt", "")
+    
+    # Mock VEP-style analysis
+    return {
+        "status": "complete",
+        "patient_id": patient_id,
+        "query": prompt,
+        "summary": f"Analysis complete for query: {prompt}",
+        "simulated_vep_details": [
+            {
+                "consequence": "missense_variant",
+                "impact": "MODERATE",
+                "gene": "BRAF",
+                "feature": "ENST00000288602",
+                "sift_prediction": "deleterious",
+                "polyphen_prediction": "probably_damaging"
+            }
+        ],
+        "evidence": {
+            "literature_summary": "Variant has been documented in clinical studies.",
+            "clinical_significance": "Likely pathogenic based on computational evidence."
+        },
+        "provenance": {
+            "run_id": "mock-run-" + str(hash(prompt))[:8],
+            "mode": "demo"
+        }
+    }

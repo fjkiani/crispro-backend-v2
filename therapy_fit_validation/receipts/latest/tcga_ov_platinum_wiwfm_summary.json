@@ -1,0 +1,92 @@
+{
+  "run": {
+    "generated_at": "2026-01-11T20:47:24.244708Z",
+    "cohort_path": "tools/benchmarks/tcga_ov_platinum_response_with_genomics.json",
+    "api_base": "http://127.0.0.1:8001",
+    "n_cohort": 166,
+    "n_processed": 7,
+    "n_errors": 1,
+    "settings": {
+      "max_patients": 8,
+      "fast": false,
+      "limit_panel": 15
+    }
+  },
+  "outcome_linkage": {
+    "mapk": {
+      "geneset": [
+        "BRAF",
+        "KRAS",
+        "MAP2K1",
+        "MAP2K2",
+        "NF1",
+        "NRAS"
+      ],
+      "meta": {
+        "n_total": 166,
+        "n_used": 166,
+        "n_skipped_missing_label": 0,
+        "genes_found": [
+          "BRAF",
+          "NF1"
+        ]
+      },
+      "contingency": {
+        "a_exposed_event": 0,
+        "b_exposed_no_event": 5,
+        "c_unexposed_event": 21,
+        "d_unexposed_no_event": 140
+      },
+      "rr": {
+        "relative_risk": 0.0,
+        "ci_lower": null,
+        "ci_upper": null,
+        "risk_exposed": 0.0,
+        "risk_unexposed": 0.1304,
+        "n_exposed": 5,
+        "n_unexposed": 161
+      }
+    },
+    "pi3k": {
+      "geneset": [
+        "AKT1",
+        "AKT2",
+        "PIK3CA",
+        "PIK3CB",
+        "PIK3R1",
+        "PTEN"
+      ],
+      "meta": {
+        "n_total": 166,
+        "n_used": 166,
+        "n_skipped_missing_label": 0,
+        "genes_found": [
+          "PIK3CA",
+          "PTEN"
+        ]
+      },
+      "contingency": {
+        "a_exposed_event": 0,
+        "b_exposed_no_event": 3,
+        "c_unexposed_event": 21,
+        "d_unexposed_no_event": 142
+      },
+      "rr": {
+        "relative_risk": 0.0,
+        "ci_lower": null,
+        "ci_upper": null,
+        "risk_exposed": 0.0,
+        "risk_unexposed": 0.1288,
+        "n_exposed": 3,
+        "n_unexposed": 163
+      }
+    }
+  },
+  "artifacts": {
+    "per_patient_jsonl": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/therapy_fit_validation/receipts/latest/tcga_ov_platinum_wiwfm_per_patient.jsonl"
+  },
+  "notes": [
+    "This receipt validates outcome-linked separation using TCGA-OV platinum response labels.",
+    "Per-patient WIWFM calls are capped by --max-patients for practical runtime."
+  ]
+}

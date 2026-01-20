@@ -1,0 +1,554 @@
+{
+  "patient_id": "AYESHA-001",
+  "disease": "ovarian",
+  "phase": "complete",
+  "created_at": "2025-12-12T02:08:53.807745",
+  "updated_at": "2025-12-12T02:08:55.537484",
+  "patient_profile": {
+    "patient_id": "AYESHA-001",
+    "disease": "ovarian",
+    "mutations": [
+      {
+        "gene": "MBD4",
+        "variant": null,
+        "hgvs_c": null,
+        "hgvs_p": "p.R153*",
+        "chromosome": null,
+        "position": null,
+        "ref": null,
+        "alt": null,
+        "vaf": null,
+        "coverage": null,
+        "zygosity": "unknown",
+        "source": "ngs",
+        "classification": "germline_homozygous"
+      },
+      {
+        "gene": "TP53",
+        "variant": null,
+        "hgvs_c": null,
+        "hgvs_p": "p.R175H",
+        "chromosome": null,
+        "position": null,
+        "ref": null,
+        "alt": null,
+        "vaf": null,
+        "coverage": null,
+        "zygosity": "unknown",
+        "source": "ngs",
+        "classification": "somatic"
+      }
+    ],
+    "cytogenetics": null,
+    "treatment_line": 1,
+    "prior_therapies": null,
+    "current_regimen": "Carboplatin-Paclitaxel"
+  },
+  "biomarker_profile": {
+    "tmb": {
+      "value": 0,
+      "classification": "TMB-L",
+      "threshold_used": 10.0,
+      "mutation_count": 0,
+      "total_mutations": 2,
+      "exome_size_mb": 38.0,
+      "method": "nonsilent_variants_per_mb"
+    },
+    "msi": {
+      "status": "MSS",
+      "dmmr_genes_mutated": [],
+      "method": "gene_panel_with_impact",
+      "confidence": "moderate"
+    },
+    "hrd": {
+      "status": "HRD-",
+      "genes_mutated": [],
+      "method": "comprehensive_ddr_panel",
+      "high_impact_detected": false,
+      "confidence": "moderate"
+    },
+    "io_eligible": false,
+    "parp_eligible": false,
+    "provenance": {
+      "calculation_method": "enhanced_gene_panel",
+      "timestamp": "2025-12-12T02:08:53.814152",
+      "disease": "ovarian"
+    }
+  },
+  "resistance_prediction": null,
+  "drug_ranking": [
+    {
+      "drug_name": "olaparib",
+      "moa": "PARP inhibitor",
+      "efficacy_score": 0.7,
+      "confidence": 0.5,
+      "evidence_tier": "consider",
+      "badges": [
+        "PathwayAligned"
+      ],
+      "rationale": [
+        {
+          "type": "sequence",
+          "value": 1.0,
+          "percentile": 1.0
+        },
+        {
+          "type": "pathway",
+          "percentile": 1.0,
+          "breakdown": {
+            "ras_mapk": 0.0,
+            "tp53": 0.8
+          }
+        },
+        {
+          "type": "evidence",
+          "strength": 0.0
+        }
+      ]
+    },
+    {
+      "drug_name": "niraparib",
+      "moa": "PARP inhibitor",
+      "efficacy_score": 0.7,
+      "confidence": 0.5,
+      "evidence_tier": "consider",
+      "badges": [
+        "PathwayAligned"
+      ],
+      "rationale": [
+        {
+          "type": "sequence",
+          "value": 1.0,
+          "percentile": 1.0
+        },
+        {
+          "type": "pathway",
+          "percentile": 1.0,
+          "breakdown": {
+            "ras_mapk": 0.0,
+            "tp53": 0.8
+          }
+        },
+        {
+          "type": "evidence",
+          "strength": 0.0
+        }
+      ]
+    },
+    {
+      "drug_name": "rucaparib",
+      "moa": "PARP inhibitor",
+      "efficacy_score": 0.7,
+      "confidence": 0.5,
+      "evidence_tier": "consider",
+      "badges": [
+        "PathwayAligned"
+      ],
+      "rationale": [
+        {
+          "type": "sequence",
+          "value": 1.0,
+          "percentile": 1.0
+        },
+        {
+          "type": "pathway",
+          "percentile": 1.0,
+          "breakdown": {
+            "ras_mapk": 0.0,
+            "tp53": 0.8
+          }
+        },
+        {
+          "type": "evidence",
+          "strength": 0.0
+        }
+      ]
+    },
+    {
+      "drug_name": "carboplatin",
+      "moa": "platinum alkylating agent",
+      "efficacy_score": 0.7,
+      "confidence": 0.5,
+      "evidence_tier": "consider",
+      "badges": [
+        "PathwayAligned"
+      ],
+      "rationale": [
+        {
+          "type": "sequence",
+          "value": 1.0,
+          "percentile": 1.0
+        },
+        {
+          "type": "pathway",
+          "percentile": 1.0,
+          "breakdown": {
+            "ras_mapk": 0.0,
+            "tp53": 0.8
+          }
+        },
+        {
+          "type": "evidence",
+          "strength": 0.0
+        }
+      ]
+    },
+    {
+      "drug_name": "bevacizumab",
+      "moa": "anti-VEGF",
+      "efficacy_score": 0.3,
+      "confidence": 0.45,
+      "evidence_tier": "consider",
+      "badges": [],
+      "rationale": [
+        {
+          "type": "sequence",
+          "value": 1.0,
+          "percentile": 1.0
+        },
+        {
+          "type": "pathway",
+          "percentile": 0.0,
+          "breakdown": {
+            "ras_mapk": 0.0,
+            "tp53": 0.8
+          }
+        },
+        {
+          "type": "evidence",
+          "strength": 0.0
+        }
+      ]
+    },
+    {
+      "drug_name": "pembrolizumab",
+      "moa": "anti-PD-1",
+      "efficacy_score": 0.3,
+      "confidence": 0.45,
+      "evidence_tier": "consider",
+      "badges": [],
+      "rationale": [
+        {
+          "type": "sequence",
+          "value": 1.0,
+          "percentile": 1.0
+        },
+        {
+          "type": "pathway",
+          "percentile": 0.0,
+          "breakdown": {
+            "ras_mapk": 0.0,
+            "tp53": 0.8
+          }
+        },
+        {
+          "type": "evidence",
+          "strength": 0.0
+        }
+      ]
+    }
+  ],
+  "trial_matches": [],
+  "nutrition_plan": {
+    "patient_id": "AYESHA-001",
+    "treatment": "Carboplatin-Paclitaxel",
+    "supplements": [],
+    "foods_to_prioritize": [],
+    "foods_to_avoid": [],
+    "drug_food_interactions": [],
+    "timing_rules": {
+      "general": "Take supplements with food unless otherwise specified"
+    },
+    "provenance": {
+      "method": "toxicity_aware_moat",
+      "drug_moa": "unknown",
+      "pathway_overlap": {
+        "dna_repair": 0.13662040962227034,
+        "inflammation": 0.0,
+        "cardiometabolic": 0.0
+      },
+      "germline_genes_analyzed": 2,
+      "llm_enhanced": true
+    }
+  },
+  "care_plan": {
+    "patient_id": "AYESHA-001",
+    "disease": "ovarian",
+    "generated_at": "2025-12-12T02:08:55.539080",
+    "error": "'AgentExecution' object has no attribute 'agent_name'",
+    "sections": []
+  },
+  "monitoring_config": {
+    "frequency": "monthly",
+    "biomarkers": [
+      "CA-125"
+    ],
+    "primary_biomarker": "CA-125",
+    "imaging": "CT every 6 months",
+    "alerts_enabled": true,
+    "escalation_thresholds": {
+      "biomarker_rise_percent": 50,
+      "new_lesion": true,
+      "symptom_worsening": true,
+      "performance_status_drop": true
+    },
+    "ctdna_monitoring": {},
+    "risk_level": "LOW",
+    "provenance": {
+      "configured_at": "2025-12-12T02:08:55.540590",
+      "based_on": {
+        "resistance_risk": "LOW",
+        "tmb_status": "TMB-L",
+        "hrd_status": "HRD-"
+      }
+    }
+  },
+  "mechanism_vector": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "mutations": [
+    {
+      "gene": "MBD4",
+      "variant": null,
+      "hgvs_c": null,
+      "hgvs_p": "p.R153*",
+      "chromosome": null,
+      "position": null,
+      "ref": null,
+      "alt": null,
+      "vaf": null,
+      "coverage": null,
+      "zygosity": "unknown",
+      "source": "ngs",
+      "classification": "germline_homozygous"
+    },
+    {
+      "gene": "TP53",
+      "variant": null,
+      "hgvs_c": null,
+      "hgvs_p": "p.R175H",
+      "chromosome": null,
+      "position": null,
+      "ref": null,
+      "alt": null,
+      "vaf": null,
+      "coverage": null,
+      "zygosity": "unknown",
+      "source": "ngs",
+      "classification": "somatic"
+    }
+  ],
+  "data_quality_flags": [],
+  "alerts": [
+    {
+      "id": "822192fa-d183-4631-a3d8-e37599912b0f",
+      "alert_type": "resistance_error",
+      "message": "'ResistanceProphetService' object has no attribute 'predict_platinum_resistance'",
+      "severity": "warning",
+      "timestamp": "2025-12-12T02:08:53.859935",
+      "source_agent": "resistance",
+      "acknowledged": false
+    }
+  ],
+  "history": [
+    {
+      "id": "191273d9-46b0-4be9-b3dc-700bf1a6128f",
+      "timestamp": "2025-12-12T02:08:55.537504",
+      "field": "trial_matches",
+      "old_value": null,
+      "new_value": "List[0 items]",
+      "agent": "trial_matching",
+      "reason": "Trial matching complete"
+    }
+  ],
+  "agent_executions": [
+    {
+      "agent_id": "biomarker",
+      "started_at": "2025-12-12T02:08:53.814121",
+      "completed_at": "2025-12-12T02:08:53.814159",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "tmb": {
+          "value": 0,
+          "classification": "TMB-L",
+          "threshold_used": 10.0,
+          "mutation_count": 0,
+          "total_mutations": 2,
+          "exome_size_mb": 38.0,
+          "method": "nonsilent_variants_per_mb"
+        },
+        "msi": {
+          "status": "MSS",
+          "dmmr_genes_mutated": [],
+          "method": "gene_panel_with_impact",
+          "confidence": "moderate"
+        },
+        "hrd": {
+          "status": "HRD-",
+          "genes_mutated": [],
+          "method": "comprehensive_ddr_panel",
+          "high_impact_detected": false,
+          "confidence": "moderate"
+        },
+        "io_eligible": false,
+        "parp_eligible": false,
+        "provenance": {
+          "calculation_method": "enhanced_gene_panel",
+          "timestamp": "2025-12-12T02:08:53.814152",
+          "disease": "ovarian"
+        }
+      },
+      "duration_ms": 0.038
+    },
+    {
+      "agent_id": "resistance",
+      "started_at": "2025-12-12T02:08:53.814165",
+      "completed_at": "2025-12-12T02:08:53.814661",
+      "status": "error",
+      "error": "'ResistanceProphetService' object has no attribute 'predict_platinum_resistance'",
+      "output_summary": null,
+      "duration_ms": 0.496
+    },
+    {
+      "agent_id": "nutrition",
+      "started_at": "2025-12-12T02:08:53.814669",
+      "completed_at": "2025-12-12T02:08:53.859242",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "patient_id": "AYESHA-001",
+        "treatment": "Carboplatin-Paclitaxel",
+        "supplements": [],
+        "foods_to_prioritize": [],
+        "foods_to_avoid": [],
+        "drug_food_interactions": [],
+        "timing_rules": {
+          "general": "Take supplements with food unless otherwise specified"
+        },
+        "provenance": {
+          "method": "toxicity_aware_moat",
+          "drug_moa": "unknown",
+          "pathway_overlap": {
+            "dna_repair": 0.13662040962227034,
+            "inflammation": 0.0,
+            "cardiometabolic": 0.0
+          },
+          "germline_genes_analyzed": 2,
+          "llm_enhanced": true
+        }
+      },
+      "duration_ms": 44.573
+    },
+    {
+      "agent_id": "drug_efficacy",
+      "started_at": "2025-12-12T02:08:53.861734",
+      "completed_at": "2025-12-12T02:08:54.190254",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "drugs_ranked": 6,
+        "top_drug": "olaparib"
+      },
+      "duration_ms": 328.52
+    },
+    {
+      "agent_id": "synthetic_lethality",
+      "started_at": "2025-12-12T02:08:54.191874",
+      "completed_at": "2025-12-12T02:08:54.199432",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "sl_detected": true,
+        "genes_scored": 2,
+        "drugs_recommended": 2,
+        "calculation_time_ms": 7
+      },
+      "duration_ms": 7.558
+    },
+    {
+      "agent_id": "trial_matching",
+      "started_at": "2025-12-12T02:08:54.201159",
+      "completed_at": "2025-12-12T02:08:55.537511",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "trials_matched": 0,
+        "top_trial": null,
+        "queries_used": 0,
+        "search_time_ms": 0
+      },
+      "duration_ms": 1336.352
+    },
+    {
+      "agent_id": "care_plan",
+      "started_at": "2025-12-12T02:08:55.539032",
+      "completed_at": "2025-12-12T02:08:55.539084",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "sections": 0
+      },
+      "duration_ms": 0.052
+    },
+    {
+      "agent_id": "care_plan",
+      "started_at": "2025-12-12T02:08:55.539036",
+      "completed_at": "2025-12-12T02:08:55.539049",
+      "status": "error",
+      "error": "'AgentExecution' object has no attribute 'agent_name'",
+      "output_summary": null,
+      "duration_ms": 0.013
+    },
+    {
+      "agent_id": "monitoring",
+      "started_at": "2025-12-12T02:08:55.540583",
+      "completed_at": "2025-12-12T02:08:55.540593",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "configured": true
+      },
+      "duration_ms": 0.01
+    },
+    {
+      "agent_id": "monitoring",
+      "started_at": "2025-12-12T02:08:55.540586",
+      "completed_at": "2025-12-12T02:08:55.540592",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "frequency": "monthly",
+        "biomarkers": [
+          "CA-125"
+        ],
+        "primary_biomarker": "CA-125",
+        "imaging": "CT every 6 months",
+        "alerts_enabled": true,
+        "escalation_thresholds": {
+          "biomarker_rise_percent": 50,
+          "new_lesion": true,
+          "symptom_worsening": true,
+          "performance_status_drop": true
+        },
+        "ctdna_monitoring": {},
+        "risk_level": "LOW",
+        "provenance": {
+          "configured_at": "2025-12-12T02:08:55.540590",
+          "based_on": {
+            "resistance_risk": "LOW",
+            "tmb_status": "TMB-L",
+            "hrd_status": "HRD-"
+          }
+        }
+      },
+      "duration_ms": 0.006
+    }
+  ]
+}

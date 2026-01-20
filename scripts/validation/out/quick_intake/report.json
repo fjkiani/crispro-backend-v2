@@ -1,0 +1,159 @@
+{
+  "timestamp": "2025-12-31T02:35:40.194697",
+  "total_cancers": 15,
+  "passed": 15,
+  "failed": 0,
+  "results": {
+    "ovarian_hgs": {
+      "passed": true,
+      "data": {
+        "tmb": 5.2,
+        "hrd_score": 42.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "breast_tnbc": {
+      "passed": true,
+      "data": {
+        "tmb": 1.8,
+        "hrd_score": 28.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "colorectal": {
+      "passed": true,
+      "data": {
+        "tmb": 3.5,
+        "hrd_score": 18.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "lung_nsclc": {
+      "passed": true,
+      "data": {
+        "tmb": 8.5,
+        "hrd_score": 12.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "pancreatic": {
+      "passed": true,
+      "data": {
+        "tmb": 1.2,
+        "hrd_score": 15.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "prostate_adenocarcinoma": {
+      "passed": true,
+      "data": {
+        "tmb": 0.8,
+        "hrd_score": 18.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "melanoma_cutaneous": {
+      "passed": true,
+      "data": {
+        "tmb": 15.0,
+        "hrd_score": 10.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "bladder_urothelial": {
+      "passed": true,
+      "data": {
+        "tmb": 6.5,
+        "hrd_score": 22.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "endometrial_uterine": {
+      "passed": true,
+      "data": {
+        "tmb": 4.5,
+        "hrd_score": 25.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "gastric_adenocarcinoma": {
+      "passed": true,
+      "data": {
+        "tmb": 3.8,
+        "hrd_score": 18.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "esophageal_adenocarcinoma": {
+      "passed": true,
+      "data": {
+        "tmb": 4.2,
+        "hrd_score": 15.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "head_neck_squamous": {
+      "passed": true,
+      "data": {
+        "tmb": 3.5,
+        "hrd_score": 12.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "glioblastoma_multiforme": {
+      "passed": true,
+      "data": {
+        "tmb": 1.5,
+        "hrd_score": 10.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "renal_clear_cell": {
+      "passed": true,
+      "data": {
+        "tmb": 1.8,
+        "hrd_score": 15.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    },
+    "acute_myeloid_leukemia": {
+      "passed": true,
+      "data": {
+        "tmb": 0.5,
+        "hrd_score": 8.0,
+        "msi_status": null,
+        "completeness_score": 0.5,
+        "confidence_cap": 0.4
+      }
+    }
+  },
+  "status": "PASS"
+}

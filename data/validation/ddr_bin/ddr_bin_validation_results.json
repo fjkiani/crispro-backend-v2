@@ -1,0 +1,55 @@
+{
+  "validation_timestamp": "2026-01-18T05:06:17.687937",
+  "test_cases": 8,
+  "validation_results": {
+    "total_test_cases": 8,
+    "correct": 7,
+    "incorrect": 1,
+    "errors": [
+      {
+        "test_id": "TC004_extended_DDR_prostate",
+        "patient_id": "SYNTH_PR001",
+        "computed_status": "DDR_defective",
+        "expected_status": "DDR_defective",
+        "is_correct": true,
+        "additional_checks": [
+          "extended_DDR_pathogenic mismatch"
+        ],
+        "full_result": {
+          "patient_id": "SYNTH_PR001",
+          "disease_site": "prostate",
+          "tumor_subtype": null,
+          "DDR_bin_status": "DDR_defective",
+          "HRD_status_inferred": "unknown",
+          "HRD_score_raw": null,
+          "BRCA_pathogenic": false,
+          "core_HRR_pathogenic": true,
+          "extended_DDR_pathogenic": false,
+          "DDR_score": 2.0,
+          "DDR_features_used": "[\"core_hrr_pathogenic\"]"
+        }
+      }
+    ],
+    "per_disease_site": {
+      "ovary": {
+        "correct": 6,
+        "incorrect": 0,
+        "total": 6,
+        "accuracy": 1.0
+      },
+      "breast": {
+        "correct": 1,
+        "incorrect": 0,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "prostate": {
+        "correct": 0,
+        "incorrect": 1,
+        "total": 1,
+        "accuracy": 0.0
+      }
+    },
+    "accuracy": 0.875
+  }
+}

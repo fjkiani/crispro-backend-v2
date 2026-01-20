@@ -1,16 +1,36 @@
 """
 Sporadic Cancer Scoring Gates (Day 2 - Module M3)
 
-Applies germline gating, PARP penalty, immunotherapy boosts, and confidence capping
-based on tumor context and germline status.
+Thin orchestrator that applies modular gates for different drug classes and cancer types.
 
 Mission: Handle 85-90% of cancer patients with sporadic (germline-negative) cancers
+
+Architecture:
+- Modular gate functions for each drug class/cancer type
+- Easy to add new cancer types by creating new gate modules
+- Main function orchestrates all gates in priority order
+
+Current Modules:
+- parp_gates.py: PARP penalty/rescue (germline + HRD)
+- io_pathway_gates.py: IO boost (pathway-based + TMB/MSI)
+- ovarian_pathway_gates.py: Ovarian pathway-based PARP/platinum resistance
+- confidence_capping.py: Confidence capping by completeness level
 """
-from typing import Dict, Any, Optional, List, Tuple
+from typing import Dict, Any, Optional, List, Tuple, Set
 import logging
+import numpy as np
+import pandas as pd
+
+# Import modular gate functions
+from .parp_gates import apply_parp_gates
+from .confidence_capping import apply_confidence_capping
+from .ovarian_pathway_gates import apply_ovarian_pathway_gates
+from .io_pathway_gates import apply_io_boost
 
 logger = logging.getLogger(__name__)
 
+# MMR genes: mutations → MSI-H phenotype
+MMR_GENES: Set[str] = {"MLH1", "MSH2", "MSH6", "PMS2", "EPCAM"}
 
 def apply_sporadic_gates(
     drug_name: str,
@@ -19,7 +39,9 @@ def apply_sporadic_gates(
     efficacy_score: float,
     confidence: float,
     germline_status: str,
-    tumor_context: Optional[Dict[str, Any]] = None
+    tumor_context: Optional[Dict[str, Any]] = None,
+    germline_mutations: Optional[List[Dict[str, Any]]] = None,
+    cancer_type: Optional[str] = None  # NEW: For IO pathway validation checks
 ) -> Tuple[float, float, List[str]]:
     """
     Apply sporadic cancer scoring gates to adjust efficacy and confidence.
@@ -31,7 +53,8 @@ def apply_sporadic_gates(
         efficacy_score: Base efficacy score (0-1)
         confidence: Base confidence (0-1)
         germline_status: "positive", "negative", "unknown"
-        tumor_context: TumorContext dict with TMB, MSI, HRD, etc.
+        tumor_context: TumorContext dict with TMB, MSI, HRD, mutations, etc.
+        germline_mutations: Optional list of germline mutations for hypermutator inference
     
     Returns:
         Tuple of (adjusted_efficacy, adjusted_confidence, rationale_list)
@@ -53,77 +76,56 @@ def apply_sporadic_gates(
             level = "L0"  # Minimal data
     
     # ============================================================================
-    # GATE 1: PARP INHIBITOR PENALTY (GERMLINE GATING)
+    # GATE 1: PARP INHIBITOR GATES (Modular)
     # ============================================================================
-    # Critical for Ayesha: Germline BRCA- patients need HRD rescue for PARP!
-    # 
-    # Logic:
-    # - Germline positive → Full PARP effect (1.0x)
-    # - Germline negative + HRD ≥42 → Rescue PARP! (1.0x) ⚔️
-    # - Germline negative + HRD <42 → Reduced effect (0.6x)
-    # - Unknown germline + unknown HRD → Conservative penalty (0.8x)
+    # Uses modular parp_gates.py for clean separation of concerns
     # ============================================================================
+    parp_penalty, parp_rationale = apply_parp_gates(
+        drug_class=drug_class,
+        moa=moa,
+        germline_status=germline_status,
+        tumor_context=tumor_context,
+        expression_data=tumor_context.get("expression") if tumor_context else None,
+        cancer_type=cancer_type
+    )
     
-    if "parp" in drug_class.lower() or "parp" in moa.lower():
-        parp_penalty = 1.0  # Default: no penalty
-        
-        if germline_status == "positive":
-            # Germline BRCA1/2 positive → full PARP effect
-            parp_penalty = 1.0
-            rationale.append({
-                "gate": "PARP_GERMLINE",
-                "verdict": "FULL_EFFECT",
-                "penalty": 1.0,
-                "reason": "Germline BRCA1/2 positive → PARP inhibitor appropriate"
-            })
-        
-        elif germline_status == "negative":
-            # Germline negative → check tumor HRD
-            if tumor_context and tumor_context.get("hrd_score") is not None:
-                hrd_score = tumor_context["hrd_score"]
-                
-                if hrd_score >= 42:
-                    # HRD-high rescue! ⚔️
-                    parp_penalty = 1.0
-                    rationale.append({
-                        "gate": "PARP_HRD_RESCUE",
-                        "verdict": "RESCUED",
-                        "penalty": 1.0,
-                        "hrd_score": hrd_score,
-                        "reason": f"Germline negative BUT HRD-high (≥42): score={hrd_score:.1f} → PARP rescued! ⚔️"
-                    })
-                else:
-                    # HRD present but <42
-                    parp_penalty = 0.6
-                    rationale.append({
-                        "gate": "PARP_HRD_LOW",
-                        "verdict": "REDUCED",
-                        "penalty": 0.6,
-                        "hrd_score": hrd_score,
-                        "reason": f"Germline negative, HRD<42 (score={hrd_score:.1f}) → PARP reduced to 0.6x"
-                    })
-            else:
-                # Unknown HRD, germline negative
-                parp_penalty = 0.8
-                rationale.append({
-                    "gate": "PARP_UNKNOWN_HRD",
-                    "verdict": "CONSERVATIVE",
-                    "penalty": 0.8,
-                    "reason": "Germline negative, HRD unknown → PARP conservative penalty 0.8x"
-                })
-        
-        elif germline_status == "unknown":
-            # Unknown germline, unknown HRD
-            parp_penalty = 0.8
-            rationale.append({
-                "gate": "PARP_UNKNOWN_GERMLINE",
-                "verdict": "CONSERVATIVE",
-                "penalty": 0.8,
-                "reason": "Germline status unknown → PARP conservative penalty 0.8x"
-            })
-        
-        # Apply penalty
+    if parp_rationale["gate"] is not None:
+        rationale.append(parp_rationale)
         efficacy_score *= parp_penalty
+    
+    # ============================================================================
+    # GATE 1B: OVARIAN PATHWAY-BASED PARP/PLATINUM GATES (Modular)
+    # ============================================================================
+    # If expression data available, use pathway-based resistance prediction
+    # This can further adjust PARP/platinum efficacy beyond HRD-based logic
+    # ============================================================================
+    if parp_penalty < 1.0 or "platinum" in drug_class.lower() or "platinum" in moa.lower():
+        # Only apply if PARP penalty was applied OR if this is a platinum drug
+        expression_data = tumor_context.get("expression") if tumor_context else None
+        if expression_data is None:
+            expression_data = tumor_context.get("rna_seq") if tumor_context else None
+        
+        # Convert expression dict to DataFrame if needed
+        expr_df = None
+        if expression_data is not None:
+            if isinstance(expression_data, dict):
+                expr_df = pd.DataFrame([expression_data]).T
+                expr_df.columns = ['sample']
+            elif isinstance(expression_data, pd.DataFrame):
+                expr_df = expression_data
+        
+        ovarian_multiplier, ovarian_rationale = apply_ovarian_pathway_gates(
+            drug_class=drug_class,
+            moa=moa,
+            tumor_context=tumor_context,
+            expression_data=expr_df,
+            cancer_type=cancer_type
+        )
+        
+        if ovarian_rationale["gate"] is not None and ovarian_rationale["verdict"] != "NOT_OVARIAN_DRUG":
+            rationale.append(ovarian_rationale)
+            # Apply multiplier (can further reduce efficacy if pathway predicts resistance)
+            efficacy_score *= ovarian_multiplier
     
     # ============================================================================
     # GATE 2: IMMUNOTHERAPY BOOST (TMB-HIGH / MSI-HIGH)
@@ -145,91 +147,54 @@ def apply_sporadic_gates(
     )
     
     if is_checkpoint and tumor_context:
-        # IO boost logic: Use HIGHEST boost (if-elif chain, not multiplicative)
-        # Priority: MSI-H (1.30x) > TMB ≥20 (1.35x) > TMB ≥10 (1.25x)
-        # Per Zo's A4 answer: mutually exclusive, highest priority wins
-        io_boost_factor = 1.0
+        # ====================================================================
+        # GATE 2: IMMUNOTHERAPY BOOST (Multi-Signal Integration)
+        # ====================================================================
+        # Use modular apply_io_boost() function for clean separation of concerns
+        # Priority: Pathway-based LR composite > TMB ≥20 > MSI-H > TMB ≥10 > Hypermutator flag
+        # ====================================================================
+        expression_data = tumor_context.get("expression")
+        if expression_data is None:
+            expression_data = tumor_context.get("rna_seq")
         
-        tmb = tumor_context.get("tmb")
-        msi_status = tumor_context.get("msi_status")
+        # Convert expression dict to DataFrame if needed
+        expr_df = None
+        if expression_data is not None:
+            if isinstance(expression_data, dict):
+                expr_df = pd.DataFrame([expression_data]).T
+                expr_df.columns = ['sample']
+            elif isinstance(expression_data, pd.DataFrame):
+                expr_df = expression_data
         
-        # IO boost priority: TMB ≥20 (1.35x) > MSI-H (1.30x) > TMB ≥10 (1.25x)
-        # Check TMB ≥20 first (highest boost, takes precedence)
-        if tmb is not None and tmb >= 20:
-            io_boost_factor = 1.35
-            rationale.append({
-                "gate": "IO_TMB_BOOST",
-                "verdict": "BOOSTED",
-                "boost": 1.35,
-                "tmb": tmb,
-                "reason": f"TMB-high (≥20): {tmb:.1f} mut/Mb → Checkpoint inhibitor boost 1.35x"
-            })
-        # Check MSI-H (second priority)
-        elif msi_status:
-            # Accept both "MSI-H" and "MSI-High" formats (case-insensitive)
-            msi_upper = str(msi_status).upper()
-            if msi_upper in ["MSI-H", "MSI-HIGH"]:
-                io_boost_factor = 1.30
-                rationale.append({
-                    "gate": "IO_MSI_BOOST",
-                    "verdict": "BOOSTED",
-                    "boost": 1.30,
-                    "msi_status": msi_status,
-                    "reason": f"MSI-High ({msi_status}) → Checkpoint inhibitor boost 1.30x"
-                })
-        # Check TMB ≥10 (lowest priority)
-        elif tmb is not None and tmb >= 10:
-            io_boost_factor = 1.25
-            rationale.append({
-                "gate": "IO_TMB_BOOST",
-                "verdict": "BOOSTED",
-                "boost": 1.25,
-                "tmb": tmb,
-                "reason": f"TMB-intermediate (≥10): {tmb:.1f} mut/Mb → Checkpoint inhibitor boost 1.25x"
-            })
+        # Apply IO boost using modular function
+        io_boost_factor, io_rationale = apply_io_boost(
+            tumor_context=tumor_context,
+            expression_data=expr_df,
+            germline_mutations=germline_mutations,
+            cancer_type=cancer_type  # Pass cancer type for validation checks
+        )
+        
+        # Add rationale to main rationale list
+        rationale.append(io_rationale)
         
         # Apply boost (single factor, not multiplicative)
         efficacy_score *= io_boost_factor
         
         if io_boost_factor > 1.0:
-            logger.info(f"✅ IO BOOST APPLIED: {drug_name} boosted {io_boost_factor:.2f}x")
+            logger.info(f"IO BOOST APPLIED: {drug_name} boosted {io_boost_factor:.2f}x")
     
     # ============================================================================
-    # GATE 3: CONFIDENCE CAPPING BY COMPLETENESS LEVEL
+    # GATE 3: CONFIDENCE CAPPING BY COMPLETENESS LEVEL (Modular)
     # ============================================================================
-    # Logic:
-    # - Level 0 (completeness <0.3): Cap confidence at 0.4 (low quality data)
-    # - Level 1 (0.3 ≤ completeness <0.7): Cap confidence at 0.6 (moderate quality)
-    # - Level 2 (completeness ≥0.7): No cap (high quality data)
+    # Uses modular confidence_capping.py for clean separation of concerns
     # ============================================================================
+    confidence, confidence_rationale = apply_confidence_capping(
+        confidence=confidence,
+        tumor_context=tumor_context
+    )
     
-    if level == "L0":
-        # Cap at 0.4 for minimal data
-        if confidence > 0.4:
-            confidence = 0.4
-            rationale.append({
-                "gate": "CONFIDENCE_CAP_L0",
-                "verdict": "CAPPED",
-                "cap": 0.4,
-                "level": "L0",
-                "completeness": completeness_score,
-                "reason": f"Level 0 data (completeness={completeness_score:.2f}) → confidence capped at 0.4"
-            })
-    
-    elif level == "L1":
-        # Cap at 0.6 for partial data
-        if confidence > 0.6:
-            confidence = 0.6
-            rationale.append({
-                "gate": "CONFIDENCE_CAP_L1",
-                "verdict": "CAPPED",
-                "cap": 0.6,
-                "level": "L1",
-                "completeness": completeness_score,
-                "reason": f"Level 1 data (completeness={completeness_score:.2f}) → confidence capped at 0.6"
-            })
-    
-    # Level 2: No cap (full report, high quality)
+    if confidence_rationale["gate"] is not None:
+        rationale.append(confidence_rationale)
     
     # ============================================================================
     # FINAL CLAMPING (ENSURE VALID BOUNDS)

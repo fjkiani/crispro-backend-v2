@@ -1,0 +1,18 @@
+{
+  "n_pos_initial": 10,
+  "n_neg_initial": 10,
+  "n_pos_valid": 10,
+  "n_neg_valid": 10,
+  "n_filtered": 0,
+  "model_id": "evo2_7b",
+  "api_base": "http://127.0.0.1:8000",
+  "metrics": {
+    "auroc": 0.5999999999999999,
+    "auprc": 0.637703081232493
+  },
+  "metrics_supervised_groupcv": {
+    "auroc": 0.34,
+    "auprc": 0.5196212714014571
+  },
+  "metrics_fused_baseline": null
+}

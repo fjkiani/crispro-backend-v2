@@ -1,0 +1,15 @@
+{
+  "n_labeled": 149,
+  "n_zero": 73,
+  "pct_zero": 48.99328859060403,
+  "auroc_all": 0.698,
+  "auroc_nonzero_only": 0.5689655172413793,
+  "coverage": {
+    "mean_ddr_bin_coverage": 0.06355695944622118,
+    "median_ddr_bin_coverage": 0.06666666666666667,
+    "pct_patients_coverage_gt_0": 51.006711409395976,
+    "mean_num_variants": 10.053691275167786,
+    "median_num_variants": 10.0
+  },
+  "interpretation": "Sparsity reflects diamond hits missing from top-K variant features; nonzero-only AUROC quantifies signal conditional on coverage."
+}

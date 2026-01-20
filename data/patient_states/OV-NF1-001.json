@@ -1,0 +1,36 @@
+{
+  "patient_id": "OV-NF1-001",
+  "disease": "ovarian",
+  "phase": "validation_fixture",
+  "created_at": "2025-12-24T00:00:00.000000",
+  "updated_at": "2025-12-24T00:00:00.000000",
+  "patient_profile": {
+    "patient_id": "OV-NF1-001",
+    "disease": "ovarian",
+    "mutations": [
+      {
+        "gene": "NF1",
+        "variant": null,
+        "hgvs_c": null,
+        "hgvs_p": "p.R1391*",
+        "chromosome": null,
+        "position": null,
+        "ref": null,
+        "alt": null,
+        "vaf": null,
+        "coverage": null,
+        "zygosity": "unknown",
+        "source": "somatic",
+        "classification": "somatic_loss_of_function"
+      }
+    ],
+    "treatment_line": 1,
+    "prior_therapies": [],
+    "current_regimen": "carboplatin/paclitaxel",
+    "stage": "IVB",
+    "sex": "female",
+    "age": 50,
+    "location_state": "NY",
+    "ca125_value": 900.0
+  }
+}

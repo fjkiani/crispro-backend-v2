@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "errors": [],
+  "stats": {
+    "total": 100,
+    "positive": 70,
+    "with_pmids": 70
+  }
+}

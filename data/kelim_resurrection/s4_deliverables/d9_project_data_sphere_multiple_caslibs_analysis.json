@@ -1,0 +1,493 @@
+{
+  "metadata": {
+    "date": "2025-12-30T01:48:49.607067",
+    "multiple_caslibs": 6,
+    "ovarian_keywords": [
+      "ovarian",
+      "ovary",
+      "ov",
+      "gynecologic",
+      "gyn",
+      "ca125",
+      "ca-125",
+      "platinum",
+      "pfi"
+    ]
+  },
+  "results": [
+    {
+      "caslib_name": "Multiple_Allianc_2002_202",
+      "description": "API-created caslib",
+      "files": [
+        {
+          "name": "casecrse.sas7bdat",
+          "size": 262144
+        },
+        {
+          "name": "chklist.sas7bdat",
+          "size": 262144
+        },
+        {
+          "name": "chklist2.sas7bdat",
+          "size": 196608
+        },
+        {
+          "name": "end_at.sas7bdat",
+          "size": 262144
+        },
+        {
+          "name": "fagerstm.sas7bdat",
+          "size": 262144
+        },
+        {
+          "name": "n99c4_ddt.docx",
+          "size": 33156
+        },
+        {
+          "name": "n99c4_forms.pdf",
+          "size": 1743143
+        },
+        {
+          "name": "n99c4_protocol.doc",
+          "size": 2658304
+        },
+        {
+          "name": "relapse.sas7bdat",
+          "size": 262144
+        },
+        {
+          "name": "smokehx.sas7bdat",
+          "size": 589824
+        },
+        {
+          "name": "visit.sas7bdat",
+          "size": 2883584
+        },
+        {
+          "name": "wt_scale.sas7bdat",
+          "size": 262144
+        }
+      ],
+      "ovarian_files": [],
+      "dictionary_files": [],
+      "clinical_files": []
+    },
+    {
+      "caslib_name": "Multiple_Allianc_2002_213",
+      "description": "API-created caslib",
+      "files": [
+        {
+          "name": "NCT00052910_D1_(EFFICACY).csv",
+          "size": 55433
+        },
+        {
+          "name": "CRFs.pdf",
+          "size": 122347
+        },
+        {
+          "name": "NCT00052910_COMBINED_Data_Dictionary.pdf",
+          "size": 442563
+        },
+        {
+          "name": "NCT00052910_D2_(AE).csv",
+          "size": 441067
+        },
+        {
+          "name": "protocol.pdf",
+          "size": 841709
+        }
+      ],
+      "ovarian_files": [],
+      "dictionary_files": [
+        {
+          "name": "NCT00052910_COMBINED_Data_Dictionary.pdf",
+          "size": 442563
+        }
+      ],
+      "clinical_files": [
+        {
+          "name": "NCT00052910_COMBINED_Data_Dictionary.pdf",
+          "size": 442563
+        }
+      ]
+    },
+    {
+      "caslib_name": "Multiple_Amgen_2006_156",
+      "description": "API-created caslib",
+      "files": [
+        {
+          "name": "dataFiles_902",
+          "size": 4096
+        },
+        {
+          "name": "20050244 Protocol Amend 1 REDACTED.pdf",
+          "size": 2080492
+        },
+        {
+          "name": "Amgen 20050244 CRF REDACTED.pdf",
+          "size": 1155847
+        },
+        {
+          "name": "Amgen 20050244 DDT.pdf",
+          "size": 327452
+        },
+        {
+          "name": "Amgen 20050244 SAS datasets.zip",
+          "size": 5175291
+        }
+      ],
+      "ovarian_files": [],
+      "dictionary_files": [],
+      "clinical_files": [
+        {
+          "name": "dataFiles_902",
+          "size": 4096
+        },
+        {
+          "name": "Amgen 20050244 SAS datasets.zip",
+          "size": 5175291
+        }
+      ]
+    },
+    {
+      "caslib_name": "Multiple_Brigham_454",
+      "description": "API-created caslib",
+      "files": [
+        {
+          "name": "MacFarlane VITAL VitD fish oil knee pain ArthRheum 2020.pdf",
+          "size": 363443
+        },
+        {
+          "name": "Manson_VITAL_protocol_NEJM_2019.pdf",
+          "size": 1560343
+        },
+        {
+          "name": "PDS_DATA_PROFILE_CREATED_VITAL_trial_NEJM_2022.xlsx",
+          "size": 16493
+        },
+        {
+          "name": "VITAL_data_dictionary_2023_1.docx",
+          "size": 23485
+        },
+        {
+          "name": "VITAL_trial_NEJM_2022.sas7bdat",
+          "size": 15990784
+        },
+        {
+          "name": "vitalkneepain111623.sas7bdat",
+          "size": 393216
+        },
+        {
+          "name": "vitalstatin.sas7bdat",
+          "size": 131072
+        }
+      ],
+      "ovarian_files": [],
+      "dictionary_files": [
+        {
+          "name": "VITAL_data_dictionary_2023_1.docx",
+          "size": 23485
+        }
+      ],
+      "clinical_files": [
+        {
+          "name": "PDS_DATA_PROFILE_CREATED_VITAL_trial_NEJM_2022.xlsx",
+          "size": 16493
+        },
+        {
+          "name": "VITAL_data_dictionary_2023_1.docx",
+          "size": 23485
+        }
+      ]
+    },
+    {
+      "caslib_name": "Multiple_MerckKG_2008_441",
+      "description": "API-created caslib",
+      "files": [
+        {
+          "name": "Proc Contents Data Dictionary EMD121974_011.pdf",
+          "size": 235371
+        },
+        {
+          "name": "CTP_EMD121974-011_final_redacted.pdf",
+          "size": 1170457
+        },
+        {
+          "name": "Descriptive_Stats_EMD121974_011.xlsx",
+          "size": 84290
+        },
+        {
+          "name": "ae.xpt",
+          "size": 2318720
+        },
+        {
+          "name": "blankcrf.pdf",
+          "size": 7952331
+        },
+        {
+          "name": "cm.xpt",
+          "size": 6962480
+        },
+        {
+          "name": "co.xpt",
+          "size": 3757920
+        },
+        {
+          "name": "datadict.xpt",
+          "size": 331600
+        },
+        {
+          "name": "dm.xpt",
+          "size": 118640
+        },
+        {
+          "name": "ds.xpt",
+          "size": 1620720
+        },
+        {
+          "name": "dv.xpt",
+          "size": 83600
+        },
+        {
+          "name": "eg.xpt",
+          "size": 5622880
+        },
+        {
+          "name": "ex.xpt",
+          "size": 12289040
+        },
+        {
+          "name": "ie.xpt",
+          "size": 32400
+        },
+        {
+          "name": "lb.xpt",
+          "size": 105321680
+        },
+        {
+          "name": "mh.xpt",
+          "size": 827200
+        },
+        {
+          "name": "qs.xpt",
+          "size": 79411360
+        },
+        {
+          "name": "se.xpt",
+          "size": 252800
+        },
+        {
+          "name": "suppae.xpt",
+          "size": 6749920
+        },
+        {
+          "name": "suppcm.xpt",
+          "size": 4408240
+        },
+        {
+          "name": "suppdm.xpt",
+          "size": 58400
+        },
+        {
+          "name": "suppds.xpt",
+          "size": 309280
+        },
+        {
+          "name": "suppeg.xpt",
+          "size": 112400
+        },
+        {
+          "name": "suppex.xpt",
+          "size": 5738800
+        },
+        {
+          "name": "supplb.xpt",
+          "size": 762480
+        },
+        {
+          "name": "suppmh.xpt",
+          "size": 934720
+        },
+        {
+          "name": "suppqs.xpt",
+          "size": 16595360
+        },
+        {
+          "name": "suppsv.xpt",
+          "size": 5680
+        },
+        {
+          "name": "suppxh.xpt",
+          "size": 116560
+        },
+        {
+          "name": "suppxn.xpt",
+          "size": 399040
+        },
+        {
+          "name": "suppxx.xpt",
+          "size": 170800
+        },
+        {
+          "name": "suppya.xpt",
+          "size": 20194960
+        },
+        {
+          "name": "suppyf.xpt",
+          "size": 213920
+        },
+        {
+          "name": "suppyh.xpt",
+          "size": 18080
+        },
+        {
+          "name": "suppyp.xpt",
+          "size": 3600
+        },
+        {
+          "name": "suppyr.xpt",
+          "size": 14014080
+        },
+        {
+          "name": "suppzm.xpt",
+          "size": 28240
+        },
+        {
+          "name": "sv.xpt",
+          "size": 3607600
+        },
+        {
+          "name": "ta.xpt",
+          "size": 8000
+        },
+        {
+          "name": "te.xpt",
+          "size": 3440
+        },
+        {
+          "name": "ti.xpt",
+          "size": 18000
+        },
+        {
+          "name": "ts.xpt",
+          "size": 16160
+        },
+        {
+          "name": "tv.xpt",
+          "size": 4953840
+        },
+        {
+          "name": "vs.xpt",
+          "size": 13259920
+        },
+        {
+          "name": "xh.xpt",
+          "size": 258560
+        },
+        {
+          "name": "xn.xpt",
+          "size": 16845040
+        },
+        {
+          "name": "xp.xpt",
+          "size": 1701520
+        },
+        {
+          "name": "xx.xpt",
+          "size": 2542240
+        },
+        {
+          "name": "ya.xpt",
+          "size": 12351840
+        },
+        {
+          "name": "yf.xpt",
+          "size": 904160
+        },
+        {
+          "name": "yh.xpt",
+          "size": 2402560
+        },
+        {
+          "name": "yp.xpt",
+          "size": 738880
+        },
+        {
+          "name": "yr.xpt",
+          "size": 10011200
+        },
+        {
+          "name": "zm.xpt",
+          "size": 150000
+        }
+      ],
+      "ovarian_files": [],
+      "dictionary_files": [
+        {
+          "name": "Proc Contents Data Dictionary EMD121974_011.pdf",
+          "size": 235371
+        },
+        {
+          "name": "datadict.xpt",
+          "size": 331600
+        }
+      ],
+      "clinical_files": [
+        {
+          "name": "Proc Contents Data Dictionary EMD121974_011.pdf",
+          "size": 235371
+        },
+        {
+          "name": "datadict.xpt",
+          "size": 331600
+        }
+      ]
+    },
+    {
+      "caslib_name": "Multiple_SanofiU_2008_119",
+      "description": "API-created caslib",
+      "files": [
+        {
+          "name": "dataFiles_676",
+          "size": 4096
+        },
+        {
+          "name": "sanofi_ave5026_efc6521.xlsx",
+          "size": 44177
+        },
+        {
+          "name": "AVE5026_EFC6521_data.zip",
+          "size": 419832274
+        },
+        {
+          "name": "sanofi_ave5026_README (EFC6521 de-identification notes).docx",
+          "size": 27184
+        },
+        {
+          "name": "sanofi_ave5026_EFC6521_Clinical_Trial_Protocol.pdf",
+          "size": 891907
+        },
+        {
+          "name": "sanofi_ave5026_efc6521-14-1-2-sample-crf.pdf",
+          "size": 12026211
+        }
+      ],
+      "ovarian_files": [],
+      "dictionary_files": [],
+      "clinical_files": [
+        {
+          "name": "dataFiles_676",
+          "size": 4096
+        },
+        {
+          "name": "AVE5026_EFC6521_data.zip",
+          "size": 419832274
+        },
+        {
+          "name": "sanofi_ave5026_EFC6521_Clinical_Trial_Protocol.pdf",
+          "size": 891907
+        }
+      ]
+    }
+  ]
+}

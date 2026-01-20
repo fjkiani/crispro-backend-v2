@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-01-03T15:29:00.119127",
+  "enhanced_claims": {
+    "toxicity_prevention_sensitivity": {
+      "value": 1.0,
+      "n_cases": 6,
+      "status": "VALIDATED",
+      "literature_support": {
+        "n_patients": 10111,
+        "n_studies": 29,
+        "status": "VALIDATED_INTERNALLY + LITERATURE_SUPPORTED"
+      }
+    },
+    "toxicity_prevention_specificity": {
+      "value": 1.0,
+      "n_cases": 59,
+      "false_positives": 0,
+      "status": "VALIDATED",
+      "literature_support": {
+        "status": "VALIDATED_INTERNALLY + LITERATURE_SUPPORTED"
+      }
+    },
+    "cpic_concordance": {
+      "value": 1.0,
+      "n_cases": 59,
+      "status": "VALIDATED",
+      "literature_support": {
+        "note": "All studies reference CPIC as standard",
+        "status": "VALIDATED_INTERNALLY + LITERATURE_CONFIRMED"
+      }
+    },
+    "prevention_rates_literature": {
+      "dpyd": {
+        "prevention_rate": 0.06,
+        "n_patients": 4675,
+        "n_studies": 10
+      },
+      "tpmt": {
+        "prevention_rate": 0.1,
+        "n_patients": 1981,
+        "n_studies": 5
+      },
+      "ugt1a1": {
+        "toxicity_reduction": 0.3,
+        "n_patients": 3455,
+        "n_studies": 14
+      }
+    }
+  }
+}

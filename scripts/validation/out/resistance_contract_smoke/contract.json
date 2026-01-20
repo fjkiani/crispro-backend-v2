@@ -1,0 +1,205 @@
+{
+  "actions": [
+    {
+      "action_type": "treatment",
+      "evidence_level": "CLINICAL_TRIAL",
+      "evidence_tier": "TIER_2",
+      "payload": {
+        "drug": "olaparib",
+        "drug_class": "parp_inhibitor",
+        "priority": 1,
+        "requires": null,
+        "source_gene": "NF1"
+      },
+      "rationale": "PARP maintenance may overcome MAPK-mediated resistance",
+      "title": "Consider alternative: olaparib"
+    },
+    {
+      "action_type": "treatment",
+      "evidence_level": "CLINICAL_TRIAL",
+      "evidence_tier": "TIER_2",
+      "payload": {
+        "drug": "trametinib",
+        "drug_class": "mek_inhibitor",
+        "priority": 2,
+        "requires": null,
+        "source_gene": "NF1"
+      },
+      "rationale": "Direct MAPK pathway inhibition for NF1 loss",
+      "title": "Consider alternative: trametinib"
+    },
+    {
+      "action_type": "treatment",
+      "evidence_level": "STANDARD_OF_CARE",
+      "evidence_tier": "TIER_1",
+      "payload": {
+        "drug": "bevacizumab",
+        "drug_class": "vegf_inhibitor",
+        "priority": 2,
+        "requires": null,
+        "source_gene": "NF1"
+      },
+      "rationale": "Add anti-VEGF to platinum backbone",
+      "title": "Consider alternative: bevacizumab"
+    },
+    {
+      "action_type": "treatment",
+      "evidence_level": "VALIDATED",
+      "evidence_tier": "TIER_3",
+      "payload": {
+        "from_regimen": "carboplatin/paclitaxel",
+        "to_regimen": "carboplatin/paclitaxel + bevacizumab"
+      },
+      "rationale": "Add bevacizumab for high-risk disease",
+      "title": "Regimen change: carboplatin/paclitaxel \u2192 carboplatin/paclitaxel + bevacizumab"
+    },
+    {
+      "action_type": "monitoring",
+      "evidence_level": null,
+      "evidence_tier": null,
+      "payload": {
+        "biomarker_frequency": "CA-125 every 2 weeks",
+        "bone_marrow_frequency": null,
+        "ctdna_targets": null,
+        "imaging_frequency": "CT every 2-3 months",
+        "mrd_frequency": null
+      },
+      "rationale": "Playbook monitoring adjustments",
+      "title": "Adjust monitoring"
+    },
+    {
+      "action_type": "handoff",
+      "evidence_level": null,
+      "evidence_tier": null,
+      "payload": {
+        "action": "rerank_drugs",
+        "agent": "drug_efficacy",
+        "payload": {
+          "avoid_classes": [],
+          "prefer_alternatives": [
+            {
+              "class": "parp_inhibitor",
+              "drug": "olaparib",
+              "priority": 1
+            },
+            {
+              "class": "mek_inhibitor",
+              "drug": "trametinib",
+              "priority": 2
+            },
+            {
+              "class": "vegf_inhibitor",
+              "drug": "bevacizumab",
+              "priority": 2
+            }
+          ],
+          "resistance_context": {
+            "detected_genes": [
+              "NF1"
+            ],
+            "disease": "ovarian"
+          }
+        }
+      },
+      "rationale": "Handoff to drug_efficacy",
+      "title": "Downstream handoff: drug_efficacy"
+    },
+    {
+      "action_type": "handoff",
+      "evidence_level": null,
+      "evidence_tier": null,
+      "payload": {
+        "action": "update_regimen",
+        "agent": "care_plan",
+        "payload": {
+          "current_regimen": null,
+          "recommended_regimens": [
+            {
+              "from": "carboplatin/paclitaxel",
+              "rationale": "Add bevacizumab for high-risk disease",
+              "to": "carboplatin/paclitaxel + bevacizumab"
+            }
+          ],
+          "resistance_rationale": "Resistance detected: NF1"
+        }
+      },
+      "rationale": "Handoff to care_plan",
+      "title": "Downstream handoff: care_plan"
+    },
+    {
+      "action_type": "handoff",
+      "evidence_level": null,
+      "evidence_tier": null,
+      "payload": {
+        "action": "intensify_monitoring",
+        "agent": "monitoring",
+        "payload": {
+          "biomarker_frequency": "CA-125 every 2 weeks",
+          "bone_marrow_frequency": null,
+          "ctdna_targets": null,
+          "escalation_triggers": [
+            "New lesions on imaging",
+            "CA-125 rise >50% from nadir"
+          ],
+          "imaging_frequency": "CT every 2-3 months",
+          "mrd_frequency": null
+        }
+      },
+      "rationale": "Handoff to monitoring",
+      "title": "Downstream handoff: monitoring"
+    }
+  ],
+  "confidence": null,
+  "endpoint": "/api/care/resistance_playbook_v2",
+  "mechanisms": [
+    {
+      "biomarkers": [
+        "NF1"
+      ],
+      "detected": true,
+      "evidence_level": null,
+      "evidence_tier": "TIER_4",
+      "mechanism": "mutation_panel",
+      "rationale": "Detected genes from tumor_context: NF1",
+      "source": "tumor_context.somatic_mutations"
+    }
+  ],
+  "probability": null,
+  "provenance": {
+    "code_version": "unknown",
+    "contract_version": "resistance_contract_v1",
+    "disease": "ovarian_cancer_hgs",
+    "disease_normalized": "ovarian_cancer_hgs",
+    "disease_original": "ovarian_cancer_hgs",
+    "flags": [
+      "MISSING_CA125_HISTORY",
+      "INPUT_LEVEL_L1"
+    ],
+    "generated_at": "2025-12-26T10:53:08.960673",
+    "inputs_snapshot_hash": "d6066cd98e6d33c9702b679efd3912047b9fccc2cce84c1c4b47dc4414a414b5",
+    "playbook_disease": "ovarian",
+    "playbook_provenance": {
+      "alternatives_count": 3,
+      "cross_resistance_detected": null,
+      "cytogenetics": null,
+      "detected_resistance": [
+        "NF1"
+      ],
+      "disease": "ovarian",
+      "line_multiplier_applied": 1.0,
+      "playbook_source": "OV_RESISTANCE_PLAYBOOK",
+      "prior_therapies": null,
+      "regimen_changes_count": 1,
+      "service_version": "resistance_playbook_v1.0_dry",
+      "treatment_line": 1
+    },
+    "run_id": "7a4f40f5c0243ba7",
+    "service_version": "resistance_playbook_v1.0_dry"
+  },
+  "receipts": [],
+  "risk_level": null,
+  "warnings": [
+    "MISSING_CA125_HISTORY",
+    "INPUT_LEVEL_L1"
+  ]
+}

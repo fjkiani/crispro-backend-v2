@@ -1,0 +1,585 @@
+"""
+⚔️ PRODUCTION - Concern A: Candidate Discovery Agent (D1-D3)
+
+Purpose: Turn a patient profile into a bounded candidate set of NCTs (200-1000 trials) 
+BEFORE heavy work (tagging, eligibility parsing, dossier generation).
+
+Non-negotiables (Manager's Plan):
+- D1: Build profile → search queries (agent framework)
+- D2: Fetch candidates from local store (SQLite first, CT.gov fallback)
+- D3: Enforce scope boundaries (bounded list with provenance)
+
+Consolidated from:
+- find_trials_FROM_SQLITE.py (D2)
+- Autonomous trial agent (D1)
+
+Source of Truth: .cursor/ayesha/TRIAL_TAGGING_ANALYSIS_AND_NEXT_ROADBLOCK.md (lines 476-507)
+"""
+
+import asyncio
+import json
+import logging
+import sqlite3
+from pathlib import Path
+from typing import Dict, List, Any, Optional, Tuple
+from datetime import datetime, timezone
+
+# Add parent directory to path for imports
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent.parent.parent))
+
+# Try to import trial intelligence pipeline
+try:
+    from api.services.trial_intelligence import TrialIntelligencePipeline
+    from api.services.trial_intelligence.config import FilterConfig, get_expanded_states_config
+    TRIAL_INTELLIGENCE_AVAILABLE = True
+except ImportError:
+    TRIAL_INTELLIGENCE_AVAILABLE = False
+    logger.warning("⚠️ Trial intelligence pipeline not available")
+
+# Try to import autonomous trial agent
+try:
+    from api.services.autonomous_trial_agent import AutonomousTrialAgent
+    AUTONOMOUS_AGENT_AVAILABLE = True
+except ImportError:
+    AUTONOMOUS_AGENT_AVAILABLE = False
+    logger.warning("⚠️ Autonomous trial agent not available")
+
+# Initialize logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Paths
+SCRIPT_DIR = Path(__file__).resolve().parent.parent.parent
+BACKEND_ROOT = SCRIPT_DIR.parent.parent.parent
+DB_PATH = BACKEND_ROOT / "data" / "clinical_trials.db"
+
+# Default bounds
+DEFAULT_MIN_CANDIDATES = 200
+DEFAULT_MAX_CANDIDATES = 1000
+
+
+def _extract_profile_field(profile: Dict[str, Any], field_paths: List[str], default: str = '') -> str:
+    """
+    ⚔️ FIX: Extract profile field handling both nested and flat formats.
+    
+    Args:
+        profile: Patient profile dict
+        field_paths: List of possible paths, e.g., ['disease', 'disease.primary_diagnosis']
+        default: Default value if not found
+    
+    Returns:
+        Extracted field value
+    """
+    for path in field_paths:
+        parts = path.split('.')
+        value = profile
+        try:
+            for part in parts:
+                if isinstance(value, dict):
+                    value = value.get(part)
+                else:
+                    value = None
+                    break
+            
+            if value and isinstance(value, str):
+                return value
+            elif value and not isinstance(value, dict):
+                return str(value)
+        except (AttributeError, TypeError):
+            continue
+    
+    return default
+
+
+def build_profile_search_queries(
+    patient_profile: Dict[str, Any]
+) -> Tuple[List[str], Dict[str, Any]]:
+    """
+    ⚔️ D1: Build profile → search queries
+    
+    Use autonomous agent framework to generate 1-3 queries from profile.
+    
+    Args:
+        patient_profile: Patient profile dict with disease, location, treatment_line, biomarkers
+                        Supports both nested {'disease': {'primary_diagnosis': '...'}} and flat {'disease': '...'} formats
+    
+    Returns:
+        Tuple of (queries, provenance)
+    """
+    if not AUTONOMOUS_AGENT_AVAILABLE:
+        # Fallback: Manual query generation
+        queries = []
+        
+        # ⚔️ FIX: Handle both nested and flat profile formats
+        disease = _extract_profile_field(
+            patient_profile,
+            ['disease.primary_diagnosis', 'disease', 'primary_diagnosis']
+        ) or ''
+        location = _extract_profile_field(
+            patient_profile,
+            ['demographics.location', 'location', 'location_state', 'demographics.state']
+        ) or ''
+        
+        # ⚔️ FIX: Ensure we always generate at least one query, even if fields are empty
+        # Query 1: Disease + location (if both available)
+        if disease and location:
+            queries.append(f"{disease} {location}".strip())
+        
+        # Query 2: Disease-specific terms (always if disease available)
+        if disease:
+            queries.append(disease)
+        
+        # Query 3: Location-specific (if location available)
+        if location:
+            queries.append(f"cancer {location}".strip())
+        
+        # ⚔️ FIX: Fallback to generic cancer search if no fields available
+        if not queries:
+            queries.append("cancer clinical trial")
+            logger.warning("⚠️ No profile fields available - using generic cancer search")
+        
+        # Remove empty queries
+        queries = [q for q in queries if q]
+        
+        provenance = {
+            "method": "manual_fallback",
+            "queries_generated": len(queries),
+            "generated_from_profile": {
+                "disease": disease or "N/A",
+                "location": location or "N/A"
+            },
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+        
+        return queries[:3], provenance  # Max 3 queries
+    
+    try:
+        # Use autonomous agent
+        agent = AutonomousTrialAgent()
+        queries = agent.generate_search_queries(patient_profile)
+        
+        provenance = {
+            "method": "autonomous_agent",
+            "queries_generated": len(queries),
+            "generated_from_profile": patient_profile,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+        
+        return queries[:3], provenance  # Max 3 queries
+    
+    except Exception as e:
+        logger.error(f"❌ Autonomous agent failed: {e}")
+        # Fallback to manual
+        return build_profile_search_queries.__wrapped__(patient_profile)
+
+
+def fetch_candidates_from_sqlite(
+    queries: Optional[List[str]] = None,
+    filters: Optional[Dict[str, Any]] = None,
+    limit: int = DEFAULT_MAX_CANDIDATES
+) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
+    """
+    ⚔️ D2: Fetch candidates from local store (SQLite first)
+    
+    Prefer SQLite as the first pass (fast, cheap) for "seeded corpus".
+    
+    Args:
+        queries: Optional search queries (if None, uses filters only)
+        filters: Optional filters dict (disease, location, status, etc.)
+        limit: Maximum candidates to return (default DEFAULT_MAX_CANDIDATES)
+    
+    Returns:
+        Tuple of (candidates, provenance)
+    """
+    filters = filters or {}
+    
+    db_path = DB_PATH
+    if not db_path.exists():
+        logger.warning(f"⚠️ SQLite database not found: {db_path}")
+        return [], {
+            "source": "sqlite",
+            "status": "failed",
+            "reason": "Database not found",
+            "candidates_screened": 0,
+            "candidates_returned": 0
+        }
+    
+    try:
+        conn = sqlite3.connect(str(db_path))
+        conn.row_factory = sqlite3.Row
+        cur = conn.cursor()
+        
+        # ⚔️ FIX: Build WHERE clause from filters (work even if queries are empty)
+        where_clauses = []
+        params = []
+        
+        # Disease filter (required - if not provided, search for "cancer")
+        disease = filters.get('disease', '').lower() if filters.get('disease') else ''
+        if not disease:
+            # Fallback to generic cancer search if no disease provided
+            disease = 'cancer'
+            logger.warning("⚠️ No disease provided - using generic 'cancer' search")
+        
+        where_clauses.append("""
+            (lower(coalesce(conditions,'')) LIKE ? OR lower(coalesce(title,'')) LIKE ?)
+        """)
+        params.extend([f"%{disease}%", f"%{disease}%"])
+        
+        # Location filter (NYC metro)
+        location = filters.get('location', '').lower() if filters.get('location') else ''
+        if location or 'nyc' in (filters.get('location', '') or '').lower():
+            where_clauses.append("""
+                (lower(coalesce(locations_full_json,'')) LIKE '%new york%'
+                 OR lower(coalesce(locations_full_json,'')) LIKE '%nyc%'
+                 OR lower(coalesce(locations_full_json,'')) LIKE '%manhattan%')
+            """)
+        
+        # Status filter (prioritize recruiting)
+        status = filters.get('status', '').lower() if filters.get('status') else ''
+        if status:
+            where_clauses.append("lower(coalesce(status,'')) LIKE ?")
+            params.append(f"%{status}%")
+        else:
+            # Default: prioritize recruiting/active
+            where_clauses.append("""
+                (lower(coalesce(status,'')) LIKE '%recruiting%'
+                 OR lower(coalesce(status,'')) LIKE '%active%'
+                 OR lower(coalesce(status,'')) LIKE '%enrolling%')
+            """)
+        
+        # Treatment line filter (frontline vs recurrent)
+        treatment_line = filters.get('treatment_line', 0)
+        if treatment_line == 0:  # Frontline
+            where_clauses.append("""
+                (lower(coalesce(summary,'')) NOT LIKE '%recurrent%'
+                 AND lower(coalesce(eligibility_text,'')) NOT LIKE '%prior%chemotherapy%')
+            """)
+        
+        # Build query
+        where_clause = " AND ".join(where_clauses) if where_clauses else "1=1"
+        
+        query = f"""
+            SELECT 
+                id as nct_id,
+                title,
+                status,
+                phases,
+                conditions,
+                summary,
+                locations_full_json,
+                interventions,
+                interventions_json
+            FROM trials
+            WHERE {where_clause}
+            ORDER BY 
+                CASE
+                    WHEN lower(coalesce(status,'')) LIKE '%recruiting%' THEN 0
+                    WHEN lower(coalesce(status,'')) LIKE '%active%' THEN 1
+                    WHEN lower(coalesce(status,'')) LIKE '%enrolling%' THEN 2
+                    ELSE 3
+                END
+            LIMIT ?
+        """
+        params.append(limit)
+        
+        cur.execute(query, params)
+        rows = cur.fetchall()
+        
+        candidates = []
+        for row in rows:
+            trial = dict(row)
+            
+            # Normalize field names
+            if 'nct_id' not in trial:
+                trial['nct_id'] = trial.get('id', '')
+            
+            # Parse JSON fields
+            if trial.get('locations_full_json') and isinstance(trial['locations_full_json'], str):
+                try:
+                    trial['locations_data'] = json.loads(trial['locations_full_json'])
+                except:
+                    trial['locations_data'] = []
+            else:
+                trial['locations_data'] = []
+            
+            if trial.get('interventions_json') and isinstance(trial['interventions_json'], str):
+                try:
+                    trial['interventions_json'] = json.loads(trial['interventions_json'])
+                except:
+                    trial['interventions_json'] = []
+            
+            candidates.append(trial)
+        
+        conn.close()
+        
+        provenance = {
+            "source": "sqlite",
+            "status": "success",
+            "candidates_screened": len(candidates),
+            "candidates_returned": len(candidates),
+            "filters_applied": filters,
+            "queries_used": queries,
+            "limit": limit,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+        
+        logger.info(f"✅ Fetched {len(candidates)} candidates from SQLite")
+        return candidates, provenance
+    
+    except Exception as e:
+        logger.error(f"❌ SQLite fetch failed: {e}")
+        return [], {
+            "source": "sqlite",
+            "status": "failed",
+            "reason": str(e),
+            "candidates_screened": 0,
+            "candidates_returned": 0
+        }
+
+
+async def fetch_candidates_from_ctgov(
+    queries: List[str],
+    filters: Optional[Dict[str, Any]] = None,
+    limit: int = DEFAULT_MAX_CANDIDATES
+) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
+    """
+    ⚔️ D2: Fallback to CT.gov search (bounded)
+    
+    If SQLite corpus insufficient, fall back to CT.gov search (bounded).
+    
+    Args:
+        queries: Search queries
+        filters: Optional filters dict
+        limit: Maximum candidates to return (default DEFAULT_MAX_CANDIDATES)
+    
+    Returns:
+        Tuple of (candidates, provenance)
+    """
+    # TODO: Implement CT.gov API client
+    # For now, return empty (not implemented)
+    logger.warning("⚠️ CT.gov fallback not implemented yet")
+    
+    return [], {
+        "source": "ct.gov",
+        "status": "not_implemented",
+        "reason": "CT.gov API client not implemented",
+        "candidates_screened": 0,
+        "candidates_returned": 0
+    }
+
+
+def enforce_scope_boundaries(
+    candidates: List[Dict[str, Any]],
+    min_candidates: int = DEFAULT_MIN_CANDIDATES,
+    max_candidates: int = DEFAULT_MAX_CANDIDATES,
+    reason: Optional[str] = None
+) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
+    """
+    ⚔️ D3: Enforce scope boundaries
+    
+    Must produce bounded list and always return counts:
+    - candidates_screened
+    - candidates_returned
+    - reason for truncation
+    
+    Args:
+        candidates: List of candidate trials
+        min_candidates: Minimum candidates desired (default DEFAULT_MIN_CANDIDATES)
+        max_candidates: Maximum candidates to return (default DEFAULT_MAX_CANDIDATES)
+        reason: Reason for truncation (if applicable)
+    
+    Returns:
+        Tuple of (bounded_candidates, provenance)
+    """
+    candidates_screened = len(candidates)
+    
+    # Apply max bound
+    bounded_candidates = candidates[:max_candidates]
+    candidates_returned = len(bounded_candidates)
+    
+    # Determine truncation reason
+    if candidates_returned < candidates_screened:
+        truncation_reason = reason or f"Top {max_candidates} by recruiting + proximity"
+    else:
+        truncation_reason = None
+    
+    # Check if min requirement met
+    if candidates_returned < min_candidates:
+        min_requirement_met = False
+        min_requirement_reason = f"Only {candidates_returned} candidates found (minimum {min_candidates} desired)"
+    else:
+        min_requirement_met = True
+        min_requirement_reason = None
+    
+    provenance = {
+        "candidates_screened": candidates_screened,
+        "candidates_returned": candidates_returned,
+        "min_requirement_met": min_requirement_met,
+        "min_requirement_reason": min_requirement_reason,
+        "truncation_reason": truncation_reason,
+        "bounds": {
+            "min": min_candidates,
+            "max": max_candidates
+        }
+    }
+    
+    logger.info(f"✅ Enforced scope boundaries: {candidates_returned} candidates (screened {candidates_screened})")
+    
+    return bounded_candidates, provenance
+
+
+async def discover_candidates(
+    patient_profile: Dict[str, Any],
+    min_candidates: int = DEFAULT_MIN_CANDIDATES,
+    max_candidates: int = DEFAULT_MAX_CANDIDATES,
+    prefer_sqlite: bool = True
+) -> Dict[str, Any]:
+    """
+    ⚔️ Main candidate discovery pipeline (D1-D3)
+    
+    Args:
+        patient_profile: Patient profile dict with disease, location, treatment_line, biomarkers
+        min_candidates: Minimum candidates desired (default DEFAULT_MIN_CANDIDATES)
+        max_candidates: Maximum candidates to return (default DEFAULT_MAX_CANDIDATES)
+        prefer_sqlite: Whether to prefer SQLite over CT.gov (default True)
+    
+    Returns:
+        Discovery results dict with candidates and provenance
+    """
+    logger.info("⚔️ Starting candidate discovery pipeline (D1-D3)")
+    
+    # D1: Build profile → search queries
+    logger.info("📋 D1: Building profile → search queries")
+    try:
+        queries, query_provenance = build_profile_search_queries(patient_profile)
+        logger.info(f"   ✅ Generated {len(queries)} queries: {queries}")
+    except Exception as e:
+        logger.error(f"❌ Query generation failed: {e}", exc_info=True)
+        queries = []
+        query_provenance = {
+            "method": "failed",
+            "error": str(e),
+            "queries_generated": 0
+        }
+    
+    # ⚔️ FIX: Extract filters from profile (handle both nested and flat formats)
+    filters = {
+        'disease': _extract_profile_field(
+            patient_profile,
+            ['disease.primary_diagnosis', 'disease', 'primary_diagnosis']
+        ) or 'cancer',  # Fallback to 'cancer' if not provided
+        'location': _extract_profile_field(
+            patient_profile,
+            ['demographics.location', 'location', 'location_state', 'demographics.state']
+        ),
+        'treatment_line': _extract_profile_field(
+            patient_profile,
+            ['treatment_history.current_line', 'treatment_line', 'current_line'],
+            default='0'
+        )
+    }
+    
+    # Convert treatment_line to int if possible
+    try:
+        filters['treatment_line'] = int(filters['treatment_line']) if filters['treatment_line'] else 0
+    except (ValueError, TypeError):
+        filters['treatment_line'] = 0
+    
+    logger.info(f"   Filters extracted: disease='{filters['disease']}', location='{filters['location']}', treatment_line={filters['treatment_line']}")
+    
+    # D2: Fetch candidates from local store (SQLite first)
+    logger.info("🔍 D2: Fetching candidates from SQLite")
+    candidates, fetch_provenance = fetch_candidates_from_sqlite(
+        queries=queries,
+        filters=filters,
+        limit=max_candidates
+    )
+    
+    # Fallback to CT.gov if SQLite insufficient
+    if len(candidates) < min_candidates and not prefer_sqlite:
+        logger.info("🔍 D2: SQLite insufficient, falling back to CT.gov")
+        ctgov_candidates, ctgov_provenance = await fetch_candidates_from_ctgov(
+            queries=queries,
+            filters=filters,
+            limit=max_candidates - len(candidates)
+        )
+        candidates.extend(ctgov_candidates)
+        fetch_provenance['ctgov_fallback'] = ctgov_provenance
+    
+    # D3: Enforce scope boundaries
+    logger.info("⚙️ D3: Enforcing scope boundaries")
+    bounded_candidates, boundary_provenance = enforce_scope_boundaries(
+        candidates=candidates,
+        min_candidates=min_candidates,
+        max_candidates=max_candidates,
+        reason="Top candidates by recruiting + proximity"
+    )
+    
+    # Combine provenance
+    provenance = {
+        "query_provenance": query_provenance,
+        "fetch_provenance": fetch_provenance,
+        "boundary_provenance": boundary_provenance,
+        "candidate_source_provenance": {
+            "queries": queries,
+            "filters": filters,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+    }
+    
+    return {
+        "status": "completed",
+        "candidate_trial_ids": [t.get('nct_id') or t.get('id', '') for t in bounded_candidates],
+        "candidates": bounded_candidates,
+        "provenance": provenance
+    }
+
+
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(
+        description="⚔️ Candidate Discovery Agent (Production - Concern A)",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Discover candidates for Ayesha profile:
+  python discovery_agent.py --profile ayesha --min 200 --max 1000
+  
+  # Discover with custom profile:
+  python discovery_agent.py --profile-file profile.json
+        """
+    )
+    parser.add_argument("--profile", type=str, help="Profile name (e.g., 'ayesha')")
+    parser.add_argument("--profile-file", type=str, help="Path to profile JSON file")
+    parser.add_argument("--min", type=int, default=DEFAULT_MIN_CANDIDATES, help="Minimum candidates (default: 200)")
+    parser.add_argument("--max", type=int, default=DEFAULT_MAX_CANDIDATES, help="Maximum candidates (default: 1000)")
+    parser.add_argument("--prefer-sqlite", action="store_true", default=True, help="Prefer SQLite over CT.gov (default: True)")
+    
+    args = parser.parse_args()
+    
+    # Load profile
+    if args.profile == "ayesha":
+        try:
+            from ayesha_patient_profile import get_ayesha_complete_profile
+            patient_profile = get_ayesha_complete_profile()
+        except ImportError:
+            logger.error("❌ Ayesha profile not available")
+            sys.exit(1)
+    elif args.profile_file:
+        patient_profile = json.loads(Path(args.profile_file).read_text())
+    else:
+        logger.error("❌ Must specify --profile or --profile-file")
+        sys.exit(1)
+    
+    # Run discovery
+    results = asyncio.run(discover_candidates(
+        patient_profile=patient_profile,
+        min_candidates=args.min,
+        max_candidates=args.max,
+        prefer_sqlite=args.prefer_sqlite
+    ))
+    
+    # Print results
+    print(json.dumps(results, indent=2))

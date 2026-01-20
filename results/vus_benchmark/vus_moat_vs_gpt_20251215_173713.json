@@ -1,0 +1,2562 @@
+{
+  "benchmark_name": "VUS MOAT vs GPT-4o",
+  "timestamp": "20251215_173713",
+  "num_questions": 8,
+  "results": [
+    {
+      "question_id": "q1_ddr_vus_scenario_c",
+      "category": "DDR VUS Resolution (Scenario C)",
+      "question": "I have a RAD51C variant at chr17:58709872 T>C. My tumor has MBD4 and TP53 mutations. Is this variant damaging and relevant to my cancer?",
+      "crispro_response": {
+        "ok": true,
+        "data": {
+          "normalized_variant": {
+            "gene": "RAD51C",
+            "hgvs_c": null,
+            "hgvs_p": null,
+            "assembly": "GRCh38",
+            "chrom": "17",
+            "pos": 58709872,
+            "ref": "T",
+            "alt": "C"
+          },
+          "vep": null,
+          "coverage": {
+            "clinvar": {
+              "status": "Uncertain significance",
+              "review_status": "criteria provided, multiple submitters, no conflicts",
+              "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=17%3A58709872%20T%3EC",
+              "source": "variant_summary_local_ddr"
+            },
+            "alphamissense": true
+          },
+          "pathway_context": {
+            "gene": "RAD51C",
+            "variant_axis": "DDR",
+            "variant_axis_key": "ddr",
+            "patient_actionable_axis": "DDR",
+            "patient_actionable_axis_key": "ddr",
+            "pathway_relevance": "high",
+            "patient_pathway_scores": {
+              "ddr": 1.0,
+              "tp53": 1.0
+            },
+            "variant_pathway_weights": {
+              "ddr": 1.0
+            }
+          },
+          "sequence": {
+            "min_delta": null,
+            "evo2_called": true,
+            "evo2_success": false,
+            "windows_attempted": [
+              1024,
+              2048,
+              4096,
+              8192
+            ],
+            "provenance": null,
+            "deltas": null
+          },
+          "insights": {
+            "scores": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": 0.649
+            },
+            "provenance": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": {
+                "model": "enformer-stub-v1",
+                "method": "deterministic_fallback",
+                "context_bp": 32000,
+                "tracks": [
+                  "DNase_stub",
+                  "CAGE_stub",
+                  "ATAC_stub"
+                ],
+                "fallback_reason": "unexpected_error",
+                "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+              }
+            }
+          },
+          "triage": {
+            "status": "still_vus",
+            "verdict": "Uncertain significance",
+            "confidence": 0.4,
+            "reasons": [
+              "Evo2 signal unavailable (service error or variant not scoreable)",
+              "ClinVar prior is non-decisive: uncertain significance",
+              "AlphaMissense eligible (can score if service available)",
+              "chromatin=0.65"
+            ],
+            "resolution_path": null,
+            "evo2_available": false,
+            "next_step": "functional_assay"
+          },
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance": {
+            "run_id": "7503a2a3-4930-4100-9183-500127a9f6b2",
+            "mode": "research",
+            "resolution_path": "still_vus",
+            "options": {
+              "ignore_priors": false,
+              "patient_genes_count": 2
+            },
+            "calls": {
+              "clinvar": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "fusion_coverage": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "evo2": {
+                "ok": false,
+                "status_code": null,
+                "error": "",
+                "method": null,
+                "fallback": null,
+                "model": null
+              },
+              "insights_functionality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_regulatory": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_essentiality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_chromatin": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              }
+            },
+            "urls": [
+              "/api/evidence/clinvar",
+              "/api/fusion/coverage",
+              "/api/evo/score_variant_multi",
+              "/api/insights/*"
+            ]
+          }
+        }
+      },
+      "crispro_moat": {
+        "resolution_path": "still_vus",
+        "verdict": "Uncertain significance",
+        "min_delta": null,
+        "clinvar_status": "Uncertain significance",
+        "patient_axis": "DDR",
+        "variant_axis": "DDR",
+        "pathway_relevance": "high",
+        "next_actions": [
+          {
+            "action": "wiwfm",
+            "label": "Run WIWFM (therapy fit)",
+            "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+            "endpoint": "/api/efficacy/predict"
+          },
+          {
+            "action": "dossier",
+            "label": "Send to Dossier",
+            "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+          },
+          {
+            "action": "cohort_context",
+            "label": "Add cohort context",
+            "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+            "endpoint": "/api/datasets/extract_and_benchmark"
+          },
+          {
+            "action": "trials",
+            "label": "Trial matching (mechanism fit)",
+            "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+            "endpoint": "/api/trials/agent/search"
+          }
+        ],
+        "provenance_receipts": {
+          "clinvar": true,
+          "evo2": false,
+          "fusion": null,
+          "insights": null
+        },
+        "run_id": "7503a2a3-4930-4100-9183-500127a9f6b2"
+      },
+      "gpt_response": "The RAD51C gene is involved in the homologous recombination repair pathway, which is crucial for the repair of double-strand DNA breaks. Variants in RAD51C can be associated with an increased risk of certain cancers, including ovarian cancer, due to impaired DNA repair mechanisms.\n\nThe specific variant you mentioned, \"RAD51C chr17:58709872 T>C (GRCh38),\" would need to be evaluated for its potential impact. This involves determining whether it is a known pathogenic variant, a variant of uncertain significance (VUS), or a benign variant. This information can be obtained from databases such as ClinVar, which compiles data on genomic variants and their clinical significance.\n\nIn the context of ovarian cancer, pathogenic variants in RAD51C are considered relevant because they can contribute to the development of the cancer through defective DNA repair. If the variant is classified as pathogenic or likely pathogenic, it could have implications for your cancer risk and potentially for treatment decisions, such as the use of PARP inhibitors, which are more effective in tumors with homologous recombination deficiency.\n\nRegarding the other mutations in your tumor, TP53 is a common mutation in many cancers, including ovarian cancer, and is often associated with tumor progression and poor prognosis. MBD4 mutations are less common and their role in cancer is not as well-defined, but they can be involved in DNA repair and genomic stability.\n\nTo determine the clinical significance of your RAD51C variant, I recommend consulting with a genetic counselor or a precision oncology specialist. They can provide a more detailed interpretation based on the latest research and clinical guidelines, and help integrate this information into your overall treatment plan.",
+      "comparison": {
+        "killer_blow": "GPT has no ClinVar index, no Evo2 API, no axis inference \u2192 generic advice",
+        "missing_features": [
+          {
+            "feature": "Explicit resolution_path",
+            "crispro_has": "still_vus",
+            "gpt_has": false,
+            "impact": "GPT cannot explain HOW it reached its conclusion (prior vs ML)"
+          },
+          {
+            "feature": "Patient-context axis relevance",
+            "crispro_has": "DDR patient, DDR variant \u2192 high",
+            "gpt_has": false,
+            "impact": "GPT treats all patients the same (no personalization by tumor context)"
+          },
+          {
+            "feature": "Provenance receipts (auditability)",
+            "crispro_has": "ClinVar: True, Evo2: False, Fusion: None",
+            "gpt_has": false,
+            "impact": "GPT has no receipts \u2192 cannot audit or reproduce determination"
+          },
+          {
+            "feature": "System-aware next actions routing",
+            "crispro_has": [
+              {
+                "action": "wiwfm",
+                "label": "Run WIWFM (therapy fit)",
+                "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+                "endpoint": "/api/efficacy/predict"
+              },
+              {
+                "action": "dossier",
+                "label": "Send to Dossier",
+                "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+              },
+              {
+                "action": "cohort_context",
+                "label": "Add cohort context",
+                "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+                "endpoint": "/api/datasets/extract_and_benchmark"
+              },
+              {
+                "action": "trials",
+                "label": "Trial matching (mechanism fit)",
+                "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+                "endpoint": "/api/trials/agent/search"
+              }
+            ],
+            "gpt_has": false,
+            "impact": "GPT cannot route to WIWFM, trials, or dossier \u2192 dead end"
+          }
+        ],
+        "crispro_structured": true,
+        "gpt_structured": false,
+        "crispro_receipts": true,
+        "gpt_receipts": false
+      }
+    },
+    {
+      "question_id": "q2_axis_relevance_flip",
+      "category": "Axis-Relevance Flip (Same Variant, Different Patient)",
+      "question": "I have the same RAD51C variant (chr17:58709872 T>C), but my tumor has KRAS and BRAF mutations (not MBD4/TP53). Is this variant relevant to my cancer?",
+      "crispro_response": {
+        "ok": true,
+        "data": {
+          "normalized_variant": {
+            "gene": "RAD51C",
+            "hgvs_c": null,
+            "hgvs_p": null,
+            "assembly": "GRCh38",
+            "chrom": "17",
+            "pos": 58709872,
+            "ref": "T",
+            "alt": "C"
+          },
+          "vep": null,
+          "coverage": {
+            "clinvar": {
+              "status": "Uncertain significance",
+              "review_status": "criteria provided, multiple submitters, no conflicts",
+              "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=17%3A58709872%20T%3EC",
+              "source": "variant_summary_local_ddr"
+            },
+            "alphamissense": true
+          },
+          "pathway_context": {
+            "gene": "RAD51C",
+            "variant_axis": "DDR",
+            "variant_axis_key": "ddr",
+            "patient_actionable_axis": "RTK/MAPK",
+            "patient_actionable_axis_key": "ras_mapk",
+            "pathway_relevance": "low",
+            "patient_pathway_scores": {
+              "ras_mapk": 2.0
+            },
+            "variant_pathway_weights": {
+              "ddr": 1.0
+            }
+          },
+          "sequence": {
+            "min_delta": -0.0871504545211792,
+            "evo2_called": true,
+            "evo2_success": true,
+            "windows_attempted": [
+              1024,
+              2048,
+              4096,
+              8192
+            ],
+            "provenance": {
+              "method": "delta_only_upstream",
+              "model": "evo2_1b"
+            },
+            "deltas": null
+          },
+          "insights": {
+            "scores": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": 0.649
+            },
+            "provenance": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": {
+                "model": "enformer-stub-v1",
+                "method": "deterministic_fallback",
+                "context_bp": 32000,
+                "tracks": [
+                  "DNase_stub",
+                  "CAGE_stub",
+                  "ATAC_stub"
+                ],
+                "fallback_reason": "unexpected_error",
+                "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+              }
+            }
+          },
+          "triage": {
+            "status": "resolved_by_evo2",
+            "verdict": "Likely damaging (ML)",
+            "confidence": 0.7,
+            "reasons": [
+              "Evo2 |\u0394| percentile\u22480.80 (high magnitude disruption signal)"
+            ],
+            "resolution_path": "evo2",
+            "evo2_delta": -0.0871504545211792,
+            "impact_percentile_like": 0.8
+          },
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance": {
+            "run_id": "9f2e9c53-e6ea-4995-b991-07ddf4b6de6a",
+            "mode": "research",
+            "resolution_path": "evo2",
+            "options": {
+              "ignore_priors": false,
+              "patient_genes_count": 2
+            },
+            "calls": {
+              "clinvar": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "fusion_coverage": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "evo2": {
+                "ok": true,
+                "status_code": 200,
+                "error": null,
+                "method": "delta_only_upstream",
+                "fallback": null,
+                "model": "evo2_1b"
+              },
+              "insights_functionality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_regulatory": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_essentiality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_chromatin": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              }
+            },
+            "urls": [
+              "/api/evidence/clinvar",
+              "/api/fusion/coverage",
+              "/api/evo/score_variant_multi",
+              "/api/insights/*"
+            ]
+          }
+        }
+      },
+      "crispro_moat": {
+        "resolution_path": "evo2",
+        "verdict": "Likely damaging (ML)",
+        "min_delta": -0.0871504545211792,
+        "clinvar_status": "Uncertain significance",
+        "patient_axis": "RTK/MAPK",
+        "variant_axis": "DDR",
+        "pathway_relevance": "low",
+        "next_actions": [
+          {
+            "action": "wiwfm",
+            "label": "Run WIWFM (therapy fit)",
+            "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+            "endpoint": "/api/efficacy/predict"
+          },
+          {
+            "action": "dossier",
+            "label": "Send to Dossier",
+            "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+          },
+          {
+            "action": "cohort_context",
+            "label": "Add cohort context",
+            "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+            "endpoint": "/api/datasets/extract_and_benchmark"
+          },
+          {
+            "action": "trials",
+            "label": "Trial matching (mechanism fit)",
+            "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+            "endpoint": "/api/trials/agent/search"
+          }
+        ],
+        "provenance_receipts": {
+          "clinvar": true,
+          "evo2": true,
+          "fusion": null,
+          "insights": null
+        },
+        "run_id": "9f2e9c53-e6ea-4995-b991-07ddf4b6de6a"
+      },
+      "gpt_response": "The RAD51C variant you mentioned, located at chr17:58709872 T>C, is of particular interest in the context of ovarian cancer. RAD51C is a gene involved in the homologous recombination repair pathway, which is crucial for repairing DNA double-strand breaks. Variants in RAD51C can compromise DNA repair mechanisms and are associated with an increased risk of developing certain cancers, including ovarian cancer.\n\nIn ovarian cancer, RAD51C mutations can be relevant because they may confer sensitivity to certain types of therapies, such as PARP inhibitors. These drugs exploit the concept of synthetic lethality by targeting cancer cells deficient in homologous recombination repair, leading to cell death. Therefore, if this RAD51C variant is pathogenic or likely pathogenic, it could potentially influence treatment decisions, particularly regarding the use of PARP inhibitors.\n\nThe presence of KRAS and BRAF mutations in your tumor adds another layer of complexity. These mutations are involved in the MAPK signaling pathway and can drive cancer progression. While they are not directly related to the homologous recombination repair pathway, they can influence the overall behavior of the tumor and its response to certain therapies.\n\nIt's important to note that the clinical significance of specific genomic variants can vary, and not all variants in RAD51C are necessarily pathogenic. The impact of the RAD51C variant on your cancer would depend on whether it is classified as pathogenic or likely pathogenic, which requires a detailed analysis by a clinical geneticist or a molecular pathologist.\n\nIn summary, the RAD51C variant could be relevant to your ovarian cancer, particularly in the context of treatment options like PARP inhibitors, but its significance would need to be evaluated in conjunction with your overall genetic profile and clinical context. I recommend discussing this with your oncologist, who may consider further genetic testing or consultation with a genetic counselor to determine the best course of action.",
+      "comparison": {
+        "killer_blow": "GPT can't compute patient axis \u2192 treats all patients the same",
+        "missing_features": [
+          {
+            "feature": "Explicit resolution_path",
+            "crispro_has": "evo2",
+            "gpt_has": false,
+            "impact": "GPT cannot explain HOW it reached its conclusion (prior vs ML)"
+          },
+          {
+            "feature": "Patient-context axis relevance",
+            "crispro_has": "RTK/MAPK patient, DDR variant \u2192 low",
+            "gpt_has": false,
+            "impact": "GPT treats all patients the same (no personalization by tumor context)"
+          },
+          {
+            "feature": "Provenance receipts (auditability)",
+            "crispro_has": "ClinVar: True, Evo2: True, Fusion: None",
+            "gpt_has": false,
+            "impact": "GPT has no receipts \u2192 cannot audit or reproduce determination"
+          },
+          {
+            "feature": "System-aware next actions routing",
+            "crispro_has": [
+              {
+                "action": "wiwfm",
+                "label": "Run WIWFM (therapy fit)",
+                "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+                "endpoint": "/api/efficacy/predict"
+              },
+              {
+                "action": "dossier",
+                "label": "Send to Dossier",
+                "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+              },
+              {
+                "action": "cohort_context",
+                "label": "Add cohort context",
+                "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+                "endpoint": "/api/datasets/extract_and_benchmark"
+              },
+              {
+                "action": "trials",
+                "label": "Trial matching (mechanism fit)",
+                "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+                "endpoint": "/api/trials/agent/search"
+              }
+            ],
+            "gpt_has": false,
+            "impact": "GPT cannot route to WIWFM, trials, or dossier \u2192 dead end"
+          }
+        ],
+        "crispro_structured": true,
+        "gpt_structured": false,
+        "crispro_receipts": true,
+        "gpt_receipts": false
+      }
+    },
+    {
+      "question_id": "q3_prior_resolved_tp53",
+      "category": "ClinVar Decisive (Prior-Resolved)",
+      "question": "I have a TP53 R175H mutation (chr17:7675088 C>T). My tumor has MBD4 and TP53 mutations. Is this pathogenic?",
+      "crispro_response": {
+        "ok": true,
+        "data": {
+          "normalized_variant": {
+            "gene": "TP53",
+            "hgvs_c": null,
+            "hgvs_p": null,
+            "assembly": "GRCh38",
+            "chrom": "17",
+            "pos": 7675088,
+            "ref": "C",
+            "alt": "T"
+          },
+          "vep": null,
+          "coverage": {
+            "clinvar": {
+              "status": "Pathogenic",
+              "review_status": null,
+              "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=17%3A7675088%20C%3ET",
+              "source": "coordinate"
+            },
+            "alphamissense": true
+          },
+          "pathway_context": {
+            "gene": "TP53",
+            "variant_axis": "TP53",
+            "variant_axis_key": "tp53",
+            "patient_actionable_axis": "DDR",
+            "patient_actionable_axis_key": "ddr",
+            "pathway_relevance": "low",
+            "patient_pathway_scores": {
+              "ddr": 1.0,
+              "tp53": 1.0
+            },
+            "variant_pathway_weights": {
+              "tp53": 1.0
+            }
+          },
+          "sequence": {
+            "min_delta": -0.01764369010925293,
+            "evo2_called": true,
+            "evo2_success": true,
+            "windows_attempted": [
+              1024,
+              2048,
+              4096,
+              8192
+            ],
+            "provenance": {
+              "method": "delta_only_upstream",
+              "model": "evo2_1b"
+            },
+            "deltas": null
+          },
+          "insights": {
+            "scores": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": 0.641
+            },
+            "provenance": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": {
+                "model": "enformer-stub-v1",
+                "method": "deterministic_fallback",
+                "context_bp": 32000,
+                "tracks": [
+                  "DNase_stub",
+                  "CAGE_stub",
+                  "ATAC_stub"
+                ],
+                "fallback_reason": "unexpected_error",
+                "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+              }
+            }
+          },
+          "triage": {
+            "status": "resolved_by_prior",
+            "verdict": "Pathogenic",
+            "confidence": 0.9,
+            "reasons": [
+              "ClinVar prior: pathogenic",
+              "Evo2 signal available (\u0394=-0.018)"
+            ],
+            "resolution_path": "prior",
+            "evo2_validated": true
+          },
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance": {
+            "run_id": "94915fc6-14e4-4151-8a90-aa74f5b56178",
+            "mode": "research",
+            "resolution_path": "prior",
+            "options": {
+              "ignore_priors": false,
+              "patient_genes_count": 2
+            },
+            "calls": {
+              "clinvar": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "fusion_coverage": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "evo2": {
+                "ok": true,
+                "status_code": 200,
+                "error": null,
+                "method": "delta_only_upstream",
+                "fallback": null,
+                "model": "evo2_1b"
+              },
+              "insights_functionality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_regulatory": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_essentiality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_chromatin": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              }
+            },
+            "urls": [
+              "/api/evidence/clinvar",
+              "/api/fusion/coverage",
+              "/api/evo/score_variant_multi",
+              "/api/insights/*"
+            ]
+          }
+        }
+      },
+      "crispro_moat": {
+        "resolution_path": "prior",
+        "verdict": "Pathogenic",
+        "min_delta": -0.01764369010925293,
+        "clinvar_status": "Pathogenic",
+        "patient_axis": "DDR",
+        "variant_axis": "TP53",
+        "pathway_relevance": "low",
+        "next_actions": [
+          {
+            "action": "wiwfm",
+            "label": "Run WIWFM (therapy fit)",
+            "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+            "endpoint": "/api/efficacy/predict"
+          },
+          {
+            "action": "dossier",
+            "label": "Send to Dossier",
+            "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+          },
+          {
+            "action": "cohort_context",
+            "label": "Add cohort context",
+            "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+            "endpoint": "/api/datasets/extract_and_benchmark"
+          },
+          {
+            "action": "trials",
+            "label": "Trial matching (mechanism fit)",
+            "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+            "endpoint": "/api/trials/agent/search"
+          }
+        ],
+        "provenance_receipts": {
+          "clinvar": true,
+          "evo2": true,
+          "fusion": null,
+          "insights": null
+        },
+        "run_id": "94915fc6-14e4-4151-8a90-aa74f5b56178"
+      },
+      "gpt_response": "The TP53 R175H mutation is a well-known pathogenic variant. TP53 is a tumor suppressor gene that plays a crucial role in regulating the cell cycle and preventing cancer development. Mutations in TP53 are among the most common genetic alterations in human cancers, including ovarian cancer.\n\nThe R175H mutation is a missense mutation where arginine (R) is replaced by histidine (H) at position 175 of the TP53 protein. This specific mutation is located in the DNA-binding domain of the TP53 protein, which is critical for its function in regulating target genes involved in cell cycle arrest, apoptosis, and DNA repair. The R175H variant is known to disrupt the normal function of the TP53 protein, impairing its ability to bind DNA and activate transcription of its target genes. As a result, this mutation is classified as pathogenic and contributes to tumorigenesis by allowing cells to proliferate uncontrollably.\n\nRegarding the presence of an MBD4 mutation, MBD4 is a gene involved in DNA repair, specifically in the recognition and repair of mismatches that occur during DNA replication. Mutations in MBD4 can lead to genomic instability, which may further contribute to cancer development. While the pathogenicity of MBD4 mutations can vary depending on the specific alteration, its presence alongside a TP53 mutation could potentially exacerbate the loss of genomic integrity.\n\nIn summary, the TP53 R175H mutation in your tumor is considered pathogenic and likely plays a significant role in the development and progression of your ovarian cancer. The presence of additional mutations, such as those in MBD4, may further influence the tumor's behavior and response to treatment. It is important to discuss these findings with your oncologist, who can provide personalized insights and potential therapeutic strategies based on your specific genetic profile and clinical context.",
+      "comparison": {
+        "killer_blow": "GPT has no local ClinVar index \u2192 hallucinates or gives generic info",
+        "missing_features": [
+          {
+            "feature": "Explicit resolution_path",
+            "crispro_has": "prior",
+            "gpt_has": false,
+            "impact": "GPT cannot explain HOW it reached its conclusion (prior vs ML)"
+          },
+          {
+            "feature": "Patient-context axis relevance",
+            "crispro_has": "DDR patient, TP53 variant \u2192 low",
+            "gpt_has": false,
+            "impact": "GPT treats all patients the same (no personalization by tumor context)"
+          },
+          {
+            "feature": "Provenance receipts (auditability)",
+            "crispro_has": "ClinVar: True, Evo2: True, Fusion: None",
+            "gpt_has": false,
+            "impact": "GPT has no receipts \u2192 cannot audit or reproduce determination"
+          },
+          {
+            "feature": "System-aware next actions routing",
+            "crispro_has": [
+              {
+                "action": "wiwfm",
+                "label": "Run WIWFM (therapy fit)",
+                "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+                "endpoint": "/api/efficacy/predict"
+              },
+              {
+                "action": "dossier",
+                "label": "Send to Dossier",
+                "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+              },
+              {
+                "action": "cohort_context",
+                "label": "Add cohort context",
+                "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+                "endpoint": "/api/datasets/extract_and_benchmark"
+              },
+              {
+                "action": "trials",
+                "label": "Trial matching (mechanism fit)",
+                "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+                "endpoint": "/api/trials/agent/search"
+              }
+            ],
+            "gpt_has": false,
+            "impact": "GPT cannot route to WIWFM, trials, or dossier \u2192 dead end"
+          }
+        ],
+        "crispro_structured": true,
+        "gpt_structured": false,
+        "crispro_receipts": true,
+        "gpt_receipts": false
+      }
+    },
+    {
+      "question_id": "q4_assembly_mismatch",
+      "category": "Assembly Mismatch Robustness",
+      "question": "I have a TP53 variant at chr17:7577120 G>A (the report says GRCh38 but I think it might be GRCh37 coords). Can you analyze this?",
+      "crispro_response": {
+        "ok": true,
+        "data": {
+          "normalized_variant": {
+            "gene": "TP53",
+            "hgvs_c": null,
+            "hgvs_p": null,
+            "assembly": "GRCh38",
+            "chrom": "17",
+            "pos": 7577120,
+            "ref": "G",
+            "alt": "A"
+          },
+          "vep": null,
+          "coverage": {
+            "clinvar": {
+              "status": "Pathogenic",
+              "review_status": null,
+              "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=17%3A7577120%20G%3EA",
+              "source": "coordinate"
+            },
+            "alphamissense": true
+          },
+          "pathway_context": {
+            "gene": "TP53",
+            "variant_axis": "TP53",
+            "variant_axis_key": "tp53",
+            "patient_actionable_axis": "DDR",
+            "patient_actionable_axis_key": "ddr",
+            "pathway_relevance": "low",
+            "patient_pathway_scores": {
+              "ddr": 1.0,
+              "tp53": 1.0
+            },
+            "variant_pathway_weights": {
+              "tp53": 1.0
+            }
+          },
+          "sequence": {
+            "min_delta": -0.001895308494567871,
+            "evo2_called": true,
+            "evo2_success": true,
+            "windows_attempted": [
+              1024,
+              2048,
+              4096,
+              8192
+            ],
+            "provenance": {
+              "method": "delta_only_upstream",
+              "model": "evo2_1b"
+            },
+            "deltas": null
+          },
+          "insights": {
+            "scores": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": 0.525
+            },
+            "provenance": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": {
+                "model": "enformer-stub-v1",
+                "method": "deterministic_fallback",
+                "context_bp": 32000,
+                "tracks": [
+                  "DNase_stub",
+                  "CAGE_stub",
+                  "ATAC_stub"
+                ],
+                "fallback_reason": "unexpected_error",
+                "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+              }
+            }
+          },
+          "triage": {
+            "status": "resolved_by_prior",
+            "verdict": "Pathogenic",
+            "confidence": 0.9,
+            "reasons": [
+              "ClinVar prior: pathogenic",
+              "Evo2 signal available (\u0394=-0.002)"
+            ],
+            "resolution_path": "prior",
+            "evo2_validated": true
+          },
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance": {
+            "run_id": "0802e96b-caa8-4449-8113-bd09a8376456",
+            "mode": "research",
+            "resolution_path": "prior",
+            "options": {
+              "ignore_priors": false,
+              "patient_genes_count": 2
+            },
+            "calls": {
+              "clinvar": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "fusion_coverage": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "evo2": {
+                "ok": true,
+                "status_code": 200,
+                "error": null,
+                "method": "delta_only_upstream",
+                "fallback": null,
+                "model": "evo2_1b"
+              },
+              "insights_functionality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_regulatory": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_essentiality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_chromatin": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              }
+            },
+            "urls": [
+              "/api/evidence/clinvar",
+              "/api/fusion/coverage",
+              "/api/evo/score_variant_multi",
+              "/api/insights/*"
+            ]
+          }
+        }
+      },
+      "crispro_moat": {
+        "resolution_path": "prior",
+        "verdict": "Pathogenic",
+        "min_delta": -0.001895308494567871,
+        "clinvar_status": "Pathogenic",
+        "patient_axis": "DDR",
+        "variant_axis": "TP53",
+        "pathway_relevance": "low",
+        "next_actions": [
+          {
+            "action": "wiwfm",
+            "label": "Run WIWFM (therapy fit)",
+            "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+            "endpoint": "/api/efficacy/predict"
+          },
+          {
+            "action": "dossier",
+            "label": "Send to Dossier",
+            "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+          },
+          {
+            "action": "cohort_context",
+            "label": "Add cohort context",
+            "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+            "endpoint": "/api/datasets/extract_and_benchmark"
+          },
+          {
+            "action": "trials",
+            "label": "Trial matching (mechanism fit)",
+            "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+            "endpoint": "/api/trials/agent/search"
+          }
+        ],
+        "provenance_receipts": {
+          "clinvar": true,
+          "evo2": true,
+          "fusion": null,
+          "insights": null
+        },
+        "run_id": "0802e96b-caa8-4449-8113-bd09a8376456"
+      },
+      "gpt_response": "To analyze the TP53 variant you mentioned, let's first address the potential issue with the genomic assembly. You noted that the report specifies GRCh38, but you suspect it might be GRCh37. The coordinates for genomic variants can differ between assemblies, so it's important to clarify which one is correct.\n\n1. **Coordinate Conversion**:\n   - In the GRCh38 assembly, the TP53 gene is located on chromosome 17, and the variant at position 7577120 G>A corresponds to a specific nucleotide change.\n   - In the GRCh37 (also known as hg19) assembly, the TP53 gene is also on chromosome 17, but the coordinates are slightly different due to differences in the reference genome sequences.\n\n2. **Variant Analysis**:\n   - **TP53 Gene**: TP53 is a well-known tumor suppressor gene, and mutations in TP53 are common in various cancers. The specific impact of a variant depends on its location within the gene (e.g., coding region, splice site) and the nature of the nucleotide change.\n   - **G>A Change**: This notation indicates a single nucleotide polymorphism (SNP) where guanine (G) is replaced by adenine (A) at the specified position. The functional impact of this change would depend on whether it occurs in a coding region, and if so, whether it leads to an amino acid substitution, a premature stop codon, or affects splicing.\n\n3. **Functional Impact**:\n   - If this variant is in a coding region and results in an amino acid substitution, it could potentially alter the function of the p53 protein, which is crucial for DNA repair, apoptosis, and cell cycle regulation.\n   - If the variant is non-coding or synonymous, its impact might be less direct, but it could still affect gene regulation or splicing.\n\n4. **Clinical Significance**:\n   - The clinical significance of TP53 variants can vary widely. Some are well-characterized as pathogenic or likely pathogenic, while others may be of uncertain significance (VUS).\n   - It would be helpful to consult databases such as ClinVar or COSMIC to see if this specific variant has been previously reported and characterized.\n\n5. **Next Steps**:\n   - Confirm the correct genomic assembly used in your report. If necessary, use tools like the UCSC Genome Browser or Ensembl to convert coordinates between GRCh37 and GRCh38.\n   - Discuss the findings with your healthcare provider or a genetic counselor, who can help interpret the variant in the context of your personal and family medical history.\n\nUnderstanding the precise nature and implications of a TP53 variant is crucial for assessing cancer risk and potential treatment strategies.",
+      "comparison": {
+        "killer_blow": "GPT can't normalize or fallback \u2192 brittleness or generic response",
+        "missing_features": [
+          {
+            "feature": "Explicit resolution_path",
+            "crispro_has": "prior",
+            "gpt_has": false,
+            "impact": "GPT cannot explain HOW it reached its conclusion (prior vs ML)"
+          },
+          {
+            "feature": "Patient-context axis relevance",
+            "crispro_has": "DDR patient, TP53 variant \u2192 low",
+            "gpt_has": false,
+            "impact": "GPT treats all patients the same (no personalization by tumor context)"
+          },
+          {
+            "feature": "Provenance receipts (auditability)",
+            "crispro_has": "ClinVar: True, Evo2: True, Fusion: None",
+            "gpt_has": false,
+            "impact": "GPT has no receipts \u2192 cannot audit or reproduce determination"
+          },
+          {
+            "feature": "System-aware next actions routing",
+            "crispro_has": [
+              {
+                "action": "wiwfm",
+                "label": "Run WIWFM (therapy fit)",
+                "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+                "endpoint": "/api/efficacy/predict"
+              },
+              {
+                "action": "dossier",
+                "label": "Send to Dossier",
+                "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+              },
+              {
+                "action": "cohort_context",
+                "label": "Add cohort context",
+                "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+                "endpoint": "/api/datasets/extract_and_benchmark"
+              },
+              {
+                "action": "trials",
+                "label": "Trial matching (mechanism fit)",
+                "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+                "endpoint": "/api/trials/agent/search"
+              }
+            ],
+            "gpt_has": false,
+            "impact": "GPT cannot route to WIWFM, trials, or dossier \u2192 dead end"
+          }
+        ],
+        "crispro_structured": true,
+        "gpt_structured": false,
+        "crispro_receipts": true,
+        "gpt_receipts": false
+      }
+    },
+    {
+      "question_id": "q5_provenance_audit",
+      "category": "Provenance Audit",
+      "question": "For the RAD51C chr17:58709872 T>C variant with MBD4/TP53 background: Show me exactly what data sources you used to make your determination and whether each source was available.",
+      "crispro_response": {
+        "ok": true,
+        "data": {
+          "normalized_variant": {
+            "gene": "RAD51C",
+            "hgvs_c": null,
+            "hgvs_p": null,
+            "assembly": "GRCh38",
+            "chrom": "17",
+            "pos": 58709872,
+            "ref": "T",
+            "alt": "C"
+          },
+          "vep": null,
+          "coverage": {
+            "clinvar": {
+              "status": "Uncertain significance",
+              "review_status": "criteria provided, multiple submitters, no conflicts",
+              "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=17%3A58709872%20T%3EC",
+              "source": "variant_summary_local_ddr"
+            },
+            "alphamissense": true
+          },
+          "pathway_context": {
+            "gene": "RAD51C",
+            "variant_axis": "DDR",
+            "variant_axis_key": "ddr",
+            "patient_actionable_axis": "DDR",
+            "patient_actionable_axis_key": "ddr",
+            "pathway_relevance": "high",
+            "patient_pathway_scores": {
+              "ddr": 1.0,
+              "tp53": 1.0
+            },
+            "variant_pathway_weights": {
+              "ddr": 1.0
+            }
+          },
+          "sequence": {
+            "min_delta": -0.0871504545211792,
+            "evo2_called": true,
+            "evo2_success": true,
+            "windows_attempted": [
+              1024,
+              2048,
+              4096,
+              8192
+            ],
+            "provenance": {
+              "method": "delta_only_upstream",
+              "model": "evo2_1b"
+            },
+            "deltas": null
+          },
+          "insights": {
+            "scores": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": 0.649
+            },
+            "provenance": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": {
+                "model": "enformer-stub-v1",
+                "method": "deterministic_fallback",
+                "context_bp": 32000,
+                "tracks": [
+                  "DNase_stub",
+                  "CAGE_stub",
+                  "ATAC_stub"
+                ],
+                "fallback_reason": "unexpected_error",
+                "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+              }
+            }
+          },
+          "triage": {
+            "status": "resolved_by_evo2",
+            "verdict": "Likely damaging (ML)",
+            "confidence": 0.7,
+            "reasons": [
+              "Evo2 |\u0394| percentile\u22480.80 (high magnitude disruption signal)"
+            ],
+            "resolution_path": "evo2",
+            "evo2_delta": -0.0871504545211792,
+            "impact_percentile_like": 0.8
+          },
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance": {
+            "run_id": "7d431b6d-6dd6-40b5-b859-eb0045e76ae6",
+            "mode": "research",
+            "resolution_path": "evo2",
+            "options": {
+              "ignore_priors": false,
+              "patient_genes_count": 2
+            },
+            "calls": {
+              "clinvar": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "fusion_coverage": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "evo2": {
+                "ok": true,
+                "status_code": 200,
+                "error": null,
+                "method": "delta_only_upstream",
+                "fallback": null,
+                "model": "evo2_1b"
+              },
+              "insights_functionality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_regulatory": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_essentiality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_chromatin": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              }
+            },
+            "urls": [
+              "/api/evidence/clinvar",
+              "/api/fusion/coverage",
+              "/api/evo/score_variant_multi",
+              "/api/insights/*"
+            ]
+          }
+        }
+      },
+      "crispro_moat": {
+        "resolution_path": "evo2",
+        "verdict": "Likely damaging (ML)",
+        "min_delta": -0.0871504545211792,
+        "clinvar_status": "Uncertain significance",
+        "patient_axis": "DDR",
+        "variant_axis": "DDR",
+        "pathway_relevance": "high",
+        "next_actions": [
+          {
+            "action": "wiwfm",
+            "label": "Run WIWFM (therapy fit)",
+            "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+            "endpoint": "/api/efficacy/predict"
+          },
+          {
+            "action": "dossier",
+            "label": "Send to Dossier",
+            "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+          },
+          {
+            "action": "cohort_context",
+            "label": "Add cohort context",
+            "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+            "endpoint": "/api/datasets/extract_and_benchmark"
+          },
+          {
+            "action": "trials",
+            "label": "Trial matching (mechanism fit)",
+            "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+            "endpoint": "/api/trials/agent/search"
+          }
+        ],
+        "provenance_receipts": {
+          "clinvar": true,
+          "evo2": true,
+          "fusion": null,
+          "insights": null
+        },
+        "run_id": "7d431b6d-6dd6-40b5-b859-eb0045e76ae6"
+      },
+      "gpt_response": "To evaluate the RAD51C chr17:58709872 T>C variant in the context of a patient with MBD4 and TP53 gene considerations, several data sources can be utilized to determine the clinical significance and potential implications of this variant. Here is a list of common data sources used in precision oncology for variant interpretation, along with their availability status:\n\n1. **ClinVar**: A publicly accessible database that aggregates information about genomic variation and its relationship to human health. It provides data on the clinical significance of variants, including whether they are pathogenic, likely pathogenic, benign, or of uncertain significance.\n   - **Availability**: Publicly available.\n\n2. **COSMIC (Catalogue of Somatic Mutations in Cancer)**: A comprehensive resource for exploring the impact of somatic mutations in human cancer. It includes data on mutation frequency and cancer type associations.\n   - **Availability**: Publicly available, but some features require a subscription.\n\n3. **dbSNP**: A database that provides information on single nucleotide polymorphisms (SNPs) and other classes of minor genetic variation.\n   - **Availability**: Publicly available.\n\n4. **GnomAD (Genome Aggregation Database)**: Provides allele frequency data from a large population cohort, which helps in understanding the rarity of a variant.\n   - **Availability**: Publicly available.\n\n5. **OncoKB**: A precision oncology knowledge base that provides information on the effects and treatment implications of specific cancer gene alterations.\n   - **Availability**: Publicly available, but registration may be required for full access.\n\n6. **TCGA (The Cancer Genome Atlas)**: A project that catalogs genetic mutations responsible for cancer, using genome sequencing and bioinformatics.\n   - **Availability**: Publicly available.\n\n7. **Literature Review**: Peer-reviewed scientific literature can provide insights into the functional impact of specific variants and their associations with cancer phenotypes.\n   - **Availability**: Publicly available, though some articles may require journal subscriptions or institutional access.\n\n8. **Functional Assays**: Experimental data from functional assays can provide evidence of the biological impact of a variant.\n   - **Availability**: Data may be available in the literature or specific databases, but not always publicly accessible.\n\nFor the RAD51C variant in question, these sources would be checked to determine its clinical significance, potential pathogenicity, and any known interactions with MBD4 and TP53 mutations. The availability status indicates that most of these resources are accessible to the public, though some may require registration or subscriptions for full access.",
+      "comparison": {
+        "killer_blow": "GPT has no receipts \u2192 'based on my training data' (no auditability)",
+        "missing_features": [
+          {
+            "feature": "Explicit resolution_path",
+            "crispro_has": "evo2",
+            "gpt_has": false,
+            "impact": "GPT cannot explain HOW it reached its conclusion (prior vs ML)"
+          },
+          {
+            "feature": "Patient-context axis relevance",
+            "crispro_has": "DDR patient, DDR variant \u2192 high",
+            "gpt_has": false,
+            "impact": "GPT treats all patients the same (no personalization by tumor context)"
+          },
+          {
+            "feature": "System-aware next actions routing",
+            "crispro_has": [
+              {
+                "action": "wiwfm",
+                "label": "Run WIWFM (therapy fit)",
+                "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+                "endpoint": "/api/efficacy/predict"
+              },
+              {
+                "action": "dossier",
+                "label": "Send to Dossier",
+                "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+              },
+              {
+                "action": "cohort_context",
+                "label": "Add cohort context",
+                "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+                "endpoint": "/api/datasets/extract_and_benchmark"
+              },
+              {
+                "action": "trials",
+                "label": "Trial matching (mechanism fit)",
+                "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+                "endpoint": "/api/trials/agent/search"
+              }
+            ],
+            "gpt_has": false,
+            "impact": "GPT cannot route to WIWFM, trials, or dossier \u2192 dead end"
+          }
+        ],
+        "crispro_structured": true,
+        "gpt_structured": false,
+        "crispro_receipts": true,
+        "gpt_receipts": false
+      }
+    },
+    {
+      "question_id": "q6_multi_vus_batch",
+      "category": "Multi-VUS Batch Triage",
+      "question": "I have 3 VUS in my report: RAD51C chr17:58709872 T>C, BRCA2 chr13:32936732 C>T, PALB2 chr16:23603160 G>A. My tumor has MBD4 and TP53. Which ones are likely damaging and relevant?",
+      "crispro_responses": [
+        {
+          "ok": true,
+          "data": {
+            "normalized_variant": {
+              "gene": "RAD51C",
+              "hgvs_c": null,
+              "hgvs_p": null,
+              "assembly": "GRCh38",
+              "chrom": "17",
+              "pos": 58709872,
+              "ref": "T",
+              "alt": "C"
+            },
+            "vep": null,
+            "coverage": {
+              "clinvar": {
+                "status": "Uncertain significance",
+                "review_status": "criteria provided, multiple submitters, no conflicts",
+                "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=17%3A58709872%20T%3EC",
+                "source": "variant_summary_local_ddr"
+              },
+              "alphamissense": true
+            },
+            "pathway_context": {
+              "gene": "RAD51C",
+              "variant_axis": "DDR",
+              "variant_axis_key": "ddr",
+              "patient_actionable_axis": "DDR",
+              "patient_actionable_axis_key": "ddr",
+              "pathway_relevance": "high",
+              "patient_pathway_scores": {
+                "ddr": 1.0,
+                "tp53": 1.0
+              },
+              "variant_pathway_weights": {
+                "ddr": 1.0
+              }
+            },
+            "sequence": {
+              "min_delta": -0.0871504545211792,
+              "evo2_called": true,
+              "evo2_success": true,
+              "windows_attempted": [
+                1024,
+                2048,
+                4096,
+                8192
+              ],
+              "provenance": {
+                "method": "delta_only_upstream",
+                "model": "evo2_1b"
+              },
+              "deltas": null
+            },
+            "insights": {
+              "scores": {
+                "functionality": null,
+                "regulatory": null,
+                "essentiality": null,
+                "chromatin": 0.649
+              },
+              "provenance": {
+                "functionality": null,
+                "regulatory": null,
+                "essentiality": null,
+                "chromatin": {
+                  "model": "enformer-stub-v1",
+                  "method": "deterministic_fallback",
+                  "context_bp": 32000,
+                  "tracks": [
+                    "DNase_stub",
+                    "CAGE_stub",
+                    "ATAC_stub"
+                  ],
+                  "fallback_reason": "unexpected_error",
+                  "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+                }
+              }
+            },
+            "triage": {
+              "status": "resolved_by_evo2",
+              "verdict": "Likely damaging (ML)",
+              "confidence": 0.7,
+              "reasons": [
+                "Evo2 |\u0394| percentile\u22480.80 (high magnitude disruption signal)"
+              ],
+              "resolution_path": "evo2",
+              "evo2_delta": -0.0871504545211792,
+              "impact_percentile_like": 0.8
+            },
+            "next_actions": [
+              {
+                "action": "wiwfm",
+                "label": "Run WIWFM (therapy fit)",
+                "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+                "endpoint": "/api/efficacy/predict"
+              },
+              {
+                "action": "dossier",
+                "label": "Send to Dossier",
+                "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+              },
+              {
+                "action": "cohort_context",
+                "label": "Add cohort context",
+                "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+                "endpoint": "/api/datasets/extract_and_benchmark"
+              },
+              {
+                "action": "trials",
+                "label": "Trial matching (mechanism fit)",
+                "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+                "endpoint": "/api/trials/agent/search"
+              }
+            ],
+            "provenance": {
+              "run_id": "fd89198d-cc03-4ba9-a6da-99bf73d051c1",
+              "mode": "research",
+              "resolution_path": "evo2",
+              "options": {
+                "ignore_priors": false,
+                "patient_genes_count": 2
+              },
+              "calls": {
+                "clinvar": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null
+                },
+                "fusion_coverage": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null
+                },
+                "evo2": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null,
+                  "method": "delta_only_upstream",
+                  "fallback": null,
+                  "model": "evo2_1b"
+                },
+                "insights_functionality": {
+                  "ok": false,
+                  "status_code": 500,
+                  "error": "HTTP 500"
+                },
+                "insights_regulatory": {
+                  "ok": false,
+                  "status_code": 500,
+                  "error": "HTTP 500"
+                },
+                "insights_essentiality": {
+                  "ok": false,
+                  "status_code": 500,
+                  "error": "HTTP 500"
+                },
+                "insights_chromatin": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null
+                }
+              },
+              "urls": [
+                "/api/evidence/clinvar",
+                "/api/fusion/coverage",
+                "/api/evo/score_variant_multi",
+                "/api/insights/*"
+              ]
+            }
+          }
+        },
+        {
+          "ok": true,
+          "data": {
+            "normalized_variant": {
+              "gene": "BRCA2",
+              "hgvs_c": null,
+              "hgvs_p": null,
+              "assembly": "GRCh38",
+              "chrom": "13",
+              "pos": 32936732,
+              "ref": "C",
+              "alt": "T"
+            },
+            "vep": null,
+            "coverage": {
+              "clinvar": {
+                "status": "Pathogenic",
+                "review_status": null,
+                "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=13%3A32936732%20C%3ET",
+                "source": "coordinate"
+              },
+              "alphamissense": true
+            },
+            "pathway_context": {
+              "gene": "BRCA2",
+              "variant_axis": "DDR",
+              "variant_axis_key": "ddr",
+              "patient_actionable_axis": "DDR",
+              "patient_actionable_axis_key": "ddr",
+              "pathway_relevance": "high",
+              "patient_pathway_scores": {
+                "ddr": 1.0,
+                "tp53": 1.0
+              },
+              "variant_pathway_weights": {
+                "ddr": 1.0
+              }
+            },
+            "sequence": {
+              "min_delta": -0.000469207763671875,
+              "evo2_called": true,
+              "evo2_success": true,
+              "windows_attempted": [
+                1024,
+                2048,
+                4096,
+                8192
+              ],
+              "provenance": {
+                "method": "delta_only_upstream",
+                "model": "evo2_1b"
+              },
+              "deltas": null
+            },
+            "insights": {
+              "scores": {
+                "functionality": null,
+                "regulatory": null,
+                "essentiality": null,
+                "chromatin": 0.436
+              },
+              "provenance": {
+                "functionality": null,
+                "regulatory": null,
+                "essentiality": null,
+                "chromatin": {
+                  "model": "enformer-stub-v1",
+                  "method": "deterministic_fallback",
+                  "context_bp": 32000,
+                  "tracks": [
+                    "DNase_stub",
+                    "CAGE_stub",
+                    "ATAC_stub"
+                  ],
+                  "fallback_reason": "unexpected_error",
+                  "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+                }
+              }
+            },
+            "triage": {
+              "status": "resolved_by_prior",
+              "verdict": "Pathogenic",
+              "confidence": 0.9,
+              "reasons": [
+                "ClinVar prior: pathogenic",
+                "Evo2 signal available (\u0394=-0.000)"
+              ],
+              "resolution_path": "prior",
+              "evo2_validated": true
+            },
+            "next_actions": [
+              {
+                "action": "wiwfm",
+                "label": "Run WIWFM (therapy fit)",
+                "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+                "endpoint": "/api/efficacy/predict"
+              },
+              {
+                "action": "dossier",
+                "label": "Send to Dossier",
+                "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+              },
+              {
+                "action": "cohort_context",
+                "label": "Add cohort context",
+                "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+                "endpoint": "/api/datasets/extract_and_benchmark"
+              },
+              {
+                "action": "trials",
+                "label": "Trial matching (mechanism fit)",
+                "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+                "endpoint": "/api/trials/agent/search"
+              }
+            ],
+            "provenance": {
+              "run_id": "ce5bd971-06f7-40fb-b89a-ac19a436c803",
+              "mode": "research",
+              "resolution_path": "prior",
+              "options": {
+                "ignore_priors": false,
+                "patient_genes_count": 2
+              },
+              "calls": {
+                "clinvar": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null
+                },
+                "fusion_coverage": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null
+                },
+                "evo2": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null,
+                  "method": "delta_only_upstream",
+                  "fallback": null,
+                  "model": "evo2_1b"
+                },
+                "insights_functionality": {
+                  "ok": false,
+                  "status_code": 500,
+                  "error": "HTTP 500"
+                },
+                "insights_regulatory": {
+                  "ok": false,
+                  "status_code": 500,
+                  "error": "HTTP 500"
+                },
+                "insights_essentiality": {
+                  "ok": false,
+                  "status_code": 500,
+                  "error": "HTTP 500"
+                },
+                "insights_chromatin": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null
+                }
+              },
+              "urls": [
+                "/api/evidence/clinvar",
+                "/api/fusion/coverage",
+                "/api/evo/score_variant_multi",
+                "/api/insights/*"
+              ]
+            }
+          }
+        },
+        {
+          "ok": true,
+          "data": {
+            "normalized_variant": {
+              "gene": "PALB2",
+              "hgvs_c": null,
+              "hgvs_p": null,
+              "assembly": "GRCh38",
+              "chrom": "16",
+              "pos": 23603160,
+              "ref": "G",
+              "alt": "A"
+            },
+            "vep": null,
+            "coverage": {
+              "clinvar": {
+                "status": "Pathogenic",
+                "review_status": null,
+                "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=16%3A23603160%20G%3EA",
+                "source": "coordinate"
+              },
+              "alphamissense": true
+            },
+            "pathway_context": {
+              "gene": "PALB2",
+              "variant_axis": "DDR",
+              "variant_axis_key": "ddr",
+              "patient_actionable_axis": "DDR",
+              "patient_actionable_axis_key": "ddr",
+              "pathway_relevance": "high",
+              "patient_pathway_scores": {
+                "ddr": 1.0,
+                "tp53": 1.0
+              },
+              "variant_pathway_weights": {
+                "ddr": 1.0
+              }
+            },
+            "sequence": {
+              "min_delta": null,
+              "evo2_called": true,
+              "evo2_success": false,
+              "windows_attempted": [
+                1024,
+                2048,
+                4096,
+                8192
+              ],
+              "provenance": {
+                "fallback": "ref_mismatch",
+                "model": "evo2_1b",
+                "upstream_status": 400,
+                "detail": "{\"detail\":\"Reference allele mismatch: fetched='C' provided='G' at 16:23603160\"}",
+                "assembly_fallback": {
+                  "from": "GRCh38",
+                  "to": "GRCh37",
+                  "reason": "ref_mismatch",
+                  "retry_status": 400
+                }
+              },
+              "deltas": null
+            },
+            "insights": {
+              "scores": {
+                "functionality": null,
+                "regulatory": null,
+                "essentiality": null,
+                "chromatin": 0.549
+              },
+              "provenance": {
+                "functionality": null,
+                "regulatory": null,
+                "essentiality": null,
+                "chromatin": {
+                  "model": "enformer-stub-v1",
+                  "method": "deterministic_fallback",
+                  "context_bp": 32000,
+                  "tracks": [
+                    "DNase_stub",
+                    "CAGE_stub",
+                    "ATAC_stub"
+                  ],
+                  "fallback_reason": "unexpected_error",
+                  "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+                }
+              }
+            },
+            "triage": {
+              "status": "resolved_by_prior",
+              "verdict": "Pathogenic",
+              "confidence": 0.9,
+              "reasons": [
+                "ClinVar prior: pathogenic"
+              ],
+              "resolution_path": "prior",
+              "evo2_validated": false
+            },
+            "next_actions": [
+              {
+                "action": "wiwfm",
+                "label": "Run WIWFM (therapy fit)",
+                "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+                "endpoint": "/api/efficacy/predict"
+              },
+              {
+                "action": "dossier",
+                "label": "Send to Dossier",
+                "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+              },
+              {
+                "action": "cohort_context",
+                "label": "Add cohort context",
+                "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+                "endpoint": "/api/datasets/extract_and_benchmark"
+              },
+              {
+                "action": "trials",
+                "label": "Trial matching (mechanism fit)",
+                "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+                "endpoint": "/api/trials/agent/search"
+              }
+            ],
+            "provenance": {
+              "run_id": "29773454-6e7d-471a-ab45-b9a41c5591d6",
+              "mode": "research",
+              "resolution_path": "prior",
+              "options": {
+                "ignore_priors": false,
+                "patient_genes_count": 2
+              },
+              "calls": {
+                "clinvar": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null
+                },
+                "fusion_coverage": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null
+                },
+                "evo2": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null,
+                  "method": null,
+                  "fallback": "ref_mismatch",
+                  "model": "evo2_1b"
+                },
+                "insights_functionality": {
+                  "ok": false,
+                  "status_code": 500,
+                  "error": "HTTP 500"
+                },
+                "insights_regulatory": {
+                  "ok": false,
+                  "status_code": 500,
+                  "error": "HTTP 500"
+                },
+                "insights_essentiality": {
+                  "ok": false,
+                  "status_code": 500,
+                  "error": "HTTP 500"
+                },
+                "insights_chromatin": {
+                  "ok": true,
+                  "status_code": 200,
+                  "error": null
+                }
+              },
+              "urls": [
+                "/api/evidence/clinvar",
+                "/api/fusion/coverage",
+                "/api/evo/score_variant_multi",
+                "/api/insights/*"
+              ]
+            }
+          }
+        }
+      ],
+      "crispro_moats": [
+        {
+          "resolution_path": "evo2",
+          "verdict": "Likely damaging (ML)",
+          "min_delta": -0.0871504545211792,
+          "clinvar_status": "Uncertain significance",
+          "patient_axis": "DDR",
+          "variant_axis": "DDR",
+          "pathway_relevance": "high",
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance_receipts": {
+            "clinvar": true,
+            "evo2": true,
+            "fusion": null,
+            "insights": null
+          },
+          "run_id": "fd89198d-cc03-4ba9-a6da-99bf73d051c1"
+        },
+        {
+          "resolution_path": "prior",
+          "verdict": "Pathogenic",
+          "min_delta": -0.000469207763671875,
+          "clinvar_status": "Pathogenic",
+          "patient_axis": "DDR",
+          "variant_axis": "DDR",
+          "pathway_relevance": "high",
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance_receipts": {
+            "clinvar": true,
+            "evo2": true,
+            "fusion": null,
+            "insights": null
+          },
+          "run_id": "ce5bd971-06f7-40fb-b89a-ac19a436c803"
+        },
+        {
+          "resolution_path": "prior",
+          "verdict": "Pathogenic",
+          "min_delta": null,
+          "clinvar_status": "Pathogenic",
+          "patient_axis": "DDR",
+          "variant_axis": "DDR",
+          "pathway_relevance": "high",
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance_receipts": {
+            "clinvar": true,
+            "evo2": true,
+            "fusion": null,
+            "insights": null
+          },
+          "run_id": "29773454-6e7d-471a-ab45-b9a41c5591d6"
+        }
+      ],
+      "crispro_time": "~3-5s (parallel)",
+      "gpt_response": null,
+      "gpt_time": "~15-20s (sequential + manual synthesis)",
+      "comparison": {
+        "killer_blow": "GPT scales linearly (3 prompts + manual synthesis); CrisPRO constant-time batch",
+        "crispro_advantage": "Batch processing in constant time; GPT needs 3 separate prompts"
+      }
+    },
+    {
+      "question_id": "q7_next_actions_routing",
+      "category": "Next Actions Routing",
+      "question": "I have a BRCA2 VUS (chr13:32936732 C>T). My tumor has MBD4 and TP53 (DDR axis). What should I do next?",
+      "crispro_response": {
+        "ok": true,
+        "data": {
+          "normalized_variant": {
+            "gene": "BRCA2",
+            "hgvs_c": null,
+            "hgvs_p": null,
+            "assembly": "GRCh38",
+            "chrom": "13",
+            "pos": 32936732,
+            "ref": "C",
+            "alt": "T"
+          },
+          "vep": null,
+          "coverage": {
+            "clinvar": {
+              "status": "Pathogenic",
+              "review_status": null,
+              "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=13%3A32936732%20C%3ET",
+              "source": "coordinate"
+            },
+            "alphamissense": true
+          },
+          "pathway_context": {
+            "gene": "BRCA2",
+            "variant_axis": "DDR",
+            "variant_axis_key": "ddr",
+            "patient_actionable_axis": "DDR",
+            "patient_actionable_axis_key": "ddr",
+            "pathway_relevance": "high",
+            "patient_pathway_scores": {
+              "ddr": 1.0,
+              "tp53": 1.0
+            },
+            "variant_pathway_weights": {
+              "ddr": 1.0
+            }
+          },
+          "sequence": {
+            "min_delta": -0.000469207763671875,
+            "evo2_called": true,
+            "evo2_success": true,
+            "windows_attempted": [
+              1024,
+              2048,
+              4096,
+              8192
+            ],
+            "provenance": {
+              "method": "delta_only_upstream",
+              "model": "evo2_1b"
+            },
+            "deltas": null
+          },
+          "insights": {
+            "scores": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": 0.436
+            },
+            "provenance": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": {
+                "model": "enformer-stub-v1",
+                "method": "deterministic_fallback",
+                "context_bp": 32000,
+                "tracks": [
+                  "DNase_stub",
+                  "CAGE_stub",
+                  "ATAC_stub"
+                ],
+                "fallback_reason": "unexpected_error",
+                "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+              }
+            }
+          },
+          "triage": {
+            "status": "resolved_by_prior",
+            "verdict": "Pathogenic",
+            "confidence": 0.9,
+            "reasons": [
+              "ClinVar prior: pathogenic",
+              "Evo2 signal available (\u0394=-0.000)"
+            ],
+            "resolution_path": "prior",
+            "evo2_validated": true
+          },
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance": {
+            "run_id": "61a74c6f-6166-43db-a69a-e615f09e708e",
+            "mode": "research",
+            "resolution_path": "prior",
+            "options": {
+              "ignore_priors": false,
+              "patient_genes_count": 2
+            },
+            "calls": {
+              "clinvar": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "fusion_coverage": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "evo2": {
+                "ok": true,
+                "status_code": 200,
+                "error": null,
+                "method": "delta_only_upstream",
+                "fallback": null,
+                "model": "evo2_1b"
+              },
+              "insights_functionality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_regulatory": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_essentiality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_chromatin": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              }
+            },
+            "urls": [
+              "/api/evidence/clinvar",
+              "/api/fusion/coverage",
+              "/api/evo/score_variant_multi",
+              "/api/insights/*"
+            ]
+          }
+        }
+      },
+      "crispro_moat": {
+        "resolution_path": "prior",
+        "verdict": "Pathogenic",
+        "min_delta": -0.000469207763671875,
+        "clinvar_status": "Pathogenic",
+        "patient_axis": "DDR",
+        "variant_axis": "DDR",
+        "pathway_relevance": "high",
+        "next_actions": [
+          {
+            "action": "wiwfm",
+            "label": "Run WIWFM (therapy fit)",
+            "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+            "endpoint": "/api/efficacy/predict"
+          },
+          {
+            "action": "dossier",
+            "label": "Send to Dossier",
+            "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+          },
+          {
+            "action": "cohort_context",
+            "label": "Add cohort context",
+            "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+            "endpoint": "/api/datasets/extract_and_benchmark"
+          },
+          {
+            "action": "trials",
+            "label": "Trial matching (mechanism fit)",
+            "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+            "endpoint": "/api/trials/agent/search"
+          }
+        ],
+        "provenance_receipts": {
+          "clinvar": true,
+          "evo2": true,
+          "fusion": null,
+          "insights": null
+        },
+        "run_id": "61a74c6f-6166-43db-a69a-e615f09e708e"
+      },
+      "gpt_response": "When dealing with a variant of uncertain significance (VUS) in the BRCA2 gene, such as the one you mentioned (chr13:32936732 C>T), it's important to approach the situation with a focus on gathering more information and considering your overall clinical context. Here are some steps you can consider:\n\n1. **Consult with a Genetic Counselor**: A genetic counselor can provide insights into the implications of the VUS and discuss whether additional family genetic testing might help clarify the significance of the variant. They can also help you understand the potential hereditary risks and implications for family members.\n\n2. **Consider Functional Studies**: Although not always readily available, functional studies can sometimes provide additional information about the impact of a VUS on protein function. Discuss with your oncologist or genetic counselor if any research studies or clinical trials are available that might assess the functional impact of your specific variant.\n\n3. **Family History Assessment**: A detailed family history can provide clues about the potential significance of the VUS. If there is a strong family history of BRCA-related cancers (such as breast, ovarian, pancreatic, or prostate cancer), this might influence management decisions.\n\n4. **Regular Surveillance and Risk Management**: Given the presence of the BRCA2 VUS, it may be prudent to follow enhanced surveillance protocols for BRCA-related cancers, depending on your personal and family history. This could include regular breast imaging, ovarian cancer screening, or other relevant assessments.\n\n5. **Consider the Tumor Genomic Context**: The presence of mutations in MBD4 and TP53, both involved in DNA damage response (DDR), suggests that your tumor may have a compromised ability to repair DNA. This could potentially make it more sensitive to certain therapies, such as PARP inhibitors, which are particularly effective in tumors with BRCA mutations or other DDR deficiencies. Discuss with your oncologist whether this might be a suitable treatment option.\n\n6. **Stay Informed About Research and Clinical Trials**: New research and clinical trials are continually emerging, especially in the field of precision oncology. Keep in touch with your healthcare provider about any new findings or trials that might be relevant to your situation.\n\n7. **Multidisciplinary Team Discussion**: Engage with a multidisciplinary team that includes oncologists, geneticists, and other specialists to ensure a comprehensive approach to your care.\n\nUltimately, the next steps should be personalized based on your overall health, family history, and the specifics of your cancer diagnosis. Regular follow-up with your healthcare team is crucial to ensure that any new information or treatment options are considered.",
+      "comparison": {
+        "killer_blow": "GPT can't route to WIWFM/trials/dossier \u2192 generic 'consult your doctor'",
+        "missing_features": [
+          {
+            "feature": "Explicit resolution_path",
+            "crispro_has": "prior",
+            "gpt_has": false,
+            "impact": "GPT cannot explain HOW it reached its conclusion (prior vs ML)"
+          },
+          {
+            "feature": "Patient-context axis relevance",
+            "crispro_has": "DDR patient, DDR variant \u2192 high",
+            "gpt_has": false,
+            "impact": "GPT treats all patients the same (no personalization by tumor context)"
+          },
+          {
+            "feature": "Provenance receipts (auditability)",
+            "crispro_has": "ClinVar: True, Evo2: True, Fusion: None",
+            "gpt_has": false,
+            "impact": "GPT has no receipts \u2192 cannot audit or reproduce determination"
+          }
+        ],
+        "crispro_structured": true,
+        "gpt_structured": false,
+        "crispro_receipts": true,
+        "gpt_receipts": false
+      }
+    },
+    {
+      "question_id": "q8_conflicting_clinvar",
+      "category": "Conflicting ClinVar (Scenario C Stress Test)",
+      "question": "I have a variant that ClinVar lists as 'Conflicting classifications of pathogenicity'. Can you resolve this uncertainty?",
+      "crispro_response": {
+        "ok": true,
+        "data": {
+          "normalized_variant": {
+            "gene": "ATM",
+            "hgvs_c": null,
+            "hgvs_p": null,
+            "assembly": "GRCh38",
+            "chrom": "11",
+            "pos": 108236235,
+            "ref": "G",
+            "alt": "A"
+          },
+          "vep": null,
+          "coverage": {
+            "clinvar": {
+              "status": "Pathogenic",
+              "review_status": null,
+              "url": "https://www.ncbi.nlm.nih.gov/clinvar/?term=11%3A108236235%20G%3EA",
+              "source": "coordinate"
+            },
+            "alphamissense": true
+          },
+          "pathway_context": {
+            "gene": "ATM",
+            "variant_axis": null,
+            "variant_axis_key": null,
+            "patient_actionable_axis": "DDR",
+            "patient_actionable_axis_key": "ddr",
+            "pathway_relevance": "unknown",
+            "patient_pathway_scores": {
+              "ddr": 1.0,
+              "tp53": 1.0
+            },
+            "variant_pathway_weights": {}
+          },
+          "sequence": {
+            "min_delta": -0.0011671781539916992,
+            "evo2_called": true,
+            "evo2_success": true,
+            "windows_attempted": [
+              1024,
+              2048,
+              4096,
+              8192
+            ],
+            "provenance": {
+              "method": "delta_only_upstream",
+              "model": "evo2_1b"
+            },
+            "deltas": null
+          },
+          "insights": {
+            "scores": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": 0.616
+            },
+            "provenance": {
+              "functionality": null,
+              "regulatory": null,
+              "essentiality": null,
+              "chromatin": {
+                "model": "enformer-stub-v1",
+                "method": "deterministic_fallback",
+                "context_bp": 32000,
+                "tracks": [
+                  "DNase_stub",
+                  "CAGE_stub",
+                  "ATAC_stub"
+                ],
+                "fallback_reason": "unexpected_error",
+                "warning": "\u26a0\ufe0f Using deterministic stub. Enformer service unavailable."
+              }
+            }
+          },
+          "triage": {
+            "status": "resolved_by_prior",
+            "verdict": "Pathogenic",
+            "confidence": 0.9,
+            "reasons": [
+              "ClinVar prior: pathogenic",
+              "Evo2 signal available (\u0394=-0.001)"
+            ],
+            "resolution_path": "prior",
+            "evo2_validated": true
+          },
+          "next_actions": [
+            {
+              "action": "wiwfm",
+              "label": "Run WIWFM (therapy fit)",
+              "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+              "endpoint": "/api/efficacy/predict"
+            },
+            {
+              "action": "dossier",
+              "label": "Send to Dossier",
+              "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+            },
+            {
+              "action": "cohort_context",
+              "label": "Add cohort context",
+              "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+              "endpoint": "/api/datasets/extract_and_benchmark"
+            },
+            {
+              "action": "trials",
+              "label": "Trial matching (mechanism fit)",
+              "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+              "endpoint": "/api/trials/agent/search"
+            }
+          ],
+          "provenance": {
+            "run_id": "1f9582ef-0585-440a-9d2d-c9acedfd30f5",
+            "mode": "research",
+            "resolution_path": "prior",
+            "options": {
+              "ignore_priors": false,
+              "patient_genes_count": 2
+            },
+            "calls": {
+              "clinvar": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "fusion_coverage": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              },
+              "evo2": {
+                "ok": true,
+                "status_code": 200,
+                "error": null,
+                "method": "delta_only_upstream",
+                "fallback": null,
+                "model": "evo2_1b"
+              },
+              "insights_functionality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_regulatory": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_essentiality": {
+                "ok": false,
+                "status_code": 500,
+                "error": "HTTP 500"
+              },
+              "insights_chromatin": {
+                "ok": true,
+                "status_code": 200,
+                "error": null
+              }
+            },
+            "urls": [
+              "/api/evidence/clinvar",
+              "/api/fusion/coverage",
+              "/api/evo/score_variant_multi",
+              "/api/insights/*"
+            ]
+          }
+        }
+      },
+      "crispro_moat": {
+        "resolution_path": "prior",
+        "verdict": "Pathogenic",
+        "min_delta": -0.0011671781539916992,
+        "clinvar_status": "Pathogenic",
+        "patient_axis": "DDR",
+        "variant_axis": null,
+        "pathway_relevance": "unknown",
+        "next_actions": [
+          {
+            "action": "wiwfm",
+            "label": "Run WIWFM (therapy fit)",
+            "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+            "endpoint": "/api/efficacy/predict"
+          },
+          {
+            "action": "dossier",
+            "label": "Send to Dossier",
+            "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+          },
+          {
+            "action": "cohort_context",
+            "label": "Add cohort context",
+            "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+            "endpoint": "/api/datasets/extract_and_benchmark"
+          },
+          {
+            "action": "trials",
+            "label": "Trial matching (mechanism fit)",
+            "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+            "endpoint": "/api/trials/agent/search"
+          }
+        ],
+        "provenance_receipts": {
+          "clinvar": true,
+          "evo2": true,
+          "fusion": null,
+          "insights": null
+        },
+        "run_id": "1f9582ef-0585-440a-9d2d-c9acedfd30f5"
+      },
+      "gpt_response": "Resolving conflicting classifications of pathogenicity for a genomic variant can be complex and requires a comprehensive approach. Here\u2019s how you can address the uncertainty regarding the ATM variant \"chr11:108236235 G>A (GRCh38)\":\n\n1. **Review Detailed Variant Information**: Start by examining the specific submissions to ClinVar for this variant. Look at the evidence provided by different submitters, including the number of observations, co-segregation data, functional studies, and any population frequency data.\n\n2. **Check Population Databases**: Investigate the frequency of this variant in population databases such as gnomAD. A high frequency in the general population, particularly in healthy individuals, may suggest that the variant is benign.\n\n3. **Functional Studies**: Look for any published functional studies that assess the impact of this variant on ATM protein function. Loss-of-function variants in ATM are often associated with an increased risk of cancer, particularly breast cancer, but the specific impact of this variant needs to be evaluated.\n\n4. **In Silico Predictions**: Utilize computational tools that predict the impact of missense mutations on protein function. These tools include SIFT, PolyPhen-2, and others. While not definitive, they can provide additional context.\n\n5. **Literature Review**: Conduct a thorough review of the scientific literature to see if there are any studies or case reports that discuss this variant in the context of cancer or other diseases.\n\n6. **Expert Guidelines**: Refer to guidelines from expert groups such as the American College of Medical Genetics and Genomics (ACMG) for variant classification. These guidelines provide a framework for interpreting variants based on available evidence.\n\n7. **Consultation with a Genetic Counselor or Specialist**: Given the complexity and potential implications of this variant, consulting with a genetic counselor or a clinical geneticist who specializes in cancer genetics can provide additional insights and help interpret the findings in the context of the patient\u2019s personal and family history.\n\n8. **Consider the Patient\u2019s Overall Genetic Profile**: Since the patient also has variants in other genes like TP53 and MBD4, consider how these might interact with the ATM variant. TP53, in particular, is a critical tumor suppressor gene, and its status could influence cancer risk and management strategies.\n\nUltimately, resolving the uncertainty around this variant may not lead to a definitive classification, but it can provide a more informed basis for clinical decision-making. It is important to integrate this information with the patient\u2019s clinical presentation and family history to guide management and surveillance strategies.",
+      "comparison": {
+        "killer_blow": "GPT can't resolve conflict \u2192 stays stuck; CrisPRO uses ML (Evo2) to break tie",
+        "missing_features": [
+          {
+            "feature": "Explicit resolution_path",
+            "crispro_has": "prior",
+            "gpt_has": false,
+            "impact": "GPT cannot explain HOW it reached its conclusion (prior vs ML)"
+          },
+          {
+            "feature": "Patient-context axis relevance",
+            "crispro_has": "DDR patient, None variant \u2192 unknown",
+            "gpt_has": false,
+            "impact": "GPT treats all patients the same (no personalization by tumor context)"
+          },
+          {
+            "feature": "Provenance receipts (auditability)",
+            "crispro_has": "ClinVar: True, Evo2: True, Fusion: None",
+            "gpt_has": false,
+            "impact": "GPT has no receipts \u2192 cannot audit or reproduce determination"
+          },
+          {
+            "feature": "System-aware next actions routing",
+            "crispro_has": [
+              {
+                "action": "wiwfm",
+                "label": "Run WIWFM (therapy fit)",
+                "description": "Generate research-mode therapy hypotheses with provenance and evidence tiers.",
+                "endpoint": "/api/efficacy/predict"
+              },
+              {
+                "action": "dossier",
+                "label": "Send to Dossier",
+                "description": "Freeze the current VUS disposition + signals + provenance into an exportable record."
+              },
+              {
+                "action": "cohort_context",
+                "label": "Add cohort context",
+                "description": "Check prevalence and co-mutations in cohorts to prioritize what deserves follow-up.",
+                "endpoint": "/api/datasets/extract_and_benchmark"
+              },
+              {
+                "action": "trials",
+                "label": "Trial matching (mechanism fit)",
+                "description": "If the variant points to a pathway hypothesis, surface aligned trials (research-mode).",
+                "endpoint": "/api/trials/agent/search"
+              }
+            ],
+            "gpt_has": false,
+            "impact": "GPT cannot route to WIWFM, trials, or dossier \u2192 dead end"
+          }
+        ],
+        "crispro_structured": true,
+        "gpt_structured": false,
+        "crispro_receipts": true,
+        "gpt_receipts": false
+      }
+    }
+  ]
+}

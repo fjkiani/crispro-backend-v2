@@ -1,0 +1,1293 @@
+{
+  "patients": [
+    {
+      "patient_id": "TCGA-04-1331",
+      "ddr_bin": 0.0,
+      "os_months": 43.89,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1336",
+      "ddr_bin": 0.0,
+      "os_months": 49.11,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1341",
+      "ddr_bin": 0.0,
+      "os_months": 1.08,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1342",
+      "ddr_bin": 0.44020387530326843,
+      "os_months": 18.5,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1343",
+      "ddr_bin": 0.5078147053718567,
+      "os_months": 11.86,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1346",
+      "ddr_bin": 0.8271989822387695,
+      "os_months": 65.47,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1347",
+      "ddr_bin": 0.5181813836097717,
+      "os_months": 63.04,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1348",
+      "ddr_bin": 0.6198686361312866,
+      "os_months": 48.72,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1349",
+      "ddr_bin": 0.1890786737203598,
+      "os_months": 21.55,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1350",
+      "ddr_bin": 0.6942508220672607,
+      "os_months": 63.93,
+      "os_event": 1,
+      "platinum_response": "resistant",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1351",
+      "ddr_bin": 0.0,
+      "os_months": 65.41,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1356",
+      "ddr_bin": 0.2527742087841034,
+      "os_months": 49.24,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1361",
+      "ddr_bin": 0.2969528138637543,
+      "os_months": 32.49,
+      "os_event": 0,
+      "platinum_response": "resistant",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1364",
+      "ddr_bin": 0.18402844667434692,
+      "os_months": 33.64,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1365",
+      "ddr_bin": 0.617448091506958,
+      "os_months": 76.51,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1367",
+      "ddr_bin": 0.563692033290863,
+      "os_months": 103.32,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1514",
+      "ddr_bin": 1.1272602081298828,
+      "os_months": 56.5,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1516",
+      "ddr_bin": 0.0,
+      "os_months": 41.56,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1517",
+      "ddr_bin": 0.19227607548236847,
+      "os_months": 19.97,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1525",
+      "ddr_bin": 0.7807117104530334,
+      "os_months": 38.34,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1530",
+      "ddr_bin": 0.7194372415542603,
+      "os_months": 118.99,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1542",
+      "ddr_bin": 0.5378425121307373,
+      "os_months": 84.13,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-04-1644",
+      "ddr_bin": 0.0,
+      "os_months": 48.85,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-04-1652",
+      "ddr_bin": 0.0,
+      "os_months": 31.83,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-0364",
+      "ddr_bin": 0.0,
+      "os_months": 29.14,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-0365",
+      "ddr_bin": 0.0,
+      "os_months": 9.46,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-0366",
+      "ddr_bin": 0.4434715211391449,
+      "os_months": 57.72,
+      "os_event": 1,
+      "platinum_response": "resistant",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-0367",
+      "ddr_bin": 0.0,
+      "os_months": 17.97,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-0369",
+      "ddr_bin": 0.5026478171348572,
+      "os_months": 35.55,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-1659",
+      "ddr_bin": 0.5907310247421265,
+      "os_months": 9.99,
+      "os_event": 1,
+      "platinum_response": "resistant",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-1661",
+      "ddr_bin": 0.40588340163230896,
+      "os_months": 38.4,
+      "os_event": 1,
+      "platinum_response": "resistant",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-1662",
+      "ddr_bin": 0.7277668118476868,
+      "os_months": 89.26,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-1664",
+      "ddr_bin": 0.0,
+      "os_months": 74.87,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-1665",
+      "ddr_bin": 0.48875364661216736,
+      "os_months": 41.59,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-1666",
+      "ddr_bin": 0.6745878458023071,
+      "os_months": 57.56,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-1667",
+      "ddr_bin": 0.0,
+      "os_months": 61.83,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-1668",
+      "ddr_bin": 0.0,
+      "os_months": 55.32,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-1669",
+      "ddr_bin": 0.2801210880279541,
+      "os_months": 30.49,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-1670",
+      "ddr_bin": 0.0,
+      "os_months": 17.97,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-1674",
+      "ddr_bin": 0.0,
+      "os_months": 8.54,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-1675",
+      "ddr_bin": 0.0,
+      "os_months": 97.47,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-2043",
+      "ddr_bin": 0.0,
+      "os_months": 6.18,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-2044",
+      "ddr_bin": 0.8404243588447571,
+      "os_months": 6.11,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-2045",
+      "ddr_bin": 0.4877963960170746,
+      "os_months": 35.12,
+      "os_event": 1,
+      "platinum_response": "resistant",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-2048",
+      "ddr_bin": 0.0,
+      "os_months": 4.53,
+      "os_event": 1,
+      "platinum_response": "resistant",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-2049",
+      "ddr_bin": 1.1980949640274048,
+      "os_months": 112.32,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-2050",
+      "ddr_bin": 0.3884861171245575,
+      "os_months": 71.06,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-2051",
+      "ddr_bin": 0.5290862917900085,
+      "os_months": 63.04,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-2053",
+      "ddr_bin": 0.7006202936172485,
+      "os_months": 39.72,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-09-2054",
+      "ddr_bin": 0.0,
+      "os_months": 20.93,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-2055",
+      "ddr_bin": 0.0,
+      "os_months": 26.91,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-09-2056",
+      "ddr_bin": 0.4080199897289276,
+      "os_months": 12.45,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-10-0925",
+      "ddr_bin": 0.0,
+      "os_months": 54.27,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-10-0926",
+      "ddr_bin": 0.9409015774726868,
+      "os_months": 25.89,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-10-0927",
+      "ddr_bin": 0.5184398889541626,
+      "os_months": 81.8,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-10-0930",
+      "ddr_bin": 1.1533582210540771,
+      "os_months": 34.17,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-10-0931",
+      "ddr_bin": 0.19125287234783173,
+      "os_months": 32.85,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-10-0933",
+      "ddr_bin": 0.7626153230667114,
+      "os_months": 14.65,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-10-0934",
+      "ddr_bin": 0.4846082329750061,
+      "os_months": 6.7,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-10-0936",
+      "ddr_bin": 0.0,
+      "os_months": 36.89,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-10-0937",
+      "ddr_bin": 0.7480992078781128,
+      "os_months": 19.97,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-10-0938",
+      "ddr_bin": 0.6534435749053955,
+      "os_months": 20.89,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0714",
+      "ddr_bin": 0.9896275997161865,
+      "os_months": 6.21,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0717",
+      "ddr_bin": 0.8022525906562805,
+      "os_months": 24.57,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0720",
+      "ddr_bin": 0.5253235101699829,
+      "os_months": 44.51,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0723",
+      "ddr_bin": 0.6556941866874695,
+      "os_months": 39.55,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0724",
+      "ddr_bin": 0.6737782955169678,
+      "os_months": 2.73,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0725",
+      "ddr_bin": 0.0,
+      "os_months": 12.39,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0726",
+      "ddr_bin": 0.41135135293006897,
+      "os_months": 31.18,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0727",
+      "ddr_bin": 0.4468231797218323,
+      "os_months": 15.18,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0751",
+      "ddr_bin": 0.4366067349910736,
+      "os_months": 55.12,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0755",
+      "ddr_bin": 0.9197880029678345,
+      "os_months": 2.5,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0757",
+      "ddr_bin": 0.0,
+      "os_months": 11.17,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0758",
+      "ddr_bin": 0.0,
+      "os_months": 11.37,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0761",
+      "ddr_bin": 0.7929812073707581,
+      "os_months": 37.98,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0762",
+      "ddr_bin": 0.6841316819190979,
+      "os_months": 111.7,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0764",
+      "ddr_bin": 0.0,
+      "os_months": 61.79,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0765",
+      "ddr_bin": 0.17194004356861115,
+      "os_months": 45.63,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0766",
+      "ddr_bin": 0.0,
+      "os_months": 56.67,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0768",
+      "ddr_bin": 0.0,
+      "os_months": 58.61,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0791",
+      "ddr_bin": 0.0,
+      "os_months": 40.21,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0792",
+      "ddr_bin": 0.6898379921913147,
+      "os_months": 118.33,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0793",
+      "ddr_bin": 0.8151199221611023,
+      "os_months": 107.19,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0794",
+      "ddr_bin": 0.0,
+      "os_months": 63.04,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0795",
+      "ddr_bin": 0.8492589592933655,
+      "os_months": 20.34,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0797",
+      "ddr_bin": 0.0,
+      "os_months": 69.68,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0799",
+      "ddr_bin": 0.0,
+      "os_months": 83.28,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0800",
+      "ddr_bin": 1.3295917510986328,
+      "os_months": 87.42,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0801",
+      "ddr_bin": 0.0,
+      "os_months": 45.96,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0802",
+      "ddr_bin": 0.0,
+      "os_months": 50.99,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0803",
+      "ddr_bin": 0.0,
+      "os_months": 43.82,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0804",
+      "ddr_bin": 0.3948023021221161,
+      "os_months": 35.25,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0805",
+      "ddr_bin": 0.0,
+      "os_months": 35.28,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0883",
+      "ddr_bin": 0.5130881667137146,
+      "os_months": 68.89,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0884",
+      "ddr_bin": 0.4061800241470337,
+      "os_months": 107.1,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0885",
+      "ddr_bin": 1.4344631433486938,
+      "os_months": 111.3,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0886",
+      "ddr_bin": 0.7642844319343567,
+      "os_months": 153.25,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0887",
+      "ddr_bin": 0.45553267002105713,
+      "os_months": 66.62,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0889",
+      "ddr_bin": 0.5147691369056702,
+      "os_months": 95.07,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0890",
+      "ddr_bin": 0.44707658886909485,
+      "os_months": 145.34,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0891",
+      "ddr_bin": 0.4230071008205414,
+      "os_months": 102.76,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0893",
+      "ddr_bin": 0.5587794184684753,
+      "os_months": 43.33,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0894",
+      "ddr_bin": 0.6319830417633057,
+      "os_months": 49.57,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0897",
+      "ddr_bin": 0.8443613648414612,
+      "os_months": 71.68,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0899",
+      "ddr_bin": 0.9896275997161865,
+      "os_months": 66.1,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0900",
+      "ddr_bin": 2.4803152084350586,
+      "os_months": 133.94,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0901",
+      "ddr_bin": 0.0,
+      "os_months": 19.35,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0903",
+      "ddr_bin": 0.49632588028907776,
+      "os_months": 127.69,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0904",
+      "ddr_bin": 0.5835273861885071,
+      "os_months": 50.33,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0905",
+      "ddr_bin": 0.5792954564094543,
+      "os_months": 123.06,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0906",
+      "ddr_bin": 0.5004480481147766,
+      "os_months": 118.89,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0908",
+      "ddr_bin": 0.0,
+      "os_months": 60.55,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0910",
+      "ddr_bin": 0.16702958941459656,
+      "os_months": 116.56,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0911",
+      "ddr_bin": 0.208238422870636,
+      "os_months": 44.51,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0912",
+      "ddr_bin": 0.2575231194496155,
+      "os_months": 37.61,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0913",
+      "ddr_bin": 0.0,
+      "os_months": 109.23,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0916",
+      "ddr_bin": 0.5739629864692688,
+      "os_months": 58.64,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0919",
+      "ddr_bin": 0.8396457433700562,
+      "os_months": 84.46,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0920",
+      "ddr_bin": 0.5177581310272217,
+      "os_months": 48.75,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0921",
+      "ddr_bin": 0.0,
+      "os_months": 48.72,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-0923",
+      "ddr_bin": 0.8396856784820557,
+      "os_months": 83.67,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-0924",
+      "ddr_bin": 0.6235122084617615,
+      "os_months": 85.87,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1403",
+      "ddr_bin": 0.21341073513031006,
+      "os_months": 77.04,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1404",
+      "ddr_bin": 0.6336945295333862,
+      "os_months": 81.11,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1405",
+      "ddr_bin": 0.18700242042541504,
+      "os_months": 28.52,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1407",
+      "ddr_bin": 0.9881837964057922,
+      "os_months": 83.25,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1408",
+      "ddr_bin": 0.3760969340801239,
+      "os_months": 55.19,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1410",
+      "ddr_bin": 1.117260456085205,
+      "os_months": 80.95,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1411",
+      "ddr_bin": 0.6036911606788635,
+      "os_months": 17.44,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1412",
+      "ddr_bin": 0.8502346277236938,
+      "os_months": 32.33,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1477",
+      "ddr_bin": 0.6734009981155396,
+      "os_months": 54.6,
+      "os_event": 1,
+      "platinum_response": "refractory",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1481",
+      "ddr_bin": 0.9813275337219238,
+      "os_months": 86.99,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1482",
+      "ddr_bin": 0.5107510089874268,
+      "os_months": 61.66,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1483",
+      "ddr_bin": 0.24385157227516174,
+      "os_months": 29.4,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1484",
+      "ddr_bin": 0.4582284986972809,
+      "os_months": 124.34,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1485",
+      "ddr_bin": 0.0,
+      "os_months": 20.66,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1487",
+      "ddr_bin": 1.0014381408691406,
+      "os_months": 22.37,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1488",
+      "ddr_bin": 0.9742861986160278,
+      "os_months": 70.76,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1489",
+      "ddr_bin": 0.0,
+      "os_months": 83.87,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1491",
+      "ddr_bin": 0.6125340461730957,
+      "os_months": 52.4,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1492",
+      "ddr_bin": 0.4782051146030426,
+      "os_months": 125.46,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1494",
+      "ddr_bin": 0.34476757049560547,
+      "os_months": 93.82,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1495",
+      "ddr_bin": 0.6486089825630188,
+      "os_months": 90.31,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1497",
+      "ddr_bin": 0.8163594007492065,
+      "os_months": 127.17,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1498",
+      "ddr_bin": 1.0433118343353271,
+      "os_months": 66.1,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1499",
+      "ddr_bin": 0.725662887096405,
+      "os_months": 114.98,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1500",
+      "ddr_bin": 0.0,
+      "os_months": 13.96,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1501",
+      "ddr_bin": 0.48579391837120056,
+      "os_months": 43.17,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1504",
+      "ddr_bin": 0.29401496052742004,
+      "os_months": 34.79,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1505",
+      "ddr_bin": 0.9422475099563599,
+      "os_months": 65.64,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1506",
+      "ddr_bin": 0.4846942126750946,
+      "os_months": 34.13,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1507",
+      "ddr_bin": 1.2767997980117798,
+      "os_months": 65.47,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1509",
+      "ddr_bin": 1.0145580768585205,
+      "os_months": 80.09,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-1511",
+      "ddr_bin": 0.0,
+      "os_months": 54.2,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1817",
+      "ddr_bin": 0.0,
+      "os_months": 33.64,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-1819",
+      "ddr_bin": 0.0,
+      "os_months": 66.52,
+      "os_event": 1,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-2057",
+      "ddr_bin": 0.0,
+      "os_months": 79.96,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-2059",
+      "ddr_bin": 0.0,
+      "os_months": 78.42,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-2060",
+      "ddr_bin": 0.7022349238395691,
+      "os_months": 77.83,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 1
+    },
+    {
+      "patient_id": "TCGA-13-2061",
+      "ddr_bin": 0.0,
+      "os_months": 76.84,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    },
+    {
+      "patient_id": "TCGA-13-2065",
+      "ddr_bin": 0.0,
+      "os_months": 65.47,
+      "os_event": 0,
+      "platinum_response": "sensitive",
+      "ddr_high": 0
+    }
+  ],
+  "median_ddr_bin": 0.4582284986972809
+}

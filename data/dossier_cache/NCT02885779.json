@@ -1,0 +1,22 @@
+{
+  "cached_at": "2025-11-14T19:58:03.518400",
+  "trial_data": {
+    "id": "NCT02885779",
+    "title": "Comparison of 2 Techniques of Invasive Mini Surgery: Coelioscopy Mini-trocar and Monotrocar in the Adnexa no Carcinologic Surgery : Forward-looking Observational Study.",
+    "status": "COMPLETED",
+    "phases": "[\"Not Applicable\"]",
+    "summary": "The advantages of the celioscopy mini--trocar and monotrocar technical are recognized.\n\nThere is however no forward-looking or retrospective study comparing the microcomputed-celioscopy (use of microphone) - trocar of 3mm of diameter in access celioscopic pluri--trocar) in the celioscopy monotrocar ( a single intra-umbilical section) in gynecological surgery.\n\nThe objective of this preliminary study is to compare both surgical care in terms of morbidity died operating, in adnexa surgeries.",
+    "conditions": "[\"Gynecologic Surgical Procedures for Adnexa Surgery in Ovarian Disease\"]",
+    "interventions": "[]",
+    "source": "ClinicalTrials.gov",
+    "inclusion_criteria": "Inclusion Criteria :\n\n* Age \\> 18 ans\n* OMS = 2\n* Patient having an operating indication of adnexa surgery : unilateral or bilateral adnexectomy",
+    "exclusion_criteria": "* Contraindication to coelioscopy intervention",
+    "inclusion_criteria_full": "Inclusion Criteria :\n\n* Age \\> 18 ans\n* OMS = 2\n* Patient having an operating indication of adnexa surgery : unilateral or bilateral adnexectomy",
+    "exclusion_criteria_full": "* Contraindication to coelioscopy intervention",
+    "primary_endpoint": null,
+    "interventions_json": null,
+    "locations_full_json": null,
+    "scraped_data_json": null,
+    "scraped_at": null
+  }
+}

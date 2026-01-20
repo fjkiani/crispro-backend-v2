@@ -1,0 +1,237 @@
+# Colon (CRC) Disease Module Configuration
+# Based on Manager's Mechanistic Trial Matching Blueprint
+
+disease: "colorectal_cancer"
+aliases: ["colorectal", "colon", "CRC", "rectal"]
+
+# Mechanism axes that matter for CRC (7D vector indices)
+mechanism_axes:
+  io_mmr:
+    name: "IO/MMR"
+    vector_index: 0
+    biomarkers: ["MSI-H", "dMMR", "mismatch repair", "TMB-high", "TMB"]
+    pathways: ["immune checkpoint", "mismatch repair"]
+    interventions: ["pembrolizumab", "nivolumab", "PD-1", "PD-L1", "atezolizumab", "dostarlimab"]
+    priority: "high"
+    description: "MSI-H/dMMR → IO dominant (PD-1/PD-L1 ± CTLA-4)"
+    dominance_condition: "MSI-H OR dMMR"
+    
+  mapk_kras:
+    name: "MAPK/KRAS"
+    vector_index: 1
+    biomarkers: ["KRAS", "NRAS", "BRAF V600E", "BRAF", "MAPK"]
+    pathways: ["MAPK", "RAS", "RAF"]
+    interventions: ["sotorasib", "adagrasib", "KRAS inhibitor", "encorafenib", "BRAF inhibitor", "MEK inhibitor"]
+    priority: "high"
+    description: "KRAS/NRAS/BRAF mutations → MAPK pathway targeting"
+    dominance_condition: "KRAS OR NRAS OR BRAF V600E"
+    
+  egfr_axis:
+    name: "EGFR"
+    vector_index: 2
+    biomarkers: ["EGFR", "RAS wild type", "RAS WT", "anti-EGFR"]
+    pathways: ["EGFR", "RAS"]
+    interventions: ["cetuximab", "panitumumab", "EGFR inhibitor"]
+    priority: "medium"
+    description: "EGFR mAb sensitivity (RAS/BRAF status dependent)"
+    dominance_condition: "RAS wild type AND NOT (KRAS OR NRAS OR BRAF)"
+    
+  her2:
+    name: "HER2"
+    vector_index: 3
+    biomarkers: ["HER2", "ERBB2", "HER2 amplified", "HER2 overexpression", "IHC3+"]
+    pathways: ["HER2", "ERBB2"]
+    interventions: ["trastuzumab", "tucatinib", "T-DXd", "trastuzumab deruxtecan", "HER2 ADC"]
+    priority: "medium"
+    description: "HER2 amplification/overexpression (CRC-specific criteria)"
+    dominance_condition: "HER2 amplified OR ERBB2 OR IHC3+"
+    
+  pik3ca:
+    name: "PI3K/PIK3CA"
+    vector_index: 4
+    biomarkers: ["PIK3CA", "PTEN", "PI3K", "AKT"]
+    pathways: ["PI3K", "AKT", "PTEN"]
+    interventions: ["PIK3CA inhibitor", "AKT inhibitor", "capivasertib"]
+    priority: "low"
+    description: "PIK3CA/PTEN mutations (usually secondary)"
+    dominance_condition: "PIK3CA OR PTEN"
+    
+  braf_combo:
+    name: "BRAF/MEK/EGFR Combo"
+    vector_index: 5
+    biomarkers: ["BRAF V600E", "BRAF"]
+    pathways: ["BRAF", "MEK", "EGFR"]
+    interventions: ["encorafenib", "binimetinib", "cetuximab", "BRAF inhibitor", "MEK inhibitor"]
+    priority: "high"
+    description: "BRAF V600E → BRAF/MEK/EGFR combo trials"
+    dominance_condition: "BRAF V600E"
+    
+  angiogenesis:
+    name: "Angiogenesis"
+    vector_index: 6
+    biomarkers: ["VEGF", "angiogenesis"]
+    pathways: ["VEGF", "angiogenesis"]
+    interventions: ["bevacizumab", "ramucirumab", "aflibercept"]
+    priority: "low"
+    description: "VEGF/angiogenesis targeting (SOC backbone)"
+    dominance_condition: null
+
+# Evidence gates (what "turns on" a pathway)
+evidence_gates:
+  io_strong:
+    name: "IO Strong"
+    condition: "MSI-H OR dMMR"
+    boosts:
+      io_mmr: 1.0
+    rationale: "MSI-H/dMMR → IO=high priority"
+    
+  io_moderate:
+    name: "IO Moderate"
+    condition: "TMB-high"
+    boosts:
+      io_mmr: 0.6
+    rationale: "TMB-high (if validated in CRC context)"
+    
+  io_weak:
+    name: "IO Weak"
+    condition: "PD-L1 positive"
+    boosts:
+      io_mmr: 0.3
+    rationale: "PD-L1 alone (generally low weight in CRC)"
+    
+  mapk_strong:
+    name: "MAPK Strong"
+    condition: "KRAS OR NRAS OR BRAF V600E"
+    boosts:
+      mapk_kras: 0.9
+      braf_combo: 0.9
+    rationale: "KRAS/NRAS/BRAF V600E (high), other MAPK variants (moderate)"
+    
+  her2_strong:
+    name: "HER2 Strong"
+    condition: "HER2 amplified OR IHC3+ OR ERBB2"
+    boosts:
+      her2: 1.0
+    rationale: "HER2 amplification/IHC3+ (CRC-specific criteria)"
+    
+  egfr_sensitive:
+    name: "EGFR Sensitive"
+    condition: "RAS wild type AND NOT (KRAS OR NRAS OR BRAF)"
+    boosts:
+      egfr_axis: 0.8
+    rationale: "RAS WT → EGFR mAb sensitive"
+    
+  egfr_resistant:
+    name: "EGFR Resistant"
+    condition: "KRAS OR NRAS"
+    boosts:
+      egfr_axis: -0.5
+    rationale: "RAS mutant → deprioritize EGFR mAb trials"
+
+# Dominance policies (if condition met → prioritize axis)
+dominance_policies:
+  msi_dominance:
+    name: "MSI-H/dMMR Dominance"
+    condition: "MSI-H OR dMMR"
+    prioritize_axis: "io_mmr"
+    rationale: "If MSI-H/dMMR present → rank IO trials first (PD-1/PD-L1 ± CTLA-4, novel IO combos)"
+    
+  braf_dominance:
+    name: "BRAF V600E Dominance"
+    condition: "BRAF V600E"
+    prioritize_axis: "braf_combo"
+    rationale: "If BRAF V600E → rank BRAF/MEK/EGFR combo trials first"
+    
+  ras_dominance:
+    name: "RAS Mutant Dominance"
+    condition: "KRAS OR NRAS"
+    prioritize_axis: "mapk_kras"
+    deprioritize_axis: "egfr_axis"
+    rationale: "If RAS mutant → deprioritize EGFR mAb trials; prefer KRAS-targeted / MAPK pathway trials"
+    
+  her2_dominance:
+    name: "HER2 Dominance"
+    condition: "HER2 amplified OR ERBB2 OR IHC3+"
+    prioritize_axis: "her2"
+    rationale: "HER2+ → prioritize HER2-targeted trials"
+
+# Retrieval query templates (CT.gov style)
+query_templates:
+  msi_io_trials:
+    name: "MSI-H/dMMR IO trials"
+    query: '("metastatic colorectal" OR "colorectal cancer") AND ("MSI-H" OR "dMMR" OR "mismatch repair") AND (pembrolizumab OR nivolumab OR "PD-1" OR "PD-L1")'
+    condition: "metastatic colorectal"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "io_mmr"
+    priority: 1
+    
+  braf_combo_trials:
+    name: "BRAF V600E combo trials"
+    query: '("colorectal" OR "CRC") AND ("BRAF V600E" OR "BRAF inhibitor" OR encorafenib) AND (EGFR OR cetuximab OR panitumumab)'
+    condition: "colorectal cancer"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "braf_combo"
+    priority: 1
+    
+  kras_targeted_trials:
+    name: "KRAS G12C targeted trials"
+    query: '("colorectal" OR "CRC") AND ("KRAS G12C" OR "KRAS inhibitor" OR sotorasib OR adagrasib)'
+    condition: "colorectal cancer"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "mapk_kras"
+    priority: 1
+    
+  her2_trials:
+    name: "HER2 amplified trials"
+    query: '("colorectal" OR "CRC") AND ("HER2 amplified" OR "ERBB2") AND (trastuzumab OR tucatinib OR "T-DXd" OR "trastuzumab deruxtecan")'
+    condition: "colorectal cancer"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "her2"
+    priority: 2
+    
+  egfr_trials:
+    name: "RAS WT EGFR trials"
+    query: '("colorectal" OR "CRC") AND ("RAS wild type" OR "anti-EGFR") AND (cetuximab OR panitumumab)'
+    condition: "colorectal cancer"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "egfr_axis"
+    priority: 2
+
+# Subtype discrimination
+subtypes:
+  - name: "metastatic_colorectal"
+    keywords: ["metastatic", "advanced", "stage IV"]
+    priority: 1
+    
+  - name: "rectal"
+    keywords: ["rectal", "rectum"]
+    priority: 2
+    
+  - name: "colon"
+    keywords: ["colon", "colonic"]
+    priority: 2
+
+# Eligibility extraction patterns
+eligibility_patterns:
+  ecog: ["ECOG", "performance status", "PS"]
+  organ_function: ["bilirubin", "creatinine", "ALT", "AST", "albumin"]
+  prior_lines: ["prior", "previous", "refractory", "resistant", "failed"]
+  msi_testing: ["MSI", "microsatellite", "mismatch repair", "MMR"]
+
+# Safety layer (contraindications)
+contraindications:
+  - biomarker: "RAS mutant"
+    exclude_interventions: ["cetuximab", "panitumumab", "anti-EGFR"]
+    rationale: "RAS mutant → EGFR mAb contraindicated"
+    
+  - biomarker: "MSI-H"
+    prefer_interventions: ["pembrolizumab", "nivolumab", "PD-1"]
+    rationale: "MSI-H → IO preferred over chemotherapy"
+
+# Explainability contract
+explainability_fields:
+  - "dominant_pathway_match"
+  - "gate_evidence"
+  - "whats_missing"
+  - "mechanism_vector_scores"
+  - "dominance_policy_applied"

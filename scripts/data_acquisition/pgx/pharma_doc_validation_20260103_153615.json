@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-01-03T15:36:15.299573",
+  "results": {
+    "toxicity_prevention_sensitivity": {
+      "status": "VALIDATED",
+      "issues": [],
+      "support": [
+        "Internal validation confirmed"
+      ]
+    },
+    "toxicity_prevention_specificity": {
+      "status": "VALIDATED",
+      "issues": [],
+      "support": [
+        "Internal validation confirmed"
+      ]
+    },
+    "cpic_concordance": {
+      "status": "VALIDATED",
+      "issues": [],
+      "support": [
+        "Internal validation confirmed"
+      ]
+    },
+    "prevention_rate_dpyd": {
+      "status": "DISCREPANCY",
+      "issues": [
+        "DISCREPANCY: Doc claims 70-85%, extracted literature shows 6% (from 4675 patients)"
+      ],
+      "support": [
+        "Matches CPIC literature: 70%"
+      ]
+    },
+    "prevention_rate_tpmt": {
+      "status": "DISCREPANCY",
+      "issues": [
+        "DISCREPANCY: Doc claims 80-85%, extracted literature shows 10% (from 1981 patients)"
+      ],
+      "support": [
+        "Matches CPIC literature: 80%"
+      ]
+    },
+    "prevention_rate_ugt1a1": {
+      "status": "DISCREPANCY",
+      "issues": [
+        "DISCREPANCY: Doc claims 40-50%, extracted literature shows 30% (from 3455 patients)"
+      ],
+      "support": [
+        "Matches CPIC literature: 40%"
+      ]
+    },
+    "medwatch_reduction": {
+      "status": "DISCREPANCY",
+      "issues": [
+        "DISCREPANCY: Doc claims 95%, literature estimate is ~6%"
+      ],
+      "support": [],
+      "note": "May mean '95% of PGx-preventable AEs' not '95% of all AEs'"
+    },
+    "mechanism_fit_ddr": {
+      "status": "VALIDATED",
+      "issues": [],
+      "support": [
+        "Internal validation confirmed"
+      ]
+    },
+    "drug_ranking_top5": {
+      "status": "VALIDATED",
+      "issues": [],
+      "support": [
+        "Internal validation confirmed"
+      ]
+    }
+  },
+  "summary": {
+    "validated": 5,
+    "discrepancies": 4,
+    "total": 9
+  }
+}

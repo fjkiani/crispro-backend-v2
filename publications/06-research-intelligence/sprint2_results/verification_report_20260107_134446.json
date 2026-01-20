@@ -1,0 +1,342 @@
+{
+  "timestamp": "2026-01-07T13:44:46.378532",
+  "summary": {
+    "total_tests": 11,
+    "passed": 9,
+    "partial": 2,
+    "warned": 0,
+    "failed": 0,
+    "pass_rate": "81.8%"
+  },
+  "results": [
+    {
+      "test": "orchestrator_initialization",
+      "status": "PASS",
+      "components": {
+        "pubmed": false,
+        "project_data_sphere": true,
+        "gdc": true,
+        "pubmed_parser": true,
+        "pharmacogenomics_parser": true,
+        "question_formulator": true,
+        "synthesis_engine": true,
+        "moat_integrator": true
+      },
+      "is_available": true
+    },
+    {
+      "test": "query_1",
+      "status": "PARTIAL",
+      "question": "What mechanisms does curcumin target in breast cancer?",
+      "elapsed_seconds": 5.839795,
+      "found_components": [
+        "mechanisms",
+        "pathways"
+      ],
+      "missing_components": [
+        "moat_analysis"
+      ],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    },
+    {
+      "test": "query_2",
+      "status": "PASS",
+      "question": "How do purple potatoes help with ovarian cancer?",
+      "elapsed_seconds": 5.131718,
+      "found_components": [
+        "mechanisms",
+        "pathways",
+        "toxicity_mitigation"
+      ],
+      "missing_components": [],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    },
+    {
+      "test": "query_3",
+      "status": "PARTIAL",
+      "question": "What is the evidence for PARP inhibitors in BRCA-mutated ovarian cancer?",
+      "elapsed_seconds": 31.183916,
+      "found_components": [
+        "mechanisms",
+        "evidence_tier"
+      ],
+      "missing_components": [
+        "clinical_trial_recommendations"
+      ],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "pathways",
+        "mechanisms",
+        "pathway_scores",
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions",
+        "citation_network"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    },
+    {
+      "test": "query_4",
+      "status": "PASS",
+      "question": "How does platinum resistance develop in ovarian cancer?",
+      "elapsed_seconds": 28.479739,
+      "found_components": [
+        "mechanisms",
+        "cross_resistance",
+        "pathways"
+      ],
+      "missing_components": [],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "mechanisms",
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions",
+        "citation_network"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    },
+    {
+      "test": "query_5",
+      "status": "PASS",
+      "question": "What are the mechanisms of action for pembrolizumab in lung cancer?",
+      "elapsed_seconds": 42.158336,
+      "found_components": [
+        "mechanisms",
+        "pathways",
+        "sae_features"
+      ],
+      "missing_components": [],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "mechanisms",
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions",
+        "citation_network"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    },
+    {
+      "test": "query_6",
+      "status": "PASS",
+      "question": "How does green tea extract affect cancer cell apoptosis?",
+      "elapsed_seconds": 21.395014,
+      "found_components": [
+        "mechanisms",
+        "pathways",
+        "article_summaries"
+      ],
+      "missing_components": [],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "pathways",
+        "mechanisms",
+        "pathway_scores",
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions",
+        "citation_network"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    },
+    {
+      "test": "query_7",
+      "status": "PASS",
+      "question": "What is the role of anthocyanins in cancer prevention?",
+      "elapsed_seconds": 34.95119,
+      "found_components": [
+        "mechanisms",
+        "evidence_tier",
+        "citation_network"
+      ],
+      "missing_components": [],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "mechanisms",
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions",
+        "citation_network"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    },
+    {
+      "test": "query_8",
+      "status": "PASS",
+      "question": "How do taxanes work in triple-negative breast cancer?",
+      "elapsed_seconds": 16.137155,
+      "found_components": [
+        "mechanisms",
+        "pathways",
+        "drug_interactions"
+      ],
+      "missing_components": [],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "mechanisms",
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions",
+        "citation_network"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    },
+    {
+      "test": "query_9",
+      "status": "PASS",
+      "question": "What mechanisms does olaparib target in BRCA-mutated cancers?",
+      "elapsed_seconds": 26.735564,
+      "found_components": [
+        "mechanisms",
+        "pathways",
+        "toxicity_mitigation"
+      ],
+      "missing_components": [],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "pathways",
+        "mechanisms",
+        "pathway_scores",
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions",
+        "citation_network"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    },
+    {
+      "test": "query_10",
+      "status": "PASS",
+      "question": "How does metformin affect cancer metabolism?",
+      "elapsed_seconds": 14.643675,
+      "found_components": [
+        "mechanisms",
+        "pathways",
+        "sub_question_answers"
+      ],
+      "missing_components": [],
+      "portals_used": [
+        "pubmed",
+        "gdc",
+        "project_data_sphere"
+      ],
+      "moat_components": [
+        "mechanisms",
+        "treatment_line_analysis",
+        "biomarker_analysis",
+        "mechanism_vector",
+        "insight_chips",
+        "pathway_aggregation",
+        "overall_confidence",
+        "drug_interactions",
+        "citation_network"
+      ],
+      "has_mechanisms": true,
+      "has_pathways": true,
+      "has_provenance": true
+    }
+  ]
+}

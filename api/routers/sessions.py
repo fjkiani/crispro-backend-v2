@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 
 from ..services.supabase_service import _supabase_select, _supabase_insert, _supabase_update
 from ..config import get_api_flags
+from ..middleware.auth_middleware import get_current_user, get_optional_user
 
 router = APIRouter()
 
@@ -50,9 +51,9 @@ def _get_session_id(x_session_id: Optional[str] = Header(None)) -> str:
         return x_session_id
     return str(uuid.uuid4())
 
-def _get_user_id(x_user_id: Optional[str] = Header(None)) -> Optional[str]:
-    """Extract user ID from header (optional)"""
-    return x_user_id
+def _get_user_id(user: Optional[Dict[str, Any]] = Depends(get_optional_user)) -> Optional[str]:
+    """Extract user ID from authenticated user (optional - allows anonymous sessions)"""
+    return user.get("user_id") if user else None
 
 def _get_idempotency_key(x_idempotency_key: Optional[str] = Header(None)) -> Optional[str]:
     """Extract idempotency key from header"""
@@ -73,13 +74,13 @@ async def sessions_health():
 async def create_or_update_session(
     session_data: SessionCreate,
     x_session_id: Optional[str] = Header(None),
-    x_user_id: Optional[str] = Header(None),
+    user: Optional[Dict[str, Any]] = Depends(get_optional_user),
     x_idempotency_key: Optional[str] = Header(None)
 ):
     """Create or update a session with idempotency support"""
     try:
         session_id = session_data.id or _get_session_id(x_session_id)
-        user_id = _get_user_id(x_user_id)
+        user_id = user.get("user_id") if user else None
         
         # Check if session exists
         existing = await _supabase_select(
@@ -179,13 +180,13 @@ async def get_session(session_id: str):
 
 @router.get("/api/sessions", response_model=Dict[str, List[SessionResponse]])
 async def list_sessions(
-    x_user_id: Optional[str] = Header(None),
+    user: Optional[Dict[str, Any]] = Depends(get_optional_user),
     limit: int = 20,
     offset: int = 0
 ):
     """List recent sessions for current user (paginated)"""
     try:
-        user_id = _get_user_id(x_user_id)
+        user_id = user.get("user_id") if user else None
         
         # Build query conditions
         conditions = {}

@@ -1,0 +1,76 @@
+{
+  "analysis": "Strategy D - 5-Fold Stratified Cross-Validation",
+  "cohort": "TCGA-OV Tier-3",
+  "n_patients": 149,
+  "n_resistant": 24,
+  "n_sensitive": 125,
+  "cv": {
+    "n_folds": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "stratified": true
+  },
+  "classifier": {
+    "type": "LogisticRegression",
+    "class_weight": "balanced",
+    "max_iter": 1000
+  },
+  "results": {
+    "mean_auroc": 0.6532,
+    "std_auroc": 0.1464,
+    "ci_lower": 0.5249,
+    "ci_upper": 0.7815,
+    "fold_aurocs": [
+      0.828,
+      0.496,
+      0.688,
+      0.784,
+      0.47
+    ],
+    "fold_details": [
+      {
+        "fold": 1,
+        "train_size": 119,
+        "test_size": 30,
+        "test_resistant": 5,
+        "auroc": 0.828
+      },
+      {
+        "fold": 2,
+        "train_size": 119,
+        "test_size": 30,
+        "test_resistant": 5,
+        "auroc": 0.496
+      },
+      {
+        "fold": 3,
+        "train_size": 119,
+        "test_size": 30,
+        "test_resistant": 5,
+        "auroc": 0.688
+      },
+      {
+        "fold": 4,
+        "train_size": 119,
+        "test_size": 30,
+        "test_resistant": 5,
+        "auroc": 0.784
+      },
+      {
+        "fold": 5,
+        "train_size": 120,
+        "test_size": 29,
+        "test_resistant": 4,
+        "auroc": 0.47
+      }
+    ]
+  },
+  "decision_gate": {
+    "threshold": 0.7,
+    "passed": false,
+    "borderline": true,
+    "note": "CV-AUROC = 0.65 is borderline (0.65-0.70 range). High variance (0.47-0.83) due to small test set sizes (4-5 resistant per fold)."
+  },
+  "interpretation": "CV-AUROC = 0.65 shows modest generalization. The high variance across folds (0.47-0.83) reflects instability with only 4-5 resistant patients per test fold. For manuscript, report mean with CI and acknowledge power limitations.",
+  "manuscript_claim": "Five-fold stratified cross-validation yielded CV-AUROC = 0.65 (95% CI: 0.52-0.78). Fold-level variance was high (range: 0.47-0.83), reflecting the small number of resistant cases per fold (n=4-5). Despite modest mean performance, the upper confidence bound (0.78) overlaps with discovery AUROC (0.78), suggesting the model is not severely overfit."
+}

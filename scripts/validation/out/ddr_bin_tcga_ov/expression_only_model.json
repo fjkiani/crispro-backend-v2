@@ -1,0 +1,18 @@
+{
+  "analysis": "Expression-based survival prediction (no DDR_bin)",
+  "n_patients": 45,
+  "median_os_months": 57.56,
+  "feature_aurocs": {
+    "hrd_expr": 0.5790513833992095,
+    "immune_score": 0.5968379446640315,
+    "prolif_score": 0.39920948616600793,
+    "mapk_expr": 0.40909090909090906,
+    "pi3k_expr": 0.41897233201581024,
+    "apoptosis_expr": 0.4861660079051383
+  },
+  "combined_cv_auroc": 0.5700000000000001,
+  "best_individual": {
+    "feature": "immune_score",
+    "auroc": 0.5968379446640315
+  }
+}

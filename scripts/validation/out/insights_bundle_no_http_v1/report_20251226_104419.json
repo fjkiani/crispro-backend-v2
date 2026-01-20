@@ -1,0 +1,15 @@
+{
+  "validator": "validate_insights_bundle_no_localhost_http",
+  "generated_at": "2025-12-26T10:44:20.095019Z",
+  "status": "PASSED",
+  "result": {
+    "bundle": {
+      "functionality": 0.15,
+      "chromatin": 0.5,
+      "essentiality": 0.9,
+      "regulatory": 0.5
+    },
+    "api_base": "http://does-not-exist.invalid:9999"
+  },
+  "errors": []
+}

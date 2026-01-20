@@ -1,0 +1,221 @@
+# Multiple Myeloma Disease Module Configuration
+# Based on Manager's Mechanistic Trial Matching Blueprint
+
+disease: "multiple_myeloma"
+aliases: ["myeloma", "MM", "multiple myeloma"]
+
+# Mechanism axes that matter
+mechanism_axes:
+  proteasome:
+    name: "Proteasome Inhibitor"
+    vector_index: 0
+    biomarkers: ["proteasome", "PSMB5"]
+    pathways: ["proteasome", "ubiquitin"]
+    interventions: ["bortezomib", "carfilzomib", "ixazomib", "proteasome inhibitor", "PI"]
+    priority: "high"
+    description: "Proteasome (PI)"
+    dominance_condition: null
+    
+  cereblon_imid:
+    name: "Cereblon/IMiD"
+    vector_index: 1
+    biomarkers: ["cereblon", "CRBN", "IMiD"]
+    pathways: ["cereblon", "IMiD"]
+    interventions: ["lenalidomide", "pomalidomide", "thalidomide", "cereblon modulator"]
+    priority: "high"
+    description: "Cereblon/IMiD (len/pom)"
+    dominance_condition: null
+    
+  cd38:
+    name: "CD38"
+    vector_index: 2
+    biomarkers: ["CD38"]
+    pathways: ["CD38", "immunotherapy"]
+    interventions: ["daratumumab", "isatuximab", "anti-CD38"]
+    priority: "high"
+    description: "CD38 immunotherapy target"
+    dominance_condition: null
+    
+  bcma:
+    name: "BCMA"
+    vector_index: 3
+    biomarkers: ["BCMA", "B-cell maturation antigen"]
+    pathways: ["BCMA", "CAR-T", "bispecific"]
+    interventions: ["CAR-T", "idecabtagene vicleucel", "ciltacabtagene autoleucel", "BCMA CAR-T", "bispecific"]
+    priority: "high"
+    description: "BCMA (immunotherapy targets)"
+    dominance_condition: null
+    
+  gprc5d:
+    name: "GPRC5D"
+    vector_index: 4
+    biomarkers: ["GPRC5D"]
+    pathways: ["GPRC5D", "bispecific"]
+    interventions: ["talquetamab", "GPRC5D bispecific"]
+    priority: "high"
+    description: "GPRC5D (immunotherapy targets)"
+    dominance_condition: null
+    
+  fcrlh5:
+    name: "FcRH5"
+    vector_index: 5
+    biomarkers: ["FcRH5", "FCRH5"]
+    pathways: ["FcRH5", "bispecific"]
+    interventions: ["cevostamab", "FcRH5 bispecific"]
+    priority: "high"
+    description: "FcRH5 (immunotherapy targets)"
+    dominance_condition: null
+    
+  high_risk_genetics:
+    name: "High-Risk Genetics"
+    vector_index: 6
+    biomarkers: ["TP53", "del17p", "t(4;14)", "1q gain", "complex karyotype"]
+    pathways: ["TP53", "cytogenetics"]
+    interventions: ["novel mechanisms", "aggressive regimens", "transplant"]
+    priority: "high"
+    description: "High-risk genetics/cytogenetics (TP53/del17p, t(4;14), 1q gain)"
+    dominance_condition: "TP53 OR del17p OR t(4;14)"
+
+# Evidence gates
+evidence_gates:
+  target_antigen_present:
+    name: "Target Antigen Present"
+    condition: "BCMA OR GPRC5D OR FcRH5 OR CD38"
+    boosts:
+      bcma: 0.8
+      gprc5d: 0.8
+      fcrlh5: 0.8
+      cd38: 0.8
+    rationale: "Target-antigen presence (BCMA etc.) and prior exposure/refractory status are key"
+    
+  triple_class_refractory:
+    name: "Triple-Class Refractory"
+    condition: "refractory to PI AND refractory to IMiD AND refractory to anti-CD38"
+    boosts:
+      bcma: 1.0
+      gprc5d: 1.0
+      fcrlh5: 1.0
+    rationale: "Triple-class refractory → prioritize BCMA/GPRC5D/FcRH5 trials"
+    
+  high_risk_strong:
+    name: "High-Risk Strong"
+    condition: "TP53 OR del17p OR t(4;14)"
+    boosts:
+      high_risk_genetics: 1.0
+    rationale: "High-risk cytogenetics should influence prioritization and aggressiveness of approach"
+    
+  crbn_alteration:
+    name: "CRBN Alteration"
+    condition: "CRBN alteration OR resistance to IMiD"
+    boosts:
+      bcma: 0.6
+      gprc5d: 0.6
+    rationale: "CRBN alterations → prefer alternative mechanisms"
+
+# Dominance policies
+dominance_policies:
+  triple_class_dominance:
+    name: "Triple-Class Refractory Dominance"
+    condition: "refractory to PI AND refractory to IMiD AND refractory to anti-CD38"
+    prioritize_axis: "bcma"
+    layer_axes: ["gprc5d", "fcrlh5"]
+    rationale: "If triple-class refractory → prioritize BCMA/GPRC5D/FcRH5 trials"
+    
+  high_risk_dominance:
+    name: "High-Risk Dominance"
+    condition: "TP53 OR del17p OR t(4;14)"
+    prioritize_axis: "high_risk_genetics"
+    rationale: "If high-risk (del17p/TP53) → prioritize regimens/trials tailored for high-risk biology"
+
+# Query templates
+query_templates:
+  bcma_trials:
+    name: "BCMA CAR-T/bispecific trials"
+    query: '("multiple myeloma" OR "myeloma") AND (BCMA OR "CAR-T" OR bispecific)'
+    condition: "multiple myeloma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "bcma"
+    priority: 1
+    
+  gprc5d_trials:
+    name: "GPRC5D trials"
+    query: '("multiple myeloma" OR "myeloma") AND (GPRC5D OR talquetamab)'
+    condition: "multiple myeloma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "gprc5d"
+    priority: 1
+    
+  fcrlh5_trials:
+    name: "FcRH5 trials"
+    query: '("multiple myeloma" OR "myeloma") AND (FcRH5 OR cevostamab)'
+    condition: "multiple myeloma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "fcrlh5"
+    priority: 1
+    
+  proteasome_trials:
+    name: "Proteasome inhibitor trials"
+    query: '("multiple myeloma" OR "myeloma") AND ("proteasome inhibitor" OR bortezomib OR carfilzomib)'
+    condition: "multiple myeloma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "proteasome"
+    priority: 2
+    
+  cereblon_trials:
+    name: "Cereblon modulator trials"
+    query: '("multiple myeloma" OR "myeloma") AND ("cereblon modulator" OR lenalidomide OR pomalidomide)'
+    condition: "multiple myeloma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "cereblon_imid"
+    priority: 2
+    
+  cd38_trials:
+    name: "Anti-CD38 trials"
+    query: '("multiple myeloma" OR "myeloma") AND ("anti-CD38" OR daratumumab OR isatuximab)'
+    condition: "multiple myeloma"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "cd38"
+    priority: 2
+
+# Subtype discrimination
+subtypes:
+  - name: "newly_diagnosed"
+    keywords: ["newly diagnosed", "NDMM", "first line"]
+    priority: 1
+    
+  - name: "relapsed_refractory"
+    keywords: ["relapsed", "refractory", "RRMM", "R/R"]
+    priority: 1
+    
+  - name: "triple_class_refractory"
+    keywords: ["triple class refractory", "TCR", "refractory to PI", "refractory to IMiD", "refractory to anti-CD38"]
+    priority: 1
+
+# Eligibility patterns
+eligibility_patterns:
+  performance_status: ["ECOG", "performance status"]
+  organ_function: ["creatinine", "eGFR", "bilirubin", "ALT", "AST"]
+  prior_lines: ["prior", "previous", "refractory", "relapsed", "lines of therapy"]
+  cytogenetics: ["cytogenetics", "TP53", "del17p", "t(4;14)", "1q gain"]
+  target_antigen: ["BCMA", "GPRC5D", "FcRH5", "CD38"]
+
+# Safety layer
+contraindications:
+  - biomarker: "triple-class refractory"
+    prefer_interventions: ["BCMA CAR-T", "GPRC5D bispecific", "FcRH5 bispecific"]
+    rationale: "Triple-class refractory → prioritize novel immunotherapy targets"
+    
+  - biomarker: "high-risk cytogenetics"
+    prefer_interventions: ["aggressive regimens", "transplant", "novel mechanisms"]
+    rationale: "High-risk (del17p/TP53) → prioritize aggressive approaches"
+
+# Explainability contract
+explainability_fields:
+  - "dominant_pathway_match"
+  - "gate_evidence"
+  - "whats_missing"
+  - "mechanism_vector_scores"
+  - "dominance_policy_applied"
+  - "subtype_classification"
+  - "refractory_status"
+  - "target_antigen_status"

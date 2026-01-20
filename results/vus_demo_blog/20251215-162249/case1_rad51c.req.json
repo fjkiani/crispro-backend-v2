@@ -1,0 +1,4 @@
+{
+  "variant": {"gene":"RAD51C","assembly":"GRCh38","chrom":"17","pos":58709872,"ref":"T","alt":"C"},
+  "options": {"patient_genes": ["MBD4","TP53"]}
+}

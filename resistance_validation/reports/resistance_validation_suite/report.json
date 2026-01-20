@@ -1,0 +1,95 @@
+{
+  "timestamp": "2025-12-26T10:53:11.341763",
+  "runner": "run_resistance_validation_suite",
+  "ring0": false,
+  "ring1": true,
+  "overall_passed": true,
+  "steps": [
+    {
+      "name": "validator:scripts/validation/validate_ov_nf1_playbook.py",
+      "passed": true,
+      "details": "{\n  \"timestamp\": \"2025-12-26T10:53:08.398804\",\n  \"validator\": \"validate_ov_nf1_playbook\",\n  \"fixture\": \"/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/patient_states/OV-NF1-001.json\",\n  \"overall_passed\": true,\n  \"checks\": [\n    {\n      \"name\": \"nf1_playbook_static\",\n      \"passed\": true,\n      \"details\": \"NF1 playbook entry present with expected RR/source/alternatives\",\n      \"metrics\": {\n        \"relative_risk\": 2.1,\n        \"validation_source\": \"TCGA_OV_469\",\n        \"alt_drugs\": [\n          \"bevacizumab\",\n          \"olaparib\",\n          \"trametinib\"\n        ]\n      }\n    },\n    {\n      \"name\": \"nf1_playbook_service\",\n      \"passed\": true,\n      \"details\": \"Playbook service returns expected NF1 alternatives + provenance\",\n      \"metrics\": {\n        \"alternatives_count\": 3,\n        \"alt_drugs\": [\n          \"bevacizumab\",\n          \"olaparib\",\n          \"trametinib\"\n        ],\n        \"regimen_changes_count\": 1,\n        \"monitoring_changes\": {\n          \"mrd_frequency\": null,\n          \"ctdna_targets\": null,\n          \"imaging_frequency\": \"CT every 2-3 months\",\n          \"biomarker_frequency\": \"CA-125 every 2 weeks\",\n          \"bone_marrow_frequency\": null\n        },\n        \"provenance\": {\n          \"service_version\": \"resistance_playbook_v1.0_dry\",\n          \"disease\": \"ovarian\",\n          \"detected_resistance\": [\n            \"NF1\"\n          ],\n          \"cytogenetics\": null,\n          \"treatment_line\": 1,\n          \"prior_therapies\": [],\n          \"line_multiplier_applied\": 1.0,\n          \"cross_resistance_detected\": [],\n          \"playbook_source\": \"OV_RESISTANCE_PLAYBOOK\",\n          \"alternatives_count\": 3,\n          \"regimen_changes_count\": 1\n        }\n      }\n    },\n    {\n      \"name\": \"nf1_regimen_monitoring\",\n      \"passed\": true,\n      \"details\": \"NF1 includes regimen change + intensified monitoring guidance\",\n      \"metrics\": {\n        \"regimen_changes\": [\n          {\n            \"from_regimen\": \"carboplatin/paclitaxel\",\n            \"to_regimen\": \"carboplatin/paclitaxel + bevacizumab\",\n            \"rationale\": \"Add bevacizumab for high-risk disease\",\n            \"evidence_level\": \"VALIDATED\"\n          }\n        ],\n        \"biomarker_frequency\": \"CA-125 every 2 weeks\",\n        \"imaging_frequency\": \"CT every 2-3 months\"\n      }\n    }\n  ]\n}\n\nWrote report: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/ov_nf1_playbook_report.json (timestamped: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/ov_nf1_playbook_report_20251226_105308.json)\n",
+      "meta": {
+        "returncode": 0,
+        "cmd": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/validation/validate_ov_nf1_playbook.py"
+        ]
+      }
+    },
+    {
+      "name": "validator:scripts/validation/validate_resistance_contract_smoke.py",
+      "passed": true,
+      "details": "/Users/fahadkiani/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n  warnings.warn(\n",
+      "meta": {
+        "returncode": 0,
+        "cmd": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/validation/validate_resistance_contract_smoke.py"
+        ]
+      }
+    },
+    {
+      "name": "validator:scripts/validation/validate_synthetic_lethality_pilot_benchmark.py",
+      "passed": true,
+      "details": "\u2705 SL pilot benchmark validator PASSED. Wrote: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/out/sl_pilot_drug_match_v1/report.json (timestamped: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/out/sl_pilot_drug_match_v1/report_20251226_105309.json)\n",
+      "meta": {
+        "returncode": 0,
+        "cmd": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/validation/validate_synthetic_lethality_pilot_benchmark.py"
+        ]
+      }
+    },
+    {
+      "name": "validator:scripts/validation/validate_resistance_e2e_fixtures.py",
+      "passed": true,
+      "details": "/Users/fahadkiani/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n  warnings.warn(\n\u2705 Resistance E2E Fixture Validation PASSED\n   Report: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/out/resistance_e2e_fixtures_v1/report.json\n   Timestamped: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/out/resistance_e2e_fixtures_v1/report_20251226_105309.json\n   Summary: 5/5 fixtures passed\n",
+      "meta": {
+        "returncode": 0,
+        "cmd": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/validation/validate_resistance_e2e_fixtures.py"
+        ]
+      }
+    },
+    {
+      "name": "validator:scripts/validation/validate_insights_bundle_no_localhost_http.py",
+      "passed": true,
+      "details": "/Users/fahadkiani/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n  warnings.warn(\n/Users/fahadkiani/Library/Python/3.9/lib/python/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:\n* 'allow_population_by_field_name' has been renamed to 'validate_by_name'\n  warnings.warn(message, UserWarning)\n\u2705 Insights bundle validator PASSED. Wrote: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/out/insights_bundle_no_http_v1/report.json\n",
+      "meta": {
+        "returncode": 0,
+        "cmd": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/validation/validate_insights_bundle_no_localhost_http.py"
+        ]
+      }
+    },
+    {
+      "name": "validator:scripts/validation/validate_resistance_e2e_ov_ayesha_v1.py",
+      "passed": true,
+      "details": "/Users/fahadkiani/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n  warnings.warn(\n/Users/fahadkiani/Library/Python/3.9/lib/python/site-packages/pydantic/_internal/_config.py:373: UserWarning: Valid config keys have changed in V2:\n* 'allow_population_by_field_name' has been renamed to 'validate_by_name'\n  warnings.warn(message, UserWarning)\nCould not parse HGVS: E322Vfs*10\nBaseline SAE features missing - using population average (0.50)\nCA125Intelligence service not available\nPathway burden computation failed: 'MMPathwayService' object has no attribute 'compute_mm_pathway_burden'\nFailed to fetch next-line options: get_next_line_options() got an unexpected keyword argument 'resistance_mechanisms'\n[INFO] NextTest recommender: germline=unknown, has_hrd=False, has_msi=False, has_tmb=False\n[INFO] NextTest recommender generated 3 tests: ['HRD Score (MyChoice CDx or tissue-based NGS)', 'ctDNA Comprehensive Panel (Guardant360 CDx or FoundationOne Liquid CDx)', 'SLFN11 IHC (Immunohistochemistry)']\n[INFO] HintTiles generated 1 tiles: ['next_test']\n[INFO] MechanismMap: Pre-NGS mode - all chips gray\n\u2705 OV resistance E2E validator PASSED. Wrote: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/out/resistance_e2e_ov_ayesha_v1/report.json\n",
+      "meta": {
+        "returncode": 0,
+        "cmd": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "scripts/validation/validate_resistance_e2e_ov_ayesha_v1.py"
+        ]
+      }
+    },
+    {
+      "name": "receipt_parse:scripts/validation/out/ddr_bin_ov_platinum_TRUE_SAE_v2/report.json",
+      "passed": true,
+      "details": "Parsed receipt JSON and found expected keys.",
+      "meta": {
+        "path": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/out/ddr_bin_ov_platinum_TRUE_SAE_v2/report.json",
+        "keys": [
+          "os",
+          "pfs",
+          "platinum_response",
+          "run_meta"
+        ]
+      }
+    }
+  ]
+}

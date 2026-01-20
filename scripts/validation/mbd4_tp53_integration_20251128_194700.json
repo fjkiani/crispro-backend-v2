@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-11-29T00:47:00.967609",
+  "patient_profile": {
+    "mutations": [
+      {
+        "gene": "MBD4",
+        "hgvs_p": "p.R361*",
+        "type": "germline"
+      },
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "type": "somatic"
+      }
+    ],
+    "disease": "ovarian_cancer_hgsoc",
+    "stage": "IVB"
+  },
+  "overall_passed": false,
+  "integration_success": false,
+  "trial_matching": {
+    "test_name": "Trial Matching",
+    "passed": true,
+    "details": "Ranked 20 trials, avg mechanism fit: 0.99",
+    "metrics": {
+      "trials_ranked": 20,
+      "avg_mechanism_fit": 0.9890137959063645,
+      "top_trial": "NCT04284969"
+    }
+  },
+  "resistance_prediction": {
+    "test_name": "Resistance Prediction",
+    "passed": false,
+    "details": "Risk: LOW, Probability: 0.06, Signals: 0",
+    "metrics": {
+      "risk_level": "LOW",
+      "probability": 0.05775875810768263,
+      "signal_count": 0,
+      "dna_repair_detected": false,
+      "pathway_escape_detected": false
+    }
+  }
+}

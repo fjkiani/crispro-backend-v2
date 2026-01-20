@@ -1,0 +1,96 @@
+{
+  "nct_id": "NCT03916679",
+  "trial_title": "MESO-CAR T Cells Therapy for Relapsed and Refractory Epithelial Ovarian Cancer",
+  "patient_id": "ayesha_001",
+  "generated_at": "2025-11-14T15:22:28.427009",
+  "sections": {
+    "1_trial_overview": {
+      "title": "MESO-CAR T Cells Therapy for Relapsed and Refractory Epithelial Ovarian Cancer",
+      "phase": "",
+      "status": "UNKNOWN",
+      "sponsor": "",
+      "estimated_enrollment": 0,
+      "primary_endpoint": ""
+    },
+    "2_eligibility_assessment": {
+      "table": [
+        {
+          "criterion": "Disease Match",
+          "status": "PASS",
+          "confidence": 0.9,
+          "notes": "Ovarian/gynecologic match: [\"ovarian cancer\"]"
+        },
+        {
+          "criterion": "Treatment Line",
+          "status": "PASS",
+          "confidence": 0.8,
+          "notes": "Line match assumed (not explicitly excluded)"
+        },
+        {
+          "criterion": "Biomarker Requirements",
+          "status": "PASS",
+          "confidence": 1.0,
+          "notes": "No biomarker requirements",
+          "pending_tests": []
+        },
+        {
+          "criterion": "Location (NYC Metro)",
+          "status": "PASS",
+          "confidence": 0.5,
+          "notes": "No location data (assume match)"
+        }
+      ],
+      "summary": "4/4 criteria met"
+    },
+    "3_strategic_scenarios": {
+      "best_case": {
+        "probability": 1.0,
+        "scenario": "All pending biomarker tests return favorable results",
+        "eligibility": "HIGH"
+      },
+      "most_likely": {
+        "probability": 1.0,
+        "scenario": "50% of pending tests pass, some may require additional screening",
+        "eligibility": "MODERATE"
+      },
+      "challenge": {
+        "probability": 1.0,
+        "scenario": "Some pending tests fail, may need alternative trials",
+        "eligibility": "LOW"
+      }
+    },
+    "4_tactical_recommendations": [
+      {
+        "action": "Proceed with trial enrollment",
+        "lab": "N/A",
+        "cost": "N/A",
+        "timeline": "Immediate",
+        "priority": "HIGH",
+        "rationale": "All eligibility criteria met"
+      }
+    ],
+    "5_drug_mechanisms": {},
+    "6_location_details": [],
+    "7_timeline": {
+      "study_start": "",
+      "primary_completion": ""
+    },
+    "8_full_eligibility_text": {
+      "inclusion_criteria": "- 18 to 70 Years Old, female; Expected survival \\> 12 weeks; Clinical performance status of ECOG score 0-2; Patients who have previously been treated with second- line or more lines of standard treatment are not effective (No remission or recurrence after remission); At least one measurable tumor foci according to RECIST standard 1.1 ; Positive Mesothelin expression in tumor tissues; Creatinine \u2264 1.5\u00d7ULN; ALT and AST \u2264 3\u00d7ULN; Total bilirubin \u2264 2\u00d7ULN; Hemoglobin\u226590g/L; Absolute counting of neutrophils\u22651000uL ; Absolute counting of lymphocytes\\>0.7\u00d710\\^9/L; Counting of Platelet\u226575000/uL; The venous access required for collection can be established without contraindications for leukocyte collection; Able to understand and sign the Informed Consent Document.",
+      "exclusion_criteria": "- Accompanied by other uncontrolled malignant tumors; Active hepatitis B, hepatitis C, syphilis, HIV infection; Suffering severe cardiovascular or respiratory disease; Any other diseases could affect the outcome of this trial; Any affairs could affect the safety of the subjects or outcome of this trial; Pregnant or lactating women, or patients who plan to be pregnancy during or after treatment; There are active or uncontrollable infections (except simple urinary tract infections or upper respiratory tract infections) that require systemic therapy 14 days or 14 days prior to assignment; Patients who are accounted by researchers to be not appropriate for this test; Received CAR-T treatment or other gene therapies before assignment; Subject suffering disease affects the understanding of informed consent or comply with study protocol."
+    },
+    "9_contact_information": [],
+    "10_provenance": {
+      "generated_by": "JR2",
+      "data_sources": [
+        "SQLite",
+        "Diffbot",
+        "DRUG_MECHANISM_DB"
+      ],
+      "confidence_flags": [
+        "[INFERRED]",
+        "[NEEDS VERIFICATION]"
+      ]
+    }
+  }
+}

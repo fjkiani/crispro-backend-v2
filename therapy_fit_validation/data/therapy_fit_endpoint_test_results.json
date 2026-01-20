@@ -1,0 +1,213 @@
+{
+  "timestamp": "2025-12-23T17:26:42.331217",
+  "api_base_url": "http://127.0.0.1:8000",
+  "test_cases": 3,
+  "passed": 2,
+  "failed": 1,
+  "results": [
+    {
+      "test_case": "Multiple Myeloma - KRAS G12D",
+      "status": "PASSED",
+      "validation": {
+        "has_drugs": true,
+        "drugs_count": 5,
+        "has_insights": true,
+        "has_spe_breakdown": true,
+        "confidence_valid": true,
+        "evidence_tier_valid": true,
+        "top_drug_match": true,
+        "errors": []
+      },
+      "elapsed_seconds": 109.967656,
+      "top_drug": {
+        "name": "MEK inhibitor",
+        "moa": "MAPK downstream blockade",
+        "efficacy_score": 0.64,
+        "confidence": 0.53,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": null,
+          "review_status": null,
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "KRAS p.G12D multiple_myeloma",
+          "citations": [],
+          "clinvar": {
+            "classification": null,
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.0,
+          "chromatin": 0.622,
+          "essentiality": 0.0,
+          "regulatory": 0.0
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.000510871410369873,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.8,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      }
+    },
+    {
+      "test_case": "Ovarian Cancer - MBD4+TP53",
+      "status": "PASSED",
+      "validation": {
+        "has_drugs": true,
+        "drugs_count": 6,
+        "has_insights": true,
+        "has_spe_breakdown": true,
+        "confidence_valid": true,
+        "evidence_tier_valid": true,
+        "top_drug_match": true,
+        "errors": []
+      },
+      "elapsed_seconds": 15.002022,
+      "top_drug": {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.75,
+        "confidence": 0.59,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "MBD4 p.Q346* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.0,
+          "chromatin": 0.577,
+          "essentiality": 0.0,
+          "regulatory": 0.0
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      }
+    },
+    {
+      "test_case": "Melanoma - BRAF V600E",
+      "status": "FAILED",
+      "validation": {
+        "has_drugs": true,
+        "drugs_count": 5,
+        "has_insights": true,
+        "has_spe_breakdown": true,
+        "confidence_valid": true,
+        "evidence_tier_valid": true,
+        "top_drug_match": false,
+        "errors": [
+          "Top drug 'PEMBROLIZUMAB' doesn't match expected keywords: ['BRAF', 'BRAF inhibitor']"
+        ]
+      },
+      "elapsed_seconds": 10.107776,
+      "top_drug": {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.0,
+        "confidence": 0.565,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRAF p.V600E melanoma",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.0,
+          "chromatin": 0.411,
+          "essentiality": 0.0,
+          "regulatory": 0.0
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0023391246795654297,
+            "percentile": 0.9
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.9,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      }
+    }
+  ]
+}

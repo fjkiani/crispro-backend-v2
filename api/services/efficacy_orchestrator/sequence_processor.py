@@ -25,24 +25,49 @@ class SequenceProcessor:
         disable_fusion = feature_flags.get("disable_fusion", False)
         disable_evo2 = feature_flags.get("disable_evo2", False)
         
-        # Try Fusion first
+        # Try Fusion first (ONLY for GRCh38 missense variants)
         if fusion_url and not disable_fusion:
             try:
-                scores = await self.fusion_scorer.score(request.mutations)
-                if scores:
-                    return scores
+                # P0 Gate: Only use Fusion for GRCh38 missense variants
+                fusion_eligible = []
+                for m in request.mutations:
+                    build = str(m.get("build", "")).lower()
+                    consequence = str(m.get("consequence", "")).lower()
+                    # Check if variant is GRCh38 and missense
+                    is_grch38 = build in ["grch38", "hg38", "38"]
+                    is_missense = "missense" in consequence
+                    if is_grch38 and is_missense:
+                        fusion_eligible.append(m)
+                
+                if fusion_eligible:
+                    scores = await self.fusion_scorer.score(fusion_eligible)
+                    if scores:
+                        return scores
             except Exception:
                 pass
         
         # Try Evo2
         if not disable_evo2:
             try:
-                window_flanks = [4096, 8192, 16384, 25000] if request.options.get("adaptive", True) else [4096]
-                ensemble = request.options.get("ensemble", True)
-                scores = await self.evo_scorer.score(request.mutations, request.model_id, window_flanks, ensemble)
+                window_flanks = [4096, 8192, 16384] if request.options.get("adaptive", True) else [4096]
+                ensemble = False  # hard-disable multi-model to 1B only
+                # Force exon scan when ablation includes S (default) to capture missense impact
+                force_exon = True
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.info(f"🔬 Attempting Evo2 scoring for {len(request.mutations)} mutations with model {request.model_id}")
+                scores = await self.evo_scorer.score(
+                    request.mutations, request.model_id, window_flanks, ensemble, force_exon_scan=force_exon
+                )
                 if scores:
+                    logger.info(f"✅ Evo2 scoring successful: {len(scores)} scores returned")
                     return scores
-            except Exception:
+                else:
+                    logger.warning(f"⚠️ Evo2 scoring returned empty results")
+            except Exception as e:
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.error(f"❌ Evo2 scoring failed: {e}", exc_info=True)
                 pass
         
         # Try Massive Oracle if enabled
@@ -67,6 +92,10 @@ class SequenceProcessor:
                 except Exception:
                     pass
         
+        return []
+
+
+
         return []
 
 

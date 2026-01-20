@@ -1,0 +1,16 @@
+{
+  "cancer": "Endometrial (UCEC)",
+  "n_patients": 529,
+  "n_progression": 119,
+  "pathway_coverage": {
+    "DDR": 161,
+    "MAPK": 189,
+    "PI3K": 432
+  },
+  "individual_aurocs": {
+    "DDR": 0.4012400081984013,
+    "MAPK": 0.41588440254150444,
+    "PI3K": 0.42312973970075834
+  },
+  "combined_cv_auroc": 0.6367311770943797
+}

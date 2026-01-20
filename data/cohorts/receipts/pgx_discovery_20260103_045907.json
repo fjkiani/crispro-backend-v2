@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-01-03T04:59:07.026905",
+  "total_studies": 516,
+  "cancer_studies": 471,
+  "pgx_genes": [
+    "DPYD",
+    "TPMT",
+    "UGT1A1",
+    "CYP2D6"
+  ],
+  "method": "cBioPortal API /studies endpoint"
+}

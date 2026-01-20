@@ -1,0 +1,161 @@
+[
+  {
+    "case_id": "HS_001",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "TP53", "hgvs_p": "p.R175H", "consequence": "missense"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": ["TP53+WEE1"],
+      "effective_drugs": ["Adavosertib"],
+      "broken_pathways": ["CHECKPOINT"],
+      "essential_pathways": ["WEE1"],
+      "clinical_evidence": {"pmid": "32592347", "evidence": "Phase2"}
+    }
+  },
+  {
+    "case_id": "HS_002",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "ARID1A", "hgvs_p": "p.R1982*", "consequence": "stop_gained"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": ["ARID1A+ATR"],
+      "effective_drugs": ["Ceralasertib"],
+      "broken_pathways": ["CHROMATIN"],
+      "essential_pathways": ["ATR"],
+      "clinical_evidence": {"pmid": "30510156", "evidence": "Preclinical"}
+    }
+  },
+  {
+    "case_id": "HS_003",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "KRAS", "hgvs_p": "p.G12D", "consequence": "missense"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": ["KRAS+MEK"],
+      "effective_drugs": ["Trametinib"],
+      "broken_pathways": ["MAPK"],
+      "essential_pathways": ["MEK"],
+      "clinical_evidence": {"pmid": "24694677", "evidence": "Mechanistic"}
+    }
+  },
+  {
+    "case_id": "HS_004",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "BRCA1", "hgvs_p": "p.I379T", "consequence": "missense"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [],
+      "broken_pathways": [],
+      "essential_pathways": [],
+      "clinical_evidence": {"notes": "DDR gene present but variant intended as benign/low-impact negative control"}
+    }
+  },
+  {
+    "case_id": "HS_005",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "CHEK2", "hgvs_p": "p.I157T", "consequence": "missense"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [],
+      "broken_pathways": [],
+      "essential_pathways": [],
+      "clinical_evidence": {"notes": "DDR gene present but treated as negative control for gating"}
+    }
+  },
+  {
+    "case_id": "HS_006",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "MBD4", "hgvs_p": "p.A273V", "consequence": "missense"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [],
+      "broken_pathways": [],
+      "essential_pathways": [],
+      "clinical_evidence": {"notes": "MBD4 missense negative control (tests DDR gating)"}
+    }
+  },
+  {
+    "case_id": "HS_007",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "ATR", "hgvs_p": "p.R300H", "consequence": "missense"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": ["ATR+WEE1"],
+      "effective_drugs": ["Adavosertib"],
+      "broken_pathways": ["DDR"],
+      "essential_pathways": ["WEE1"],
+      "clinical_evidence": {"pmid": "33115855", "evidence": "Phase2"}
+    }
+  },
+  {
+    "case_id": "HS_008",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "ATM", "hgvs_p": "p.D1853N", "consequence": "missense"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [],
+      "broken_pathways": [],
+      "essential_pathways": [],
+      "clinical_evidence": {"notes": "ATM missense negative control (tests DDR gating)"}
+    }
+  },
+  {
+    "case_id": "HS_009",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "BRAF", "hgvs_p": "p.V600E", "consequence": "missense", "chrom": "7", "pos": 140453136, "ref": "T", "alt": "A"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": ["BRAF+MEK"],
+      "effective_drugs": ["Trametinib"],
+      "broken_pathways": ["MAPK"],
+      "essential_pathways": ["MEK"],
+      "clinical_evidence": {"notes": "MAPK positive case with valid GRCh38 coordinates"}
+    }
+  },
+  {
+    "case_id": "HS_010",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "CDK12", "hgvs_p": "p.R890*", "consequence": "stop_gained"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": ["CDK12+PARP"],
+      "effective_drugs": ["Olaparib"],
+      "broken_pathways": ["DDR"],
+      "essential_pathways": ["PARP"],
+      "clinical_evidence": {"pmid": "31320749", "evidence": "Preclinical"}
+    }
+  },
+  {
+    "case_id": "HS_011",
+    "disease": "ovarian_cancer",
+    "mutations": [{"gene": "RAD51D", "hgvs_p": "p.K91*", "consequence": "stop_gained"}],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": ["RAD51D+PARP"],
+      "effective_drugs": ["Rucaparib"],
+      "broken_pathways": ["HR"],
+      "essential_pathways": ["PARP"],
+      "clinical_evidence": {"pmid": "30345854", "evidence": "Phase2"}
+    }
+  },
+  {
+    "case_id": "HS_012",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {"gene": "MBD4", "hgvs_p": "p.Ile413Serfs*2", "consequence": "frameshift_variant"},
+      {"gene": "TP53", "hgvs_p": "p.R175H", "consequence": "missense"}
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": ["MBD4+TP53+PARP"],
+      "effective_drugs": ["Olaparib", "Niraparib", "Rucaparib"],
+      "broken_pathways": ["BER", "CHECKPOINT"],
+      "essential_pathways": ["PARP"],
+      "clinical_evidence": {"pmid": "30111527", "evidence": "Preclinical"}
+    }
+  }
+]

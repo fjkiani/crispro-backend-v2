@@ -1,0 +1,22 @@
+{
+  "cached_at": "2025-11-14T19:58:03.527922",
+  "trial_data": {
+    "id": "NCT00383279",
+    "title": "Improving Employment in Patients Who Have Survived Cervical Cancer, Uterine Cancer, or Ovarian Cancer",
+    "status": "COMPLETED",
+    "phases": "[\"NA\"]",
+    "summary": "RATIONALE: Finding out which problems affect employment in survivors of gynecologic cancer may help in planning cancer treatment and improve the quality of life of future cancer survivors.\n\nPURPOSE: This research study is looking at ways to improve employment in patients who have survived cervical cancer, uterine cancer, or ovarian cancer.",
+    "conditions": "[\"Cervical Cancer\", \"Ovarian Cancer\", \"Sarcoma\"]",
+    "interventions": "[\"counseling intervention\", \"study of socioeconomic and demographic variables\"]",
+    "source": "ClinicalTrials.gov",
+    "inclusion_criteria": "DISEASE CHARACTERISTICS:\n\n* Diagnosis of 1 of the following invasive cancers:\n\n  * Cervical cancer\n  * Uterine cancer\n  * Ovarian cancer\n* Diagnosed \u2265 6 months ago\n* Any stage disease\n* Employed at the time of diagnosis, defined as working for pay \u2265 20 hours/week\n\nPATIENT CHARACTERISTICS:\n\n* Not specified\n\nPRIOR CONCURRENT THERAPY:\n\n* Not specified",
+    "exclusion_criteria": "",
+    "inclusion_criteria_full": "DISEASE CHARACTERISTICS:\n\n* Diagnosis of 1 of the following invasive cancers:\n\n  * Cervical cancer\n  * Uterine cancer\n  * Ovarian cancer\n* Diagnosed \u2265 6 months ago\n* Any stage disease\n* Employed at the time of diagnosis, defined as working for pay \u2265 20 hours/week\n\nPATIENT CHARACTERISTICS:\n\n* Not specified\n\nPRIOR CONCURRENT THERAPY:\n\n* Not specified",
+    "exclusion_criteria_full": null,
+    "primary_endpoint": null,
+    "interventions_json": null,
+    "locations_full_json": null,
+    "scraped_data_json": null,
+    "scraped_at": null
+  }
+}

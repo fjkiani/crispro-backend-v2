@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "deliverable": "D6",
+    "generated_at": "2025-12-28T20:32:39.029972",
+    "purpose": "Prioritize data sources for KELIM validation cohort acquisition"
+  },
+  "data_sources": [
+    {
+      "source": "cBioPortal",
+      "priority": "HIGH",
+      "rationale": "Genomics + clinical data in one platform, direct API access",
+      "metrics": {
+        "total_ovarian_studies": 16,
+        "studies_with_ca125_attributes": 0,
+        "ca125_coverage_rate": "0.0%"
+      },
+      "strengths": [
+        "Genomics + clinical data integrated",
+        "Direct API access",
+        "Standardized data format",
+        "Multiple ovarian studies available"
+      ],
+      "weaknesses": [
+        "CA-125 attributes may not be explicitly labeled",
+        "May need manual attribute mapping",
+        "PFI outcomes may need extraction from clinical text"
+      ],
+      "next_steps": [
+        "Deep-dive attribute scan for CA-125 synonyms",
+        "Extract PFI from clinical data fields",
+        "Validate data quality on top 3 studies"
+      ],
+      "estimated_effort": "2-3 days"
+    },
+    {
+      "source": "ClinicalTrials.gov",
+      "priority": "HIGH",
+      "rationale": "PI contact info for outreach, trial metadata, potential data sharing",
+      "metrics": {
+        "ca125_trials_found": 39,
+        "pis_with_email": 0,
+        "pis_without_email": 28,
+        "email_coverage_rate": "0.0%"
+      },
+      "strengths": [
+        "PI contact information available",
+        "Trial metadata (phase, status, enrollment)",
+        "Institution information",
+        "39 CA-125 trials identified"
+      ],
+      "weaknesses": [
+        "No direct patient data access",
+        "Requires PI outreach for data sharing",
+        "Email coverage may be low (needs verification)"
+      ],
+      "next_steps": [
+        "Verify PI email extraction accuracy",
+        "Research PI publications for additional contacts",
+        "Prepare outreach templates",
+        "Prioritize trials by phase and enrollment"
+      ],
+      "estimated_effort": "1-2 days"
+    },
+    {
+      "source": "PubMed / Literature",
+      "priority": "MEDIUM",
+      "rationale": "Identify KELIM researchers, find published cohorts, track citations",
+      "metrics": {
+        "status": "Placeholder",
+        "kelim_papers_identified": 0,
+        "researchers_identified": 0
+      },
+      "strengths": [
+        "Identify KELIM developers (Colomban group)",
+        "Find published validation cohorts",
+        "Track citation networks",
+        "Academic collaborator identification"
+      ],
+      "weaknesses": [
+        "No direct data access",
+        "Requires manual literature review",
+        "May not have raw data availability"
+      ],
+      "next_steps": [
+        "Execute PubMed KELIM search (replace placeholder)",
+        "Extract researcher contact info",
+        "Map published cohorts to data availability",
+        "Engage Colomban group for collaboration"
+      ],
+      "estimated_effort": "2-3 days"
+    },
+    {
+      "source": "GDC (Genomic Data Commons)",
+      "priority": "MEDIUM",
+      "rationale": "TCGA and other large cohorts, standardized clinical data",
+      "metrics": {
+        "status": "Not yet scanned",
+        "estimated_ovarian_cohorts": "TCGA-OV (n=~500)"
+      },
+      "strengths": [
+        "Large sample sizes",
+        "Standardized clinical data",
+        "Genomics + clinical integrated",
+        "Publicly available"
+      ],
+      "weaknesses": [
+        "CA-125 may not be in standard clinical fields",
+        "May need to extract from clinical supplements",
+        "PFI calculation may require manual extraction"
+      ],
+      "next_steps": [
+        "Scan GDC for ovarian cancer studies",
+        "Check clinical data fields for CA-125",
+        "Extract PFI from clinical text",
+        "Validate data completeness"
+      ],
+      "estimated_effort": "2-3 days"
+    },
+    {
+      "source": "Academic Collaborators (Direct Outreach)",
+      "priority": "HIGH",
+      "rationale": "Direct access to curated cohorts, validated KELIM data, faster acquisition",
+      "metrics": {
+        "status": "Outreach pending",
+        "target_institutions": [
+          "Penn Medicine",
+          "MSK",
+          "Dana-Farber",
+          "MD Anderson",
+          "GOG/NRG",
+          "Netherlands Cancer Institute"
+        ]
+      },
+      "strengths": [
+        "Curated, validated data",
+        "Direct PI relationships",
+        "Faster data acquisition",
+        "Potential co-authorship"
+      ],
+      "weaknesses": [
+        "Requires relationship building",
+        "Data sharing agreements needed",
+        "Timeline depends on collaborator response"
+      ],
+      "next_steps": [
+        "Execute D5: Collaborator outreach (from EXECUTION_SUMMARY)",
+        "Personalize emails with research hooks",
+        "Track responses in spreadsheet",
+        "Negotiate data sharing terms"
+      ],
+      "estimated_effort": "1-2 weeks (human execution)"
+    }
+  ],
+  "prioritization_rationale": {
+    "tier_1_immediate": [
+      "cBioPortal (deep-dive attribute scan)",
+      "ClinicalTrials.gov (PI outreach preparation)"
+    ],
+    "tier_2_parallel": [
+      "PubMed KELIM search (replace placeholder)",
+      "GDC scan for TCGA-OV"
+    ],
+    "tier_3_follow_up": [
+      "Academic collaborator outreach (human execution)",
+      "Literature-based cohort identification"
+    ]
+  },
+  "recommended_execution_order": [
+    "1. Deep-dive cBioPortal CA-125 attribute scan (D7)",
+    "2. Complete PubMed KELIM researcher search (D5 replacement)",
+    "3. GDC TCGA-OV scan for CA-125 data",
+    "4. Prepare PI outreach templates (D8)",
+    "5. Execute academic collaborator outreach (human)"
+  ]
+}

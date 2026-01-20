@@ -1,0 +1,9 @@
+{
+  "validator": "validate_resistance_e2e_ov_ayesha_v1",
+  "generated_at": "2025-12-26T10:48:09.495895Z",
+  "status": "FAILED",
+  "errors": [
+    "TypeError: unsupported operand type(s) for @: 'function' and 'function'",
+    "Traceback (most recent call last):\n  File \"/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/validate_resistance_e2e_ov_ayesha_v1.py\", line 58, in main\n    from api.main import app  # noqa: WPS433\n  File \"/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/api/main.py\", line 50, in <module>\n    from .routers import care as care_router  # NEW: Resistance Playbook (Section 17)\n  File \"/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/api/routers/care.py\", line 170, in <module>\n    @router.get(\"/health\")@router.get(\"/health\")\nTypeError: unsupported operand type(s) for @: 'function' and 'function'\n"
+  ]
+}

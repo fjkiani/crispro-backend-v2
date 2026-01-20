@@ -1,0 +1,3324 @@
+[
+  {
+    "case_id": "SL_001",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA1",
+        "hgvs_p": "p.C61G",
+        "chrom": "17",
+        "pos": 43070943,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA1+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA1": 0.44405918068595746
+      },
+      "clinical_evidence": {
+        "pmid": "25366685",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_002",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA1",
+        "hgvs_p": "p.C61G",
+        "chrom": "17",
+        "pos": 43070943,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA1+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA1": 0.5136549385283461
+      },
+      "clinical_evidence": {
+        "pmid": "28569902",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_003",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA2",
+        "hgvs_p": "p.K3326*",
+        "chrom": "13",
+        "pos": 32936750,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "stop_gained"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA2": 0.5785124303033135
+      },
+      "clinical_evidence": {
+        "pmid": "25366685",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_004",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA2",
+        "hgvs_p": "p.K3326*",
+        "chrom": "13",
+        "pos": 32936750,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "stop_gained"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA2": 0.49663622684497655
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_005",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "MBD4",
+        "hgvs_p": "p.R346fs",
+        "chrom": "3",
+        "pos": 129430488,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "frameshift_variant"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "MBD4+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "BER"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "MBD4": 0.12484960719544597
+      },
+      "clinical_evidence": {
+        "pmid": "30111527",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_006",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "33115855",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_007",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+WEE1"
+      ],
+      "effective_drugs": [
+        "Adavosertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_008",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "ATM",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "ATM+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "ATM": 0.03199998891214332
+      },
+      "clinical_evidence": {
+        "pmid": "29880560",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_009",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "PALB2",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "PALB2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "PALB2": 0.4837245019947514
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_010",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51C",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51C+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51C": 0.7061312400750432
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_011",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51D",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51D+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51D": 0.7293221853155034
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_012",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "ARID1A",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "ARID1A+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "ARID1A": 0.375561921664032
+      },
+      "clinical_evidence": {
+        "pmid": "30510156",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_013",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.4085607197529356
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_014",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA1",
+        "hgvs_p": "p.C61G",
+        "chrom": "17",
+        "pos": 43070943,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA1+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA1": 0.5136549385283461
+      },
+      "clinical_evidence": {
+        "pmid": "25366685",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_015",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA1",
+        "hgvs_p": "p.C61G",
+        "chrom": "17",
+        "pos": 43070943,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA1+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA1": 0.31676202596271663
+      },
+      "clinical_evidence": {
+        "pmid": "28569902",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_016",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA2",
+        "hgvs_p": "p.K3326*",
+        "chrom": "13",
+        "pos": 32936750,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "stop_gained"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA2": 0.49663622684497655
+      },
+      "clinical_evidence": {
+        "pmid": "25366685",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_017",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA2",
+        "hgvs_p": "p.K3326*",
+        "chrom": "13",
+        "pos": 32936750,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "stop_gained"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA2": 0.5194046762092465
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_018",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "MBD4",
+        "hgvs_p": "p.R346fs",
+        "chrom": "3",
+        "pos": 129430488,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "frameshift_variant"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "MBD4+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "BER"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "MBD4": 0.1133053958772785
+      },
+      "clinical_evidence": {
+        "pmid": "30111527",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_019",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "33115855",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_020",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+WEE1"
+      ],
+      "effective_drugs": [
+        "Adavosertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_021",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "ATM",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "ATM+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "ATM": 0.05858248553710228
+      },
+      "clinical_evidence": {
+        "pmid": "29880560",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_022",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "PALB2",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "PALB2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "PALB2": 0.33189795944643924
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_023",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51C",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51C+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51C": 0.7042390620749244
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_024",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51D",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51D+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51D": 0.5788916280524823
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_025",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "ARID1A",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "ARID1A+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "ARID1A": 0.2596675073474911
+      },
+      "clinical_evidence": {
+        "pmid": "30510156",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_026",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.48274278092286904
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_027",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA1",
+        "hgvs_p": "p.C61G",
+        "chrom": "17",
+        "pos": 43070943,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA1+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA1": 0.31676202596271663
+      },
+      "clinical_evidence": {
+        "pmid": "25366685",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_028",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA1",
+        "hgvs_p": "p.C61G",
+        "chrom": "17",
+        "pos": 43070943,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA1+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA1": 0.44405918068595746
+      },
+      "clinical_evidence": {
+        "pmid": "28569902",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_029",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA2",
+        "hgvs_p": "p.K3326*",
+        "chrom": "13",
+        "pos": 32936750,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "stop_gained"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA2": 0.5194046762092465
+      },
+      "clinical_evidence": {
+        "pmid": "25366685",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_030",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA2",
+        "hgvs_p": "p.K3326*",
+        "chrom": "13",
+        "pos": 32936750,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "stop_gained"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA2": 0.5785124303033135
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_031",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "MBD4",
+        "hgvs_p": "p.R346fs",
+        "chrom": "3",
+        "pos": 129430488,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "frameshift_variant"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "MBD4+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "BER"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "MBD4": 0.1174664233026257
+      },
+      "clinical_evidence": {
+        "pmid": "30111527",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_032",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "33115855",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_033",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+WEE1"
+      ],
+      "effective_drugs": [
+        "Adavosertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_034",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "ATM",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "ATM+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "ATM": 0.028631024194835045
+      },
+      "clinical_evidence": {
+        "pmid": "29880560",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_035",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "PALB2",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "PALB2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "PALB2": 0.3409024137324467
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_036",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51C",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51C+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51C": 0.6334293589307343
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_037",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51D",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51D+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51D": 0.7360546282435787
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_038",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "ARID1A",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "ARID1A+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "ARID1A": 0.2762992755625062
+      },
+      "clinical_evidence": {
+        "pmid": "30510156",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_039",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.42475616619423795
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_040",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA1",
+        "hgvs_p": "p.C61G",
+        "chrom": "17",
+        "pos": 43070943,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA1+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA1": 0.44405918068595746
+      },
+      "clinical_evidence": {
+        "pmid": "25366685",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_041",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_042",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_043",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_044",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_045",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_046",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_047",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_048",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_049",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_050",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_051",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_052",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_053",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_054",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_055",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_056",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_057",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_058",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_059",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_060",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_061",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_062",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_063",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_064",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_065",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_066",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_067",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_068",
+    "disease": "ovarian_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_069",
+    "disease": "breast_cancer",
+    "mutations": [
+      {
+        "gene": "KRAS",
+        "hgvs_p": "p.G12D",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Trametinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_070",
+    "disease": "prostate_cancer",
+    "mutations": [
+      {
+        "gene": "EGFR",
+        "hgvs_p": "p.L858R",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": false,
+      "known_sl_pairs": [],
+      "effective_drugs": [
+        "Osimertinib"
+      ]
+    }
+  },
+  {
+    "case_id": "SL_071",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51C",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51C+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51C": 0.6334293589307343
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_072",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "ARID1A",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "ARID1A+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "ARID1A": 0.2762992755625062
+      },
+      "clinical_evidence": {
+        "pmid": "30510156",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_073",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51C",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51C+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51C": 0.6334293589307343
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_074",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "ARID1A",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "ARID1A+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "ARID1A": 0.2596675073474911
+      },
+      "clinical_evidence": {
+        "pmid": "30510156",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_075",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.48274278092286904
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_076",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+WEE1"
+      ],
+      "effective_drugs": [
+        "Adavosertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_077",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.48274278092286904
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_078",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "MBD4",
+        "hgvs_p": "p.R346fs",
+        "chrom": "3",
+        "pos": 129430488,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "frameshift_variant"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "MBD4+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "BER"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "MBD4": 0.12484960719544597
+      },
+      "clinical_evidence": {
+        "pmid": "30111527",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_079",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "ARID1A",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "ARID1A+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "ARID1A": 0.2596675073474911
+      },
+      "clinical_evidence": {
+        "pmid": "30510156",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_080",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.42475616619423795
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_081",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "33115855",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_082",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+WEE1"
+      ],
+      "effective_drugs": [
+        "Adavosertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_083",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+WEE1"
+      ],
+      "effective_drugs": [
+        "Adavosertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_084",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "PALB2",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "PALB2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "PALB2": 0.4837245019947514
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_085",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51D",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51D+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51D": 0.7293221853155034
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_086",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+WEE1"
+      ],
+      "effective_drugs": [
+        "Adavosertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_087",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.42475616619423795
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_088",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.48274278092286904
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_089",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51D",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51D+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51D": 0.7360546282435787
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_090",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "TP53+ATR"
+      ],
+      "effective_drugs": [
+        "Ceralasertib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "ATR/CHK1"
+      ],
+      "depmap_essentiality": {
+        "TP53": 0.0
+      },
+      "clinical_evidence": {
+        "pmid": "33115855",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_091",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA1",
+        "hgvs_p": "p.C61G",
+        "chrom": "17",
+        "pos": 43070943,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "missense"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA1+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA1": 0.5136549385283461
+      },
+      "clinical_evidence": {
+        "pmid": "28569902",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_092",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "BRCA2",
+        "hgvs_p": "p.K3326*",
+        "chrom": "13",
+        "pos": 32936750,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "stop_gained"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "BRCA2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "HR"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "BRCA2": 0.49663622684497655
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "FDA"
+      }
+    }
+  },
+  {
+    "case_id": "SL_093",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.48274278092286904
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_094",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51D",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51D+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51D": 0.5788916280524823
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_095",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51C",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51C+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51C": 0.7042390620749244
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_096",
+    "disease": "breast_cancer",
+    "subtype": "triple_negative",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51C",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51C+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51C": 0.7042390620749244
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_097",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "CDK12",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "CDK12+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "CDK12": 0.4085607197529356
+      },
+      "clinical_evidence": {
+        "pmid": "31320749",
+        "evidence_level": "Preclinical"
+      }
+    }
+  },
+  {
+    "case_id": "SL_098",
+    "disease": "ovarian_cancer",
+    "subtype": "high_grade_serous",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "PALB2",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "PALB2+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "PALB2": 0.33189795944643924
+      },
+      "clinical_evidence": {
+        "pmid": "32592347",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_099",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51D",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51D+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51D": 0.5788916280524823
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  },
+  {
+    "case_id": "SL_100",
+    "disease": "prostate_cancer",
+    "subtype": "mCRPC",
+    "stage": "?",
+    "mutations": [
+      {
+        "gene": "RAD51C",
+        "hgvs_p": "p.?",
+        "chrom": "?",
+        "pos": 0,
+        "ref": "?",
+        "alt": "?",
+        "consequence": "unknown"
+      }
+    ],
+    "ground_truth": {
+      "synthetic_lethality_detected": true,
+      "known_sl_pairs": [
+        "RAD51C+PARP1"
+      ],
+      "effective_drugs": [
+        "Olaparib",
+        "Niraparib"
+      ],
+      "broken_pathways": [
+        "G1/S Checkpoint"
+      ],
+      "essential_pathways": [
+        "PARP"
+      ],
+      "depmap_essentiality": {
+        "RAD51C": 0.6334293589307343
+      },
+      "clinical_evidence": {
+        "pmid": "30345854",
+        "evidence_level": "Phase2"
+      }
+    }
+  }
+]

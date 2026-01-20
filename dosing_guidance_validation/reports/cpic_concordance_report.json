@@ -1,0 +1,646 @@
+{
+  "total_cases": 59,
+  "cases_with_cpic_match": 10,
+  "concordance_results": [
+    {
+      "case_id": "LIT-DPYD-001",
+      "gene": "DPYD",
+      "variant": "c.2846A>T",
+      "drug": "capecitabine",
+      "cpic_phenotype": "Intermediate Metabolizer",
+      "cpic_recommendation": "REDUCE_50",
+      "our_recommendation": "REDUCE_50",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for DPYD and Fluoropyrimidines (2017 Update)",
+      "cpic_pmid": "29152729"
+    },
+    {
+      "case_id": "LIT-DPYD-002",
+      "gene": "DPYD",
+      "variant": "c.2846A>T",
+      "drug": "capecitabine",
+      "cpic_phenotype": "Intermediate Metabolizer",
+      "cpic_recommendation": "REDUCE_50",
+      "our_recommendation": "REDUCE_50",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for DPYD and Fluoropyrimidines (2017 Update)",
+      "cpic_pmid": "29152729"
+    },
+    {
+      "case_id": "LIT-DPYD-003",
+      "gene": "DPYD",
+      "variant": "",
+      "drug": "5-fluorouracil",
+      "cpic_phenotype": "Normal Metabolizer",
+      "cpic_recommendation": "FULL_DOSE",
+      "our_recommendation": "FULL_DOSE",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for DPYD and Fluoropyrimidines (2017 Update)",
+      "cpic_pmid": "29152729"
+    },
+    {
+      "case_id": "LIT-DPYD-004",
+      "gene": "DPYD",
+      "variant": "",
+      "drug": "",
+      "cpic_phenotype": "Normal Metabolizer",
+      "cpic_recommendation": "FULL_DOSE",
+      "our_recommendation": "FULL_DOSE",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for DPYD and Fluoropyrimidines (2017 Update)",
+      "cpic_pmid": "29152729"
+    },
+    {
+      "case_id": "LIT-DPYD-005",
+      "gene": "DPYD",
+      "variant": "",
+      "drug": "",
+      "cpic_phenotype": "Normal Metabolizer",
+      "cpic_recommendation": "FULL_DOSE",
+      "our_recommendation": "FULL_DOSE",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for DPYD and Fluoropyrimidines (2017 Update)",
+      "cpic_pmid": "29152729"
+    },
+    {
+      "case_id": "LIT-DPYD-006",
+      "gene": "DPYD",
+      "variant": "",
+      "drug": "",
+      "cpic_phenotype": "Normal Metabolizer",
+      "cpic_recommendation": "FULL_DOSE",
+      "our_recommendation": "FULL_DOSE",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for DPYD and Fluoropyrimidines (2017 Update)",
+      "cpic_pmid": "29152729"
+    },
+    {
+      "case_id": "LIT-DPYD-007",
+      "gene": "DPYD",
+      "variant": "",
+      "drug": "5-fluorouracil",
+      "cpic_phenotype": "Normal Metabolizer",
+      "cpic_recommendation": "FULL_DOSE",
+      "our_recommendation": "FULL_DOSE",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for DPYD and Fluoropyrimidines (2017 Update)",
+      "cpic_pmid": "29152729"
+    },
+    {
+      "case_id": "LIT-DPYD-008",
+      "gene": "DPYD",
+      "variant": "c.1903A>G",
+      "drug": "capecitabine",
+      "cpic_phenotype": "Intermediate Metabolizer",
+      "cpic_recommendation": "REDUCE_50",
+      "our_recommendation": "REDUCE_50",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for DPYD and Fluoropyrimidines (2017 Update)",
+      "cpic_pmid": "29152729"
+    },
+    {
+      "case_id": "LIT-DPYD-009",
+      "gene": "DPYD",
+      "variant": "",
+      "drug": "",
+      "cpic_phenotype": "Normal Metabolizer",
+      "cpic_recommendation": "FULL_DOSE",
+      "our_recommendation": "FULL_DOSE",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for DPYD and Fluoropyrimidines (2017 Update)",
+      "cpic_pmid": "29152729"
+    },
+    {
+      "case_id": "LIT-TPMT-001",
+      "gene": "TPMT",
+      "variant": "*3A",
+      "drug": "mercaptopurine",
+      "cpic_phenotype": "Intermediate Metabolizer",
+      "cpic_recommendation": "REDUCE_30_70",
+      "our_recommendation": "REDUCE_50",
+      "concordant": true,
+      "match_type": "EXACT",
+      "cpic_source": "CPIC Guideline for TPMT/NUDT15 and Thiopurines (2018 Update)",
+      "cpic_pmid": "30447069"
+    },
+    {
+      "case_id": "CBIO-coad_cptac_gdc-11CO036",
+      "gene": "DPYD",
+      "variant": "A348T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD A348T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-001",
+      "gene": "DPYD",
+      "variant": "chr6:g.18139713G>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr6:g.18139713G>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-002",
+      "gene": "DPYD",
+      "variant": "chr6:g.18130698delA",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr6:g.18130698delA"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-003",
+      "gene": "DPYD",
+      "variant": "chr6:g.18149023G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr6:g.18149023G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-004",
+      "gene": "DPYD",
+      "variant": "chr6:g.18130729C>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr6:g.18130729C>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-005",
+      "gene": "DPYD",
+      "variant": "chr6:g.18133864G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr6:g.18133864G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-006",
+      "gene": "DPYD",
+      "variant": "chr6:g.18143662delA",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr6:g.18143662delA"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-007",
+      "gene": "DPYD",
+      "variant": "chr6:g.18143717C>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr6:g.18143717C>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-008",
+      "gene": "DPYD",
+      "variant": "chr6:g.18130763G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr6:g.18130763G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-009",
+      "gene": "DPYD",
+      "variant": "chr1:g.97679174G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97679174G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-010",
+      "gene": "DPYD",
+      "variant": "chr1:g.97828158C>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97828158C>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-011",
+      "gene": "DPYD",
+      "variant": "chr1:g.97573967C>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97573967C>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-012",
+      "gene": "DPYD",
+      "variant": "chr1:g.97721603A>G",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97721603A>G"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-013",
+      "gene": "DPYD",
+      "variant": "chr1:g.97079145G>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97079145G>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-014",
+      "gene": "DPYD",
+      "variant": "chr1:g.97306282G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97306282G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-015",
+      "gene": "DPYD",
+      "variant": "chr1:g.97593336A>G",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97593336A>G"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-016",
+      "gene": "DPYD",
+      "variant": "chr1:g.97306235delA",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97306235delA"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-017",
+      "gene": "DPYD",
+      "variant": "chr1:g.97573918C>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97573918C>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-018",
+      "gene": "DPYD",
+      "variant": "chr1:g.97079073C>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97079073C>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-019",
+      "gene": "DPYD",
+      "variant": "chr1:g.97883365C>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97883365C>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-020",
+      "gene": "DPYD",
+      "variant": "chr1:g.97679126T>G",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97679126T>G"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-021",
+      "gene": "DPYD",
+      "variant": "chr1:g.97082458T>C",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97082458T>C"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-022",
+      "gene": "DPYD",
+      "variant": "chr1:g.97721543A>G",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97721543A>G"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-023",
+      "gene": "DPYD",
+      "variant": "chr1:g.97699457G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97699457G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-024",
+      "gene": "DPYD",
+      "variant": "chr1:g.97515906T>G",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97515906T>G"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-025",
+      "gene": "DPYD",
+      "variant": "chr1:g.97234900A>G",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97234900A>G"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-026",
+      "gene": "DPYD",
+      "variant": "chr1:g.97721569A>C",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97721569A>C"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-027",
+      "gene": "DPYD",
+      "variant": "chr1:g.97549703G>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97549703G>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-028",
+      "gene": "DPYD",
+      "variant": "chr1:g.97595138G>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97595138G>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-029",
+      "gene": "DPYD",
+      "variant": "chr1:g.97306195C>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97306195C>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-030",
+      "gene": "DPYD",
+      "variant": "chr1:g.97515899delG",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97515899delG"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-031",
+      "gene": "DPYD",
+      "variant": "chr1:g.97699431T>C",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97699431T>C"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-032",
+      "gene": "DPYD",
+      "variant": "chr1:g.97098520A>C",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97098520A>C"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-033",
+      "gene": "DPYD",
+      "variant": "chr1:g.97079031G>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97079031G>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-034",
+      "gene": "DPYD",
+      "variant": "chr1:g.97573950T>C",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for DPYD chr1:g.97573950T>C"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-001",
+      "gene": "UGT1A1",
+      "variant": "chr6:g.18139713G>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for UGT1A1 chr6:g.18139713G>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-002",
+      "gene": "UGT1A1",
+      "variant": "chr6:g.18130698delA",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for UGT1A1 chr6:g.18130698delA"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-003",
+      "gene": "UGT1A1",
+      "variant": "chr6:g.18149023G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for UGT1A1 chr6:g.18149023G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-004",
+      "gene": "UGT1A1",
+      "variant": "chr6:g.18130729C>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for UGT1A1 chr6:g.18130729C>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-005",
+      "gene": "UGT1A1",
+      "variant": "chr6:g.18133864G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for UGT1A1 chr6:g.18133864G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-006",
+      "gene": "UGT1A1",
+      "variant": "chr6:g.18143662delA",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for UGT1A1 chr6:g.18143662delA"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-001",
+      "gene": "TPMT",
+      "variant": "chr6:g.18139713G>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for TPMT chr6:g.18139713G>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-002",
+      "gene": "TPMT",
+      "variant": "chr6:g.18130698delA",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for TPMT chr6:g.18130698delA"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-003",
+      "gene": "TPMT",
+      "variant": "chr6:g.18149023G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for TPMT chr6:g.18149023G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-004",
+      "gene": "TPMT",
+      "variant": "chr6:g.18130729C>T",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for TPMT chr6:g.18130729C>T"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-005",
+      "gene": "TPMT",
+      "variant": "chr6:g.18133864G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for TPMT chr6:g.18133864G>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-006",
+      "gene": "TPMT",
+      "variant": "chr6:g.18143662delA",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for TPMT chr6:g.18143662delA"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-007",
+      "gene": "TPMT",
+      "variant": "chr6:g.18143717C>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for TPMT chr6:g.18143717C>A"
+    },
+    {
+      "case_id": "GDC-TCGA-COAD-008",
+      "gene": "TPMT",
+      "variant": "chr6:g.18130763G>A",
+      "cpic_recommendation": null,
+      "our_recommendation": "REDUCE_50",
+      "concordant": null,
+      "match_type": "NO_CPIC_DATA",
+      "notes": "No CPIC guideline found for TPMT chr6:g.18130763G>A"
+    }
+  ],
+  "concordance_rate": 1.0,
+  "exact_matches": 10,
+  "conservative_matches": 0,
+  "less_conservative": 0,
+  "unknown_cases": 49,
+  "by_gene": {
+    "DPYD": {
+      "total": 9,
+      "concordant": 9,
+      "concordance_rate": 1.0
+    },
+    "TPMT": {
+      "total": 1,
+      "concordant": 1,
+      "concordance_rate": 1.0
+    }
+  },
+  "by_recommendation": {},
+  "timestamp": "2026-01-01T16:05:40.861795",
+  "strict_concordance_rate": 1.0
+}

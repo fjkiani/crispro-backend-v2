@@ -1,10 +1,14 @@
-from fastapi import APIRouter, HTTPException
-from typing import Dict, Any, List
+from fastapi import APIRouter, HTTPException, Depends
+from typing import Dict, Any, List, Optional
 import httpx
 import os
 import statistics
 import sys
+import json
+import logging
 from pathlib import Path
+
+from ..middleware.auth_middleware import get_optional_user
 
 router = APIRouter(prefix="/api/datasets", tags=["datasets"])
 
@@ -508,11 +512,31 @@ async def extract_mm_cohort(request: Dict[str, Any]):
         raise HTTPException(status_code=500, detail=f"extract_mm_cohort failed: {e}")
 
 @router.post("/extract_and_benchmark")
-async def extract_and_benchmark(request: Dict[str, Any]):
-    """Unified endpoint: extract cohort and (optionally) run a minimal benchmark.
+async def extract_and_benchmark(
+    request: Dict[str, Any],
+    user: Optional[Dict[str, Any]] = Depends(get_optional_user)
+):
+    """
+    Unified endpoint: extract cohort and (optionally) run a minimal benchmark.
+    
+    **Requires:** Enterprise tier (cohort_lab feature)
+    **Quota:** Counts against variant_analyses quota
+    
     Input: { mode: 'extract_only'|'run_only'|'both', study_id, genes[], limit?, profile? }
     Output: { rows?, count?, metrics?, profile }
     """
+    # Check feature flag (Enterprise tier required for cohort lab)
+    if user and user.get("user_id"):
+        from ..middleware.feature_flag_middleware import require_feature
+        feature_check = require_feature("cohort_lab")
+        await feature_check(user)
+    
+    # Check quota if authenticated
+    if user and user.get("user_id"):
+        from ..middleware.quota_middleware import check_quota
+        quota_check = check_quota("variant_analyses")
+        user = await quota_check(user)
+    
     try:
         mode = (request or {}).get("mode", "both").lower()
         profile = (request or {}).get("profile", "baseline")
@@ -592,289 +616,177 @@ async def extract_and_benchmark(request: Dict[str, Any]):
         raise HTTPException(status_code=500, detail=f"extract_and_benchmark failed: {e}")
 
 
+# ============================================================================
+# PLATINUM RESPONSE DATA ENDPOINTS (Phase 1: Backend API Enhancement)
+# ============================================================================
 
-from typing import Dict, Any, List
-import httpx
-import os
+logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/api/datasets", tags=["datasets"])
+# File paths for platinum response data
+def _get_data_root() -> Path:
+    """Get root directory (crispr-assistant-main)"""
+    here = Path(__file__).resolve()
+    return here.parents[4]  # .../crispr-assistant-main
 
-CBIO_BASE = "https://www.cbioportal.org/api"
+# Cache for loaded data
+_PLATINUM_DATA_CACHE: Optional[Dict[str, Any]] = None
+_ZO_DATA_CACHE: Optional[Dict[str, Any]] = None
 
-def _headers() -> Dict[str, str]:
-    headers = {"Accept": "application/json", "Content-Type": "application/json"}
-    token = os.getenv("CBIO_TOKEN")
-    if token:
-        headers["Authorization"] = f"Bearer {token}"
-    return headers
-
-@router.post("/extract_hrd_cohort")
-async def extract_hrd_cohort(request: Dict[str, Any]):
+def _load_platinum_response_data() -> Optional[Dict[str, Any]]:
+    """Load Jr2's platinum response data with caching"""
+    global _PLATINUM_DATA_CACHE
+    if _PLATINUM_DATA_CACHE is not None:
+        return _PLATINUM_DATA_CACHE
+    
+    data_file = _get_data_root() / "data" / "validation" / "tcga_ov_platinum_response_labels.json"
+    if not data_file.exists():
+        logger.error(f"Platinum response data file not found: {data_file}")
+        return None
+    
     try:
-        study = (request or {}).get("study_id", "ov_tcga")
-        genes = (request or {}).get("genes", ["BRCA1","BRCA2"])
-        limit = int((request or {}).get("limit", 200))
-        # Mutations for BRCA1/2
-        profile_id = f"{study}_mutations"
-        sample_list_id = f"{study}_all"
-        params = {
-            "sampleListId": sample_list_id,
-            "hugoGeneSymbols": genes,
-            "projection": "DETAILED",
-            "pageSize": limit,
-        }
-        async with httpx.AsyncClient(timeout=60.0, headers=_headers()) as client:
-            rmut = await client.get(f"{CBIO_BASE}/molecular-profiles/{profile_id}/mutations", params=params)
-            if rmut.status_code >= 400:
-                raise HTTPException(status_code=rmut.status_code, detail=f"mutations fetch failed: {rmut.text}")
-            muts = rmut.json() if isinstance(rmut.json(), list) else rmut.json().get("items", [])
-            sample_ids = list({m.get("sampleId") for m in muts if m.get("sampleId")})[:1000]
-            # Clinical drug exposure (chunked)
-            rows: Dict[str, Dict[str, Any]] = {}
-            chunk = 200
-            for i in range(0, len(sample_ids), chunk):
-                payload = {
-                    "entityIds": sample_ids[i:i+chunk],
-                    "entityType": "SAMPLE",
-                    "projection": "DETAILED",
-                    "attributeIds": ["DRUG_NAME","TREATMENT_TYPE","THERAPY_NAME","CLINICAL_TREATMENT_TYPE"],
-                }
-                rclin = await client.post(f"{CBIO_BASE}/clinical-data/fetch", json=payload)
-                if rclin.status_code < 400:
-                    for row in (rclin.json() or []):
-                        sid = row.get("entityId")
-                        if sid:
-                            rows.setdefault(sid, {}).update(row)
-            # Build cohort rows
-            out: List[Dict[str, Any]] = []
-            for m in muts[:limit]:
-                sid = m.get("sampleId")
-                gene = ((m.get("gene") or {}).get("hugoGeneSymbol") or "").upper()
-                if gene not in set([g.upper() for g in genes]):
-                    continue
-                clin = rows.get(sid, {})
-                txt = str(clin).lower()
-                exposed = 1 if any(k in txt for k in ["carboplatin","cisplatin","oxaliplatin","platinum"]) else 0
-                out.append({
-                    "disease": "ovarian cancer",
-                    "gene": gene,
-                    "hgvs_p": m.get("proteinChange") or "",
-                    "chrom": str(m.get("chromosome") or ""),
-                    "pos": int(m.get("startPosition") or 0) if m.get("startPosition") else "",
-                    "ref": str(m.get("referenceAllele") or "").upper(),
-                    "alt": str(m.get("variantAllele") or "").upper(),
-                    "build": "GRCh38",
-                    "outcome_platinum": exposed,
-                    "sample_id": sid,
-                })
-            return {"rows": out, "count": len(out)}
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"extract_hrd_cohort failed: {e}")
+        with open(data_file, 'r', encoding='utf-8') as f:
+            _PLATINUM_DATA_CACHE = json.load(f)
+        logger.info(f"✅ Loaded platinum response data: {len(_PLATINUM_DATA_CACHE.get('patients', []))} patients")
+        return _PLATINUM_DATA_CACHE
+    except (json.JSONDecodeError, IOError) as e:
+        logger.error(f"Error loading platinum response data: {e}")
+        return None
 
-
-
-        profile_id = f"{study}_mutations"
-        sample_list_id = f"{study}_all"
-        params = {
-            "sampleListId": sample_list_id,
-            "hugoGeneSymbols": genes,
-            "projection": "DETAILED",
-            "pageSize": limit,
-        }
-        async with httpx.AsyncClient(timeout=60.0, headers=_headers()) as client:
-            rmut = await client.get(f"{CBIO_BASE}/molecular-profiles/{profile_id}/mutations", params=params)
-            if rmut.status_code >= 400:
-                raise HTTPException(status_code=rmut.status_code, detail=f"mutations fetch failed: {rmut.text}")
-            muts = rmut.json() if isinstance(rmut.json(), list) else rmut.json().get("items", [])
-            sample_ids = list({m.get("sampleId") for m in muts if m.get("sampleId")})[:1000]
-            # Clinical drug exposure (chunked)
-            rows: Dict[str, Dict[str, Any]] = {}
-            chunk = 200
-            for i in range(0, len(sample_ids), chunk):
-                payload = {
-                    "entityIds": sample_ids[i:i+chunk],
-                    "entityType": "SAMPLE",
-                    "projection": "DETAILED",
-                    "attributeIds": ["DRUG_NAME","TREATMENT_TYPE","THERAPY_NAME","CLINICAL_TREATMENT_TYPE"],
-                }
-                rclin = await client.post(f"{CBIO_BASE}/clinical-data/fetch", json=payload)
-                if rclin.status_code < 400:
-                    for row in (rclin.json() or []):
-                        sid = row.get("entityId")
-                        if sid:
-                            rows.setdefault(sid, {}).update(row)
-            # Build cohort rows
-            out: List[Dict[str, Any]] = []
-            for m in muts[:limit]:
-                sid = m.get("sampleId")
-                gene = ((m.get("gene") or {}).get("hugoGeneSymbol") or "").upper()
-                if gene not in set([g.upper() for g in genes]):
-                    continue
-                clin = rows.get(sid, {})
-                txt = str(clin).lower()
-                exposed = 1 if any(k in txt for k in ["carboplatin","cisplatin","oxaliplatin","platinum"]) else 0
-                out.append({
-                    "disease": "ovarian cancer",
-                    "gene": gene,
-                    "hgvs_p": m.get("proteinChange") or "",
-                    "chrom": str(m.get("chromosome") or ""),
-                    "pos": int(m.get("startPosition") or 0) if m.get("startPosition") else "",
-                    "ref": str(m.get("referenceAllele") or "").upper(),
-                    "alt": str(m.get("variantAllele") or "").upper(),
-                    "build": "GRCh38",
-                    "outcome_platinum": exposed,
-                    "sample_id": sid,
-                })
-            return {"rows": out, "count": len(out)}
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"extract_hrd_cohort failed: {e}")
-
-
-
-
-from typing import Dict, Any, List
-import httpx
-import os
-
-router = APIRouter(prefix="/api/datasets", tags=["datasets"])
-
-CBIO_BASE = "https://www.cbioportal.org/api"
-
-def _headers() -> Dict[str, str]:
-    headers = {"Accept": "application/json", "Content-Type": "application/json"}
-    token = os.getenv("CBIO_TOKEN")
-    if token:
-        headers["Authorization"] = f"Bearer {token}"
-    return headers
-
-@router.post("/extract_hrd_cohort")
-async def extract_hrd_cohort(request: Dict[str, Any]):
+def _load_zo_mutation_data() -> Optional[Dict[str, Any]]:
+    """Load Zo's full validation dataset with caching"""
+    global _ZO_DATA_CACHE
+    if _ZO_DATA_CACHE is not None:
+        return _ZO_DATA_CACHE
+    
+    data_file = _get_data_root() / "data" / "validation" / "tcga_ov_full_validation_dataset.json"
+    if not data_file.exists():
+        logger.error(f"Zo's mutation data file not found: {data_file}")
+        return None
+    
     try:
-        study = (request or {}).get("study_id", "ov_tcga")
-        genes = (request or {}).get("genes", ["BRCA1","BRCA2"])
-        limit = int((request or {}).get("limit", 200))
-        # Mutations for BRCA1/2
-        profile_id = f"{study}_mutations"
-        sample_list_id = f"{study}_all"
-        params = {
-            "sampleListId": sample_list_id,
-            "hugoGeneSymbols": genes,
-            "projection": "DETAILED",
-            "pageSize": limit,
+        with open(data_file, 'r', encoding='utf-8') as f:
+            _ZO_DATA_CACHE = json.load(f)
+        logger.info(f"✅ Loaded Zo's mutation data: {len(_ZO_DATA_CACHE.get('patients', []))} patients")
+        return _ZO_DATA_CACHE
+    except (json.JSONDecodeError, IOError) as e:
+        logger.error(f"Error loading Zo's mutation data: {e}")
+        return None
+
+@router.get("/platinum_response")
+async def query_platinum_response(
+    response_type: Optional[str] = None,
+    limit: int = 100,
+    offset: int = 0
+):
+    """
+    Query Jr2's platinum response data.
+    
+    Args:
+        response_type: Filter by response type (sensitive/resistant/refractory/unknown)
+        limit: Max patients to return
+        offset: Pagination offset
+    
+    Returns:
+        {
+            "patients": [...],
+            "metadata": {...},
+            "count": int,
+            "total": int
         }
-        async with httpx.AsyncClient(timeout=60.0, headers=_headers()) as client:
-            rmut = await client.get(f"{CBIO_BASE}/molecular-profiles/{profile_id}/mutations", params=params)
-            if rmut.status_code >= 400:
-                raise HTTPException(status_code=rmut.status_code, detail=f"mutations fetch failed: {rmut.text}")
-            muts = rmut.json() if isinstance(rmut.json(), list) else rmut.json().get("items", [])
-            sample_ids = list({m.get("sampleId") for m in muts if m.get("sampleId")})[:1000]
-            # Clinical drug exposure (chunked)
-            rows: Dict[str, Dict[str, Any]] = {}
-            chunk = 200
-            for i in range(0, len(sample_ids), chunk):
-                payload = {
-                    "entityIds": sample_ids[i:i+chunk],
-                    "entityType": "SAMPLE",
-                    "projection": "DETAILED",
-                    "attributeIds": ["DRUG_NAME","TREATMENT_TYPE","THERAPY_NAME","CLINICAL_TREATMENT_TYPE"],
-                }
-                rclin = await client.post(f"{CBIO_BASE}/clinical-data/fetch", json=payload)
-                if rclin.status_code < 400:
-                    for row in (rclin.json() or []):
-                        sid = row.get("entityId")
-                        if sid:
-                            rows.setdefault(sid, {}).update(row)
-            # Build cohort rows
-            out: List[Dict[str, Any]] = []
-            for m in muts[:limit]:
-                sid = m.get("sampleId")
-                gene = ((m.get("gene") or {}).get("hugoGeneSymbol") or "").upper()
-                if gene not in set([g.upper() for g in genes]):
-                    continue
-                clin = rows.get(sid, {})
-                txt = str(clin).lower()
-                exposed = 1 if any(k in txt for k in ["carboplatin","cisplatin","oxaliplatin","platinum"]) else 0
-                out.append({
-                    "disease": "ovarian cancer",
-                    "gene": gene,
-                    "hgvs_p": m.get("proteinChange") or "",
-                    "chrom": str(m.get("chromosome") or ""),
-                    "pos": int(m.get("startPosition") or 0) if m.get("startPosition") else "",
-                    "ref": str(m.get("referenceAllele") or "").upper(),
-                    "alt": str(m.get("variantAllele") or "").upper(),
-                    "build": "GRCh38",
-                    "outcome_platinum": exposed,
-                    "sample_id": sid,
-                })
-            return {"rows": out, "count": len(out)}
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"extract_hrd_cohort failed: {e}")
+    """
+    jr2_data = _load_platinum_response_data()
+    if not jr2_data:
+        raise HTTPException(status_code=404, detail="Platinum response data not available")
+    
+    patients = jr2_data.get("patients", [])
+    
+    # Filter by response type if specified
+    if response_type:
+        patients = [p for p in patients if p.get("platinum_response") == response_type.lower()]
+    
+    total = len(patients)
+    
+    # Pagination
+    paginated_patients = patients[offset:offset + limit]
+    
+    return {
+        "patients": paginated_patients,
+        "metadata": jr2_data.get("metadata", {}),
+        "count": len(paginated_patients),
+        "total": total,
+        "offset": offset,
+        "limit": limit
+    }
 
-
-
-        profile_id = f"{study}_mutations"
-        sample_list_id = f"{study}_all"
-        params = {
-            "sampleListId": sample_list_id,
-            "hugoGeneSymbols": genes,
-            "projection": "DETAILED",
-            "pageSize": limit,
+@router.get("/platinum_response/overlap")
+async def get_overlap_analysis():
+    """
+    Compute overlap between Jr2's platinum response data and Zo's mutation dataset.
+    
+    Returns:
+        {
+            "jr2_total": int,
+            "zo_total": int,
+            "overlap_count": int,
+            "jr2_only": int,
+            "zo_only": int,
+            "match_rate_jr2": float,
+            "match_rate_zo": float,
+            "overlap_patients": [...]
         }
-        async with httpx.AsyncClient(timeout=60.0, headers=_headers()) as client:
-            rmut = await client.get(f"{CBIO_BASE}/molecular-profiles/{profile_id}/mutations", params=params)
-            if rmut.status_code >= 400:
-                raise HTTPException(status_code=rmut.status_code, detail=f"mutations fetch failed: {rmut.text}")
-            muts = rmut.json() if isinstance(rmut.json(), list) else rmut.json().get("items", [])
-            sample_ids = list({m.get("sampleId") for m in muts if m.get("sampleId")})[:1000]
-            # Clinical drug exposure (chunked)
-            rows: Dict[str, Dict[str, Any]] = {}
-            chunk = 200
-            for i in range(0, len(sample_ids), chunk):
-                payload = {
-                    "entityIds": sample_ids[i:i+chunk],
-                    "entityType": "SAMPLE",
-                    "projection": "DETAILED",
-                    "attributeIds": ["DRUG_NAME","TREATMENT_TYPE","THERAPY_NAME","CLINICAL_TREATMENT_TYPE"],
-                }
-                rclin = await client.post(f"{CBIO_BASE}/clinical-data/fetch", json=payload)
-                if rclin.status_code < 400:
-                    for row in (rclin.json() or []):
-                        sid = row.get("entityId")
-                        if sid:
-                            rows.setdefault(sid, {}).update(row)
-            # Build cohort rows
-            out: List[Dict[str, Any]] = []
-            for m in muts[:limit]:
-                sid = m.get("sampleId")
-                gene = ((m.get("gene") or {}).get("hugoGeneSymbol") or "").upper()
-                if gene not in set([g.upper() for g in genes]):
-                    continue
-                clin = rows.get(sid, {})
-                txt = str(clin).lower()
-                exposed = 1 if any(k in txt for k in ["carboplatin","cisplatin","oxaliplatin","platinum"]) else 0
-                out.append({
-                    "disease": "ovarian cancer",
-                    "gene": gene,
-                    "hgvs_p": m.get("proteinChange") or "",
-                    "chrom": str(m.get("chromosome") or ""),
-                    "pos": int(m.get("startPosition") or 0) if m.get("startPosition") else "",
-                    "ref": str(m.get("referenceAllele") or "").upper(),
-                    "alt": str(m.get("variantAllele") or "").upper(),
-                    "build": "GRCh38",
-                    "outcome_platinum": exposed,
-                    "sample_id": sid,
-                })
-            return {"rows": out, "count": len(out)}
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"extract_hrd_cohort failed: {e}")
-
-
+    """
+    jr2_data = _load_platinum_response_data()
+    zo_data = _load_zo_mutation_data()
+    
+    if not jr2_data or not zo_data:
+        raise HTTPException(
+            status_code=404,
+            detail="One or both datasets not available"
+        )
+    
+    # Extract sample IDs
+    jr2_sample_ids = {
+        p.get("tcga_sample_id") for p in jr2_data.get("patients", [])
+        if p.get("tcga_sample_id")
+    }
+    zo_sample_ids = {
+        p.get("sample_id") for p in zo_data.get("patients", [])
+        if p.get("sample_id")
+    }
+    
+    # Compute overlap
+    overlap_ids = jr2_sample_ids.intersection(zo_sample_ids)
+    jr2_only_ids = jr2_sample_ids - zo_sample_ids
+    zo_only_ids = zo_sample_ids - jr2_sample_ids
+    
+    # Build overlap patient list (merged data)
+    jr2_patients_dict = {
+        p.get("tcga_sample_id"): p
+        for p in jr2_data.get("patients", [])
+        if p.get("tcga_sample_id")
+    }
+    zo_patients_dict = {
+        p.get("sample_id"): p
+        for p in zo_data.get("patients", [])
+        if p.get("sample_id")
+    }
+    
+    overlap_patients = []
+    for sample_id in overlap_ids:
+        merged_patient = {
+            **zo_patients_dict.get(sample_id, {}),
+            **jr2_patients_dict.get(sample_id, {})
+        }
+        overlap_patients.append(merged_patient)
+    
+    return {
+        "jr2_total": len(jr2_sample_ids),
+        "zo_total": len(zo_sample_ids),
+        "overlap_count": len(overlap_ids),
+        "jr2_only": len(jr2_only_ids),
+        "zo_only": len(zo_only_ids),
+        "match_rate_jr2": round((len(overlap_ids) / len(jr2_sample_ids) * 100) if jr2_sample_ids else 0, 2),
+        "match_rate_zo": round((len(overlap_ids) / len(zo_sample_ids) * 100) if zo_sample_ids else 0, 2),
+        "overlap_patients": overlap_patients
+    }
 

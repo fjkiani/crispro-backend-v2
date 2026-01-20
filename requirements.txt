@@ -1,23 +1,26 @@
-# Minimal requirements for API endpoints only
-fastapi==0.116.1
-uvicorn==0.35.0
-requests==2.32.4
-httpx==0.28.1
-python-dotenv==1.1.1
-pydantic==2.11.7
-starlette==0.47.2
+# MOAT Orchestration Backend Requirements
 
-# For returning mock data without heavy ML dependencies
-pandas==2.3.1
+# Web Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
 
-# Literature agent deps
-tqdm==4.66.4
-lxml==5.2.2
-google-genai==0.6.0 
-pandas==2.3.1 
+# Async
+aiofiles>=23.0.0
+httpx>=0.25.0
 
-# Literature agent deps
-tqdm==4.66.4
-lxml==5.2.2
-google-genai==0.6.0 
-pandas==2.3.1 
+# Data Processing
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Utilities
+python-dotenv>=1.0.0
+python-multipart>=0.0.6
+psycopg2-binary>=2.9.0  # Direct PostgreSQL connection (bypasses PostgREST cache)
+
+# Logging
+structlog>=23.0.0
+
+# Testing dependencies moved to requirements-dev.txt
+# Install dev deps with: pip install -r requirements-dev.txt
+

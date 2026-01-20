@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-28T09:25:38.366417",
+    "deliverable": "D4",
+    "trials_with_pi": 28
+  },
+  "pi_contacts": [
+    {
+      "nct_id": "NCT07022535",
+      "pi_name": "Ka Yu Tse, MBBS, MMedSc, PhD, FRCOG",
+      "pi_institution": "The University of Hong Kong",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT04590326",
+      "pi_name": "Clinical Trial Management",
+      "pi_institution": "Regeneron Pharmaceuticals",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT00442598",
+      "pi_name": "David Alberts, MD",
+      "pi_institution": "University of Arizona",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT07295132",
+      "pi_name": "Dae-Yeon Kim",
+      "pi_institution": "Asam Medical Center",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT02109367",
+      "pi_name": "Laurent Brard, MD, PhD",
+      "pi_institution": "Southern Illinois University",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT01616303",
+      "pi_name": "Thomas Woo, M.Sc.",
+      "pi_institution": "Quest PharmaTech Inc.",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT06129968",
+      "pi_name": "Sudha Sundar",
+      "pi_institution": "University of Birmingham/Sandwell and West Birmingham NHS Trust",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT00086567",
+      "pi_name": "Elise C Kohn, M.D.",
+      "pi_institution": "National Cancer Institute (NCI)",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT02326064",
+      "pi_name": "Guillaume DUCARME, PH",
+      "pi_institution": "CHD Vend\u00e9e",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT02296307",
+      "pi_name": "Lucy Gilbert, MD,MSc,FRCOG",
+      "pi_institution": "McGill University",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT06558019",
+      "pi_name": "Lei Li, M.D.",
+      "pi_institution": "Peking Union Medical College Hospital",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT03564340",
+      "pi_name": "Clinical Trial Management",
+      "pi_institution": "Regeneron Pharmaceuticals",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT04938583",
+      "pi_name": "Dr Jung KH, MD",
+      "pi_institution": "Asan Medical Hospital",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT01111903",
+      "pi_name": "Fr\u00e9d\u00e9ric SELLE, MD",
+      "pi_institution": "H\u00f4pital Tenon",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT06182917",
+      "pi_name": "Mengpei Zhang",
+      "pi_institution": "West China Second University Hospital",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT00080639",
+      "pi_name": "Edward E. Partridge, MD",
+      "pi_institution": "University of Alabama at Birmingham",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT04826029",
+      "pi_name": "Catherine Uzan, Pr",
+      "pi_institution": "H\u00f4pital Piti\u00e9 Salp\u00eatri\u00e8re - Assitance Publique H\u00f4pitaux de Paris",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT03004391",
+      "pi_name": "Anette S. Kargo, MD",
+      "pi_institution": "University of Southern Denmark and Vejle Hospital, Denmark",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT01133756",
+      "pi_name": "Harish Dave, MD",
+      "pi_institution": "Quintiles, Inc.",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT00539162",
+      "pi_name": "Denise Nebgen, MD, PHD",
+      "pi_institution": "The University of Texas MD Anderson Cancer Center",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT00987649",
+      "pi_name": "Richard Moore, MD, FACOG, FACS",
+      "pi_institution": "Women & Infants Hospital Rhode Island",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT04811703",
+      "pi_name": "Justine ARQUILLIERE, MD",
+      "pi_institution": "Hospices Civils de Lyon",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT02595281",
+      "pi_name": "C\u00e9line Gavoille, MD",
+      "pi_institution": "Institut de Canc\u00e9rologie de Lorraine",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT00043472",
+      "pi_name": "Sharon A Savage, M.D.",
+      "pi_institution": "National Cancer Institute (NCI)",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT02247323",
+      "pi_name": "Nesreen A Shehata, MD",
+      "pi_institution": "Beni-Suef University",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT00587093",
+      "pi_name": "Dennis Chi, M.D.",
+      "pi_institution": "Memorial Sloan Kettering Cancer Center",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT00058032",
+      "pi_name": "Usha Menon, MBBS, MRCOG",
+      "pi_institution": "University College, London",
+      "pi_email": ""
+    },
+    {
+      "nct_id": "NCT05311579",
+      "pi_name": "Lei Li, M.D.",
+      "pi_institution": "Peking Union Medical College Hospital",
+      "pi_email": ""
+    }
+  ]
+}

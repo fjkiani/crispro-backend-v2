@@ -1,0 +1,334 @@
+⚠️ SUPABASE_JWT_SECRET not set - JWT verification will fail
+WARNING:root:rapidfuzz not available, using basic string matching
+WARNING:root:jsonschema not available, validation disabled
+2025-11-04 10:43:37.346 | INFO     | api.routers.nccn:load_nccn_guidelines:37 - Loaded NCCN guidelines v2025.1
+INFO:     Started server process [27202]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+⚠️  Treatment line integration not available - skipping treatment line features
+INFO:     127.0.0.1:52971 - "GET /api/health HTTP/1.1" 404 Not Found
+/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/Pubmed-LLM-Agent-main/rag_agent.py:199: RuntimeWarning: coroutine 'PubMedClientEnhanced._make_request_async' was never awaited
+  print(f"❌ Error building initial knowledge base: {e}")
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+🚀 Initializing RAG Agent...
+📚 Knowledge base loaded with 0 papers
+🔬 Embedding provider: gemini
+✅ RAG Agent initialized successfully
+🔍 Processing query: What is BRAF V600E and how does it affect melanoma?
+📚 Knowledge base is empty, building from recent literature...
+🔍 Building knowledge base with query: "BRAF"[Gene] AND "V600E" AND "melanoma" AND mutation AND variant AND cancer AND clinical
+❌ Error building initial knowledge base: Cannot run the event loop while another loop is running
+🔍 Processing RAG query: What is BRAF V600E and how does it affect melanoma?
+📋 Query type: general_clinical
+Error creating embedding: module 'google.genai' has no attribute 'configure'
+📚 Found 0 relevant papers
+INFO:     127.0.0.1:52998 - "POST /api/evidence/rag-query HTTP/1.1" 200 OK
+/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/Pubmed-LLM-Agent-main/rag_agent.py:277: RuntimeWarning: coroutine 'PubMedClientEnhanced._make_request_async' was never awaited
+  return {'error': str(e)}
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+🔬 Adding papers for BRAF V600E
+❌ Error adding variant to knowledge base: Cannot run the event loop while another loop is running
+INFO:     127.0.0.1:53014 - "POST /api/evidence/rag-add-variant HTTP/1.1" 500 Internal Server Error
+🔍 Processing query: Explain how genetic mutations can cause cancer
+📚 Knowledge base is empty, building from recent literature...
+🔍 Building knowledge base with query: "EXPLAIN"[Gene] AND mutation AND variant AND cancer AND clinical
+❌ Error building initial knowledge base: Cannot run the event loop while another loop is running
+🔍 Processing RAG query: Explain how genetic mutations can cause cancer
+📋 Query type: general_clinical
+Error creating embedding: module 'google.genai' has no attribute 'configure'
+📚 Found 0 relevant papers
+INFO:     127.0.0.1:53020 - "POST /api/evidence/rag-query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53026 - "GET /api/evidence/rag-stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53086 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63665 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63665 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63665 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63665 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63725 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63726 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63727 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63728 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63729 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63730 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63734 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+ERROR:api.services.enformer_client:Enformer unexpected error: All connection attempts failed
+INFO:     127.0.0.1:63734 - "POST /api/insights/predict_chromatin_accessibility HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63736 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63736 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63734 - "POST /api/insights/predict_gene_essentiality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63742 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63734 - "POST /api/insights/predict_splicing_regulatory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63664 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63745 - "POST /api/hypothesis/validate_food_dynamic HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63769 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63769 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63769 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63769 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63779 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63780 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63781 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63782 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63783 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63784 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63788 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+ERROR:api.services.enformer_client:Enformer unexpected error: All connection attempts failed
+INFO:     127.0.0.1:63788 - "POST /api/insights/predict_chromatin_accessibility HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63790 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63790 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63788 - "POST /api/insights/predict_gene_essentiality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63797 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63788 - "POST /api/insights/predict_splicing_regulatory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63768 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63768 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:63768 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:63768 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:63768 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:63768 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:63767 - "POST /api/ayesha/complete_care_plan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63800 - "POST /api/trials/agent/search HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63801 - "POST /api/safety/toxicity_risk HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:63802 - "POST /api/guidance/synthetic_lethality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63803 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63808 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63808 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63808 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63808 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63817 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63818 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63819 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63821 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63820 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63822 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63826 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+ERROR:api.services.enformer_client:Enformer unexpected error: All connection attempts failed
+INFO:     127.0.0.1:63826 - "POST /api/insights/predict_chromatin_accessibility HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63828 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63828 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63826 - "POST /api/insights/predict_gene_essentiality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63833 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63826 - "POST /api/insights/predict_splicing_regulatory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63807 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63806 - "POST /api/guidance/radonc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63837 - "POST /api/guidance/synthetic_lethality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63839 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63839 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63839 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63839 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63897 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63898 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63899 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63900 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63901 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63902 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63838 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "POST /api/guidance/chemo HTTP/1.1" 200 OK
+🔍 Processing query: Find papers on BRCA1 mutations in ovarian cancer
+📚 Knowledge base is empty, building from recent literature...
+🔍 Building knowledge base with query: "BRCA1"[Gene] AND "ovarian_cancer" AND mutation AND variant AND cancer AND clinical
+❌ Error building initial knowledge base: Cannot run the event loop while another loop is running
+🔍 Processing RAG query: Find papers on BRCA1 mutations in ovarian cancer
+📋 Query type: general_clinical
+Error creating embedding: module 'google.genai' has no attribute 'configure'
+📚 Found 0 relevant papers
+INFO:     127.0.0.1:63903 - "POST /api/evidence/rag-query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64657 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64657 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64657 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64657 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64689 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64690 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64691 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64692 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64693 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64694 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64697 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+ERROR:api.services.enformer_client:Enformer unexpected error: All connection attempts failed
+INFO:     127.0.0.1:64697 - "POST /api/insights/predict_chromatin_accessibility HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64699 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64699 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64697 - "POST /api/insights/predict_gene_essentiality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64704 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64697 - "POST /api/insights/predict_splicing_regulatory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64656 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64656 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64656 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64656 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64656 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64656 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64655 - "POST /api/ayesha/complete_care_plan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64712 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64712 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64712 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64712 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64723 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64724 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64725 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64726 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64727 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64728 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64745 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+ERROR:api.services.enformer_client:Enformer unexpected error: All connection attempts failed
+INFO:     127.0.0.1:64745 - "POST /api/insights/predict_chromatin_accessibility HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64748 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64748 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64745 - "POST /api/insights/predict_gene_essentiality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64770 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64745 - "POST /api/insights/predict_splicing_regulatory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64711 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64711 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64711 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64711 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64711 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64711 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64710 - "POST /api/ayesha/complete_care_plan HTTP/1.1" 200 OK
+❌ Error searching compound evidence: 'PubMedClientEnhanced' object has no attribute 'search_papers'
+INFO:     127.0.0.1:64805 - "POST /api/hypothesis/validate_food_ab_enhanced?compound=Vitamin%20D&disease=ovarian_cancer_hgs&germline_status=negative&treatment_line=3&prior_therapies=carboplatin,olaparib&use_llm=true HTTP/1.1" 200 OK
+❌ Error searching compound evidence: 'PubMedClientEnhanced' object has no attribute 'search_papers'
+INFO:     127.0.0.1:64810 - "POST /api/hypothesis/validate_food_ab_enhanced?compound=Vitamin%20D&disease=ovarian_cancer_hgs&germline_status=negative&treatment_line=3&prior_therapies=carboplatin,olaparib&use_llm=true HTTP/1.1" 200 OK
+❌ Error searching compound evidence: 'PubMedClientEnhanced' object has no attribute 'search_papers'
+INFO:     127.0.0.1:64824 - "POST /api/hypothesis/validate_food_ab_enhanced?compound=Vitamin%20D&disease=ovarian_cancer_hgs&germline_status=negative&treatment_line=3&prior_therapies=carboplatin,olaparib&use_llm=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64884 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64884 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64884 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64884 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64901 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64902 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64905 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64904 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64903 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64906 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64916 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+ERROR:api.services.enformer_client:Enformer unexpected error: All connection attempts failed
+INFO:     127.0.0.1:64916 - "POST /api/insights/predict_chromatin_accessibility HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64918 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64918 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64916 - "POST /api/insights/predict_gene_essentiality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64931 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64916 - "POST /api/insights/predict_splicing_regulatory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64883 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64883 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64883 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64883 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64883 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64883 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64881 - "POST /api/ayesha/complete_care_plan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64935 - "POST /api/trials/agent/search HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64967 - "POST /api/hypothesis/validate_food_ab_enhanced?compound=Vitamin+D&disease=ovarian_cancer&germline_status=negative&treatment_line=3&prior_therapies=carboplatin%2Colaparib&use_llm=true HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64998 - "POST /api/hypothesis/validate_food_ab_enhanced?compound=Vitamin+D&disease=ovarian_cancer&germline_status=negative&treatment_line=3&prior_therapies=carboplatin%2Colaparib&use_llm=true HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65070 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65070 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65070 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65070 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65080 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:65079 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:65081 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:65082 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:65083 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:65084 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65087 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+ERROR:api.services.enformer_client:Enformer unexpected error: All connection attempts failed
+INFO:     127.0.0.1:65087 - "POST /api/insights/predict_chromatin_accessibility HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65089 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65089 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65087 - "POST /api/insights/predict_gene_essentiality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65094 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65087 - "POST /api/insights/predict_splicing_regulatory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65069 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65069 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:65069 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:65069 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:65069 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:65069 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:65068 - "POST /api/ayesha/complete_care_plan HTTP/1.1" 200 OK
+❌ Error searching compound evidence: 'PubMedClientEnhanced' object has no attribute 'search_papers'
+INFO:     127.0.0.1:65117 - "POST /api/hypothesis/validate_food_ab_enhanced?compound=Vitamin+D&disease=ovarian_cancer_hgs&germline_status=negative&treatment_line=3&prior_therapies=carboplatin%2Colaparib&use_llm=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49812 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50011 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50011 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50011 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50011 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50048 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50049 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50050 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50051 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50052 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50053 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50057 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+ERROR:api.services.enformer_client:Enformer unexpected error: All connection attempts failed
+INFO:     127.0.0.1:50057 - "POST /api/insights/predict_chromatin_accessibility HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50059 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50059 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50057 - "POST /api/insights/predict_gene_essentiality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50066 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50057 - "POST /api/insights/predict_splicing_regulatory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50010 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+❌ Error searching compound evidence: 'PubMedClientEnhanced' object has no attribute 'search_papers'
+INFO:     127.0.0.1:50069 - "POST /api/hypothesis/validate_food_ab_enhanced?compound=Vitamin%20D&disease=ovarian_cancer_hgs&germline_status=negative&treatment_line=3&prior_therapies=carboplatin&use_llm=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50072 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50072 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50072 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50072 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50090 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50091 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50093 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50092 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50094 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50095 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50101 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+ERROR:api.services.enformer_client:Enformer unexpected error: All connection attempts failed
+INFO:     127.0.0.1:50101 - "POST /api/insights/predict_chromatin_accessibility HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50103 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50103 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50101 - "POST /api/insights/predict_gene_essentiality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50110 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50101 - "POST /api/insights/predict_splicing_regulatory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50071 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50071 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:50071 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:50071 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:50071 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:50071 - "POST /api/hypothesis/validate_food_ab_enhanced HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:50070 - "POST /api/ayesha/complete_care_plan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50116 - "POST /api/trials/agent/search HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50117 - "POST /api/safety/toxicity_risk HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:50118 - "POST /api/guidance/synthetic_lethality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50119 - "POST /api/evidence/deep_analysis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50124 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50124 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50124 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50124 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50234 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50235 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50236 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50238 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50237 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50239 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50123 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50122 - "POST /api/guidance/radonc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50241 - "POST /api/guidance/synthetic_lethality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50243 - "POST /api/evo/score_variant_multi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50243 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50243 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50243 - "POST /api/evo/score_variant_exon HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50248 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50249 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50250 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50251 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50252 - "POST /api/evidence/literature HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50253 - "POST /api/insights/predict_protein_functionality_change HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50242 - "POST /api/efficacy/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50240 - "POST /api/guidance/chemo HTTP/1.1" 200 OK
+🔍 Processing query: BRCA1 mutations ovarian cancer
+📚 Knowledge base is empty, building from recent literature...
+🔍 Building knowledge base with query: "BRCA1"[Gene] AND "ovarian_cancer" AND mutation AND variant AND cancer AND clinical
+❌ Error building initial knowledge base: Cannot run the event loop while another loop is running
+🔍 Processing RAG query: BRCA1 mutations ovarian cancer
+📋 Query type: general_clinical
+Error creating embedding: module 'google.genai' has no attribute 'configure'
+📚 Found 0 relevant papers
+INFO:     127.0.0.1:50254 - "POST /api/evidence/rag-query HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [27202]

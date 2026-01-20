@@ -1,0 +1,54 @@
+{
+  "patient_id": "TEST-VALIDATION-001",
+  "disease": "ovarian_cancer",
+  "phase": "ranking",
+  "created_at": "2025-12-08T17:55:51.890589",
+  "updated_at": "2025-12-08T17:55:51.890598",
+  "patient_profile": null,
+  "biomarker_profile": null,
+  "resistance_prediction": null,
+  "drug_ranking": null,
+  "trial_matches": null,
+  "nutrition_plan": null,
+  "care_plan": null,
+  "monitoring_config": null,
+  "mechanism_vector": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "mutations": [
+    {
+      "gene": "BRCA1",
+      "hgvs_p": "p.C61G",
+      "consequence": "stop_gained",
+      "chrom": "17",
+      "pos": 43044295,
+      "ref": "T",
+      "alt": "G"
+    }
+  ],
+  "data_quality_flags": [],
+  "alerts": [],
+  "history": [],
+  "agent_executions": [
+    {
+      "agent_id": "synthetic_lethality",
+      "started_at": "2025-12-08T17:55:51.891321",
+      "completed_at": "2025-12-08T17:55:56.644703",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "sl_detected": true,
+        "genes_scored": 1,
+        "drugs_recommended": 3,
+        "calculation_time_ms": 4753
+      },
+      "duration_ms": 4753.3820000000005
+    }
+  ]
+}

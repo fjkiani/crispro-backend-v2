@@ -1,0 +1,429 @@
+{
+  "validation_timestamp": "2026-01-18T05:01:54.056460",
+  "synthetic_data_stats": {
+    "n_patients": 100,
+    "n_regimens": 245,
+    "n_ground_truth": 245
+  },
+  "validation_results": {
+    "total_regimens": 245,
+    "tfI_validation": {
+      "correct": 145,
+      "incorrect": 0,
+      "missing": 0,
+      "errors": [],
+      "accuracy": 1.0,
+      "total": 145
+    },
+    "pfI_validation": {
+      "correct": 39,
+      "incorrect": 29,
+      "missing": 0,
+      "errors": [
+        {
+          "patient_id": "SYNTH_OVARY_002",
+          "regimen_id": "R2",
+          "computed": 136,
+          "ground_truth": 96,
+          "difference": 40
+        },
+        {
+          "patient_id": "SYNTH_OVARY_012",
+          "regimen_id": "R1",
+          "computed": 94,
+          "ground_truth": 288,
+          "difference": 194
+        },
+        {
+          "patient_id": "SYNTH_OVARY_012",
+          "regimen_id": "R2",
+          "computed": 94,
+          "ground_truth": 253,
+          "difference": 159
+        },
+        {
+          "patient_id": "SYNTH_OVARY_013",
+          "regimen_id": "R1",
+          "computed": 98,
+          "ground_truth": 314,
+          "difference": 216
+        },
+        {
+          "patient_id": "SYNTH_OVARY_014",
+          "regimen_id": "R2",
+          "computed": 51,
+          "ground_truth": 314,
+          "difference": 263
+        },
+        {
+          "patient_id": "SYNTH_OVARY_015",
+          "regimen_id": "R1",
+          "computed": 104,
+          "ground_truth": 336,
+          "difference": 232
+        },
+        {
+          "patient_id": "SYNTH_OVARY_016",
+          "regimen_id": "R1",
+          "computed": 174,
+          "ground_truth": 325,
+          "difference": 151
+        },
+        {
+          "patient_id": "SYNTH_OVARY_023",
+          "regimen_id": "R1",
+          "computed": 172,
+          "ground_truth": 202,
+          "difference": 30
+        },
+        {
+          "patient_id": "SYNTH_OVARY_023",
+          "regimen_id": "R2",
+          "computed": 172,
+          "ground_truth": 263,
+          "difference": 91
+        },
+        {
+          "patient_id": "SYNTH_OVARY_029",
+          "regimen_id": "R3",
+          "computed": 458,
+          "ground_truth": 187,
+          "difference": 271
+        },
+        {
+          "patient_id": "SYNTH_OVARY_034",
+          "regimen_id": "R2",
+          "computed": 105,
+          "ground_truth": 111,
+          "difference": 6
+        },
+        {
+          "patient_id": "SYNTH_OVARY_036",
+          "regimen_id": "R1",
+          "computed": 126,
+          "ground_truth": 220,
+          "difference": 94
+        },
+        {
+          "patient_id": "SYNTH_OVARY_036",
+          "regimen_id": "R3",
+          "computed": 96,
+          "ground_truth": 167,
+          "difference": 71
+        },
+        {
+          "patient_id": "SYNTH_OVARY_046",
+          "regimen_id": "R1",
+          "computed": 55,
+          "ground_truth": 297,
+          "difference": 242
+        },
+        {
+          "patient_id": "SYNTH_OVARY_046",
+          "regimen_id": "R3",
+          "computed": 163,
+          "ground_truth": 127,
+          "difference": 36
+        },
+        {
+          "patient_id": "SYNTH_OVARY_053",
+          "regimen_id": "R3",
+          "computed": 505,
+          "ground_truth": 197,
+          "difference": 308
+        },
+        {
+          "patient_id": "SYNTH_OVARY_057",
+          "regimen_id": "R1",
+          "computed": 142,
+          "ground_truth": 181,
+          "difference": 39
+        },
+        {
+          "patient_id": "SYNTH_OVARY_057",
+          "regimen_id": "R2",
+          "computed": 142,
+          "ground_truth": 331,
+          "difference": 189
+        },
+        {
+          "patient_id": "SYNTH_OVARY_071",
+          "regimen_id": "R1",
+          "computed": 57,
+          "ground_truth": 255,
+          "difference": 198
+        },
+        {
+          "patient_id": "SYNTH_OVARY_071",
+          "regimen_id": "R2",
+          "computed": 57,
+          "ground_truth": 272,
+          "difference": 215
+        },
+        {
+          "patient_id": "SYNTH_OVARY_079",
+          "regimen_id": "R1",
+          "computed": 88,
+          "ground_truth": 219,
+          "difference": 131
+        },
+        {
+          "patient_id": "SYNTH_OVARY_079",
+          "regimen_id": "R2",
+          "computed": 88,
+          "ground_truth": 356,
+          "difference": 268
+        },
+        {
+          "patient_id": "SYNTH_OVARY_086",
+          "regimen_id": "R1",
+          "computed": 158,
+          "ground_truth": 163,
+          "difference": 5
+        },
+        {
+          "patient_id": "SYNTH_OVARY_086",
+          "regimen_id": "R2",
+          "computed": 158,
+          "ground_truth": 369,
+          "difference": 211
+        },
+        {
+          "patient_id": "SYNTH_OVARY_088",
+          "regimen_id": "R1",
+          "computed": 81,
+          "ground_truth": 344,
+          "difference": 263
+        },
+        {
+          "patient_id": "SYNTH_OVARY_089",
+          "regimen_id": "R1",
+          "computed": 109,
+          "ground_truth": 323,
+          "difference": 214
+        },
+        {
+          "patient_id": "SYNTH_OVARY_092",
+          "regimen_id": "R3",
+          "computed": 574,
+          "ground_truth": 227,
+          "difference": 347
+        },
+        {
+          "patient_id": "SYNTH_OVARY_099",
+          "regimen_id": "R1",
+          "computed": 193,
+          "ground_truth": 373,
+          "difference": 180
+        },
+        {
+          "patient_id": "SYNTH_OVARY_099",
+          "regimen_id": "R2",
+          "computed": 193,
+          "ground_truth": 355,
+          "difference": 162
+        }
+      ],
+      "accuracy": 0.5735294117647058,
+      "total": 68
+    },
+    "ptpi_validation": {
+      "correct": 39,
+      "incorrect": 0,
+      "missing": 0,
+      "errors": [],
+      "accuracy": 1.0,
+      "total": 39
+    },
+    "pfi_category_validation": {
+      "correct": 45,
+      "incorrect": 23,
+      "missing": 0,
+      "errors": [
+        {
+          "patient_id": "SYNTH_OVARY_012",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_012",
+          "regimen_id": "R2",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_013",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_014",
+          "regimen_id": "R2",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_015",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_016",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_023",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_023",
+          "regimen_id": "R2",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_029",
+          "regimen_id": "R3",
+          "computed": ">12m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_036",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_046",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_053",
+          "regimen_id": "R3",
+          "computed": ">12m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_057",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_057",
+          "regimen_id": "R2",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_071",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_071",
+          "regimen_id": "R2",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_079",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_079",
+          "regimen_id": "R2",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_086",
+          "regimen_id": "R2",
+          "computed": "<6m",
+          "ground_truth": ">12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_088",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_089",
+          "regimen_id": "R1",
+          "computed": "<6m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_092",
+          "regimen_id": "R3",
+          "computed": ">12m",
+          "ground_truth": "6-12m"
+        },
+        {
+          "patient_id": "SYNTH_OVARY_099",
+          "regimen_id": "R1",
+          "computed": "6-12m",
+          "ground_truth": ">12m"
+        }
+      ],
+      "accuracy": 0.6617647058823529,
+      "total": 68
+    }
+  },
+  "comparison_results": {
+    "pfi_distribution": {
+      "<6m": 0.5670103092783505,
+      "6-12m": 0.27835051546391754,
+      ">12m": 0.15463917525773196,
+      "total_regimens": 97
+    },
+    "ptpi_distribution": {
+      "median_days": 155.0,
+      "iqr_days": [
+        83.0,
+        361.5
+      ],
+      "total_regimens": 39
+    },
+    "comparison_to_icon7": {
+      "<6m": {
+        "computed": 0.5670103092783505,
+        "published": 0.35,
+        "difference": 0.21701030927835052,
+        "within_tolerance": false
+      },
+      "6-12m": {
+        "computed": 0.27835051546391754,
+        "published": 0.35,
+        "difference": 0.07164948453608244,
+        "within_tolerance": true
+      },
+      ">12m": {
+        "computed": 0.15463917525773196,
+        "published": 0.3,
+        "difference": 0.14536082474226802,
+        "within_tolerance": false
+      }
+    },
+    "comparison_to_chiva": {},
+    "comparison_to_parpi_trials": {
+      "computed_median": 155.0,
+      "published_median": 180,
+      "difference": 25.0,
+      "within_tolerance": true
+    }
+  }
+}

@@ -1,0 +1,735 @@
+"""
+Agent Router - API endpoints for agent management and MOAT orchestration agents.
+
+Provides:
+1. Agent CRUD operations (create, list, update, delete, pause, resume)
+2. Agent execution (run, list runs, list results)
+3. Alert management
+4. Direct access to MOAT orchestration agents (synthetic lethality, etc.)
+"""
+
+from fastapi import APIRouter, HTTPException, Depends
+from typing import Dict, List, Optional, Any
+from pydantic import BaseModel, Field
+import logging
+
+logger = logging.getLogger(__name__)
+
+from ..middleware.auth_middleware import get_optional_user
+
+# Optional imports - services may not exist yet
+try:
+    from ..services.agent_manager import get_agent_manager
+except ImportError:
+    get_agent_manager = None
+    logger.warning("⚠️ agent_manager service not available - agent management endpoints will return 501")
+
+try:
+    from ..services.agent_executor import get_agent_executor
+except ImportError:
+    get_agent_executor = None
+    logger.warning("⚠️ agent_executor service not available - agent execution endpoints will return 501")
+
+from ..services.synthetic_lethality import (
+    SyntheticLethalityAgent,
+    SyntheticLethalityRequest,
+    MutationInput,
+    SLOptions
+)
+
+router = APIRouter(prefix="/api/agents", tags=["agents"])
+
+
+# ============================================================================
+# REQUEST/RESPONSE MODELS (Agent Management)
+# ============================================================================
+
+class CreateAgentRequest(BaseModel):
+    agent_type: str = Field(..., description="Type of agent (pubmed_sentinel, trial_scout, etc.)")
+    name: str = Field(..., description="User-friendly name")
+    description: Optional[str] = Field(None, description="Optional description")
+    config: Dict[str, Any] = Field(..., description="Agent-specific configuration")
+    run_frequency: str = Field("daily", description="How often to run (hourly, daily, weekly, monthly)")
+
+
+class UpdateAgentRequest(BaseModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+    config: Optional[Dict[str, Any]] = None
+    run_frequency: Optional[str] = None
+
+
+# ============================================================================
+# AGENT CRUD OPERATIONS
+# ============================================================================
+
+@router.post("")
+async def create_agent(
+    request: CreateAgentRequest,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    Create a new agent.
+    
+    Requires authentication.
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        agent_manager = get_agent_manager()
+        agent = await agent_manager.create_agent(
+            user_id=user_id,
+            agent_type=request.agent_type,
+            name=request.name,
+            config=request.config,
+            description=request.description,
+            run_frequency=request.run_frequency
+        )
+        return agent
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to create agent: {e}")
+
+
+@router.get("")
+async def list_agents(
+    status: Optional[str] = None,
+    agent_type: Optional[str] = None,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    List all agents for the current user.
+    
+    Optional filters: status, agent_type
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    if get_agent_manager is None:
+        raise HTTPException(status_code=501, detail="Agent management service not available")
+    
+    try:
+        agent_manager = get_agent_manager()
+        agents = await agent_manager.get_user_agents(
+            user_id=user_id,
+            status=status,
+            agent_type=agent_type
+        )
+        return {"agents": agents, "count": len(agents)}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to list agents: {e}")
+
+
+@router.get("/{agent_id}")
+async def get_agent(
+    agent_id: str,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    Get a single agent by ID.
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        agent_manager = get_agent_manager()
+        agent = await agent_manager.get_agent(agent_id, user_id)
+        if not agent:
+            raise HTTPException(status_code=404, detail="Agent not found")
+        return agent
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to get agent: {e}")
+
+
+@router.put("/{agent_id}")
+async def update_agent(
+    agent_id: str,
+    request: UpdateAgentRequest,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    Update an agent configuration.
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        agent_manager = get_agent_manager()
+        updates = request.dict(exclude_unset=True)
+        if not updates:
+            raise HTTPException(status_code=400, detail="No updates provided")
+        
+        agent = await agent_manager.update_agent(agent_id, user_id, updates)
+        if not agent:
+            raise HTTPException(status_code=404, detail="Agent not found")
+        return agent
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to update agent: {e}")
+
+
+@router.delete("/{agent_id}")
+async def delete_agent(
+    agent_id: str,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    Delete an agent.
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        agent_manager = get_agent_manager()
+        success = await agent_manager.delete_agent(agent_id, user_id)
+        if not success:
+            raise HTTPException(status_code=404, detail="Agent not found")
+        return {"success": True, "message": "Agent deleted"}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to delete agent: {e}")
+
+
+@router.post("/{agent_id}/pause")
+async def pause_agent(
+    agent_id: str,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    Pause an agent (stops scheduled runs).
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        agent_manager = get_agent_manager()
+        agent = await agent_manager.pause_agent(agent_id, user_id)
+        if not agent:
+            raise HTTPException(status_code=404, detail="Agent not found")
+        return agent
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to pause agent: {e}")
+
+
+@router.post("/{agent_id}/resume")
+async def resume_agent(
+    agent_id: str,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    Resume a paused agent (resumes scheduled runs).
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        agent_manager = get_agent_manager()
+        agent = await agent_manager.activate_agent(agent_id, user_id)
+        if not agent:
+            raise HTTPException(status_code=404, detail="Agent not found")
+        return agent
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to resume agent: {e}")
+
+
+# ============================================================================
+# AGENT EXECUTION
+# ============================================================================
+
+@router.post("/{agent_id}/run")
+async def trigger_agent_run(
+    agent_id: str,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    Trigger an immediate agent run (manual execution).
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        # Verify ownership
+        agent_manager = get_agent_manager()
+        agent = await agent_manager.get_agent(agent_id, user_id)
+        if not agent:
+            raise HTTPException(status_code=404, detail="Agent not found")
+        
+        # Execute agent
+        agent_executor = get_agent_executor()
+        result = await agent_executor.execute_agent(agent_id)
+        
+        return {
+            "success": True,
+            "run_id": result.get('run_id'),
+            "results_count": result.get('results_count', 0),
+            "new_results_count": result.get('new_results_count', 0),
+            "alerts_count": result.get('alerts_count', 0)
+        }
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to run agent: {e}")
+
+
+@router.get("/{agent_id}/runs")
+async def list_agent_runs(
+    agent_id: str,
+    limit: int = 20,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    List execution history for an agent.
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        # Verify ownership
+        agent_manager = get_agent_manager()
+        agent = await agent_manager.get_agent(agent_id, user_id)
+        if not agent:
+            raise HTTPException(status_code=404, detail="Agent not found")
+        
+        # Get runs
+        from ..services.agent_manager import get_supabase_client
+        client = get_supabase_client()
+        if not client:
+            raise HTTPException(status_code=503, detail="Database not available")
+        result = (
+            client.table('agent_runs')
+            .select('*')
+            .eq('agent_id', agent_id)
+            .order('started_at', desc=True)
+            .limit(limit)
+            .execute()
+        )
+        
+        return {"runs": result.data or [], "count": len(result.data or [])}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to list runs: {e}")
+
+
+@router.get("/{agent_id}/results")
+async def list_agent_results(
+    agent_id: str,
+    unread_only: bool = False,
+    limit: int = 50,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    List results for an agent.
+    
+    Optional filters: unread_only
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        # Verify ownership
+        agent_manager = get_agent_manager()
+        agent = await agent_manager.get_agent(agent_id, user_id)
+        if not agent:
+            raise HTTPException(status_code=404, detail="Agent not found")
+        
+        # Get results
+        from ..services.agent_manager import get_supabase_client
+        client = get_supabase_client()
+        if not client:
+            raise HTTPException(status_code=503, detail="Database not available")
+        query = (
+            client.table('agent_results')
+            .select('*')
+            .eq('agent_id', agent_id)
+            .eq('user_id', user_id)
+        )
+        
+        if unread_only:
+            query = query.eq('is_read', False)
+        
+        result = (
+            query
+            .order('created_at', desc=True)
+            .limit(limit)
+            .execute()
+        )
+        
+        return {"results": result.data or [], "count": len(result.data or [])}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to list results: {e}")
+
+
+# ============================================================================
+# ALERT MANAGEMENT
+# ============================================================================
+
+@router.get("/alerts")
+async def list_alerts(
+    unread_only: bool = True,
+    limit: int = 50,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    List all alerts for the current user.
+    
+    Optional filters: unread_only
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        # Try to import supabase client - if not available, return empty list
+        try:
+            from ..services.agent_manager import get_supabase_client
+            client = get_supabase_client()
+            if not client:
+                # Return empty list if database not available
+                return {"alerts": [], "count": 0}
+            query = (
+                client.table('agent_alerts')
+                .select('*')
+                .eq('user_id', user_id)
+            )
+            
+            if unread_only:
+                query = query.eq('is_read', False)
+            
+            result = (
+                query
+                .order('priority', desc=True)
+                .order('created_at', desc=True)
+                .limit(limit)
+                .execute()
+            )
+            
+            return {"alerts": result.data or [], "count": len(result.data or [])}
+        except ImportError:
+            # Agent manager not available - return empty list
+            return {"alerts": [], "count": 0}
+    except Exception as e:
+        logger.error(f"Failed to list alerts: {e}", exc_info=True)
+        # Return empty list on error instead of crashing
+        return {"alerts": [], "count": 0}
+
+
+@router.post("/results/{result_id}/read")
+async def mark_result_read(
+    result_id: str,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    Mark an agent result as read.
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        from ..services.agent_manager import get_supabase_client
+        from datetime import datetime
+        client = get_supabase_client()
+        if not client:
+            raise HTTPException(status_code=503, detail="Database not available")
+        
+        result = (
+            client.table('agent_results')
+            .update({'is_read': True})
+            .eq('id', result_id)
+            .eq('user_id', user_id)
+            .execute()
+        )
+        
+        if not result.data:
+            raise HTTPException(status_code=404, detail="Result not found")
+        
+        return {"success": True, "message": "Result marked as read"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to mark result as read: {e}")
+
+
+@router.post("/alerts/{alert_id}/read")
+async def mark_alert_read(
+    alert_id: str,
+    user: Optional[Dict] = Depends(get_optional_user)
+):
+    """
+    Mark an alert as read.
+    """
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    user_id = user.get('id')
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid user")
+    
+    try:
+        from ..services.agent_manager import get_supabase_client
+        from datetime import datetime
+        client = get_supabase_client()
+        if not client:
+            raise HTTPException(status_code=503, detail="Database not available")
+        
+        result = (
+            client.table('agent_alerts')
+            .update({
+                'is_read': True,
+                'read_at': datetime.utcnow().isoformat()
+            })
+            .eq('id', alert_id)
+            .eq('user_id', user_id)
+            .execute()
+        )
+        
+        if not result.data:
+            raise HTTPException(status_code=404, detail="Alert not found")
+        
+        return {"success": True, "message": "Alert marked as read"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to mark alert as read: {e}")
+
+
+# ============================================================================
+# MOAT ORCHESTRATION AGENTS (Direct Access)
+# ============================================================================
+
+@router.post("/synthetic_lethality")
+async def synthetic_lethality_agent(request: Dict[str, Any]):
+    """
+    Synthetic Lethality & Essentiality Agent endpoint.
+    
+    Provides direct access to the synthetic lethality agent for testing and integration.
+    This is a MOAT orchestration agent (Module 14).
+    
+    Input:
+    {
+        "disease": "ovarian_cancer",
+        "mutations": [
+            {
+                "gene": "BRCA1",
+                "hgvs_p": "p.C61G",
+                "consequence": "stop_gained",
+                "chrom": "17",
+                "pos": 43044295,
+                "ref": "T",
+                "alt": "G"
+            }
+        ],
+        "options": {
+            "model_id": "evo2_7b",
+            "include_explanations": true,
+            "explanation_audience": "clinician"
+        }
+    }
+    
+    Output:
+    {
+        "synthetic_lethality_detected": true,
+        "double_hit_description": "HR + checkpoint loss",
+        "essentiality_scores": [...],
+        "broken_pathways": [...],
+        "essential_pathways": [...],
+        "recommended_drugs": [...],
+        "suggested_therapy": "Olaparib",
+        "explanation": {...},
+        "calculation_time_ms": 1234,
+        "evo2_used": true
+    }
+    """
+    try:
+        # Extract request data
+        disease = request.get("disease", "")
+        mutations_raw = request.get("mutations", [])
+        options_raw = request.get("options", {})
+        
+        if not disease:
+            raise HTTPException(status_code=400, detail="disease required")
+        
+        if not isinstance(mutations_raw, list) or not mutations_raw:
+            raise HTTPException(status_code=400, detail="mutations[] required (non-empty)")
+        
+        # Build mutation inputs
+        mutations = [
+            MutationInput(
+                gene=m.get("gene", ""),
+                hgvs_p=m.get("hgvs_p"),
+                hgvs_c=m.get("hgvs_c"),
+                consequence=m.get("consequence"),
+                chrom=m.get("chrom"),
+                pos=m.get("pos"),
+                ref=m.get("ref"),
+                alt=m.get("alt")
+            )
+            for m in mutations_raw
+        ]
+        
+        # Build options
+        options = SLOptions(
+            model_id=options_raw.get("model_id", "evo2_7b"),
+            include_explanations=options_raw.get("include_explanations", True),
+            explanation_audience=options_raw.get("explanation_audience", "clinician")
+        )
+        
+        # Build request
+        sl_request = SyntheticLethalityRequest(
+            disease=disease,
+            mutations=mutations,
+            options=options
+        )
+        
+        # Run agent
+        agent = SyntheticLethalityAgent()
+        result = await agent.analyze(sl_request)
+        
+        # Convert to dict for JSON response
+        return {
+            "synthetic_lethality_detected": result.synthetic_lethality_detected,
+            "double_hit_description": result.double_hit_description,
+            "essentiality_scores": [
+                {
+                    "gene": s.gene,
+                    "essentiality_score": s.essentiality_score,
+                    "essentiality_level": s.essentiality_level.value,
+                    "sequence_disruption": s.sequence_disruption,
+                    "pathway_impact": s.pathway_impact,
+                    "functional_consequence": s.functional_consequence,
+                    "flags": s.flags,
+                    "confidence": s.confidence
+                }
+                for s in result.essentiality_scores
+            ],
+            "broken_pathways": [
+                {
+                    "pathway_name": p.pathway_name,
+                    "pathway_id": p.pathway_id,
+                    "status": p.status.value,
+                    "genes_affected": p.genes_affected,
+                    "disruption_score": p.disruption_score,
+                    "description": p.description
+                }
+                for p in result.broken_pathways
+            ],
+            "essential_pathways": [
+                {
+                    "pathway_name": p.pathway_name,
+                    "pathway_id": p.pathway_id,
+                    "status": p.status.value,
+                    "description": p.description
+                }
+                for p in result.essential_pathways
+            ],
+            "recommended_drugs": [
+                {
+                    "drug_name": d.drug_name,
+                    "drug_class": d.drug_class,
+                    "target_pathway": d.target_pathway,
+                    "confidence": d.confidence,
+                    "mechanism": d.mechanism,
+                    "fda_approved": d.fda_approved,
+                    "evidence_tier": d.evidence_tier,
+                    "rationale": d.rationale
+                }
+                for d in result.recommended_drugs
+            ],
+            "suggested_therapy": result.suggested_therapy,
+            "explanation": {
+                "audience": result.explanation.audience,
+                "summary": result.explanation.summary,
+                "full_explanation": result.explanation.full_explanation,
+                "key_points": result.explanation.key_points,
+                "generated_at": result.explanation.generated_at.isoformat(),
+                "provider": result.explanation.provider
+            } if result.explanation else None,
+            "calculation_time_ms": result.calculation_time_ms,
+            "evo2_used": result.evo2_used,
+            "provenance": result.provenance
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Synthetic lethality agent failed: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Synthetic lethality agent failed: {str(e)}")
+
+
+@router.get("/synthetic_lethality/health")
+async def synthetic_lethality_health():
+    """Health check for synthetic lethality agent."""
+    return {
+        "status": "healthy",
+        "agent": "SyntheticLethalityAgent",
+        "version": "2.1"
+    }

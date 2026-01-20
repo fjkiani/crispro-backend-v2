@@ -1,0 +1,4 @@
+{
+  "variant": {"gene":"TP53","assembly":"GRCh38","chrom":"17","pos":7577120,"ref":"G","alt":"A"},
+  "options": {"patient_genes": ["MBD4","TP53"]}
+}

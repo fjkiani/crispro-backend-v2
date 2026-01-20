@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-12-23T17:34:01.150556",
+  "api_base_url": "http://127.0.0.1:8000",
+  "test_cases": 3,
+  "passed": 1,
+  "failed": 2,
+  "results": [
+    {
+      "test_case": "MM MAPK Variants - Pathway Alignment",
+      "status": "PASSED",
+      "pathway_alignment": 1.0,
+      "expected": 1.0,
+      "difference": 0.0
+    },
+    {
+      "test_case": "KRAS G12D Drug Ranking",
+      "status": "FAILED",
+      "top_drug": "MEK inhibitor",
+      "mek_rank": 1,
+      "braf_rank": 2,
+      "confidence": 0.58,
+      "expected_confidence_range": [
+        0.83,
+        0.85
+      ]
+    },
+    {
+      "test_case": "Ovarian DDR Variants - Evidence Tier",
+      "status": "FAILED",
+      "supported_count": 2,
+      "consider_count": 2,
+      "expected_supported": 3,
+      "expected_consider": 1
+    }
+  ]
+}

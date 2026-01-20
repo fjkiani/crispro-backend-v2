@@ -1,0 +1,22 @@
+{
+  "cached_at": "2025-11-14T19:42:27.331115",
+  "trial_data": {
+    "id": "NCT01247779",
+    "title": "Perioperative Morbidity in Gyneco-oncology According to the Procedure : Coelioscopy Versus Robot-assisted Coelioscopy",
+    "status": "COMPLETED",
+    "phases": "[\"NA\"]",
+    "summary": "The purpose of this study is to compare perioperative morbidity of coelioscopy versus robot-assisted coelioscopy in cervical cancer, uterus cancer and ovarian cancer.",
+    "conditions": "[\"Cervical Cancer\", \"Uterus Cancer\", \"Ovarian Cancer\"]",
+    "interventions": "[\"gynecologic surgery - standard coelioscopy\", \"gynecologic surgery - robot assisted coelioscopy\"]",
+    "source": "ClinicalTrials.gov",
+    "inclusion_criteria": "* patient with uterus cancer depending on hysterectomy \u00b1 pelvic lymphadenectomy or a restadification\n* patient with cervical cancer depending on enlarged colpo-hysterectomy \u00b1 pelvic lymphadenectomy or a surgery after concomitant radiochemotherapy, or lombo aortic lymphadenectomy for a locally advanced cancer, or a restadification\n* patient with cervical cancer depending on a restadification\n* patient aged over 18 years\n* previous antitumor treatment allowed but necessarily disrupted 20 days before inclusion\n* WHO score equal or inferior to 3\n* cirrhosis-related Child-Pugh score under or equal to A7 are allowed\n* life expectancy equal or superior to 12 weeks\n* patient affiliated to health insurance\n* dated and signed informed consent",
+    "exclusion_criteria": "* metastatic disease\n* pregnant or breastfeeding woman\n* patient unable to proceed follow-up visit, because of geographic, social or mental reasons",
+    "inclusion_criteria_full": "* patient with uterus cancer depending on hysterectomy \u00b1 pelvic lymphadenectomy or a restadification\n* patient with cervical cancer depending on enlarged colpo-hysterectomy \u00b1 pelvic lymphadenectomy or a surgery after concomitant radiochemotherapy, or lombo aortic lymphadenectomy for a locally advanced cancer, or a restadification\n* patient with cervical cancer depending on a restadification\n* patient aged over 18 years\n* previous antitumor treatment allowed but necessarily disrupted 20 days before inclusion\n* WHO score equal or inferior to 3\n* cirrhosis-related Child-Pugh score under or equal to A7 are allowed\n* life expectancy equal or superior to 12 weeks\n* patient affiliated to health insurance\n* dated and signed informed consent",
+    "exclusion_criteria_full": "* metastatic disease\n* pregnant or breastfeeding woman\n* patient unable to proceed follow-up visit, because of geographic, social or mental reasons",
+    "primary_endpoint": null,
+    "interventions_json": null,
+    "locations_full_json": null,
+    "scraped_data_json": null,
+    "scraped_at": null
+  }
+}

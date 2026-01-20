@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-11-27T03:34:52.887297",
+  "analysis_file": "oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json",
+  "structure_check": {
+    "verified": true,
+    "dimension": 7,
+    "expected_dim": 7,
+    "all_in_range": true,
+    "sum_valid": true,
+    "confidence": 0.95,
+    "error": null,
+    "vector_sum": 1.4
+  },
+  "pathway_mapping_check": null,
+  "overall_score": {
+    "total_checks": 1,
+    "passed": 1,
+    "failed": 0,
+    "pass_rate": 1.0
+  }
+}

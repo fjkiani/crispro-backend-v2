@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "exploration_date": "2025-12-30T02:03:15.272846",
+    "caslibs_explored": 4
+  },
+  "summary": {
+    "total_ca125_fields": 0,
+    "total_pfi_fields": 0,
+    "total_ovarian_indicators": 0
+  },
+  "field_mapping": {
+    "ca125_fields": [],
+    "pfi_fields": [],
+    "ovarian_indicators": []
+  },
+  "caslib_details": [
+    {
+      "caslib_name": "Multiple_MerckKG_2008_441",
+      "tables": [],
+      "accessible_tables": [],
+      "ca125_fields": [],
+      "pfi_fields": [],
+      "ovarian_indicators": [],
+      "errors": []
+    },
+    {
+      "caslib_name": "Multiple_SanofiU_2008_119",
+      "tables": [],
+      "accessible_tables": [],
+      "ca125_fields": [],
+      "pfi_fields": [],
+      "ovarian_indicators": [],
+      "errors": []
+    },
+    {
+      "caslib_name": "Multiple_Brigham_454",
+      "tables": [],
+      "accessible_tables": [],
+      "ca125_fields": [],
+      "pfi_fields": [],
+      "ovarian_indicators": [],
+      "errors": []
+    },
+    {
+      "caslib_name": "Multiple_Allianc_2002_213",
+      "tables": [],
+      "accessible_tables": [],
+      "ca125_fields": [],
+      "pfi_fields": [],
+      "ovarian_indicators": [],
+      "errors": []
+    }
+  ]
+}

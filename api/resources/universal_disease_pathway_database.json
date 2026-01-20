@@ -1,0 +1,1669 @@
+{
+  "version": "1.1.0",
+  "last_updated": "2025-11-04T23:50:55.483032",
+  "description": "Universal disease-to-pathway database for hypothesis testing across 50+ diseases",
+  "note": "WEIGHTS STATUS: Top 10 cancers will be populated with real TCGA frequencies by Agent Jr. Current weights are literature-based estimates (0.75 default) pending extraction. See .cursor/rules/AGENT_JR_TCGA_MUTATION_FREQUENCY_EXTRACTION.mdc for extraction plan.",
+  "diseases": {
+    "ovarian_cancer_hgs": {
+      "full_name": "High-Grade Serous Ovarian Cancer",
+      "category": "gynecologic_cancer",
+      "pathways": {
+        "hrd_ddr": {
+          "weight": 0.112,
+          "description": "Homologous recombination deficiency",
+          "source": "TCGA (11% altered, n=89)",
+          "genes": [
+            "BRCA1",
+            "BRCA2"
+          ],
+          "samples_altered": 9,
+          "total_samples": 89,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:15.848294"
+        },
+        "pi3k_akt_mtor": {
+          "weight": 0.045,
+          "description": "PI3K/AKT/mTOR signaling",
+          "source": "TCGA (4% altered, n=89)",
+          "genes": [
+            "PIK3CA",
+            "PTEN",
+            "AKT1"
+          ],
+          "samples_altered": 4,
+          "total_samples": 89,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:15.848506"
+        },
+        "angiogenesis": {
+          "weight": 0.011,
+          "description": "VEGF-mediated angiogenesis",
+          "source": "TCGA (1% altered, n=89)",
+          "genes": [
+            "VEGFA"
+          ],
+          "samples_altered": 0,
+          "total_samples": 89,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:15.848686"
+        },
+        "tp53": {
+          "weight": 0.955,
+          "description": "TP53 tumor suppressor",
+          "source": "TCGA (95% altered, n=89)",
+          "genes": [
+            "TP53"
+          ],
+          "samples_altered": 84,
+          "total_samples": 89,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:15.848882"
+        },
+        "ras_mapk": {
+          "weight": 0.022,
+          "description": "RAS/MAPK signaling",
+          "source": "TCGA (2% altered, n=89)",
+          "genes": [
+            "KRAS",
+            "NRAS",
+            "BRAF"
+          ],
+          "samples_altered": 1,
+          "total_samples": 89,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:15.849054"
+        }
+      }
+    },
+    "breast_cancer": {
+      "full_name": "Breast Cancer",
+      "category": "breast_cancer",
+      "pathways": {
+        "her2_signaling": {
+          "weight": 0.053,
+          "description": "HER2 receptor signaling",
+          "source": "TCGA (5% altered, n=75)",
+          "genes": [
+            "ERBB2"
+          ],
+          "samples_altered": 3,
+          "total_samples": 75,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:17.728016"
+        },
+        "er_pr_signaling": {
+          "weight": 0.0,
+          "description": "Estrogen/Progesterone receptors",
+          "source": "TCGA (0% altered, n=75)",
+          "genes": [
+            "ESR1",
+            "PGR"
+          ],
+          "samples_altered": 0,
+          "total_samples": 75,
+          "extraction_type": "mutation_proxy",
+          "extracted_at": "2025-11-04T23:44:17.728188"
+        },
+        "pi3k_akt_mtor": {
+          "weight": 0.827,
+          "description": "PI3K/AKT/mTOR pathway",
+          "source": "TCGA (82% altered, n=75)",
+          "genes": [
+            "PIK3CA",
+            "PTEN",
+            "AKT1"
+          ],
+          "samples_altered": 62,
+          "total_samples": 75,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:17.728365"
+        },
+        "hrd_ddr": {
+          "weight": 0.133,
+          "description": "DNA damage response (BRCA1/2)",
+          "source": "TCGA (13% altered, n=75)",
+          "genes": [
+            "BRCA1",
+            "BRCA2"
+          ],
+          "samples_altered": 9,
+          "total_samples": 75,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:17.728518"
+        },
+        "cell_cycle": {
+          "weight": 0.04,
+          "description": "CDK4/6 cell cycle control",
+          "source": "TCGA (4% altered, n=75)",
+          "genes": [
+            "CDK4",
+            "CDK6",
+            "CCND1",
+            "RB1"
+          ],
+          "samples_altered": 3,
+          "total_samples": 75,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:17.728679"
+        }
+      }
+    },
+    "lung_cancer": {
+      "full_name": "Lung Cancer (NSCLC)",
+      "category": "lung_cancer",
+      "pathways": {
+        "egfr_signaling": {
+          "weight": 0.278,
+          "description": "EGFR tyrosine kinase signaling",
+          "source": "TCGA (27% altered, n=18)",
+          "genes": [
+            "EGFR"
+          ],
+          "samples_altered": 5,
+          "total_samples": 18,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:19.606247"
+        },
+        "alk_ros1": {
+          "weight": 0.167,
+          "description": "ALK/ROS1 fusions",
+          "source": "TCGA (16% altered, n=18)",
+          "genes": [
+            "ALK",
+            "ROS1"
+          ],
+          "samples_altered": 3,
+          "total_samples": 18,
+          "extraction_type": "mutation_proxy",
+          "extracted_at": "2025-11-04T23:44:19.606416"
+        },
+        "angiogenesis": {
+          "weight": 0.0,
+          "description": "VEGF angiogenesis",
+          "source": "TCGA (0% altered, n=18)",
+          "genes": [
+            "VEGFA"
+          ],
+          "samples_altered": 0,
+          "total_samples": 18,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:19.606536"
+        },
+        "pd_l1_immune": {
+          "weight": 0.056,
+          "description": "PD-L1 immune checkpoint",
+          "source": "TCGA (5% altered, n=18)",
+          "genes": [
+            "CD274"
+          ],
+          "samples_altered": 1,
+          "total_samples": 18,
+          "extraction_type": "mutation_proxy",
+          "extracted_at": "2025-11-04T23:44:19.606678"
+        },
+        "kras_signaling": {
+          "weight": 0.611,
+          "description": "KRAS mutations",
+          "source": "TCGA (61% altered, n=18)",
+          "genes": [
+            "KRAS"
+          ],
+          "samples_altered": 10,
+          "total_samples": 18,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:19.606816"
+        }
+      }
+    },
+    "colorectal_cancer": {
+      "full_name": "Colorectal Cancer",
+      "category": "gi_cancer",
+      "pathways": {
+        "wnt_beta_catenin": {
+          "weight": 0.933,
+          "description": "WNT/\u03b2-catenin signaling",
+          "source": "TCGA (93% altered, n=15)",
+          "genes": [
+            "APC",
+            "CTNNB1"
+          ],
+          "samples_altered": 13,
+          "total_samples": 15,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:21.457395"
+        },
+        "egfr_signaling": {
+          "weight": 0.067,
+          "description": "EGFR signaling",
+          "source": "TCGA (6% altered, n=15)",
+          "genes": [
+            "EGFR"
+          ],
+          "samples_altered": 1,
+          "total_samples": 15,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:21.457561"
+        },
+        "angiogenesis": {
+          "weight": 0.0,
+          "description": "VEGF angiogenesis",
+          "source": "TCGA (0% altered, n=15)",
+          "genes": [
+            "VEGFA"
+          ],
+          "samples_altered": 0,
+          "total_samples": 15,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:21.457682"
+        },
+        "msi_mmr": {
+          "weight": 0.133,
+          "description": "Mismatch repair deficiency",
+          "source": "TCGA (13% altered, n=15)",
+          "genes": [
+            "MLH1",
+            "MSH2",
+            "MSH6",
+            "PMS2"
+          ],
+          "samples_altered": 1,
+          "total_samples": 15,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:21.457828"
+        },
+        "ras_mapk": {
+          "weight": 0.8,
+          "description": "RAS/MAPK activation",
+          "source": "TCGA (80% altered, n=15)",
+          "genes": [
+            "KRAS",
+            "NRAS",
+            "BRAF"
+          ],
+          "samples_altered": 12,
+          "total_samples": 15,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:21.457970"
+        }
+      }
+    },
+    "pancreatic_cancer": {
+      "full_name": "Pancreatic Ductal Adenocarcinoma",
+      "category": "gi_cancer",
+      "pathways": {
+        "kras_signaling": {
+          "weight": 0.854,
+          "description": "KRAS mutations (>90%)",
+          "source": "TCGA (85% altered, n=96)",
+          "genes": [
+            "KRAS"
+          ],
+          "samples_altered": 81,
+          "total_samples": 96,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:27.078011"
+        },
+        "tp53": {
+          "weight": 0.781,
+          "description": "TP53 loss",
+          "source": "TCGA (78% altered, n=96)",
+          "genes": [
+            "TP53"
+          ],
+          "samples_altered": 74,
+          "total_samples": 96,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:27.078228"
+        },
+        "smad4_tgf_beta": {
+          "weight": 0.24,
+          "description": "SMAD4/TGF-\u03b2 signaling",
+          "source": "TCGA (24% altered, n=96)",
+          "genes": [
+            "SMAD4"
+          ],
+          "samples_altered": 23,
+          "total_samples": 96,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:27.078397"
+        },
+        "cdkn2a": {
+          "weight": 0.25,
+          "description": "CDKN2A/p16 loss",
+          "source": "TCGA (25% altered, n=96)",
+          "genes": [
+            "CDKN2A"
+          ],
+          "samples_altered": 24,
+          "total_samples": 96,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:27.078557"
+        },
+        "ddr": {
+          "weight": 0.073,
+          "description": "DNA damage response",
+          "source": "TCGA (7% altered, n=96)",
+          "genes": [
+            "BRCA1",
+            "BRCA2",
+            "ATM"
+          ],
+          "samples_altered": 7,
+          "total_samples": 96,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:27.078721"
+        }
+      }
+    },
+    "prostate_cancer": {
+      "full_name": "Prostate Cancer",
+      "category": "genitourinary_cancer",
+      "pathways": {
+        "androgen_receptor": {
+          "weight": 0.016,
+          "description": "Androgen receptor signaling",
+          "source": "TCGA (1% altered, n=64)",
+          "genes": [
+            "AR"
+          ],
+          "samples_altered": 1,
+          "total_samples": 64,
+          "extraction_type": "mutation_proxy",
+          "extracted_at": "2025-11-04T23:44:25.240055"
+        },
+        "pi3k_akt_pten": {
+          "weight": 0.328,
+          "description": "PTEN loss / PI3K activation",
+          "source": "TCGA (32% altered, n=64)",
+          "genes": [
+            "PTEN",
+            "PIK3CA",
+            "AKT1"
+          ],
+          "samples_altered": 20,
+          "total_samples": 64,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:25.240227"
+        },
+        "ddr": {
+          "weight": 0.25,
+          "description": "BRCA2 / DNA repair defects",
+          "source": "TCGA (25% altered, n=64)",
+          "genes": [
+            "BRCA2",
+            "ATM",
+            "CHEK2"
+          ],
+          "samples_altered": 16,
+          "total_samples": 64,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:25.240381"
+        },
+        "tp53": {
+          "weight": 0.484,
+          "description": "TP53 alterations",
+          "source": "TCGA (48% altered, n=64)",
+          "genes": [
+            "TP53"
+          ],
+          "samples_altered": 30,
+          "total_samples": 64,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:25.240603"
+        },
+        "tmprss2_erg": {
+          "weight": 0.016,
+          "description": "TMPRSS2-ERG fusion",
+          "source": "TCGA (1% altered, n=64)",
+          "genes": [
+            "ERG",
+            "ETV1"
+          ],
+          "samples_altered": 1,
+          "total_samples": 64,
+          "extraction_type": "mutation_proxy",
+          "extracted_at": "2025-11-04T23:44:25.240768"
+        }
+      }
+    },
+    "melanoma": {
+      "full_name": "Melanoma",
+      "category": "skin_cancer",
+      "pathways": {
+        "ras_mapk_braf": {
+          "weight": 1.0,
+          "description": "BRAF V600E / MEK",
+          "source": "TCGA (100% altered, n=10)",
+          "genes": [
+            "BRAF",
+            "NRAS",
+            "KRAS"
+          ],
+          "samples_altered": 10,
+          "total_samples": 10,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:23.360381"
+        },
+        "pd1_immune": {
+          "weight": 0.0,
+          "description": "PD-1 immune checkpoint",
+          "source": "TCGA (0% altered, n=10)",
+          "genes": [
+            "CD274"
+          ],
+          "samples_altered": 0,
+          "total_samples": 10,
+          "extraction_type": "mutation_proxy",
+          "extracted_at": "2025-11-04T23:44:23.360544"
+        },
+        "kit_signaling": {
+          "weight": 0.0,
+          "description": "c-KIT mutations (mucosal/acral)",
+          "source": "TCGA (0% altered, n=10)",
+          "genes": [
+            "KIT"
+          ],
+          "samples_altered": 0,
+          "total_samples": 10,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:23.360671"
+        },
+        "nras": {
+          "weight": 0.7,
+          "description": "NRAS mutations",
+          "source": "TCGA (70% altered, n=10)",
+          "genes": [
+            "NRAS"
+          ],
+          "samples_altered": 7,
+          "total_samples": 10,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:23.360817"
+        },
+        "cdkn2a": {
+          "weight": 0.0,
+          "description": "CDKN2A loss",
+          "source": "TCGA (0% altered, n=10)",
+          "genes": [
+            "CDKN2A"
+          ],
+          "samples_altered": 0,
+          "total_samples": 10,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:23.360931"
+        }
+      }
+    },
+    "leukemia": {
+      "full_name": "Acute Myeloid Leukemia (AML)",
+      "category": "hematologic_malignancy",
+      "pathways": {
+        "flt3_signaling": {
+          "weight": 0.434,
+          "description": "FLT3-ITD mutations",
+          "source": "TCGA (43% altered, n=136)",
+          "genes": [
+            "FLT3"
+          ],
+          "samples_altered": 59,
+          "total_samples": 136,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:34.840003"
+        },
+        "idh1_idh2": {
+          "weight": 0.279,
+          "description": "IDH1/2 mutations",
+          "source": "TCGA (27% altered, n=136)",
+          "genes": [
+            "IDH1",
+            "IDH2"
+          ],
+          "samples_altered": 37,
+          "total_samples": 136,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:34.840283"
+        },
+        "npm1": {
+          "weight": 0.397,
+          "description": "NPM1 mutations",
+          "source": "TCGA (39% altered, n=136)",
+          "genes": [
+            "NPM1"
+          ],
+          "samples_altered": 53,
+          "total_samples": 136,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:34.840506"
+        },
+        "tp53": {
+          "weight": 0.118,
+          "description": "TP53 alterations",
+          "source": "TCGA (11% altered, n=136)",
+          "genes": [
+            "TP53"
+          ],
+          "samples_altered": 16,
+          "total_samples": 136,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:34.840702"
+        },
+        "cell_differentiation": {
+          "weight": 0.235,
+          "description": "Differentiation blockade",
+          "source": "TCGA (23% altered, n=136)",
+          "genes": [
+            "CEBPA",
+            "RUNX1"
+          ],
+          "samples_altered": 31,
+          "total_samples": 136,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:34.840899"
+        }
+      }
+    },
+    "multiple_myeloma": {
+      "full_name": "Multiple Myeloma",
+      "category": "hematologic_malignancy",
+      "pathways": {
+        "nfkb": {
+          "weight": 0.95,
+          "description": "NF-\u03baB signaling"
+        },
+        "proteasome": {
+          "weight": 0.9,
+          "description": "Proteasome degradation"
+        },
+        "immunomodulation": {
+          "weight": 0.85,
+          "description": "IMiD targets (CRBN)"
+        },
+        "ras_mapk": {
+          "weight": 0.8,
+          "description": "RAS/MAPK mutations"
+        },
+        "bcma_cd38": {
+          "weight": 0.75,
+          "description": "BCMA/CD38 antigens"
+        }
+      }
+    },
+    "glioblastoma": {
+      "full_name": "Glioblastoma",
+      "category": "cns_tumor",
+      "pathways": {
+        "egfr_signaling": {
+          "weight": 0.366,
+          "description": "EGFR amplification/mutation",
+          "source": "TCGA (36% altered, n=82)",
+          "genes": [
+            "EGFR"
+          ],
+          "samples_altered": 30,
+          "total_samples": 82,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:28.961550"
+        },
+        "pten_pi3k_akt": {
+          "weight": 0.671,
+          "description": "PTEN loss / PI3K activation",
+          "source": "TCGA (67% altered, n=82)",
+          "genes": [
+            "PTEN",
+            "PIK3CA",
+            "PIK3R1"
+          ],
+          "samples_altered": 55,
+          "total_samples": 82,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:28.961758"
+        },
+        "tp53_rb": {
+          "weight": 0.488,
+          "description": "TP53/RB pathway",
+          "source": "TCGA (48% altered, n=82)",
+          "genes": [
+            "TP53",
+            "RB1"
+          ],
+          "samples_altered": 40,
+          "total_samples": 82,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:28.961937"
+        },
+        "angiogenesis": {
+          "weight": 0.0,
+          "description": "VEGF angiogenesis",
+          "source": "TCGA (0% altered, n=82)",
+          "genes": [
+            "VEGFA"
+          ],
+          "samples_altered": 0,
+          "total_samples": 82,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:28.962066"
+        },
+        "idh1": {
+          "weight": 0.085,
+          "description": "IDH1 mutations (secondary GBM)",
+          "source": "TCGA (8% altered, n=82)",
+          "genes": [
+            "IDH1"
+          ],
+          "samples_altered": 6,
+          "total_samples": 82,
+          "extraction_type": "mutation",
+          "extracted_at": "2025-11-04T23:44:28.962216"
+        }
+      }
+    },
+    "renal_cell_carcinoma": {
+      "full_name": "Renal Cell Carcinoma (Clear Cell)",
+      "category": "genitourinary_cancer",
+      "pathways": {
+        "vhl_hif": {
+          "weight": 0.95,
+          "description": "VHL loss / HIF stabilization"
+        },
+        "angiogenesis": {
+          "weight": 0.9,
+          "description": "VEGF/PDGF angiogenesis"
+        },
+        "mtor": {
+          "weight": 0.85,
+          "description": "mTOR signaling"
+        },
+        "immune_checkpoint": {
+          "weight": 0.8,
+          "description": "PD-1/PD-L1"
+        },
+        "chromatin_remodeling": {
+          "weight": 0.7,
+          "description": "PBRM1/BAP1/SETD2"
+        }
+      }
+    },
+    "gastric_cancer": {
+      "full_name": "Gastric Cancer",
+      "category": "gi_cancer",
+      "pathways": {
+        "her2_signaling": {
+          "weight": 0.9,
+          "description": "HER2 amplification"
+        },
+        "vegf_angiogenesis": {
+          "weight": 0.85,
+          "description": "VEGF-mediated angiogenesis"
+        },
+        "tp53": {
+          "weight": 0.8,
+          "description": "TP53 mutations"
+        },
+        "msi": {
+          "weight": 0.75,
+          "description": "Microsatellite instability"
+        },
+        "ebv": {
+          "weight": 0.7,
+          "description": "EBV-associated (PD-L1)"
+        }
+      }
+    },
+    "hepatocellular_carcinoma": {
+      "full_name": "Hepatocellular Carcinoma",
+      "category": "gi_cancer",
+      "pathways": {
+        "angiogenesis": {
+          "weight": 0.95,
+          "description": "VEGF/PDGF angiogenesis"
+        },
+        "wnt_beta_catenin": {
+          "weight": 0.85,
+          "description": "WNT/\u03b2-catenin (CTNNB1)"
+        },
+        "tp53": {
+          "weight": 0.8,
+          "description": "TP53 mutations"
+        },
+        "tert": {
+          "weight": 0.75,
+          "description": "TERT promoter mutations"
+        },
+        "immune_checkpoint": {
+          "weight": 0.7,
+          "description": "PD-1/PD-L1"
+        }
+      }
+    },
+    "endometrial_cancer": {
+      "full_name": "Endometrial Cancer",
+      "category": "gynecologic_cancer",
+      "pathways": {
+        "pten_pi3k_akt": {
+          "weight": 0.95,
+          "description": "PTEN loss / PI3K activation"
+        },
+        "msi_mmr": {
+          "weight": 0.9,
+          "description": "Mismatch repair deficiency"
+        },
+        "tp53": {
+          "weight": 0.8,
+          "description": "TP53 mutations (serous type)"
+        },
+        "wnt_beta_catenin": {
+          "weight": 0.75,
+          "description": "CTNNB1 mutations"
+        },
+        "fgfr": {
+          "weight": 0.7,
+          "description": "FGFR2 mutations"
+        }
+      }
+    },
+    "bladder_cancer": {
+      "full_name": "Bladder Cancer (Urothelial)",
+      "category": "genitourinary_cancer",
+      "pathways": {
+        "fgfr": {
+          "weight": 0.9,
+          "description": "FGFR3 mutations/fusions"
+        },
+        "tp53_rb": {
+          "weight": 0.85,
+          "description": "TP53/RB pathway"
+        },
+        "immune_checkpoint": {
+          "weight": 0.8,
+          "description": "PD-L1 expression"
+        },
+        "erbb2": {
+          "weight": 0.75,
+          "description": "ERBB2 (HER2) alterations"
+        },
+        "pi3k_akt": {
+          "weight": 0.7,
+          "description": "PIK3CA mutations"
+        }
+      }
+    },
+    "esophageal_cancer": {
+      "full_name": "Esophageal Cancer (Adenocarcinoma)",
+      "category": "gi_cancer",
+      "pathways": {
+        "her2_signaling": {
+          "weight": 0.9,
+          "description": "HER2 amplification"
+        },
+        "angiogenesis": {
+          "weight": 0.85,
+          "description": "VEGF angiogenesis"
+        },
+        "tp53": {
+          "weight": 0.8,
+          "description": "TP53 mutations"
+        },
+        "cdkn2a": {
+          "weight": 0.75,
+          "description": "CDKN2A loss"
+        },
+        "pi3k_akt": {
+          "weight": 0.7,
+          "description": "PIK3CA/PTEN"
+        }
+      }
+    },
+    "cervical_cancer": {
+      "full_name": "Cervical Cancer",
+      "category": "gynecologic_cancer",
+      "pathways": {
+        "hpv_e6_e7": {
+          "weight": 0.95,
+          "description": "HPV E6/E7 (TP53/RB inactivation)"
+        },
+        "pi3k_akt": {
+          "weight": 0.85,
+          "description": "PIK3CA mutations"
+        },
+        "immune_checkpoint": {
+          "weight": 0.8,
+          "description": "PD-1/PD-L1"
+        },
+        "angiogenesis": {
+          "weight": 0.75,
+          "description": "VEGF"
+        },
+        "erbb": {
+          "weight": 0.65,
+          "description": "ERBB2/3"
+        }
+      }
+    },
+    "thyroid_cancer": {
+      "full_name": "Thyroid Cancer (Papillary)",
+      "category": "endocrine_tumor",
+      "pathways": {
+        "braf_mapk": {
+          "weight": 0.95,
+          "description": "BRAF V600E"
+        },
+        "ras_signaling": {
+          "weight": 0.85,
+          "description": "RAS mutations"
+        },
+        "ret_fusion": {
+          "weight": 0.8,
+          "description": "RET/PTC fusions"
+        },
+        "vegf_angiogenesis": {
+          "weight": 0.7,
+          "description": "VEGF pathway"
+        },
+        "pi3k_akt": {
+          "weight": 0.65,
+          "description": "PIK3CA/PTEN"
+        }
+      }
+    },
+    "sarcoma": {
+      "full_name": "Soft Tissue Sarcoma",
+      "category": "mesenchymal_tumor",
+      "pathways": {
+        "tp53_rb": {
+          "weight": 0.85,
+          "description": "TP53/RB alterations"
+        },
+        "angiogenesis": {
+          "weight": 0.8,
+          "description": "VEGF"
+        },
+        "kit_pdgfr": {
+          "weight": 0.75,
+          "description": "c-KIT/PDGFR (GIST)"
+        },
+        "mdm2_cdk4": {
+          "weight": 0.7,
+          "description": "MDM2/CDK4 amplification"
+        },
+        "chromatin_remodeling": {
+          "weight": 0.65,
+          "description": "SWI/SNF complex"
+        }
+      }
+    },
+    "nhl_dlbcl": {
+      "full_name": "Diffuse Large B-Cell Lymphoma",
+      "category": "hematologic_malignancy",
+      "pathways": {
+        "bcr_signaling": {
+          "weight": 0.95,
+          "description": "B-cell receptor signaling"
+        },
+        "nfkb": {
+          "weight": 0.9,
+          "description": "NF-\u03baB activation"
+        },
+        "bcl2": {
+          "weight": 0.85,
+          "description": "BCL2 overexpression"
+        },
+        "tp53": {
+          "weight": 0.75,
+          "description": "TP53 mutations"
+        },
+        "myd88": {
+          "weight": 0.7,
+          "description": "MYD88 L265P"
+        }
+      }
+    },
+    "cll": {
+      "full_name": "Chronic Lymphocytic Leukemia",
+      "category": "hematologic_malignancy",
+      "pathways": {
+        "btk_signaling": {
+          "weight": 0.95,
+          "description": "BTK (Bruton's tyrosine kinase)"
+        },
+        "bcl2": {
+          "weight": 0.9,
+          "description": "BCL2 overexpression"
+        },
+        "tp53_atm": {
+          "weight": 0.85,
+          "description": "TP53/ATM deletions"
+        },
+        "bcr_signaling": {
+          "weight": 0.8,
+          "description": "B-cell receptor signaling"
+        },
+        "notch1": {
+          "weight": 0.7,
+          "description": "NOTCH1 mutations"
+        }
+      }
+    },
+    "hodgkin_lymphoma": {
+      "full_name": "Hodgkin Lymphoma",
+      "category": "hematologic_malignancy",
+      "pathways": {
+        "pd1_immune": {
+          "weight": 0.95,
+          "description": "PD-1 checkpoint (9p24.1 amplification)"
+        },
+        "nfkb": {
+          "weight": 0.85,
+          "description": "NF-\u03baB activation"
+        },
+        "jak_stat": {
+          "weight": 0.8,
+          "description": "JAK/STAT signaling"
+        },
+        "ebv": {
+          "weight": 0.7,
+          "description": "EBV-associated"
+        },
+        "cd30": {
+          "weight": 0.9,
+          "description": "CD30 antigen"
+        }
+      }
+    },
+    "mds": {
+      "full_name": "Myelodysplastic Syndromes",
+      "category": "hematologic_malignancy",
+      "pathways": {
+        "splicing": {
+          "weight": 0.95,
+          "description": "SF3B1/SRSF2/U2AF1 mutations"
+        },
+        "epigenetics": {
+          "weight": 0.9,
+          "description": "TET2/DNMT3A/ASXL1"
+        },
+        "tp53": {
+          "weight": 0.8,
+          "description": "TP53 mutations"
+        },
+        "ras_signaling": {
+          "weight": 0.7,
+          "description": "NRAS/KRAS"
+        },
+        "erythropoiesis": {
+          "weight": 0.75,
+          "description": "Erythroid differentiation"
+        }
+      }
+    },
+    "cml": {
+      "full_name": "Chronic Myeloid Leukemia",
+      "category": "hematologic_malignancy",
+      "pathways": {
+        "bcr_abl1": {
+          "weight": 0.98,
+          "description": "BCR-ABL1 fusion (Philadelphia chromosome)"
+        },
+        "tki_resistance": {
+          "weight": 0.85,
+          "description": "T315I and other TKI resistance mutations"
+        },
+        "jak_stat": {
+          "weight": 0.7,
+          "description": "JAK/STAT signaling"
+        },
+        "pi3k_akt": {
+          "weight": 0.65,
+          "description": "PI3K/AKT pathway"
+        },
+        "src_family": {
+          "weight": 0.6,
+          "description": "SRC family kinases"
+        }
+      }
+    },
+    "mesothelioma": {
+      "full_name": "Malignant Pleural Mesothelioma",
+      "category": "thoracic_cancer",
+      "pathways": {
+        "bap1": {
+          "weight": 0.95,
+          "description": "BAP1 loss"
+        },
+        "nf2_hippo": {
+          "weight": 0.9,
+          "description": "NF2 / Hippo pathway"
+        },
+        "cdkn2a": {
+          "weight": 0.85,
+          "description": "CDKN2A deletion"
+        },
+        "immune_checkpoint": {
+          "weight": 0.75,
+          "description": "PD-L1"
+        },
+        "angiogenesis": {
+          "weight": 0.7,
+          "description": "VEGF"
+        }
+      }
+    },
+    "cholangiocarcinoma": {
+      "full_name": "Cholangiocarcinoma",
+      "category": "gi_cancer",
+      "pathways": {
+        "fgfr": {
+          "weight": 0.9,
+          "description": "FGFR2 fusions"
+        },
+        "idh1": {
+          "weight": 0.85,
+          "description": "IDH1 mutations"
+        },
+        "tp53_kras": {
+          "weight": 0.8,
+          "description": "TP53/KRAS"
+        },
+        "her2": {
+          "weight": 0.7,
+          "description": "ERBB2 amplification"
+        },
+        "bap1": {
+          "weight": 0.65,
+          "description": "BAP1 mutations"
+        }
+      }
+    },
+    "neuroendocrine_tumor": {
+      "full_name": "Neuroendocrine Tumor (GI/Lung)",
+      "category": "neuroendocrine",
+      "pathways": {
+        "men1": {
+          "weight": 0.85,
+          "description": "MEN1 mutations"
+        },
+        "daxx_atrx": {
+          "weight": 0.8,
+          "description": "DAXX/ATRX alterations"
+        },
+        "mtor": {
+          "weight": 0.75,
+          "description": "mTOR pathway"
+        },
+        "somatostatin": {
+          "weight": 0.9,
+          "description": "Somatostatin receptor"
+        },
+        "chromatin_remodeling": {
+          "weight": 0.7,
+          "description": "Chromatin modifiers"
+        }
+      }
+    },
+    "alzheimers": {
+      "full_name": "Alzheimer's Disease",
+      "category": "neurodegenerative",
+      "pathways": {
+        "amyloid_beta": {
+          "weight": 0.95,
+          "description": "Amyloid-\u03b2 accumulation"
+        },
+        "tau_protein": {
+          "weight": 0.9,
+          "description": "Tau hyperphosphorylation"
+        },
+        "neuroinflammation": {
+          "weight": 0.85,
+          "description": "Microglial activation"
+        },
+        "apoe4": {
+          "weight": 0.8,
+          "description": "APOE4 genetic risk"
+        },
+        "oxidative_stress": {
+          "weight": 0.75,
+          "description": "Mitochondrial dysfunction"
+        }
+      }
+    },
+    "parkinsons": {
+      "full_name": "Parkinson's Disease",
+      "category": "neurodegenerative",
+      "pathways": {
+        "alpha_synuclein": {
+          "weight": 0.95,
+          "description": "\u03b1-synuclein aggregation"
+        },
+        "mitochondrial_dysfunction": {
+          "weight": 0.9,
+          "description": "Complex I deficiency"
+        },
+        "dopamine_signaling": {
+          "weight": 0.85,
+          "description": "Dopaminergic neuron loss"
+        },
+        "lrrk2": {
+          "weight": 0.75,
+          "description": "LRRK2 mutations"
+        },
+        "gba": {
+          "weight": 0.7,
+          "description": "GBA (glucocerebrosidase) deficiency"
+        }
+      }
+    },
+    "rheumatoid_arthritis": {
+      "full_name": "Rheumatoid Arthritis",
+      "category": "autoimmune",
+      "pathways": {
+        "tnf_alpha": {
+          "weight": 0.95,
+          "description": "TNF-\u03b1 inflammation"
+        },
+        "il6": {
+          "weight": 0.9,
+          "description": "IL-6 signaling"
+        },
+        "jak_stat": {
+          "weight": 0.85,
+          "description": "JAK/STAT pathway"
+        },
+        "b_cell": {
+          "weight": 0.8,
+          "description": "B-cell activation"
+        },
+        "t_cell": {
+          "weight": 0.75,
+          "description": "T-cell co-stimulation"
+        }
+      }
+    },
+    "type_2_diabetes": {
+      "full_name": "Type 2 Diabetes",
+      "category": "metabolic",
+      "pathways": {
+        "insulin_resistance": {
+          "weight": 0.95,
+          "description": "Insulin receptor signaling"
+        },
+        "beta_cell_dysfunction": {
+          "weight": 0.9,
+          "description": "Pancreatic \u03b2-cell failure"
+        },
+        "inflammation": {
+          "weight": 0.8,
+          "description": "Chronic inflammation"
+        },
+        "lipid_metabolism": {
+          "weight": 0.75,
+          "description": "Dyslipidemia"
+        },
+        "glp1": {
+          "weight": 0.85,
+          "description": "GLP-1 signaling"
+        }
+      }
+    },
+    "atherosclerosis": {
+      "full_name": "Atherosclerosis",
+      "category": "cardiovascular",
+      "pathways": {
+        "ldl_cholesterol": {
+          "weight": 0.95,
+          "description": "LDL oxidation"
+        },
+        "endothelial_dysfunction": {
+          "weight": 0.9,
+          "description": "Endothelial injury"
+        },
+        "inflammation": {
+          "weight": 0.85,
+          "description": "Chronic vascular inflammation"
+        },
+        "pcsk9": {
+          "weight": 0.8,
+          "description": "PCSK9 / LDL receptor regulation"
+        },
+        "foam_cell_formation": {
+          "weight": 0.75,
+          "description": "Macrophage foam cells"
+        }
+      }
+    },
+    "psoriasis": {
+      "full_name": "Psoriasis",
+      "category": "autoimmune",
+      "pathways": {
+        "il23_il17": {
+          "weight": 0.95,
+          "description": "IL-23/IL-17 axis"
+        },
+        "tnf_alpha": {
+          "weight": 0.85,
+          "description": "TNF-\u03b1 signaling"
+        },
+        "keratinocyte_proliferation": {
+          "weight": 0.8,
+          "description": "Hyperproliferation"
+        },
+        "t_cell": {
+          "weight": 0.75,
+          "description": "T-cell activation"
+        },
+        "nfkb": {
+          "weight": 0.7,
+          "description": "NF-\u03baB signaling"
+        }
+      }
+    },
+    "crohns_disease": {
+      "full_name": "Crohn's Disease",
+      "category": "inflammatory_bowel",
+      "pathways": {
+        "tnf_alpha": {
+          "weight": 0.95,
+          "description": "TNF-\u03b1 inflammation"
+        },
+        "il23": {
+          "weight": 0.9,
+          "description": "IL-23 signaling"
+        },
+        "gut_barrier": {
+          "weight": 0.85,
+          "description": "Intestinal barrier dysfunction"
+        },
+        "t_cell": {
+          "weight": 0.8,
+          "description": "T-cell dysregulation"
+        },
+        "jak_stat": {
+          "weight": 0.75,
+          "description": "JAK/STAT signaling"
+        }
+      }
+    },
+    "ulcerative_colitis": {
+      "full_name": "Ulcerative Colitis",
+      "category": "inflammatory_bowel",
+      "pathways": {
+        "tnf_alpha": {
+          "weight": 0.95,
+          "description": "TNF-\u03b1 inflammation"
+        },
+        "il23": {
+          "weight": 0.85,
+          "description": "IL-23 signaling"
+        },
+        "gut_barrier": {
+          "weight": 0.8,
+          "description": "Mucosal barrier"
+        },
+        "jak_stat": {
+          "weight": 0.75,
+          "description": "JAK/STAT signaling"
+        },
+        "oxidative_stress": {
+          "weight": 0.7,
+          "description": "ROS production"
+        }
+      }
+    },
+    "macular_degeneration": {
+      "full_name": "Age-Related Macular Degeneration",
+      "category": "ophthalmologic",
+      "pathways": {
+        "angiogenesis": {
+          "weight": 0.95,
+          "description": "VEGF-mediated neovascularization"
+        },
+        "complement": {
+          "weight": 0.85,
+          "description": "Complement system (CFH)"
+        },
+        "oxidative_stress": {
+          "weight": 0.8,
+          "description": "Retinal oxidative damage"
+        },
+        "inflammation": {
+          "weight": 0.75,
+          "description": "Chronic inflammation"
+        },
+        "lipofuscin": {
+          "weight": 0.7,
+          "description": "Lipofuscin accumulation (drusen)"
+        }
+      }
+    },
+    "copd": {
+      "full_name": "Chronic Obstructive Pulmonary Disease",
+      "category": "respiratory",
+      "pathways": {
+        "inflammation": {
+          "weight": 0.95,
+          "description": "Neutrophilic inflammation"
+        },
+        "protease_antiprotease": {
+          "weight": 0.9,
+          "description": "Elastase / \u03b11-antitrypsin imbalance"
+        },
+        "oxidative_stress": {
+          "weight": 0.85,
+          "description": "ROS from smoking"
+        },
+        "fibrosis": {
+          "weight": 0.75,
+          "description": "Small airway remodeling"
+        },
+        "apoptosis": {
+          "weight": 0.7,
+          "description": "Alveolar cell death"
+        }
+      }
+    },
+    "asthma": {
+      "full_name": "Asthma",
+      "category": "respiratory",
+      "pathways": {
+        "il4_il13": {
+          "weight": 0.95,
+          "description": "IL-4/IL-13 (Type 2 inflammation)"
+        },
+        "ige": {
+          "weight": 0.9,
+          "description": "IgE-mediated allergic response"
+        },
+        "eosinophils": {
+          "weight": 0.85,
+          "description": "Eosinophilic inflammation"
+        },
+        "smooth_muscle": {
+          "weight": 0.8,
+          "description": "Airway smooth muscle constriction"
+        },
+        "leukotriene": {
+          "weight": 0.75,
+          "description": "Leukotriene signaling"
+        }
+      }
+    },
+    "pulmonary_fibrosis": {
+      "full_name": "Idiopathic Pulmonary Fibrosis",
+      "category": "respiratory",
+      "pathways": {
+        "tgf_beta": {
+          "weight": 0.95,
+          "description": "TGF-\u03b2 fibrotic signaling"
+        },
+        "fibroblast_activation": {
+          "weight": 0.9,
+          "description": "Myofibroblast differentiation"
+        },
+        "oxidative_stress": {
+          "weight": 0.8,
+          "description": "Oxidative injury"
+        },
+        "epithelial_injury": {
+          "weight": 0.75,
+          "description": "Alveolar epithelial damage"
+        },
+        "senescence": {
+          "weight": 0.7,
+          "description": "Cellular senescence"
+        }
+      }
+    },
+    "endometriosis": {
+      "full_name": "Endometriosis",
+      "category": "gynecologic_benign",
+      "pathways": {
+        "estrogen_signaling": {
+          "weight": 0.95,
+          "description": "Estrogen-dependent growth"
+        },
+        "inflammation": {
+          "weight": 0.9,
+          "description": "Chronic pelvic inflammation"
+        },
+        "angiogenesis": {
+          "weight": 0.85,
+          "description": "VEGF-mediated neovascularization"
+        },
+        "immune_dysfunction": {
+          "weight": 0.75,
+          "description": "Impaired immune clearance"
+        },
+        "nerve_growth": {
+          "weight": 0.7,
+          "description": "Neurogenesis (pain)"
+        }
+      }
+    },
+    "polycystic_ovary_syndrome": {
+      "full_name": "Polycystic Ovary Syndrome (PCOS)",
+      "category": "endocrine",
+      "pathways": {
+        "insulin_resistance": {
+          "weight": 0.95,
+          "description": "Hyperinsulinemia"
+        },
+        "androgen_excess": {
+          "weight": 0.9,
+          "description": "Hyperandrogenism"
+        },
+        "lh_fsh_imbalance": {
+          "weight": 0.85,
+          "description": "LH/FSH ratio dysregulation"
+        },
+        "inflammation": {
+          "weight": 0.75,
+          "description": "Chronic low-grade inflammation"
+        },
+        "oxidative_stress": {
+          "weight": 0.7,
+          "description": "ROS production"
+        }
+      }
+    },
+    "osteoporosis": {
+      "full_name": "Osteoporosis",
+      "category": "bone_metabolic",
+      "pathways": {
+        "osteoclast_activity": {
+          "weight": 0.95,
+          "description": "RANKL/RANK signaling"
+        },
+        "estrogen_deficiency": {
+          "weight": 0.9,
+          "description": "Postmenopausal estrogen loss"
+        },
+        "calcium_vitamin_d": {
+          "weight": 0.85,
+          "description": "Calcium/Vitamin D homeostasis"
+        },
+        "wnt_signaling": {
+          "weight": 0.75,
+          "description": "WNT/LRP5 osteoblast regulation"
+        },
+        "sclerostin": {
+          "weight": 0.7,
+          "description": "Sclerostin inhibition"
+        }
+      }
+    },
+    "migraine": {
+      "full_name": "Migraine",
+      "category": "neurological",
+      "pathways": {
+        "cgrp": {
+          "weight": 0.95,
+          "description": "Calcitonin gene-related peptide (CGRP)"
+        },
+        "serotonin": {
+          "weight": 0.85,
+          "description": "5-HT receptor signaling"
+        },
+        "cortical_spreading_depression": {
+          "weight": 0.8,
+          "description": "Neuronal wave depolarization"
+        },
+        "inflammation": {
+          "weight": 0.75,
+          "description": "Neurogenic inflammation"
+        },
+        "vascular": {
+          "weight": 0.7,
+          "description": "Vasodilation/constriction"
+        }
+      }
+    },
+    "epilepsy": {
+      "full_name": "Epilepsy",
+      "category": "neurological",
+      "pathways": {
+        "gaba_glutamate": {
+          "weight": 0.95,
+          "description": "Excitatory/inhibitory imbalance"
+        },
+        "ion_channels": {
+          "weight": 0.9,
+          "description": "Sodium/potassium channel dysfunction"
+        },
+        "scn1a": {
+          "weight": 0.8,
+          "description": "SCN1A mutations (Dravet syndrome)"
+        },
+        "neuroinflammation": {
+          "weight": 0.7,
+          "description": "Chronic inflammation"
+        },
+        "mitochondrial": {
+          "weight": 0.65,
+          "description": "Mitochondrial dysfunction"
+        }
+      }
+    },
+    "multiple_sclerosis": {
+      "full_name": "Multiple Sclerosis",
+      "category": "autoimmune_neurological",
+      "pathways": {
+        "t_cell_autoreactivity": {
+          "weight": 0.95,
+          "description": "Autoreactive T-cells"
+        },
+        "b_cell": {
+          "weight": 0.9,
+          "description": "B-cell antibody production"
+        },
+        "demyelination": {
+          "weight": 0.85,
+          "description": "Oligodendrocyte damage"
+        },
+        "inflammation": {
+          "weight": 0.8,
+          "description": "CNS inflammation"
+        },
+        "blood_brain_barrier": {
+          "weight": 0.75,
+          "description": "BBB breakdown"
+        }
+      }
+    },
+    "systemic_lupus": {
+      "full_name": "Systemic Lupus Erythematosus (SLE)",
+      "category": "autoimmune",
+      "pathways": {
+        "interferon": {
+          "weight": 0.95,
+          "description": "Type I interferon signature"
+        },
+        "b_cell": {
+          "weight": 0.9,
+          "description": "B-cell hyperactivity (autoantibodies)"
+        },
+        "complement": {
+          "weight": 0.85,
+          "description": "Complement activation"
+        },
+        "immune_complex": {
+          "weight": 0.8,
+          "description": "Immune complex deposition"
+        },
+        "t_cell": {
+          "weight": 0.75,
+          "description": "T-cell dysregulation"
+        }
+      }
+    },
+    "ckd": {
+      "full_name": "Chronic Kidney Disease",
+      "category": "renal",
+      "pathways": {
+        "fibrosis": {
+          "weight": 0.95,
+          "description": "Renal fibrosis (TGF-\u03b2)"
+        },
+        "inflammation": {
+          "weight": 0.85,
+          "description": "Chronic inflammation"
+        },
+        "oxidative_stress": {
+          "weight": 0.8,
+          "description": "ROS production"
+        },
+        "raas": {
+          "weight": 0.9,
+          "description": "Renin-angiotensin-aldosterone system"
+        },
+        "anemia": {
+          "weight": 0.7,
+          "description": "Erythropoietin deficiency"
+        }
+      }
+    },
+    "nafld": {
+      "full_name": "Non-Alcoholic Fatty Liver Disease",
+      "category": "hepatic_metabolic",
+      "pathways": {
+        "insulin_resistance": {
+          "weight": 0.95,
+          "description": "Hepatic insulin resistance"
+        },
+        "lipotoxicity": {
+          "weight": 0.9,
+          "description": "Free fatty acid accumulation"
+        },
+        "inflammation": {
+          "weight": 0.85,
+          "description": "NASH inflammation"
+        },
+        "fibrosis": {
+          "weight": 0.75,
+          "description": "Hepatic stellate cell activation"
+        },
+        "oxidative_stress": {
+          "weight": 0.8,
+          "description": "ROS / lipid peroxidation"
+        }
+      }
+    }
+  },
+  "pathway_descriptions": {
+    "hrd_ddr": "Homologous recombination deficiency and DNA damage response",
+    "pi3k_akt_mtor": "PI3K/AKT/mTOR signaling pathway",
+    "angiogenesis": "VEGF-mediated blood vessel formation",
+    "tp53": "TP53 tumor suppressor pathway",
+    "ras_mapk": "RAS/RAF/MEK/ERK signaling cascade",
+    "her2_signaling": "HER2 (ERBB2) receptor tyrosine kinase signaling",
+    "egfr_signaling": "EGFR receptor tyrosine kinase signaling",
+    "immune_checkpoint": "PD-1/PD-L1/CTLA-4 immune checkpoints",
+    "wnt_beta_catenin": "WNT/\u03b2-catenin canonical signaling",
+    "nfkb": "NF-\u03baB transcription factor signaling"
+  },
+  "extraction_metadata": {
+    "extracted_at": "2025-11-04T23:50:55.483039",
+    "extraction_version": "v1",
+    "cancers_extracted": 9,
+    "cancers_failed": 0,
+    "pathways_updated": 45
+  },
+  "extraction_note": "Real TCGA frequencies for 9 cancers. Other diseases use literature-based estimates (0.75 default). See limitations in extraction report."
+}

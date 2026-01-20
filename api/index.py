@@ -849,7 +849,8 @@ EVO_SERVICE_URL = os.getenv("EVO_SERVICE_URL", "https://crispro--evo-service-evo
 EVO_URL_1B = os.getenv("EVO_URL_1B", "").strip()
 EVO_URL_7B = os.getenv("EVO_URL_7B", "https://crispro--evo-service-evoservice7b-api-7b.modal.run").strip()
 EVO_URL_40B = os.getenv("EVO_URL_40B", EVO_SERVICE_URL).strip()
-DEFAULT_EVO_MODEL = os.getenv("DEFAULT_EVO_MODEL", "evo2_1b").strip()
+# Import DEFAULT_EVO_MODEL from centralized config
+from api.config import DEFAULT_EVO_MODEL
 EVO_TIMEOUT = Timeout(600.0, connect=30.0, read=600.0, write=600.0)
 
 MODEL_TO_BASE = {

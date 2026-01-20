@@ -1,0 +1,909 @@
+{
+  "patients": [
+    {
+      "patient_id": "TCGA-23-2078",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1482",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-04-1348",
+      "ddr_bin": 0.9450962543487549,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-10-0926",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-2077",
+      "ddr_bin": 0.20435746014118195,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1484",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-2280",
+      "ddr_bin": 0.21329957246780396,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1710",
+      "ddr_bin": 0.17362423241138458,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-09-1675",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1691",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-57-1992",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-2059",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1781",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-20-1687",
+      "ddr_bin": 0.6500989198684692,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-2065",
+      "ddr_bin": 0.13478538393974304,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-1727",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-59-2363",
+      "ddr_bin": 0.684114396572113,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-2072",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-1906",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1416",
+      "ddr_bin": 0.9162961840629578,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1495",
+      "ddr_bin": 0.6923669576644897,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-30-1714",
+      "ddr_bin": 0.19645988941192627,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-1736",
+      "ddr_bin": 0.22031737864017487,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-2290",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-1900",
+      "ddr_bin": 0.2030508667230606,
+      "label": 1,
+      "outcome": "resistant"
+    },
+    {
+      "patient_id": "TCGA-24-2260",
+      "ddr_bin": 0.882147490978241,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1463",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-25-2400",
+      "ddr_bin": 0.22520937025547028,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-1725",
+      "ddr_bin": 0.8687592148780823,
+      "label": 1,
+      "outcome": "resistant"
+    },
+    {
+      "patient_id": "TCGA-3P-A9WA",
+      "ddr_bin": 0.4750198721885681,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-25-2408",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1564",
+      "ddr_bin": 0.275513619184494,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-59-2354",
+      "ddr_bin": 0.684114396572113,
+      "label": 1,
+      "outcome": "resistant"
+    },
+    {
+      "patient_id": "TCGA-61-1919",
+      "ddr_bin": 0.29809147119522095,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1565",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1774",
+      "ddr_bin": 0.0,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-13-1481",
+      "ddr_bin": 0.5973989963531494,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1764",
+      "ddr_bin": 0.9463145732879639,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1489",
+      "ddr_bin": 0.18851511180400848,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-2298",
+      "ddr_bin": 0.6869520545005798,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-2293",
+      "ddr_bin": 0.6713870763778687,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-42-2588",
+      "ddr_bin": 0.7944937348365784,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-42-2587",
+      "ddr_bin": 0.25565871596336365,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-20-1686",
+      "ddr_bin": 0.18207451701164246,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-25-2409",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-36-2534",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1603",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1697",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-31-1953",
+      "ddr_bin": 0.14747780561447144,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-36-2543",
+      "ddr_bin": 0.9414137601852417,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-61-2018",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-09-2055",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-42-2591",
+      "ddr_bin": 0.6843165159225464,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1491",
+      "ddr_bin": 0.2725052833557129,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1435",
+      "ddr_bin": 0.6843165159225464,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-1995",
+      "ddr_bin": 0.0,
+      "label": 1,
+      "outcome": "resistant"
+    },
+    {
+      "patient_id": "TCGA-61-1737",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-25-1326",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0884",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1477",
+      "ddr_bin": 0.0,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-24-1469",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-1123",
+      "ddr_bin": 0.45003193616867065,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-61-2003",
+      "ddr_bin": 0.0,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-13-2057",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0894",
+      "ddr_bin": 0.3002030849456787,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-42-2589",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1504",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1693",
+      "ddr_bin": 0.3966555595397949,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-A5FT",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-30-1891",
+      "ddr_bin": 0.17706097662448883,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-25-1316",
+      "ddr_bin": 0.20266377925872803,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-10-0931",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1412",
+      "ddr_bin": 0.12525363266468048,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-25-2404",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0800",
+      "ddr_bin": 0.6472910642623901,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-WR-A838",
+      "ddr_bin": 0.0,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-13-1506",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1104",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-59-2351",
+      "ddr_bin": 0.18120504915714264,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-36-2544",
+      "ddr_bin": 0.4127468466758728,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0893",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1769",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1850",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-2101",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-04-1516",
+      "ddr_bin": 0.9416599273681641,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0916",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1404",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-25-1313",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-59-A5PD",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-2079",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1784",
+      "ddr_bin": 0.20378106832504272,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-2002",
+      "ddr_bin": 0.6872749328613281,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-61-2096",
+      "ddr_bin": 0.2221674621105194,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-24-2295",
+      "ddr_bin": 0.16316157579421997,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-25-2399",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1842",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-1027",
+      "ddr_bin": 0.6771193146705627,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-29-1775",
+      "ddr_bin": 0.4247908592224121,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1474",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1766",
+      "ddr_bin": 0.9129698276519775,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-13-1498",
+      "ddr_bin": 0.8144384622573853,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1499",
+      "ddr_bin": 0.882147490978241,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-36-2551",
+      "ddr_bin": 0.601464033126831,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1763",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-2000",
+      "ddr_bin": 0.17959336936473846,
+      "label": 1,
+      "outcome": "resistant"
+    },
+    {
+      "patient_id": "TCGA-25-2398",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-42-2590",
+      "ddr_bin": 0.0,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-61-2613",
+      "ddr_bin": 0.6415214538574219,
+      "label": 1,
+      "outcome": "resistant"
+    },
+    {
+      "patient_id": "TCGA-61-1904",
+      "ddr_bin": 0.19685454666614532,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1762",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1500",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-1122",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1425",
+      "ddr_bin": 0.16418342292308807,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-20-1682",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-2643",
+      "ddr_bin": 0.882147490978241,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1492",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-04-1349",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1509",
+      "ddr_bin": 0.4278908967971802,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-25-1323",
+      "ddr_bin": 0.9410570859909058,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-04-1542",
+      "ddr_bin": 0.17629137635231018,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-30-1853",
+      "ddr_bin": 0.25111374258995056,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-2061",
+      "ddr_bin": 0.6928667426109314,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-1118",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-OY-A56Q",
+      "ddr_bin": 0.4517219662666321,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0886",
+      "ddr_bin": 0.9408482909202576,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0757",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1777",
+      "ddr_bin": 0.40018805861473083,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-13-0755",
+      "ddr_bin": 0.5512591004371643,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-61-2092",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1761",
+      "ddr_bin": 0.24680379033088684,
+      "label": 1,
+      "outcome": "resistant"
+    },
+    {
+      "patient_id": "TCGA-13-1405",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0904",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1403",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-61-1915",
+      "ddr_bin": 0.6528250575065613,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1698",
+      "ddr_bin": 0.184807687997818,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1418",
+      "ddr_bin": 0.2743946611881256,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1785",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-2084",
+      "ddr_bin": 0.38646042346954346,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-2436",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0921",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-09-2043",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-23-1029",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-1507",
+      "ddr_bin": 0.1971559226512909,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-13-0912",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-10-0934",
+      "ddr_bin": 0.882147490978241,
+      "label": 1,
+      "outcome": "refractory"
+    },
+    {
+      "patient_id": "TCGA-24-1552",
+      "ddr_bin": 0.28643307089805603,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-04-1331",
+      "ddr_bin": 0.0,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-24-1436",
+      "ddr_bin": 0.2968459129333496,
+      "label": 0,
+      "outcome": "sensitive"
+    },
+    {
+      "patient_id": "TCGA-29-1771",
+      "ddr_bin": 0.668800950050354,
+      "label": 0,
+      "outcome": "sensitive"
+    }
+  ],
+  "diamond_features": [
+    31362,
+    6020,
+    9738,
+    26220,
+    16337,
+    22868,
+    27607,
+    12893,
+    1407
+  ]
+}

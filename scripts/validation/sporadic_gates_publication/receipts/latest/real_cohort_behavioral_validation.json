@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-01-04T05:42:51.865494+00:00",
+  "cohort_source": "data/validation/sae_cohort/tcga_ov_platinum_with_mutations.json",
+  "metrics": {
+    "cohort_size": 469,
+    "parp_penalty_applied": 460,
+    "parp_rescue_applied": 9,
+    "io_boost_applied": 0,
+    "confidence_capped_l1": 469,
+    "no_adjustment": 0
+  },
+  "notes": "Behavioral audit of sporadic gates on 469 real TCGA-OV mutation profiles."
+}

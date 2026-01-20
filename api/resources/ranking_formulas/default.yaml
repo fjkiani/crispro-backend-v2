@@ -1,0 +1,49 @@
+# Ranking Formula Configuration
+# Defines configurable ranking formulas for trial scoring
+
+ranking_formulas:
+  # Default formula (existing)
+  default:
+    weights:
+      eligibility: 0.7
+      mechanism_fit: 0.3
+    formula: "eligibility * 0.7 + mechanism_fit * 0.3"
+    min_eligibility: 0.60
+    min_mechanism_fit: 0.30
+    description: "Standard formula: high weight on eligibility"
+  
+  # Enhanced formula (with patient relevance)
+  enhanced:
+    weights:
+      eligibility: 0.5
+      mechanism_fit: 0.3
+      patient_relevance: 0.2
+    formula: "eligibility * 0.5 + mechanism_fit * 0.3 + patient_relevance * 0.2"
+    min_eligibility: 0.60
+    min_mechanism_fit: 0.30
+    min_patient_relevance: 0.0
+    description: "Enhanced formula: includes patient-specific relevance"
+  
+  # Ayesha-specific formula (manager's recommendation)
+  ayesha:
+    weights:
+      eligibility: 0.5
+      mechanism_fit: 0.3
+      ayesha_relevance: 0.2
+    formula: "eligibility * 0.5 + mechanism_fit * 0.3 + ayesha_relevance * 0.2"
+    min_eligibility: 0.60
+    min_mechanism_fit: 0.30
+    min_ayesha_relevance: 0.0
+    description: "Ayesha-specific formula: includes Ayesha relevance scoring"
+    
+  # Custom formula (example for future use)
+  custom:
+    weights:
+      eligibility: 0.4
+      mechanism_fit: 0.3
+      patient_relevance: 0.2
+      location_match: 0.1
+    formula: "eligibility * 0.4 + mechanism_fit * 0.3 + patient_relevance * 0.2 + location_match * 0.1"
+    min_eligibility: 0.60
+    min_mechanism_fit: 0.30
+    description: "Custom formula: includes location matching"

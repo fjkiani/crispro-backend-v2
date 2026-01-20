@@ -1,0 +1,43 @@
+================================================================================
+🎯 YALE T-DXd RESISTANCE PROJECT - TCGA BREAST CANCER EXTRACTION
+================================================================================
+Start time: 2025-10-18 03:01:24
+Target genes: 29 genes
+Output directory: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/raw
+
+
+================================================================================
+COHORT 1: brca_tcga_pan_can_atlas_2018
+================================================================================
+
+📊 Extracting mutations from brca_tcga_pan_can_atlas_2018...
+   Using profile: brca_tcga_pan_can_atlas_2018_mutations, sample list: brca_tcga_pan_can_atlas_2018_all
+✅ Extracted 218 mutations in 17 genes from 128 samples
+📊 Extracting clinical data from brca_tcga_pan_can_atlas_2018...
+✅ Extracted clinical data for 1084 samples
+📊 Extracting expression data from brca_tcga_pan_can_atlas_2018...
+   Using profile: brca_tcga_pan_can_atlas_2018_rna_seq_v2_mrna
+⚠️  Expression extraction not yet implemented (requires molecular data API)
+💾 Saved mutations: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/raw/brca_tcga_pan_can_atlas_2018_mutations.csv
+💾 Saved clinical: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/raw/brca_tcga_pan_can_atlas_2018_clinical.csv
+
+================================================================================
+COHORT 2: brca_metabric
+================================================================================
+
+📊 Extracting mutations from brca_metabric...
+   Using profile: brca_metabric_mutations, sample list: brca_metabric_all
+✅ Extracted 3066 mutations in 15 genes from 1892 samples
+📊 Extracting clinical data from brca_metabric...
+✅ Extracted clinical data for 2509 samples
+📊 Extracting expression data from brca_metabric...
+⚠️  No RNA-seq profile found for brca_metabric
+💾 Saved mutations: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/raw/brca_metabric_mutations.csv
+💾 Saved clinical: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/raw/brca_metabric_clinical.csv
+
+================================================================================
+✅ EXTRACTION COMPLETE
+================================================================================
+End time: 2025-10-18 03:01:45
+
+Next step: Run label_adc_resistance.py to generate resistance labels

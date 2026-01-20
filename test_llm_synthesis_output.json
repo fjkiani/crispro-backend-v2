@@ -1,0 +1,157 @@
+{
+  "research_plan": {
+    "primary_question": "Can curcumin inhibit ovarian cancer progression through NF-\u03baB pathway?",
+    "entities": {
+      "compound": "Curcumin",
+      "disease": "cancer",
+      "mechanisms_of_interest": []
+    },
+    "sub_questions": [
+      "What mechanisms does Curcumin target?",
+      "What evidence exists for Curcumin in cancer?"
+    ],
+    "portal_queries": {
+      "pubmed": [
+        "\"Curcumin\" AND cancer",
+        "Curcumin AND cancer",
+        "Curcumin AND cancer",
+        "Curcumin AND (cancer OR cancer)"
+      ]
+    }
+  },
+  "portal_results": {
+    "keyword_analysis": {},
+    "top_keywords": [],
+    "pubmed": {
+      "articles": [],
+      "error": "PubMed portal not available"
+    },
+    "project_data_sphere": {
+      "cohorts": [],
+      "count": 0,
+      "error": "Not connected"
+    },
+    "gdc": {
+      "DPYD": {
+        "variants": [],
+        "count": 0,
+        "source": "gdc"
+      },
+      "UGT1A1": {
+        "variants": [],
+        "count": 0,
+        "source": "gdc"
+      },
+      "TPMT": {
+        "variants": [],
+        "count": 0,
+        "source": "gdc"
+      }
+    }
+  },
+  "parsed_content": {
+    "full_text_articles": [],
+    "parsed_count": 0,
+    "diffbot_count": 0,
+    "pubmed_parser_count": 0
+  },
+  "synthesized_findings": {
+    "mechanisms": [],
+    "evidence_summary": "Found 0 papers",
+    "knowledge_gaps": [],
+    "overall_confidence": 0.5,
+    "method": "generic_llm_synthesis",
+    "article_summaries": [],
+    "evidence_tier": "Insufficient",
+    "badges": []
+  },
+  "article_summaries": [],
+  "sub_question_answers": [
+    {
+      "sub_question": "What mechanisms does Curcumin target?",
+      "answer": "Unable to answer - PubMed portal not available",
+      "confidence": 0.0,
+      "sources": [],
+      "mechanisms": []
+    },
+    {
+      "sub_question": "What evidence exists for Curcumin in cancer?",
+      "answer": "Unable to answer - PubMed portal not available",
+      "confidence": 0.0,
+      "sources": [],
+      "mechanisms": []
+    }
+  ],
+  "moat_analysis": {
+    "pathways": [],
+    "mechanisms": [],
+    "pathway_scores": {},
+    "treatment_line_analysis": {
+      "score": 0.5,
+      "status": "unknown"
+    },
+    "biomarker_analysis": {
+      "matches": [],
+      "total_matches": 0
+    },
+    "cross_resistance": [],
+    "toxicity_mitigation": {},
+    "sae_features": {},
+    "mechanism_vector": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "insight_chips": {
+      "functionality": 0.0,
+      "regulatory": 0.0,
+      "essentiality": 0.0,
+      "chromatin": 0.0
+    },
+    "pathway_aggregation": {
+      "ddr": 0.0,
+      "mapk": 0.0,
+      "pi3k": 0.0,
+      "vegf": 0.0,
+      "her2": 0.0
+    },
+    "toxicity_risk": {},
+    "dosing_guidance": {},
+    "overall_confidence": 0.5,
+    "drug_interactions": {
+      "interactions": [],
+      "warnings": []
+    }
+  },
+  "provenance": {
+    "run_id": "604c3aa9-aedb-4f3f-9397-61990ee0e563",
+    "profile": "baseline",
+    "methods": [
+      "sub_question_answering",
+      "drug_interaction_check",
+      "pubmed_search",
+      "question_formulation",
+      "spe_framework",
+      "gdc_query",
+      "generic_llm_synthesis",
+      "project_data_sphere"
+    ],
+    "timestamp": "2026-01-01T20:11:55.243459Z",
+    "inputs_snapshot": {
+      "question": "Can curcumin inhibit ovarian cancer progression through NF-\u03baB pathway?",
+      "context_keys": [],
+      "disease": null,
+      "treatment_line": null
+    },
+    "output_summary": {
+      "articles_parsed": 0,
+      "mechanisms_found": 0,
+      "sub_questions_answered": 2,
+      "moat_signals_extracted": 9
+    }
+  }
+}

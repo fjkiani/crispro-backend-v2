@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "metadata": {
+    "last_updated": "2025-11-05T19:30:00Z",
+    "total_compounds": 0,
+    "total_runs": 0,
+    "description": "Empirical calibration data for compound S/P/E scores. Percentiles are computed from historical run data to provide context-aware confidence bounds."
+  },
+  "compounds": {}
+}
+
+
+
+
+

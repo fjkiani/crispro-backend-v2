@@ -1,0 +1,123 @@
+{
+  "version": "metastasis_interception_v0.1",
+  "num_candidates_per_target": 3,
+  "design": {
+    "window_size": 150,
+    "note": "Window size in bp for \u00b1flanks around target site (150bp = \u00b1150bp = 300bp total context)"
+  },
+  "thresholds": {
+    "functionality": 0.6,
+    "essentiality": 0.6,
+    "regulatory": 0.6,
+    "chromatin": 0.6
+  },
+  "weights": {
+    "target_lock": {
+      "functionality": 0.35,
+      "essentiality": 0.35,
+      "regulatory": 0.15,
+      "chromatin": 0.15
+    },
+    "assassin": {
+      "efficacy": 0.4,
+      "safety": 0.3,
+      "mission_fit": 0.3
+    }
+  },
+  "gene_sets": {
+    "MAPK": [
+      "BRAF",
+      "KRAS",
+      "NRAS",
+      "MAP2K1",
+      "MAP2K2",
+      "RAF1"
+    ],
+    "HRR": [
+      "BRCA1",
+      "BRCA2",
+      "ATM",
+      "CHEK2",
+      "PALB2",
+      "TP"
+    ],
+    "EMT_TF": [
+      "SNAI1",
+      "SNAI2",
+      "TWIST1",
+      "ZEB1",
+      "ZEB2",
+      "CDH1"
+    ],
+    "MMP": [
+      "MMP2",
+      "MMP9",
+      "MMP14",
+      "CTSD"
+    ],
+    "CIRCULATION": [
+      "BCL2",
+      "MCL1",
+      "BIRC5"
+    ],
+    "ADHESION": [
+      "ICAM1",
+      "VCAM1",
+      "SELE",
+      "ITGA4"
+    ],
+    "HOMING": [
+      "CXCR4",
+      "CXCL12",
+      "CCR7",
+      "ITGB1"
+    ],
+    "ANGIO": [
+      "VEGFA",
+      "VEGFR1",
+      "VEGFR2",
+      "FGF2",
+      "PDGFRB",
+      "HIF1A",
+      "ANGPT2"
+    ],
+    "COLONIZATION": [
+      "PTGS2",
+      "IL6",
+      "TGFB1",
+      "POSTN",
+      "MET"
+    ]
+  },
+  "mission_to_gene_sets": {
+    "primary_growth": [
+      "MAPK"
+    ],
+    "local_invasion": [
+      "EMT_TF"
+    ],
+    "intravasation": [
+      "MMP"
+    ],
+    "survival_in_circulation": [
+      "CIRCULATION"
+    ],
+    "extravasation": [
+      "ADHESION"
+    ],
+    "micrometastasis_formation": [
+      "HOMING"
+    ],
+    "angiogenesis": [
+      "ANGIO"
+    ],
+    "metastatic_colonization": [
+      "COLONIZATION"
+    ]
+  },
+  "disease_overrides": {
+    "MM": {
+      "notes": "Reserved for v2; keep v1 equal mission mapping."
+    }
+  }
+}

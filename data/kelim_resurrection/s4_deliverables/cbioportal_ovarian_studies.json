@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-28T09:13:51.583317",
+    "deliverable": "D1",
+    "source": "cBioPortal API",
+    "total_studies": 516,
+    "ovarian_studies": 16
+  },
+  "studies": [
+    {
+      "study_id": "ovarian_msk_2025",
+      "name": "Serous Ovarian Cancer (MSK, 2025)",
+      "description": "Targeted sequencing of 31 Ovarian cancers and their matched normals via MSK-IMPACT platform.",
+      "cancer_type_id": "ovary",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "",
+      "pmid": "",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=ovarian_msk_2025"
+    },
+    {
+      "study_id": "ov_tcga_pub",
+      "name": "Ovarian Serous Cystadenocarcinoma (TCGA, Nature 2011)",
+      "description": "Whole exome sequencing of 489 high-grade serous ovarian adenocarcinoma tumor/normal pairs. <a href=\"http://cancergenome.nih.gov/\">The Cancer Genome Atlas (TCGA)</a> Serous Ovarian Cancer project. 489 cases. <br><a href=\"https://tcga-data.nci.nih.gov/docs/publications/ov_2011/\">Raw data via the TCGA Data Portal</a>.",
+      "cancer_type_id": "hgsoc",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "TCGA, Nature 2011",
+      "pmid": "21720365",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=ov_tcga_pub"
+    },
+    {
+      "study_id": "ov_tcga_pan_can_atlas_2018",
+      "name": "Ovarian Serous Cystadenocarcinoma (TCGA, PanCancer Atlas)",
+      "description": "Ovarian Serous Cystadenocarcinoma TCGA PanCancer data. The original data is <a href=\"https://gdc.cancer.gov/about-data/publications/pancanatlas\">here</a>. The publications are <a href=\"https://www.cell.com/pb-assets/consortium/pancanceratlas/pancani3/index.html\">here</a>.",
+      "cancer_type_id": "hgsoc",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "TCGA, Cell 2018",
+      "pmid": "29625048,29596782,29622463,29617662,29625055,29625050,29617662,30643250,32214244,29625049,29850653,36334560",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=ov_tcga_pan_can_atlas_2018"
+    },
+    {
+      "study_id": "mixed_msk_tcga_2021",
+      "name": "RAD51B Associated Mixed Cancers (MSK, NPJ Breast Cancer 2021)",
+      "description": "Targeted sequencing of 19 samples with RAD51B loss-of-function variants and their matched normals. Samples confer susceptibility to hereditary breast and ovarian cancers, resulting in homologous recombination-deficient tumors.",
+      "cancer_type_id": "mixed",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "Setton et al. NPJ Breast Cancer 2021",
+      "pmid": "34635660",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=mixed_msk_tcga_2021"
+    },
+    {
+      "study_id": "msk_met_2021",
+      "name": "MSK MetTropism (MSK, Cell 2021)",
+      "description": "MSK-MET (Memorial Sloan Kettering - Metastatic Events and Tropisms) is a pan-cancer cohort of tumor genomic and clinical outcome data from 25,000 patients. The dataset identifies associations between tumor genomic alterations and patterns of metastatic dissemination across 50 tumor types; showing that chromosomal instability is strongly correlated with metastatic burden in some tumor types, like prostate and lung adenocarcinomas and HR+/HER2+ breast ductal carcinoma, but not in others, such as colorectal MSS, pancreatic adenocarcinoma and high-grade serous ovarian cancer. The study also identifies somatic alterations associated with increased metastatic burden and routes of metastatic spread. Our data offers a resource for the investigation of the biologic basis for metastatic spread and highlights the role of chromosomal instability in cancer progression. This data is available under the <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en\">Creative Commons BY-NC-ND 4.0 license</a>.",
+      "cancer_type_id": "mixed",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "Nguyen et al. Cell 2022",
+      "pmid": "35120664",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=msk_met_2021"
+    },
+    {
+      "study_id": "ucec_msk_2024",
+      "name": "Endometrial and Ovarian Cancer (MSK, Nature Medicine 2024)",
+      "description": "Targeted sequencing of 33 endometrial and ovarian tumors and their matched normals via MSK-IMPACT.",
+      "cancer_type_id": "mixed",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "Friedman, Claire F et al. Nature Medicine 2024",
+      "pmid": "38653864",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=ucec_msk_2024"
+    },
+    {
+      "study_id": "hgsoc_msk_2021",
+      "name": "High-Grade Serous Ovarian Cancer (MSK, NPJ Genome Med 2021)",
+      "description": "Targeted Sequencing of 45 Serous Ovarian Cancer tumor/normal pairs from 45 patients.",
+      "cancer_type_id": "hgsoc",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "Elkin et al. NPJ Genome Med 2021",
+      "pmid": "34819508",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=hgsoc_msk_2021"
+    },
+    {
+      "study_id": "cscc_hgsc_bcm_2014",
+      "name": "Cutaneous Squamous Cell Carcinoma (MD Anderson, Clin Cancer Res 2014)",
+      "description": "Whole-exome sequencing of tumor/normal pairs from 39 aggressive cutaneous squamous cell carcinoma cases.",
+      "cancer_type_id": "cscc",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "Pickering et al. Clin Cancer Res 2014",
+      "pmid": "25303977",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=cscc_hgsc_bcm_2014"
+    },
+    {
+      "study_id": "hgsoc_tcga_gdc",
+      "name": "High-Grade Serous Ovarian Cancer (TCGA, GDC)",
+      "description": "TCGA High-Grade Serous Ovarian Cancer. Source data from GDC and generated in Jul 2025 using Cancer Data Aggregator.",
+      "cancer_type_id": "hgsoc",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "",
+      "pmid": "",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=hgsoc_tcga_gdc"
+    },
+    {
+      "study_id": "ovary_cptac_gdc",
+      "name": "Ovarian Cancer (CPTAC GDC, 2025)",
+      "description": "CPTAC Ovarian Cancer. Source data from <A HREF=\"https://gdc.cancer.gov\">NCI GDC</A> and generated in Aug 2025 using <A HREF=\"https://cda.readthedocs.io/en/latest/\">Cancer Data Aggregator</A>.",
+      "cancer_type_id": "ovary",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "",
+      "pmid": "",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=ovary_cptac_gdc"
+    },
+    {
+      "study_id": "ovary_geomx_gray_foundation_2024",
+      "name": "Ovarian Cancer (Gray Foundation, Cancer Discov 2024)",
+      "description": "Microregion transcriptomic data (GeoMx) and multiplex imaging (CyCIF) for High-Grade Serous ovarian Cancer Cases (HGSOC). This resource was supported by the Gray Foundation.",
+      "cancer_type_id": "ovary",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "Kader et al. Cancer Discov 2024",
+      "pmid": "39386723",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=ovary_geomx_gray_foundation_2024"
+    },
+    {
+      "study_id": "pact_jhu_2011",
+      "name": "Cystic Tumor of the Pancreas (Johns Hopkins, PNAS 2011)",
+      "description": "Whole-exome sequencing of major neoplastic cyst types of the pancreas: 8 serous cystadenomas (SCAs), 8 intraductal papillary mucinous neoplasms (IPMNs), 8 mucinous cystic neoplasms (MCNs), and 8 solid pseudopapillary neoplasms (SPNs).",
+      "cancer_type_id": "pact",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "Wu et al. PNAS 2011",
+      "pmid": "22158988",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=pact_jhu_2011"
+    },
+    {
+      "study_id": "msk_spectrum_tme_2022",
+      "name": "Ovarian Cancer - MSK SPECTRUM (MSK, Nature 2022)",
+      "description": "Multi-region, multi-modal profiling of 42 untreated high-grade serous ovarian cancer (HGSOC) tumor/normal pairs. This study reports an integrative analysis of mutational processes and their impact on the tumor microenvironment using single-cell RNA sequencing, whole-genome sequencing, targeted sequencing (MSK-IMPACT), digital histopathology and multiplexed immunofluorescence. The study is part of a prospective research program to understand the spatio-temporal determinants of HGSOC evolution, treatment and response (MSK SPECTRUM: Memorial Sloan Kettering - SPatio-temporal Evolution in Cancer TRaced Using Multimodalities).",
+      "cancer_type_id": "ovary",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "V\u00c3\u00a1zquez-Garc\u00c3\u00ada, Uhlitz et al. Nature 2022",
+      "pmid": "36517593",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=msk_spectrum_tme_2022"
+    },
+    {
+      "study_id": "ov_tcga",
+      "name": "Ovarian Serous Cystadenocarcinoma (TCGA, Firehose Legacy)",
+      "description": "TCGA Ovarian Serous Cystadenocarcinoma. Source data from <A HREF=\"http://gdac.broadinstitute.org/runs/stddata__2016_01_28/data/OV/20160128/\">GDAC Firehose</A>. Previously known as TCGA Provisional.",
+      "cancer_type_id": "hgsoc",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "",
+      "pmid": "",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=ov_tcga"
+    },
+    {
+      "study_id": "scco_mskcc",
+      "name": "Small Cell Carcinoma of the Ovary (MSK, Nat Genet 2014)",
+      "description": "Targeted sequencing of 12 SCCO paired tumor and normal samples.",
+      "cancer_type_id": "scco",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "Jelinic et al. Nat Genet 2014",
+      "pmid": "24658004",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=scco_mskcc"
+    },
+    {
+      "study_id": "lgsoc_mapk_msk_2022",
+      "name": "Low-Grade Serous Ovarian Cancer (MSK, Clin Cancer Res 2022)",
+      "description": "Characterization of the somatic mutational landscape of MAPK pathway in 119 low-grade serous ovarian carcinomas and their matched normals.",
+      "cancer_type_id": "lgsoc",
+      "all_sample_count": 1,
+      "all_patient_count": 0,
+      "citation": "Manning-Geist et al. Clin Cancer Res. 2022",
+      "pmid": "35443055",
+      "source": "cbioportal",
+      "url": "https://www.cbioportal.org/study/summary?id=lgsoc_mapk_msk_2022"
+    }
+  ]
+}

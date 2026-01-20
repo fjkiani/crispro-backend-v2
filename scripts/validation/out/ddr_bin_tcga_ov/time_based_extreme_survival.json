@@ -1,0 +1,37 @@
+{
+  "analysis": "Solution 2: Time-Based Extreme Survival",
+  "cohort": "TCGA-OV TRUE-SAE v2",
+  "groups": {
+    "early_death": {
+      "threshold": "<36 months",
+      "n": 53
+    },
+    "long_survivor": {
+      "threshold": ">84 months",
+      "n": 31
+    }
+  },
+  "single_split": {
+    "auroc": 0.7181984175289106,
+    "mann_whitney_p": 0.00041185100324393835
+  },
+  "cross_validation": {
+    "cv_aurocs": [
+      0.8257575757575758,
+      0.6818181818181819,
+      0.5909090909090909,
+      0.8142857142857143,
+      0.7166666666666667
+    ],
+    "mean_auroc": 0.7258874458874459,
+    "std_auroc": 0.08721763103157135,
+    "ci_lower": 0.6494378215727952,
+    "ci_upper": 0.8023370702020967
+  },
+  "effect_size": {
+    "early_death_mean": 0.35862233307001723,
+    "long_survivor_mean": 0.6901621760860566,
+    "difference": 0.33153984301603934
+  },
+  "interpretation": "DDR_bin discriminates early death (<36mo) from long survival (>84mo) with CV-AUROC=0.726. Mann-Whitney p=0.0004."
+}

@@ -1,0 +1,415 @@
+{
+  "timestamp": "2026-01-03T12:51:33.132269",
+  "caslibs_explored": [
+    {
+      "caslib_name": "Gastric_MerckKG_2008_130",
+      "files": [
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Data Dictionary.pdf",
+          "Size": 38864,
+          "Encryption": "",
+          "Time": "2022-08-15T16:48:19-05:00",
+          "ModTime": 1976219299.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "EMR 200048-052_EXPAND_Redacted Clinical Study Protocol.pdf",
+          "Size": 821504,
+          "Encryption": "",
+          "Time": "2022-08-15T16:48:19-05:00",
+          "ModTime": 1976219299.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "EMR200048-052_Expand_Raw Data control arm.zip",
+          "Size": 5239392,
+          "Encryption": "",
+          "Time": "2022-08-15T16:48:19-05:00",
+          "ModTime": 1976219299.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "EMR200048-052_Expand_SAS annotated eCRF_.pdf",
+          "Size": 1869677,
+          "Encryption": "",
+          "Time": "2022-08-15T16:48:19-05:00",
+          "ModTime": 1976219299.0
+        }
+      ],
+      "file_count": 4,
+      "clinical_data_files": [
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Data Dictionary.pdf",
+          "Size": 38864,
+          "Encryption": "",
+          "Time": "2022-08-15T16:48:19-05:00",
+          "ModTime": 1976219299.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "EMR 200048-052_EXPAND_Redacted Clinical Study Protocol.pdf",
+          "Size": 821504,
+          "Encryption": "",
+          "Time": "2022-08-15T16:48:19-05:00",
+          "ModTime": 1976219299.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "EMR200048-052_Expand_Raw Data control arm.zip",
+          "Size": 5239392,
+          "Encryption": "",
+          "Time": "2022-08-15T16:48:19-05:00",
+          "ModTime": 1976219299.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "caslib_name": "Gastric_Multipl_1999_416",
+      "files": [
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Dataset Contents and Variable Crosswalk.xlsx",
+          "Size": 15102,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "CODEBOOK_linked_gastric143.pdf",
+          "Size": 157555,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Proc Contents Data Dictionary Gastric_SanofiU_1999_143.pdf",
+          "Size": 95970,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Descriptive_Stats_Linked_Gastric_SanofiU_1999_143.xlsx",
+          "Size": 13777,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Linked Gastric_SanofiU_1999_143 Documentation.docx",
+          "Size": 50762,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "linked_gastric143.sas7bdat",
+          "Size": 196608,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        }
+      ],
+      "file_count": 6,
+      "clinical_data_files": [
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Dataset Contents and Variable Crosswalk.xlsx",
+          "Size": 15102,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Proc Contents Data Dictionary Gastric_SanofiU_1999_143.pdf",
+          "Size": 95970,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Descriptive_Stats_Linked_Gastric_SanofiU_1999_143.xlsx",
+          "Size": 13777,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "linked_gastric143.sas7bdat",
+          "Size": 196608,
+          "Encryption": "",
+          "Time": "2020-05-26T08:41:48-05:00",
+          "ModTime": 1906119708.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "caslib_name": "Gastric_Multipl_2008_415",
+      "files": [
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Dataset Contents and Variable Crosswalk.xlsx",
+          "Size": 15100,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Descriptive_Stats_Linked_Gastric_MerckKG_2008_130.xlsx",
+          "Size": 13751,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Linked Gastric_MerckKG_2008_130 Documentation.docx",
+          "Size": 50836,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "PDS_DATA_PROFILE_CREATED_130.xlsx",
+          "Size": 45247,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "linked_gastric130.sas7bdat",
+          "Size": 262144,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Proc Contents Data Dictionary Linked_Gastric_MerckKG_2008_130.pdf",
+          "Size": 95943,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        }
+      ],
+      "file_count": 6,
+      "clinical_data_files": [
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Dataset Contents and Variable Crosswalk.xlsx",
+          "Size": 15100,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Descriptive_Stats_Linked_Gastric_MerckKG_2008_130.xlsx",
+          "Size": 13751,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "PDS_DATA_PROFILE_CREATED_130.xlsx",
+          "Size": 45247,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "linked_gastric130.sas7bdat",
+          "Size": 262144,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "Proc Contents Data Dictionary Linked_Gastric_MerckKG_2008_130.pdf",
+          "Size": 95943,
+          "Encryption": "",
+          "Time": "2022-08-12T11:09:47-05:00",
+          "ModTime": 1975939787.0
+        }
+      ],
+      "error": null
+    },
+    {
+      "caslib_name": "Gastric_SanofiU_1999_143",
+      "files": [
+        {
+          "Permission": "drwxr-xr-x",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "dataFiles_830",
+          "Size": 4096,
+          "Encryption": "",
+          "Time": "2019-04-09T06:04:32-05:00",
+          "ModTime": 1870427072.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "sanofi_XRP6976_TAX325_data_definition.xls",
+          "Size": 199168,
+          "Encryption": "",
+          "Time": "2019-04-09T06:04:32-05:00",
+          "ModTime": 1870427072.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "SANOFI_XRP6976_TAX325_CRF.pdf",
+          "Size": 2488055,
+          "Encryption": "",
+          "Time": "2019-04-09T06:04:32-05:00",
+          "ModTime": 1870427072.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "SANOFI_XRP6976_TAX325_Clinical_Study_Protocol_Redacted.pdf",
+          "Size": 4545230,
+          "Encryption": "",
+          "Time": "2019-04-09T06:04:32-05:00",
+          "ModTime": 1870427072.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "sanofi_xrp6976_tax325_datasets_and_readme.zip",
+          "Size": 1862470,
+          "Encryption": "",
+          "Time": "2019-04-09T06:04:32-05:00",
+          "ModTime": 1870427072.0
+        }
+      ],
+      "file_count": 5,
+      "clinical_data_files": [
+        {
+          "Permission": "drwxr-xr-x",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "dataFiles_830",
+          "Size": 4096,
+          "Encryption": "",
+          "Time": "2019-04-09T06:04:32-05:00",
+          "ModTime": 1870427072.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "sanofi_XRP6976_TAX325_data_definition.xls",
+          "Size": 199168,
+          "Encryption": "",
+          "Time": "2019-04-09T06:04:32-05:00",
+          "ModTime": 1870427072.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "SANOFI_XRP6976_TAX325_Clinical_Study_Protocol_Redacted.pdf",
+          "Size": 4545230,
+          "Encryption": "",
+          "Time": "2019-04-09T06:04:32-05:00",
+          "ModTime": 1870427072.0
+        },
+        {
+          "Permission": "-rw-r--r--",
+          "Owner": "mpmowner",
+          "Group": "sasapp",
+          "Name": "sanofi_xrp6976_tax325_datasets_and_readme.zip",
+          "Size": 1862470,
+          "Encryption": "",
+          "Time": "2019-04-09T06:04:32-05:00",
+          "ModTime": 1870427072.0
+        }
+      ],
+      "error": null
+    }
+  ],
+  "summary": {
+    "total_files": 21,
+    "total_clinical_files": 16
+  }
+}

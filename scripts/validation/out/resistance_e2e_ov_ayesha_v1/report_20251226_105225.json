@@ -1,0 +1,255 @@
+{
+  "validator": "validate_resistance_e2e_ov_ayesha_v1",
+  "generated_at": "2025-12-26T10:52:26.363937Z",
+  "status": "PASSED",
+  "latency_ms": 836,
+  "input": {
+    "patient_id": "AYESHA_BASELINE",
+    "disease": "ovarian",
+    "stage": "IVB",
+    "mutations": [
+      {
+        "gene": "MBD4",
+        "hgvs_p": "p.E322Vfs*10",
+        "consequence": "frameshift_variant"
+      },
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.R175H",
+        "consequence": "missense_variant"
+      }
+    ],
+    "ca125_data": {
+      "baseline": 2842,
+      "current": 2842,
+      "cycle": 0,
+      "unit": "U/mL"
+    },
+    "clinical_context": {
+      "treatment_line": "1L",
+      "current_regimen": "carboplatin_paclitaxel"
+    }
+  },
+  "output_excerpt": {
+    "resistance_prediction": {
+      "resistance_prediction": {
+        "risk_level": "MEDIUM",
+        "probability": 0.4920521370490433,
+        "confidence": 0.58,
+        "mechanisms_detected": [
+          {
+            "layer": "GENETIC",
+            "biomarker": "MAPK_pathway",
+            "status": "WILD_TYPE",
+            "contribution": 0.0,
+            "validation": {
+              "cohort": "TCGA-OV",
+              "n": 469,
+              "metric": "RR",
+              "value": 1.97,
+              "p_value": 0.05
+            }
+          },
+          {
+            "layer": "GENETIC",
+            "biomarker": "DDR_pathway",
+            "status": "COMPROMISED",
+            "contribution": -0.2,
+            "validation": {
+              "cohort": "Literature/Mechanistic",
+              "n": null,
+              "metric": "Mechanistic",
+              "value": null,
+              "p_value": null
+            }
+          },
+          {
+            "layer": "ADAPTIVE",
+            "biomarker": "CA125_kinetics",
+            "status": "MONITOR",
+            "contribution": 0.0,
+            "validation": {
+              "cohort": "Guidelines/Literature",
+              "n": null,
+              "metric": "Rule",
+              "value": null,
+              "p_value": null
+            },
+            "burden_class": "EXTENSIVE",
+            "resistance_signals": []
+          }
+        ],
+        "data_gaps": [],
+        "monitoring_plan": [
+          {
+            "biomarker": "CA125",
+            "method": "serum",
+            "frequency": "q3weeks",
+            "trigger": ">25% rise from nadir",
+            "rationale": "Early resistance detection (3-6 week lead time)"
+          }
+        ],
+        "treatment_actions": [
+          {
+            "recommendation": "Continue carboplatin/paclitaxel",
+            "rationale": "MAPK wild-type and DDR-compromised signals suggest higher platinum sensitivity (mechanistic proxy).",
+            "confidence": 0.58
+          }
+        ],
+        "prophet_raw": {
+          "risk_level": "MEDIUM",
+          "probability": 0.4920521370490433,
+          "confidence": 0.58,
+          "signal_count": 1,
+          "signals": [
+            {
+              "type": "DNA_REPAIR_RESTORATION",
+              "detected": true,
+              "probability": 0.6224593312018547,
+              "confidence": 0.6,
+              "rationale": "DNA repair capacity change: -0.20 (baseline=0.50 \u2192 current=0.30). RESTORATION DETECTED (threshold=-0.15). Mechanism breakdown: DDR=+0.00, HRR=+0.00, exon=-0.50."
+            },
+            {
+              "type": "PATHWAY_ESCAPE",
+              "detected": false,
+              "probability": 0.4,
+              "confidence": 0.85,
+              "rationale": "Pathway escape analysis for drug class 'platinum_chemotherapy'. Targeted pathways: [DDR]. Escaped pathways: [none]. No escape. Top changes: HER2:-0.50, IO:-0.50, Efflux:-0.50."
+            },
+            {
+              "type": "CA125_KINETICS",
+              "detected": false,
+              "probability": 0.0,
+              "confidence": 0.0,
+              "rationale": "CA-125 service unavailable"
+            }
+          ],
+          "urgency": "ELEVATED",
+          "recommended_actions": [
+            {
+              "action": "MONITOR_WEEKLY",
+              "timeframe": "4 weeks",
+              "rationale": "MEDIUM resistance risk. Weekly monitoring recommended.",
+              "priority": 1
+            },
+            {
+              "action": "REASSESS",
+              "timeframe": "after 4 weeks",
+              "rationale": "Re-run Resistance Prophet to assess trend.",
+              "priority": 2
+            }
+          ],
+          "next_line_options": [],
+          "rationale": [
+            "Overall resistance probability: 49.2% (MEDIUM risk)",
+            "DNA_REPAIR_RESTORATION: \u2713 DETECTED",
+            "  \u2192 Mechanism breakdown: DDR=+0.00, HRR=+0.00, exon=-0.50",
+            "PATHWAY_ESCAPE: \u2717 Not detected",
+            "CA125_KINETICS: \u2717 Not detected"
+          ],
+          "warnings": [
+            "INSUFFICIENT_BASELINE_DATA",
+            "PATHWAY_SERVICE_ERROR",
+            "PLAYBOOK_SERVICE_UNAVAILABLE"
+          ],
+          "provenance": {
+            "model_version": "resistance_prophet_v1.1_mechanism_enhanced",
+            "phase": "phase1_retrospective_no_ca125",
+            "timestamp": "2025-12-26T10:52:26.361786",
+            "enhancement_date": "2025-01-28",
+            "thresholds": {
+              "dna_repair": 0.15,
+              "pathway_escape": 0.15,
+              "high_risk_probability": 0.7,
+              "medium_risk_probability": 0.5,
+              "min_signals_for_high": 2
+            },
+            "pathway_contributions": {
+              "ddr": 0.6,
+              "hrr": 0.2,
+              "exon": 0.2
+            },
+            "signals_used": [
+              "DNA_REPAIR_RESTORATION",
+              "PATHWAY_ESCAPE",
+              "CA125_KINETICS"
+            ],
+            "ca125_available": true,
+            "baseline_available": false,
+            "baseline_source": "population_average",
+            "baseline_penalty_applied": true
+          }
+        }
+      },
+      "provenance": {
+        "code_version": "unknown",
+        "contract_version": "taskc_resistance_prediction_v1",
+        "inputs_snapshot_hash": null,
+        "services_called": [
+          "resistance_prophet",
+          "biomarker_intelligence"
+        ],
+        "timestamp": "2025-12-26T10:52:26.361816"
+      }
+    },
+    "biomarker_intelligence": {
+      "biomarker_type": "ca125",
+      "disease_type": "ovarian_cancer_hgs",
+      "burden_class": "EXTENSIVE",
+      "burden_score": 0.7775280682546419,
+      "forecast": {
+        "complete_response_target": 35,
+        "complete_response_target_unit": "U/mL",
+        "cycle3_expected_value": 852.6,
+        "cycle3_expected_drop_percent": 70,
+        "cycle6_expected_value": 284.2,
+        "cycle6_expected_drop_percent": 90
+      },
+      "resistance_signals": [],
+      "monitoring_strategy": {
+        "frequency": "every_3_weeks",
+        "timing": "Just before each chemotherapy cycle",
+        "rationale": "Track response kinetics and detect resistance early",
+        "method": "Serum CA125 (U/mL)"
+      },
+      "clinical_notes": "CA125 of 2842.00 U/mL indicates EXTENSIVE disease burden. Complete response target: <35 U/mL. Additional therapy cycles likely needed.",
+      "provenance": {
+        "method": "biomarker_intelligence_universal_v1",
+        "biomarker_type": "ca125",
+        "disease_type": "ovarian_cancer_hgs",
+        "data_sources": [
+          "GOG-218",
+          "ICON7"
+        ],
+        "guidelines": "NCCN Guidelines v2024",
+        "thresholds": {
+          "MINIMAL": [
+            0,
+            100
+          ],
+          "MODERATE": [
+            100,
+            500
+          ],
+          "SIGNIFICANT": [
+            500,
+            1000
+          ],
+          "EXTENSIVE": [
+            1000,
+            null
+          ]
+        },
+        "expectations": {
+          "cycle3_drop_percent": 70,
+          "cycle6_drop_percent": 90,
+          "complete_response_threshold": 35,
+          "resistance_threshold_percent": 50
+        },
+        "analyzed_at": "2025-12-26T10:52:26.360948",
+        "run_id": "biomarker_ca125_1766764346"
+      }
+    }
+  },
+  "errors": []
+}

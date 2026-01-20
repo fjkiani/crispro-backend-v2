@@ -1,0 +1,26 @@
+{
+  "target_name": "ADC Resistance",
+  "target_column": "adc_resistance_risk",
+  "n_train": 1616,
+  "n_test": 404,
+  "n_positive": 11,
+  "logistic": {
+    "auroc": 1.0,
+    "auprc": 1.0,
+    "cv_auroc_mean": 1.0,
+    "cv_auroc_std": 7.021666937153402e-17
+  },
+  "feature_names": [
+    "tp53_mut",
+    "pik3ca_mut",
+    "erbb2_mut",
+    "esr1_mut",
+    "brca1_mut",
+    "brca2_mut",
+    "top1_mut",
+    "adc_resistance_score",
+    "sg_cross_resistance_score",
+    "endocrine_sensitivity_score",
+    "eribulin_sensitivity_score"
+  ]
+}

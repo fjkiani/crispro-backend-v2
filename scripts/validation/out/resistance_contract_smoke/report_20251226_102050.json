@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    "contract_json": "contract.json"
+  },
+  "env": {
+    "CI": null
+  },
+  "generated_at": "2025-12-26T10:20:50.848266",
+  "inputs": {
+    "detected_genes": [
+      "NF1"
+    ],
+    "disease_normalized": "ovarian_cancer_hgs",
+    "disease_original": "ovarian_cancer_hgs",
+    "patient_id": "fixture-ov-contract-001",
+    "playbook_disease": "ovarian"
+  },
+  "results": {
+    "contract_validation": {
+      "action_count": 8,
+      "mechanism_count": 1,
+      "passed": true
+    }
+  },
+  "validator": "validate_resistance_contract_smoke",
+  "version": "v1"
+}

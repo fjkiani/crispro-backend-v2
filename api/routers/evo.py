@@ -8,18 +8,20 @@ import os
 import hashlib
 import time
 
-from ..config import EVO_URL_7B, EVO_URL_40B, EVO_URL_1B, get_feature_flags, get_model_url
-DEFAULT_EVO_MODEL = os.getenv("DEFAULT_EVO_MODEL", "evo2_1b")
-# Optional hard guard to force a single model (e.g., evo2_1b)
+from ..config import EVO_URL_7B, EVO_URL_40B, EVO_URL_1B, get_feature_flags, get_model_url, DEFAULT_EVO_MODEL
+# Optional hard guard to force a single model (only applies if EVO_FORCE_MODEL env var is explicitly set)
 FORCE_MODEL_ID = os.getenv("EVO_FORCE_MODEL", "").strip().lower()
+DISABLE_EVO_FALLBACK = os.getenv("DISABLE_EVO_FALLBACK", "1") == "1"
+MAX_SAFE_FLANK = int(os.getenv("MAX_FLANK", "16384"))
 
 # Simple in-memory cache to prevent duplicate calls
 _evo_cache: Dict[str, Any] = {}
 _cache_ttl = 300  # 5 minutes
 
-def _get_cache_key(chrom: str, pos: int, ref: str, alt: str, model_id: str, endpoint: str) -> str:
+def _get_cache_key(chrom: str, pos: int, ref: str, alt: str, model_id: str, endpoint: str, assembly: str = "GRCh38") -> str:
     """Generate cache key for variant scoring requests."""
-    key_data = f"{endpoint}:{model_id}:{chrom}:{pos}:{ref}:{alt}"
+    asm = "GRCh38" if str(assembly).lower() in ("grch38", "hg38") else "GRCh37"
+    key_data = f"{endpoint}:{model_id}:{asm}:{chrom}:{pos}:{ref}:{alt}"
     return hashlib.md5(key_data.encode()).hexdigest()
 
 def _get_cached_result(cache_key: str) -> Any:
@@ -41,8 +43,10 @@ router = APIRouter(prefix="/api/evo", tags=["evo"])
 # Helper to resolve effective model id honoring EVO_FORCE_MODEL
 def _effective_model_id(request_model_id: str) -> str:
     try:
+        # Only force if EVO_FORCE_MODEL is explicitly set (non-empty)
         if FORCE_MODEL_ID:
             return FORCE_MODEL_ID
+        # Otherwise, use request model_id or default from config
         return (request_model_id or DEFAULT_EVO_MODEL).lower()
     except Exception:
         return (FORCE_MODEL_ID or DEFAULT_EVO_MODEL).lower()
@@ -95,7 +99,18 @@ async def _score_delta_with_flanks(
     except Exception:
         max_flanks = 1
         disable_rc = True
-    capped_flanks = (flanks or [])[:max_flanks]
+    # Enforce maximum flank size and order from small to larger safe values
+    safe_list = []
+    for f in (flanks or []):
+        try:
+            iv = int(f)
+            if iv > MAX_SAFE_FLANK:
+                iv = MAX_SAFE_FLANK
+            if iv not in safe_list:
+                safe_list.append(iv)
+        except Exception:
+            continue
+    capped_flanks = safe_list[:max_flanks]
 
     async with httpx.AsyncClient(timeout=180.0) as client:
         for flank in capped_flanks:
@@ -170,6 +185,58 @@ async def _score_delta_with_flanks(
                 continue
     return {"ok": False, "attempts": attempts_info}
 
+async def _try_upstream_score_variant_multi(
+    *,
+    base_url: str,
+    payload: Dict[str, Any],
+    timeout_s: float = 60.0,
+) -> Dict[str, Any]:
+    """
+    Prefer the upstream coordinate-aware endpoint when available.
+
+    Why:
+    - Some Modal Evo services expose /score_variant_multi but NOT /score_delta.
+    - Calling /score_delta against those services yields 404s, which can silently degrade
+      "delta-only" mode into near-zero fallback deltas.
+    """
+    async with httpx.AsyncClient(timeout=timeout_s, verify=False, follow_redirects=True) as client:
+        r = await client.post(f"{base_url}/score_variant_multi", json=payload, headers={"Content-Type": "application/json"})
+        if r.status_code >= 400:
+            body = (r.text[:800] if r.text else None)
+            # Upstream 400 is often a strict REF allele mismatch against reference.
+            # That is NOT "no signal" — it means the provided alleles/coords are not scoreable as-is.
+            hard_fail = False
+            if r.status_code == 400 and body:
+                lowered = body.lower()
+                if "reference allele mismatch" in lowered:
+                    hard_fail = True
+            return {"ok": False, "status": r.status_code, "body": body, "hard_fail": hard_fail}
+        try:
+            js = r.json() or {}
+        except Exception:
+            js = {}
+        md = js.get("min_delta")
+        try:
+            md = float(md) if md is not None else None
+        except Exception:
+            md = None
+        if md is None:
+            # Some deployments return delta_score directly
+            for k in ("delta", "delta_score"):
+                if k in js:
+                    try:
+                        md = float(js[k])
+                        break
+                    except Exception:
+                        pass
+        if md is None:
+            return {"ok": False, "status": 200, "body": js}
+        return {
+            "ok": True,
+            "min_delta": md,
+            "raw": js,
+        }
+
 @router.post("/warmup")
 async def warmup_evo_model(request: Dict[str, Any]):
     """Warmup an Evo2 model.
@@ -187,7 +254,17 @@ async def warmup_evo_model(request: Dict[str, Any]):
         async def _try_warmup(base_url: str, model_choice: str) -> Dict[str, Any]:
             attempts = []
             async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
-                # Prefer /score_delta as warmup
+                # Prefer coordinate-aware /score_variant_multi as warmup (available on many deployments)
+                try:
+                    payload = {"assembly": "GRCh38", "chrom": "1", "pos": 1000000, "ref": "A", "alt": "C", "model_id": model_choice}
+                    r = await client.post(f"{base_url}/score_variant_multi", json=payload, headers={"Content-Type": "application/json"})
+                    if r.status_code < 400:
+                        js = r.json() if (r.headers.get("content-type") or "").startswith("application/json") else {"message": r.text}
+                        return {"ok": True, "path": "/score_variant_multi", "response": js}
+                    attempts.append({"path": "/score_variant_multi", "status": r.status_code, "body": r.text})
+                except Exception as e:
+                    attempts.append({"path": "/score_variant_multi", "error": str(e)})
+                # Fallback: /score_delta (not guaranteed to exist on all deployments)
                 try:
                     payload = {"ref_sequence": "AAAAAA", "alt_sequence": "AAACAA", "model_id": model_choice}
                     r = await client.post(f"{base_url}/score_delta", json=payload, headers={"Content-Type": "application/json"})
@@ -217,8 +294,8 @@ async def warmup_evo_model(request: Dict[str, Any]):
                 out["response"] = result["response"]
             return out
         
-        # Fallback to 40B if 1B/7B fail
-        if model_id in ["evo2_1b", "evo2_7b"] and EVO_URL_40B:
+        # Fallback to 40B if allowed (disabled by default)
+        if (not DISABLE_EVO_FALLBACK) and model_id in ["evo2_1b", "evo2_7b"] and EVO_URL_40B:
             fb = await _try_warmup(EVO_URL_40B, "evo2_40b")
             if fb.get("ok"):
                 out = {"status": "warmed", "model": "evo2_40b", "via": fb.get("path"), "warning": f"Requested {model_id} unavailable, fell back to evo2_40b"}
@@ -261,8 +338,8 @@ async def score_variant(request: Dict[str, Any]):
                 return response.json()
         
         except (httpx.HTTPStatusError, httpx.RequestError) as e:
-            # If 1B or 7B fails, try falling back to 40B
-            if model_id in ["evo2_1b", "evo2_7b"] and EVO_URL_40B:
+            # If 1B or 7B fails, try falling back to 40B (if allowed)
+            if (not DISABLE_EVO_FALLBACK) and model_id in ["evo2_1b", "evo2_7b"] and EVO_URL_40B:
                 try:
                     fallback_request = {**request, "model_id": "evo2_40b"}
                     async with httpx.AsyncClient(timeout=120.0) as client:
@@ -328,8 +405,8 @@ async def generate_sequence(request: Dict[str, Any]):
                 return response.json()
         
         except (httpx.HTTPStatusError, httpx.RequestError) as e:
-            # If 1B or 7B fails, try falling back to 40B
-            if model_id in ["evo2_1b", "evo2_7b"] and EVO_URL_40B:
+            # If 1B or 7B fails, try falling back to 40B (if allowed)
+            if (not DISABLE_EVO_FALLBACK) and model_id in ["evo2_1b", "evo2_7b"] and EVO_URL_40B:
                 try:
                     fallback_request = {**request, "model_id": "evo2_40b"}
                     async with httpx.AsyncClient(timeout=180.0) as client:
@@ -441,18 +518,45 @@ async def evo_health():
 @router.post("/score_variant_multi")
 async def score_variant_multi(request: Dict[str, Any]):
     try:
-        # Delta-only fast path to avoid upstream multi endpoint when configured
+        def _flip_assembly(a: str) -> str:
+            return "GRCh37" if str(a).lower() in ("grch38", "hg38") else "GRCh38"
+
+        # Delta-only fast path (single upstream call) to avoid multiple flanks/windows when configured
         try:
             if get_feature_flags().get("evo_use_delta_only", False):
+                assembly = request.get("assembly", "GRCh38")
                 chrom = str(request.get("chrom"))
                 pos = int(request.get("pos"))
                 ref = str(request.get("ref", "")).upper()
                 alt = str(request.get("alt", "")).upper()
                 model_id = _effective_model_id(request.get("model_id", DEFAULT_EVO_MODEL))
                 base = get_model_url(model_id)
-                res = await _score_delta_with_flanks(base, model_id, request.get("assembly", "GRCh38"), chrom, pos, ref, alt, [4096,8192,12500,16384], debug=False)
-                if res.get("ok"):
-                    return {"min_delta": float(res.get("delta") or 0.0), "provenance": {"method": "delta_only", "model": model_id, "flank": res.get("flank")}}
+                payload = {
+                    "assembly": assembly,
+                    "chrom": chrom,
+                    "pos": pos,
+                    "ref": ref,
+                    "alt": alt,
+                    "model_id": model_id,
+                }
+                upstream = await _try_upstream_score_variant_multi(base_url=base, payload=payload, timeout_s=60.0)
+                if upstream.get("ok") and upstream.get("min_delta") is not None:
+                    return {"min_delta": float(upstream["min_delta"]), "provenance": {"method": "delta_only_upstream", "model": model_id}}
+                # If upstream rejects due to strict REF mismatch, retry with the other assembly (transparent).
+                if upstream.get("hard_fail") and int(upstream.get("status") or 0) == 400:
+                    alt_asm = _flip_assembly(assembly)
+                    payload2 = dict(payload)
+                    payload2["assembly"] = alt_asm
+                    upstream2 = await _try_upstream_score_variant_multi(base_url=base, payload=payload2, timeout_s=60.0)
+                    if upstream2.get("ok") and upstream2.get("min_delta") is not None:
+                        return {
+                            "min_delta": float(upstream2["min_delta"]),
+                            "provenance": {
+                                "method": "delta_only_upstream",
+                                "model": model_id,
+                                "assembly_fallback": {"from": assembly, "to": alt_asm, "reason": "ref_mismatch"},
+                            },
+                        }
         except Exception:
             pass
         model_id = _effective_model_id(request.get("model_id", DEFAULT_EVO_MODEL))
@@ -461,13 +565,19 @@ async def score_variant_multi(request: Dict[str, Any]):
         ref = str(request.get("ref", "")).upper()
         alt = str(request.get("alt", "")).upper()
         
+        # Debug logging
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.info(f"🔬 score_variant_multi: model_id={model_id}, request_model_id={request.get('model_id')}, DEFAULT_EVO_MODEL={DEFAULT_EVO_MODEL}")
+        
         # Check cache first
-        cache_key = _get_cache_key(chrom, pos, ref, alt, model_id, "score_variant_multi")
+        cache_key = _get_cache_key(chrom, pos, ref, alt, model_id, "score_variant_multi", request.get("assembly", "GRCh38"))
         cached = _get_cached_result(cache_key)
         if cached is not None:
             return cached
         
         base = get_model_url(model_id)
+        logger.info(f"🔬 Using base URL for {model_id}: {base}")
         if not base:
             raise HTTPException(status_code=503, detail=f"Evo service URL not configured for {model_id}")
         
@@ -478,10 +588,13 @@ async def score_variant_multi(request: Dict[str, Any]):
             "ref": ref,
             "alt": alt,
             "model_id": model_id,
+            # Many Evo deployments require windows; VUS identify already supplies these.
+            "windows": request.get("windows") or [1024, 2048],
         }
         
         async with httpx.AsyncClient(timeout=60.0, verify=False, follow_redirects=True) as client:
             try:
+                # Try /score_variant_multi first (for 7B/40B services)
                 r = await client.post(f"{base}/score_variant_multi", json=payload, headers={"Content-Type": "application/json"})
                 if r.status_code < 400:
                     js = r.json() or {}
@@ -503,7 +616,58 @@ async def score_variant_multi(request: Dict[str, Any]):
                                 return result
                             except Exception:
                                 pass
-            except Exception:
+                elif r.status_code == 404:
+                    # 1B service might not have /score_variant_multi, fall through to /score_delta
+                    import logging
+                    logger = logging.getLogger(__name__)
+                    logger.info(f"⚠️ /score_variant_multi not found on {base}, falling back to /score_delta")
+                elif r.status_code == 400:
+                    # Upstream strict REF mismatch: retry once with the other assembly (transparent),
+                    # because many caller inputs are effectively GRCh37/hg19.
+                    body = (r.text or "")[:500]
+                    if "reference allele mismatch" in body.lower():
+                        req_asm = payload.get("assembly", "GRCh38")
+                        alt_asm = _flip_assembly(req_asm)
+                        payload2 = dict(payload)
+                        payload2["assembly"] = alt_asm
+                        rr = await client.post(f"{base}/score_variant_multi", json=payload2, headers={"Content-Type": "application/json"})
+                        if rr.status_code < 400:
+                            js2 = rr.json() or {}
+                            md2 = js2.get("min_delta")
+                            try:
+                                md2 = float(md2) if md2 is not None else None
+                            except Exception:
+                                md2 = None
+                            if md2 is not None:
+                                result = {
+                                    "min_delta": md2,
+                                    "provenance": {
+                                        "method": "upstream_score_variant_multi",
+                                        "model": model_id,
+                                        "window_used": js2.get("window_used"),
+                                        "deltas": js2.get("deltas"),
+                                        "assembly_fallback": {"from": req_asm, "to": alt_asm, "reason": "ref_mismatch"},
+                                    },
+                                }
+                                _cache_result(cache_key, result)
+                                return result
+                        # If still mismatched, surface as unscoreable instead of silently degrading into 0.0.
+                        result = {
+                            "min_delta": None,
+                            "provenance": {
+                                "fallback": "ref_mismatch",
+                                "model": model_id,
+                                "upstream_status": 400,
+                                "detail": body,
+                                "assembly_fallback": {"from": req_asm, "to": alt_asm, "reason": "ref_mismatch", "retry_status": rr.status_code},
+                            },
+                        }
+                        _cache_result(cache_key, result)
+                        return result
+            except Exception as e:
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.warning(f"⚠️ /score_variant_multi failed: {e}, falling back to /score_delta")
                 pass
         # Fallback to /score_delta mapping with multi-flank attempts
         assembly = payload["assembly"] ; chrom = payload["chrom"] ; pos = payload["pos"] ; ref = payload["ref"] ; alt = payload["alt"]
@@ -512,17 +676,17 @@ async def score_variant_multi(request: Dict[str, Any]):
             max_flanks = int(ff.get("evo_max_flanks", 1))
         except Exception:
             max_flanks = 1
-        res = await _score_delta_with_flanks(base, model_id, assembly, chrom, pos, ref, alt, [4096,8192,12500,16384][:max_flanks], debug=False)
+        res = await _score_delta_with_flanks(base, model_id, assembly, chrom, pos, ref, alt, [4096,8192,16384][:max_flanks], debug=False)
         if res.get("ok"):
             result = {"min_delta": float(res.get("delta") or 0.0), "provenance": {"method": "mapped_score_delta", "model": model_id, "flank": res.get("flank")}}
             _cache_result(cache_key, result)
             return result
         
-        result = {"min_delta": 0.0, "provenance": {"fallback": "no_signal", "model": model_id}}
+        result = {"min_delta": None, "provenance": {"fallback": "no_signal", "model": model_id}}
         _cache_result(cache_key, result)
         return result
     except httpx.HTTPStatusError as e:
-        result = {"min_delta": 0.0, "provenance": {"fallback": "http_status_error", "status": getattr(e.response, 'status_code', None)}}
+        result = {"min_delta": None, "provenance": {"fallback": "http_status_error", "status": getattr(e.response, 'status_code', None)}}
         _cache_result(cache_key, result)
         return result
     except Exception as e:
@@ -541,7 +705,7 @@ async def score_variant_exon(request: Dict[str, Any]):
                 alt = str(request.get("alt", "")).upper()
                 flank = int(request.get("flank", 4096))
                 base = get_model_url(model_id)
-                res = await _score_delta_with_flanks(base, model_id, request.get("assembly", "GRCh38"), chrom, pos, ref, alt, [flank,8192,12500,16384], debug=False)
+                res = await _score_delta_with_flanks(base, model_id, request.get("assembly", "GRCh38"), chrom, pos, ref, alt, [min(flank,MAX_SAFE_FLANK),8192,16384], debug=False)
                 if res.get("ok"):
                     return {"exon_delta": float(res.get("delta") or 0.0), "provenance": {"method": "delta_only", "model": model_id, "flank": res.get("flank")}}
         except Exception:
@@ -554,7 +718,7 @@ async def score_variant_exon(request: Dict[str, Any]):
         flank = int(request.get("flank", 4096))
         
         # Check cache first (include flank in cache key)
-        cache_key = _get_cache_key(chrom, pos, ref, alt, f"{model_id}_{flank}", "score_variant_exon")
+        cache_key = _get_cache_key(chrom, pos, ref, alt, f"{model_id}_{flank}", "score_variant_exon", request.get("assembly", "GRCh38"))
         cached = _get_cached_result(cache_key)
         if cached is not None:
             return cached
@@ -602,7 +766,7 @@ async def score_variant_exon(request: Dict[str, Any]):
             max_flanks = int(ff.get("evo_max_flanks", 1))
         except Exception:
             max_flanks = 1
-        res = await _score_delta_with_flanks(base, model_id, payload["assembly"], payload["chrom"], payload["pos"], payload["ref"], payload["alt"], [payload["flank"],8192,12500,16384][:max_flanks], debug=False)
+        res = await _score_delta_with_flanks(base, model_id, payload["assembly"], payload["chrom"], payload["pos"], payload["ref"], payload["alt"], [min(payload["flank"],MAX_SAFE_FLANK),8192,16384][:max_flanks], debug=False)
         if res.get("ok"):
             result = {"exon_delta": float(res.get("delta") or 0.0), "provenance": {"method": "mapped_score_delta", "model": model_id, "flank": res.get("flank")}}
             _cache_result(cache_key, result)
@@ -691,4 +855,75 @@ async def score_batch(request: Dict[str, Any]):
                     results.append({"error": str(ee)})
             return {"results": results}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"score_batch failed: {e}") 
+        raise HTTPException(status_code=500, detail=f"score_batch failed: {e}")
+
+@router.post("/score_variant_with_activations")
+async def score_variant_with_activations(request: Dict[str, Any]):
+    """
+    Score a variant AND return layer 26 activations for SAE extraction.
+    Gated by ENABLE_EVO2_SAE flag.
+    Request: { assembly, chrom, pos, ref, alt, window?: int, return_activations?: bool, model_id?: str }
+    Response: { ref_likelihood, alt_likelihood, delta_score, layer_26_activations?: {...}, window_start, window_end, provenance }
+    """
+    try:
+        # Feature flag gate
+        try:
+            flags = get_feature_flags()
+            if not flags.get("enable_evo2_sae", False):
+                raise HTTPException(
+                    status_code=403, 
+                    detail="SAE activations endpoint disabled. Set ENABLE_EVO2_SAE=1 to enable."
+                )
+        except Exception as e:
+            if "403" in str(e):
+                raise
+            # If flags can't be loaded, default to disabled for safety
+            raise HTTPException(
+                status_code=403,
+                detail="SAE activations endpoint disabled (feature flags unavailable)"
+            )
+        
+        model_id = _effective_model_id(request.get("model_id", DEFAULT_EVO_MODEL))
+        base = get_model_url(model_id)
+        
+        if not base:
+            raise HTTPException(status_code=503, detail=f"Evo service URL not configured for {model_id}")
+        
+        # Add model_id to request payload
+        payload = {**request, "model_id": model_id}
+        
+        async with httpx.AsyncClient(timeout=120.0) as client:
+            try:
+                r = await client.post(
+                    f"{base}/score_variant_with_activations",
+                    json=payload,
+                    headers={"Content-Type": "application/json"}
+                )
+                r.raise_for_status()
+                result = r.json()
+                
+                # Add provenance
+                result["provenance"] = {
+                    "method": "evo2_activations",
+                    "model": model_id,
+                    "layer": "blocks.26",
+                    "sae_ready": True
+                }
+                
+                return result
+            
+            except httpx.HTTPStatusError as e:
+                raise HTTPException(
+                    status_code=e.response.status_code,
+                    detail=f"Evo service error: {e.response.text}"
+                )
+            except httpx.RequestError as e:
+                raise HTTPException(
+                    status_code=503,
+                    detail=f"Failed to connect to Evo service: {str(e)}"
+                )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"score_variant_with_activations failed: {str(e)}") 

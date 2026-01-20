@@ -6,7 +6,10 @@ import time
 import httpx
 from httpx import Timeout
 from typing import Dict, Any, List
+import logging
 from ..config import SUPABASE_URL, SUPABASE_KEY
+
+logger = logging.getLogger(__name__)
 
 class SupabaseService:
     """Service for handling Supabase database operations."""
@@ -140,6 +143,44 @@ class SupabaseService:
             await self.insert(table, evidence_entries)
         except Exception:
             return
+    
+    async def update(self, table: str, data: Dict[str, Any], eq: Dict[str, Any], timeout_s: float = 5.0) -> bool:
+        """
+        Update rows in a Supabase table.
+        
+        Args:
+            table: Table name
+            data: Data to update
+            eq: Equality filters for WHERE clause
+            timeout_s: Request timeout
+            
+        Returns:
+            True if update successful, False otherwise
+        """
+        if not self.enabled or not table or not data or not eq:
+            return False
+            
+        url = f"{self.url.rstrip('/')}/rest/v1/{table}"
+        headers = {
+            "apikey": self.key,
+            "Authorization": f"Bearer {self.key}",
+            "Content-Type": "application/json",
+            "Prefer": "return=representation",
+        }
+        
+        # Build query parameters for WHERE clause
+        params = {}
+        for k, v in eq.items():
+            params[f"{k}"] = f"eq.{v}"
+        
+        async with httpx.AsyncClient(timeout=Timeout(timeout_s)) as client:
+            try:
+                response = await client.patch(url, headers=headers, params=params, content=json.dumps(data))
+                response.raise_for_status()
+                return True
+            except Exception as e:
+                logger.error(f"Supabase update failed: {e}")
+                return False
 
 # Global instance
 supabase = SupabaseService()

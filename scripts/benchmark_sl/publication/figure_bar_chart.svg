@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="160">
+<style>text{font-family: ui-sans-serif, system-ui, -apple-system; font-size: 12px;} .lab{font-weight:600}</style>
+<text x="10" y="18" class="lab">Pos Drug@1 (with 95% CI)</text>
+<text x="10" y="58" class="lab">Random</text>
+<rect x="220" y="46" width="420" height="10" fill="#eee"/>
+<rect x="220" y="46" width="90" height="10" fill="#4f46e5"/>
+<line x1="273" y1="51" x2="352" y2="51" stroke="#111" stroke-width="2"/>
+<text x="650" y="58" fill="#111">21.4%</text>
+<text x="10" y="86" class="lab">Rule (DDR→PARP)</text>
+<rect x="220" y="74" width="420" height="10" fill="#eee"/>
+<rect x="220" y="74" width="270" height="10" fill="#4f46e5"/>
+<line x1="442" y1="79" x2="538" y2="79" stroke="#111" stroke-width="2"/>
+<text x="650" y="86" fill="#111">64.3%</text>
+<text x="10" y="114" class="lab">Model SP</text>
+<rect x="220" y="102" width="420" height="10" fill="#eee"/>
+<rect x="220" y="102" width="390" height="10" fill="#4f46e5"/>
+<line x1="580" y1="107" x2="634" y2="107" stroke="#111" stroke-width="2"/>
+<text x="650" y="114" fill="#111">92.9%</text>
+<text x="10" y="142" class="lab">Model SPE</text>
+<rect x="220" y="130" width="420" height="10" fill="#eee"/>
+<rect x="220" y="130" width="390" height="10" fill="#4f46e5"/>
+<line x1="580" y1="135" x2="634" y2="135" stroke="#111" stroke-width="2"/>
+<text x="650" y="142" fill="#111">92.9%</text>
+</svg>

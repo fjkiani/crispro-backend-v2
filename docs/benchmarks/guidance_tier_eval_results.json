@@ -1,0 +1,560 @@
+{
+  "metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "n": 2,
+  "api_base": "http://127.0.0.1:8000",
+  "results": [
+    {
+      "input": {
+        "disease": "breast cancer",
+        "therapy": "platinum",
+        "drug_or_class": "platinum",
+        "gene": "BRCA2",
+        "hgvs_p": "E1308*",
+        "chrom": "13",
+        "pos": "32357917",
+        "ref": "G",
+        "alt": "T",
+        "build": "hg38",
+        "on_label_truth": "true"
+      },
+      "prediction": {
+        "suggested_therapy": "platinum",
+        "damage_report": [
+          {
+            "variant": {
+              "gene": "BRCA2",
+              "hgvs_p": "E1308*",
+              "chrom": "13",
+              "pos": 32357917,
+              "ref": "G",
+              "alt": "T",
+              "build": "hg38"
+            },
+            "vep": {
+              "transcript_consequences": [
+                {
+                  "transcript_id": "ENST00000380152",
+                  "gene_id": "ENSG00000139618",
+                  "cdna_start": 7992,
+                  "biotype": "protein_coding",
+                  "hgnc_id": "HGNC:1101",
+                  "codons": "gAa/gTa",
+                  "cds_start": 7793,
+                  "variant_allele": "T",
+                  "polyphen_prediction": "possibly_damaging",
+                  "protein_start": 2598,
+                  "cds_end": 7793,
+                  "gene_symbol": "BRCA2",
+                  "strand": 1,
+                  "sift_prediction": "deleterious",
+                  "polyphen_score": 0.859,
+                  "impact": "MODERATE",
+                  "gene_symbol_source": "HGNC",
+                  "amino_acids": "E/V",
+                  "cdna_end": 7992,
+                  "consequence_terms": [
+                    "missense_variant"
+                  ],
+                  "protein_end": 2598,
+                  "sift_score": 0
+                },
+                {
+                  "cdna_end": 7992,
+                  "protein_end": 2598,
+                  "consequence_terms": [
+                    "missense_variant",
+                    "NMD_transcript_variant"
+                  ],
+                  "sift_score": 0,
+                  "polyphen_score": 0.185,
+                  "gene_symbol_source": "HGNC",
+                  "impact": "MODERATE",
+                  "amino_acids": "E/V",
+                  "strand": 1,
+                  "sift_prediction": "deleterious",
+                  "cds_end": 7793,
+                  "gene_symbol": "BRCA2",
+                  "hgnc_id": "HGNC:1101",
+                  "biotype": "nonsense_mediated_decay",
+                  "codons": "gAa/gTa",
+                  "cds_start": 7793,
+                  "polyphen_prediction": "benign",
+                  "variant_allele": "T",
+                  "protein_start": 2598,
+                  "cdna_start": 7992,
+                  "gene_id": "ENSG00000139618",
+                  "transcript_id": "ENST00000470094"
+                },
+                {
+                  "transcript_id": "ENST00000528762",
+                  "gene_id": "ENSG00000139618",
+                  "cdna_start": 7992,
+                  "biotype": "nonsense_mediated_decay",
+                  "hgnc_id": "HGNC:1101",
+                  "codons": "gAa/gTa",
+                  "cds_start": 7793,
+                  "variant_allele": "T",
+                  "polyphen_prediction": "benign",
+                  "protein_start": 2598,
+                  "cds_end": 7793,
+                  "gene_symbol": "BRCA2",
+                  "strand": 1,
+                  "sift_prediction": "deleterious",
+                  "polyphen_score": 0.197,
+                  "gene_symbol_source": "HGNC",
+                  "impact": "MODERATE",
+                  "amino_acids": "E/V",
+                  "cdna_end": 7992,
+                  "consequence_terms": [
+                    "missense_variant",
+                    "NMD_transcript_variant"
+                  ],
+                  "protein_end": 2598,
+                  "sift_score": 0
+                },
+                {
+                  "transcript_id": "ENST00000530893",
+                  "gene_id": "ENSG00000139618",
+                  "cdna_start": 7991,
+                  "cds_start": 7424,
+                  "codons": "gAa/gTa",
+                  "hgnc_id": "HGNC:1101",
+                  "biotype": "protein_coding",
+                  "variant_allele": "T",
+                  "polyphen_prediction": "possibly_damaging",
+                  "protein_start": 2475,
+                  "cds_end": 7424,
+                  "gene_symbol": "BRCA2",
+                  "strand": 1,
+                  "sift_prediction": "deleterious",
+                  "polyphen_score": 0.667,
+                  "amino_acids": "E/V",
+                  "gene_symbol_source": "HGNC",
+                  "impact": "MODERATE",
+                  "cdna_end": 7991,
+                  "sift_score": 0,
+                  "consequence_terms": [
+                    "missense_variant"
+                  ],
+                  "protein_end": 2475
+                },
+                {
+                  "transcript_id": "ENST00000544455",
+                  "gene_id": "ENSG00000139618",
+                  "cdna_start": 7892,
+                  "variant_allele": "T",
+                  "protein_start": 2598,
+                  "polyphen_prediction": "possibly_damaging",
+                  "hgnc_id": "HGNC:1101",
+                  "biotype": "protein_coding",
+                  "codons": "gAa/gTa",
+                  "cds_start": 7793,
+                  "gene_symbol": "BRCA2",
+                  "cds_end": 7793,
+                  "sift_prediction": "deleterious",
+                  "strand": 1,
+                  "gene_symbol_source": "HGNC",
+                  "impact": "MODERATE",
+                  "amino_acids": "E/V",
+                  "polyphen_score": 0.859,
+                  "consequence_terms": [
+                    "missense_variant"
+                  ],
+                  "protein_end": 2598,
+                  "sift_score": 0,
+                  "cdna_end": 7892
+                },
+                {
+                  "gene_id": "ENSG00000139618",
+                  "transcript_id": "ENST00000614259",
+                  "protein_start": 2598,
+                  "variant_allele": "T",
+                  "polyphen_prediction": "probably_damaging",
+                  "biotype": "nonsense_mediated_decay",
+                  "hgnc_id": "HGNC:1101",
+                  "codons": "gAa/gTa",
+                  "cds_start": 7793,
+                  "cdna_start": 7793,
+                  "sift_prediction": "deleterious",
+                  "strand": 1,
+                  "gene_symbol": "BRCA2",
+                  "cds_end": 7793,
+                  "protein_end": 2598,
+                  "consequence_terms": [
+                    "missense_variant",
+                    "NMD_transcript_variant"
+                  ],
+                  "sift_score": 0,
+                  "cdna_end": 7793,
+                  "gene_symbol_source": "HGNC",
+                  "impact": "MODERATE",
+                  "amino_acids": "E/V",
+                  "polyphen_score": 0.978
+                },
+                {
+                  "polyphen_score": 0.179,
+                  "gene_symbol_source": "HGNC",
+                  "impact": "MODERATE",
+                  "amino_acids": "E/V",
+                  "cdna_end": 7992,
+                  "consequence_terms": [
+                    "missense_variant",
+                    "NMD_transcript_variant"
+                  ],
+                  "protein_end": 2598,
+                  "sift_score": 0,
+                  "cds_end": 7793,
+                  "gene_symbol": "BRCA2",
+                  "strand": 1,
+                  "sift_prediction": "deleterious",
+                  "cdna_start": 7992,
+                  "biotype": "nonsense_mediated_decay",
+                  "hgnc_id": "HGNC:1101",
+                  "codons": "gAa/gTa",
+                  "cds_start": 7793,
+                  "variant_allele": "T",
+                  "polyphen_prediction": "benign",
+                  "protein_start": 2598,
+                  "transcript_id": "ENST00000665585",
+                  "gene_id": "ENSG00000139618"
+                },
+                {
+                  "amino_acids": "E/V",
+                  "impact": "MODERATE",
+                  "gene_symbol_source": "HGNC",
+                  "polyphen_score": 0.8,
+                  "sift_score": 0,
+                  "protein_end": 2598,
+                  "consequence_terms": [
+                    "missense_variant",
+                    "NMD_transcript_variant"
+                  ],
+                  "cdna_end": 7992,
+                  "gene_symbol": "BRCA2",
+                  "cds_end": 7793,
+                  "sift_prediction": "deleterious",
+                  "strand": 1,
+                  "cdna_start": 7992,
+                  "protein_start": 2598,
+                  "variant_allele": "T",
+                  "polyphen_prediction": "possibly_damaging",
+                  "cds_start": 7793,
+                  "codons": "gAa/gTa",
+                  "hgnc_id": "HGNC:1101",
+                  "biotype": "nonsense_mediated_decay",
+                  "transcript_id": "ENST00000666593",
+                  "gene_id": "ENSG00000139618"
+                },
+                {
+                  "amino_acids": "E/V",
+                  "impact": "MODERATE",
+                  "gene_symbol_source": "HGNC",
+                  "polyphen_score": 0.859,
+                  "sift_score": 0,
+                  "protein_end": 2598,
+                  "consequence_terms": [
+                    "missense_variant"
+                  ],
+                  "cdna_end": 7918,
+                  "gene_symbol": "BRCA2",
+                  "cds_end": 7793,
+                  "sift_prediction": "deleterious",
+                  "strand": 1,
+                  "cdna_start": 7918,
+                  "polyphen_prediction": "possibly_damaging",
+                  "variant_allele": "T",
+                  "protein_start": 2598,
+                  "codons": "gAa/gTa",
+                  "cds_start": 7793,
+                  "hgnc_id": "HGNC:1101",
+                  "biotype": "protein_coding",
+                  "transcript_id": "ENST00000680887",
+                  "gene_id": "ENSG00000139618"
+                },
+                {
+                  "cdna_start": 7992,
+                  "hgnc_id": "HGNC:1101",
+                  "biotype": "protein_coding",
+                  "codons": "gAa/gTa",
+                  "cds_start": 7793,
+                  "polyphen_prediction": "possibly_damaging",
+                  "variant_allele": "T",
+                  "protein_start": 2598,
+                  "transcript_id": "ENST00000700202",
+                  "gene_id": "ENSG00000139618",
+                  "polyphen_score": 0.859,
+                  "gene_symbol_source": "HGNC",
+                  "impact": "MODERATE",
+                  "amino_acids": "E/V",
+                  "cdna_end": 7992,
+                  "consequence_terms": [
+                    "missense_variant"
+                  ],
+                  "protein_end": 2598,
+                  "sift_score": 0,
+                  "cds_end": 7793,
+                  "gene_symbol": "BRCA2",
+                  "strand": 1,
+                  "sift_prediction": "deleterious"
+                },
+                {
+                  "biotype": "nonsense_mediated_decay",
+                  "hgnc_id": "HGNC:1101",
+                  "cdna_end": 8000,
+                  "variant_allele": "T",
+                  "consequence_terms": [
+                    "3_prime_UTR_variant",
+                    "NMD_transcript_variant"
+                  ],
+                  "cdna_start": 8000,
+                  "impact": "MODIFIER",
+                  "gene_symbol_source": "HGNC",
+                  "strand": 1,
+                  "gene_id": "ENSG00000139618",
+                  "transcript_id": "ENST00000713677",
+                  "gene_symbol": "BRCA2"
+                },
+                {
+                  "gene_id": "ENSG00000139618",
+                  "transcript_id": "ENST00000713678",
+                  "protein_start": 2598,
+                  "variant_allele": "T",
+                  "hgnc_id": "HGNC:1101",
+                  "biotype": "protein_coding",
+                  "cds_start": 7793,
+                  "codons": "gAa/gTa",
+                  "cdna_start": 8004,
+                  "sift_prediction": "deleterious",
+                  "strand": 1,
+                  "gene_symbol": "BRCA2",
+                  "cds_end": 7793,
+                  "protein_end": 2598,
+                  "consequence_terms": [
+                    "missense_variant"
+                  ],
+                  "sift_score": 0,
+                  "cdna_end": 8004,
+                  "gene_symbol_source": "HGNC",
+                  "impact": "MODERATE",
+                  "amino_acids": "E/V"
+                },
+                {
+                  "cdna_start": 7992,
+                  "protein_start": 2598,
+                  "variant_allele": "T",
+                  "biotype": "nonsense_mediated_decay",
+                  "hgnc_id": "HGNC:1101",
+                  "cds_start": 7793,
+                  "codons": "gAa/gTa",
+                  "transcript_id": "ENST00000713679",
+                  "gene_id": "ENSG00000139618",
+                  "impact": "MODERATE",
+                  "gene_symbol_source": "HGNC",
+                  "amino_acids": "E/V",
+                  "protein_end": 2598,
+                  "consequence_terms": [
+                    "missense_variant",
+                    "NMD_transcript_variant"
+                  ],
+                  "sift_score": 0,
+                  "cdna_end": 7992,
+                  "gene_symbol": "BRCA2",
+                  "cds_end": 7793,
+                  "sift_prediction": "deleterious",
+                  "strand": 1
+                },
+                {
+                  "transcript_id": "ENST00000713680",
+                  "gene_id": "ENSG00000139618",
+                  "cdna_start": 7992,
+                  "biotype": "protein_coding",
+                  "hgnc_id": "HGNC:1101",
+                  "codons": "gAa/gTa",
+                  "cds_start": 7793,
+                  "protein_start": 2598,
+                  "variant_allele": "T",
+                  "cds_end": 7793,
+                  "gene_symbol": "BRCA2",
+                  "strand": 1,
+                  "sift_prediction": "deleterious",
+                  "impact": "MODERATE",
+                  "gene_symbol_source": "HGNC",
+                  "amino_acids": "E/V",
+                  "cdna_end": 7992,
+                  "consequence_terms": [
+                    "missense_variant"
+                  ],
+                  "protein_end": 2598,
+                  "sift_score": 0
+                }
+              ],
+              "input": "13 32357917 32357917 A/T 1",
+              "id": "13_32357917_A/T",
+              "allele_string": "A/T",
+              "end": 32357917,
+              "seq_region_name": "13",
+              "colocated_variants": [
+                {
+                  "seq_region_name": "13",
+                  "end": 32357917,
+                  "start": 32357917,
+                  "id": "rs2137567811",
+                  "strand": 1,
+                  "allele_string": "A/T"
+                }
+              ],
+              "assembly_name": "GRCh38",
+              "start": 32357917,
+              "strand": 1,
+              "most_severe_consequence": "missense_variant"
+            },
+            "functionality": {
+              "gene": "BRCA2",
+              "hgvs_p": "E1308*",
+              "functionality_change_score": 0.6,
+              "affected_domains": [],
+              "provenance": {
+                "model_id": "evo2_7b",
+                "method": "esm_stub+evo2_rule",
+                "feature_flags": {
+                  "enable_massive_modes": false,
+                  "enable_research_mode": false,
+                  "enable_calibration_preload": true,
+                  "enable_insights_api": true,
+                  "enable_design_api": true,
+                  "enable_command_center": true
+                }
+              }
+            }
+          }
+        ],
+        "essentiality_report": [
+          {
+            "gene": "BRCA2",
+            "result": {
+              "gene": "BRCA2",
+              "essentiality_score": 0.351,
+              "flags": {
+                "truncation": false,
+                "frameshift": false
+              },
+              "rationale": "Truncation-first; Evo2 multi/exon magnitude proxy; calibrated if available",
+              "confidence": 0.55,
+              "provenance": {
+                "model_id": "evo2_7b",
+                "feature_flags": {
+                  "enable_massive_modes": false,
+                  "enable_research_mode": false,
+                  "enable_calibration_preload": true,
+                  "enable_insights_api": true,
+                  "enable_design_api": true,
+                  "enable_command_center": true
+                },
+                "method": "evo2_multi_exon_v1",
+                "calibration": {
+                  "calibrated_percentile": 30.0,
+                  "z_score": 0.0,
+                  "confidence": 0.1,
+                  "sample_size": 0,
+                  "calibration_source": "fallback",
+                  "cache_age_hours": 0.23391901188426548
+                }
+              }
+            }
+          }
+        ],
+        "guidance": null
+      }
+    },
+    {
+      "input": {
+        "disease": "ovarian cancer",
+        "therapy": "PARP inhibitor",
+        "drug_or_class": "PARP inhibitor",
+        "gene": "BRCA1",
+        "hgvs_p": "Q1756*",
+        "chrom": "17",
+        "pos": "43071077",
+        "ref": "C",
+        "alt": "T",
+        "build": "hg38",
+        "on_label_truth": "true"
+      },
+      "prediction": {
+        "suggested_therapy": "platinum",
+        "damage_report": [
+          {
+            "variant": {
+              "gene": "BRCA1",
+              "hgvs_p": "Q1756*",
+              "chrom": "17",
+              "pos": 43071077,
+              "ref": "C",
+              "alt": "T",
+              "build": "hg38"
+            },
+            "vep": null,
+            "functionality": {
+              "gene": "BRCA1",
+              "hgvs_p": "Q1756*",
+              "functionality_change_score": 0.6,
+              "affected_domains": [],
+              "provenance": {
+                "model_id": "evo2_7b",
+                "method": "esm_stub+evo2_rule",
+                "feature_flags": {
+                  "enable_massive_modes": false,
+                  "enable_research_mode": false,
+                  "enable_calibration_preload": true,
+                  "enable_insights_api": true,
+                  "enable_design_api": true,
+                  "enable_command_center": true
+                }
+              }
+            }
+          }
+        ],
+        "essentiality_report": [
+          {
+            "gene": "BRCA1",
+            "result": {
+              "gene": "BRCA1",
+              "essentiality_score": 0.35,
+              "flags": {
+                "truncation": false,
+                "frameshift": false
+              },
+              "rationale": "Truncation-first; Evo2 multi/exon magnitude proxy; calibrated if available",
+              "confidence": 0.55,
+              "provenance": {
+                "model_id": "evo2_7b",
+                "feature_flags": {
+                  "enable_massive_modes": false,
+                  "enable_research_mode": false,
+                  "enable_calibration_preload": true,
+                  "enable_insights_api": true,
+                  "enable_design_api": true,
+                  "enable_command_center": true
+                },
+                "method": "evo2_multi_exon_v1",
+                "calibration": {
+                  "calibrated_percentile": 30.0,
+                  "z_score": 0.0,
+                  "confidence": 0.1,
+                  "sample_size": 0,
+                  "calibration_source": "fallback",
+                  "cache_age_hours": 0.27024722549650404
+                }
+              }
+            }
+          }
+        ],
+        "guidance": null
+      }
+    }
+  ]
+}

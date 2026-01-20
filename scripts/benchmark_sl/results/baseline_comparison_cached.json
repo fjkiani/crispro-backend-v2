@@ -1,0 +1,552 @@
+{
+  "provenance": {
+    "run_id": "b0a5dbad-cef5-4cb7-ac4f-760e298a329d",
+    "created_at": "2025-12-30T04:38:31.596360+00:00",
+    "script": "run_baseline_comparisons.py",
+    "dataset": "test_cases_hard_set.json",
+    "flags": {
+      "DISABLE_LITERATURE": "",
+      "DISABLE_FUSION": "",
+      "EVO_FORCE_MODEL": "",
+      "EVO_USE_DELTA_ONLY": "",
+      "GUIDANCE_FAST": ""
+    }
+  },
+  "summary": {
+    "n_total": 12,
+    "n_positive": 8,
+    "n_negative": 4,
+    "metrics": {
+      "random": {
+        "positive": {
+          "n": 8,
+          "class_at1": 0.5,
+          "drug_at1": 0.375
+        },
+        "negative": {
+          "n": 4,
+          "parp_fp_rate": 0.75
+        }
+      },
+      "rule": {
+        "positive": {
+          "n": 8,
+          "class_at1": 0.5,
+          "drug_at1": 0.25
+        },
+        "negative": {
+          "n": 4,
+          "parp_fp_rate": 1.0
+        }
+      },
+      "spe": {
+        "positive": {
+          "n": 8,
+          "class_at1": 0.0,
+          "drug_at1": 0.0,
+          "cache_miss_rate": 1.0
+        },
+        "negative": {
+          "n": 4,
+          "parp_fp_rate": 0.0
+        },
+        "cache": {
+          "enabled": true,
+          "size": 10
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "HS_001",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": true,
+        "effective_drugs": [
+          "Adavosertib"
+        ],
+        "effective_classes": [
+          "wee1"
+        ]
+      },
+      "predictions": {
+        "random": {
+          "drug": "Adavosertib",
+          "class": "wee1"
+        },
+        "rule": {
+          "drug": "Adavosertib",
+          "class": "wee1"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "class_at1": true,
+          "drug_at1": true
+        },
+        "rule": {
+          "class_at1": true,
+          "drug_at1": true
+        },
+        "spe": {
+          "class_at1": false,
+          "drug_at1": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_002",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": true,
+        "effective_drugs": [
+          "Ceralasertib"
+        ],
+        "effective_classes": [
+          "atr"
+        ]
+      },
+      "predictions": {
+        "random": {
+          "drug": "Olaparib",
+          "class": "parp"
+        },
+        "rule": {
+          "drug": "Talazoparib",
+          "class": "parp"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "class_at1": false,
+          "drug_at1": false
+        },
+        "rule": {
+          "class_at1": false,
+          "drug_at1": false
+        },
+        "spe": {
+          "class_at1": false,
+          "drug_at1": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_003",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": true,
+        "effective_drugs": [
+          "Trametinib"
+        ],
+        "effective_classes": [
+          "mapk"
+        ]
+      },
+      "predictions": {
+        "random": {
+          "drug": "Olaparib",
+          "class": "parp"
+        },
+        "rule": {
+          "drug": "Adavosertib",
+          "class": "wee1"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "class_at1": false,
+          "drug_at1": false
+        },
+        "rule": {
+          "class_at1": false,
+          "drug_at1": false
+        },
+        "spe": {
+          "class_at1": false,
+          "drug_at1": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_004",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": false,
+        "effective_drugs": [],
+        "effective_classes": []
+      },
+      "predictions": {
+        "random": {
+          "drug": "Rucaparib",
+          "class": "parp"
+        },
+        "rule": {
+          "drug": "Olaparib",
+          "class": "parp"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "neg_parp_fp": true
+        },
+        "rule": {
+          "neg_parp_fp": true
+        },
+        "spe": {
+          "neg_parp_fp": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_005",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": false,
+        "effective_drugs": [],
+        "effective_classes": []
+      },
+      "predictions": {
+        "random": {
+          "drug": "Rucaparib",
+          "class": "parp"
+        },
+        "rule": {
+          "drug": "Olaparib",
+          "class": "parp"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "neg_parp_fp": true
+        },
+        "rule": {
+          "neg_parp_fp": true
+        },
+        "spe": {
+          "neg_parp_fp": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_006",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": false,
+        "effective_drugs": [],
+        "effective_classes": []
+      },
+      "predictions": {
+        "random": {
+          "drug": "Adavosertib",
+          "class": "wee1"
+        },
+        "rule": {
+          "drug": "Olaparib",
+          "class": "parp"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "neg_parp_fp": false
+        },
+        "rule": {
+          "neg_parp_fp": true
+        },
+        "spe": {
+          "neg_parp_fp": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_007",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": true,
+        "effective_drugs": [
+          "Adavosertib"
+        ],
+        "effective_classes": [
+          "wee1"
+        ]
+      },
+      "predictions": {
+        "random": {
+          "drug": "Trametinib",
+          "class": "mapk"
+        },
+        "rule": {
+          "drug": "Olaparib",
+          "class": "parp"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "class_at1": false,
+          "drug_at1": false
+        },
+        "rule": {
+          "class_at1": false,
+          "drug_at1": false
+        },
+        "spe": {
+          "class_at1": false,
+          "drug_at1": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_008",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": false,
+        "effective_drugs": [],
+        "effective_classes": []
+      },
+      "predictions": {
+        "random": {
+          "drug": "Talazoparib",
+          "class": "parp"
+        },
+        "rule": {
+          "drug": "Olaparib",
+          "class": "parp"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "neg_parp_fp": true
+        },
+        "rule": {
+          "neg_parp_fp": true
+        },
+        "spe": {
+          "neg_parp_fp": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_009",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": true,
+        "effective_drugs": [
+          "Trametinib"
+        ],
+        "effective_classes": [
+          "mapk"
+        ]
+      },
+      "predictions": {
+        "random": {
+          "drug": "Trametinib",
+          "class": "mapk"
+        },
+        "rule": {
+          "drug": "Ceralasertib",
+          "class": "atr"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "class_at1": true,
+          "drug_at1": true
+        },
+        "rule": {
+          "class_at1": false,
+          "drug_at1": false
+        },
+        "spe": {
+          "class_at1": false,
+          "drug_at1": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_010",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": true,
+        "effective_drugs": [
+          "Olaparib"
+        ],
+        "effective_classes": [
+          "parp"
+        ]
+      },
+      "predictions": {
+        "random": {
+          "drug": "Adavosertib",
+          "class": "wee1"
+        },
+        "rule": {
+          "drug": "Niraparib",
+          "class": "parp"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "class_at1": false,
+          "drug_at1": false
+        },
+        "rule": {
+          "class_at1": true,
+          "drug_at1": false
+        },
+        "spe": {
+          "class_at1": false,
+          "drug_at1": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_011",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": true,
+        "effective_drugs": [
+          "Rucaparib"
+        ],
+        "effective_classes": [
+          "parp"
+        ]
+      },
+      "predictions": {
+        "random": {
+          "drug": "Talazoparib",
+          "class": "parp"
+        },
+        "rule": {
+          "drug": "Olaparib",
+          "class": "parp"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "class_at1": true,
+          "drug_at1": false
+        },
+        "rule": {
+          "class_at1": true,
+          "drug_at1": false
+        },
+        "spe": {
+          "class_at1": false,
+          "drug_at1": false
+        }
+      }
+    },
+    {
+      "case_id": "HS_012",
+      "disease": "ovarian_cancer",
+      "label": {
+        "is_positive": true,
+        "effective_drugs": [
+          "Olaparib",
+          "Niraparib",
+          "Rucaparib"
+        ],
+        "effective_classes": [
+          "parp"
+        ]
+      },
+      "predictions": {
+        "random": {
+          "drug": "Rucaparib",
+          "class": "parp"
+        },
+        "rule": {
+          "drug": "Olaparib",
+          "class": "parp"
+        },
+        "spe": {
+          "drug": null,
+          "class": "none",
+          "confidence": 0.0,
+          "cache_hit": false
+        }
+      },
+      "eval": {
+        "random": {
+          "class_at1": true,
+          "drug_at1": true
+        },
+        "rule": {
+          "class_at1": true,
+          "drug_at1": true
+        },
+        "spe": {
+          "class_at1": false,
+          "drug_at1": false
+        }
+      }
+    }
+  ]
+}

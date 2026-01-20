@@ -1,0 +1,17 @@
+{
+  "cohort_id": "pgx_validation_pancan_tcga_pan_can_atlas_2018",
+  "source": "cbioportal",
+  "study_id": "pancan_tcga_pan_can_atlas_2018",
+  "patients": [],
+  "metadata": {
+    "extraction_date": "2026-01-03T04:59:08.211217",
+    "n_patients": 0,
+    "n_with_pgx_variants": 0,
+    "pgx_genes_searched": [
+      "DPYD",
+      "TPMT",
+      "UGT1A1",
+      "CYP2D6"
+    ]
+  }
+}

@@ -83,4 +83,41 @@ def compute_calibration_snapshot(
         return None
 
 
-
+def get_percentile_lift(
+    calibration_snapshot: Optional[Dict[str, Any]] = None,
+    base_confidence: float = 0.5
+) -> float:
+    """
+    Compute confidence lift based on calibration percentiles.
+    
+    Args:
+        calibration_snapshot: Optional calibration data
+        base_confidence: Base confidence to lift from
+        
+    Returns:
+        Lifted confidence value
+    """
+    if not calibration_snapshot:
+        return base_confidence
+    
+    try:
+        # Extract sequence percentiles
+        seq_cal = calibration_snapshot.get("sequence_calibration", {})
+        path_cal = calibration_snapshot.get("pathway_calibration", {})
+        
+        # Average sequence percentiles
+        seq_percentiles = [v.get("percentile", 0.0) for v in seq_cal.values()]
+        avg_seq_pct = sum(seq_percentiles) / len(seq_percentiles) if seq_percentiles else 0.0
+        
+        # Average pathway percentiles
+        path_percentiles = [v.get("percentile", 0.0) for v in path_cal.values()]
+        avg_path_pct = sum(path_percentiles) / len(path_percentiles) if path_percentiles else 0.0
+        
+        # Compute lift (modest, capped at +0.1)
+        lift = min(0.1, (avg_seq_pct + avg_path_pct) / 2 * 0.15)
+        
+        return min(1.0, base_confidence + lift)
+        
+    except Exception as e:
+        logger.warning(f"Failed to compute percentile lift: {e}")
+        return base_confidence

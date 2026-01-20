@@ -1,0 +1,3850 @@
+{
+  "SL_001": {
+    "drugs": [
+      {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.465,
+        "confidence": 0.545,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.C61G ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.522,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "niraparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.465,
+        "confidence": 0.545,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.C61G ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.522,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "rucaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.465,
+        "confidence": 0.545,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.C61G ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.522,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "carboplatin",
+        "moa": "platinum alkylating agent",
+        "efficacy_score": 0.465,
+        "confidence": 0.545,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.C61G ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.522,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "bevacizumab",
+        "moa": "anti-VEGF",
+        "efficacy_score": 0.0,
+        "confidence": 0.258,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.C61G ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.522,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.0,
+        "confidence": 0.258,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.C61G ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.522,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      }
+    ],
+    "run_signature": "96c5a847-37d3-4ccc-987c-f7dbe1141232",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "consider",
+    "provenance": {
+      "run_id": "96c5a847-37d3-4ccc-987c-f7dbe1141232",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 1
+      },
+      "confidence_breakdown": {
+        "top_drug": "olaparib",
+        "confidence": 0.545,
+        "tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "S_contribution": 0.05,
+        "P_contribution": 1.0,
+        "E_contribution": 0.0,
+        "pathway_disruption": {
+          "ddr": 0.05
+        }
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  },
+  "SL_002": {
+    "drugs": [
+      {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.76,
+        "confidence": 0.57,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.2,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.K3326* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.406,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "niraparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.76,
+        "confidence": 0.57,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.2,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.K3326* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.406,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "rucaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.76,
+        "confidence": 0.57,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.2,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.K3326* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.406,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "carboplatin",
+        "moa": "platinum alkylating agent",
+        "efficacy_score": 0.76,
+        "confidence": 0.57,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.2,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.K3326* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.406,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "bevacizumab",
+        "moa": "anti-VEGF",
+        "efficacy_score": 0.3,
+        "confidence": 0.52,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.K3326* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.406,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.3,
+        "confidence": 0.52,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.K3326* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.406,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      }
+    ],
+    "run_signature": "d78eed99-e083-400a-9b73-088daabf2e26",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "consider",
+    "provenance": {
+      "run_id": "d78eed99-e083-400a-9b73-088daabf2e26",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 1
+      },
+      "confidence_breakdown": {
+        "top_drug": "olaparib",
+        "confidence": 0.57,
+        "tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "S_contribution": 1.0,
+        "P_contribution": 1.0,
+        "E_contribution": 0.2,
+        "pathway_disruption": {
+          "ddr": 1.0
+        }
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  },
+  "SL_003": {
+    "drugs": [
+      {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.75,
+        "confidence": 0.66,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "MBD4 p.R346fs ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.685,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "niraparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.75,
+        "confidence": 0.66,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "MBD4 p.R346fs ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.685,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "rucaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.75,
+        "confidence": 0.66,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "MBD4 p.R346fs ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.685,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "carboplatin",
+        "moa": "platinum alkylating agent",
+        "efficacy_score": 0.75,
+        "confidence": 0.66,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "MBD4 p.R346fs ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.685,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "bevacizumab",
+        "moa": "anti-VEGF",
+        "efficacy_score": 0.35,
+        "confidence": 0.56,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "MBD4 p.R346fs ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.685,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.35,
+        "confidence": 0.56,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "MBD4 p.R346fs ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.685,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      }
+    ],
+    "run_signature": "99073858-9449-418f-8e01-c69d43a51eab",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "consider",
+    "provenance": {
+      "run_id": "99073858-9449-418f-8e01-c69d43a51eab",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 2
+      },
+      "confidence_breakdown": {
+        "top_drug": "olaparib",
+        "confidence": 0.66,
+        "tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "S_contribution": 1.0,
+        "P_contribution": 1.0,
+        "E_contribution": 0.0,
+        "pathway_disruption": {
+          "ddr": 1.0,
+          "tp53": 0.8
+        }
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  },
+  "SL_004": {
+    "drugs": [
+      {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.84,
+        "confidence": 0.58,
+        "evidence_tier": "consider",
+        "badges": [
+          "ClinVar-Strong",
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": "expert_panel",
+          "prior": 0.2
+        },
+        "evidence_manifest": {
+          "pubmed_query": "TP53 p.R273H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": "expert_panel"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "niraparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.84,
+        "confidence": 0.58,
+        "evidence_tier": "consider",
+        "badges": [
+          "ClinVar-Strong",
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": "expert_panel",
+          "prior": 0.2
+        },
+        "evidence_manifest": {
+          "pubmed_query": "TP53 p.R273H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": "expert_panel"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "rucaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.84,
+        "confidence": 0.58,
+        "evidence_tier": "consider",
+        "badges": [
+          "ClinVar-Strong",
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": "expert_panel",
+          "prior": 0.2
+        },
+        "evidence_manifest": {
+          "pubmed_query": "TP53 p.R273H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": "expert_panel"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "carboplatin",
+        "moa": "platinum alkylating agent",
+        "efficacy_score": 0.84,
+        "confidence": 0.58,
+        "evidence_tier": "consider",
+        "badges": [
+          "ClinVar-Strong",
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": "expert_panel",
+          "prior": 0.2
+        },
+        "evidence_manifest": {
+          "pubmed_query": "TP53 p.R273H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": "expert_panel"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "bevacizumab",
+        "moa": "anti-VEGF",
+        "efficacy_score": 0.0,
+        "confidence": 0.53,
+        "evidence_tier": "insufficient",
+        "badges": [
+          "ClinVar-Strong"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": "expert_panel",
+          "prior": 0.2
+        },
+        "evidence_manifest": {
+          "pubmed_query": "TP53 p.R273H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": "expert_panel"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.0,
+        "confidence": 0.53,
+        "evidence_tier": "insufficient",
+        "badges": [
+          "ClinVar-Strong"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": "expert_panel",
+          "prior": 0.2
+        },
+        "evidence_manifest": {
+          "pubmed_query": "TP53 p.R273H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": "expert_panel"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      }
+    ],
+    "run_signature": "0812ac09-5aae-47dc-8d00-e487929c9d5f",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "consider",
+    "provenance": {
+      "run_id": "0812ac09-5aae-47dc-8d00-e487929c9d5f",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 1
+      },
+      "confidence_breakdown": {
+        "top_drug": "olaparib",
+        "confidence": 0.58,
+        "tier": "consider",
+        "badges": [
+          "ClinVar-Strong",
+          "PathwayAligned"
+        ],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "S_contribution": 0.8,
+        "P_contribution": 1.0,
+        "E_contribution": 0.0,
+        "pathway_disruption": {
+          "tp53": 0.8
+        }
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  },
+  "SL_005": {
+    "drugs": [
+      {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.81,
+        "confidence": 0.66,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.2,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.Q563* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.545,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "niraparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.81,
+        "confidence": 0.66,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.2,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.Q563* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.545,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "rucaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.81,
+        "confidence": 0.66,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.2,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.Q563* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.545,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "carboplatin",
+        "moa": "platinum alkylating agent",
+        "efficacy_score": 0.81,
+        "confidence": 0.66,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.2,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.Q563* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.545,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "bevacizumab",
+        "moa": "anti-VEGF",
+        "efficacy_score": 0.35,
+        "confidence": 0.56,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.Q563* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.545,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.35,
+        "confidence": 0.56,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.Q563* ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.545,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      }
+    ],
+    "run_signature": "aca20495-70af-44b1-9817-6f9946a269da",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "consider",
+    "provenance": {
+      "run_id": "aca20495-70af-44b1-9817-6f9946a269da",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 2
+      },
+      "confidence_breakdown": {
+        "top_drug": "olaparib",
+        "confidence": 0.66,
+        "tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.2
+          }
+        ],
+        "S_contribution": 1.0,
+        "P_contribution": 1.0,
+        "E_contribution": 0.2,
+        "pathway_disruption": {
+          "ddr": 1.0,
+          "tp53": 0.8
+        }
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  },
+  "SL_006": {
+    "drugs": [
+      {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.0,
+        "confidence": 0.258,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "OR4F5 p.V123M ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "niraparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.0,
+        "confidence": 0.258,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "OR4F5 p.V123M ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "rucaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.0,
+        "confidence": 0.258,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "OR4F5 p.V123M ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "carboplatin",
+        "moa": "platinum alkylating agent",
+        "efficacy_score": 0.0,
+        "confidence": 0.258,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "OR4F5 p.V123M ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "bevacizumab",
+        "moa": "anti-VEGF",
+        "efficacy_score": 0.0,
+        "confidence": 0.258,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "OR4F5 p.V123M ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.0,
+        "confidence": 0.258,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "OR4F5 p.V123M ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      }
+    ],
+    "run_signature": "71ff8553-cf0c-434f-8bad-1564640f294e",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "insufficient",
+    "provenance": {
+      "run_id": "71ff8553-cf0c-434f-8bad-1564640f294e",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 1
+      },
+      "confidence_breakdown": {
+        "top_drug": "olaparib",
+        "confidence": 0.258,
+        "tier": "insufficient",
+        "badges": [],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "S_contribution": 0.05,
+        "P_contribution": 0.0,
+        "E_contribution": 0.0,
+        "pathway_disruption": {}
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  },
+  "SL_007": {
+    "drugs": [
+      {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.0,
+        "confidence": 0.217,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "HLA-A p.A74T ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "niraparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.0,
+        "confidence": 0.217,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "HLA-A p.A74T ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "rucaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.0,
+        "confidence": 0.217,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "HLA-A p.A74T ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "carboplatin",
+        "moa": "platinum alkylating agent",
+        "efficacy_score": 0.0,
+        "confidence": 0.217,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "HLA-A p.A74T ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "bevacizumab",
+        "moa": "anti-VEGF",
+        "efficacy_score": 0.0,
+        "confidence": 0.217,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "HLA-A p.A74T ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.0,
+        "confidence": 0.217,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "HLA-A p.A74T ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.471,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      }
+    ],
+    "run_signature": "3583e574-ee3b-4463-876b-528dcf69b7a2",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "insufficient",
+    "provenance": {
+      "run_id": "3583e574-ee3b-4463-876b-528dcf69b7a2",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 1
+      },
+      "confidence_breakdown": {
+        "top_drug": "olaparib",
+        "confidence": 0.217,
+        "tier": "insufficient",
+        "badges": [],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "S_contribution": 0.05,
+        "P_contribution": 0.0,
+        "E_contribution": 0.0,
+        "pathway_disruption": {}
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  },
+  "SL_008": {
+    "drugs": [
+      {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.0,
+        "confidence": 0.57,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "KRAS p.G12D ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.8,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "niraparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.0,
+        "confidence": 0.57,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "KRAS p.G12D ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.8,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "rucaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.0,
+        "confidence": 0.57,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "KRAS p.G12D ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.8,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "carboplatin",
+        "moa": "platinum alkylating agent",
+        "efficacy_score": 0.0,
+        "confidence": 0.57,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "KRAS p.G12D ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.8,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "bevacizumab",
+        "moa": "anti-VEGF",
+        "efficacy_score": 0.0,
+        "confidence": 0.57,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "KRAS p.G12D ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.8,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.0,
+        "confidence": 0.57,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "KRAS p.G12D ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.622,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.8,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      }
+    ],
+    "run_signature": "db26b5c0-30a3-49f3-a8fe-c3cd8534cef3",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "insufficient",
+    "provenance": {
+      "run_id": "db26b5c0-30a3-49f3-a8fe-c3cd8534cef3",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 1
+      },
+      "confidence_breakdown": {
+        "top_drug": "olaparib",
+        "confidence": 0.57,
+        "tier": "insufficient",
+        "badges": [],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0001,
+            "percentile": 0.8
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.8,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "S_contribution": 0.8,
+        "P_contribution": 0.0,
+        "E_contribution": 0.0,
+        "pathway_disruption": {
+          "ras_mapk": 0.8
+        }
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  },
+  "SL_009": {
+    "drugs": [
+      {
+        "name": "BRAF inhibitor",
+        "moa": "MAPK blockade",
+        "efficacy_score": 0.3,
+        "confidence": 0.56,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.E23* breast_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.5,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "MEK inhibitor",
+        "moa": "MAPK downstream blockade",
+        "efficacy_score": 0.3,
+        "confidence": 0.56,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.E23* breast_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.5,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "IMiD",
+        "moa": "immunomodulatory",
+        "efficacy_score": 0.3,
+        "confidence": 0.56,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.E23* breast_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.5,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "Proteasome inhibitor",
+        "moa": "proteostasis stress",
+        "efficacy_score": 0.3,
+        "confidence": 0.56,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.E23* breast_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.5,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "Anti-CD38",
+        "moa": "antibody",
+        "efficacy_score": 0.3,
+        "confidence": 0.56,
+        "evidence_tier": "consider",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "vus",
+          "review_status": "criteria_provided",
+          "prior": 0.0
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA1 p.E23* breast_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "vus",
+            "review_status": "criteria_provided"
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.5,
+          "essentiality": 0.9,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      }
+    ],
+    "run_signature": "b5d90bf0-d577-4321-944f-40c28001cbac",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "consider",
+    "provenance": {
+      "run_id": "b5d90bf0-d577-4321-944f-40c28001cbac",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 2
+      },
+      "confidence_breakdown": {
+        "top_drug": "BRAF inhibitor",
+        "confidence": 0.56,
+        "tier": "consider",
+        "badges": [],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 1.0,
+            "percentile": 1.0
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.0
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "S_contribution": 1.0,
+        "P_contribution": 0.0,
+        "E_contribution": 0.0,
+        "pathway_disruption": {
+          "ddr": 1.0,
+          "pi3k": 0.05
+        }
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  },
+  "SL_010": {
+    "drugs": [
+      {
+        "name": "olaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.465,
+        "confidence": 0.505,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.N372H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.491,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "niraparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.465,
+        "confidence": 0.505,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.N372H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.491,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "rucaparib",
+        "moa": "PARP inhibitor",
+        "efficacy_score": 0.465,
+        "confidence": 0.505,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.N372H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.491,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "carboplatin",
+        "moa": "platinum alkylating agent",
+        "efficacy_score": 0.465,
+        "confidence": 0.505,
+        "evidence_tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.N372H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.491,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": false
+      },
+      {
+        "name": "bevacizumab",
+        "moa": "anti-VEGF",
+        "efficacy_score": 0.0,
+        "confidence": 0.217,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.N372H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.491,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      },
+      {
+        "name": "pembrolizumab",
+        "moa": "anti-PD-1",
+        "efficacy_score": 0.0,
+        "confidence": 0.217,
+        "evidence_tier": "insufficient",
+        "badges": [],
+        "evidence_strength": 0.0,
+        "citations": [],
+        "citations_count": 0,
+        "clinvar": {
+          "classification": "pathogenic",
+          "review_status": null,
+          "prior": 0.05
+        },
+        "evidence_manifest": {
+          "pubmed_query": "BRCA2 p.N372H ovarian_cancer",
+          "citations": [],
+          "clinvar": {
+            "classification": "pathogenic",
+            "review_status": null
+          }
+        },
+        "insights": {
+          "functionality": 0.55,
+          "chromatin": 0.491,
+          "essentiality": 0.35,
+          "regulatory": 0.1
+        },
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 0.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "meets_evidence_gate": false,
+        "insufficient_signal": true
+      }
+    ],
+    "run_signature": "bafb6d7e-fe24-4d0b-8503-c33bbf0d034a",
+    "scoring_strategy": {
+      "approach": "evo2_adaptive",
+      "source": "unknown",
+      "models_tested": [
+        "evo2_7b"
+      ],
+      "windows_tested": [
+        {
+          "flank": 4096,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 8192,
+          "exon_delta": 0.0
+        },
+        {
+          "flank": 16384,
+          "exon_delta": 0.0
+        }
+      ],
+      "ablation_mode": "SPE"
+    },
+    "evidence_tier": "consider",
+    "provenance": {
+      "run_id": "bafb6d7e-fe24-4d0b-8503-c33bbf0d034a",
+      "profile": "baseline",
+      "cache": "miss",
+      "flags": {
+        "fusion_active": false,
+        "evo_use_delta_only": true,
+        "evidence_enabled": true,
+        "confidence_v2": false
+      },
+      "sequence_scoring": {
+        "mode": "evo2_adaptive",
+        "count": 2
+      },
+      "confidence_breakdown": {
+        "top_drug": "olaparib",
+        "confidence": 0.505,
+        "tier": "consider",
+        "badges": [
+          "PathwayAligned"
+        ],
+        "rationale": [
+          {
+            "type": "sequence",
+            "value": 0.0,
+            "percentile": 0.05
+          },
+          {
+            "type": "pathway",
+            "percentile": 1.0,
+            "breakdown": {
+              "ras_mapk": 0.0,
+              "tp53": 0.8
+            }
+          },
+          {
+            "type": "evidence",
+            "strength": 0.0
+          }
+        ],
+        "S_contribution": 0.05,
+        "P_contribution": 1.0,
+        "E_contribution": 0.0,
+        "pathway_disruption": {
+          "ddr": 0.05,
+          "tp53": 0.8
+        }
+      },
+      "lifts": {
+        "ablation_mode": "SPE"
+      }
+    }
+  }
+}

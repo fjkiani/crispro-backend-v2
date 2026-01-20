@@ -71,6 +71,42 @@ async def literature(api_base: str, gene: str, hgvs_p: str, drug_name: str,
     )
     
     try:
+        # Build MoA terms list with disease-specific enhancements
+        moa_terms = [t for t in [drug_name, drug_moa] if t]
+        
+        # Phase 1.2: Ovarian cancer PARP inhibitor evidence integration
+        disease_lower = _safe_lower(disease)
+        drug_moa_lower = _safe_lower(drug_moa)
+        drug_name_lower = _safe_lower(drug_name)
+        
+        # Add PARP-specific MoA terms for ovarian cancer
+        if "ovarian" in disease_lower or "gynecologic" in disease_lower:
+            if "parp" in drug_moa_lower or "parp" in drug_name_lower:
+                # Add PARP-specific terms for better evidence retrieval
+                parp_terms = [
+                    "PARP inhibitor",
+                    "synthetic lethality",
+                    "HRD",
+                    "homologous recombination",
+                    "BRCA",
+                    "DNA repair deficiency"
+                ]
+                moa_terms.extend(parp_terms)
+                result.provenance["parp_enhanced"] = True
+        
+        # Add platinum response evidence terms for ovarian cancer
+        if "ovarian" in disease_lower:
+            if "platinum" in drug_name_lower or "carboplatin" in drug_name_lower or "cisplatin" in drug_name_lower:
+                platinum_terms = [
+                    "platinum response",
+                    "platinum sensitivity",
+                    "BRCA",
+                    "HRD",
+                    "homologous recombination"
+                ]
+                moa_terms.extend(platinum_terms)
+                result.provenance["platinum_enhanced"] = True
+        
         async with httpx.AsyncClient(timeout=60.0) as client:
             lr = await client.post(
                 f"{api_base}/api/evidence/literature",
@@ -82,7 +118,7 @@ async def literature(api_base: str, gene: str, hgvs_p: str, drug_name: str,
                     "max_results": 8,
                     "include_abstracts": True,
                     "synthesize": True,
-                    "moa_terms": [t for t in [drug_name, drug_moa] if t],
+                    "moa_terms": moa_terms,
                 },
                 headers={"Content-Type": "application/json"}
             )
@@ -118,6 +154,31 @@ async def literature(api_base: str, gene: str, hgvs_p: str, drug_name: str,
                 base_strength = _score_evidence_from_results(filtered or tops)
                 # Increase MoA weighting to lift evidence strength
                 strength = float(min(1.0, base_strength + 0.10 * moa_hits))
+                
+                # Phase 1.2: Strength boost for BRCA1/BRCA2 truncating mutations
+                # Boost +0.2 for BRCA truncating mutations with PARP inhibitors or platinum
+                gene_upper = gene.upper() if gene else ""
+                hgvs_p_str = str(hgvs_p or "")
+                truncating_boost = 0.0
+                
+                if gene_upper in {"BRCA1", "BRCA2"}:
+                    # Check for truncating mutation (stop codon, frameshift)
+                    is_truncating = (
+                        "*" in hgvs_p_str or
+                        "fs" in hgvs_p_str.lower() or
+                        "frameshift" in hgvs_p_str.lower()
+                    )
+                    
+                    if is_truncating:
+                        # Boost for PARP inhibitors or platinum in ovarian cancer
+                        if ("parp" in drug_moa_lower or "parp" in drug_name_lower or
+                            "platinum" in drug_name_lower or "carboplatin" in drug_name_lower or
+                            "cisplatin" in drug_name_lower):
+                            if "ovarian" in disease_lower:
+                                truncating_boost = 0.2
+                                result.provenance["brca_truncating_boost"] = truncating_boost
+                
+                strength = float(min(1.0, strength + truncating_boost))
                 
                 result.top_results = tops
                 result.filtered = filtered

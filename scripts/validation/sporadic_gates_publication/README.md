@@ -1,51 +1,24 @@
-# Sporadic Gates (Tumor-Context) — Publication Validation Pack (Backend-Minimal)
+# Sporadic Gates (Tumor-Context) — Publication Validation Pack
 
-This directory makes the **sporadic tumor-context gates** validation reproducible from the main codebase:
-`oncology-coPilot/oncology-backend-minimal/`.
+This directory makes the **sporadic tumor-context gates** validation reproducible.
 
-## What this validates (receipt-backed, non-outcome)
-- **Deterministicbehavior** (PARP penalty + HRD rescue; IO boost; confidence caps) on controlled inputs.
-- **Scenario-suite benchmark** that recomputes the receipt used in the manuscript: change counts + conformance vs a naive reference implementation.
+## What this validates (receipt-backed)
+- **Deterministic behavior** (PARP penalty + HRD rescue; IO boost; confidence caps) on controlled inputs.
+- **Scenario-suite benchmark**: 25-case suite exercising threshold boundaries.
+- **Real-world impact (n=585)**: Behavioral profile across a TCGA-OV clinical cohort, quantifying trigger frequencies and overconfidence suppression.
 - **Quick Intake coverage** (15 cancer priors) as an operational intake bridge.
 - **End-to-end smoke** (Quick Intake → efficacy) producing provenance-bearing outputs.
 
-**Not validated here:** clinical outcomes, enrollment lift, or retrospective "ground truth" trial matching.
-
 ## One-command reproduce
 From `oncology-coPilot/oncology-backend-minimal/`:
-
 ```bash
-# Requires the backend to be running for the E2E step (default API_BASE=http://localhost:8000)
-# Example:
-#   uvicorn api.main:app --reload --port 8000
-
 bash scripts/validation/sporadic_gates_publication/run_all.sh
-```
+``` Key Scripts
+- `scripts/compute_benchmark_gate_effects.py`: Synthetic scenario suite.
+- `scripts/validate_sporadic_impact.py`: Real-world impact on TCGA-OV (n=585).
+- `scripts/validate_quick_intake.py`: Coverage across 15 cancer priors.
 
-Outputs:
-- Timestamped: `scripts/validation/sporadic_gates_publication/receipts/<ts>/...`
-- Stable pointers: `scripts/validation/sporadic_gates_publication/receipts/latest/...`
-
-## Files copied from theublication bundle (source receipts)
-To preserve what the manuscript cited at the time, we also keep the exact publication receipts under:
-- `receipts/source_publication/`
-
-These are for comparison only; the goal is to regenerate them via `run_all.sh`.
-
-## How to extend validation to real studies (where it already exists)
-There **are** real-cohort / clinical-dataset validations in this repo, but they live outside the sporadic-gates publication pack:
-
-- **TCGA-OV EMT/HRD analyses** (example scripts):
-  - `scripts/validation/test_emt_hrd_platinum_tcga_ov.py`
-  - `scripts/validation/test_emt_hrd_early_progression_tcga_ov.py`
-- **Cohort summary output**:
-  - `scripts/validation/real_validation_report.json` (TCGA-OV cohort size 469)
-
-Those are outcome-linked / cohort-based checks, whereas this publication pack is intentionally scoped to **policy correctness + reproducibility**.
-
-If you want *sporadic gates* evaluated over a real cohort, the next step is a new script that:
-1) loads a cohort’s tumor biomarkers (H/TMB/MSI) per patient,
-2) runs `apply_sporadic_gates()` per drug per patient,
-3) summarizes how often each gate triggered + distribution of score deltas,
-4) writes a receipt (JSON) and (optionally) plots.
-
+## Receipts
+- `receipts/benchmark_gate_effects.json`
+- `receipts/sporadic_gates_real_world_impact.json`
+- `receipts/quick_intake_15cancers.json`

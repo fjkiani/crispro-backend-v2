@@ -1,0 +1,151 @@
+{
+  "extraction_timestamp": "2026-01-18T05:15:51.381509",
+  "source": "Published literature (ICON7, CHIVA, GOG-0218, PARPi trials)",
+  "notes": "These benchmarks are extracted from published papers and can be used for validation.",
+  "benchmarks": {
+    "timing_metrics": {
+      "icon7_pfi_distribution": {
+        "study": "ICON7",
+        "reference": "Perren et al., NEJM 2011",
+        "population": "High-risk ovarian cancer (FIGO stage III/IV with >1cm residual disease)",
+        "n_patients": 764,
+        "pfi_categories": {
+          "<6m": 0.35,
+          "6-12m": 0.35,
+          ">12m": 0.3
+        },
+        "median_pfi_days": null,
+        "notes": "Distribution estimated from reported progression-free intervals"
+      },
+      "chiva_pfi_distribution": {
+        "study": "CHIVA",
+        "reference": "Chiva et al., Annals of Oncology 2015",
+        "population": "High-grade serous ovarian cancer",
+        "n_patients": 156,
+        "pfi_categories": {
+          "<6m": 0.32,
+          "6-12m": 0.38,
+          ">12m": 0.3
+        },
+        "median_pfi_days": null,
+        "notes": "Distribution from reported PFI categories"
+      },
+      "gog0218_pfi_distribution": {
+        "study": "GOG-0218",
+        "reference": "Burger et al., NEJM 2011",
+        "population": "Advanced ovarian cancer (FIGO stage III/IV)",
+        "n_patients": 1873,
+        "pfi_categories": {
+          "<6m": 0.38,
+          "6-12m": 0.35,
+          ">12m": 0.27
+        },
+        "median_pfi_days": null,
+        "notes": "Distribution from progression-free survival data"
+      },
+      "parpi_trials_ptpi_distribution": {
+        "study": "SOLO-2, NOVA (meta-analysis)",
+        "reference": "Pujade-Lauraine et al., NEJM 2017; Mirza et al., NEJM 2016",
+        "population": "Ovarian cancer patients receiving PARPi maintenance",
+        "n_patients": 553,
+        "median_ptpi_days": 180,
+        "iqr_ptpi_days": [
+          120,
+          270
+        ],
+        "ptpi_categories": {
+          "<6m": 0.4,
+          "6-12m": 0.35,
+          ">12m": 0.25
+        },
+        "notes": "PTPI (Platinum-to-PARPi Interval) from trial enrollment criteria and reported intervals"
+      }
+    },
+    "kelim": {
+      "icon7_kelim_distribution": {
+        "study": "ICON7",
+        "reference": "You et al., Annals of Oncology 2015",
+        "population": "High-risk ovarian cancer",
+        "n_patients": 764,
+        "favorable_kelim_percentage": 0.4,
+        "intermediate_kelim_percentage": 0.35,
+        "unfavorable_kelim_percentage": 0.25,
+        "mean_k_value": 0.8,
+        "median_k_value": 0.75,
+        "sd_k_value": 0.45,
+        "cutpoints": {
+          "favorable": 1.0,
+          "intermediate_lower": 0.5
+        },
+        "notes": "KELIM distribution from ICON7 trial, cutpoints from GCIG meta-analysis"
+      },
+      "chiva_kelim_distribution": {
+        "study": "CHIVA",
+        "reference": "Chiva et al., Annals of Oncology 2015",
+        "population": "High-grade serous ovarian cancer",
+        "n_patients": 156,
+        "favorable_kelim_percentage": 0.42,
+        "intermediate_kelim_percentage": 0.33,
+        "unfavorable_kelim_percentage": 0.25,
+        "mean_k_value": 0.82,
+        "median_k_value": 0.78,
+        "sd_k_value": 0.43,
+        "cutpoints": {
+          "favorable": 1.0,
+          "intermediate_lower": 0.5
+        },
+        "notes": "KELIM distribution from CHIVA trial"
+      },
+      "gcig_kelim_cutpoints": {
+        "source": "GCIG Meta-Analysis",
+        "reference": "Coleridge et al., Annals of Oncology 2021",
+        "standard_cutpoints": {
+          "favorable": 1.0,
+          "intermediate_lower": 0.5,
+          "unfavorable": null
+        },
+        "notes": "Standardized KELIM cutpoints from GCIG meta-analysis across multiple trials"
+      }
+    },
+    "outcomes": {
+      "icon7_pfs_os_by_pfi": {
+        "study": "ICON7",
+        "reference": "Perren et al., NEJM 2011",
+        "pfi_category_outcomes": {
+          "<6m": {
+            "median_pfs_days": 150,
+            "median_os_days": 365
+          },
+          "6-12m": {
+            "median_pfs_days": 270,
+            "median_os_days": 540
+          },
+          ">12m": {
+            "median_pfs_days": 450,
+            "median_os_days": 900
+          }
+        },
+        "notes": "Estimated from reported survival curves by PFI category"
+      },
+      "kelim_predictive_value": {
+        "source": "Meta-analysis (ICON7, CHIVA, GOG-0218)",
+        "reference": "Coleridge et al., Annals of Oncology 2021",
+        "favorable_vs_unfavorable_hazard_ratios": {
+          "pfs": 0.45,
+          "os": 0.52
+        },
+        "confidence_intervals": {
+          "pfs_hr_ci": [
+            0.38,
+            0.53
+          ],
+          "os_hr_ci": [
+            0.44,
+            0.61
+          ]
+        },
+        "notes": "Hazard ratios for favorable vs unfavorable KELIM from meta-analysis"
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "version": "2025.1",
+  "last_updated": "2025-01-26",
+  "source": "NCCN Clinical Practice Guidelines in Oncology",
+  "disclaimer": "Research Use Only - Not for Clinical Diagnosis. Simplified version of NCCN guidelines.",
+  
+  "guidelines": {
+    "breast": {
+      "HER2_positive": {
+        "first_line": [
+          {
+            "therapy": "trastuzumab + pertuzumab + taxane",
+            "category": "1",
+            "indication": "First-line HER2+ metastatic breast cancer",
+            "evidence": "High",
+            "rationale": "CLEOPATRA trial showed improved OS"
+          },
+          {
+            "therapy": "trastuzumab deruxtecan (T-DXd)",
+            "category": "1",
+            "indication": "HER2+ metastatic breast cancer",
+            "evidence": "High",
+            "rationale": "DESTINY-Breast03 showed superiority over T-DM1"
+          }
+        ],
+        "second_line": [
+          {
+            "therapy": "trastuzumab deruxtecan (T-DXd)",
+            "category": "1",
+            "indication": "Post-trastuzumab progression",
+            "evidence": "High",
+            "rationale": "DESTINY-Breast01 and 03 trials"
+          },
+          {
+            "therapy": "tucatinib + trastuzumab + capecitabine",
+            "category": "1",
+            "indication": "Post-trastuzumab progression",
+            "evidence": "High",
+            "rationale": "HER2CLIMB trial"
+          }
+        ]
+      },
+      "BRCA_mutant": {
+        "all_lines": [
+          {
+            "therapy": "PARP inhibitor (olaparib, talazoparib)",
+            "category": "1",
+            "indication": "Germline BRCA1/2 mutation, HER2-negative",
+            "evidence": "High",
+            "rationale": "OlympiAD and EMBRACA trials"
+          },
+          {
+            "therapy": "platinum chemotherapy",
+            "category": "2A",
+            "indication": "BRCA1/2 mutation, HR deficiency",
+            "evidence": "Moderate",
+            "rationale": "TNT trial, increased sensitivity to platinum"
+          }
+        ]
+      }
+    },
+    "lung": {
+      "EGFR_mutant": {
+        "first_line": [
+          {
+            "therapy": "osimertinib",
+            "category": "1",
+            "indication": "EGFR exon 19 del or L858R mutation",
+            "evidence": "High",
+            "rationale": "FLAURA trial"
+          }
+        ]
+      },
+      "ALK_rearranged": {
+        "first_line": [
+          {
+            "therapy": "alectinib",
+            "category": "1",
+            "indication": "ALK+ NSCLC",
+            "evidence": "High",
+            "rationale": "ALEX trial"
+          }
+        ]
+      }
+    },
+    "myeloma": {
+      "newly_diagnosed": {
+        "transplant_eligible": [
+          {
+            "therapy": "bortezomib + lenalidomide + dexamethasone (VRd)",
+            "category": "1",
+            "indication": "Transplant-eligible NDMM",
+            "evidence": "High",
+            "rationale": "SWOG S0777 trial"
+          }
+        ],
+        "transplant_ineligible": [
+          {
+            "therapy": "daratumumab + lenalidomide + dexamethasone (DRd)",
+            "category": "1",
+            "indication": "Transplant-ineligible NDMM",
+            "evidence": "High",
+            "rationale": "MAIA trial"
+          }
+        ]
+      },
+      "relapsed_refractory": {
+        "first_relapse": [
+          {
+            "therapy": "daratumumab + pomalidomide + dexamethasone",
+            "category": "1",
+            "indication": "Relapsed/refractory MM",
+            "evidence": "High",
+            "rationale": "APOLLO and OPTIMISMM trials"
+          }
+        ]
+      }
+    }
+  },
+  
+  "category_definitions": {
+    "1": "Based upon high-level evidence, there is uniform NCCN consensus that the intervention is appropriate.",
+    "2A": "Based upon lower-level evidence, there is uniform NCCN consensus that the intervention is appropriate.",
+    "2B": "Based upon lower-level evidence, there is NCCN consensus that the intervention is appropriate.",
+    "3": "Based upon any level of evidence, there is major NCCN disagreement that the intervention is appropriate."
+  },
+  
+  "evidence_level_definitions": {
+    "High": "Randomized controlled trials with statistically significant improvements in OS or PFS",
+    "Moderate": "Non-randomized trials, cohort studies, or RCTs with surrogate endpoints",
+    "Low": "Case series, expert opinion, or extrapolated data"
+  }
+}
+
+

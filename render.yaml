@@ -1,0 +1,55 @@
+# Render Deployment Configuration
+# 
+# This file configures the backend service for deployment on Render.com
+# 
+# To deploy:
+# 1. Connect your GitHub repository to Render
+# 2. Render will auto-detect this render.yaml file
+# 3. Or create a Web Service manually using the settings below
+
+services:
+  - type: web
+    name: oncology-backend
+    runtime: python
+    plan: starter  # Options: free, starter, standard, pro
+    region: oregon  # Options: oregon, ohio, frankfurt, singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      # Python
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      
+      # Port (Render automatically sets $PORT)
+      - key: PORT
+        sync: false  # Render manages this
+      
+      # FastAPI
+      - key: ENVIRONMENT
+        value: production
+      
+      # Database (Supabase PostgreSQL)
+      # Set these in Render dashboard under "Environment" tab
+      # - key: SUPABASE_URL
+      #   value: https://your-project.supabase.co
+      # - key: SUPABASE_KEY
+      #   value: your-anon-key
+      # - key: SUPABASE_SERVICE_ROLE_KEY
+      #   value: your-service-role-key
+      
+      # Optional: Cohere API (for embeddings)
+      # - key: COHERE_API_KEY
+      #   value: your-cohere-api-key
+      
+      # Optional: OpenAI (if used)
+      # - key: OPENAI_API_KEY
+      #   value: your-openai-api-key
+
+# Health check configuration
+healthCheck:
+  path: /health
+  intervalSeconds: 10
+  timeoutSeconds: 5
+  healthyThreshold: 2
+  unhealthyThreshold: 3

@@ -14,6 +14,7 @@ starting point for validation metrics.
 
 import json
 import sys
+import re
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Any, Optional
@@ -46,6 +47,85 @@ def is_high_risk_variant(gene: str, variant: str) -> bool:
             return True
     
     return False
+
+def extract_variant_from_text(text: str, gene: str) -> Optional[str]:
+    """Extract variant notation from title/abstract text."""
+    if not text or not gene:
+        return None
+    
+    gene_upper = gene.upper()
+    text_upper = text.upper()
+    
+    # Pattern 1: "DPYD c.2846A>T" (gene followed by c. notation)
+    pattern1 = rf"{gene_upper}.*?c\.([0-9]+[A-Za-z]?[+\-]?[0-9]*[A-Za-z]?[<>]?[A-Za-z]?)"
+    match1 = re.search(pattern1, text_upper, re.IGNORECASE)
+    if match1:
+        return f"c.{match1.group(1)}"
+    
+    # Pattern 2: "DPYD *2A" (gene followed by star allele)
+    pattern2 = rf"{gene_upper}.*?\*([0-9]+[A-Za-z]?)"
+    match2 = re.search(pattern2, text_upper, re.IGNORECASE)
+    if match2:
+        return f"*{match2.group(1)}"
+    
+    # Pattern 3: "c.2846A>T" near gene name (within 100 chars, fallback)
+    pattern3 = r"c\.([0-9]+[A-Za-z]?[+\-]?[0-9]*[A-Za-z]?[<>]?[A-Za-z]?)"
+    matches3 = re.finditer(pattern3, text_upper)
+    for match in matches3:
+        # Check if gene name is nearby (within 100 chars)
+        start = max(0, match.start() - 100)
+        end = min(len(text), match.end() + 100)
+        context = text_upper[start:end]
+        if gene_upper in context:
+            return f"c.{match.group(1)}"
+    
+    # Pattern 4: Star allele "*2A", "*28", etc. near gene name (fallback)
+    pattern4 = r"\*([0-9]+[A-Za-z]?)"
+    matches4 = re.finditer(pattern4, text_upper)
+    for match in matches4:
+        start = max(0, match.start() - 100)
+        end = min(len(text), match.end() + 100)
+        context = text_upper[start:end]
+        if gene_upper in context:
+            return match.group(0)
+    
+    return None
+
+def extract_drug_from_text(text: str) -> Optional[str]:
+    """Extract drug name from title/abstract text."""
+    if not text:
+        return None
+    
+    text_lower = text.lower()
+    
+    # Common pharmacogenomics drugs
+    drug_keywords = {
+        "5-fluorouracil": ["5-fluorouracil", "5-fu", "fluorouracil"],
+        "capecitabine": ["capecitabine", "xeloda"],
+        "irinotecan": ["irinotecan", "camptosar", "cpt-11"],
+        "mercaptopurine": ["mercaptopurine", "6-mp", "6mp"],
+        "azathioprine": ["azathioprine", "imuran"],
+        "thioguanine": ["thioguanine", "6-tg", "6tg"],
+        "warfarin": ["warfarin", "coumadin"],
+        "clopidogrel": ["clopidogrel", "plavix"],
+        "tamoxifen": ["tamoxifen", "nolvadex"],
+    }
+    
+    # Check for drug mentions
+    for drug, keywords in drug_keywords.items():
+        for keyword in keywords:
+            if keyword in text_lower:
+                return drug
+    
+    # Pattern: Look for "drug" or "medication" followed by drug name
+    drug_pattern = r"(?:drug|medication|therapy|treatment|agent)\s+([a-z]+(?:[a-z-]+)?)"
+    matches = re.finditer(drug_pattern, text_lower)
+    for match in matches:
+        potential_drug = match.group(1)
+        if len(potential_drug) > 4:  # Filter out short words
+            return potential_drug
+    
+    return None
 
 def is_high_risk_combination(gene: str, variant: str, drug: str) -> bool:
     """Check if this is a known high-risk drug-variant combination."""
@@ -98,7 +178,7 @@ def infer_toxicity_from_prediction(case: Dict) -> Optional[bool]:
     low_confidence_indicators = [
         not would_flag and adjustment_factor >= 0.9,  # Minimal/no adjustment
         risk_level == 'LOW',
-        cpic_level == 'D' or not cpic_level,  # Weak/no evidence
+        cpic_level in ['D', 'UNKNOWN'] or not cpic_level,  # Weak/no evidence
     ]
     
     if all(low_confidence_indicators):
@@ -166,6 +246,32 @@ def curate_case_automated(case: Dict) -> Dict:
     if case.get('toxicity_occurred') is not None and case.get('source') == 'pubmed':
         return case
     
+    # Extract variant and drug from title/abstract if missing or "N/A"
+    gene = case.get('gene', '')
+    variant = case.get('variant') or ''
+    drug = case.get('drug') or ''
+    
+    # Check if variant/drug are missing or "N/A"
+    needs_variant = not variant or str(variant).upper() in ['N/A', 'NONE', 'NULL', '']
+    needs_drug = not drug or str(drug).upper() in ['N/A', 'NONE', 'NULL', '']
+    
+    if needs_variant or needs_drug:
+        title = case.get('fetched_title', '') or case.get('title', '')
+        abstract = case.get('fetched_abstract', '') or case.get('abstract', '')
+        text = f"{title} {abstract}"
+        
+        if needs_variant and gene:
+            extracted_variant = extract_variant_from_text(text, gene)
+            if extracted_variant:
+                case['variant'] = extracted_variant
+                variant = extracted_variant
+        
+        if needs_drug:
+            extracted_drug = extract_drug_from_text(text)
+            if extracted_drug:
+                case['drug'] = extracted_drug
+                drug = extracted_drug
+    
     # Try to infer toxicity
     inferred_toxicity = infer_toxicity_from_prediction(case)
     
@@ -218,6 +324,10 @@ def main():
     for i, case in enumerate(cases):
         original_toxicity = case.get('toxicity_occurred')
         curated_case = curate_case_automated(case)
+        
+        # Debug: Check if inference worked
+        if original_toxicity is None and curated_case.get('toxicity_occurred') is not None:
+            print(f"  🔍 DEBUG: {curated_case.get('case_id', 'N/A')} inferred toxicity={curated_case.get('toxicity_occurred')}")
         
         if curated_case.get('toxicity_occurred') != original_toxicity:
             auto_curated_count += 1

@@ -1,0 +1,7542 @@
+{
+  "run_id": "20251230_025627",
+  "dataset_file": "test_cases_100.json",
+  "api_root": "http://127.0.0.1:8000",
+  "model_id": "evo2_1b",
+  "seed": 1337,
+  "methods": [
+    {
+      "name": "Random",
+      "kind": "baseline",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Pembrolizumab",
+            "top_class": "io",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Adavosertib",
+            "top_class": "wee1",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Rucaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Adavosertib",
+            "top_class": "wee1",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Trametinib",
+            "top_class": "mek",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Adavosertib",
+            "top_class": "wee1",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Ceralasertib",
+            "top_class": "atr",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Trametinib",
+            "top_class": "mek",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Talazoparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Adavosertib",
+            "top_class": "wee1",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Niraparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Trametinib",
+            "top_class": "mek",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Trametinib",
+            "top_class": "mek",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Niraparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Pembrolizumab",
+            "top_class": "io",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Adavosertib",
+            "top_class": "wee1",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Trametinib",
+            "top_class": "mek",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Trametinib",
+            "top_class": "mek",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Ceralasertib",
+            "top_class": "atr",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Adavosertib",
+            "top_class": "wee1",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Niraparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Bevacizumab",
+            "top_class": "vegf",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Talazoparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Rucaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Adavosertib",
+            "top_class": "wee1",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Bevacizumab",
+            "top_class": "vegf",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Ceralasertib",
+            "top_class": "atr",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Talazoparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Pembrolizumab",
+            "top_class": "io",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.26666666666666666,
+          "drug_at1": 0.13333333333333333,
+          "class_at1_ci95": [
+            0.13333333333333333,
+            0.43333333333333335
+          ],
+          "drug_at1_ci95": [
+            0.03333333333333333,
+            0.26666666666666666
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Rule (DDR\u2192PARP)",
+      "kind": "baseline",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Niraparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Pembrolizumab",
+            "top_class": "io",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Niraparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Trametinib",
+            "top_class": "mek",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Talazoparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "Olaparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "Talazoparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "Niraparib",
+            "top_class": "parp",
+            "confidence": null,
+            "moa": null
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.7333333333333333,
+          "drug_at1": 0.7,
+          "class_at1_ci95": [
+            0.5666666666666667,
+            0.8666666666666667
+          ],
+          "drug_at1_ci95": [
+            0.5333333333333333,
+            0.8666666666666667
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Model SP",
+      "kind": "model",
+      "ablation_mode": "SP",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.6666666666666666,
+          "drug_at1": 0.6666666666666666,
+          "class_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "drug_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Model SPE",
+      "kind": "model",
+      "ablation_mode": "SPE",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.6666666666666666,
+          "drug_at1": 0.6666666666666666,
+          "class_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "drug_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ablation S",
+      "kind": "ablation",
+      "ablation_mode": "S",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.6666666666666666,
+          "drug_at1": 0.6666666666666666,
+          "class_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "drug_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ablation P",
+      "kind": "ablation",
+      "ablation_mode": "P",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.6666666666666666,
+          "drug_at1": 0.6666666666666666,
+          "class_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "drug_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ablation E",
+      "kind": "ablation",
+      "ablation_mode": "E",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.6666666666666666,
+          "drug_at1": 0.6666666666666666,
+          "class_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "drug_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ablation SP",
+      "kind": "ablation",
+      "ablation_mode": "SP",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.6666666666666666,
+          "drug_at1": 0.6666666666666666,
+          "class_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "drug_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ablation SE",
+      "kind": "ablation",
+      "ablation_mode": "SE",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.6666666666666666,
+          "drug_at1": 0.6666666666666666,
+          "class_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "drug_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ablation PE",
+      "kind": "ablation",
+      "ablation_mode": "PE",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.6666666666666666,
+          "drug_at1": 0.6666666666666666,
+          "class_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "drug_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ablation SPE",
+      "kind": "ablation",
+      "ablation_mode": "SPE",
+      "cases": [
+        {
+          "case_id": "SL_001",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_002",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_003",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_004",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_005",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_006",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_007",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_008",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_009",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_010",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_011",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_012",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_013",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_014",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_015",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_016",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_017",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_018",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "ceralasertib",
+            "top_class": "atr",
+            "confidence": 0.685,
+            "moa": "ATR inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_019",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_020",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.645,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Adavosertib"
+            ],
+            "gt_classes": [
+              "wee1"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_021",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_022",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_023",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_024",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.645,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_025",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Ceralasertib"
+            ],
+            "gt_classes": [
+              "atr"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_026",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "adavosertib",
+            "top_class": "wee1",
+            "confidence": 0.235,
+            "moa": "WEE1 inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": false,
+            "drug_at1": false
+          }
+        },
+        {
+          "case_id": "SL_027",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_028",
+          "disease": "ovarian_cancer",
+          "prediction": {
+            "top_drug": "niraparib",
+            "top_class": "parp",
+            "confidence": 0.708,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_029",
+          "disease": "breast_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        },
+        {
+          "case_id": "SL_030",
+          "disease": "prostate_cancer",
+          "prediction": {
+            "top_drug": "olaparib",
+            "top_class": "parp",
+            "confidence": 0.715,
+            "moa": "PARP inhibitor"
+          },
+          "eval": {
+            "is_positive": true,
+            "gt_drugs": [
+              "Olaparib",
+              "Niraparib"
+            ],
+            "gt_classes": [
+              "parp"
+            ],
+            "class_at1": true,
+            "drug_at1": true
+          }
+        }
+      ],
+      "summary": {
+        "n_total": 30,
+        "n_positive": 30,
+        "n_negative": 0,
+        "positive": {
+          "class_at1": 0.6666666666666666,
+          "drug_at1": 0.6666666666666666,
+          "class_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "drug_at1_ci95": [
+            0.5,
+            0.8333333333333334
+          ]
+        },
+        "negative": {
+          "parp_fp_rate": 0.0,
+          "parp_fp_rate_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  ]
+}

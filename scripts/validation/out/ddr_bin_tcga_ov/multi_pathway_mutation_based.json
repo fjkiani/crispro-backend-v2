@@ -1,0 +1,19 @@
+{
+  "cohort": "TCGA-OV Tier-3",
+  "n_patients": 149,
+  "n_resistant": 24,
+  "pathway_coverage": {
+    "DDR": 4,
+    "MAPK": 4,
+    "PI3K": 5,
+    "Apoptosis": 31,
+    "Efflux": 0
+  },
+  "individual_aurocs": {
+    "DDR": 0.5088333333333332,
+    "MAPK": 0.5088333333333332,
+    "PI3K": 0.48,
+    "Apoptosis": 0.6226666666666667
+  },
+  "note": "MAPK and Efflux have very low mutation rates in ovarian cancer - need expression data"
+}

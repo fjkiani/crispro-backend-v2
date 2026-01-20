@@ -1,0 +1,22 @@
+{
+  "cached_at": "2025-11-14T19:42:27.348286",
+  "trial_data": {
+    "id": "NCT05562479",
+    "title": "Effect of Sars-cov-2 on Donor Oocyte Quality and Quantity, a Multicenter Retrospective Study.",
+    "status": "COMPLETED",
+    "phases": "[\"Not Applicable\"]",
+    "summary": "Purpose: To determine the impact of SARS-CoV-2 infection and immunization on ovarian response to controlled ovarian stimulation (COS) and embryo development after in vitro fertilization (IVF) Methods: A retrospective multicentric cohort study of 427 oocyte donors was conducted between January 1st, 2018 and September 18th, 2022. Patients who recovered from SARS-CoV-2 infection, vaccinated or non-exposed were included. Demographic, cycle characteristics, and laboratory outcomes were compared.",
+    "conditions": "[\"Ovarian Reserve\", \"SARS-CoV-2 Infection\", \"Blastocyst\"]",
+    "interventions": "[\"Sars Cov 2 infection\", \"Sars Cov 2 vaccination\"]",
+    "source": "ClinicalTrials.gov",
+    "inclusion_criteria": "Inclusion\n\n* Age: 18 - 32 Years\n* Body Mass Index between 18 and 26\n* AFC: Antral follicular count over 15 in total.\n* AMH: Anti-Mullerian hormone over 2.5\n* Signed consents.\n* Covid vaccines and infection information (for case group).\n\nExclusion:\n\n* Egg donors with incomplete information of days of stimulation, average dose of gonadotropins, the number of retrieved oocytes, mature oocytes, fertilised oocytes and top-quality embryos obtained.\n* Familial genetic disorders.\n* Menstrual cycle disorders.\n* Polycystic ovary syndrome.",
+    "exclusion_criteria": "",
+    "inclusion_criteria_full": "Inclusion\n\n* Age: 18 - 32 Years\n* Body Mass Index between 18 and 26\n* AFC: Antral follicular count over 15 in total.\n* AMH: Anti-Mullerian hormone over 2.5\n* Signed consents.\n* Covid vaccines and infection information (for case group).\n\nExclusion:\n\n* Egg donors with incomplete information of days of stimulation, average dose of gonadotropins, the number of retrieved oocytes, mature oocytes, fertilised oocytes and top-quality embryos obtained.\n* Familial genetic disorders.\n* Menstrual cycle disorders.\n* Polycystic ovary syndrome.",
+    "exclusion_criteria_full": null,
+    "primary_endpoint": null,
+    "interventions_json": null,
+    "locations_full_json": null,
+    "scraped_data_json": null,
+    "scraped_at": null
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "run_meta": {
+    "linked_csv": "oncology-coPilot/oncology-backend-minimal/scripts/validation/out/ddr_bin_tcga_ov/linked_patients.csv",
+    "positive_class": "resistant_refractory"
+  },
+  "overall": {
+    "n": 149,
+    "auroc_resistant": 0.698
+  },
+  "stage_iii": {
+    "n": 115,
+    "auroc_resistant": 0.7066885964912281,
+    "n_rows": 115
+  },
+  "stage_iv": {
+    "n": 20,
+    "auroc_resistant": 0.484375,
+    "n_rows": 20
+  },
+  "unknown_stage": 14,
+  "interpretation": "Subgroup AUROC by coarse stage bucket (III vs IV)."
+}

@@ -1,0 +1,159 @@
+{
+  "validator": "validate_resistance_e2e_fixtures",
+  "version": "v1",
+  "generated_at": "2025-12-26T10:08:20.737742Z",
+  "status": "PASSED",
+  "fixture_count": 5,
+  "results": [
+    {
+      "fixture": "l0_mutations_only",
+      "description": "L1 completeness: mutations-only MVP (no CA-125 series; no partial markers)",
+      "validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "expected_level": "L1",
+        "actual_level": "INPUT_LEVEL_L1",
+        "expected_confidence_cap": 0.6,
+        "actual_confidence": null,
+        "expected_flags": [
+          "MISSING_CA125_HISTORY",
+          "INPUT_LEVEL_L1"
+        ],
+        "actual_flags": [
+          "MISSING_CA125_HISTORY",
+          "INPUT_LEVEL_L1"
+        ]
+      },
+      "contract_summary": {
+        "risk_level": null,
+        "confidence": null,
+        "mechanism_count": 1,
+        "action_count": 3,
+        "flags": [
+          "MISSING_CA125_HISTORY",
+          "INPUT_LEVEL_L1"
+        ]
+      }
+    },
+    {
+      "fixture": "l1_with_ca125",
+      "description": "L2 completeness: mutations + CA-125 series (serial biomarker present)",
+      "validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "expected_level": "L2",
+        "actual_level": "INPUT_LEVEL_L2",
+        "expected_confidence_cap": 0.8,
+        "actual_confidence": null,
+        "expected_flags": [
+          "INPUT_LEVEL_L2"
+        ],
+        "actual_flags": [
+          "INPUT_LEVEL_L2"
+        ]
+      },
+      "contract_summary": {
+        "risk_level": null,
+        "confidence": null,
+        "mechanism_count": 1,
+        "action_count": 3,
+        "flags": [
+          "INPUT_LEVEL_L2"
+        ]
+      }
+    },
+    {
+      "fixture": "l2_full_completeness",
+      "description": "L2 completeness: mutations + CA-125 + HRD score (expression optional, not required)",
+      "validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "expected_level": "L2",
+        "actual_level": "INPUT_LEVEL_L2",
+        "expected_confidence_cap": 0.8,
+        "actual_confidence": null,
+        "expected_flags": [
+          "INPUT_LEVEL_L2"
+        ],
+        "actual_flags": [
+          "INPUT_LEVEL_L2"
+        ]
+      },
+      "contract_summary": {
+        "risk_level": null,
+        "confidence": null,
+        "mechanism_count": 1,
+        "action_count": 3,
+        "flags": [
+          "INPUT_LEVEL_L2"
+        ]
+      }
+    },
+    {
+      "fixture": "edge_case_2_of_3_trigger",
+      "description": "Edge case: 2-of-3 resistance trigger (HRD drop + CA-125 inadequate response, but DNA repair capacity stable)",
+      "validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "expected_level": "L2",
+        "actual_level": "INPUT_LEVEL_L2",
+        "expected_confidence_cap": 0.8,
+        "actual_confidence": null,
+        "expected_flags": [
+          "INPUT_LEVEL_L2"
+        ],
+        "actual_flags": [
+          "INPUT_LEVEL_L2"
+        ]
+      },
+      "contract_summary": {
+        "risk_level": null,
+        "confidence": null,
+        "mechanism_count": 1,
+        "action_count": 8,
+        "flags": [
+          "INPUT_LEVEL_L2"
+        ]
+      }
+    },
+    {
+      "fixture": "expression_present_ruo",
+      "description": "Expression data present (RUO - Research Use Only; should not be required for MVP, but if present, enables MFAP4/EMT rules)",
+      "validation": {
+        "passed": true,
+        "errors": [],
+        "warnings": [],
+        "expected_level": "L1",
+        "actual_level": "INPUT_LEVEL_L1",
+        "expected_confidence_cap": 0.6,
+        "actual_confidence": null,
+        "expected_flags": [
+          "MISSING_CA125_HISTORY",
+          "INPUT_LEVEL_L1"
+        ],
+        "actual_flags": [
+          "MISSING_CA125_HISTORY",
+          "INPUT_LEVEL_L1"
+        ]
+      },
+      "contract_summary": {
+        "risk_level": null,
+        "confidence": null,
+        "mechanism_count": 1,
+        "action_count": 3,
+        "flags": [
+          "MISSING_CA125_HISTORY",
+          "INPUT_LEVEL_L1"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0
+  }
+}

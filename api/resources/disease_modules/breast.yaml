@@ -1,0 +1,241 @@
+# Breast Cancer Disease Module Configuration
+# Based on Manager's Mechanistic Trial Matching Blueprint
+
+disease: "breast_cancer"
+aliases: ["breast", "mammary"]
+
+# Mechanism axes that matter for Breast Cancer (7D vector indices)
+mechanism_axes:
+  er_signaling:
+    name: "ER Signaling (HR+)"
+    vector_index: 0
+    biomarkers: ["ER", "estrogen receptor", "PR", "progesterone receptor", "HR+", "hormone receptor"]
+    pathways: ["ER", "estrogen", "endocrine"]
+    interventions: ["tamoxifen", "aromatase inhibitor", "fulvestrant", "CDK4/6 inhibitor", "palbociclib", "ribociclib", "abemaciclib"]
+    priority: "high"
+    description: "ER/PR positive + endocrine sensitivity"
+    dominance_condition: "ER positive OR PR positive"
+    
+  her2:
+    name: "HER2"
+    vector_index: 1
+    biomarkers: ["HER2", "ERBB2", "HER2 positive", "HER2 amplified", "IHC3+", "ISH+"]
+    pathways: ["HER2", "ERBB2"]
+    interventions: ["trastuzumab", "pertuzumab", "T-DM1", "T-DXd", "trastuzumab deruxtecan", "tucatinib", "HER2 ADC"]
+    priority: "high"
+    description: "HER2+ (IHC3+/ISH+) dominates over most other axes"
+    dominance_condition: "HER2 positive OR ERBB2 OR IHC3+"
+    
+  her2_low:
+    name: "HER2-Low"
+    vector_index: 2
+    biomarkers: ["HER2-low", "IHC1+", "IHC2+", "ISH-"]
+    pathways: ["HER2", "ERBB2"]
+    interventions: ["T-DXd", "trastuzumab deruxtecan", "HER2-low ADC"]
+    priority: "medium"
+    description: "HER2-low is separate gating for ADCs"
+    dominance_condition: "HER2-low OR (IHC1+ OR IHC2+) AND ISH-"
+    
+  ddr_brca:
+    name: "DDR/BRCA/HRD"
+    vector_index: 3
+    biomarkers: ["BRCA1", "BRCA2", "HRD", "homologous recombination", "DDR"]
+    pathways: ["DDR", "HRR", "BRCA"]
+    interventions: ["PARP", "olaparib", "niraparib", "talazoparib"]
+    priority: "high"
+    description: "BRCA1/2 LoF or HRD-high → PARP-focused trials"
+    dominance_condition: "BRCA1 OR BRCA2 OR HRD"
+    
+  pik3ca_akt:
+    name: "PI3K/AKT"
+    vector_index: 4
+    biomarkers: ["PIK3CA", "PTEN", "AKT1", "PI3K", "AKT"]
+    pathways: ["PI3K", "AKT", "PTEN"]
+    interventions: ["PIK3CA inhibitor", "alpelisib", "capivasertib", "AKT inhibitor"]
+    priority: "medium"
+    description: "PIK3CA hotspot (H1047R/E545K/E542K) or pathway activation"
+    dominance_condition: "PIK3CA OR PTEN OR AKT1"
+    
+  io_tnbc:
+    name: "IO (TNBC)"
+    vector_index: 5
+    biomarkers: ["PD-L1", "TMB-high", "TNBC", "triple negative"]
+    pathways: ["checkpoint", "IO"]
+    interventions: ["pembrolizumab", "atezolizumab", "PD-1", "PD-L1"]
+    priority: "medium"
+    description: "PD-L1 positive by assay-specific thresholds + TNBC context"
+    dominance_condition: "TNBC AND PD-L1 positive"
+    
+  adc_targets:
+    name: "ADC Targets"
+    vector_index: 6
+    biomarkers: ["TROP2", "HER2-low", "BCMA"]
+    pathways: ["ADC", "targeted therapy"]
+    interventions: ["T-DXd", "sacituzumab govitecan", "TROP2 ADC", "HER2 ADC"]
+    priority: "medium"
+    description: "TROP2, HER2-low, etc. as practical target axis"
+
+# Evidence gates
+evidence_gates:
+  er_axis_strong:
+    name: "ER Axis Strong"
+    condition: "(ER positive OR PR positive) AND endocrine_sensitivity"
+    boosts:
+      er_signaling: 1.0
+    rationale: "ER/PR positive + endocrine sensitivity markers/history"
+    
+  her2_axis_strong:
+    name: "HER2 Axis Strong"
+    condition: "IHC3+ OR ISH+"
+    boosts:
+      her2: 1.0
+    rationale: "IHC3+/ISH+; HER2-low is separate gating for ADCs"
+    
+  her2_low_strong:
+    name: "HER2-Low Strong"
+    condition: "(IHC1+ OR IHC2+) AND ISH-"
+    boosts:
+      her2_low: 0.8
+    rationale: "HER2-low → ADC eligible"
+    
+  ddr_strong:
+    name: "DDR Strong"
+    condition: "BRCA1 OR BRCA2 OR HRD"
+    boosts:
+      ddr_brca: 1.0
+    rationale: "BRCA1/2 LoF or HRD-high (if available)"
+    
+  pik3ca_strong:
+    name: "PI3K Strong"
+    condition: "PIK3CA OR PTEN OR AKT1"
+    boosts:
+      pik3ca_akt: 0.9
+    rationale: "PIK3CA hotspot (H1047R/E545K/E542K) or pathway activation"
+    
+  io_strong_tnbc:
+    name: "IO Strong (TNBC)"
+    condition: "TNBC AND PD-L1 positive"
+    boosts:
+      io_tnbc: 1.0
+    rationale: "PD-L1 positive by assay-specific thresholds + TNBC context"
+    
+  io_weak:
+    name: "IO Weak"
+    condition: "PD-L1 positive AND NOT TNBC"
+    boosts:
+      io_tnbc: 0.3
+    rationale: "IO is weaker outside TNBC context"
+
+# Dominance policies
+dominance_policies:
+  her2_dominance:
+    name: "HER2+ Dominance"
+    condition: "HER2 positive OR IHC3+ OR ISH+"
+    prioritize_axis: "her2"
+    rationale: "HER2+ dominates over most other axes (HER2-targeted/ADC first)"
+    
+  hr_dominance:
+    name: "HR+ Dominance"
+    condition: "ER positive OR PR positive"
+    prioritize_axis: "er_signaling"
+    layer_axis: "pik3ca_akt"
+    rationale: "HR+ dominates with endocrine backbone; layer PI3K/AKT trials if PIK3CA/PTEN"
+    
+  ddr_dominance:
+    name: "DDR High Dominance"
+    condition: "BRCA1 OR BRCA2 OR HRD"
+    prioritize_axis: "ddr_brca"
+    rationale: "DDR high → PARP-focused trials rise (especially BRCA/HRD)"
+    
+  tnbc_io_dominance:
+    name: "TNBC + PD-L1 Dominance"
+    condition: "TNBC AND PD-L1 positive"
+    prioritize_axis: "io_tnbc"
+    rationale: "TNBC + PD-L1 positive → IO trials rise; otherwise IO is weaker"
+
+# Query templates
+query_templates:
+  her2_positive_trials:
+    name: "HER2 positive trials"
+    query: '("metastatic breast" OR "breast cancer") AND ("HER2 positive" OR ERBB2) AND (trastuzumab OR "T-DXd" OR "trastuzumab deruxtecan" OR ADC)'
+    condition: "metastatic breast cancer"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "her2"
+    priority: 1
+    
+  her2_low_trials:
+    name: "HER2-low trials"
+    query: '("breast cancer") AND ("HER2-low" OR "T-DXd" OR "trastuzumab deruxtecan")'
+    condition: "breast cancer"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "her2_low"
+    priority: 1
+    
+  brca_parp_trials:
+    name: "BRCA/PARP trials"
+    query: '("breast cancer") AND ("BRCA1" OR "BRCA2" OR "HRD") AND (PARP OR olaparib OR niraparib)'
+    condition: "breast cancer"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "ddr_brca"
+    priority: 1
+    
+  pik3ca_trials:
+    name: "PIK3CA/AKT trials"
+    query: '("HR positive breast" OR "breast cancer") AND (PIK3CA OR "AKT inhibitor" OR capivasertib)'
+    condition: "HR positive breast cancer"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "pik3ca_akt"
+    priority: 2
+    
+  tnbc_io_trials:
+    name: "TNBC IO trials"
+    query: '("triple negative breast" OR "TNBC") AND ("PD-L1" OR pembrolizumab OR atezolizumab)'
+    condition: "triple negative breast cancer"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "io_tnbc"
+    priority: 1
+
+# Subtype discrimination
+subtypes:
+  - name: "HR_positive"
+    keywords: ["HR+", "hormone receptor positive", "ER positive", "PR positive"]
+    priority: 1
+    
+  - name: "HER2_positive"
+    keywords: ["HER2+", "HER2 positive", "ERBB2"]
+    priority: 1
+    
+  - name: "triple_negative"
+    keywords: ["TNBC", "triple negative", "ER- PR- HER2-"]
+    priority: 1
+    
+  - name: "HER2_low"
+    keywords: ["HER2-low", "IHC1+", "IHC2+"]
+    priority: 2
+
+# Eligibility patterns
+eligibility_patterns:
+  ecog: ["ECOG", "performance status", "PS"]
+  organ_function: ["bilirubin", "creatinine", "ALT", "AST", "albumin"]
+  prior_lines: ["prior", "previous", "refractory", "resistant", "failed", "progression"]
+  her2_testing: ["HER2", "IHC", "ISH", "FISH"]
+  hr_testing: ["ER", "PR", "hormone receptor"]
+
+# Safety layer
+contraindications:
+  - biomarker: "HER2 negative"
+    exclude_interventions: ["trastuzumab", "pertuzumab", "T-DM1"]
+    rationale: "HER2- → HER2-targeted therapy contraindicated"
+    
+  - biomarker: "HR negative"
+    exclude_interventions: ["tamoxifen", "aromatase inhibitor", "fulvestrant"]
+    rationale: "HR- → endocrine therapy contraindicated"
+
+# Explainability contract
+explainability_fields:
+  - "dominant_pathway_match"
+  - "gate_evidence"
+  - "whats_missing"
+  - "mechanism_vector_scores"
+  - "dominance_policy_applied"
+  - "subtype_classification"

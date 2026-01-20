@@ -1,0 +1,84 @@
+================================================================================
+🤖 ADC RESISTANCE MODEL TRAINING PIPELINE
+================================================================================
+Start time: 2025-10-18 03:13:52
+
+✅ Loaded 2020 labeled patients
+   Studies: ['brca_tcga_pan_can_atlas_2018' 'brca_metabric']
+
+================================================================================
+TRAINING: ADC Resistance
+================================================================================
+✅ Prepared 11 features for 2020 patients
+
+📊 Label distribution for adc_resistance_risk:
+   Positive (HIGH_RISK): 11 (0.5%)
+   Negative: 2009 (99.5%)
+
+📊 Data split:
+   Train: 1616 samples (9 positive)
+   Test:  404 samples (2 positive)
+
+🔧 Training Logistic Regression...
+   ✅ AUROC: 1.000
+   ✅ AUPRC: 1.000
+
+🔄 5-Fold Cross-Validation (logistic)...
+   ✅ AUROC: 1.000 ± 0.000
+   Fold scores: ['1.000', '1.000', '1.000', '1.000', '1.000']
+   📊 Saved ROC curve: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/results/roc_curve_adc_resistance.png
+
+💾 Saved models: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/models/adc_resistance_models.pkl
+💾 Saved metrics: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/results/adc_resistance_metrics.json
+
+================================================================================
+TRAINING: SG Cross-Resistance
+================================================================================
+✅ Prepared 11 features for 2020 patients
+
+📊 Label distribution for sg_cross_resistance_risk:
+   Positive (HIGH_RISK): 0 (0.0%)
+   Negative: 2020 (100.0%)
+⚠️  Too few positive samples (0), skipping SG Cross-Resistance
+
+================================================================================
+TRAINING: Endocrine Sensitivity
+================================================================================
+✅ Prepared 11 features for 2020 patients
+
+📊 Label distribution for endocrine_sensitivity:
+   Positive (HIGH_RISK): 0 (0.0%)
+   Negative: 2020 (100.0%)
+⚠️  Too few positive samples (0), skipping Endocrine Sensitivity
+
+================================================================================
+TRAINING: Eribulin Sensitivity
+================================================================================
+✅ Prepared 11 features for 2020 patients
+
+📊 Label distribution for eribulin_sensitivity:
+   Positive (HIGH_RISK): 0 (0.0%)
+   Negative: 2020 (100.0%)
+⚠️  Too few positive samples (0), skipping Eribulin Sensitivity
+
+================================================================================
+📊 SUMMARY REPORT
+================================================================================
+
+       Therapy Logistic AUROC   Logistic CV  N Samples  N Positive
+ADC Resistance          1.000 1.000 ± 0.000       2020          11
+
+💾 Saved summary: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/results/model_performance_summary.csv
+
+================================================================================
+🎯 TARGET CHECK (AUROC ≥ 0.70)
+================================================================================
+
+ADC Resistance: 1.000 ✅ PASS
+
+================================================================================
+✅ TRAINING COMPLETE
+================================================================================
+End time: 2025-10-18 03:13:53
+
+Next step: Validate models on external cohort (Yale data)

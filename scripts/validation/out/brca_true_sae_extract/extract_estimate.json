@@ -1,0 +1,1 @@
+{"time": "2025-12-25T03:47:14Z", "study_id": "brca_tcga_pan_can_atlas_2018", "patients_planned": 200, "patients_already_done": 20, "max_variants_per_patient": 50, "total_variant_requests_planned": 6829, "variant_requests_not_cached": 6129, "concurrency": 4, "note": "Multiply not_cached by your observed seconds/variant from preflight to estimate runtime."}

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-11-26T03:17:52.192287",
+  "disease": "multiple_myeloma",
+  "metrics": {
+    "pathway_alignment_accuracy": 0.0,
+    "correct_predictions": 0,
+    "total_predictions": 0,
+    "average_confidence": 0.0
+  },
+  "target": {
+    "pathway_alignment_accuracy": 1.0
+  },
+  "results": [],
+  "provenance": {
+    "script": "benchmark_sota_mm.py",
+    "api_base": "http://127.0.0.1:8000",
+    "model_id": "evo2_1b",
+    "ablation_mode": "SPE"
+  }
+}

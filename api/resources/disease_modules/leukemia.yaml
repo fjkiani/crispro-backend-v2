@@ -1,0 +1,226 @@
+# Leukemia Disease Module Configuration
+# Based on Manager's Mechanistic Trial Matching Blueprint
+# Note: Must model by subtype (AML vs ALL vs CLL)
+
+disease: "leukemia"
+aliases: ["leukemia", "leukemic", "AML", "ALL", "CLL"]
+
+# Mechanism axes that matter (subtype-specific)
+mechanism_axes:
+  flt3_aml:
+    name: "FLT3 (AML)"
+    vector_index: 0
+    biomarkers: ["FLT3", "FLT3-ITD", "FLT3-TKD"]
+    pathways: ["FLT3", "tyrosine kinase"]
+    interventions: ["gilteritinib", "quizartinib", "midostaurin", "FLT3 inhibitor"]
+    priority: "high"
+    description: "FLT3 mutations in AML"
+    dominance_condition: "FLT3-ITD OR FLT3-TKD"
+    
+  idh_aml:
+    name: "IDH1/2 (AML)"
+    vector_index: 1
+    biomarkers: ["IDH1", "IDH2", "IDH1 R132", "IDH2 R140"]
+    pathways: ["IDH", "metabolism"]
+    interventions: ["ivosidenib", "enasidenib", "IDH inhibitor"]
+    priority: "high"
+    description: "IDH1/2 mutations in AML"
+    dominance_condition: "IDH1 OR IDH2"
+    
+  bcr_abl_all:
+    name: "BCR-ABL (ALL)"
+    vector_index: 2
+    biomarkers: ["BCR-ABL", "Philadelphia", "Ph+"]
+    pathways: ["BCR-ABL", "tyrosine kinase"]
+    interventions: ["imatinib", "dasatinib", "nilotinib", "ponatinib", "TKI"]
+    priority: "high"
+    description: "BCR-ABL (Ph+) in ALL"
+    dominance_condition: "BCR-ABL OR Philadelphia"
+    
+  car_t_targets:
+    name: "CAR-T Targets (ALL)"
+    vector_index: 3
+    biomarkers: ["CD19", "CD22", "CAR-T"]
+    pathways: ["immunotherapy", "CAR-T"]
+    interventions: ["CAR-T", "tisagenlecleucel", "CD19 CAR-T", "CD22 CAR-T", "bispecific"]
+    priority: "high"
+    description: "CD19/CD22 targets, CAR-T/bispecifics"
+    dominance_condition: "CD19 OR CD22"
+    
+  btk_cll:
+    name: "BTK (CLL)"
+    vector_index: 4
+    biomarkers: ["BTK", "BTK pathway"]
+    pathways: ["BTK", "B-cell receptor"]
+    interventions: ["ibrutinib", "acalabrutinib", "zanubrutinib", "BTK inhibitor"]
+    priority: "high"
+    description: "BTK pathway in CLL"
+    dominance_condition: "CLL"
+    
+  bcl2:
+    name: "BCL2"
+    vector_index: 5
+    biomarkers: ["BCL2", "BCL2 dependency"]
+    pathways: ["BCL2", "apoptosis"]
+    interventions: ["venetoclax", "BCL2 inhibitor"]
+    priority: "high"
+    description: "BCL2 dependency (AML, CLL)"
+    dominance_condition: "BCL2"
+    
+  tp53_complex:
+    name: "TP53/Complex Karyotype"
+    vector_index: 6
+    biomarkers: ["TP53", "complex karyotype", "del17p"]
+    pathways: ["TP53", "DNA repair"]
+    interventions: ["novel mechanisms", "transplant", "strong regimens"]
+    priority: "high"
+    description: "TP53/complex karyotype are high-impact stratifiers"
+    dominance_condition: "TP53 OR complex karyotype"
+
+# Evidence gates
+evidence_gates:
+  flt3_strong:
+    name: "FLT3 Strong"
+    condition: "FLT3-ITD OR FLT3-TKD"
+    boosts:
+      flt3_aml: 1.0
+    rationale: "FLT3-ITD/TKD → FLT3 inhibitor trials"
+    
+  idh_strong:
+    name: "IDH Strong"
+    condition: "IDH1 OR IDH2"
+    boosts:
+      idh_aml: 1.0
+    rationale: "IDH1/2 → IDH inhibitor trials"
+    
+  bcr_abl_strong:
+    name: "BCR-ABL Strong"
+    condition: "BCR-ABL OR Philadelphia"
+    boosts:
+      bcr_abl_all: 1.0
+    rationale: "BCR-ABL → TKI trials"
+    
+  tp53_strong:
+    name: "TP53 Strong"
+    condition: "TP53 OR complex karyotype"
+    boosts:
+      tp53_complex: 1.0
+    rationale: "TP53/complex karyotype → prioritize novel mechanisms / transplant/strong regimens"
+
+# Dominance policies
+dominance_policies:
+  flt3_dominance:
+    name: "FLT3 Dominance"
+    condition: "FLT3-ITD OR FLT3-TKD"
+    prioritize_axis: "flt3_aml"
+    rationale: "If FLT3 exists → that axis dominates trial matching"
+    
+  idh_dominance:
+    name: "IDH Dominance"
+    condition: "IDH1 OR IDH2"
+    prioritize_axis: "idh_aml"
+    rationale: "If IDH exists → that axis dominates trial matching"
+    
+  bcr_abl_dominance:
+    name: "BCR-ABL Dominance"
+    condition: "BCR-ABL OR Philadelphia"
+    prioritize_axis: "bcr_abl_all"
+    rationale: "If BCR-ABL exists → that axis dominates trial matching"
+    
+  tp53_dominance:
+    name: "TP53/Complex Karyotype Dominance"
+    condition: "TP53 OR complex karyotype"
+    prioritize_axis: "tp53_complex"
+    rationale: "TP53/complex karyotype → prioritize novel mechanisms / transplant/strong regimens trials"
+
+# Query templates
+query_templates:
+  flt3_aml_trials:
+    name: "FLT3 AML trials"
+    query: '("AML") AND (FLT3 OR gilteritinib OR quizartinib)'
+    condition: "AML"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "flt3_aml"
+    priority: 1
+    
+  idh_aml_trials:
+    name: "IDH1/2 AML trials"
+    query: '("AML") AND ((IDH1 OR ivosidenib) OR (IDH2 OR enasidenib))'
+    condition: "AML"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "idh_aml"
+    priority: 1
+    
+  bcl2_aml_trials:
+    name: "BCL2 AML trials"
+    query: '("AML") AND (venetoclax OR BCL2)'
+    condition: "AML"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "bcl2"
+    priority: 1
+    
+  bcr_abl_all_trials:
+    name: "BCR-ABL ALL trials"
+    query: '("ALL") AND ("BCR-ABL" OR "tyrosine kinase inhibitor")'
+    condition: "ALL"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "bcr_abl_all"
+    priority: 1
+    
+  btk_cll_trials:
+    name: "BTK CLL trials"
+    query: '("CLL") AND ("BTK inhibitor" OR ibrutinib OR acalabrutinib)'
+    condition: "CLL"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "btk_cll"
+    priority: 1
+    
+  venetoclax_cll_trials:
+    name: "Venetoclax CLL trials"
+    query: '("CLL") AND venetoclax'
+    condition: "CLL"
+    status: ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING"]
+    target_axis: "bcl2"
+    priority: 1
+
+# Subtype discrimination (REQUIRED)
+subtypes:
+  - name: "AML"
+    keywords: ["AML", "acute myeloid leukemia"]
+    priority: 1
+    
+  - name: "ALL"
+    keywords: ["ALL", "acute lymphoblastic leukemia"]
+    priority: 1
+    
+  - name: "CLL"
+    keywords: ["CLL", "chronic lymphocytic leukemia"]
+    priority: 1
+
+# Eligibility patterns
+eligibility_patterns:
+  performance_status: ["ECOG", "KPS", "performance status"]
+  organ_function: ["bilirubin", "creatinine", "ALT", "AST"]
+  prior_treatment: ["prior", "previous", "refractory", "relapsed", "resistant"]
+  cytogenetics: ["cytogenetics", "karyotype", "TP53", "del17p"]
+  molecular_testing: ["FLT3", "IDH1", "IDH2", "BCR-ABL", "NPM1"]
+
+# Safety layer
+contraindications:
+  - biomarker: "TP53 mutant"
+    prefer_interventions: ["novel mechanisms", "transplant", "strong regimens"]
+    rationale: "TP53 mutant → prioritize aggressive/novel approaches"
+    
+  - biomarker: "complex karyotype"
+    prefer_interventions: ["transplant", "strong regimens"]
+    rationale: "Complex karyotype → poor prognosis, prioritize intensive approaches"
+
+# Explainability contract
+explainability_fields:
+  - "dominant_pathway_match"
+  - "gate_evidence"
+  - "whats_missing"
+  - "mechanism_vector_scores"
+  - "dominance_policy_applied"
+  - "subtype_classification"
+  - "cytogenetic_risk"

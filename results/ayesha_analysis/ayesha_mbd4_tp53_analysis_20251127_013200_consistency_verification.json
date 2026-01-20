@@ -1,0 +1,134 @@
+{
+  "timestamp": "2025-11-27T03:34:52.932320",
+  "analysis_file": "oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json",
+  "pathway_consistency": {
+    "verified": true,
+    "differences": {
+      "ddr": 0.0,
+      "tp53": 0.0
+    },
+    "efficacy_pathways": {
+      "ddr": 1.0,
+      "tp53": 0.8
+    },
+    "sae_pathways": {
+      "ddr": 1.0,
+      "tp53": 0.8
+    },
+    "confidence": 0.9,
+    "error": null
+  },
+  "variant_consistency": {
+    "verified": true,
+    "input_variants": [
+      {
+        "gene": "MBD4",
+        "hgvs_p": "p.Ile413Serfs*2",
+        "chrom": "3",
+        "pos": 129430456,
+        "ref": "A",
+        "alt": ""
+      },
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.Arg175His",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "G",
+        "alt": "A"
+      }
+    ],
+    "output_variants": [
+      {
+        "gene": "MBD4",
+        "hgvs_p": "p.Ile413Serfs*2",
+        "hgvs_c": "c.1239delA",
+        "chrom": "3",
+        "pos": 129430456,
+        "ref": "A",
+        "alt": "",
+        "build": "GRCh37",
+        "zygosity": "homozygous",
+        "classification": "Pathogenic",
+        "variant_type": "frameshift",
+        "inheritance": "germline"
+      },
+      {
+        "gene": "TP53",
+        "hgvs_p": "p.Arg175His",
+        "hgvs_c": "c.524G>A",
+        "chrom": "17",
+        "pos": 7577120,
+        "ref": "G",
+        "alt": "A",
+        "build": "GRCh37",
+        "zygosity": "heterozygous",
+        "classification": "Pathogenic",
+        "variant_type": "missense",
+        "inheritance": "somatic",
+        "hotspot": "R175H"
+      }
+    ],
+    "matches": {
+      "MBD4_p.Ile413Serfs*2": {
+        "input": {
+          "gene": "MBD4",
+          "hgvs_p": "p.Ile413Serfs*2",
+          "chrom": "3",
+          "pos": 129430456,
+          "ref": "A",
+          "alt": ""
+        },
+        "output": {
+          "gene": "MBD4",
+          "hgvs_p": "p.Ile413Serfs*2",
+          "hgvs_c": "c.1239delA",
+          "chrom": "3",
+          "pos": 129430456,
+          "ref": "A",
+          "alt": "",
+          "build": "GRCh37",
+          "zygosity": "homozygous",
+          "classification": "Pathogenic",
+          "variant_type": "frameshift",
+          "inheritance": "germline"
+        },
+        "matched": true
+      },
+      "TP53_p.Arg175His": {
+        "input": {
+          "gene": "TP53",
+          "hgvs_p": "p.Arg175His",
+          "chrom": "17",
+          "pos": 7577120,
+          "ref": "G",
+          "alt": "A"
+        },
+        "output": {
+          "gene": "TP53",
+          "hgvs_p": "p.Arg175His",
+          "hgvs_c": "c.524G>A",
+          "chrom": "17",
+          "pos": 7577120,
+          "ref": "G",
+          "alt": "A",
+          "build": "GRCh37",
+          "zygosity": "heterozygous",
+          "classification": "Pathogenic",
+          "variant_type": "missense",
+          "inheritance": "somatic",
+          "hotspot": "R175H"
+        },
+        "matched": true
+      }
+    },
+    "confidence": 0.95,
+    "error": null
+  },
+  "overall_score": {
+    "total_checks": 2,
+    "passed": 2,
+    "failed": 0,
+    "pass_rate": 1.0
+  }
+}

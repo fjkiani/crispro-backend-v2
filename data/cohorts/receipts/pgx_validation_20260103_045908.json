@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-01-03T04:59:08.214578",
+  "cohort_file": "oncology-coPilot/oncology-backend-minimal/data/cohorts/pgx_validation_cohort_20260103_045908.json",
+  "validation": {
+    "n_patients": 0,
+    "n_with_pgx_variants": 0,
+    "pgx_coverage": 0,
+    "has_outcomes": false,
+    "has_treatment": false,
+    "validation_status": "INSUFFICIENT"
+  },
+  "extraction_method": "cBioPortal API following cohort_context_concept.mdc"
+}

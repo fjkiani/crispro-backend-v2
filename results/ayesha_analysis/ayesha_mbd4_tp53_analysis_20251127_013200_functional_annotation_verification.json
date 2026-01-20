@@ -1,0 +1,120 @@
+{
+  "timestamp": "2025-11-27T03:34:52.796493",
+  "analysis_file": "oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json",
+  "functional_annotations": [
+    {
+      "gene": "MBD4",
+      "hgvs_p": "p.Ile413Serfs*2",
+      "checks": {
+        "uniprot": {
+          "verified": true,
+          "expected": "DNA glycosylase",
+          "actual": "DNA glycosylase",
+          "confidence": 0.95,
+          "error": null,
+          "keywords": [
+            "DNA repair",
+            "base excision repair",
+            "BER",
+            "glycosylase"
+          ],
+          "pathway": "Base excision repair"
+        },
+        "insights_bundle": {
+          "verified": true,
+          "insights": {
+            "functionality": 0.55,
+            "chromatin": 0.0,
+            "essentiality": 0.2,
+            "regulatory": 0.0
+          },
+          "expected_ranges": {
+            "functionality": [
+              0.0,
+              1.0
+            ],
+            "essentiality": [
+              0.2,
+              1.0
+            ],
+            "chromatin": [
+              0.0,
+              1.0
+            ],
+            "regulatory": [
+              0.0,
+              1.0
+            ]
+          },
+          "confidence": 0.9,
+          "error": null,
+          "details": {
+            "functionality_verified": true,
+            "essentiality_verified": true,
+            "all_valid": true
+          }
+        }
+      }
+    },
+    {
+      "gene": "TP53",
+      "hgvs_p": "p.Arg175His",
+      "checks": {
+        "uniprot": {
+          "verified": true,
+          "expected": "Tumor suppressor",
+          "actual": "Tumor suppressor",
+          "confidence": 0.95,
+          "error": null,
+          "keywords": [
+            "tumor suppressor",
+            "checkpoint",
+            "apoptosis",
+            "cell cycle"
+          ],
+          "pathway": "p53 signaling pathway"
+        },
+        "insights_bundle": {
+          "verified": true,
+          "insights": {
+            "functionality": 0.55,
+            "chromatin": 0.0,
+            "essentiality": 0.2,
+            "regulatory": 0.0
+          },
+          "expected_ranges": {
+            "functionality": [
+              0.0,
+              1.0
+            ],
+            "essentiality": [
+              0.2,
+              1.0
+            ],
+            "chromatin": [
+              0.0,
+              1.0
+            ],
+            "regulatory": [
+              0.0,
+              1.0
+            ]
+          },
+          "confidence": 0.9,
+          "error": null,
+          "details": {
+            "functionality_verified": true,
+            "essentiality_verified": true,
+            "all_valid": true
+          }
+        }
+      }
+    }
+  ],
+  "overall_score": {
+    "total_checks": 4,
+    "passed": 4,
+    "failed": 0,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,6 @@
+case_id,disease,gene,pred_top_drug,pred_top_class,gt_drugs,gt_classes
+SL_006,prostate_cancer,TP53,adavosertib,wee1,Ceralasertib,atr
+SL_019,ovarian_cancer,TP53,adavosertib,wee1,Ceralasertib,atr
+SL_032,breast_cancer,TP53,adavosertib,wee1,Ceralasertib,atr
+SL_081,ovarian_cancer,TP53,adavosertib,wee1,Ceralasertib,atr
+SL_090,prostate_cancer,TP53,adavosertib,wee1,Ceralasertib,atr

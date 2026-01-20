@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-12-24T03:33:04.070638",
+  "overall_passed": true,
+  "tasks_passed": 8,
+  "results": [
+    {
+      "task_id": 1,
+      "task_name": "Trial Data Quality",
+      "passed": true,
+      "details": "Found 47 MoA-tagged trials. Structure: OK",
+      "metrics": {
+        "trial_count": 47,
+        "structure_ok": true
+      }
+    },
+    {
+      "task_id": 2,
+      "task_name": "Mechanism Vector Structure",
+      "passed": true,
+      "details": "7D vector: OK (got 7D)",
+      "metrics": {
+        "dimension": 7
+      }
+    },
+    {
+      "task_id": 3,
+      "task_name": "Mechanism Fit Computation",
+      "passed": true,
+      "details": "L2: OK, Same: OK, Orthogonal: OK",
+      "metrics": {
+        "l2_norm": 1.0,
+        "same_similarity": 1.0
+      }
+    },
+    {
+      "task_id": 4,
+      "task_name": "Combined Score Formula",
+      "passed": true,
+      "details": "\u03b1=0.7, \u03b2=0.3 (expected 0.7, 0.3)",
+      "metrics": {
+        "alpha": 0.7,
+        "beta": 0.3
+      }
+    },
+    {
+      "task_id": 5,
+      "task_name": "Ranking Accuracy",
+      "passed": true,
+      "details": "Top-3: 1.00 (\u22650.70), MRR: 0.75 (\u22650.65)",
+      "metrics": {
+        "top_3_accuracy": 1.0,
+        "mrr": 0.75
+      }
+    },
+    {
+      "task_id": 6,
+      "task_name": "Pathway Alignment",
+      "passed": true,
+      "details": "DDR-focused trials: 31 (need \u226520)",
+      "metrics": {
+        "ddr_trials": 31
+      }
+    },
+    {
+      "task_id": 7,
+      "task_name": "Edge Cases",
+      "passed": true,
+      "details": "Thresholds: eligibility=0.6, mechanism_fit=0.5",
+      "metrics": {
+        "min_eligibility": 0.6,
+        "min_mechanism_fit": 0.5
+      }
+    },
+    {
+      "task_id": 8,
+      "task_name": "Consistency",
+      "passed": true,
+      "details": "MoA vectors loaded: 47 trials",
+      "metrics": {
+        "trials_loaded": 47
+      }
+    }
+  ],
+  "metrics": {
+    "top3_accuracy": 1.0,
+    "mrr": 0.75,
+    "trial_count": 47
+  },
+  "moa_coverage": {
+    "total_trials_tagged": 47,
+    "pathway_breakdown": {
+      "ddr": 31,
+      "mapk": 6,
+      "pi3k": 0,
+      "vegf": 3,
+      "her2": 3,
+      "io": 6,
+      "efflux": 0
+    }
+  }
+}

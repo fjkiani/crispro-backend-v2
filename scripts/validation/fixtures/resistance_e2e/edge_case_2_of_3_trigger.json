@@ -1,0 +1,41 @@
+{
+  "description": "Edge case: 2-of-3 resistance trigger (HRD drop + CA-125 inadequate response, but DNA repair capacity stable)",
+  "expected_input_level": "L2",
+  "expected_confidence_cap": 0.8,
+  "expected_flags": ["INPUT_LEVEL_L2"],
+  "patient_profile": {
+    "patient_id": "fixture-ov-edge-001",
+    "disease": "ovarian_cancer_hgs",
+    "tumor_context": {
+      "somatic_mutations": [
+        {
+          "gene": "NF1",
+          "hgvs_p": "p.Arg1946*",
+          "consequence": "stop_gained"
+        }
+      ]
+    },
+    "biomarker_history": {
+      "ca125_history": [
+        {
+          "date": "2025-01-01",
+          "value": 200.0,
+          "unit": "U/mL"
+        },
+        {
+          "date": "2025-01-15",
+          "value": 250.0,
+          "unit": "U/mL"
+        },
+        {
+          "date": "2025-02-01",
+          "value": 320.0,
+          "unit": "U/mL"
+        }
+      ]
+    },
+    "hrd_score": null
+  },
+  "notes": "CA-125 rising trend (>25% from nadir) + NF1 loss (MAPK activation) should trigger resistance detection"
+}
+

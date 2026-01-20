@@ -1,0 +1,9 @@
+{
+  "validator": "validate_resistance_e2e_ov_ayesha_v1",
+  "generated_at": "2025-12-26T10:51:46.772011Z",
+  "status": "FAILED",
+  "errors": [
+    "ImportError: cannot import name 'gpt' from 'api.routers' (/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/api/routers/__init__.py)",
+    "Traceback (most recent call last):\n  File \"/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/validation/validate_resistance_e2e_ov_ayesha_v1.py\", line 58, in main\n    from api.main import app  # noqa: WPS433\n  File \"/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/api/main.py\", line 62, in <module>\n    from .routers import gpt as gpt_router  # NEW: Reusable GPT service for agents and benchmarks (Jan 2025)\nImportError: cannot import name 'gpt' from 'api.routers' (/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/api/routers/__init__.py)\n"
+  ]
+}

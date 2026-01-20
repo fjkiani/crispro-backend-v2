@@ -1,0 +1,74 @@
+{
+  "timestamp": "2025-11-27T03:34:48.131556",
+  "analysis_file": "oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json",
+  "variants_verified": [
+    {
+      "gene": "MBD4",
+      "hgvs_p": "p.Ile413Serfs*2",
+      "checks": {
+        "clinvar": {
+          "verified": true,
+          "expected": "Pathogenic",
+          "actual": "pathogenic",
+          "review_status": "criteria_provided",
+          "confidence": 0.95,
+          "error": null
+        },
+        "cosmic": {
+          "verified": false,
+          "is_hotspot": false,
+          "frequency": 0.0,
+          "expected_frequency": 0.01,
+          "confidence": 0.0
+        },
+        "evo2": {
+          "verified": true,
+          "delta_score": -0.0009365677833557129,
+          "expected_range": [
+            -0.01,
+            -0.0001
+          ],
+          "confidence": 0.9,
+          "error": null
+        }
+      }
+    },
+    {
+      "gene": "TP53",
+      "hgvs_p": "p.Arg175His",
+      "checks": {
+        "clinvar": {
+          "verified": true,
+          "expected": "Pathogenic",
+          "actual": "pathogenic",
+          "review_status": "",
+          "confidence": 0.0,
+          "error": "argument of type 'NoneType' is not iterable"
+        },
+        "cosmic": {
+          "verified": true,
+          "is_hotspot": true,
+          "frequency": 0.15,
+          "expected_frequency": 0.01,
+          "confidence": 0.3
+        },
+        "evo2": {
+          "verified": true,
+          "delta_score": -0.0030049681663513184,
+          "expected_range": [
+            -0.005,
+            -0.0001
+          ],
+          "confidence": 0.9,
+          "error": null
+        }
+      }
+    }
+  ],
+  "overall_score": {
+    "total_checks": 5,
+    "passed": 5,
+    "failed": 0,
+    "pass_rate": 1.0
+  }
+}

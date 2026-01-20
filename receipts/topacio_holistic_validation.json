@@ -1,0 +1,147 @@
+{
+  "trial_id": "NCT02657889",
+  "trial_name": "TOPACIO",
+  "validation_date": "2026-01-13T01:41:03.087102",
+  "n_patients": 55,
+  "holistic_score_stats": {
+    "mean": 0.8564227807659174,
+    "std": 0.0695758101791104,
+    "min": 0.7650585081046126,
+    "max": 0.9406920688111235,
+    "median": 0.8147245910195453
+  },
+  "outcome_validation": {
+    "pearson_correlation": {
+      "r": 0.30601423651244786,
+      "p": 0.023077772247600135
+    },
+    "auroc": {
+      "auroc": 0.7142857142857143,
+      "ci_lower": 0.5206548321808062,
+      "ci_upper": 0.8780991735537189,
+      "n_iterations": 5000
+    },
+    "q4_vs_q1": {
+      "q4_orr": 0.42857142857142855,
+      "q1_orr": 0.07142857142857142,
+      "q4_n": 14,
+      "q1_n": 14,
+      "odds_ratio": 9.750000000000002,
+      "fisher_exact_p": 1.0
+    },
+    "trend_test": {
+      "chi2": 6.020156583343397,
+      "p_value": 0.11063367099924264,
+      "contingency_table": {
+        "0": {
+          "Q1_LOW": 13,
+          "Q2": 12,
+          "Q3": 9,
+          "Q4_HIGH": 8
+        },
+        "1": {
+          "Q1_LOW": 1,
+          "Q2": 2,
+          "Q3": 4,
+          "Q4_HIGH": 6
+        }
+      }
+    }
+  },
+  "quartile_breakdown": {
+    "('orr', 'mean')": {
+      "Q1_LOW": 0.071,
+      "Q2": 0.143,
+      "Q3": 0.308,
+      "Q4_HIGH": 0.429
+    },
+    "('orr', 'sum')": {
+      "Q1_LOW": 1.0,
+      "Q2": 2.0,
+      "Q3": 4.0,
+      "Q4_HIGH": 6.0
+    },
+    "('orr', 'count')": {
+      "Q1_LOW": 14.0,
+      "Q2": 14.0,
+      "Q3": 13.0,
+      "Q4_HIGH": 14.0
+    },
+    "('dcr', 'mean')": {
+      "Q1_LOW": 0.214,
+      "Q2": 0.5,
+      "Q3": 0.538,
+      "Q4_HIGH": 0.786
+    },
+    "('dcr', 'sum')": {
+      "Q1_LOW": 3.0,
+      "Q2": 7.0,
+      "Q3": 7.0,
+      "Q4_HIGH": 11.0
+    },
+    "('dcr', 'count')": {
+      "Q1_LOW": 14.0,
+      "Q2": 14.0,
+      "Q3": 13.0,
+      "Q4_HIGH": 14.0
+    },
+    "('pfs_months', 'median')": {
+      "Q1_LOW": 2.05,
+      "Q2": 2.85,
+      "Q3": 3.0,
+      "Q4_HIGH": 4.65
+    },
+    "('pfs_months', 'mean')": {
+      "Q1_LOW": 2.671,
+      "Q2": 3.543,
+      "Q3": 4.654,
+      "Q4_HIGH": 5.714
+    },
+    "('holistic_score', 'mean')": {
+      "Q1_LOW": 0.78,
+      "Q2": 0.799,
+      "Q3": 0.921,
+      "Q4_HIGH": 0.931
+    },
+    "('holistic_score', 'std')": {
+      "Q1_LOW": 0.009,
+      "Q2": 0.009,
+      "Q3": 0.004,
+      "Q4_HIGH": 0.004
+    },
+    "('mechanism_fit', 'mean')": {
+      "Q1_LOW": 0.56,
+      "Q2": 0.598,
+      "Q3": 0.842,
+      "Q4_HIGH": 0.861
+    },
+    "('mechanism_fit', 'std')": {
+      "Q1_LOW": 0.017,
+      "Q2": 0.017,
+      "Q3": 0.008,
+      "Q4_HIGH": 0.009
+    }
+  },
+  "stratum_mechanism_fit": {
+    "mean": {
+      "brca_mut": 0.8485383609654515,
+      "brca_wt_hrd_pos": 0.8557418115306419,
+      "hrd_neg": 0.5789117404071945
+    },
+    "std": {
+      "brca_mut": 0.008084359865438921,
+      "brca_wt_hrd_pos": 0.01625922735810723,
+      "hrd_neg": 0.0260318679087159
+    },
+    "count": {
+      "brca_mut": 15.0,
+      "brca_wt_hrd_pos": 12.0,
+      "hrd_neg": 28.0
+    }
+  },
+  "assumptions": {
+    "eligibility_score": 1.0,
+    "pgx_safety_score": 1.0,
+    "note": "All patients assumed eligible and PGx-safe (enrolled in trial)"
+  }
+}

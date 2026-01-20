@@ -1,0 +1,22 @@
+{
+  "cached_at": "2025-11-14T19:58:03.537475",
+  "trial_data": {
+    "id": "NCT03527979",
+    "title": "Effect of Laparoscopic Ovarian Drilling on Outcomes of in Vitro Fertilisation in Clomiphene-resistant Women With Polycystic Ovary Syndrome",
+    "status": "UNKNOWN",
+    "phases": "[\"NA\"]",
+    "summary": "the polycystic ovarian syndrome is associated with an ovulation and infertility. recently the laparoscopic ovarian drilling has been used as surgical treatment for ovulation in women with polycystic ovarian syndrome, although its mechanism and outcomes are still unclear. this study is undertaken to evaluate the in vitro fertilisation outcomes in clomiphene-resistant women with PCOS who were treated with LOD.",
+    "conditions": "[\"PCOS\"]",
+    "interventions": "[\"IVF/ICSI\"]",
+    "source": "ClinicalTrials.gov",
+    "inclusion_criteria": "* age between 25 and 35\n* patients with established PCOS\n* history at least one year infertility\n* no response to clomiphene citrate for at least three cycles",
+    "exclusion_criteria": "* history of previous IVF/ICSI\n* chronic disease such as thyroid disorder and DM\n* infertility due to sever male factor\n* sever endometriosis\n* infertility due to uterine factor such as multiple fibroid\n* body mass index \\> 30",
+    "inclusion_criteria_full": "* age between 25 and 35\n* patients with established PCOS\n* history at least one year infertility\n* no response to clomiphene citrate for at least three cycles",
+    "exclusion_criteria_full": "* history of previous IVF/ICSI\n* chronic disease such as thyroid disorder and DM\n* infertility due to sever male factor\n* sever endometriosis\n* infertility due to uterine factor such as multiple fibroid\n* body mass index \\> 30",
+    "primary_endpoint": null,
+    "interventions_json": null,
+    "locations_full_json": null,
+    "scraped_data_json": null,
+    "scraped_at": null
+  }
+}

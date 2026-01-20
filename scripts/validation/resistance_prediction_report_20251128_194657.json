@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-11-29T00:46:57.362382",
+  "overall_passed": true,
+  "tasks_passed": 6,
+  "results": [
+    {
+      "task_id": 1,
+      "task_name": "Signal Detection Logic",
+      "passed": false,
+      "details": "Signals detected: 0 (need \u22651 for resistance)",
+      "metrics": {
+        "signal_count": 0,
+        "risk_level": "LOW"
+      }
+    },
+    {
+      "task_id": 2,
+      "task_name": "Mechanism Breakdown",
+      "passed": true,
+      "details": "DNA threshold: True, Pathway threshold: True",
+      "metrics": {}
+    },
+    {
+      "task_id": 3,
+      "task_name": "Risk Stratification",
+      "passed": false,
+      "details": "Risk level: LOW, Probability: 0.14",
+      "metrics": {
+        "risk_level": "LOW",
+        "probability": 0.14043960845678097
+      }
+    },
+    {
+      "task_id": 4,
+      "task_name": "Signal Fusion",
+      "passed": true,
+      "details": "Signal types: ['DNA_REPAIR_RESTORATION', 'PATHWAY_ESCAPE', 'CA125_KINETICS']",
+      "metrics": {}
+    },
+    {
+      "task_id": 5,
+      "task_name": "Pathway Escape Detection",
+      "passed": true,
+      "details": "Pathway escape signal: detected, shifts: ['DDR', 'MAPK']",
+      "metrics": {
+        "escape_detected": true
+      }
+    },
+    {
+      "task_id": 6,
+      "task_name": "Baseline Handling",
+      "passed": true,
+      "details": "Baseline source: population_average",
+      "metrics": {
+        "baseline_source": "population_average"
+      }
+    },
+    {
+      "task_id": 7,
+      "task_name": "Confidence Modulation",
+      "passed": true,
+      "details": "Confidence modulation requires live prediction test",
+      "metrics": {}
+    },
+    {
+      "task_id": 8,
+      "task_name": "Consistency",
+      "passed": true,
+      "details": "3 runs: probabilities=[np.float64(0.054), np.float64(0.054), np.float64(0.054)] (consistent)",
+      "metrics": {
+        "consistent": true
+      }
+    }
+  ],
+  "metrics": {
+    "signal_detection": 0,
+    "risk_level": "LOW",
+    "probability": 0.14043960845678097
+  }
+}

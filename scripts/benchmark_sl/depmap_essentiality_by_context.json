@@ -1,0 +1,4558 @@
+{
+  "_meta": {
+    "raw_file": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/scripts/benchmark_sl/depmap_raw.csv",
+    "model_metadata": {
+      "path": "/Users/fahadkiani/Desktop/development/crispr-assistant-main/data/depmap/Model.csv",
+      "model_id_col": "ModelID",
+      "lineage_col": "OncotreeLineage",
+      "n_rows": 2132
+    },
+    "genes": [
+      "ARID1A",
+      "ATM",
+      "ATR",
+      "BRCA1",
+      "BRCA2",
+      "CDK12",
+      "CHEK2",
+      "EGFR",
+      "KRAS",
+      "MBD4",
+      "PALB2",
+      "PARP1",
+      "RAD51C",
+      "RAD51D",
+      "TP53",
+      "WEE1"
+    ],
+    "note": "If model_metadata is null, only global summaries are available. Add DepMap Model.csv to enable lineage summaries."
+  },
+  "global": {
+    "ARID1A": {
+      "depmap_mean_effect": -0.2596675073474911,
+      "depmap_median_effect": -0.23163272588177458,
+      "depmap_p25_effect": -0.42474729980849524,
+      "depmap_p75_effect": -0.06516483511338753,
+      "essentiality_score": 0.2596675073474911,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "ATM": {
+      "depmap_mean_effect": -0.028631024194835045,
+      "depmap_median_effect": -0.0373688657360213,
+      "depmap_p25_effect": -0.15779859932070592,
+      "depmap_p75_effect": 0.07523327015540753,
+      "essentiality_score": 0.028631024194835045,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "ATR": {
+      "depmap_mean_effect": -1.096085063008436,
+      "depmap_median_effect": -1.0889462344578358,
+      "depmap_p25_effect": -1.2537797260647874,
+      "depmap_p75_effect": -0.9557772192041177,
+      "essentiality_score": 1.0,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "BRCA1": {
+      "depmap_mean_effect": -0.44405918068595746,
+      "depmap_median_effect": -0.4199510764197617,
+      "depmap_p25_effect": -0.610056449479504,
+      "depmap_p75_effect": -0.25619464088037325,
+      "essentiality_score": 0.44405918068595746,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "BRCA2": {
+      "depmap_mean_effect": -0.49663622684497655,
+      "depmap_median_effect": -0.4928579852754382,
+      "depmap_p25_effect": -0.6537508266575315,
+      "depmap_p75_effect": -0.3271190125274435,
+      "essentiality_score": 0.49663622684497655,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "CDK12": {
+      "depmap_mean_effect": -0.4085607197529356,
+      "depmap_median_effect": -0.40311063969105015,
+      "depmap_p25_effect": -0.5404881132844377,
+      "depmap_p75_effect": -0.2563585034905713,
+      "essentiality_score": 0.4085607197529356,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "CHEK2": {
+      "depmap_mean_effect": 0.1977105855252346,
+      "depmap_median_effect": 0.17746218312924655,
+      "depmap_p25_effect": 0.09815175592107937,
+      "depmap_p75_effect": 0.2802128233238081,
+      "essentiality_score": 0.0,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "EGFR": {
+      "depmap_mean_effect": -0.24147721469094818,
+      "depmap_median_effect": -0.13268100796608906,
+      "depmap_p25_effect": -0.34967409236940694,
+      "depmap_p75_effect": -0.002762520681280725,
+      "essentiality_score": 0.24147721469094818,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "KRAS": {
+      "depmap_mean_effect": -0.6985169622005214,
+      "depmap_median_effect": -0.4873768136551233,
+      "depmap_p25_effect": -0.787574118712171,
+      "depmap_p75_effect": -0.3256187346650493,
+      "essentiality_score": 0.6985169622005214,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "MBD4": {
+      "depmap_mean_effect": -0.1174664233026257,
+      "depmap_median_effect": -0.11109986305358319,
+      "depmap_p25_effect": -0.18597837493685154,
+      "depmap_p75_effect": -0.03848628761919653,
+      "essentiality_score": 0.1174664233026257,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "PALB2": {
+      "depmap_mean_effect": -0.33189795944643924,
+      "depmap_median_effect": -0.33137557181567734,
+      "depmap_p25_effect": -0.4777248198932077,
+      "depmap_p75_effect": -0.17032046045027366,
+      "essentiality_score": 0.33189795944643924,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "PARP1": {
+      "depmap_mean_effect": -0.2070495592792848,
+      "depmap_median_effect": -0.19512297031016512,
+      "depmap_p25_effect": -0.2852985444919023,
+      "depmap_p75_effect": -0.10847589509341354,
+      "essentiality_score": 0.2070495592792848,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "RAD51C": {
+      "depmap_mean_effect": -0.7061312400750432,
+      "depmap_median_effect": -0.7039228969574485,
+      "depmap_p25_effect": -0.8641758582912137,
+      "depmap_p75_effect": -0.5416266938047739,
+      "essentiality_score": 0.7061312400750432,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "RAD51D": {
+      "depmap_mean_effect": -0.7360546282435787,
+      "depmap_median_effect": -0.7059483821452229,
+      "depmap_p25_effect": -0.9568106295140713,
+      "depmap_p75_effect": -0.49697546884159827,
+      "essentiality_score": 0.7360546282435787,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "TP53": {
+      "depmap_mean_effect": 0.373501755858498,
+      "depmap_median_effect": 0.20082228585878165,
+      "depmap_p25_effect": 0.06593048299633125,
+      "depmap_p75_effect": 0.4577066995431309,
+      "essentiality_score": 0.0,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    },
+    "WEE1": {
+      "depmap_mean_effect": -2.7353570413750536,
+      "depmap_median_effect": -2.8070527384767976,
+      "depmap_p25_effect": -3.067851103177788,
+      "depmap_p75_effect": -2.420903000753881,
+      "essentiality_score": 1.0,
+      "n_models": 1186,
+      "source": "DepMap CRISPRGeneEffect.csv"
+    }
+  },
+  "by_lineage": {
+    "Adrenal Gland": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.082987635229046,
+        "depmap_median_effect": -0.082987635229046,
+        "depmap_p25_effect": -0.082987635229046,
+        "depmap_p75_effect": -0.082987635229046,
+        "essentiality_score": 0.082987635229046,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": 0.0003029023830056,
+        "depmap_median_effect": 0.0003029023830056,
+        "depmap_p25_effect": 0.0003029023830056,
+        "depmap_p75_effect": 0.0003029023830056,
+        "essentiality_score": 0.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -0.8431311852135986,
+        "depmap_median_effect": -0.8431311852135986,
+        "depmap_p25_effect": -0.8431311852135986,
+        "depmap_p75_effect": -0.8431311852135986,
+        "essentiality_score": 0.8431311852135986,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.1665649017761939,
+        "depmap_median_effect": -0.1665649017761939,
+        "depmap_p25_effect": -0.1665649017761939,
+        "depmap_p75_effect": -0.1665649017761939,
+        "essentiality_score": 0.1665649017761939,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": 0.0736565464713424,
+        "depmap_median_effect": 0.0736565464713424,
+        "depmap_p25_effect": 0.0736565464713424,
+        "depmap_p75_effect": 0.0736565464713424,
+        "essentiality_score": 0.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.0829782640991438,
+        "depmap_median_effect": -0.0829782640991438,
+        "depmap_p25_effect": -0.0829782640991438,
+        "depmap_p75_effect": -0.0829782640991438,
+        "essentiality_score": 0.0829782640991438,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": -0.1102766250103346,
+        "depmap_median_effect": -0.1102766250103346,
+        "depmap_p25_effect": -0.1102766250103346,
+        "depmap_p75_effect": -0.1102766250103346,
+        "essentiality_score": 0.1102766250103346,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.0643325444495664,
+        "depmap_median_effect": -0.0643325444495664,
+        "depmap_p25_effect": -0.0643325444495664,
+        "depmap_p75_effect": -0.0643325444495664,
+        "essentiality_score": 0.0643325444495664,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.5751048932288023,
+        "depmap_median_effect": -0.5751048932288023,
+        "depmap_p25_effect": -0.5751048932288023,
+        "depmap_p75_effect": -0.5751048932288023,
+        "essentiality_score": 0.5751048932288023,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.3984073786817264,
+        "depmap_median_effect": -0.3984073786817264,
+        "depmap_p25_effect": -0.3984073786817264,
+        "depmap_p75_effect": -0.3984073786817264,
+        "essentiality_score": 0.3984073786817264,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.547452293807448,
+        "depmap_median_effect": -0.547452293807448,
+        "depmap_p25_effect": -0.547452293807448,
+        "depmap_p75_effect": -0.547452293807448,
+        "essentiality_score": 0.547452293807448,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": 0.0959140744427264,
+        "depmap_median_effect": 0.0959140744427264,
+        "depmap_p25_effect": 0.0959140744427264,
+        "depmap_p75_effect": 0.0959140744427264,
+        "essentiality_score": 0.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.3392667608868615,
+        "depmap_median_effect": -0.3392667608868615,
+        "depmap_p25_effect": -0.3392667608868615,
+        "depmap_p75_effect": -0.3392667608868615,
+        "essentiality_score": 0.3392667608868615,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.5957333766051924,
+        "depmap_median_effect": -0.5957333766051924,
+        "depmap_p25_effect": -0.5957333766051924,
+        "depmap_p75_effect": -0.5957333766051924,
+        "essentiality_score": 0.5957333766051924,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": -0.0873610208994006,
+        "depmap_median_effect": -0.0873610208994006,
+        "depmap_p25_effect": -0.0873610208994006,
+        "depmap_p75_effect": -0.0873610208994006,
+        "essentiality_score": 0.0873610208994006,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.923632120390194,
+        "depmap_median_effect": -2.923632120390194,
+        "depmap_p25_effect": -2.923632120390194,
+        "depmap_p75_effect": -2.923632120390194,
+        "essentiality_score": 1.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Ampulla of Vater": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.2034713848896735,
+        "depmap_median_effect": -0.2630053292415349,
+        "depmap_p25_effect": -0.4031029525258354,
+        "depmap_p75_effect": -0.0118461847201598,
+        "essentiality_score": 0.2034713848896735,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.01074773070598788,
+        "depmap_median_effect": -0.0088885238820555,
+        "depmap_p25_effect": -0.1345529934865922,
+        "depmap_p75_effect": 0.0057369886664488,
+        "essentiality_score": 0.01074773070598788,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1753472879601765,
+        "depmap_median_effect": -1.2074950123391883,
+        "depmap_p25_effect": -1.2317408619097812,
+        "depmap_p75_effect": -1.153091574692734,
+        "essentiality_score": 1.0,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.3160139547763149,
+        "depmap_median_effect": -0.326539071200599,
+        "depmap_p25_effect": -0.3278414905456199,
+        "depmap_p75_effect": -0.2909833439447952,
+        "essentiality_score": 0.3160139547763149,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5302294293090302,
+        "depmap_median_effect": -0.517533753157276,
+        "depmap_p25_effect": -0.6072396923425026,
+        "depmap_p75_effect": -0.4681000019156985,
+        "essentiality_score": 0.5302294293090302,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.47831855069344265,
+        "depmap_median_effect": -0.4820035202312972,
+        "depmap_p25_effect": -0.509462082904595,
+        "depmap_p75_effect": -0.3716050844299352,
+        "essentiality_score": 0.47831855069344265,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.13657649365609736,
+        "depmap_median_effect": 0.1029260693446074,
+        "depmap_p25_effect": 0.0935951611533125,
+        "depmap_p75_effect": 0.1556516835922286,
+        "essentiality_score": 0.0,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.7612000761514162,
+        "depmap_median_effect": -0.6139149166222835,
+        "depmap_p25_effect": -1.159636846557886,
+        "depmap_p75_effect": -0.5651850821642671,
+        "essentiality_score": 0.7612000761514162,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -1.2904812505817054,
+        "depmap_median_effect": -0.7869121577592896,
+        "depmap_p25_effect": -1.9853464479526624,
+        "depmap_p75_effect": -0.6732509756852354,
+        "essentiality_score": 1.0,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.1293411707508334,
+        "depmap_median_effect": -0.1618771572873962,
+        "depmap_p25_effect": -0.1645308004329492,
+        "depmap_p75_effect": -0.0635140643043687,
+        "essentiality_score": 0.1293411707508334,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.38918948064233677,
+        "depmap_median_effect": -0.3904668062727053,
+        "depmap_p25_effect": -0.456049742772652,
+        "depmap_p75_effect": -0.3615798424555203,
+        "essentiality_score": 0.38918948064233677,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.2248507436811983,
+        "depmap_median_effect": -0.2658689505593255,
+        "depmap_p25_effect": -0.3340263326322861,
+        "depmap_p75_effect": -0.1384320128252639,
+        "essentiality_score": 0.2248507436811983,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.8077935554056591,
+        "depmap_median_effect": -0.8375996998888974,
+        "depmap_p25_effect": -0.8768618514489556,
+        "depmap_p75_effect": -0.7045435423350334,
+        "essentiality_score": 0.8077935554056591,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.5643862874648107,
+        "depmap_median_effect": -0.5033521029723438,
+        "depmap_p25_effect": -0.6722011750685081,
+        "depmap_p75_effect": -0.4105791948761687,
+        "essentiality_score": 0.5643862874648107,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.1284535902693567,
+        "depmap_median_effect": 0.097496738133275,
+        "depmap_p25_effect": 0.0615590925150479,
+        "depmap_p75_effect": 0.1985874589335638,
+        "essentiality_score": 0.0,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.8683373214784393,
+        "depmap_median_effect": -2.7680440595032314,
+        "depmap_p25_effect": -3.102119877358377,
+        "depmap_p75_effect": -2.651446750283881,
+        "essentiality_score": 1.0,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Biliary Tract": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.2207402031707567,
+        "depmap_median_effect": -0.2010441237005985,
+        "depmap_p25_effect": -0.30416887441991797,
+        "depmap_p75_effect": -0.1352696914948264,
+        "essentiality_score": 0.2207402031707567,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": 0.002701725142550631,
+        "depmap_median_effect": -0.0360093113322469,
+        "depmap_p25_effect": -0.1525374474352248,
+        "depmap_p75_effect": 0.09652985425198127,
+        "essentiality_score": 0.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1343221366800984,
+        "depmap_median_effect": -1.0973482855932941,
+        "depmap_p25_effect": -1.2585660062132846,
+        "depmap_p75_effect": -0.9930850140752611,
+        "essentiality_score": 1.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.406353685291118,
+        "depmap_median_effect": -0.35503483891372845,
+        "depmap_p25_effect": -0.5916576264545492,
+        "depmap_p75_effect": -0.2415872954065012,
+        "essentiality_score": 0.406353685291118,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.4646772593934568,
+        "depmap_median_effect": -0.48466470541785667,
+        "depmap_p25_effect": -0.6613360696765611,
+        "depmap_p75_effect": -0.3188954009855555,
+        "essentiality_score": 0.4646772593934568,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.3841829183621216,
+        "depmap_median_effect": -0.40115902361210476,
+        "depmap_p25_effect": -0.5348487434426503,
+        "depmap_p75_effect": -0.21645365656077897,
+        "essentiality_score": 0.3841829183621216,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.22641445537662733,
+        "depmap_median_effect": 0.1687005173005241,
+        "depmap_p25_effect": 0.10428407082101786,
+        "depmap_p75_effect": 0.260691296131464,
+        "essentiality_score": 0.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.542718022283096,
+        "depmap_median_effect": -0.4445286057509633,
+        "depmap_p25_effect": -0.8004010423524339,
+        "depmap_p75_effect": -0.23469427340304722,
+        "essentiality_score": 0.542718022283096,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.9356553501446516,
+        "depmap_median_effect": -0.5879679899166206,
+        "depmap_p25_effect": -1.29067454820064,
+        "depmap_p75_effect": -0.3899632714868693,
+        "essentiality_score": 0.9356553501446516,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.14381475764784954,
+        "depmap_median_effect": -0.13300814565315922,
+        "depmap_p25_effect": -0.19859444132323617,
+        "depmap_p75_effect": -0.0768335470787181,
+        "essentiality_score": 0.14381475764784954,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.28958958197945467,
+        "depmap_median_effect": -0.2690313205496842,
+        "depmap_p25_effect": -0.3797946927482296,
+        "depmap_p75_effect": -0.19767412371042908,
+        "essentiality_score": 0.28958958197945467,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.22490049995055805,
+        "depmap_median_effect": -0.2117372848381069,
+        "depmap_p25_effect": -0.2671668052134823,
+        "depmap_p75_effect": -0.1671201511399862,
+        "essentiality_score": 0.22490049995055805,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.6971681106719726,
+        "depmap_median_effect": -0.74172693591146,
+        "depmap_p25_effect": -0.8430818589718887,
+        "depmap_p75_effect": -0.5831914940087787,
+        "essentiality_score": 0.6971681106719726,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.8277836824231912,
+        "depmap_median_effect": -0.684814055633725,
+        "depmap_p25_effect": -1.0552739898222498,
+        "depmap_p75_effect": -0.5955485588666418,
+        "essentiality_score": 0.8277836824231912,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.5357747150276007,
+        "depmap_median_effect": 0.22465726583387297,
+        "depmap_p25_effect": 0.07924186093533062,
+        "depmap_p75_effect": 0.5787671672527724,
+        "essentiality_score": 0.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.596896452126141,
+        "depmap_median_effect": -2.5807003329851907,
+        "depmap_p25_effect": -2.9312179697220784,
+        "depmap_p75_effect": -2.2858913493452446,
+        "essentiality_score": 1.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Bladder/Urinary Tract": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.2176241929402724,
+        "depmap_median_effect": -0.2653322178651406,
+        "depmap_p25_effect": -0.45644980957548276,
+        "depmap_p75_effect": -0.05499062703056243,
+        "essentiality_score": 0.2176241929402724,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.10215520418034939,
+        "depmap_median_effect": -0.0742153903999998,
+        "depmap_p25_effect": -0.18367508818659387,
+        "depmap_p75_effect": -0.006886245034163301,
+        "essentiality_score": 0.10215520418034939,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.0746643136125493,
+        "depmap_median_effect": -1.072916471627627,
+        "depmap_p25_effect": -1.2287314008937777,
+        "depmap_p75_effect": -0.9861621635993315,
+        "essentiality_score": 1.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.47180825371048535,
+        "depmap_median_effect": -0.46817484765575035,
+        "depmap_p25_effect": -0.626772812217204,
+        "depmap_p75_effect": -0.27695426580302146,
+        "essentiality_score": 0.47180825371048535,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5178966273231931,
+        "depmap_median_effect": -0.48620519731290524,
+        "depmap_p25_effect": -0.678903136546668,
+        "depmap_p75_effect": -0.33196060242082037,
+        "essentiality_score": 0.5178966273231931,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.43176897486177085,
+        "depmap_median_effect": -0.44426420329280847,
+        "depmap_p25_effect": -0.50950473523586,
+        "depmap_p75_effect": -0.3235504681298695,
+        "essentiality_score": 0.43176897486177085,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.20455327119618505,
+        "depmap_median_effect": 0.18569113381638974,
+        "depmap_p25_effect": 0.11330040478752045,
+        "depmap_p75_effect": 0.26016630487682113,
+        "essentiality_score": 0.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.34214781740206524,
+        "depmap_median_effect": -0.24079445064008376,
+        "depmap_p25_effect": -0.5627971538166617,
+        "depmap_p75_effect": -0.1184682321667336,
+        "essentiality_score": 0.34214781740206524,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.5958659084508855,
+        "depmap_median_effect": -0.5336769919755777,
+        "depmap_p25_effect": -0.6502545647349693,
+        "depmap_p75_effect": -0.4092632328302432,
+        "essentiality_score": 0.5958659084508855,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.12734987142313542,
+        "depmap_median_effect": -0.09301690553206525,
+        "depmap_p25_effect": -0.15662563330418358,
+        "depmap_p75_effect": -0.0558749244845128,
+        "essentiality_score": 0.12734987142313542,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.3320433174839631,
+        "depmap_median_effect": -0.3568392461638723,
+        "depmap_p25_effect": -0.5227609497896701,
+        "depmap_p75_effect": -0.16932392287914144,
+        "essentiality_score": 0.3320433174839631,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.19095977703503786,
+        "depmap_median_effect": -0.1635698475152838,
+        "depmap_p25_effect": -0.27834623806649045,
+        "depmap_p75_effect": -0.08800908312346728,
+        "essentiality_score": 0.19095977703503786,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7063204943239944,
+        "depmap_median_effect": -0.6784216429765006,
+        "depmap_p25_effect": -0.8143661856811013,
+        "depmap_p75_effect": -0.5889727065872034,
+        "essentiality_score": 0.7063204943239944,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.8102691336804505,
+        "depmap_median_effect": -0.7764923785345987,
+        "depmap_p25_effect": -0.9776396371238567,
+        "depmap_p75_effect": -0.5489200956814413,
+        "essentiality_score": 0.8102691336804505,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.29796609455361867,
+        "depmap_median_effect": 0.1621641336993804,
+        "depmap_p25_effect": 0.013530073974808226,
+        "depmap_p75_effect": 0.4294825887904335,
+        "essentiality_score": 0.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.831027343050965,
+        "depmap_median_effect": -2.9273324281170967,
+        "depmap_p25_effect": -3.1791674168511825,
+        "depmap_p75_effect": -2.5694833297493993,
+        "essentiality_score": 1.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Bone": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.19126797594226633,
+        "depmap_median_effect": -0.1983064372889026,
+        "depmap_p25_effect": -0.3788089425454521,
+        "depmap_p75_effect": -0.04445476695795,
+        "essentiality_score": 0.19126797594226633,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.06079164469805371,
+        "depmap_median_effect": -0.0763535612570883,
+        "depmap_p25_effect": -0.179723927838995,
+        "depmap_p75_effect": 0.0649640912785801,
+        "essentiality_score": 0.06079164469805371,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.2422191852355597,
+        "depmap_median_effect": -1.142365079088404,
+        "depmap_p25_effect": -1.4432102244580811,
+        "depmap_p75_effect": -1.046783747981901,
+        "essentiality_score": 1.0,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.49912992015377705,
+        "depmap_median_effect": -0.4369731564527945,
+        "depmap_p25_effect": -0.6501778351756761,
+        "depmap_p75_effect": -0.343516724405392,
+        "essentiality_score": 0.49912992015377705,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5143677600494679,
+        "depmap_median_effect": -0.48293785679977,
+        "depmap_p25_effect": -0.7285540791395485,
+        "depmap_p75_effect": -0.3221663642152071,
+        "essentiality_score": 0.5143677600494679,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.40957892662929135,
+        "depmap_median_effect": -0.4187936869211562,
+        "depmap_p25_effect": -0.5420047859995549,
+        "depmap_p75_effect": -0.2783532940951405,
+        "essentiality_score": 0.40957892662929135,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.1434601476649477,
+        "depmap_median_effect": 0.1349102467654311,
+        "depmap_p25_effect": 0.0559350386415986,
+        "depmap_p75_effect": 0.214085647981203,
+        "essentiality_score": 0.0,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.07962535240033729,
+        "depmap_median_effect": -0.066965252581929,
+        "depmap_p25_effect": -0.1931365356771373,
+        "depmap_p75_effect": 0.0224250042961957,
+        "essentiality_score": 0.07962535240033729,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.5114349734850498,
+        "depmap_median_effect": -0.566061625452983,
+        "depmap_p25_effect": -0.6662200662053428,
+        "depmap_p75_effect": -0.3334173203309617,
+        "essentiality_score": 0.5114349734850498,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.13112677910588239,
+        "depmap_median_effect": -0.1352237304980468,
+        "depmap_p25_effect": -0.2182329915948352,
+        "depmap_p75_effect": -0.0659565366850728,
+        "essentiality_score": 0.13112677910588239,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.40161341288580177,
+        "depmap_median_effect": -0.402829369513134,
+        "depmap_p25_effect": -0.5136636778699029,
+        "depmap_p75_effect": -0.2343908442955348,
+        "essentiality_score": 0.40161341288580177,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.2439217881091929,
+        "depmap_median_effect": -0.2465244856575146,
+        "depmap_p25_effect": -0.3330134926365138,
+        "depmap_p75_effect": -0.1249506054241923,
+        "essentiality_score": 0.2439217881091929,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7569168149770362,
+        "depmap_median_effect": -0.719068924447261,
+        "depmap_p25_effect": -0.8912290417439712,
+        "depmap_p75_effect": -0.4641186935362735,
+        "essentiality_score": 0.7569168149770362,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7911596947670633,
+        "depmap_median_effect": -0.8539595835841257,
+        "depmap_p25_effect": -1.0450916048009673,
+        "depmap_p75_effect": -0.5335118119775621,
+        "essentiality_score": 0.7911596947670633,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.3244849003724845,
+        "depmap_median_effect": 0.2220519028907082,
+        "depmap_p25_effect": 0.1002305377782683,
+        "depmap_p75_effect": 0.4412152475717433,
+        "essentiality_score": 0.0,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.9176502148193593,
+        "depmap_median_effect": -2.9333302681158537,
+        "depmap_p25_effect": -3.167514473973122,
+        "depmap_p75_effect": -2.702038836307031,
+        "essentiality_score": 1.0,
+        "n_models": 49,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Bowel": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.23316605746262986,
+        "depmap_median_effect": -0.2137776245057575,
+        "depmap_p25_effect": -0.43011858455312796,
+        "depmap_p75_effect": -0.022980617587012,
+        "essentiality_score": 0.23316605746262986,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.04361951179993804,
+        "depmap_median_effect": -0.0540728712053271,
+        "depmap_p25_effect": -0.13933540122400964,
+        "depmap_p75_effect": 0.0501214987220897,
+        "essentiality_score": 0.04361951179993804,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -0.9491999500148299,
+        "depmap_median_effect": -0.9752137866620436,
+        "depmap_p25_effect": -1.118868377436703,
+        "depmap_p75_effect": -0.8203105937591453,
+        "essentiality_score": 0.9491999500148299,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.39162298662567996,
+        "depmap_median_effect": -0.3687155949793412,
+        "depmap_p25_effect": -0.6172854721131797,
+        "depmap_p75_effect": -0.1902373883699433,
+        "essentiality_score": 0.39162298662567996,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.351679870285968,
+        "depmap_median_effect": -0.3221015388144624,
+        "depmap_p25_effect": -0.5636959820026367,
+        "depmap_p75_effect": -0.1238432238123756,
+        "essentiality_score": 0.351679870285968,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.4588579638489041,
+        "depmap_median_effect": -0.459754066082388,
+        "depmap_p25_effect": -0.6386612026588592,
+        "depmap_p75_effect": -0.26239487782462023,
+        "essentiality_score": 0.4588579638489041,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.17152603910531397,
+        "depmap_median_effect": 0.1812133464075901,
+        "depmap_p25_effect": 0.0908298534807616,
+        "depmap_p75_effect": 0.2764915796438814,
+        "essentiality_score": 0.0,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.34505559373513556,
+        "depmap_median_effect": -0.2870183109835742,
+        "depmap_p25_effect": -0.5664422326808183,
+        "depmap_p75_effect": -0.0404720603165975,
+        "essentiality_score": 0.34505559373513556,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -1.4081628549056653,
+        "depmap_median_effect": -1.2654505398592744,
+        "depmap_p25_effect": -2.03317371589879,
+        "depmap_p75_effect": -0.658793146795538,
+        "essentiality_score": 1.0,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.10730509686823667,
+        "depmap_median_effect": -0.1026203535445628,
+        "depmap_p25_effect": -0.1686850093885164,
+        "depmap_p75_effect": -0.0552849473973506,
+        "essentiality_score": 0.10730509686823667,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.22772095906865897,
+        "depmap_median_effect": -0.2364056698267231,
+        "depmap_p25_effect": -0.41571507332049595,
+        "depmap_p75_effect": -0.05957305559050645,
+        "essentiality_score": 0.22772095906865897,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.15808225075184537,
+        "depmap_median_effect": -0.1386763421250504,
+        "depmap_p25_effect": -0.22799115258346886,
+        "depmap_p75_effect": -0.0680373058512653,
+        "essentiality_score": 0.15808225075184537,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.6827634638065628,
+        "depmap_median_effect": -0.6764854658217426,
+        "depmap_p25_effect": -0.8449775256562198,
+        "depmap_p75_effect": -0.5123370040384936,
+        "essentiality_score": 0.6827634638065628,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7041636889674113,
+        "depmap_median_effect": -0.6910300793757204,
+        "depmap_p25_effect": -0.8966971263868166,
+        "depmap_p75_effect": -0.5282638087043314,
+        "essentiality_score": 0.7041636889674113,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.20875543705941732,
+        "depmap_median_effect": 0.1253658371151214,
+        "depmap_p25_effect": 0.039437430809749305,
+        "depmap_p75_effect": 0.29253274569311444,
+        "essentiality_score": 0.0,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.52070343098372,
+        "depmap_median_effect": -2.6066006271798168,
+        "depmap_p25_effect": -2.842826525694739,
+        "depmap_p75_effect": -2.1938164691660678,
+        "essentiality_score": 1.0,
+        "n_models": 63,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Breast": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.2762992755625062,
+        "depmap_median_effect": -0.2824212584938188,
+        "depmap_p25_effect": -0.4027625915338658,
+        "depmap_p75_effect": -0.1648581329053429,
+        "essentiality_score": 0.2762992755625062,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.03199998891214332,
+        "depmap_median_effect": -0.0209462892826529,
+        "depmap_p25_effect": -0.1170896982879155,
+        "depmap_p75_effect": 0.0395583514758,
+        "essentiality_score": 0.03199998891214332,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.139302449478077,
+        "depmap_median_effect": -1.1373246816413118,
+        "depmap_p25_effect": -1.329048625230063,
+        "depmap_p75_effect": -0.915447140042418,
+        "essentiality_score": 1.0,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.5136549385283461,
+        "depmap_median_effect": -0.4962358570366556,
+        "depmap_p25_effect": -0.687630464757391,
+        "depmap_p75_effect": -0.2861363680652984,
+        "essentiality_score": 0.5136549385283461,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5194046762092465,
+        "depmap_median_effect": -0.5106235861600366,
+        "depmap_p25_effect": -0.7708138269284948,
+        "depmap_p75_effect": -0.2462476534602909,
+        "essentiality_score": 0.5194046762092465,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.48274278092286904,
+        "depmap_median_effect": -0.435297496335302,
+        "depmap_p25_effect": -0.658277056005592,
+        "depmap_p75_effect": -0.2863407158172475,
+        "essentiality_score": 0.48274278092286904,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.1419584482889497,
+        "depmap_median_effect": 0.1434810001070746,
+        "depmap_p25_effect": 0.0496897429941529,
+        "depmap_p75_effect": 0.2140354717113465,
+        "essentiality_score": 0.0,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.1691616816218618,
+        "depmap_median_effect": -0.1110334184359127,
+        "depmap_p25_effect": -0.2936208777541485,
+        "depmap_p75_effect": 0.0088190440171169,
+        "essentiality_score": 0.1691616816218618,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.6901047686154067,
+        "depmap_median_effect": -0.4839005281407644,
+        "depmap_p25_effect": -0.8914912174334884,
+        "depmap_p75_effect": -0.334467666097475,
+        "essentiality_score": 0.6901047686154067,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.12484960719544597,
+        "depmap_median_effect": -0.1376027747721647,
+        "depmap_p25_effect": -0.190436841726896,
+        "depmap_p75_effect": -0.0527245053784427,
+        "essentiality_score": 0.12484960719544597,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.3409024137324467,
+        "depmap_median_effect": -0.3056462022021685,
+        "depmap_p25_effect": -0.5389451378914921,
+        "depmap_p75_effect": -0.1368150668523472,
+        "essentiality_score": 0.3409024137324467,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.23497494091329763,
+        "depmap_median_effect": -0.2435320336881047,
+        "depmap_p25_effect": -0.3302649292941463,
+        "depmap_p75_effect": -0.1422286665206825,
+        "essentiality_score": 0.23497494091329763,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7042390620749244,
+        "depmap_median_effect": -0.750736611844915,
+        "depmap_p25_effect": -0.887896612580125,
+        "depmap_p75_effect": -0.5736216538647088,
+        "essentiality_score": 0.7042390620749244,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7293221853155034,
+        "depmap_median_effect": -0.6939768766657006,
+        "depmap_p25_effect": -0.9378706955785586,
+        "depmap_p75_effect": -0.4870897012777758,
+        "essentiality_score": 0.7293221853155034,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.15287418259661026,
+        "depmap_median_effect": 0.1128214665387668,
+        "depmap_p25_effect": 0.01165784547917,
+        "depmap_p75_effect": 0.2731862116408967,
+        "essentiality_score": 0.0,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.69588087162968,
+        "depmap_median_effect": -2.8164986670535614,
+        "depmap_p25_effect": -3.0447295532145184,
+        "depmap_p75_effect": -2.244359946794924,
+        "essentiality_score": 1.0,
+        "n_models": 53,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "CNS/Brain": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.30316073078226285,
+        "depmap_median_effect": -0.278514806014005,
+        "depmap_p25_effect": -0.4666084247812113,
+        "depmap_p75_effect": -0.1461319735417098,
+        "essentiality_score": 0.30316073078226285,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": 3.801152982353735e-05,
+        "depmap_median_effect": -0.0230156642580205,
+        "depmap_p25_effect": -0.1326650111406944,
+        "depmap_p75_effect": 0.1059190189769423,
+        "essentiality_score": 0.0,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.0403036423087482,
+        "depmap_median_effect": -1.0697980605261022,
+        "depmap_p25_effect": -1.2263959710275505,
+        "depmap_p75_effect": -0.9064737159274192,
+        "essentiality_score": 1.0,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.5271674832853198,
+        "depmap_median_effect": -0.4889562379756092,
+        "depmap_p25_effect": -0.6676772155455234,
+        "depmap_p75_effect": -0.3146720375668685,
+        "essentiality_score": 0.5271674832853198,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.48533522292120157,
+        "depmap_median_effect": -0.472416429432516,
+        "depmap_p25_effect": -0.6526792132969379,
+        "depmap_p75_effect": -0.3319549979724014,
+        "essentiality_score": 0.48533522292120157,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.34161049410858363,
+        "depmap_median_effect": -0.3586514323985974,
+        "depmap_p25_effect": -0.5010755683557182,
+        "depmap_p75_effect": -0.1871360237129168,
+        "essentiality_score": 0.34161049410858363,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.20332030294438105,
+        "depmap_median_effect": 0.1771991792280799,
+        "depmap_p25_effect": 0.1172943829404533,
+        "depmap_p75_effect": 0.2915966065194171,
+        "essentiality_score": 0.0,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.027859332266355473,
+        "depmap_median_effect": -0.0140647297374828,
+        "depmap_p25_effect": -0.0804603780579404,
+        "depmap_p75_effect": 0.0658190692587257,
+        "essentiality_score": 0.027859332266355473,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.4165207717157317,
+        "depmap_median_effect": -0.374678706721846,
+        "depmap_p25_effect": -0.5152628160071239,
+        "depmap_p75_effect": -0.2634805965879817,
+        "essentiality_score": 0.4165207717157317,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.10669070500128816,
+        "depmap_median_effect": -0.1077966076268573,
+        "depmap_p25_effect": -0.1799441283603168,
+        "depmap_p75_effect": -0.0341772027237766,
+        "essentiality_score": 0.10669070500128816,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.3499796435911178,
+        "depmap_median_effect": -0.330507668587345,
+        "depmap_p25_effect": -0.4420610194919063,
+        "depmap_p75_effect": -0.2112257058331313,
+        "essentiality_score": 0.3499796435911178,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.21720781728578611,
+        "depmap_median_effect": -0.2032401430896093,
+        "depmap_p25_effect": -0.2778831741487206,
+        "depmap_p75_effect": -0.131326558969164,
+        "essentiality_score": 0.21720781728578611,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7207041211167295,
+        "depmap_median_effect": -0.7176401010801696,
+        "depmap_p25_effect": -0.8580781123839394,
+        "depmap_p75_effect": -0.5907414105982565,
+        "essentiality_score": 0.7207041211167295,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7013374002043052,
+        "depmap_median_effect": -0.655203842375584,
+        "depmap_p25_effect": -0.9308611890663948,
+        "depmap_p75_effect": -0.4392607092190277,
+        "essentiality_score": 0.7013374002043052,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.5007268080988548,
+        "depmap_median_effect": 0.2358577513952959,
+        "depmap_p25_effect": 0.1036922801675785,
+        "depmap_p75_effect": 0.6761772370342349,
+        "essentiality_score": 0.0,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.6811314965316457,
+        "depmap_median_effect": -2.7816090849869535,
+        "depmap_p25_effect": -3.075959738762707,
+        "depmap_p75_effect": -2.3615587661743827,
+        "essentiality_score": 1.0,
+        "n_models": 89,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Cervix": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.23149994655500533,
+        "depmap_median_effect": -0.2592906810569693,
+        "depmap_p25_effect": -0.33883411243310657,
+        "depmap_p75_effect": -0.12989911004727195,
+        "essentiality_score": 0.23149994655500533,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.047374379390914156,
+        "depmap_median_effect": -0.0257203751713585,
+        "depmap_p25_effect": -0.10777819796525037,
+        "depmap_p75_effect": 0.09829410031186815,
+        "essentiality_score": 0.047374379390914156,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1068032887803625,
+        "depmap_median_effect": -1.0695559447301313,
+        "depmap_p25_effect": -1.2419716795889972,
+        "depmap_p75_effect": -0.9631939164428007,
+        "essentiality_score": 1.0,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.36221513166230473,
+        "depmap_median_effect": -0.368769431640182,
+        "depmap_p25_effect": -0.4128290267276936,
+        "depmap_p75_effect": -0.2373103758624549,
+        "essentiality_score": 0.36221513166230473,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.592338244723364,
+        "depmap_median_effect": -0.6136542796386256,
+        "depmap_p25_effect": -0.7852129078159027,
+        "depmap_p75_effect": -0.4007556717472572,
+        "essentiality_score": 0.592338244723364,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.47751070077156155,
+        "depmap_median_effect": -0.4479321789244519,
+        "depmap_p25_effect": -0.5671494508222754,
+        "depmap_p75_effect": -0.36542003109506765,
+        "essentiality_score": 0.47751070077156155,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.16152412452701334,
+        "depmap_median_effect": 0.16676035730488542,
+        "depmap_p25_effect": 0.1018765995541499,
+        "depmap_p75_effect": 0.22849274025370356,
+        "essentiality_score": 0.0,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.36960413369361844,
+        "depmap_median_effect": -0.34316250509594765,
+        "depmap_p25_effect": -0.5572581338869683,
+        "depmap_p75_effect": -0.1713129560294516,
+        "essentiality_score": 0.36960413369361844,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.550041370111798,
+        "depmap_median_effect": -0.41502635672977023,
+        "depmap_p25_effect": -0.5868581579566928,
+        "depmap_p75_effect": -0.28886306421947333,
+        "essentiality_score": 0.550041370111798,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.11952165836720281,
+        "depmap_median_effect": -0.10622081112731255,
+        "depmap_p25_effect": -0.16248449153198521,
+        "depmap_p75_effect": -0.05699928544121385,
+        "essentiality_score": 0.11952165836720281,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.4571019263932042,
+        "depmap_median_effect": -0.4896769824854189,
+        "depmap_p25_effect": -0.5593213987193772,
+        "depmap_p75_effect": -0.3642904896468537,
+        "essentiality_score": 0.4571019263932042,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.15235507819791871,
+        "depmap_median_effect": -0.12305107590908501,
+        "depmap_p25_effect": -0.21762753679594396,
+        "depmap_p75_effect": -0.06649022789438087,
+        "essentiality_score": 0.15235507819791871,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.6485337079146795,
+        "depmap_median_effect": -0.653139553219564,
+        "depmap_p25_effect": -0.8173246786892143,
+        "depmap_p75_effect": -0.4819538882497326,
+        "essentiality_score": 0.6485337079146795,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.5536412210547873,
+        "depmap_median_effect": -0.4905003561498529,
+        "depmap_p25_effect": -0.7265767161026087,
+        "depmap_p75_effect": -0.35260921012990587,
+        "essentiality_score": 0.5536412210547873,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.22164300984058616,
+        "depmap_median_effect": 0.26887738154333646,
+        "depmap_p25_effect": 0.11108980371302038,
+        "depmap_p75_effect": 0.3130343536843482,
+        "essentiality_score": 0.0,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.6016149705548526,
+        "depmap_median_effect": -2.612149824748208,
+        "depmap_p25_effect": -3.053671788593784,
+        "depmap_p75_effect": -2.2839338608408166,
+        "essentiality_score": 1.0,
+        "n_models": 18,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Esophagus/Stomach": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.1694511563591659,
+        "depmap_median_effect": -0.1450989896718418,
+        "depmap_p25_effect": -0.3555314990683657,
+        "depmap_p75_effect": 0.0179287535360342,
+        "essentiality_score": 0.1694511563591659,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.09841353846245562,
+        "depmap_median_effect": -0.0988752484051306,
+        "depmap_p25_effect": -0.2314182371609419,
+        "depmap_p75_effect": 0.0373806496394527,
+        "essentiality_score": 0.09841353846245562,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.0787200198034268,
+        "depmap_median_effect": -1.080364118168131,
+        "depmap_p25_effect": -1.292877601107188,
+        "depmap_p75_effect": -0.904577422202002,
+        "essentiality_score": 1.0,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.3966942045243039,
+        "depmap_median_effect": -0.3865508675118376,
+        "depmap_p25_effect": -0.533436478135211,
+        "depmap_p75_effect": -0.2363771902050248,
+        "essentiality_score": 0.3966942045243039,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.48042056773846936,
+        "depmap_median_effect": -0.4471112244222722,
+        "depmap_p25_effect": -0.6343264925601348,
+        "depmap_p75_effect": -0.3438931049061166,
+        "essentiality_score": 0.48042056773846936,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.4096655719786578,
+        "depmap_median_effect": -0.4347657491640475,
+        "depmap_p25_effect": -0.5030591948048045,
+        "depmap_p75_effect": -0.2709286516019793,
+        "essentiality_score": 0.4096655719786578,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.1242963014010242,
+        "depmap_median_effect": 0.1428585773246148,
+        "depmap_p25_effect": 0.030768731348907,
+        "depmap_p75_effect": 0.2278822051849522,
+        "essentiality_score": 0.0,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.3845603572573342,
+        "depmap_median_effect": -0.2734137142542132,
+        "depmap_p25_effect": -0.6112717496056763,
+        "depmap_p75_effect": -0.1035101730083939,
+        "essentiality_score": 0.3845603572573342,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.7034247199785195,
+        "depmap_median_effect": -0.5050507073758019,
+        "depmap_p25_effect": -0.8505825335102012,
+        "depmap_p75_effect": -0.344394751069329,
+        "essentiality_score": 0.7034247199785195,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.13576029252298574,
+        "depmap_median_effect": -0.1317291614871945,
+        "depmap_p25_effect": -0.2146072451220249,
+        "depmap_p75_effect": -0.0519747042958406,
+        "essentiality_score": 0.13576029252298574,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.3277721494351507,
+        "depmap_median_effect": -0.3412556194949093,
+        "depmap_p25_effect": -0.4698593759325226,
+        "depmap_p75_effect": -0.2104690275585584,
+        "essentiality_score": 0.3277721494351507,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.15306496749586546,
+        "depmap_median_effect": -0.1422855857851541,
+        "depmap_p25_effect": -0.2260261760728733,
+        "depmap_p75_effect": -0.0850117622916222,
+        "essentiality_score": 0.15306496749586546,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.6705871127583464,
+        "depmap_median_effect": -0.7418069367480892,
+        "depmap_p25_effect": -0.8632524115255413,
+        "depmap_p75_effect": -0.4434261576935545,
+        "essentiality_score": 0.6705871127583464,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7385537313554889,
+        "depmap_median_effect": -0.6649483302631385,
+        "depmap_p25_effect": -1.0668692561819826,
+        "depmap_p75_effect": -0.5207625302889664,
+        "essentiality_score": 0.7385537313554889,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.20208448594793035,
+        "depmap_median_effect": 0.1401173498631821,
+        "depmap_p25_effect": 0.060941980721473,
+        "depmap_p75_effect": 0.2434972531258791,
+        "essentiality_score": 0.0,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.7505811069345163,
+        "depmap_median_effect": -2.771412625908624,
+        "depmap_p25_effect": -3.1204587103522856,
+        "depmap_p75_effect": -2.4923201362676832,
+        "essentiality_score": 1.0,
+        "n_models": 69,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Eye": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.2840324493763679,
+        "depmap_median_effect": -0.3813030013040873,
+        "depmap_p25_effect": -0.4340999805682968,
+        "depmap_p75_effect": -0.16838770878683312,
+        "essentiality_score": 0.2840324493763679,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": 0.2172420899157723,
+        "depmap_median_effect": 0.11773674523552,
+        "depmap_p25_effect": 0.014066989746319349,
+        "depmap_p75_effect": 0.37867080039489587,
+        "essentiality_score": 0.0,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1702262055925685,
+        "depmap_median_effect": -1.1927302938541455,
+        "depmap_p25_effect": -1.261952085703164,
+        "depmap_p75_effect": -1.0954516300112913,
+        "essentiality_score": 1.0,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.5602210221522153,
+        "depmap_median_effect": -0.5715409979540269,
+        "depmap_p25_effect": -0.6911921716309948,
+        "depmap_p75_effect": -0.4554471526417768,
+        "essentiality_score": 0.5602210221522153,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.7523100832959719,
+        "depmap_median_effect": -0.8387642858609479,
+        "depmap_p25_effect": -0.9973921462246302,
+        "depmap_p75_effect": -0.5976432695875753,
+        "essentiality_score": 0.7523100832959719,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.3919135456893205,
+        "depmap_median_effect": -0.4578610929862584,
+        "depmap_p25_effect": -0.4838299261378597,
+        "depmap_p75_effect": -0.3233433890209372,
+        "essentiality_score": 0.3919135456893205,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.48871827316228644,
+        "depmap_median_effect": 0.4875017634064157,
+        "depmap_p25_effect": 0.40640231411810346,
+        "depmap_p75_effect": 0.6212637141320134,
+        "essentiality_score": 0.0,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.10645325381337466,
+        "depmap_median_effect": -0.0516159447729736,
+        "depmap_p25_effect": -0.13495933969677565,
+        "depmap_p75_effect": 0.043847460195749,
+        "essentiality_score": 0.10645325381337466,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.9280593191288766,
+        "depmap_median_effect": -0.5572213257948995,
+        "depmap_p25_effect": -1.0713672932998919,
+        "depmap_p75_effect": -0.4970232013569993,
+        "essentiality_score": 0.9280593191288766,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.10019712439993404,
+        "depmap_median_effect": -0.1201972336153523,
+        "depmap_p25_effect": -0.16209560995945035,
+        "depmap_p75_effect": -0.06406489061380605,
+        "essentiality_score": 0.10019712439993404,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.5103614639582283,
+        "depmap_median_effect": -0.4957592188141519,
+        "depmap_p25_effect": -0.6628382541213114,
+        "depmap_p75_effect": -0.40525738532174826,
+        "essentiality_score": 0.5103614639582283,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.3595113105988365,
+        "depmap_median_effect": -0.2985842474767568,
+        "depmap_p25_effect": -0.4496704511095948,
+        "depmap_p75_effect": -0.19240810845359968,
+        "essentiality_score": 0.3595113105988365,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7190893741926707,
+        "depmap_median_effect": -0.6987913488781146,
+        "depmap_p25_effect": -0.8296201256563258,
+        "depmap_p75_effect": -0.5984930525372986,
+        "essentiality_score": 0.7190893741926707,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.8561784488524784,
+        "depmap_median_effect": -0.8230209973441932,
+        "depmap_p25_effect": -0.9778552493141576,
+        "depmap_p75_effect": -0.6638336522256418,
+        "essentiality_score": 0.8561784488524784,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 1.4120478549824815,
+        "depmap_median_effect": 1.5040122001578262,
+        "depmap_p25_effect": 0.8407843167578288,
+        "depmap_p75_effect": 1.7897933245285178,
+        "essentiality_score": 0.0,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.6005175812653025,
+        "depmap_median_effect": -2.65059941373207,
+        "depmap_p25_effect": -2.9043210205759515,
+        "depmap_p75_effect": -2.3762937465760996,
+        "essentiality_score": 1.0,
+        "n_models": 15,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Fibroblast": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.854597068612352,
+        "depmap_median_effect": -0.854597068612352,
+        "depmap_p25_effect": -0.854597068612352,
+        "depmap_p75_effect": -0.854597068612352,
+        "essentiality_score": 0.854597068612352,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.2169485452689773,
+        "depmap_median_effect": -0.2169485452689773,
+        "depmap_p25_effect": -0.2169485452689773,
+        "depmap_p75_effect": -0.2169485452689773,
+        "essentiality_score": 0.2169485452689773,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.2983034776204905,
+        "depmap_median_effect": -1.2983034776204905,
+        "depmap_p25_effect": -1.2983034776204905,
+        "depmap_p75_effect": -1.2983034776204905,
+        "essentiality_score": 1.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.6368061426213525,
+        "depmap_median_effect": -0.6368061426213525,
+        "depmap_p25_effect": -0.6368061426213525,
+        "depmap_p75_effect": -0.6368061426213525,
+        "essentiality_score": 0.6368061426213525,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.2283325281709355,
+        "depmap_median_effect": -0.2283325281709355,
+        "depmap_p25_effect": -0.2283325281709355,
+        "depmap_p75_effect": -0.2283325281709355,
+        "essentiality_score": 0.2283325281709355,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.4844008061729429,
+        "depmap_median_effect": -0.4844008061729429,
+        "depmap_p25_effect": -0.4844008061729429,
+        "depmap_p75_effect": -0.4844008061729429,
+        "essentiality_score": 0.4844008061729429,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.1823729714260573,
+        "depmap_median_effect": 0.1823729714260573,
+        "depmap_p25_effect": 0.1823729714260573,
+        "depmap_p75_effect": 0.1823729714260573,
+        "essentiality_score": 0.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.0682928616408382,
+        "depmap_median_effect": -0.0682928616408382,
+        "depmap_p25_effect": -0.0682928616408382,
+        "depmap_p75_effect": -0.0682928616408382,
+        "essentiality_score": 0.0682928616408382,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.8883643261587539,
+        "depmap_median_effect": -0.8883643261587539,
+        "depmap_p25_effect": -0.8883643261587539,
+        "depmap_p75_effect": -0.8883643261587539,
+        "essentiality_score": 0.8883643261587539,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.1905156899730218,
+        "depmap_median_effect": -0.1905156899730218,
+        "depmap_p25_effect": -0.1905156899730218,
+        "depmap_p75_effect": -0.1905156899730218,
+        "essentiality_score": 0.1905156899730218,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.0437130752140948,
+        "depmap_median_effect": -0.0437130752140948,
+        "depmap_p25_effect": -0.0437130752140948,
+        "depmap_p75_effect": -0.0437130752140948,
+        "essentiality_score": 0.0437130752140948,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.0429473453643552,
+        "depmap_median_effect": -0.0429473453643552,
+        "depmap_p25_effect": -0.0429473453643552,
+        "depmap_p75_effect": -0.0429473453643552,
+        "essentiality_score": 0.0429473453643552,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7722180554359477,
+        "depmap_median_effect": -0.7722180554359477,
+        "depmap_p25_effect": -0.7722180554359477,
+        "depmap_p75_effect": -0.7722180554359477,
+        "essentiality_score": 0.7722180554359477,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.669112257391462,
+        "depmap_median_effect": -0.669112257391462,
+        "depmap_p25_effect": -0.669112257391462,
+        "depmap_p75_effect": -0.669112257391462,
+        "essentiality_score": 0.669112257391462,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.0489118756639669,
+        "depmap_median_effect": 0.0489118756639669,
+        "depmap_p25_effect": 0.0489118756639669,
+        "depmap_p75_effect": 0.0489118756639669,
+        "essentiality_score": 0.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.926320815329845,
+        "depmap_median_effect": -2.926320815329845,
+        "depmap_p25_effect": -2.926320815329845,
+        "depmap_p75_effect": -2.926320815329845,
+        "essentiality_score": 1.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Head and Neck": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.22824551570421855,
+        "depmap_median_effect": -0.2039109336471813,
+        "depmap_p25_effect": -0.3371444642023693,
+        "depmap_p75_effect": -0.0862659071520933,
+        "essentiality_score": 0.22824551570421855,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.12393436376436208,
+        "depmap_median_effect": -0.126596768378551,
+        "depmap_p25_effect": -0.1962082554320819,
+        "depmap_p75_effect": -0.042225191000992,
+        "essentiality_score": 0.12393436376436208,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.0594676322680683,
+        "depmap_median_effect": -1.0217832830612528,
+        "depmap_p25_effect": -1.1925185355779864,
+        "depmap_p75_effect": -0.9128716400626342,
+        "essentiality_score": 1.0,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.41275696839628956,
+        "depmap_median_effect": -0.4024347720473993,
+        "depmap_p25_effect": -0.5471361628853573,
+        "depmap_p75_effect": -0.2466326316527511,
+        "essentiality_score": 0.41275696839628956,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.4713428158175835,
+        "depmap_median_effect": -0.4599235377086619,
+        "depmap_p25_effect": -0.5868713218446611,
+        "depmap_p75_effect": -0.3473989670385876,
+        "essentiality_score": 0.4713428158175835,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.3867412215346735,
+        "depmap_median_effect": -0.4162344910479015,
+        "depmap_p25_effect": -0.5222605458101376,
+        "depmap_p75_effect": -0.2538156503081969,
+        "essentiality_score": 0.3867412215346735,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.12047179767252231,
+        "depmap_median_effect": 0.126415397312465,
+        "depmap_p25_effect": 0.0580357889299516,
+        "depmap_p75_effect": 0.2003575358684498,
+        "essentiality_score": 0.0,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.7103664215591973,
+        "depmap_median_effect": -0.6368274384393816,
+        "depmap_p25_effect": -0.9128869524038198,
+        "depmap_p75_effect": -0.3461694552379676,
+        "essentiality_score": 0.7103664215591973,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.45313694935977755,
+        "depmap_median_effect": -0.3971481467513547,
+        "depmap_p25_effect": -0.5287985453637449,
+        "depmap_p75_effect": -0.2701429569072602,
+        "essentiality_score": 0.45313694935977755,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.1319170653590555,
+        "depmap_median_effect": -0.1493127595772877,
+        "depmap_p25_effect": -0.2061856622651754,
+        "depmap_p75_effect": -0.0589900996885906,
+        "essentiality_score": 0.1319170653590555,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.3469900440836169,
+        "depmap_median_effect": -0.3372851446709806,
+        "depmap_p25_effect": -0.4633981414480299,
+        "depmap_p75_effect": -0.2185317550296712,
+        "essentiality_score": 0.3469900440836169,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.19734285509045557,
+        "depmap_median_effect": -0.1757463638959823,
+        "depmap_p25_effect": -0.2469152260580853,
+        "depmap_p75_effect": -0.1191375673941385,
+        "essentiality_score": 0.19734285509045557,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7219594671412287,
+        "depmap_median_effect": -0.7038764319078644,
+        "depmap_p25_effect": -0.8729163548529438,
+        "depmap_p75_effect": -0.5742547130771435,
+        "essentiality_score": 0.7219594671412287,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.748091943787515,
+        "depmap_median_effect": -0.7135006702788096,
+        "depmap_p25_effect": -0.8972179838469481,
+        "depmap_p75_effect": -0.5415562989995948,
+        "essentiality_score": 0.748091943787515,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.11304418082417089,
+        "depmap_median_effect": 0.0990126913844195,
+        "depmap_p25_effect": 0.0072468110132624,
+        "depmap_p75_effect": 0.2394555800932116,
+        "essentiality_score": 0.0,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.636433560138993,
+        "depmap_median_effect": -2.673391285448219,
+        "depmap_p25_effect": -3.013412584604305,
+        "depmap_p75_effect": -2.3109242415368336,
+        "essentiality_score": 1.0,
+        "n_models": 77,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Kidney": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.1626726393139102,
+        "depmap_median_effect": -0.1384116342403393,
+        "depmap_p25_effect": -0.28520683596038754,
+        "depmap_p75_effect": -0.0108185906033848,
+        "essentiality_score": 0.1626726393139102,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": 0.11081507692430831,
+        "depmap_median_effect": 0.1003174987867193,
+        "depmap_p25_effect": -0.0273424401193251,
+        "depmap_p75_effect": 0.20907478419071363,
+        "essentiality_score": 0.0,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1099869167886818,
+        "depmap_median_effect": -1.0795104439815526,
+        "depmap_p25_effect": -1.223880995267125,
+        "depmap_p75_effect": -1.0128342892030238,
+        "essentiality_score": 1.0,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.4227605438465875,
+        "depmap_median_effect": -0.3837244810707662,
+        "depmap_p25_effect": -0.6153507070714251,
+        "depmap_p75_effect": -0.2372621095261777,
+        "essentiality_score": 0.4227605438465875,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.4200070323021905,
+        "depmap_median_effect": -0.4072513928999867,
+        "depmap_p25_effect": -0.5082452533200584,
+        "depmap_p75_effect": -0.27137691384552776,
+        "essentiality_score": 0.4200070323021905,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.40862675193921655,
+        "depmap_median_effect": -0.4236403084322613,
+        "depmap_p25_effect": -0.5608245281967971,
+        "depmap_p75_effect": -0.2659252284817837,
+        "essentiality_score": 0.40862675193921655,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.35875711117956366,
+        "depmap_median_effect": 0.3061227323496088,
+        "depmap_p25_effect": 0.14890846135273822,
+        "depmap_p75_effect": 0.4459954984244441,
+        "essentiality_score": 0.0,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.26172030260292317,
+        "depmap_median_effect": -0.2177260208368627,
+        "depmap_p25_effect": -0.3852907312493342,
+        "depmap_p75_effect": -0.10734555996008174,
+        "essentiality_score": 0.26172030260292317,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.3817471528711147,
+        "depmap_median_effect": -0.3225646147455119,
+        "depmap_p25_effect": -0.5443473445229071,
+        "depmap_p75_effect": -0.24665489150374104,
+        "essentiality_score": 0.3817471528711147,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.10710473755938515,
+        "depmap_median_effect": -0.0906274993110557,
+        "depmap_p25_effect": -0.17466129738832387,
+        "depmap_p75_effect": -0.0042418921618974,
+        "essentiality_score": 0.10710473755938515,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.21712670853046606,
+        "depmap_median_effect": -0.2338704544698573,
+        "depmap_p25_effect": -0.31506151407714256,
+        "depmap_p75_effect": -0.07979107594675519,
+        "essentiality_score": 0.21712670853046606,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.27529239095341934,
+        "depmap_median_effect": -0.2327283430389559,
+        "depmap_p25_effect": -0.4054528513524597,
+        "depmap_p75_effect": -0.12663714516831903,
+        "essentiality_score": 0.27529239095341934,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.6933144438502213,
+        "depmap_median_effect": -0.7268388105389212,
+        "depmap_p25_effect": -0.8984886099661318,
+        "depmap_p75_effect": -0.4569015467644345,
+        "essentiality_score": 0.6933144438502213,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.6659163979049019,
+        "depmap_median_effect": -0.6132208240660678,
+        "depmap_p25_effect": -0.907590288187564,
+        "depmap_p75_effect": -0.46213226168187643,
+        "essentiality_score": 0.6659163979049019,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 1.0767032316049423,
+        "depmap_median_effect": 1.0437664651385004,
+        "depmap_p25_effect": 0.30434205663065317,
+        "depmap_p75_effect": 1.5777340025716637,
+        "essentiality_score": 0.0,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.8368849190872556,
+        "depmap_median_effect": -2.9057775282611487,
+        "depmap_p25_effect": -3.1051475193847886,
+        "depmap_p75_effect": -2.5548170371690992,
+        "essentiality_score": 1.0,
+        "n_models": 35,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Liver": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.17471747812229096,
+        "depmap_median_effect": -0.14106052140854813,
+        "depmap_p25_effect": -0.33318498581436373,
+        "depmap_p75_effect": 0.07156088261945345,
+        "essentiality_score": 0.17471747812229096,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.048790142464183305,
+        "depmap_median_effect": -0.052649597849434654,
+        "depmap_p25_effect": -0.15407346107868913,
+        "depmap_p75_effect": 0.033069809834722325,
+        "essentiality_score": 0.048790142464183305,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.074733707084649,
+        "depmap_median_effect": -1.097842447034984,
+        "depmap_p25_effect": -1.1929950289643227,
+        "depmap_p75_effect": -0.9704105465305646,
+        "essentiality_score": 1.0,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.5397669419824883,
+        "depmap_median_effect": -0.48481047689471046,
+        "depmap_p25_effect": -0.7532008436387099,
+        "depmap_p75_effect": -0.4158967788969969,
+        "essentiality_score": 0.5397669419824883,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5433453716580429,
+        "depmap_median_effect": -0.5608508236771579,
+        "depmap_p25_effect": -0.6373082826119245,
+        "depmap_p75_effect": -0.44720305703956775,
+        "essentiality_score": 0.5433453716580429,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.42578631701089575,
+        "depmap_median_effect": -0.4145958987004805,
+        "depmap_p25_effect": -0.5436173186713553,
+        "depmap_p75_effect": -0.3339253719298173,
+        "essentiality_score": 0.42578631701089575,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.17623845650074776,
+        "depmap_median_effect": 0.15153972345040195,
+        "depmap_p25_effect": 0.11875718845850072,
+        "depmap_p75_effect": 0.2133596863245945,
+        "essentiality_score": 0.0,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.35723386760146086,
+        "depmap_median_effect": -0.18116291279251256,
+        "depmap_p25_effect": -0.4410126931849278,
+        "depmap_p75_effect": -0.024320673685391425,
+        "essentiality_score": 0.35723386760146086,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.47817467454053136,
+        "depmap_median_effect": -0.4877292053327217,
+        "depmap_p25_effect": -0.5538946448623048,
+        "depmap_p75_effect": -0.32278505961863113,
+        "essentiality_score": 0.47817467454053136,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.08987350033411344,
+        "depmap_median_effect": -0.0967261310604771,
+        "depmap_p25_effect": -0.14475143320564998,
+        "depmap_p75_effect": -0.04622562516401197,
+        "essentiality_score": 0.08987350033411344,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.4062425996714533,
+        "depmap_median_effect": -0.41531099921743897,
+        "depmap_p25_effect": -0.5593685618177385,
+        "depmap_p75_effect": -0.22107831523233085,
+        "essentiality_score": 0.4062425996714533,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.13708034655935628,
+        "depmap_median_effect": -0.1188615852740523,
+        "depmap_p25_effect": -0.18881381296227048,
+        "depmap_p75_effect": -0.05126731069650925,
+        "essentiality_score": 0.13708034655935628,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.6905755347498405,
+        "depmap_median_effect": -0.6881776424510131,
+        "depmap_p25_effect": -0.8123907843104741,
+        "depmap_p75_effect": -0.5946826722936115,
+        "essentiality_score": 0.6905755347498405,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.6587616416091255,
+        "depmap_median_effect": -0.6436659158404818,
+        "depmap_p25_effect": -0.7517138526284353,
+        "depmap_p75_effect": -0.45789151512810167,
+        "essentiality_score": 0.6587616416091255,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.26921899695816714,
+        "depmap_median_effect": 0.1476698931341981,
+        "depmap_p25_effect": 0.05428204965022483,
+        "depmap_p75_effect": 0.34055741344925894,
+        "essentiality_score": 0.0,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.7540390856209154,
+        "depmap_median_effect": -2.904917646011578,
+        "depmap_p25_effect": -3.064391011806424,
+        "depmap_p75_effect": -2.393794194606596,
+        "essentiality_score": 1.0,
+        "n_models": 24,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Lung": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.21531870336558953,
+        "depmap_median_effect": -0.1880463460924387,
+        "depmap_p25_effect": -0.359401483454025,
+        "depmap_p75_effect": -0.021825021089021228,
+        "essentiality_score": 0.21531870336558953,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.06806698692339884,
+        "depmap_median_effect": -0.0623252908492347,
+        "depmap_p25_effect": -0.19028491778045686,
+        "depmap_p75_effect": 0.033504767135560054,
+        "essentiality_score": 0.06806698692339884,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1316400066040928,
+        "depmap_median_effect": -1.148686627103312,
+        "depmap_p25_effect": -1.2691948139144258,
+        "depmap_p75_effect": -0.9907748652537527,
+        "essentiality_score": 1.0,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.46355918737774615,
+        "depmap_median_effect": -0.44663651235995283,
+        "depmap_p25_effect": -0.6420092321757614,
+        "depmap_p75_effect": -0.26319531207247904,
+        "essentiality_score": 0.46355918737774615,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5339262328067363,
+        "depmap_median_effect": -0.5100186045168151,
+        "depmap_p25_effect": -0.6615761021395739,
+        "depmap_p75_effect": -0.37913546714837487,
+        "essentiality_score": 0.5339262328067363,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.4253688809090405,
+        "depmap_median_effect": -0.4347206177963411,
+        "depmap_p25_effect": -0.5445095635967522,
+        "depmap_p75_effect": -0.2607570126624586,
+        "essentiality_score": 0.4253688809090405,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.17151826051298127,
+        "depmap_median_effect": 0.16745355816801066,
+        "depmap_p25_effect": 0.10242332383649982,
+        "depmap_p75_effect": 0.24434502154179044,
+        "essentiality_score": 0.0,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.23307980701756068,
+        "depmap_median_effect": -0.12058710214367165,
+        "depmap_p25_effect": -0.2649734465360656,
+        "depmap_p75_effect": 0.0024555358508660872,
+        "essentiality_score": 0.23307980701756068,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.8446671257773474,
+        "depmap_median_effect": -0.6044158817552703,
+        "depmap_p25_effect": -1.203264834994083,
+        "depmap_p75_effect": -0.3717185883907782,
+        "essentiality_score": 0.8446671257773474,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.10589231362049034,
+        "depmap_median_effect": -0.0916661624065738,
+        "depmap_p25_effect": -0.17862315941997545,
+        "depmap_p75_effect": -0.032576981099022254,
+        "essentiality_score": 0.10589231362049034,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.3343360381227806,
+        "depmap_median_effect": -0.3241514761249531,
+        "depmap_p25_effect": -0.4766127810081562,
+        "depmap_p75_effect": -0.1515932226177297,
+        "essentiality_score": 0.3343360381227806,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.21021229626464236,
+        "depmap_median_effect": -0.19000472642936395,
+        "depmap_p25_effect": -0.29248426163806224,
+        "depmap_p75_effect": -0.10209256402060832,
+        "essentiality_score": 0.21021229626464236,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.6874240448875696,
+        "depmap_median_effect": -0.6806826814883061,
+        "depmap_p25_effect": -0.8292927861494406,
+        "depmap_p75_effect": -0.5242587799129906,
+        "essentiality_score": 0.6874240448875696,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.6953257827132271,
+        "depmap_median_effect": -0.6666625497643287,
+        "depmap_p25_effect": -0.8877672620000183,
+        "depmap_p75_effect": -0.480051788412871,
+        "essentiality_score": 0.6953257827132271,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.21341104457979268,
+        "depmap_median_effect": 0.15801484168111116,
+        "depmap_p25_effect": 0.04216962673859477,
+        "depmap_p75_effect": 0.24990159260099165,
+        "essentiality_score": 0.0,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.7419179676930807,
+        "depmap_median_effect": -2.8340377220178974,
+        "depmap_p25_effect": -3.084087877125747,
+        "depmap_p75_effect": -2.432221671062385,
+        "essentiality_score": 1.0,
+        "n_models": 126,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Lymphoid": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.49193831982762526,
+        "depmap_median_effect": -0.4842811311574733,
+        "depmap_p25_effect": -0.7160474676455064,
+        "depmap_p75_effect": -0.2256585371073112,
+        "essentiality_score": 0.49193831982762526,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.05979039059505101,
+        "depmap_median_effect": -0.0506527810005714,
+        "depmap_p25_effect": -0.1687982870709299,
+        "depmap_p75_effect": 0.0229012829526909,
+        "essentiality_score": 0.05979039059505101,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -0.9844412472747393,
+        "depmap_median_effect": -1.0051189497660422,
+        "depmap_p25_effect": -1.1186970884831264,
+        "depmap_p75_effect": -0.8269718900709457,
+        "essentiality_score": 0.9844412472747393,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.26508829697156666,
+        "depmap_median_effect": -0.2373233003555311,
+        "depmap_p25_effect": -0.4063210958337468,
+        "depmap_p75_effect": -0.1184217478008843,
+        "essentiality_score": 0.26508829697156666,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5027727872946556,
+        "depmap_median_effect": -0.5023453029371794,
+        "depmap_p25_effect": -0.6352538679130753,
+        "depmap_p75_effect": -0.3565438871509456,
+        "essentiality_score": 0.5027727872946556,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.31978352619627753,
+        "depmap_median_effect": -0.323207773430488,
+        "depmap_p25_effect": -0.4334106192125861,
+        "depmap_p75_effect": -0.190936441691765,
+        "essentiality_score": 0.31978352619627753,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.20048065207577503,
+        "depmap_median_effect": 0.1851671830919481,
+        "depmap_p25_effect": 0.1019781679679558,
+        "depmap_p75_effect": 0.2799103195605247,
+        "essentiality_score": 0.0,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.06353803807192861,
+        "depmap_median_effect": -0.0856501429406586,
+        "depmap_p25_effect": -0.1594780329544309,
+        "depmap_p75_effect": 0.0416189086281104,
+        "essentiality_score": 0.06353803807192861,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.5020993540705487,
+        "depmap_median_effect": -0.4016036827236813,
+        "depmap_p25_effect": -0.6170223645436377,
+        "depmap_p75_effect": -0.2879891516693184,
+        "essentiality_score": 0.5020993540705487,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.10508539532303834,
+        "depmap_median_effect": -0.1057717941547135,
+        "depmap_p25_effect": -0.175068300181275,
+        "depmap_p75_effect": -0.03761581587417,
+        "essentiality_score": 0.10508539532303834,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.3102106127312765,
+        "depmap_median_effect": -0.2873084606605258,
+        "depmap_p25_effect": -0.4597251974969344,
+        "depmap_p75_effect": -0.166044330236799,
+        "essentiality_score": 0.3102106127312765,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.18979979112039458,
+        "depmap_median_effect": -0.1803399092394459,
+        "depmap_p25_effect": -0.2612683639616353,
+        "depmap_p75_effect": -0.1126256438392837,
+        "essentiality_score": 0.18979979112039458,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7912067180514012,
+        "depmap_median_effect": -0.7559137510896369,
+        "depmap_p25_effect": -0.9292683458953874,
+        "depmap_p75_effect": -0.5978647452605229,
+        "essentiality_score": 0.7912067180514012,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.8306259589315906,
+        "depmap_median_effect": -0.8161458588673989,
+        "depmap_p25_effect": -1.096139031977367,
+        "depmap_p75_effect": -0.5493832345756396,
+        "essentiality_score": 0.8306259589315906,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.3145933993481559,
+        "depmap_median_effect": 0.2688975667373273,
+        "depmap_p25_effect": 0.1081867069826779,
+        "depmap_p75_effect": 0.4503133685510813,
+        "essentiality_score": 0.0,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.7984275424143594,
+        "depmap_median_effect": -2.8729078389947524,
+        "depmap_p25_effect": -3.1178474270965633,
+        "depmap_p75_effect": -2.454815812123523,
+        "essentiality_score": 1.0,
+        "n_models": 93,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Myeloid": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.354945212044842,
+        "depmap_median_effect": -0.3657084079840028,
+        "depmap_p25_effect": -0.5203679421216882,
+        "depmap_p75_effect": -0.2226710361726078,
+        "essentiality_score": 0.354945212044842,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.003970908500474756,
+        "depmap_median_effect": -0.0200462127331802,
+        "depmap_p25_effect": -0.1434310929201694,
+        "depmap_p75_effect": 0.11056735255103914,
+        "essentiality_score": 0.003970908500474756,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.143856425551485,
+        "depmap_median_effect": -1.1779690610189235,
+        "depmap_p25_effect": -1.3109617667959188,
+        "depmap_p75_effect": -0.9953707921247208,
+        "essentiality_score": 1.0,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.22929105357762383,
+        "depmap_median_effect": -0.2173380456038158,
+        "depmap_p25_effect": -0.3620805248755212,
+        "depmap_p75_effect": -0.11472152486479176,
+        "essentiality_score": 0.22929105357762383,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.4449406450986381,
+        "depmap_median_effect": -0.4513205825715201,
+        "depmap_p25_effect": -0.539507486222139,
+        "depmap_p75_effect": -0.31664923988963145,
+        "essentiality_score": 0.4449406450986381,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.3434712363199786,
+        "depmap_median_effect": -0.3225033451996337,
+        "depmap_p25_effect": -0.5108536803415431,
+        "depmap_p75_effect": -0.1952973381933201,
+        "essentiality_score": 0.3434712363199786,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.159650204166262,
+        "depmap_median_effect": 0.1551139089642315,
+        "depmap_p25_effect": 0.04103547341556894,
+        "depmap_p75_effect": 0.29673927904914404,
+        "essentiality_score": 0.0,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.09913022697684398,
+        "depmap_median_effect": -0.0855689151836519,
+        "depmap_p25_effect": -0.1908763278020162,
+        "depmap_p75_effect": -0.0017357071370738995,
+        "essentiality_score": 0.09913022697684398,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.6783600097949997,
+        "depmap_median_effect": -0.5934472157934444,
+        "depmap_p25_effect": -0.7773663978299332,
+        "depmap_p75_effect": -0.39285525513143693,
+        "essentiality_score": 0.6783600097949997,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.15173427363648379,
+        "depmap_median_effect": -0.1073361256155473,
+        "depmap_p25_effect": -0.2196225051642413,
+        "depmap_p75_effect": -0.05797442504197775,
+        "essentiality_score": 0.15173427363648379,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.22209181741371736,
+        "depmap_median_effect": -0.1924841238338366,
+        "depmap_p25_effect": -0.33118589886340977,
+        "depmap_p75_effect": -0.08664427908400216,
+        "essentiality_score": 0.22209181741371736,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.1693780227301481,
+        "depmap_median_effect": -0.1704076070728573,
+        "depmap_p25_effect": -0.2624117750876876,
+        "depmap_p75_effect": -0.07427050002295191,
+        "essentiality_score": 0.1693780227301481,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7086450432343232,
+        "depmap_median_effect": -0.7238631402613644,
+        "depmap_p25_effect": -0.8530506546393668,
+        "depmap_p75_effect": -0.5832063364167799,
+        "essentiality_score": 0.7086450432343232,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.8214246891963288,
+        "depmap_median_effect": -0.892070323849403,
+        "depmap_p25_effect": -1.0552204679600463,
+        "depmap_p75_effect": -0.5508366342510143,
+        "essentiality_score": 0.8214246891963288,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.20852009552901257,
+        "depmap_median_effect": 0.1126286849933979,
+        "depmap_p25_effect": -0.0057955027829925,
+        "depmap_p75_effect": 0.28426591444070504,
+        "essentiality_score": 0.0,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.7853478791796196,
+        "depmap_median_effect": -2.898183926748661,
+        "depmap_p25_effect": -3.0626937835074255,
+        "depmap_p75_effect": -2.4120232441705873,
+        "essentiality_score": 1.0,
+        "n_models": 43,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Other": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.4464862569668023,
+        "depmap_median_effect": -0.4464862569668023,
+        "depmap_p25_effect": -0.4464862569668023,
+        "depmap_p75_effect": -0.4464862569668023,
+        "essentiality_score": 0.4464862569668023,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.4405782624618183,
+        "depmap_median_effect": -0.4405782624618183,
+        "depmap_p25_effect": -0.4405782624618183,
+        "depmap_p75_effect": -0.4405782624618183,
+        "essentiality_score": 0.4405782624618183,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.0692874408106356,
+        "depmap_median_effect": -1.0692874408106356,
+        "depmap_p25_effect": -1.0692874408106356,
+        "depmap_p75_effect": -1.0692874408106356,
+        "essentiality_score": 1.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.5900082687862006,
+        "depmap_median_effect": -0.5900082687862006,
+        "depmap_p25_effect": -0.5900082687862006,
+        "depmap_p75_effect": -0.5900082687862006,
+        "essentiality_score": 0.5900082687862006,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.1458021530980217,
+        "depmap_median_effect": -0.1458021530980217,
+        "depmap_p25_effect": -0.1458021530980217,
+        "depmap_p75_effect": -0.1458021530980217,
+        "essentiality_score": 0.1458021530980217,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.6527757244319158,
+        "depmap_median_effect": -0.6527757244319158,
+        "depmap_p25_effect": -0.6527757244319158,
+        "depmap_p75_effect": -0.6527757244319158,
+        "essentiality_score": 0.6527757244319158,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": -0.0661696160919084,
+        "depmap_median_effect": -0.0661696160919084,
+        "depmap_p25_effect": -0.0661696160919084,
+        "depmap_p75_effect": -0.0661696160919084,
+        "essentiality_score": 0.0661696160919084,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": 0.2065855668568191,
+        "depmap_median_effect": 0.2065855668568191,
+        "depmap_p25_effect": 0.2065855668568191,
+        "depmap_p75_effect": 0.2065855668568191,
+        "essentiality_score": 0.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.2789904502214513,
+        "depmap_median_effect": -0.2789904502214513,
+        "depmap_p25_effect": -0.2789904502214513,
+        "depmap_p75_effect": -0.2789904502214513,
+        "essentiality_score": 0.2789904502214513,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.4333571630797382,
+        "depmap_median_effect": -0.4333571630797382,
+        "depmap_p25_effect": -0.4333571630797382,
+        "depmap_p75_effect": -0.4333571630797382,
+        "essentiality_score": 0.4333571630797382,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.1545503940750168,
+        "depmap_median_effect": -0.1545503940750168,
+        "depmap_p25_effect": -0.1545503940750168,
+        "depmap_p75_effect": -0.1545503940750168,
+        "essentiality_score": 0.1545503940750168,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.0667320128901543,
+        "depmap_median_effect": -0.0667320128901543,
+        "depmap_p25_effect": -0.0667320128901543,
+        "depmap_p75_effect": -0.0667320128901543,
+        "essentiality_score": 0.0667320128901543,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.8674233062374326,
+        "depmap_median_effect": -0.8674233062374326,
+        "depmap_p25_effect": -0.8674233062374326,
+        "depmap_p75_effect": -0.8674233062374326,
+        "essentiality_score": 0.8674233062374326,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.8644538064725975,
+        "depmap_median_effect": -0.8644538064725975,
+        "depmap_p25_effect": -0.8644538064725975,
+        "depmap_p75_effect": -0.8644538064725975,
+        "essentiality_score": 0.8644538064725975,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.0071855112171083,
+        "depmap_median_effect": 0.0071855112171083,
+        "depmap_p25_effect": 0.0071855112171083,
+        "depmap_p75_effect": 0.0071855112171083,
+        "essentiality_score": 0.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.9924746627451304,
+        "depmap_median_effect": -2.9924746627451304,
+        "depmap_p25_effect": -2.9924746627451304,
+        "depmap_p75_effect": -2.9924746627451304,
+        "essentiality_score": 1.0,
+        "n_models": 1,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Ovary/Fallopian Tube": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.18633591269959296,
+        "depmap_median_effect": -0.1471668469903529,
+        "depmap_p25_effect": -0.3090187291932105,
+        "depmap_p75_effect": -0.004795835842759848,
+        "essentiality_score": 0.18633591269959296,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.014482584909790886,
+        "depmap_median_effect": -0.0294430470016578,
+        "depmap_p25_effect": -0.1059601698630306,
+        "depmap_p75_effect": 0.07749990850590349,
+        "essentiality_score": 0.014482584909790886,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.0503135420634566,
+        "depmap_median_effect": -1.1133844669406512,
+        "depmap_p25_effect": -1.270459349890018,
+        "depmap_p75_effect": -0.9019343494509576,
+        "essentiality_score": 1.0,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.44315841171704223,
+        "depmap_median_effect": -0.4094202764610234,
+        "depmap_p25_effect": -0.553977676788256,
+        "depmap_p75_effect": -0.29775333302961704,
+        "essentiality_score": 0.44315841171704223,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.4971332896419215,
+        "depmap_median_effect": -0.5337242432253414,
+        "depmap_p25_effect": -0.6147544593560896,
+        "depmap_p75_effect": -0.32283235468297167,
+        "essentiality_score": 0.4971332896419215,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.4277675340472276,
+        "depmap_median_effect": -0.3921593333593475,
+        "depmap_p25_effect": -0.5614285396060663,
+        "depmap_p75_effect": -0.2897603965476156,
+        "essentiality_score": 0.4277675340472276,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.23796705903475804,
+        "depmap_median_effect": 0.2055154906175701,
+        "depmap_p25_effect": 0.12566309928923214,
+        "depmap_p75_effect": 0.3091311920987342,
+        "essentiality_score": 0.0,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.24999845425442446,
+        "depmap_median_effect": -0.1126899697604912,
+        "depmap_p25_effect": -0.30164026128976584,
+        "depmap_p75_effect": -0.02772601037060975,
+        "essentiality_score": 0.24999845425442446,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.6257927224870425,
+        "depmap_median_effect": -0.4255431812874542,
+        "depmap_p25_effect": -0.6069203271002324,
+        "depmap_p75_effect": -0.30475167546496346,
+        "essentiality_score": 0.6257927224870425,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.15352871728431722,
+        "depmap_median_effect": -0.1446841195333957,
+        "depmap_p25_effect": -0.21363269644040872,
+        "depmap_p75_effect": -0.07114428334531014,
+        "essentiality_score": 0.15352871728431722,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.29602974659103704,
+        "depmap_median_effect": -0.2899246167501386,
+        "depmap_p25_effect": -0.4620453778591981,
+        "depmap_p75_effect": -0.15282391006869733,
+        "essentiality_score": 0.29602974659103704,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.2193331582593361,
+        "depmap_median_effect": -0.1949135292458696,
+        "depmap_p25_effect": -0.28266338069113395,
+        "depmap_p75_effect": -0.11689998390013939,
+        "essentiality_score": 0.2193331582593361,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.6210602320576856,
+        "depmap_median_effect": -0.615037652900085,
+        "depmap_p25_effect": -0.7819618212755952,
+        "depmap_p75_effect": -0.44699626780737767,
+        "essentiality_score": 0.6210602320576856,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7163491800242403,
+        "depmap_median_effect": -0.6745479173606379,
+        "depmap_p25_effect": -0.9674716143955358,
+        "depmap_p75_effect": -0.46718561178504203,
+        "essentiality_score": 0.7163491800242403,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.48665834224437504,
+        "depmap_median_effect": 0.2423846939771303,
+        "depmap_p25_effect": 0.11552890534059321,
+        "depmap_p75_effect": 0.7685181935001777,
+        "essentiality_score": 0.0,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.775873304554303,
+        "depmap_median_effect": -2.847468928332264,
+        "depmap_p25_effect": -3.06290006920657,
+        "depmap_p75_effect": -2.4592831878547035,
+        "essentiality_score": 1.0,
+        "n_models": 59,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Pancreas": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.20971552406906271,
+        "depmap_median_effect": -0.17119401036271154,
+        "depmap_p25_effect": -0.3922703903585564,
+        "depmap_p75_effect": -0.025328729154788225,
+        "essentiality_score": 0.20971552406906271,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.011211405297827581,
+        "depmap_median_effect": 0.00360278380830765,
+        "depmap_p25_effect": -0.10573124582592466,
+        "depmap_p75_effect": 0.08391255991832555,
+        "essentiality_score": 0.011211405297827581,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.0978764753891344,
+        "depmap_median_effect": -1.142655233689129,
+        "depmap_p25_effect": -1.2814336139891789,
+        "depmap_p75_effect": -0.9173940828713533,
+        "essentiality_score": 1.0,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.35134567711155257,
+        "depmap_median_effect": -0.3490339889048051,
+        "depmap_p25_effect": -0.5015201038703062,
+        "depmap_p75_effect": -0.2057563354894875,
+        "essentiality_score": 0.35134567711155257,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.3914788825579591,
+        "depmap_median_effect": -0.4106971859750278,
+        "depmap_p25_effect": -0.5143327359496218,
+        "depmap_p75_effect": -0.25789824762658703,
+        "essentiality_score": 0.3914788825579591,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.4440202454360555,
+        "depmap_median_effect": -0.4224035521527818,
+        "depmap_p25_effect": -0.5179797103041445,
+        "depmap_p75_effect": -0.30301475013986223,
+        "essentiality_score": 0.4440202454360555,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.17775687158618111,
+        "depmap_median_effect": 0.17320733649519388,
+        "depmap_p25_effect": 0.09820286318789015,
+        "depmap_p75_effect": 0.23512556369947465,
+        "essentiality_score": 0.0,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.33151602790313883,
+        "depmap_median_effect": -0.2611820927820735,
+        "depmap_p25_effect": -0.6102851971780234,
+        "depmap_p75_effect": -0.016435345896477847,
+        "essentiality_score": 0.33151602790313883,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -2.089418836567599,
+        "depmap_median_effect": -2.1051148287185404,
+        "depmap_p25_effect": -2.603495910360117,
+        "depmap_p75_effect": -1.422680854826293,
+        "essentiality_score": 1.0,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.09300279552218567,
+        "depmap_median_effect": -0.09899726594930995,
+        "depmap_p25_effect": -0.16908417340717163,
+        "depmap_p75_effect": -0.033767199809199795,
+        "essentiality_score": 0.09300279552218567,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.2589171142300105,
+        "depmap_median_effect": -0.2779757696354592,
+        "depmap_p25_effect": -0.3748570019546599,
+        "depmap_p75_effect": -0.1132809537089006,
+        "essentiality_score": 0.2589171142300105,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.1962286167915888,
+        "depmap_median_effect": -0.20986589597558386,
+        "depmap_p25_effect": -0.2720396242763932,
+        "depmap_p75_effect": -0.1088947439858306,
+        "essentiality_score": 0.1962286167915888,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.5754598862398768,
+        "depmap_median_effect": -0.6041248877537453,
+        "depmap_p25_effect": -0.7485045858458246,
+        "depmap_p75_effect": -0.4445648229778745,
+        "essentiality_score": 0.5754598862398768,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7145914279947773,
+        "depmap_median_effect": -0.726854340902461,
+        "depmap_p25_effect": -0.9434246782160496,
+        "depmap_p75_effect": -0.5035776724040664,
+        "essentiality_score": 0.7145914279947773,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.16529582936784826,
+        "depmap_median_effect": 0.11508553743499095,
+        "depmap_p25_effect": 0.04036706330269995,
+        "depmap_p75_effect": 0.21511186574736174,
+        "essentiality_score": 0.0,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.7436800548591322,
+        "depmap_median_effect": -2.6921366208400306,
+        "depmap_p25_effect": -3.0572350476827768,
+        "depmap_p75_effect": -2.4992596278480934,
+        "essentiality_score": 1.0,
+        "n_models": 48,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Peripheral Nervous System": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.2976968465153344,
+        "depmap_median_effect": -0.2845195118181268,
+        "depmap_p25_effect": -0.4952976431453014,
+        "depmap_p75_effect": -0.0980049710746575,
+        "essentiality_score": 0.2976968465153344,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": 0.04084340822990677,
+        "depmap_median_effect": 0.0298021309020362,
+        "depmap_p25_effect": -0.1126184974303049,
+        "depmap_p75_effect": 0.1167150035124977,
+        "essentiality_score": 0.0,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1920457145746286,
+        "depmap_median_effect": -1.1677261957164984,
+        "depmap_p25_effect": -1.3782504580344614,
+        "depmap_p75_effect": -0.9766793119554,
+        "essentiality_score": 1.0,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.47475751692997653,
+        "depmap_median_effect": -0.4521965269578993,
+        "depmap_p25_effect": -0.5995184685501765,
+        "depmap_p75_effect": -0.2990123912581773,
+        "essentiality_score": 0.47475751692997653,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5212012775795875,
+        "depmap_median_effect": -0.5045159273694136,
+        "depmap_p25_effect": -0.5888722433678963,
+        "depmap_p75_effect": -0.3675528569057736,
+        "essentiality_score": 0.5212012775795875,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.36951107646601067,
+        "depmap_median_effect": -0.3321382139398697,
+        "depmap_p25_effect": -0.5164202129488229,
+        "depmap_p75_effect": -0.2227448661864541,
+        "essentiality_score": 0.36951107646601067,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.28835395069387304,
+        "depmap_median_effect": 0.2663424958471413,
+        "depmap_p25_effect": 0.155111585594678,
+        "depmap_p75_effect": 0.3569059961126837,
+        "essentiality_score": 0.0,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.09963013702240638,
+        "depmap_median_effect": -0.105080872508212,
+        "depmap_p25_effect": -0.2490494641746052,
+        "depmap_p75_effect": 0.0547650818153,
+        "essentiality_score": 0.09963013702240638,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.5235138357227843,
+        "depmap_median_effect": -0.5106944966668495,
+        "depmap_p25_effect": -0.7096938313437801,
+        "depmap_p75_effect": -0.3111649531301282,
+        "essentiality_score": 0.5235138357227843,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.14985089428490067,
+        "depmap_median_effect": -0.1346903085744848,
+        "depmap_p25_effect": -0.2395350063566023,
+        "depmap_p75_effect": -0.0343059337777863,
+        "essentiality_score": 0.14985089428490067,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.34061263116833856,
+        "depmap_median_effect": -0.3732468982831603,
+        "depmap_p25_effect": -0.5261496087458251,
+        "depmap_p75_effect": -0.200127563251666,
+        "essentiality_score": 0.34061263116833856,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.24579994152814938,
+        "depmap_median_effect": -0.2082252336192818,
+        "depmap_p25_effect": -0.3023632564205007,
+        "depmap_p75_effect": -0.1417702796488972,
+        "essentiality_score": 0.24579994152814938,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7263150498158083,
+        "depmap_median_effect": -0.6746320788167963,
+        "depmap_p25_effect": -0.8285682140643769,
+        "depmap_p75_effect": -0.5263139346203916,
+        "essentiality_score": 0.7263150498158083,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7358488197510766,
+        "depmap_median_effect": -0.6529729632161141,
+        "depmap_p25_effect": -0.9532558146526158,
+        "depmap_p75_effect": -0.4324569082031961,
+        "essentiality_score": 0.7358488197510766,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.4601126537099073,
+        "depmap_median_effect": 0.3322079562613965,
+        "depmap_p25_effect": 0.146931034491454,
+        "depmap_p75_effect": 0.6189129048260158,
+        "essentiality_score": 0.0,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.8555088912382343,
+        "depmap_median_effect": -2.9223425055486643,
+        "depmap_p25_effect": -3.1570812729763835,
+        "depmap_p75_effect": -2.6377692809351188,
+        "essentiality_score": 1.0,
+        "n_models": 45,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Pleura": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.3171362861101298,
+        "depmap_median_effect": -0.3084550843490887,
+        "depmap_p25_effect": -0.4895187045380567,
+        "depmap_p75_effect": -0.1802910602883378,
+        "essentiality_score": 0.3171362861101298,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": 0.05249264987850419,
+        "depmap_median_effect": 0.054386956582391,
+        "depmap_p25_effect": -0.0253712919776287,
+        "depmap_p75_effect": 0.1701859876230719,
+        "essentiality_score": 0.0,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -0.9556959840060819,
+        "depmap_median_effect": -1.0238096827973266,
+        "depmap_p25_effect": -1.082821999006523,
+        "depmap_p75_effect": -0.8877580138552221,
+        "essentiality_score": 0.9556959840060819,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.4401198345285302,
+        "depmap_median_effect": -0.4081412989347013,
+        "depmap_p25_effect": -0.5834121258185189,
+        "depmap_p75_effect": -0.279765689504691,
+        "essentiality_score": 0.4401198345285302,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5111256251982054,
+        "depmap_median_effect": -0.5647861933795022,
+        "depmap_p25_effect": -0.6645028518445086,
+        "depmap_p75_effect": -0.4581190209970442,
+        "essentiality_score": 0.5111256251982054,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.45850422153284753,
+        "depmap_median_effect": -0.4288445079419309,
+        "depmap_p25_effect": -0.6407252033039961,
+        "depmap_p75_effect": -0.310602014646234,
+        "essentiality_score": 0.45850422153284753,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.21192068320370366,
+        "depmap_median_effect": 0.2368063062161981,
+        "depmap_p25_effect": 0.1875360800343765,
+        "depmap_p75_effect": 0.2752910695561937,
+        "essentiality_score": 0.0,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.13109897279989066,
+        "depmap_median_effect": -0.0981909841026238,
+        "depmap_p25_effect": -0.2599451768555141,
+        "depmap_p75_effect": 0.0274266447284621,
+        "essentiality_score": 0.13109897279989066,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.47856483687995166,
+        "depmap_median_effect": -0.3884130511218588,
+        "depmap_p25_effect": -0.5180030409768995,
+        "depmap_p75_effect": -0.351790593186245,
+        "essentiality_score": 0.47856483687995166,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.11125517242006562,
+        "depmap_median_effect": -0.1040966952767093,
+        "depmap_p25_effect": -0.1594029648942774,
+        "depmap_p75_effect": -0.0234315300416192,
+        "essentiality_score": 0.11125517242006562,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.32708158561537143,
+        "depmap_median_effect": -0.383362356579569,
+        "depmap_p25_effect": -0.5076870539086998,
+        "depmap_p75_effect": -0.1610973305051552,
+        "essentiality_score": 0.32708158561537143,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.2064515393161772,
+        "depmap_median_effect": -0.1988473425548804,
+        "depmap_p25_effect": -0.2610421260465513,
+        "depmap_p75_effect": -0.1538061277440434,
+        "essentiality_score": 0.2064515393161772,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.711302498672523,
+        "depmap_median_effect": -0.6943512640546232,
+        "depmap_p25_effect": -0.8627081647612485,
+        "depmap_p75_effect": -0.5302593760306417,
+        "essentiality_score": 0.711302498672523,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.8242089745262998,
+        "depmap_median_effect": -0.830874972495146,
+        "depmap_p25_effect": -1.0249796190216585,
+        "depmap_p75_effect": -0.5686219748228141,
+        "essentiality_score": 0.8242089745262998,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.8564218199067875,
+        "depmap_median_effect": 0.8069570515596406,
+        "depmap_p25_effect": 0.1841684288344874,
+        "depmap_p75_effect": 1.4560055920968955,
+        "essentiality_score": 0.0,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.7597375644389186,
+        "depmap_median_effect": -2.8158972671331077,
+        "depmap_p25_effect": -2.9887864348290933,
+        "depmap_p75_effect": -2.5447373267612634,
+        "essentiality_score": 1.0,
+        "n_models": 21,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Prostate": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.375561921664032,
+        "depmap_median_effect": -0.396675490330836,
+        "depmap_p25_effect": -0.5250328006516148,
+        "depmap_p75_effect": -0.17457620672325797,
+        "essentiality_score": 0.375561921664032,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.05858248553710228,
+        "depmap_median_effect": -0.15675710306560264,
+        "depmap_p25_effect": -0.25554878706781076,
+        "depmap_p75_effect": 0.10194758605700611,
+        "essentiality_score": 0.05858248553710228,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1097830096204853,
+        "depmap_median_effect": -1.089656373997609,
+        "depmap_p25_effect": -1.235197335287192,
+        "depmap_p75_effect": -0.9323242204910945,
+        "essentiality_score": 1.0,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.31676202596271663,
+        "depmap_median_effect": -0.28890679271396186,
+        "depmap_p25_effect": -0.46099558776488003,
+        "depmap_p75_effect": -0.1561055284075773,
+        "essentiality_score": 0.31676202596271663,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5785124303033135,
+        "depmap_median_effect": -0.6377691026422869,
+        "depmap_p25_effect": -0.75638247667347,
+        "depmap_p75_effect": -0.43430629079666827,
+        "essentiality_score": 0.5785124303033135,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.42475616619423795,
+        "depmap_median_effect": -0.37304949178134383,
+        "depmap_p25_effect": -0.52942589421057,
+        "depmap_p75_effect": -0.2912938565757145,
+        "essentiality_score": 0.42475616619423795,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.15017208998102421,
+        "depmap_median_effect": 0.14097467567917338,
+        "depmap_p25_effect": 0.03709031790668915,
+        "depmap_p75_effect": 0.20959644479195869,
+        "essentiality_score": 0.0,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.6941029297583577,
+        "depmap_median_effect": -0.9553693072829166,
+        "depmap_p25_effect": -1.1049437381221336,
+        "depmap_p75_effect": -0.2053691972929938,
+        "essentiality_score": 0.6941029297583577,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.4912740250039011,
+        "depmap_median_effect": -0.40219121391270396,
+        "depmap_p25_effect": -0.5268014566780277,
+        "depmap_p75_effect": -0.370714953469473,
+        "essentiality_score": 0.4912740250039011,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.1133053958772785,
+        "depmap_median_effect": -0.13946322630305655,
+        "depmap_p25_effect": -0.14595356606313573,
+        "depmap_p75_effect": -0.07307684250463789,
+        "essentiality_score": 0.1133053958772785,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.4837245019947514,
+        "depmap_median_effect": -0.4105744803015752,
+        "depmap_p25_effect": -0.6184016633584354,
+        "depmap_p75_effect": -0.3360016866384643,
+        "essentiality_score": 0.4837245019947514,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.2410549731340017,
+        "depmap_median_effect": -0.2554504828095454,
+        "depmap_p25_effect": -0.29256646346828097,
+        "depmap_p75_effect": -0.16445357666769828,
+        "essentiality_score": 0.2410549731340017,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.6334293589307343,
+        "depmap_median_effect": -0.5961946390284178,
+        "depmap_p25_effect": -0.762653448982896,
+        "depmap_p75_effect": -0.5326396652073584,
+        "essentiality_score": 0.6334293589307343,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.5788916280524823,
+        "depmap_median_effect": -0.5951876395636047,
+        "depmap_p25_effect": -0.6218328844997554,
+        "depmap_p75_effect": -0.5073365745429895,
+        "essentiality_score": 0.5788916280524823,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.32492362732216895,
+        "depmap_median_effect": 0.17855861224944686,
+        "depmap_p25_effect": 0.06204623837140895,
+        "depmap_p75_effect": 0.30496191947559864,
+        "essentiality_score": 0.0,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.7506383370368317,
+        "depmap_median_effect": -2.9056980821663316,
+        "depmap_p25_effect": -3.0994243633192253,
+        "depmap_p75_effect": -2.5885022081674407,
+        "essentiality_score": 1.0,
+        "n_models": 10,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Skin": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.3107578961535426,
+        "depmap_median_effect": -0.2494454941910683,
+        "depmap_p25_effect": -0.43606938876748547,
+        "depmap_p75_effect": -0.12305544258741424,
+        "essentiality_score": 0.3107578961535426,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": 0.11899342106159058,
+        "depmap_median_effect": 0.0714190749928348,
+        "depmap_p25_effect": -0.0506402306819759,
+        "depmap_p75_effect": 0.2308462063813393,
+        "essentiality_score": 0.0,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.190548957842684,
+        "depmap_median_effect": -1.1524263122560294,
+        "depmap_p25_effect": -1.2847239151014023,
+        "depmap_p75_effect": -1.0331233015424912,
+        "essentiality_score": 1.0,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.5844560881100599,
+        "depmap_median_effect": -0.5718015923682183,
+        "depmap_p25_effect": -0.7412916027044891,
+        "depmap_p75_effect": -0.38858048805247236,
+        "essentiality_score": 0.5844560881100599,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5070003206023498,
+        "depmap_median_effect": -0.5073706450334391,
+        "depmap_p25_effect": -0.6461349797632083,
+        "depmap_p75_effect": -0.35792643828911874,
+        "essentiality_score": 0.5070003206023498,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.46260935440047085,
+        "depmap_median_effect": -0.4527695729086056,
+        "depmap_p25_effect": -0.5847023646154528,
+        "depmap_p75_effect": -0.32131424640928696,
+        "essentiality_score": 0.46260935440047085,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.3007325217381325,
+        "depmap_median_effect": 0.2939812998746369,
+        "depmap_p25_effect": 0.1619070965900049,
+        "depmap_p75_effect": 0.4068558742721716,
+        "essentiality_score": 0.0,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.1338213227066777,
+        "depmap_median_effect": -0.0957826577679485,
+        "depmap_p25_effect": -0.23453883551414065,
+        "depmap_p75_effect": 0.0269127776567058,
+        "essentiality_score": 0.1338213227066777,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.4544295219007041,
+        "depmap_median_effect": -0.4317242964762312,
+        "depmap_p25_effect": -0.5504459870682956,
+        "depmap_p75_effect": -0.31539022798583827,
+        "essentiality_score": 0.4544295219007041,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.07846380935671855,
+        "depmap_median_effect": -0.0911697974424271,
+        "depmap_p25_effect": -0.16117018725637838,
+        "depmap_p75_effect": 0.00046321431800369997,
+        "essentiality_score": 0.07846380935671855,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.4322662725875164,
+        "depmap_median_effect": -0.4403100007857031,
+        "depmap_p25_effect": -0.5510713975417879,
+        "depmap_p75_effect": -0.2535596274157036,
+        "essentiality_score": 0.4322662725875164,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.20622298379064669,
+        "depmap_median_effect": -0.2048833863639101,
+        "depmap_p25_effect": -0.3079053528024399,
+        "depmap_p75_effect": -0.1193289640110721,
+        "essentiality_score": 0.20622298379064669,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.744975293950231,
+        "depmap_median_effect": -0.7536703997195061,
+        "depmap_p25_effect": -0.8894154511256808,
+        "depmap_p75_effect": -0.5978976634937163,
+        "essentiality_score": 0.744975293950231,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.6879815628109,
+        "depmap_median_effect": -0.6712174898444412,
+        "depmap_p25_effect": -0.8812169512716861,
+        "depmap_p75_effect": -0.4311448373221545,
+        "essentiality_score": 0.6879815628109,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.6831150333622775,
+        "depmap_median_effect": 0.6420978055804445,
+        "depmap_p25_effect": 0.13671198246387423,
+        "depmap_p75_effect": 1.1235790777381942,
+        "essentiality_score": 0.0,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.8228462710041136,
+        "depmap_median_effect": -2.9089126696002734,
+        "depmap_p25_effect": -3.1560706780380556,
+        "depmap_p75_effect": -2.5520345723417766,
+        "essentiality_score": 1.0,
+        "n_models": 75,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Soft Tissue": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.2634900003590349,
+        "depmap_median_effect": -0.23573333808360203,
+        "depmap_p25_effect": -0.39884030057277414,
+        "depmap_p75_effect": -0.04549786522735575,
+        "essentiality_score": 0.2634900003590349,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.02106186528540664,
+        "depmap_median_effect": -0.007320673102152001,
+        "depmap_p25_effect": -0.15047188797096256,
+        "depmap_p75_effect": 0.12074832174330002,
+        "essentiality_score": 0.02106186528540664,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.134108574493063,
+        "depmap_median_effect": -1.1324178620095324,
+        "depmap_p25_effect": -1.277965981824389,
+        "depmap_p75_effect": -0.9740940213814633,
+        "essentiality_score": 1.0,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.5954414138310902,
+        "depmap_median_effect": -0.5200576340968316,
+        "depmap_p25_effect": -0.8087240126168073,
+        "depmap_p75_effect": -0.32596752579028554,
+        "essentiality_score": 0.5954414138310902,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5069270783539257,
+        "depmap_median_effect": -0.5260794866867795,
+        "depmap_p25_effect": -0.666170539315189,
+        "depmap_p75_effect": -0.3502444088277001,
+        "essentiality_score": 0.5069270783539257,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.4060296299507415,
+        "depmap_median_effect": -0.36982298482892983,
+        "depmap_p25_effect": -0.5539260770557615,
+        "depmap_p75_effect": -0.2560864056503861,
+        "essentiality_score": 0.4060296299507415,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.24630014258395394,
+        "depmap_median_effect": 0.2415616923613927,
+        "depmap_p25_effect": 0.13662911690816282,
+        "depmap_p75_effect": 0.3413549167928507,
+        "essentiality_score": 0.0,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.0848954276546887,
+        "depmap_median_effect": -0.08861047627521315,
+        "depmap_p25_effect": -0.18811589107672777,
+        "depmap_p75_effect": 0.053305525343820596,
+        "essentiality_score": 0.0848954276546887,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.6008025575640424,
+        "depmap_median_effect": -0.544844911935128,
+        "depmap_p25_effect": -0.6958201681278312,
+        "depmap_p75_effect": -0.3988496563169417,
+        "essentiality_score": 0.6008025575640424,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.09791719173701537,
+        "depmap_median_effect": -0.0653030018349413,
+        "depmap_p25_effect": -0.1478775659343869,
+        "depmap_p75_effect": -0.016951079533882474,
+        "essentiality_score": 0.09791719173701537,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.30941258137712085,
+        "depmap_median_effect": -0.30233407724551586,
+        "depmap_p25_effect": -0.4428783448843812,
+        "depmap_p75_effect": -0.14825641784217228,
+        "essentiality_score": 0.30941258137712085,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.23791929770278142,
+        "depmap_median_effect": -0.2267743116556345,
+        "depmap_p25_effect": -0.3243459217604352,
+        "depmap_p75_effect": -0.133991856973379,
+        "essentiality_score": 0.23791929770278142,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7108882370684972,
+        "depmap_median_effect": -0.7144106410271545,
+        "depmap_p25_effect": -0.851910194188647,
+        "depmap_p75_effect": -0.561955260712716,
+        "essentiality_score": 0.7108882370684972,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7091877216516751,
+        "depmap_median_effect": -0.7343037077676977,
+        "depmap_p25_effect": -0.9313625775921706,
+        "depmap_p75_effect": -0.4491867754977744,
+        "essentiality_score": 0.7091877216516751,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.651533936724914,
+        "depmap_median_effect": 0.3850669152341534,
+        "depmap_p25_effect": 0.12232008946322205,
+        "depmap_p75_effect": 1.076733109744841,
+        "essentiality_score": 0.0,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.7064312899488727,
+        "depmap_median_effect": -2.6968122514558717,
+        "depmap_p25_effect": -2.935582615384445,
+        "depmap_p75_effect": -2.5008494897830675,
+        "essentiality_score": 1.0,
+        "n_models": 46,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Testis": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.33618423728058355,
+        "depmap_median_effect": -0.3869602534903906,
+        "depmap_p25_effect": -0.4865240773793047,
+        "depmap_p75_effect": -0.1707152698575113,
+        "essentiality_score": 0.33618423728058355,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.00657124761719898,
+        "depmap_median_effect": -0.0242951870257601,
+        "depmap_p25_effect": -0.0909108410275649,
+        "depmap_p75_effect": 0.072878242697674,
+        "essentiality_score": 0.00657124761719898,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -0.9899439736776847,
+        "depmap_median_effect": -0.9070212159886556,
+        "depmap_p25_effect": -1.0582491023843277,
+        "depmap_p75_effect": -0.8778821446407231,
+        "essentiality_score": 0.9899439736776847,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.41992173110699194,
+        "depmap_median_effect": -0.5238058836218806,
+        "depmap_p25_effect": -0.528727992839758,
+        "depmap_p75_effect": -0.2448733809956149,
+        "essentiality_score": 0.41992173110699194,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.7177231434490701,
+        "depmap_median_effect": -0.6538913283410057,
+        "depmap_p25_effect": -0.8188563184022857,
+        "depmap_p75_effect": -0.6290224919072545,
+        "essentiality_score": 0.7177231434490701,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.5892006581094427,
+        "depmap_median_effect": -0.5627029693443237,
+        "depmap_p25_effect": -0.6531998575186353,
+        "depmap_p75_effect": -0.4976221290819234,
+        "essentiality_score": 0.5892006581094427,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.19896533581607714,
+        "depmap_median_effect": 0.0991093078501738,
+        "depmap_p25_effect": 0.0407419185488138,
+        "depmap_p75_effect": 0.4078412198909789,
+        "essentiality_score": 0.0,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.14343654041420736,
+        "depmap_median_effect": -0.1771037121153262,
+        "depmap_p25_effect": -0.1938616723752728,
+        "depmap_p75_effect": -0.0413379992821779,
+        "essentiality_score": 0.14343654041420736,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.47963060686789555,
+        "depmap_median_effect": -0.4558209633487057,
+        "depmap_p25_effect": -0.6262572903259397,
+        "depmap_p75_effect": -0.3057020420055699,
+        "essentiality_score": 0.47963060686789555,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.014945815813804381,
+        "depmap_median_effect": -0.0101916649936683,
+        "depmap_p25_effect": -0.0114849772811542,
+        "depmap_p75_effect": 0.0070906269513195,
+        "essentiality_score": 0.014945815813804381,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.38837054639765883,
+        "depmap_median_effect": -0.3511794570862258,
+        "depmap_p25_effect": -0.4192229352523464,
+        "depmap_p75_effect": -0.337958959880354,
+        "essentiality_score": 0.38837054639765883,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.39265973854004893,
+        "depmap_median_effect": -0.3116401226664215,
+        "depmap_p25_effect": -0.4664196082079517,
+        "depmap_p75_effect": -0.2362130549777878,
+        "essentiality_score": 0.39265973854004893,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.7815667472907094,
+        "depmap_median_effect": -0.7220169889788883,
+        "depmap_p25_effect": -0.7940234231922356,
+        "depmap_p75_effect": -0.6957419657164652,
+        "essentiality_score": 0.7815667472907094,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.813640694365624,
+        "depmap_median_effect": -0.8916229794939152,
+        "depmap_p25_effect": -1.0474069715905736,
+        "depmap_p75_effect": -0.580637444464577,
+        "essentiality_score": 0.813640694365624,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.5693902814237963,
+        "depmap_median_effect": 0.4411738242407749,
+        "depmap_p25_effect": 0.1720930625022302,
+        "depmap_p75_effect": 0.4444543553021003,
+        "essentiality_score": 0.0,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.435140576665858,
+        "depmap_median_effect": -2.713530256930492,
+        "depmap_p25_effect": -2.7363505038330147,
+        "depmap_p75_effect": -1.9038668655934368,
+        "essentiality_score": 1.0,
+        "n_models": 5,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Thyroid": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.24513261402370012,
+        "depmap_median_effect": -0.2682642854424372,
+        "depmap_p25_effect": -0.40583222833003085,
+        "depmap_p75_effect": -0.11723002941635514,
+        "essentiality_score": 0.24513261402370012,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.09720768561561705,
+        "depmap_median_effect": -0.1087730372121047,
+        "depmap_p25_effect": -0.17559538651359174,
+        "depmap_p75_effect": -0.0441601852923362,
+        "essentiality_score": 0.09720768561561705,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1470419248426598,
+        "depmap_median_effect": -1.0746352090333786,
+        "depmap_p25_effect": -1.1628714442819816,
+        "depmap_p75_effect": -1.014251624346241,
+        "essentiality_score": 1.0,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.39423786225447816,
+        "depmap_median_effect": -0.4379944455166652,
+        "depmap_p25_effect": -0.4498926292654117,
+        "depmap_p75_effect": -0.3302713434782306,
+        "essentiality_score": 0.39423786225447816,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.5210776060765906,
+        "depmap_median_effect": -0.4519567930280121,
+        "depmap_p25_effect": -0.6545697023412909,
+        "depmap_p75_effect": -0.378042586555715,
+        "essentiality_score": 0.5210776060765906,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.3582659822122335,
+        "depmap_median_effect": -0.3351281745401636,
+        "depmap_p25_effect": -0.4323367659444066,
+        "depmap_p75_effect": -0.23982581969751116,
+        "essentiality_score": 0.3582659822122335,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.15838221318843948,
+        "depmap_median_effect": 0.1379090250573368,
+        "depmap_p25_effect": 0.10340581506176591,
+        "depmap_p75_effect": 0.2079089034742982,
+        "essentiality_score": 0.0,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.025183016476867548,
+        "depmap_median_effect": -0.024668590349929,
+        "depmap_p25_effect": -0.11084823145522706,
+        "depmap_p75_effect": 0.05209760130086265,
+        "essentiality_score": 0.025183016476867548,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.484270969815784,
+        "depmap_median_effect": -0.4175925207746903,
+        "depmap_p25_effect": -0.45944807592166703,
+        "depmap_p75_effect": -0.2709767087505534,
+        "essentiality_score": 0.484270969815784,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.10019671425926514,
+        "depmap_median_effect": -0.0840798209346935,
+        "depmap_p25_effect": -0.17771039766510283,
+        "depmap_p75_effect": -0.02443266468115985,
+        "essentiality_score": 0.10019671425926514,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.3297505483176975,
+        "depmap_median_effect": -0.3349082990777688,
+        "depmap_p25_effect": -0.43314040703437107,
+        "depmap_p75_effect": -0.20226842793639377,
+        "essentiality_score": 0.3297505483176975,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.2440948500892887,
+        "depmap_median_effect": -0.2543403802412313,
+        "depmap_p25_effect": -0.2870759358152235,
+        "depmap_p75_effect": -0.1765311297221558,
+        "essentiality_score": 0.2440948500892887,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.754113368758362,
+        "depmap_median_effect": -0.7019767804995292,
+        "depmap_p25_effect": -0.7700743894830577,
+        "depmap_p75_effect": -0.6526969573565332,
+        "essentiality_score": 0.754113368758362,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7680308945155787,
+        "depmap_median_effect": -0.7783512838566496,
+        "depmap_p25_effect": -0.954817530272456,
+        "depmap_p75_effect": -0.4646413705465954,
+        "essentiality_score": 0.7680308945155787,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.17721220334819754,
+        "depmap_median_effect": 0.1752584834321021,
+        "depmap_p25_effect": 0.06279314317894626,
+        "depmap_p75_effect": 0.2384661344606499,
+        "essentiality_score": 0.0,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.866001895210499,
+        "depmap_median_effect": -2.969068430820392,
+        "depmap_p25_effect": -3.19922719471979,
+        "depmap_p75_effect": -2.693014596200144,
+        "essentiality_score": 1.0,
+        "n_models": 11,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Uterus": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.10227944123507404,
+        "depmap_median_effect": -0.07157298606470755,
+        "depmap_p25_effect": -0.12172770895737164,
+        "depmap_p75_effect": -0.0118621854523352,
+        "essentiality_score": 0.10227944123507404,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.13189859141077284,
+        "depmap_median_effect": -0.1003767162647271,
+        "depmap_p25_effect": -0.2007558918863176,
+        "depmap_p75_effect": -0.007201473383287275,
+        "essentiality_score": 0.13189859141077284,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.1515119748254818,
+        "depmap_median_effect": -1.1512968005732782,
+        "depmap_p25_effect": -1.3012995173602087,
+        "depmap_p75_effect": -1.037847757235088,
+        "essentiality_score": 1.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.6140414536519,
+        "depmap_median_effect": -0.6304826170280573,
+        "depmap_p25_effect": -0.7731729007074076,
+        "depmap_p75_effect": -0.42577189897622636,
+        "essentiality_score": 0.6140414536519,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.6450657610214173,
+        "depmap_median_effect": -0.6929527748177773,
+        "depmap_p25_effect": -0.7927996283135798,
+        "depmap_p75_effect": -0.4775332498848362,
+        "essentiality_score": 0.6450657610214173,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.4419762150467712,
+        "depmap_median_effect": -0.42688876037492535,
+        "depmap_p25_effect": -0.5614203491097227,
+        "depmap_p75_effect": -0.25005814535575766,
+        "essentiality_score": 0.4419762150467712,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.16039598343398734,
+        "depmap_median_effect": 0.17205753985272698,
+        "depmap_p25_effect": 0.11475186801149408,
+        "depmap_p75_effect": 0.25590377743029546,
+        "essentiality_score": 0.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.23898863705107248,
+        "depmap_median_effect": -0.2507232920383494,
+        "depmap_p25_effect": -0.391487461847995,
+        "depmap_p75_effect": -0.03018406838519335,
+        "essentiality_score": 0.23898863705107248,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.5816712734452096,
+        "depmap_median_effect": -0.5627594754863026,
+        "depmap_p25_effect": -0.7163690020360579,
+        "depmap_p75_effect": -0.3754465036052209,
+        "essentiality_score": 0.5816712734452096,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": -0.15109270729215346,
+        "depmap_median_effect": -0.1456149977252634,
+        "depmap_p25_effect": -0.2248808458744401,
+        "depmap_p75_effect": -0.062029270809198775,
+        "essentiality_score": 0.15109270729215346,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.3792190713655159,
+        "depmap_median_effect": -0.3008194257401612,
+        "depmap_p25_effect": -0.47939905706249597,
+        "depmap_p75_effect": -0.2069685978908199,
+        "essentiality_score": 0.3792190713655159,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.187415419924068,
+        "depmap_median_effect": -0.1797873769447462,
+        "depmap_p25_effect": -0.2869034623015314,
+        "depmap_p75_effect": -0.1244180984437045,
+        "essentiality_score": 0.187415419924068,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.770563884902234,
+        "depmap_median_effect": -0.7800240416063203,
+        "depmap_p25_effect": -0.9448651646274178,
+        "depmap_p75_effect": -0.6013009025886533,
+        "essentiality_score": 0.770563884902234,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7774421444332142,
+        "depmap_median_effect": -0.7121039434417433,
+        "depmap_p25_effect": -1.0375710284843798,
+        "depmap_p75_effect": -0.5318943309047099,
+        "essentiality_score": 0.7774421444332142,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.27260153453113,
+        "depmap_median_effect": 0.16232239180682165,
+        "depmap_p25_effect": 0.00695785326268405,
+        "depmap_p75_effect": 0.4053296923859323,
+        "essentiality_score": 0.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.599440781293151,
+        "depmap_median_effect": -2.6180652341120165,
+        "depmap_p25_effect": -2.837753612160592,
+        "depmap_p75_effect": -2.2773918185008464,
+        "essentiality_score": 1.0,
+        "n_models": 34,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    },
+    "Vulva/Vagina": {
+      "ARID1A": {
+        "depmap_mean_effect": -0.5472370841970154,
+        "depmap_median_effect": -0.5472370841970154,
+        "depmap_p25_effect": -0.6997490507089397,
+        "depmap_p75_effect": -0.39472511768509133,
+        "essentiality_score": 0.5472370841970154,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATM": {
+        "depmap_mean_effect": -0.12384030108737615,
+        "depmap_median_effect": -0.12384030108737615,
+        "depmap_p25_effect": -0.16775108307193776,
+        "depmap_p75_effect": -0.07992951910281453,
+        "essentiality_score": 0.12384030108737615,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "ATR": {
+        "depmap_mean_effect": -1.5077366370340228,
+        "depmap_median_effect": -1.5077366370340228,
+        "depmap_p25_effect": -1.578787703843804,
+        "depmap_p75_effect": -1.4366855702242416,
+        "essentiality_score": 1.0,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA1": {
+        "depmap_mean_effect": -0.2395533389812574,
+        "depmap_median_effect": -0.2395533389812574,
+        "depmap_p25_effect": -0.38782438458538093,
+        "depmap_p75_effect": -0.09128229337713392,
+        "essentiality_score": 0.2395533389812574,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "BRCA2": {
+        "depmap_mean_effect": -0.7912672938399412,
+        "depmap_median_effect": -0.7912672938399412,
+        "depmap_p25_effect": -0.918214540851746,
+        "depmap_p75_effect": -0.6643200468281364,
+        "essentiality_score": 0.7912672938399412,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CDK12": {
+        "depmap_mean_effect": -0.3719394328167107,
+        "depmap_median_effect": -0.3719394328167107,
+        "depmap_p25_effect": -0.4367449662041213,
+        "depmap_p75_effect": -0.30713389942930014,
+        "essentiality_score": 0.3719394328167107,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "CHEK2": {
+        "depmap_mean_effect": 0.0571384810632168,
+        "depmap_median_effect": 0.0571384810632168,
+        "depmap_p25_effect": -0.05122412889810954,
+        "depmap_p75_effect": 0.16550109102454313,
+        "essentiality_score": 0.0,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "EGFR": {
+        "depmap_mean_effect": -0.4157471548597467,
+        "depmap_median_effect": -0.4157471548597467,
+        "depmap_p25_effect": -0.5668003793752293,
+        "depmap_p75_effect": -0.26469393034426414,
+        "essentiality_score": 0.4157471548597467,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "KRAS": {
+        "depmap_mean_effect": -0.709379753309642,
+        "depmap_median_effect": -0.709379753309642,
+        "depmap_p25_effect": -0.7301985903020418,
+        "depmap_p75_effect": -0.6885609163172423,
+        "essentiality_score": 0.709379753309642,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "MBD4": {
+        "depmap_mean_effect": 0.017195639322927045,
+        "depmap_median_effect": 0.017195639322927045,
+        "depmap_p25_effect": -0.048295417614772934,
+        "depmap_p75_effect": 0.08268669626062702,
+        "essentiality_score": 0.0,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PALB2": {
+        "depmap_mean_effect": -0.7132965993547054,
+        "depmap_median_effect": -0.7132965993547054,
+        "depmap_p25_effect": -0.8812405778152401,
+        "depmap_p75_effect": -0.5453526208941705,
+        "essentiality_score": 0.7132965993547054,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "PARP1": {
+        "depmap_mean_effect": -0.3751820738597337,
+        "depmap_median_effect": -0.3751820738597337,
+        "depmap_p25_effect": -0.39413973374091504,
+        "depmap_p75_effect": -0.35622441397855226,
+        "essentiality_score": 0.3751820738597337,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51C": {
+        "depmap_mean_effect": -0.5687729517770581,
+        "depmap_median_effect": -0.5687729517770581,
+        "depmap_p25_effect": -0.6734088269598512,
+        "depmap_p75_effect": -0.46413707659426506,
+        "essentiality_score": 0.5687729517770581,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "RAD51D": {
+        "depmap_mean_effect": -0.7489082721865061,
+        "depmap_median_effect": -0.7489082721865061,
+        "depmap_p25_effect": -0.9593551100248056,
+        "depmap_p75_effect": -0.5384614343482068,
+        "essentiality_score": 0.7489082721865061,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "TP53": {
+        "depmap_mean_effect": 0.681826840390461,
+        "depmap_median_effect": 0.681826840390461,
+        "depmap_p25_effect": 0.33189312189930514,
+        "depmap_p75_effect": 1.0317605588816168,
+        "essentiality_score": 0.0,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      },
+      "WEE1": {
+        "depmap_mean_effect": -2.939396887305622,
+        "depmap_median_effect": -2.939396887305622,
+        "depmap_p25_effect": -2.960027656773884,
+        "depmap_p75_effect": -2.9187661178373605,
+        "essentiality_score": 1.0,
+        "n_models": 2,
+        "source": "DepMap CRISPRGeneEffect.csv"
+      }
+    }
+  }
+}

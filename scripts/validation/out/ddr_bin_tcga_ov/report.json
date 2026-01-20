@@ -1,0 +1,67 @@
+{
+  "run_meta": {
+    "study_id": "ov_tcga",
+    "tier3_patients_total": 149,
+    "linked_patients": 149,
+    "pfs_usable": 141,
+    "os_usable": 149,
+    "diamond_mapping_version": "v1",
+    "data_files": {
+      "cbioportal_dataset": "data/benchmarks/cbioportal_trial_datasets_latest.json",
+      "tier3": "oncology-coPilot/oncology-backend-minimal/data/validation/sae_cohort/checkpoints/Tier3_validation_cohort.json",
+      "diamonds": "oncology-coPilot/oncology-backend-minimal/api/resources/sae_feature_mapping.true_sae_diamonds.v1.json"
+    }
+  },
+  "ddr_bin_summary": {
+    "min": 0.0,
+    "median": 0.13478538393974304,
+    "max": 0.9463145732879639
+  },
+  "pfs": {
+    "usable": 141,
+    "pearson_r": 0.05900974298832028,
+    "pearson_p": 0.4870111057079785,
+    "spearman_rho": -0.00034730275716077566,
+    "spearman_p": 0.9967388303031832,
+    "logrank_p": 0.5556900171883098,
+    "median_months_high": 14.8,
+    "median_months_low": 14.06,
+    "c_index_ddr_bin": 0.3639087018544936
+  },
+  "os": {
+    "usable": 149,
+    "pearson_r": -0.007949113146618506,
+    "pearson_p": 0.9233493187761105,
+    "spearman_rho": -0.04833590886330634,
+    "spearman_p": 0.5582866659351398,
+    "logrank_p": 0.3472768155582797,
+    "median_months_high": 33.9,
+    "median_months_low": 34.79,
+    "c_index_ddr_bin": 0.3662046908315565
+  },
+  "platinum_response": {
+    "n_sensitive": 125,
+    "n_resistant": 24,
+    "auroc_resistant": 0.698,
+    "auroc_sensitive": 0.7276666666666667,
+    "recommended_positive_class": "resistant_refractory",
+    "recommended_score": "ddr_bin (higher = more resistant)",
+    "auroc_ci_low": 0.5143116414503448,
+    "auroc_ci_high": 0.8816883585496551,
+    "optimal_threshold": 0.20266377925872803,
+    "tpr_at_optimal": 0.6666666666666666,
+    "tnr_at_optimal": 0.648,
+    "youden_j": 0.31466666666666665
+  },
+  "head_to_head": {
+    "c_index_ddr_bin_pfs": 0.3639087018544936,
+    "c_index_gene_ddr_pfs": 0.25777460770328103,
+    "delta_c_index": 0.10613409415121255
+  },
+  "verdict": {
+    "status": "pass",
+    "reasons": [
+      "Platinum Response AUROC(resistant)=0.698 > 0.65 (MECHANISTIC SIGNAL)"
+    ]
+  }
+}

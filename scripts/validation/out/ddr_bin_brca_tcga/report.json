@@ -1,0 +1,24 @@
+{
+  "run_meta": {
+    "study_id": "brca_tcga_pan_can_atlas_2018",
+    "cohort_json": "oncology-coPilot/oncology-backend-minimal/data/validation/sae_cohort/checkpoints/BRCA_TCGA_TRUE_SAE_cohort.json",
+    "cbioportal_dataset": "data/benchmarks/cbioportal_trial_datasets_latest.json",
+    "diamond_mapping": "oncology-coPilot/oncology-backend-minimal/api/resources/sae_feature_mapping.true_sae_diamonds.v1.json",
+    "linked_patients": 60
+  },
+  "pfs": {
+    "usable": 60,
+    "spearman_rho": 0.06721078672198082,
+    "spearman_p": 0.6098843985383304
+  },
+  "os": {
+    "usable": 60,
+    "spearman_rho": 0.016712322225862834,
+    "spearman_p": 0.8991472018685069
+  },
+  "platinum_response": {
+    "usable": 0,
+    "auroc_resistant": null,
+    "note": "No/insufficient platinum labels in cohort_json"
+  }
+}

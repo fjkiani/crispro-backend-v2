@@ -1,2 +1,9 @@
 .vercel
 .env*.local
+
+# Large data files that exceed GitHub limits
+scripts/benchmark_sl/depmap_raw.csv
+variant_summary.txt.gz
+*.db
+data/clinical_trials.db
+data/external/GSE63885/GSE63885_series_matrix.txt

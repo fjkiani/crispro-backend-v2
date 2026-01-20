@@ -1,0 +1,192 @@
+# Ovarian Cancer Disease Module Configuration
+# Based on Manager's Ayesha Trial Matching Strategy
+
+disease: "ovarian_cancer"
+aliases: ["ovarian", "HGSOC", "high grade serous ovarian"]
+
+# Mechanism axes that matter for ovarian cancer (based on Ayesha's profile)
+# 7D vector indices for mechanism scoring
+mechanism_axes:
+  ddr_ber:
+    name: "DDR/BER"
+    vector_index: 0
+    biomarkers: ["MBD4", "BRCA1", "BRCA2", "HRD", "BER deficiency"]
+    pathways: ["BER", "DDR", "HRR"]
+    interventions: ["PARP", "olaparib", "niraparib", "rucaparib"]
+    priority: "high"
+    description: "MBD4/BER deficiency → PARP sensitive"
+    
+  checkpoint_tp53:
+    name: "Checkpoint/TP53"
+    vector_index: 1
+    biomarkers: ["TP53", "p53 mutant", "p53"]
+    pathways: ["checkpoint", "apoptosis"]
+    interventions: ["ATR inhibitor", "WEE1 inhibitor", "ceralasertib", "adavosertib"]
+    priority: "high"
+    description: "TP53 mutant → checkpoint bypass → synthetic lethality"
+    
+  io_pdl1:
+    name: "IO/PD-L1"
+    vector_index: 2
+    biomarkers: ["PD-L1", "PDL1", "CPS"]
+    pathways: ["checkpoint", "IO"]
+    interventions: ["pembrolizumab", "nivolumab", "PD-1", "PD-L1", "checkpoint inhibitor"]
+    priority: "medium"
+    description: "PD-L1 positive (CPS ≥1) → immunotherapy eligible"
+    
+  vegf:
+    name: "VEGF"
+    vector_index: 3
+    biomarkers: ["VEGF"]
+    pathways: ["VEGF", "angiogenesis"]
+    interventions: ["bevacizumab", "avastin"]
+    priority: "medium"
+    description: "Standard SOC with VEGF"
+    
+  parp_atr_combo:
+    name: "PARP + ATR/WEE1"
+    vector_index: 4
+    biomarkers: ["PARP", "ATR", "WEE1"]
+    pathways: ["BER", "DDR", "checkpoint"]
+    interventions: ["PARP", "ATR inhibitor", "WEE1 inhibitor", "olaparib", "ceralasertib", "adavosertib"]
+    priority: "high"
+    description: "PARP + ATR/WEE1 combos for synthetic lethality"
+    
+  hereditary:
+    name: "Hereditary cancer syndromes"
+    vector_index: 5
+    biomarkers: ["MBD4", "BRCA1", "BRCA2", "germline mutation"]
+    pathways: ["DDR", "HRR"]
+    interventions: ["PARP", "olaparib", "niraparib"]
+    priority: "medium"
+    description: "MBD4-MANS syndrome, BRCA mutations"
+    
+  pdgfra:
+    name: "PDGFRA (speculative)"
+    vector_index: 6
+    biomarkers: ["PDGFRA"]
+    pathways: ["RTK"]
+    interventions: ["imatinib", "avapritinib", "TKI"]
+    priority: "low"
+    description: "If VUS resolves to pathogenic, TKI may be relevant"
+
+# Evidence gates (what "turns on" a pathway)
+evidence_gates:
+  mbd4_ber_strong:
+    name: "MBD4/BER Strong"
+    condition: "MBD4 OR BER deficiency"
+    boosts:
+      ddr_ber: 1.0
+    rationale: "MBD4/BER deficiency → PARP sensitive"
+    
+  tp53_strong:
+    name: "TP53 Strong"
+    condition: "TP53 mutant"
+    boosts:
+      checkpoint_tp53: 1.0
+    rationale: "TP53 mutant-type → checkpoint bypass"
+    
+  pdl1_strong:
+    name: "PD-L1 Strong"
+    condition: "PD-L1 CPS ≥1"
+    boosts:
+      io_pdl1: 0.9
+    rationale: "PD-L1 positive (CPS ≥1) → IO eligible"
+    
+  parp_strong:
+    name: "PARP Strong"
+    condition: "PARP target"
+    boosts:
+      ddr_ber: 0.8
+      parp_atr_combo: 0.8
+    rationale: "PARP inhibitor target"
+    
+  ddr_strong:
+    name: "DDR Strong"
+    condition: "DDR deficiency"
+    boosts:
+      ddr_ber: 0.9
+    rationale: "DDR-deficient → PARP sensitive"
+
+# Dominance policies (which pathway takes priority)
+dominance_policies:
+  - condition: "MBD4 OR BER deficiency"
+    dominant_axis: "ddr_ber"
+    action: "rank_first"
+    boost: 0.3
+    description: "MBD4/BER deficiency → rank PARP trials first"
+    
+  - condition: "TP53 mutant"
+    dominant_axis: "checkpoint_tp53"
+    action: "rank_first"
+    boost: 0.2
+    description: "TP53 mutant → rank ATR/WEE1 combo trials first"
+    
+  - condition: "PD-L1 positive"
+    dominant_axis: "io_pdl1"
+    action: "boost"
+    boost: 0.1
+    description: "PD-L1 positive → boost IO trials"
+    
+  - condition: "(MBD4 OR BER) AND TP53 mutant"
+    dominant_axis: "parp_atr_combo"
+    action: "rank_first"
+    boost: 0.4
+    description: "BER deficient + TP53 mutant → PARP + ATR/WEE1 combos (synthetic lethality)"
+
+# Retrieval query templates (CT.gov style) - Based on Manager's 8 targeted searches
+query_templates:
+  - name: "MBD4/BER pathway trials"
+    query: '("ovarian cancer" OR "ovarian") AND ("MBD4" OR "base excision repair" OR "BER deficiency")'
+    priority: "high"
+    axis: "ddr_ber"
+    description: "Direct match to MBD4 germline mutation"
+    
+  - name: "PARP inhibitor synthetic lethality"
+    query: '("ovarian cancer" OR "high grade serous ovarian") AND ("PARP inhibitor" OR "olaparib" OR "niraparib" OR "rucaparib") AND (platinum OR carboplatin)'
+    priority: "high"
+    axis: "ddr_ber"
+    description: "BER + PARP = synthetic lethality"
+    
+  - name: "TP53 mutation trials"
+    query: '("ovarian cancer" OR "ovarian") AND ("TP53 mutation" OR "p53 mutant" OR "p53")'
+    priority: "high"
+    axis: "checkpoint_tp53"
+    description: "TP53 mutant-type"
+    
+  - name: "PD-L1 positive IO trials"
+    query: '("ovarian cancer" OR "ovarian") AND ("pembrolizumab" OR "nivolumab" OR "PD-L1" OR "PD-1" OR "checkpoint inhibitor")'
+    priority: "high"
+    axis: "io_pdl1"
+    description: "PD-L1 CPS 10 (positive) → IO eligible"
+    
+  - name: "DDR-deficient trials"
+    query: '("ovarian cancer" OR "ovarian") AND ("DNA damage repair" OR "DDR deficiency" OR "homologous recombination")'
+    priority: "medium"
+    axis: "ddr_ber"
+    description: "MBD4 = DDR gene"
+    
+  - name: "PARP + ATR/WEE1 combos"
+    query: '("ovarian cancer" OR "ovarian") AND ("PARP" OR "olaparib" OR "niraparib") AND ("ATR inhibitor" OR "WEE1 inhibitor" OR "ceralasertib" OR "adavosertib")'
+    priority: "high"
+    axis: "parp_atr_combo"
+    description: "TP53 mutant → checkpoint bypass → ATR/WEE1 combos"
+    
+  - name: "Hereditary cancer syndrome trials"
+    query: '("ovarian cancer" OR "ovarian") AND ("hereditary cancer syndrome" OR "germline mutation" OR "BRCA")'
+    priority: "medium"
+    axis: "hereditary"
+    description: "MBD4-MANS syndrome"
+    
+  - name: "PDGFRA trials (speculative)"
+    query: '("cancer") AND ("PDGFRA" OR "imatinib" OR "avapritinib")'
+    priority: "low"
+    axis: "pdgfra"
+    description: "If VUS resolves to pathogenic, TKI may be relevant"
+
+# Subtypes
+subtypes:
+  - name: "HGSOC"
+    description: "High grade serous ovarian cancer"
+  - name: "ovarian"
+    description: "Ovarian cancer (general)"

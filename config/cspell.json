@@ -1,0 +1,82 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "allowCompoundWords": true,
+  "ignorePaths": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/oncology-coPilot/oncology-backend/tests/pyBioPortal-master/docs/_build/**"
+  ],
+  "ignoreRegExpList": [
+    "[┌┐└┘├┤─│═]{3,}"
+  ],
+  "words": [
+    "Ayesha",
+    "CrisPRO",
+    "Evo2",
+    "SAE",
+    "AUROC",
+    "GSE63885",
+    "TCGA",
+    "ctDNA",
+    "MFAP4",
+    "VEGF",
+    "HRD",
+    "myChoice",
+    "Bevacizumab",
+    "carboplatin",
+    "paclitaxel",
+    "doxorubicin",
+    "anthracyclines",
+    "taxanes",
+    "microenvironment",
+    "angiogenic",
+    "Pharmacokinetic",
+    "hardcode",
+    "upregulation",
+    "germline",
+    "MAPK",
+    "PI3K",
+    "mTOR",
+    "KRAS",
+    "NRAS",
+    "BRAF",
+    "NF1",
+    "MEK1",
+    "MEK2",
+    "PIK3CA",
+    "PTEN",
+    "AKT1",
+    "BRCA",
+    "BRCA1",
+    "BRCA2",
+    "RAD51",
+    "SLFN11",
+    "ABCB1",
+    "MDR1",
+    "MBD4",
+    "CHK1",
+    "EFEMP1",
+    "SNAI1",
+    "CDH1",
+    "cadherin",
+    "json"
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

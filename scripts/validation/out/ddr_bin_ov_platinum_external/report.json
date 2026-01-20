@@ -1,0 +1,50 @@
+{
+  "run_meta": {
+    "study_id": "tcga_ov_platinum_merged",
+    "cohort_json": "oncology-coPilot/oncology-backend-minimal/data/validation/sae_cohort/checkpoints/OV_PLATINUM_TRUE_SAE_cohort.json",
+    "cbioportal_dataset": "data/benchmarks/tcga_ov_platinum_merged_study.json",
+    "diamond_mapping": "oncology-coPilot/oncology-backend-minimal/api/resources/sae_feature_mapping.true_sae_diamonds.v1.json",
+    "linked_patients": 161
+  },
+  "pfs": {
+    "usable": 0,
+    "spearman_rho": null,
+    "spearman_p": null
+  },
+  "os": {
+    "usable": 161,
+    "spearman_rho": NaN,
+    "spearman_p": NaN
+  },
+  "platinum_response": {
+    "usable": 161,
+    "n_total": 161,
+    "n_sensitive": 140,
+    "n_resistant": 21,
+    "auroc_resistant": 0,
+    "auroc_sensitive": 0,
+    "positive_class": "resistant_refractory",
+    "optimal_threshold": 1.0,
+    "sensitivity_at_optimal": 0.0,
+    "specificity_at_optimal": 1.0,
+    "youden_j": 0.0,
+    "roc_points": [
+      {
+        "threshold": 1.0,
+        "tpr": 0.0,
+        "fpr": 0.0
+      },
+      {
+        "threshold": -1.0,
+        "tpr": 1.0,
+        "fpr": 1.0
+      },
+      {
+        "threshold": 0.0,
+        "tpr": 1.0,
+        "fpr": 1.0
+      }
+    ],
+    "interpretation": "DDR_bin behaves as a platinum-resistance score (higher => more resistant)"
+  }
+}

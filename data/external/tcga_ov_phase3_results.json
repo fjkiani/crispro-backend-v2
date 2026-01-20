@@ -1,0 +1,10 @@
+{
+  "phase": "TCGA-OV Validation",
+  "sample_sizes": {
+    "with_platinum_labels": 44,
+    "with_hrd": 25,
+    "resistant": 6,
+    "sensitive": 38
+  },
+  "note": "TCGA-OV has small overlap between platinum labels and expression data (n=44, only 6 resistant). GSE63885 (n=101, 34 resistant) is the primary validation cohort."
+}

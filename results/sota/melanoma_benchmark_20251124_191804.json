@@ -1,0 +1,195 @@
+{
+  "timestamp": "2025-11-24T19:18:04.653846",
+  "disease": "melanoma",
+  "metrics": {
+    "drug_ranking_accuracy": 0.5,
+    "correct_predictions": 2,
+    "total_predictions": 4,
+    "average_confidence": 0.4
+  },
+  "target": {
+    "drug_ranking_accuracy": 0.9,
+    "average_confidence": 0.5
+  },
+  "results": [
+    {
+      "variant": "BRAF V600E",
+      "expected_drug": "BRAF inhibitor",
+      "expected_rank": 1,
+      "expected_confidence": 0.4,
+      "top_drug": "BRAF inhibitor",
+      "top_confidence": 0.4,
+      "evidence_tier": "consider",
+      "drugs": [
+        {
+          "name": "BRAF inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.68,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "MEK inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.68,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "pembrolizumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        },
+        {
+          "name": "nivolumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        },
+        {
+          "name": "ipilimumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        }
+      ],
+      "correct": true,
+      "mode": "full"
+    },
+    {
+      "variant": "BRAF V600K",
+      "expected_drug": "BRAF inhibitor",
+      "expected_rank": 1,
+      "expected_confidence": 0.4,
+      "top_drug": "BRAF inhibitor",
+      "top_confidence": 0.4,
+      "evidence_tier": "consider",
+      "drugs": [
+        {
+          "name": "BRAF inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.68,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "MEK inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.68,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "pembrolizumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        },
+        {
+          "name": "nivolumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        },
+        {
+          "name": "ipilimumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        }
+      ],
+      "correct": true,
+      "mode": "full"
+    },
+    {
+      "variant": "NRAS Q61R",
+      "expected_drug": "MEK inhibitor",
+      "expected_rank": 2,
+      "expected_confidence": 0.4,
+      "top_drug": "BRAF inhibitor",
+      "top_confidence": 0.4,
+      "evidence_tier": "consider",
+      "drugs": [
+        {
+          "name": "BRAF inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "MEK inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "pembrolizumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        },
+        {
+          "name": "nivolumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        },
+        {
+          "name": "ipilimumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        }
+      ],
+      "correct": false,
+      "mode": "full"
+    },
+    {
+      "variant": "NRAS Q61K",
+      "expected_drug": "MEK inhibitor",
+      "expected_rank": 2,
+      "expected_confidence": 0.4,
+      "top_drug": "BRAF inhibitor",
+      "top_confidence": 0.4,
+      "evidence_tier": "consider",
+      "drugs": [
+        {
+          "name": "BRAF inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "MEK inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "pembrolizumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        },
+        {
+          "name": "nivolumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        },
+        {
+          "name": "ipilimumab",
+          "confidence": 0.4,
+          "efficacy_score": 0.0,
+          "evidence_tier": "insufficient"
+        }
+      ],
+      "correct": false,
+      "mode": "full"
+    }
+  ],
+  "provenance": {
+    "script": "benchmark_sota_melanoma.py",
+    "api_base": "http://127.0.0.1:8000",
+    "model_id": "evo2_1b",
+    "ablation_mode": "SPE",
+    "mode": "full"
+  }
+}

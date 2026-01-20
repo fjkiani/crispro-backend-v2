@@ -1,0 +1,150 @@
+{
+  "version": "true_sae_diamonds_baseline.v1",
+  "analysis_date": "2025-01-28",
+  "cohort_used": "Tier3_validation_cohort.json",
+  "label_definition": {
+    "positive_class": [
+      "resistant",
+      "refractory"
+    ],
+    "negative_class": [
+      "sensitive"
+    ],
+    "total_patients": 149,
+    "positive_count": 24,
+    "negative_count": 125
+  },
+  "features": {
+    "count": 29,
+    "diamond_features": [
+      27607,
+      16337,
+      26220,
+      12893,
+      6020,
+      22868,
+      1407,
+      9738,
+      31362
+    ],
+    "additional_features": [
+      5290,
+      14432,
+      11032,
+      27688,
+      30255,
+      26232,
+      31830,
+      18996,
+      22221,
+      29817,
+      4496,
+      23140,
+      3890,
+      12976,
+      16151,
+      28117,
+      28755,
+      23119,
+      22551,
+      23806
+    ],
+    "feature_list": [
+      27607,
+      16337,
+      26220,
+      12893,
+      6020,
+      22868,
+      1407,
+      9738,
+      31362,
+      5290,
+      14432,
+      11032,
+      27688,
+      30255,
+      26232,
+      31830,
+      18996,
+      22221,
+      29817,
+      4496,
+      23140,
+      3890,
+      12976,
+      16151,
+      28117,
+      28755,
+      23119,
+      22551,
+      23806
+    ]
+  },
+  "aggregation": "sum(feature_value across all variants per patient)",
+  "classifier": {
+    "type": "LogisticRegression",
+    "class_weight": "balanced",
+    "max_iter": 3000
+  },
+  "cross_validation": {
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "stratified": true
+  },
+  "results": {
+    "mean_auroc": 0.7831999999999999,
+    "std_auroc": 0.09967627601390414,
+    "fold_auroc": [
+      0.824,
+      0.6719999999999999,
+      0.7679999999999999,
+      0.952,
+      0.7
+    ],
+    "fold_details": [
+      {
+        "fold": 1,
+        "train_size": 119,
+        "test_size": 30,
+        "train_resistant": 19,
+        "test_resistant": 5,
+        "auroc": 0.824
+      },
+      {
+        "fold": 2,
+        "train_size": 119,
+        "test_size": 30,
+        "train_resistant": 19,
+        "test_resistant": 5,
+        "auroc": 0.6719999999999999
+      },
+      {
+        "fold": 3,
+        "train_size": 119,
+        "test_size": 30,
+        "train_resistant": 19,
+        "test_resistant": 5,
+        "auroc": 0.7679999999999999
+      },
+      {
+        "fold": 4,
+        "train_size": 119,
+        "test_size": 30,
+        "train_resistant": 19,
+        "test_resistant": 5,
+        "auroc": 0.952
+      },
+      {
+        "fold": 5,
+        "train_size": 120,
+        "test_size": 29,
+        "train_resistant": 20,
+        "test_resistant": 4,
+        "auroc": 0.7
+      }
+    ]
+  },
+  "conclusion": "TRUE SAE features show predictive signal (mean AUROC = 0.783) for resistance prediction when refractory patients are grouped with resistant."
+}

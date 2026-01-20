@@ -1,0 +1,65 @@
+{
+  "counts": {
+    "n_events_os": 105,
+    "n_platinum_labeled": 161,
+    "n_platinum_resistant_or_refractory": 21,
+    "n_platinum_sensitive": 140,
+    "n_total": 161,
+    "n_with_os": 161
+  },
+  "extreme_survival": {
+    "auroc": 0.5203895313451004,
+    "auroc_inverted_score": 0.47961046865489954,
+    "best_auroc": 0.5203895313451004,
+    "best_orientation": "as_is",
+    "label": "early_death(<36.0mo) vs long_survivor(>84.0mo)",
+    "n": 84,
+    "n_early_death": 53,
+    "n_long_survivor": 31
+  },
+  "meta": {
+    "input_csv": "oncology-coPilot/oncology-backend-minimal/scripts/validation/out/ddr_bin_ov_platinum_TRUE_SAE_v2/linked_patients.adjusted.csv",
+    "note": "ddr_bin_adj is residualized vs ddr_bin_num_variants and ddr_bin_coverage; interpret as deconfounded signal.",
+    "out_json": "oncology-coPilot/oncology-backend-minimal/scripts/validation/out/ddr_bin_ov_platinum_TRUE_SAE_v2/adjusted_analysis_results.json"
+  },
+  "platinum": {
+    "auroc": 0.4006802721088435,
+    "auroc_inverted_score": 0.5993197278911564,
+    "best_auroc": 0.5993197278911564,
+    "best_orientation": "inverted",
+    "n": 161,
+    "n_pos": 21,
+    "positive_class": "resistant_or_refractory",
+    "score": "ddr_bin_adj"
+  },
+  "survival_os": {
+    "cox_score_only": {
+      "hazard_ratio": 0.5935780095984791,
+      "p_value": 0.17229697610561806
+    },
+    "cox_with_confounders": {
+      "ddr_bin_adj": {
+        "hazard_ratio": 0.5522561688345473,
+        "p_value": 0.16647720056831206
+      },
+      "ddr_bin_coverage": {
+        "hazard_ratio": 0.5403814841080228,
+        "p_value": 0.7608561105132761
+      },
+      "ddr_bin_num_variants": {
+        "hazard_ratio": 0.9888830177150496,
+        "p_value": 0.2078132223018181
+      }
+    },
+    "events": 105,
+    "median_split": {
+      "logrank_p_value": 0.7590651329398084,
+      "median": -0.0103824527132251,
+      "median_os_high": 54.235,
+      "median_os_low": 49.11,
+      "n_high": 100,
+      "n_low": 61
+    },
+    "n": 161
+  }
+}

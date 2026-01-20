@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Comprehensive Analysis of Dosing Guidance Validation Results"""
+
 import json
 
 # Load validation report
@@ -25,7 +27,7 @@ print(f"   Auto-curated cases: {sum(1 for c in cases if c.get('status') == 'auto
 # Analyze toxicity cases
 print("\n🔬 TOXICITY CASES ANALYSIS")
 toxicity_cases = [c for c in cases if c.get('toxicity_occurred') == True]
-print(f"   Total toxicity cases: {len(toxicity_cases
+print(f"   Total toxicity cases: {len(toxicity_cases)}")
 
 for case in toxicity_cases:
     case_id = case.get('case_id', 'N/A')
@@ -50,7 +52,7 @@ print(f"   True positives: {metrics.get('true_positives', 0)}")
 print(f"   False negatives: {metrics.get('false_negatives', 0)}")
 
 print("\n💡 KEY FINDINGS")
-missed = sum(1 for c in toxicity_cases if not c.get('our_on', {}).get('would_have_flagged', False))
+missed = sum(1 for c in toxicity_cases if not c.get('our_prediction', {}).get('would_have_flagged', False))
 print(f"   • {missed} out of {len(toxicity_cases)} toxicity cases were NOT flagged")
 print(f"   • All toxicity cases are DPYD gene")
 print(f"   • System showed 100% specificity (no false positives)")

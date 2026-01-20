@@ -1,0 +1,8 @@
+{
+  "validator": "validate_insights_bundle_no_localhost_http",
+  "generated_at": "2025-12-26T10:16:20.330427Z",
+  "status": "FAILED",
+  "errors": [
+    "ImportError: cannot import name 'get_biomarker_intelligence_service' from 'api.services.biomarker_intelligence_universal' (/Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/api/services/biomarker_intelligence_universal/__init__.py)"
+  ]
+}

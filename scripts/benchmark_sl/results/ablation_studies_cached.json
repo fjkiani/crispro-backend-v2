@@ -1,0 +1,30 @@
+{
+  "S_only": {
+    "accuracy": 0.0,
+    "note": "Use cache for SPE mode only, others need API"
+  },
+  "P_only": {
+    "accuracy": 0.0,
+    "note": "Use cache for SPE mode only, others need API"
+  },
+  "E_only": {
+    "accuracy": 0.0,
+    "note": "Use cache for SPE mode only, others need API"
+  },
+  "SP": {
+    "accuracy": 0.0,
+    "note": "Use cache for SPE mode only, others need API"
+  },
+  "SE": {
+    "accuracy": 0.0,
+    "note": "Use cache for SPE mode only, others need API"
+  },
+  "PE": {
+    "accuracy": 0.0,
+    "note": "Use cache for SPE mode only, others need API"
+  },
+  "SPE": {
+    "accuracy": 0.0,
+    "note": "Use cache for SPE mode only, others need API"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "breast_cancer": {
+    "her2_signaling": ["ERBB2"],
+    "er_pr_signaling": ["ESR1", "PGR"],
+    "pi3k_akt_mtor": ["PIK3CA", "PTEN", "AKT1"],
+    "hrd_ddr": ["BRCA1", "BRCA2"],
+    "cell_cycle": ["CDK4", "CDK6", "CCND1", "RB1"]
+  },
+  "melanoma": {
+    "ras_mapk_braf": ["BRAF", "NRAS", "KRAS"],
+    "pd1_immune": ["CD274"],
+    "kit_signaling": ["KIT"],
+    "nras": ["NRAS"],
+    "cdkn2a": ["CDKN2A"]
+  },
+  "ovarian_cancer_hgs": {
+    "hrd_ddr": ["BRCA1", "BRCA2"],
+    "pi3k_akt_mtor": ["PIK3CA", "PTEN", "AKT1"],
+    "angiogenesis": ["VEGFA"],
+    "tp53": ["TP53"],
+    "ras_mapk": ["KRAS", "NRAS", "BRAF"]
+  },
+  "lung_cancer": {
+    "egfr_signaling": ["EGFR"],
+    "alk_ros1": ["ALK", "ROS1"],
+    "angiogenesis": ["VEGFA"],
+    "pd_l1_immune": ["CD274"],
+    "kras_signaling": ["KRAS"]
+  },
+  "colorectal_cancer": {
+    "wnt_beta_catenin": ["APC", "CTNNB1"],
+    "egfr_signaling": ["EGFR"],
+    "angiogenesis": ["VEGFA"],
+    "msi_mmr": ["MLH1", "MSH2", "MSH6", "PMS2"],
+    "ras_mapk": ["KRAS", "NRAS", "BRAF"]
+  },
+  "pancreatic_cancer": {
+    "kras_signaling": ["KRAS"],
+    "tp53": ["TP53"],
+    "smad4_tgf_beta": ["SMAD4"],
+    "cdkn2a": ["CDKN2A"],
+    "ddr": ["BRCA1", "BRCA2", "ATM"]
+  },
+  "prostate_cancer": {
+    "androgen_receptor": ["AR"],
+    "pi3k_akt_pten": ["PTEN", "PIK3CA", "AKT1"],
+    "ddr": ["BRCA2", "ATM", "CHEK2"],
+    "tp53": ["TP53"],
+    "tmprss2_erg": ["ERG", "ETV1"]
+  },
+  "glioblastoma": {
+    "egfr_signaling": ["EGFR"],
+    "pten_pi3k_akt": ["PTEN", "PIK3CA", "PIK3R1"],
+    "tp53_rb": ["TP53", "RB1"],
+    "angiogenesis": ["VEGFA"],
+    "idh1": ["IDH1"]
+  },
+  "multiple_myeloma": {
+    "nfkb": ["NFKB1", "NFKB2"],
+    "proteasome": ["PSMB5"],
+    "immunomodulation": ["CRBN"],
+    "ras_mapk": ["KRAS", "NRAS", "BRAF"],
+    "bcma_cd38": ["TNFRSF17", "CD38"]
+  },
+  "leukemia": {
+    "flt3_signaling": ["FLT3"],
+    "idh1_idh2": ["IDH1", "IDH2"],
+    "npm1": ["NPM1"],
+    "tp53": ["TP53"],
+    "cell_differentiation": ["CEBPA", "RUNX1"]
+  }
+}
+
+
+
+
+
+
+
+

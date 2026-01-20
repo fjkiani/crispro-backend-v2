@@ -4,9 +4,17 @@ Configuration module for the oncology backend.
 import os
 from dotenv import load_dotenv
 from httpx import Timeout
+from loguru import logger
 
 # Load environment variables from .env file
 load_dotenv()
+
+# HIPAA and Security Configuration
+HIPAA_MODE = os.getenv("HIPAA_MODE", "false").lower() == "true"
+AUDIT_ENABLED = os.getenv("AUDIT_ENABLED", "false").lower() == "true"
+LOG_JSON = os.getenv("LOG_JSON", "false").lower() == "true"
+ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:5173").split(",")
 
 # Database configuration
 SUPABASE_URL = os.getenv("SUPABASE_URL")
@@ -38,6 +46,15 @@ DISABLE_EVO2 = os.getenv("DISABLE_EVO2", "false").lower() in ("true", "1", "yes"
 DISABLE_LITERATURE = os.getenv("DISABLE_LITERATURE", "false").lower() in ("true", "1", "yes")
 # Global Fusion (AlphaMissense) disable gate
 DISABLE_FUSION = os.getenv("DISABLE_FUSION", "false").lower() in ("true", "1", "yes")
+
+# SAE (Sparse Autoencoder) feature flags
+# Phase 1: Evo2 activations endpoint (disabled by default)
+ENABLE_EVO2_SAE = os.getenv("ENABLE_EVO2_SAE", "false").lower() in ("true", "1", "yes")
+# Phase 1: True SAE features from layer 26 (disabled by default)
+ENABLE_TRUE_SAE = os.getenv("ENABLE_TRUE_SAE", "false").lower() in ("true", "1", "yes")
+logger.info(f"DEBUG: ENABLE_TRUE_SAE resolved to: {ENABLE_TRUE_SAE}") # DEBUG STATEMENT
+# Phase 2: True SAE pathway scores (disabled by default, requires feature→pathway mapping)
+ENABLE_TRUE_SAE_PATHWAYS = os.getenv("ENABLE_TRUE_SAE_PATHWAYS", "false").lower() in ("true", "1", "yes")
 
 # Spam-safety controls for Evo fan-out (defaults favor safety)
 EVO_SPAM_SAFE = os.getenv("EVO_SPAM_SAFE", "true").lower() in ("true", "1", "yes")
@@ -95,6 +112,10 @@ def get_feature_flags():
         "disable_evo2": DISABLE_EVO2,
         "disable_literature": DISABLE_LITERATURE,
         "disable_fusion": DISABLE_FUSION,
+        # SAE flags
+        "enable_evo2_sae": ENABLE_EVO2_SAE,
+        "enable_true_sae": ENABLE_TRUE_SAE,
+        "enable_true_sae_pathways": ENABLE_TRUE_SAE_PATHWAYS,
         # Evo spam-safety knobs
         "evo_spam_safe": EVO_SPAM_SAFE,
         "evo_max_models": EVO_MAX_MODELS,
@@ -138,22 +159,31 @@ BORZOI_URL = os.getenv("BORZOI_URL", "").strip()
 # Evo2 service configuration
 EVO_SERVICE_URL = os.getenv("EVO_SERVICE_URL", "https://crispro--evo-service-evoservice-api.modal.run")
 EVO_URL_1B = os.getenv("EVO_URL_1B", "https://crispro--evo-service-evoservice1b-api-1b.modal.run")
-EVO_URL_7B = os.getenv("EVO_URL_7B", "https://crispro--evo-service-evoservice7b-api-7b.modal.run")
+# IMPORTANT: Do NOT default to a 7B URL. In many environments the 7B service is not deployed,
+# and a non-empty default causes silent fallback behavior + noisy 404s that look like "Evo2 ran"
+# when it didn't. Only use 7B when explicitly configured via env.
+EVO_URL_7B = os.getenv("EVO_URL_7B", "")
 EVO_URL_40B = os.getenv("EVO_URL_40B", "https://crispro--evo-service-evoservice-api.modal.run")
 EVO_TIMEOUT = Timeout(60.0, connect=10.0)
+
+# Default Evo2 model (can be overridden via DEFAULT_EVO_MODEL env var)
+# Change this default to affect all Evo2 model selections system-wide
+DEFAULT_EVO_MODEL = os.getenv("DEFAULT_EVO_MODEL", "evo2_1b")
 
 # Model to base URL mapping with dynamic fallback logic
 def get_model_url(model_id: str) -> str:
     """Get URL for model with fallback logic, evaluated at runtime"""
     # Re-read environment variables at runtime
-    url_1b = os.getenv("EVO_URL_1B", "")
-    url_7b = os.getenv("EVO_URL_7B", "https://crispro--evo-service-evoservice7b-api-7b.modal.run")
-    url_40b = os.getenv("EVO_URL_40B", "https://crispro--evo-service-evoservice-api.modal.run")
+    # IMPORTANT: provide sane defaults from this module so an unset env var
+    # doesn't silently route to an unintended fallback URL.
+    url_1b = os.getenv("EVO_URL_1B", EVO_URL_1B).strip()
+    url_7b = os.getenv("EVO_URL_7B", EVO_URL_7B).strip()
+    url_40b = os.getenv("EVO_URL_40B", EVO_URL_40B).strip()
     
     if model_id == "evo2_1b":
         return url_1b or url_7b or url_40b
     elif model_id == "evo2_7b":
-        return url_7b or url_40b
+        return url_7b or url_1b or url_40b
     elif model_id == "evo2_40b":
         return url_40b
     else:

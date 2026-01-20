@@ -1,0 +1,22 @@
+{
+  "cached_at": "2025-11-14T17:42:23.252903",
+  "trial_data": {
+    "id": "NCT02351479",
+    "title": "Hula, a Physical Activity Intervention for Female-Cancer Survivors",
+    "status": "COMPLETED",
+    "phases": "[\"NA\"]",
+    "summary": "A six-month interventional program to determine the biological and psychosocial effects of hula as a form of physical activity for female breast, cervical, endometrial or ovarian cancer survivors living on Oahu.",
+    "conditions": "[\"Physical Activity\", \"Breast Cancer\", \"Cervical Cancer\", \"Ovarian Cancer\", \"Endometrial Cancer\"]",
+    "interventions": "[\"Hula\"]",
+    "source": "ClinicalTrials.gov",
+    "inclusion_criteria": "* Lives on Oahu\n* Diagnosed with primary breast,cervical, endometrial or ovarian cancer (stage I-III)\n* Completed initial regional and systemic treatment for breast cancer 2 months ago\n* Physically capable of doing the hula-based physical activity\n* Receives approval by attending physician to participate in trial",
+    "exclusion_criteria": "* Currently undergoing chemotherapy or radiation therapy",
+    "inclusion_criteria_full": "* Lives on Oahu\n* Diagnosed with primary breast,cervical, endometrial or ovarian cancer (stage I-III)\n* Completed initial regional and systemic treatment for breast cancer 2 months ago\n* Physically capable of doing the hula-based physical activity\n* Receives approval by attending physician to participate in trial",
+    "exclusion_criteria_full": "* Currently undergoing chemotherapy or radiation therapy",
+    "primary_endpoint": null,
+    "interventions_json": null,
+    "locations_full_json": null,
+    "scraped_data_json": null,
+    "scraped_at": null
+  }
+}

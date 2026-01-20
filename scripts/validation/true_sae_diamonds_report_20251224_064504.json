@@ -1,0 +1,103 @@
+{
+  "timestamp": "2025-12-24T06:45:04.620073",
+  "validator": "validate_true_sae_diamonds",
+  "overall_passed": true,
+  "checks": [
+    {
+      "name": "label_contract",
+      "passed": true,
+      "details": "Tier-3 labels consistent (pos = resistant + refractory)",
+      "metrics": {
+        "total": 149,
+        "pos": 24,
+        "neg": 125
+      }
+    },
+    {
+      "name": "diamond_list",
+      "passed": true,
+      "details": "Diamond feature list stable and matches mapping JSON",
+      "metrics": {
+        "diamond_ids": [
+          1407,
+          6020,
+          9738,
+          12893,
+          16337,
+          22868,
+          26220,
+          27607,
+          31362
+        ]
+      }
+    },
+    {
+      "name": "single_feature_auc",
+      "passed": true,
+      "details": "Single-feature AUROC clears floor (>= 0.6)",
+      "metrics": {
+        "1407": {
+          "auroc": 0.6453333333333333,
+          "nonzero_patients": 63
+        },
+        "27607": {
+          "auroc": 0.6421666666666667,
+          "nonzero_patients": 40
+        },
+        "12893": {
+          "auroc": 0.6405,
+          "nonzero_patients": 35
+        }
+      }
+    },
+    {
+      "name": "multifeature_auc",
+      "passed": true,
+      "details": "Multi-feature AUROC recompute matches stored baseline and clears threshold",
+      "metrics": {
+        "stored_mean": 0.7831999999999999,
+        "status": "computed",
+        "mean_auroc": 0.7831999999999999,
+        "fold_auroc": [
+          0.824,
+          0.6719999999999999,
+          0.7679999999999999,
+          0.952,
+          0.7
+        ],
+        "fold_meta": [
+          {
+            "fold": 1,
+            "test_size": 30,
+            "test_positive": 5,
+            "auroc": 0.824
+          },
+          {
+            "fold": 2,
+            "test_size": 30,
+            "test_positive": 5,
+            "auroc": 0.6719999999999999
+          },
+          {
+            "fold": 3,
+            "test_size": 30,
+            "test_positive": 5,
+            "auroc": 0.7679999999999999
+          },
+          {
+            "fold": 4,
+            "test_size": 30,
+            "test_positive": 5,
+            "auroc": 0.952
+          },
+          {
+            "fold": 5,
+            "test_size": 29,
+            "test_positive": 4,
+            "auroc": 0.7
+          }
+        ]
+      }
+    }
+  ]
+}

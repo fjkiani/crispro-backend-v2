@@ -1,0 +1,367 @@
+{
+  "test_suite": "risk_benefit_composition",
+  "version": "1.0",
+  "created": "2025-01-19",
+  "transparency_notice": "SYNTHETIC DATA - Validates deterministic logic only. Does NOT prove clinical validity or outcome improvement.",
+  "what_this_proves": [
+    "Composition logic correctly implements defined policy",
+    "All toxicity tiers handled as specified",
+    "Edge cases (missing data, WT variants) handled gracefully",
+    "Rankings reflect risk-benefit priority"
+  ],
+  "what_this_does_not_prove": [
+    "The policy improves patient outcomes",
+    "The weights are optimal",
+    "The system generalizes to unseen patients",
+    "The integration predicts clinical response"
+  ],
+  "cases": [
+    {
+      "case_id": "SYN-001",
+      "group": "A_HIGH_TOXICITY",
+      "description": "DPYD *2A/*2A patient with 5-FU - contraindicated",
+      "patient": {
+        "cancer_type": "Ovarian",
+        "mutations": ["BRCA2 germline"],
+        "pgx_variants": ["DPYD *2A/*2A"]
+      },
+      "drug": "5-Fluorouracil",
+      "inputs": {
+        "efficacy_score": 0.65,
+        "toxicity_tier": "HIGH",
+        "adjustment_factor": 0.0
+      },
+      "expected": {
+        "composite_score": 0.0,
+        "action_label": "AVOID / HIGH-RISK"
+      },
+      "clinical_rationale": "DPYD deficiency is lethal with 5-FU (CPIC Level A contraindication). DPD-deficient patients have 50% mortality with standard doses.",
+      "cpic_reference": "Amstutz et al. Clin Pharmacol Ther. 2018;103(2):210-216"
+    },
+    {
+      "case_id": "SYN-002",
+      "group": "A_HIGH_TOXICITY",
+      "description": "DPYD *13 patient with Capecitabine - contraindicated",
+      "patient": {
+        "cancer_type": "Colorectal",
+        "mutations": ["Wild-type"],
+        "pgx_variants": ["DPYD *13"]
+      },
+      "drug": "Capecitabine",
+      "inputs": {
+        "efficacy_score": 0.70,
+        "toxicity_tier": "HIGH",
+        "adjustment_factor": 0.0
+      },
+      "expected": {
+        "composite_score": 0.0,
+        "action_label": "AVOID / HIGH-RISK"
+      },
+      "clinical_rationale": "DPYD *13 results in complete DPD deficiency. CPIC recommends avoiding fluoropyrimidines entirely.",
+      "cpic_reference": "Amstutz et al. Clin Pharmacol Ther. 2018;103(2):210-216"
+    },
+    {
+      "case_id": "SYN-003",
+      "group": "A_HIGH_TOXICITY",
+      "description": "TPMT *3A/*3A patient with 6-Mercaptopurine - contraindicated",
+      "patient": {
+        "cancer_type": "ALL",
+        "mutations": ["Wild-type"],
+        "pgx_variants": ["TPMT *3A/*3A"]
+      },
+      "drug": "6-Mercaptopurine",
+      "inputs": {
+        "efficacy_score": 0.75,
+        "toxicity_tier": "HIGH",
+        "adjustment_factor": 0.0
+      },
+      "expected": {
+        "composite_score": 0.0,
+        "action_label": "AVOID / HIGH-RISK"
+      },
+      "clinical_rationale": "Homozygous TPMT loss results in severe myelosuppression with thiopurines. CPIC recommends avoiding or using <10% of standard dose.",
+      "cpic_reference": "Relling et al. Clin Pharmacol Ther. 2019;105(5):1095-1105"
+    },
+    {
+      "case_id": "SYN-004",
+      "group": "B_MODERATE_TOXICITY",
+      "description": "DPYD c.2846A>T patient with 5-FU - dose reduction required",
+      "patient": {
+        "cancer_type": "Colorectal",
+        "mutations": ["Wild-type"],
+        "pgx_variants": ["DPYD c.2846A>T"]
+      },
+      "drug": "5-Fluorouracil",
+      "inputs": {
+        "efficacy_score": 0.75,
+        "toxicity_tier": "MODERATE",
+        "adjustment_factor": 0.50
+      },
+      "expected": {
+        "composite_score": 0.375,
+        "action_label": "CONSIDER WITH MONITORING"
+      },
+      "clinical_rationale": "Intermediate DPYD metabolizer requires 50% dose reduction per CPIC guidelines. Activity score 1.0-1.5.",
+      "cpic_reference": "Amstutz et al. Clin Pharmacol Ther. 2018;103(2):210-216"
+    },
+    {
+      "case_id": "SYN-005",
+      "group": "B_MODERATE_TOXICITY",
+      "description": "TPMT *3A/*1 patient with 6-Mercaptopurine - dose reduction required",
+      "patient": {
+        "cancer_type": "ALL",
+        "mutations": ["Wild-type"],
+        "pgx_variants": ["TPMT *3A/*1"]
+      },
+      "drug": "6-Mercaptopurine",
+      "inputs": {
+        "efficacy_score": 0.70,
+        "toxicity_tier": "MODERATE",
+        "adjustment_factor": 0.60
+      },
+      "expected": {
+        "composite_score": 0.42,
+        "action_label": "CONSIDER WITH MONITORING"
+      },
+      "clinical_rationale": "Heterozygous TPMT requires 30-70% dose reduction per CPIC. One functional allele provides partial activity.",
+      "cpic_reference": "Relling et al. Clin Pharmacol Ther. 2019;105(5):1095-1105"
+    },
+    {
+      "case_id": "SYN-006",
+      "group": "B_MODERATE_TOXICITY",
+      "description": "UGT1A1 *28/*28 patient with Irinotecan - dose reduction required",
+      "patient": {
+        "cancer_type": "Colorectal",
+        "mutations": ["Wild-type"],
+        "pgx_variants": ["UGT1A1 *28/*28"]
+      },
+      "drug": "Irinotecan",
+      "inputs": {
+        "efficacy_score": 0.72,
+        "toxicity_tier": "MODERATE",
+        "adjustment_factor": 0.70
+      },
+      "expected": {
+        "composite_score": 0.504,
+        "action_label": "CONSIDER WITH MONITORING"
+      },
+      "clinical_rationale": "UGT1A1 Poor Metabolizer status increases irinotecan toxicity. CPIC recommends 30% dose reduction for *28/*28.",
+      "cpic_reference": "Gammal et al. Clin Pharmacol Ther. 2016;99(4):363-369"
+    },
+    {
+      "case_id": "SYN-007",
+      "group": "B_MODERATE_TOXICITY",
+      "description": "CYP2D6 *4/*4 patient with Tamoxifen - reduced efficacy",
+      "patient": {
+        "cancer_type": "Breast ER+",
+        "mutations": ["Wild-type"],
+        "pgx_variants": ["CYP2D6 *4/*4"]
+      },
+      "drug": "Tamoxifen",
+      "inputs": {
+        "efficacy_score": 0.68,
+        "toxicity_tier": "MODERATE",
+        "adjustment_factor": 0.50
+      },
+      "expected": {
+        "composite_score": 0.34,
+        "action_label": "CONSIDER WITH MONITORING"
+      },
+      "clinical_rationale": "CYP2D6 Poor Metabolizer has reduced endoxifen formation, leading to reduced tamoxifen efficacy. CPIC recommends considering alternative therapy.",
+      "cpic_reference": "Goetz et al. Clin Pharmacol Ther. 2018;103(5):770-777"
+    },
+    {
+      "case_id": "SYN-008",
+      "group": "C_LOW_TOXICITY",
+      "description": "BRCA2 patient with Olaparib - strong synthetic lethality",
+      "patient": {
+        "cancer_type": "Ovarian",
+        "mutations": ["BRCA2 germline pathogenic"],
+        "pgx_variants": []
+      },
+      "drug": "Olaparib",
+      "inputs": {
+        "efficacy_score": 0.85,
+        "toxicity_tier": "LOW",
+        "adjustment_factor": 1.0
+      },
+      "expected": {
+        "composite_score": 0.85,
+        "action_label": "PREFERRED"
+      },
+      "clinical_rationale": "BRCA2-mutated tumors are exquisitely sensitive to PARP inhibition via synthetic lethality. FDA-approved indication.",
+      "clinical_evidence": "Moore et al. N Engl J Med. 2018;379(26):2495-2505 (SOLO1 trial)"
+    },
+    {
+      "case_id": "SYN-009",
+      "group": "C_LOW_TOXICITY",
+      "description": "HRD+ patient with Niraparib - validated benefit",
+      "patient": {
+        "cancer_type": "Ovarian",
+        "mutations": ["HRD-positive (genomic instability)"],
+        "pgx_variants": []
+      },
+      "drug": "Niraparib",
+      "inputs": {
+        "efficacy_score": 0.82,
+        "toxicity_tier": "LOW",
+        "adjustment_factor": 1.0
+      },
+      "expected": {
+        "composite_score": 0.82,
+        "action_label": "PREFERRED"
+      },
+      "clinical_rationale": "HRD-positive tumors benefit from PARP inhibition beyond BRCA. PRIMA/ENGOT-OV26 validated HRD biomarker.",
+      "clinical_evidence": "González-Martín et al. N Engl J Med. 2019;381(25):2391-2402"
+    },
+    {
+      "case_id": "SYN-010",
+      "group": "C_LOW_TOXICITY",
+      "description": "BRCA1 patient with Carboplatin - enhanced DNA damage sensitivity",
+      "patient": {
+        "cancer_type": "Ovarian",
+        "mutations": ["BRCA1 germline pathogenic"],
+        "pgx_variants": []
+      },
+      "drug": "Carboplatin",
+      "inputs": {
+        "efficacy_score": 0.80,
+        "toxicity_tier": "LOW",
+        "adjustment_factor": 1.0
+      },
+      "expected": {
+        "composite_score": 0.80,
+        "action_label": "PREFERRED"
+      },
+      "clinical_rationale": "BRCA1-mutated tumors are platinum-sensitive due to defective DNA repair. Standard of care backbone.",
+      "clinical_evidence": "TCGA-OV platinum response validation (our cohort)"
+    },
+    {
+      "case_id": "SYN-011",
+      "group": "C_LOW_TOXICITY",
+      "description": "MBD4+TP53 patient with Olaparib - DDR-deficient",
+      "patient": {
+        "cancer_type": "Ovarian",
+        "mutations": ["MBD4 loss-of-function", "TP53 R175H"],
+        "pgx_variants": []
+      },
+      "drug": "Olaparib",
+      "inputs": {
+        "efficacy_score": 0.80,
+        "toxicity_tier": "LOW",
+        "adjustment_factor": 1.0
+      },
+      "expected": {
+        "composite_score": 0.80,
+        "action_label": "PREFERRED"
+      },
+      "clinical_rationale": "MBD4 loss impairs base excision repair; TP53 mutation enables synthetic lethality with PARP inhibition.",
+      "clinical_evidence": "Our mechanism fit validation (0.983 mean for DDR-high)"
+    },
+    {
+      "case_id": "SYN-012",
+      "group": "C_LOW_TOXICITY",
+      "description": "BRAF V600E melanoma with Vemurafenib - direct target",
+      "patient": {
+        "cancer_type": "Melanoma",
+        "mutations": ["BRAF V600E"],
+        "pgx_variants": []
+      },
+      "drug": "Vemurafenib",
+      "inputs": {
+        "efficacy_score": 0.88,
+        "toxicity_tier": "LOW",
+        "adjustment_factor": 1.0
+      },
+      "expected": {
+        "composite_score": 0.88,
+        "action_label": "PREFERRED"
+      },
+      "clinical_rationale": "BRAF V600E is a direct therapeutic target. Vemurafenib selectively inhibits mutant BRAF.",
+      "clinical_evidence": "Chapman et al. N Engl J Med. 2011;364(26):2507-16 (BRIM-3)"
+    },
+    {
+      "case_id": "SYN-013",
+      "group": "D_EDGE_CASES",
+      "description": "Patient with no PGx data available",
+      "patient": {
+        "cancer_type": "Ovarian",
+        "mutations": ["Wild-type"],
+        "pgx_variants": null
+      },
+      "drug": "Carboplatin",
+      "inputs": {
+        "efficacy_score": 0.70,
+        "toxicity_tier": null,
+        "adjustment_factor": null
+      },
+      "expected": {
+        "composite_score": 0.70,
+        "action_label": "PREFERRED (PGx UNSCREENED)"
+      },
+      "clinical_rationale": "Missing PGx data should NOT block recommendation but should flag for screening consideration.",
+      "edge_case_type": "Missing PGx screening"
+    },
+    {
+      "case_id": "SYN-014",
+      "group": "D_EDGE_CASES",
+      "description": "KRAS G12D patient with Cetuximab - low efficacy due to negative predictor",
+      "patient": {
+        "cancer_type": "Colorectal",
+        "mutations": ["KRAS G12D"],
+        "pgx_variants": []
+      },
+      "drug": "Cetuximab",
+      "inputs": {
+        "efficacy_score": 0.20,
+        "toxicity_tier": "LOW",
+        "adjustment_factor": 1.0
+      },
+      "expected": {
+        "composite_score": 0.20,
+        "action_label": "PREFERRED"
+      },
+      "clinical_rationale": "KRAS mutations predict lack of response to anti-EGFR therapy. Low efficacy is correctly captured but not vetoed (drug is safe, just less effective).",
+      "clinical_evidence": "Karapetis et al. N Engl J Med. 2008;359(17):1757-65",
+      "edge_case_type": "Low efficacy (negative predictor)"
+    },
+    {
+      "case_id": "SYN-015",
+      "group": "D_EDGE_CASES",
+      "description": "BRCA2 patient with 5-FU and wild-type DPYD - safe combination",
+      "patient": {
+        "cancer_type": "Ovarian",
+        "mutations": ["BRCA2 germline"],
+        "pgx_variants": ["DPYD *1/*1 (wild-type)"]
+      },
+      "drug": "5-Fluorouracil",
+      "inputs": {
+        "efficacy_score": 0.65,
+        "toxicity_tier": "LOW",
+        "adjustment_factor": 1.0
+      },
+      "expected": {
+        "composite_score": 0.65,
+        "action_label": "PREFERRED"
+      },
+      "clinical_rationale": "Wild-type DPYD means normal DPD enzyme activity. 5-FU is safe at standard doses. Lower efficacy is due to limited mechanism alignment, not toxicity.",
+      "edge_case_type": "Wild-type PGx (no adjustment needed)"
+    }
+  ],
+  "validation_summary": {
+    "total_cases": 15,
+    "group_a_high_toxicity": 3,
+    "group_b_moderate_toxicity": 4,
+    "group_c_low_toxicity": 5,
+    "group_d_edge_cases": 3,
+    "expected_pass_rate": "100% (deterministic logic)",
+    "claims_this_enables": [
+      "Composition logic is deterministically correct for all policy cases",
+      "HIGH toxicity results in hard veto (composite = 0)",
+      "MODERATE toxicity applies adjustment factor penalty",
+      "LOW toxicity preserves full efficacy score",
+      "Missing PGx data is flagged but not blocking"
+    ]
+  }
+}
+

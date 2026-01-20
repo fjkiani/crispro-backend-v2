@@ -1,0 +1,226 @@
+{
+  "timestamp": "2025-11-24T19:16:30.300397",
+  "disease": "multiple_myeloma",
+  "metrics": {
+    "pathway_alignment_accuracy": 0.4,
+    "correct_predictions": 2,
+    "total_predictions": 5,
+    "average_confidence": 0.4
+  },
+  "target": {
+    "pathway_alignment_accuracy": 1.0
+  },
+  "results": [
+    {
+      "variant": "BRAF V600E",
+      "expected_drug": "BRAF inhibitor",
+      "expected_rank": 1,
+      "expected_confidence": 0.4,
+      "top_drug": "BRAF inhibitor",
+      "top_confidence": 0.4,
+      "drugs": [
+        {
+          "name": "BRAF inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.639,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "MEK inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.68,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "IMiD",
+          "confidence": 0.4,
+          "efficacy_score": 0.397,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Proteasome inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.437,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Anti-CD38",
+          "confidence": 0.4,
+          "efficacy_score": 0.356,
+          "evidence_tier": "consider"
+        }
+      ],
+      "correct": true
+    },
+    {
+      "variant": "BRAF V600K",
+      "expected_drug": "BRAF inhibitor",
+      "expected_rank": 1,
+      "expected_confidence": 0.4,
+      "top_drug": "BRAF inhibitor",
+      "top_confidence": 0.4,
+      "drugs": [
+        {
+          "name": "BRAF inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.639,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "MEK inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.68,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "IMiD",
+          "confidence": 0.4,
+          "efficacy_score": 0.397,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Proteasome inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.437,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Anti-CD38",
+          "confidence": 0.4,
+          "efficacy_score": 0.356,
+          "evidence_tier": "consider"
+        }
+      ],
+      "correct": true
+    },
+    {
+      "variant": "KRAS G12D",
+      "expected_drug": "MEK inhibitor",
+      "expected_rank": 2,
+      "expected_confidence": 0.4,
+      "top_drug": "BRAF inhibitor",
+      "top_confidence": 0.4,
+      "drugs": [
+        {
+          "name": "BRAF inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "MEK inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "IMiD",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Proteasome inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Anti-CD38",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        }
+      ],
+      "correct": false
+    },
+    {
+      "variant": "KRAS G12V",
+      "expected_drug": "MEK inhibitor",
+      "expected_rank": 2,
+      "expected_confidence": 0.4,
+      "top_drug": "BRAF inhibitor",
+      "top_confidence": 0.4,
+      "drugs": [
+        {
+          "name": "BRAF inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "MEK inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "IMiD",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Proteasome inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Anti-CD38",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        }
+      ],
+      "correct": false
+    },
+    {
+      "variant": "NRAS Q61K",
+      "expected_drug": "MEK inhibitor",
+      "expected_rank": 2,
+      "expected_confidence": 0.4,
+      "top_drug": "BRAF inhibitor",
+      "top_confidence": 0.4,
+      "drugs": [
+        {
+          "name": "BRAF inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "MEK inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "IMiD",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Proteasome inhibitor",
+          "confidence": 0.4,
+          "efficacy_score": 0.69,
+          "evidence_tier": "consider"
+        },
+        {
+          "name": "Anti-CD38",
+          "confidence": 0.4,
+          "efficacy_score": 0.532,
+          "evidence_tier": "consider"
+        }
+      ],
+      "correct": false
+    }
+  ],
+  "provenance": {
+    "script": "benchmark_sota_mm.py",
+    "api_base": "http://127.0.0.1:8000",
+    "model_id": "evo2_1b",
+    "ablation_mode": "SPE"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "cohort_size": 469,
+  "outcome_distribution": {
+    "sensitive": 396,
+    "resistant": 31,
+    "refractory": 42
+  },
+  "v1_sensitivity_lift": -0.04149620105201628,
+  "v2_quintile_gradient": -0.023833277907105654,
+  "v3_ddr_difference": -0.014713343480467211,
+  "validations_passed": 0,
+  "validations_total": 3
+}

@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "version": "v1_mock",
+    "last_updated": "2025-01-15T15:00:00Z",
+    "source": "Sprint 1 biomarker correlation analysis (MOCK DATA)",
+    "model": "Goodfire/Evo-2-Layer-26-Mixed",
+    "layer": "blocks-26",
+    "total_features": 32768,
+    "mapped_features": 9,
+    "status": "preliminary",
+    "warnings": [
+      "⚠️ MOCK DATA - Mapping based on synthetic signals",
+      "⚠️ Real mapping requires real SAE cohort analysis",
+      "⚠️ Manager approval required before use in production"
+    ]
+  },
+  "pathways": {
+    "ddr": {
+      "name": "DNA Damage Response & Homologous Recombination",
+      "description": "BRCA1/2-mediated homologous recombination repair, DNA damage signaling, platinum sensitivity mechanism",
+      "aliases": ["DNA repair", "HR", "HRD", "BRCA"],
+      "feature_indices": [100, 101, 102],
+      "correlation_with_platinum": "positive",
+      "mean_pearson_r": null,
+      "mean_cohen_d": null,
+      "cv_stability": null,
+      "confidence": "MOCK",
+      "evidence": "Synthetic signal injected in mock data. Real mapping TBD from Sprint 1 real data.",
+      "biological_rationale": "DDR deficiency (e.g., BRCA1/2 mutations) predicts platinum sensitivity in ovarian cancer. Expected positive correlation.",
+      "genes_in_pathway": ["BRCA1", "BRCA2", "RAD51", "ATM", "ATR", "CHEK1", "CHEK2", "PALB2", "FANCA", "FANCD2"],
+      "drugs_targeting": ["Platinum (cisplatin, carboplatin)", "PARP inhibitors (olaparib, niraparib, rucaparib)"]
+    },
+    "mapk": {
+      "name": "MAPK/RAS/RAF Signaling",
+      "description": "Oncogenic RAS→RAF→MEK→ERK cascade, resistance mechanism, growth signaling",
+      "aliases": ["RAS pathway", "MAPK cascade", "ERK signaling"],
+      "feature_indices": [200, 201, 202],
+      "correlation_with_platinum": "negative",
+      "mean_pearson_r": null,
+      "mean_cohen_d": null,
+      "cv_stability": null,
+      "confidence": "MOCK",
+      "evidence": "Synthetic signal injected in mock data. Real mapping TBD from Sprint 1 real data.",
+      "biological_rationale": "MAPK activation drives resistance to platinum through survival signaling and apoptosis evasion. Expected negative correlation.",
+      "genes_in_pathway": ["KRAS", "NRAS", "BRAF", "MAP2K1", "MAP2K2", "MAPK1", "MAPK3"],
+      "drugs_targeting": ["MEK inhibitors (trametinib, cobimetinib)", "RAF inhibitors (dabrafenib, vemurafenib)"]
+    },
+    "io": {
+      "name": "Immune/Inflammatory Response",
+      "description": "T-cell infiltration, immune checkpoint signaling, inflammatory cytokines",
+      "aliases": ["Immune", "T-cell", "PD-L1", "TME"],
+      "feature_indices": [300, 301, 302],
+      "correlation_with_platinum": "moderate_positive",
+      "mean_pearson_r": null,
+      "mean_cohen_d": null,
+      "cv_stability": null,
+      "confidence": "MOCK",
+      "evidence": "Synthetic signal injected in mock data. Real mapping TBD from Sprint 1 real data.",
+      "biological_rationale": "Immune-active tumors may show better platinum response due to immunogenic cell death and T-cell mediated clearance.",
+      "genes_in_pathway": ["CD8A", "CD274", "PDCD1", "CTLA4", "IFNG", "TNF", "IL6", "CXCL10"],
+      "drugs_targeting": ["Checkpoint inhibitors (pembrolizumab, nivolumab)", "Bevacizumab (modulates TME)"]
+    },
+    "pi3k_akt": {
+      "name": "PI3K/AKT/mTOR Pathway",
+      "description": "Growth factor signaling, apoptosis resistance, metabolic reprogramming",
+      "aliases": ["PI3K", "AKT", "mTOR", "PTEN"],
+      "feature_indices": [],
+      "correlation_with_platinum": "unknown",
+      "mean_pearson_r": null,
+      "mean_cohen_d": null,
+      "cv_stability": null,
+      "confidence": "PENDING",
+      "evidence": "To be determined from Sprint 1 real data analysis.",
+      "biological_rationale": "PI3K/AKT activation can drive platinum resistance through anti-apoptotic signaling (BCL2, MCL1 upregulation).",
+      "genes_in_pathway": ["PIK3CA", "PIK3CB", "AKT1", "AKT2", "MTOR", "PTEN", "TSC1", "TSC2"],
+      "drugs_targeting": ["PI3K inhibitors (alpelisib)", "AKT inhibitors (capivasertib)", "mTOR inhibitors (everolimus)"]
+    },
+    "tp53": {
+      "name": "TP53/Cell Cycle Checkpoint",
+      "description": "p53-mediated apoptosis, G1/S checkpoint, DNA damage response",
+      "aliases": ["p53", "MDM2", "cell cycle"],
+      "feature_indices": [],
+      "correlation_with_platinum": "unknown",
+      "mean_pearson_r": null,
+      "mean_cohen_d": null,
+      "cv_stability": null,
+      "confidence": "PENDING",
+      "evidence": "To be determined from Sprint 1 real data analysis.",
+      "biological_rationale": "TP53 mutations are prevalent in ovarian cancer (~96%). Loss of p53 function may impact platinum response via apoptosis evasion.",
+      "genes_in_pathway": ["TP53", "MDM2", "MDM4", "CDKN1A", "CDKN2A", "RB1", "E2F1"],
+      "drugs_targeting": ["MDM2 inhibitors (experimental)"]
+    },
+    "vegf": {
+      "name": "VEGF/Angiogenesis",
+      "description": "Tumor vascularization, hypoxia response, metastatic potential",
+      "aliases": ["VEGF", "angiogenesis", "hypoxia"],
+      "feature_indices": [],
+      "correlation_with_platinum": "unknown",
+      "mean_pearson_r": null,
+      "mean_cohen_d": null,
+      "cv_stability": null,
+      "confidence": "PENDING",
+      "evidence": "To be determined from Sprint 1 real data analysis.",
+      "biological_rationale": "Angiogenesis and hypoxia can modulate platinum response. Bevacizumab (anti-VEGF) combined with platinum shows clinical benefit.",
+      "genes_in_pathway": ["VEGFA", "VEGFR1", "VEGFR2", "HIF1A", "FLT1", "KDR"],
+      "drugs_targeting": ["Bevacizumab (anti-VEGF)", "VEGFR inhibitors (pazopanib, sorafenib)"]
+    },
+    "apoptosis": {
+      "name": "Apoptosis/BCL2 Family",
+      "description": "Programmed cell death, BCL2/BAX balance, platinum-induced apoptosis",
+      "aliases": ["BCL2", "BAX", "cell death"],
+      "feature_indices": [],
+      "correlation_with_platinum": "unknown",
+      "mean_pearson_r": null,
+      "mean_cohen_d": null,
+      "cv_stability": null,
+      "confidence": "PENDING",
+      "evidence": "To be determined from Sprint 1 real data analysis.",
+      "biological_rationale": "Platinum kills cancer cells via DNA damage-induced apoptosis. BCL2 overexpression or BAX loss can confer resistance.",
+      "genes_in_pathway": ["BCL2", "BCL2L1", "MCL1", "BAX", "BAK1", "BID", "PUMA", "NOXA"],
+      "drugs_targeting": ["BCL2 inhibitors (venetoclax)"]
+    }
+  },
+  "provenance": {
+    "creation_method": "manual_template_creation",
+    "curator": "Zo (Lead Commander)",
+    "timestamp": "2025-01-15T15:00:00Z",
+    "sprint": "Sprint 2 Task 1",
+    "validation_status": "template_only",
+    "manager_approval": "pending",
+    "next_steps": [
+      "Run Sprint 1 real data biomarker analysis",
+      "Populate feature_indices from top 100 features",
+      "Compute mean statistics (pearson_r, cohen_d, cv_stability)",
+      "Assign confidence levels based on statistical evidence",
+      "Literature review for top features",
+      "Manager review and approval"
+    ]
+  }
+}
+
+
+

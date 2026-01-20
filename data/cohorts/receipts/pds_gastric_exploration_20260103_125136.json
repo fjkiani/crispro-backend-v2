@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-01-03T12:51:36.397669",
+  "output_file": "oncology-coPilot/oncology-backend-minimal/data/cohorts/pds_gastric_exploration_20260103_125136.json",
+  "caslibs_explored": [
+    "Gastric_MerckKG_2008_130",
+    "Gastric_Multipl_1999_416",
+    "Gastric_Multipl_2008_415",
+    "Gastric_SanofiU_1999_143"
+  ],
+  "method": "Direct CAS API connection"
+}

@@ -1,0 +1,419 @@
+{
+  "date": "2025-12-03T20:19:17.886491",
+  "test_file": "test_cases_pilot.json",
+  "num_cases": 10,
+  "aggregate_metrics": {
+    "drug_accuracy": 0.1,
+    "drug_accuracy_ci_95": [
+      0.01787621309507289,
+      0.4041500267952385
+    ],
+    "sl_detection_tpr": 0.8571428571428571,
+    "sl_detection_fpr": 0.0,
+    "sl_detection_precision": 1.0,
+    "sl_detection_recall": 0.8571428571428571,
+    "sl_detection_confusion_matrix": {
+      "tp": 6,
+      "fp": 0,
+      "tn": 3,
+      "fn": 1
+    },
+    "mean_essentiality_correlation": 1.0,
+    "essentiality_correlation_ci_95": [
+      0.0,
+      0.0
+    ],
+    "num_cases_with_correlation": 1,
+    "total_cases": 10
+  },
+  "results": [
+    {
+      "case_id": "SL_001",
+      "ground_truth": {
+        "synthetic_lethality_detected": true,
+        "known_sl_pairs": [
+          "BRCA1+PARP"
+        ],
+        "effective_drugs": [
+          "Olaparib",
+          "Niraparib",
+          "Rucaparib"
+        ],
+        "broken_pathways": [
+          "HR"
+        ],
+        "essential_pathways": [
+          "PARP"
+        ],
+        "depmap_essentiality": {
+          "BRCA1": 0.92
+        },
+        "clinical_evidence": {
+          "olaparib_fda_approved": true,
+          "olaparib_indication": "BRCA-mutated ovarian cancer",
+          "response_rate": 0.65
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "platinum",
+        "essentiality_scores": []
+      },
+      "metrics": {
+        "drug_match": false,
+        "sl_detection_tp": true,
+        "sl_detection_fp": false,
+        "sl_detection_tn": false,
+        "sl_detection_fn": false
+      }
+    },
+    {
+      "case_id": "SL_002",
+      "ground_truth": {
+        "synthetic_lethality_detected": true,
+        "known_sl_pairs": [
+          "BRCA2+PARP"
+        ],
+        "effective_drugs": [
+          "Olaparib",
+          "Niraparib"
+        ],
+        "broken_pathways": [
+          "HR"
+        ],
+        "essential_pathways": [
+          "PARP"
+        ],
+        "depmap_essentiality": {
+          "BRCA2": 0.88
+        },
+        "clinical_evidence": {
+          "olaparib_fda_approved": true,
+          "response_rate": 0.6
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "platinum",
+        "essentiality_scores": []
+      },
+      "metrics": {
+        "drug_match": false,
+        "sl_detection_tp": true,
+        "sl_detection_fp": false,
+        "sl_detection_tn": false,
+        "sl_detection_fn": false
+      }
+    },
+    {
+      "case_id": "SL_003",
+      "ground_truth": {
+        "synthetic_lethality_detected": true,
+        "known_sl_pairs": [
+          "MBD4+PARP",
+          "TP53+ATR"
+        ],
+        "effective_drugs": [
+          "Olaparib",
+          "Ceralasertib"
+        ],
+        "broken_pathways": [
+          "BER",
+          "G1/S Checkpoint"
+        ],
+        "essential_pathways": [
+          "HR",
+          "ATR/CHK1"
+        ],
+        "depmap_essentiality": {
+          "MBD4": 0.8,
+          "TP53": 0.75
+        },
+        "clinical_evidence": {
+          "olaparib_fda_approved": true,
+          "ceralasertib_status": "clinical_trials"
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "olaparib",
+        "essentiality_scores": [
+          {
+            "gene": "MBD4",
+            "score": 0.9
+          },
+          {
+            "gene": "TP53",
+            "score": 0.35
+          }
+        ]
+      },
+      "metrics": {
+        "drug_match": true,
+        "sl_detection_tp": true,
+        "sl_detection_fp": false,
+        "sl_detection_tn": false,
+        "sl_detection_fn": false,
+        "essentiality_correlation": 1.0
+      }
+    },
+    {
+      "case_id": "SL_004",
+      "ground_truth": {
+        "synthetic_lethality_detected": true,
+        "known_sl_pairs": [
+          "TP53+ATR"
+        ],
+        "effective_drugs": [
+          "Ceralasertib",
+          "Adavosertib"
+        ],
+        "broken_pathways": [
+          "G1/S Checkpoint"
+        ],
+        "essential_pathways": [
+          "ATR/CHK1"
+        ],
+        "depmap_essentiality": {
+          "TP53": 0.7
+        },
+        "clinical_evidence": {
+          "ceralasertib_status": "clinical_trials"
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "olaparib",
+        "essentiality_scores": [
+          {
+            "gene": "TP53",
+            "score": 0.35
+          }
+        ]
+      },
+      "metrics": {
+        "drug_match": false,
+        "sl_detection_tp": false,
+        "sl_detection_fp": false,
+        "sl_detection_tn": false,
+        "sl_detection_fn": true
+      }
+    },
+    {
+      "case_id": "SL_005",
+      "ground_truth": {
+        "synthetic_lethality_detected": true,
+        "known_sl_pairs": [
+          "BRCA1+PARP",
+          "TP53+ATR"
+        ],
+        "effective_drugs": [
+          "Olaparib",
+          "Ceralasertib"
+        ],
+        "broken_pathways": [
+          "HR",
+          "G1/S Checkpoint"
+        ],
+        "essential_pathways": [
+          "PARP",
+          "ATR/CHK1"
+        ],
+        "depmap_essentiality": {
+          "BRCA1": 0.95,
+          "TP53": 0.75
+        },
+        "clinical_evidence": {
+          "olaparib_fda_approved": true,
+          "response_rate": 0.7
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "platinum",
+        "essentiality_scores": []
+      },
+      "metrics": {
+        "drug_match": false,
+        "sl_detection_tp": true,
+        "sl_detection_fp": false,
+        "sl_detection_tn": false,
+        "sl_detection_fn": false
+      }
+    },
+    {
+      "case_id": "SL_006",
+      "ground_truth": {
+        "synthetic_lethality_detected": false,
+        "known_sl_pairs": [],
+        "effective_drugs": [],
+        "broken_pathways": [],
+        "essential_pathways": [],
+        "depmap_essentiality": {
+          "OR4F5": 0.1
+        },
+        "clinical_evidence": {
+          "note": "Benign variant, no known SL"
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "olaparib",
+        "essentiality_scores": [
+          {
+            "gene": "OR4F5",
+            "score": 0.35
+          }
+        ]
+      },
+      "metrics": {
+        "drug_match": false,
+        "sl_detection_tp": false,
+        "sl_detection_fp": false,
+        "sl_detection_tn": true,
+        "sl_detection_fn": false
+      }
+    },
+    {
+      "case_id": "SL_007",
+      "ground_truth": {
+        "synthetic_lethality_detected": false,
+        "known_sl_pairs": [],
+        "effective_drugs": [],
+        "broken_pathways": [],
+        "essential_pathways": [],
+        "depmap_essentiality": {
+          "HLA-A": 0.15
+        },
+        "clinical_evidence": {
+          "note": "Non-essential gene, no SL expected"
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "olaparib",
+        "essentiality_scores": [
+          {
+            "gene": "HLA-A",
+            "score": 0.35
+          }
+        ]
+      },
+      "metrics": {
+        "drug_match": false,
+        "sl_detection_tp": false,
+        "sl_detection_fp": false,
+        "sl_detection_tn": true,
+        "sl_detection_fn": false
+      }
+    },
+    {
+      "case_id": "SL_008",
+      "ground_truth": {
+        "synthetic_lethality_detected": false,
+        "known_sl_pairs": [],
+        "effective_drugs": [
+          "Trametinib"
+        ],
+        "broken_pathways": [
+          "MAPK"
+        ],
+        "essential_pathways": [],
+        "depmap_essentiality": {
+          "KRAS": 0.25
+        },
+        "clinical_evidence": {
+          "note": "KRAS mutation, but no SL relationship"
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "olaparib",
+        "essentiality_scores": [
+          {
+            "gene": "KRAS",
+            "score": 0.35
+          }
+        ]
+      },
+      "metrics": {
+        "drug_match": false,
+        "sl_detection_tp": false,
+        "sl_detection_fp": false,
+        "sl_detection_tn": true,
+        "sl_detection_fn": false
+      }
+    },
+    {
+      "case_id": "SL_009",
+      "ground_truth": {
+        "synthetic_lethality_detected": true,
+        "known_sl_pairs": [
+          "BRCA1+PARP"
+        ],
+        "effective_drugs": [
+          "Olaparib",
+          "Niraparib"
+        ],
+        "broken_pathways": [
+          "HR"
+        ],
+        "essential_pathways": [
+          "PARP"
+        ],
+        "depmap_essentiality": {
+          "BRCA1": 0.9,
+          "PIK3CA": 0.3
+        },
+        "clinical_evidence": {
+          "olaparib_fda_approved": true,
+          "note": "BRCA1 SL dominates, PIK3CA secondary"
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "platinum",
+        "essentiality_scores": []
+      },
+      "metrics": {
+        "drug_match": false,
+        "sl_detection_tp": true,
+        "sl_detection_fp": false,
+        "sl_detection_tn": false,
+        "sl_detection_fn": false
+      }
+    },
+    {
+      "case_id": "SL_010",
+      "ground_truth": {
+        "synthetic_lethality_detected": true,
+        "known_sl_pairs": [
+          "BRCA2+PARP",
+          "TP53+ATR"
+        ],
+        "effective_drugs": [
+          "Olaparib",
+          "Ceralasertib"
+        ],
+        "broken_pathways": [
+          "HR",
+          "G1/S Checkpoint"
+        ],
+        "essential_pathways": [
+          "PARP",
+          "ATR/CHK1"
+        ],
+        "depmap_essentiality": {
+          "BRCA2": 0.85,
+          "TP53": 0.72
+        },
+        "clinical_evidence": {
+          "olaparib_fda_approved": true,
+          "note": "Germline BRCA2 + somatic TP53"
+        }
+      },
+      "prediction": {
+        "suggested_therapy": "platinum",
+        "essentiality_scores": []
+      },
+      "metrics": {
+        "drug_match": false,
+        "sl_detection_tp": true,
+        "sl_detection_fp": false,
+        "sl_detection_tn": false,
+        "sl_detection_fn": false
+      }
+    }
+  ]
+}

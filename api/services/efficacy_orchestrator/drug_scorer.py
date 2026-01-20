@@ -2,6 +2,7 @@
 Drug Scorer: Handles individual drug scoring logic.
 """
 import os
+import logging
 from typing import Dict, Any, List
 
 from .models import DrugScoreResult
@@ -42,25 +43,45 @@ class DrugScorer:
         seq_pct = seq_scores[0].calibrated_seq_percentile or 0.0 if seq_scores else 0.0
         
         # Pathway score (raw) and percentile normalization
-        drug_weights = get_pathway_weights_for_drug(drug_name)
+        drug_weights = get_pathway_weights_for_drug(drug_name, disease=disease)
         s_path = sum(pathway_scores.get(pathway, 0.0) * weight for pathway, weight in drug_weights.items())
-        # Normalize based on empirical Evo2 ranges (pathogenic deltas ~1e-6..1e-4)
+        # Normalize based on actual pathway score ranges (observed: 0 to ~0.005)
+        # Previous range (1e-6 to 1e-4) was incorrect - actual scores are ~0.002 (2e-3)
+        # Using 0 to 0.005 range to provide better differentiation in confidence calculation
+        # This maps: 0.001 → 0.2, 0.002 → 0.4, 0.003 → 0.6, 0.005 → 1.0
         if s_path > 0:
-            path_pct = min(1.0, max(0.0, (s_path - 1e-6) / (1e-4 - 1e-6)))
+            # Simple linear normalization: s_path / max_range
+            # Using 0.005 as max to ensure pathway scores in 0.001-0.003 range get meaningful percentiles
+            path_pct = min(1.0, max(0.0, s_path / 0.005))
         else:
             path_pct = 0.0
         
-        # Evidence score
+        # Debug logging (enabled via ENABLE_PATHWAY_DEBUG=1)
+        if os.getenv("ENABLE_PATHWAY_DEBUG", "0") == "1":
+            logger = logging.getLogger(__name__)
+            logger.debug(
+                f"Pathway normalization: drug={drug_name}, s_path={s_path:.6f}, "
+                f"path_pct={path_pct:.3f}, pathway_scores={pathway_scores}, "
+                f"drug_weights={drug_weights}"
+            )
+        
+        # Evidence score with fallback handling
         s_evd = 0.0
+        evidence_fallback = False
         if evidence_result and not isinstance(evidence_result, Exception):
             s_evd = evidence_result.strength
+        else:
+            evidence_fallback = True
         
-        # ClinVar prior/data
+        # ClinVar prior/data with fallback handling
         clinvar_prior = 0.0
         clinvar_data = {}
+        clinvar_fallback = False
         if clinvar_result and not isinstance(clinvar_result, Exception):
             clinvar_prior = clinvar_result.prior
             clinvar_data = (clinvar_result.deep_analysis or {}).get("clinvar", {})
+        else:
+            clinvar_fallback = True
         
         # Badges (evidence + ClinVar strength)
         badges: List[str] = []
@@ -110,8 +131,12 @@ class DrugScorer:
         if path_pct >= 0.2:
             badges.append("PathwayAligned")
         
-        # Tier
-        tier = compute_evidence_tier(s_seq, path_pct, s_evd, badges, confidence_config)
+        # Tier with evidence fallback handling
+        # NOTE: compute_evidence_tier expects raw s_path (not normalized path_pct) for threshold checks
+        if evidence_fallback:
+            tier = "insufficient"  # Set to insufficient on evidence timeout
+        else:
+            tier = compute_evidence_tier(s_seq, s_path, s_evd, badges, confidence_config)
         try:
             if os.getenv("RESEARCH_USE_CLINVAR_CANONICAL", "0") == "1" and "ClinVar-Strong" in badges and path_pct >= 0.1:
                 if tier == "insufficient":
@@ -128,14 +153,64 @@ class DrugScorer:
         }
         confidence = compute_confidence(tier, seq_pct, path_pct, insights_dict, confidence_config)
         
-        # ClinVar-based confidence bump when aligned
+        
+        # DDR-class gating (RUO): if there is no DDR signal, do not let PARP/platinum dominate tie-breaks.
+        # This specifically reduces PARP false positives on DDR-gene missense with low disruption.
+        try:
+            ddr_signal = float(pathway_scores.get("ddr", 0.0) or 0.0)
+            moa_l = str(drug_moa or "").lower()
+            is_parp = ("parp" in moa_l) or (drug_name.lower() in {"olaparib","niraparib","rucaparib"})
+            is_platinum = ("platinum" in moa_l) or (drug_name.lower() in {"carboplatin","cisplatin"})
+            if os.getenv("RESEARCH_DDR_CLASS_GATING", "1") == "1" and (is_parp or is_platinum):
+                # If DDR pathway score is essentially absent, apply a small penalty so other classes can surface.
+                if ddr_signal < 0.02 and path_pct < 0.05:
+                    confidence -= 0.10
+        except Exception:
+            pass
+
+# ClinVar-based confidence bump when aligned
         try:
             if clinvar_prior > 0 and path_pct >= 0.2:
                 confidence += min(0.1, clinvar_prior)
         except Exception:
             pass
         
-        # Deterministic gene-drug MoA tie-breaker (publication-mode, biologically justified)
+        
+        # HRR→PARP boost (publication-mode RUO):
+        # If the primary variant is in core HR/DDR genes, prefer PARP over other DDR-aligned classes
+        # to avoid ties defaulting to ATR/WEE1.
+        try:
+            primary_gene = (seq_scores[0].variant or {}).get("gene", "").upper() if seq_scores else ""
+            moa_l = str(drug_moa or "").lower()
+            is_p= (drug_name or "").lower() in {"olaparib", "niraparib", "rucaparib", "talazoparib"} or ("parp" in moa_l)
+            is_atr = (drug_name or "").lower() == "ceralasertib" or ("atr" in moa_l)
+            is_wee1 = (drug_name or "").lower() == "adavosertib" or ("wee1" in moa_l)
+
+            if primary_gene in {"BRCA1", "BRCA2", "PALB2", "RAD51C", "RAD51D", "ATM", "CDK12", "MBD4"}:
+                if is_parp:
+                    confidence += 0.08
+                if is_atr:
+                    confidence -= 0.02
+                if is_wee1:
+                    confidence -= 0.02
+        except Exception:
+            pass
+
+        # ARID1A→ATR boost (publication-mode RUO): ARID1A loss is classically ATR-sensitive.
+        try:
+            primary_gene = (seq_scores[0].variant or {}).get("gene", "").upper() if seq_scores else ""
+            moa_l = str(drug_moa or "").lower()
+            is_at= (drug_name or "").lower() == "ceralasertib" or ("atr" in moa_l)
+            is_wee1 = (drug_name or "").lower() == "adavosertib" or ("wee1" in moa_l)
+            if primary_gene == "ARID1A":
+                if is_atr:
+                    confidence += 0.06
+                if is_wee1:
+                    confidence -= 0.02
+        except Exception:
+            pass
+
+# Deterministic gene-drug MoA tie-breaker (publication-mode, biologically justified)
         # Tiny boost when variant's gene matches drug's molecular target to break near-ties
         try:
             if seq_scores and path_pct >= 0.2:
@@ -162,12 +237,15 @@ class DrugScorer:
         raw_lob = 0.3 * seq_pct + 0.4 * path_pct + 0.3 * s_evd + clinvar_prior
         lob = raw_lob if tier != "insufficient" else (raw_lob * 0.5 if confidence_config.fusion_active else 0.0)
         
-        # Evidence manifest
+        # Evidence manifest with fallback handling
         citations = []
         pubmed_query = None
         if evidence_result and not isinstance(evidence_result, Exception):
             citations = evidence_result.filtered or []
             pubmed_query = evidence_result.pubmed_query
+        else:
+            citations = []  # Empty citations on evidence timeout
+            pubmed_query = None
         manifest = compute_evidence_manifest(citations, clinvar_data, pubmed_query)
         
         # Rationale breakdown
@@ -199,6 +277,8 @@ class DrugScorer:
         """Convert SeqScore to dictionary for pathway aggregation."""
         return {
             "sequence_disruption": score.sequence_disruption,
+            "calibrated_seq_percentile": score.calibrated_seq_percentile,  # For hotspot lifts (e.g., TP53 R175H)
+            "variant": score.variant,  # include consequence/hgvs for pathway gating
             # Prefer gene->pathway weights for aggregation; drug weights applied later per drug
             "pathway_weights": get_pathway_weights_for_gene(score.variant.get("gene", "")) or {},
         }

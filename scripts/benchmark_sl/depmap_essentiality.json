@@ -1,0 +1,114 @@
+{
+  "BRCA1": {
+    "depmap_mean_effect": -0.44405918068595746,
+    "essentiality_score": 0.44405918068595746,
+    "std": 0.2845046014051602,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "BRCA2": {
+    "depmap_mean_effect": -0.49663622684497655,
+    "essentiality_score": 0.49663622684497655,
+    "std": 0.25066689378457163,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "MBD4": {
+    "depmap_mean_effect": -0.1174664233026257,
+    "essentiality_score": 0.1174664233026257,
+    "std": 0.12318670201130544,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "TP53": {
+    "depmap_mean_effect": 0.373501755858498,
+    "essentiality_score": 0.0,
+    "std": 0.5470625047466788,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "PARP1": {
+    "depmap_mean_effect": -0.2070495592792848,
+    "essentiality_score": 0.2070495592792848,
+    "std": 0.15406628106534084,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "ATR": {
+    "depmap_mean_effect": -1.096085063008436,
+    "essentiality_score": 1.0,
+    "std": 0.2973899665435177,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "WEE1": {
+    "depmap_mean_effect": -2.7353570413750536,
+    "essentiality_score": 1.0,
+    "std": 0.47074287735255727,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "ATM": {
+    "depmap_mean_effect": -0.028631024194835045,
+    "essentiality_score": 0.028631024194835045,
+    "std": 0.21122319657364835,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "CHEK2": {
+    "depmap_mean_effect": 0.1977105855252346,
+    "essentiality_score": 0.0,
+    "std": 0.18253720672727491,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "PALB2": {
+    "depmap_mean_effect": -0.33189795944643924,
+    "essentiality_score": 0.33189795944643924,
+    "std": 0.2337047664845701,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "RAD51C": {
+    "depmap_mean_effect": -0.7061312400750432,
+    "essentiality_score": 0.7061312400750432,
+    "std": 0.267987376714683,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "RAD51D": {
+    "depmap_mean_effect": -0.7360546282435787,
+    "essentiality_score": 0.7360546282435787,
+    "std": 0.3485216072887717,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "ARID1A": {
+    "depmap_mean_effect": -0.2596675073474911,
+    "essentiality_score": 0.2596675073474911,
+    "std": 0.3084469414159255,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "CDK12": {
+    "depmap_mean_effect": -0.4085607197529356,
+    "essentiality_score": 0.4085607197529356,
+    "std": 0.2247193673307119,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "KRAS": {
+    "depmap_mean_effect": -0.6985169622005214,
+    "essentiality_score": 0.6985169622005214,
+    "std": 0.6430500120794337,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  },
+  "EGFR": {
+    "depmap_mean_effect": -0.24147721469094818,
+    "essentiality_score": 0.24147721469094818,
+    "std": 0.3765547150044298,
+    "n_cell_lines": 1186,
+    "source": "DepMap CRISPR"
+  }
+}

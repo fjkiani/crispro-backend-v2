@@ -1,0 +1,124 @@
+{
+  "description": "Deterministic fixtures for Resistance Prophet validation",
+  "source_of_truth": ".cursor/MOAT/RESISTANCE_PROPHET_PRODUCTION_AUDIT.md",
+  "created": "2025-01-28",
+  "fixtures": [
+    {
+      "id": "nf1_positive_ov",
+      "description": "OV patient with NF1 mutation - validated resistance marker",
+      "disease": "ovarian",
+      "mutations": [
+        {"gene": "NF1", "hgvs_p": "p.R1276*", "consequence": "nonsense"}
+      ],
+      "expected": {
+        "risk_level": "HIGH",
+        "evidence_tier": "COHORT_VALIDATED",
+        "relative_risk_min": 2.0,
+        "mode": "baseline_only",
+        "signal_detected": "NF1_platinum_resistance"
+      }
+    },
+    {
+      "id": "dis3_positive_mm",
+      "description": "MM patient with DIS3 mutation - validated mortality marker",
+      "disease": "myeloma",
+      "mutations": [
+        {"gene": "DIS3", "hgvs_p": "p.C562Y", "consequence": "missense"}
+      ],
+      "expected": {
+        "risk_level": "HIGH",
+        "evidence_tier": "COHORT_VALIDATED",
+        "relative_risk_min": 2.0,
+        "mode": "baseline_only",
+        "signal_detected": "DIS3_mortality_risk"
+      }
+    },
+    {
+      "id": "kras_pending_ov",
+      "description": "OV patient with KRAS mutation - PENDING REVALIDATION",
+      "disease": "ovarian",
+      "mutations": [
+        {"gene": "KRAS", "hgvs_p": "p.G12D", "consequence": "missense"}
+      ],
+      "expected": {
+        "risk_level": "MEDIUM",
+        "evidence_tier": "PENDING_REVALIDATION",
+        "relative_risk": null,
+        "mode": "baseline_only",
+        "note": "KRAS evidence level downgraded pending MAPK validation"
+      }
+    },
+    {
+      "id": "tp53_trend_mm",
+      "description": "MM patient with TP53 mutation - trend only, not significant",
+      "disease": "myeloma",
+      "mutations": [
+        {"gene": "TP53", "hgvs_p": "p.R175H", "consequence": "missense"}
+      ],
+      "expected": {
+        "risk_level": "MEDIUM",
+        "evidence_tier": "COHORT_TREND",
+        "relative_risk_approx": 1.90,
+        "p_value_note": "p=0.11 (not significant)",
+        "mode": "baseline_only"
+      }
+    },
+    {
+      "id": "no_signal_baseline_ov",
+      "description": "OV patient with no resistance markers",
+      "disease": "ovarian",
+      "mutations": [
+        {"gene": "TP53", "hgvs_p": "p.R175H", "consequence": "missense"}
+      ],
+      "expected": {
+        "risk_level": "LOW",
+        "mode": "baseline_only",
+        "claims_disabled": ["early_detection", "lead_time_analysis"]
+      }
+    },
+    {
+      "id": "cytogenetics_mm",
+      "description": "MM patient with high-risk cytogenetics - literature-based",
+      "disease": "myeloma",
+      "mutations": [],
+      "cytogenetics": {
+        "del_17p": true,
+        "t_4_14": false,
+        "gain_1q": true
+      },
+      "expected": {
+        "risk_level": "HIGH",
+        "evidence_tier": "LITERATURE_BASED",
+        "mode": "baseline_only",
+        "note": "Cytogenetics from published literature, not our validation"
+      }
+    },
+    {
+      "id": "no_mutations_ov",
+      "description": "OV patient with no mutations at all",
+      "disease": "ovarian",
+      "mutations": [],
+      "expected": {
+        "risk_level": "LOW",
+        "mode": "baseline_only",
+        "response_must_include": ["ruo_disclaimer", "mode_disclaimer"]
+      }
+    }
+  ],
+  "acceptance_criteria": {
+    "all_responses_include": ["ruo_disclaimer", "mode", "evidence_summary"],
+    "baseline_only_mode": {
+      "claims_disabled": ["early_detection", "lead_time_analysis", "3_6_months_early"]
+    },
+    "validated_markers": {
+      "NF1": {"min_rr": 2.0, "tier": "COHORT_VALIDATED"},
+      "DIS3": {"min_rr": 2.0, "tier": "COHORT_VALIDATED", "p_value_max": 0.05}
+    },
+    "pending_markers": {
+      "KRAS": {"rr": null, "tier": "PENDING_REVALIDATION"},
+      "NRAS": {"rr": null, "tier": "PENDING_REVALIDATION"},
+      "BRAF": {"rr": null, "tier": "PENDING_REVALIDATION"}
+    }
+  }
+}
+

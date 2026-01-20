@@ -1,0 +1,17 @@
+{
+  "run_meta": {
+    "per_diamond": "oncology-coPilot/oncology-backend-minimal/scripts/validation/out/ddr_bin_tcga_ov/per_diamond_auroc.json",
+    "tier3": "oncology-coPilot/oncology-backend-minimal/data/validation/sae_cohort/checkpoints/Tier3_validation_cohort.json",
+    "positive_class": "resistant_refractory",
+    "n_labeled": 149
+  },
+  "top3_features": [
+    9738,
+    12893,
+    27607
+  ],
+  "auroc_top3": 0.745,
+  "auroc_full_9": 0.698,
+  "delta_full_minus_top3": -0.04700000000000004,
+  "recommendation": "Keep full 9-diamond DDR_bin (top-3 loses >0.02 AUROC)"
+}

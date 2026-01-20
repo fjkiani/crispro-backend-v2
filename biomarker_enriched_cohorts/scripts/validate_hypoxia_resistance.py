@@ -219,6 +219,7 @@ def _endpoint_label(time_col: str) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--cohort_json", type=str, required=True, help="Path to hypoxia-enriched cohort JSON")
+    ap.add_argument("--endpoint", type=str, default="pfs", choices=["pfs", "os", "pfi"], help="Endpoint: pfs (PFS), os (OS), or pfi (PFI=PFS in TCGA-OV)")
     ap.add_argument("--time_col", type=str, default="pfs_days", help="Time column for survival analysis")
     ap.add_argument("--event_col", type=str, default="pfs_event", help="Event column for survival analysis")
     ap.add_argument(
@@ -239,6 +240,19 @@ def main() -> int:
     )
 
     args = ap.parse_args()
+    
+    # Map endpoint to time/ent columns if not explicitly provided
+    if args.time_col is None or args.event_col is None:
+        endpoint_map = {
+            "pfs": ("pfs_days", "pfs_event"),
+            "os": ("os_days", "os_event"),
+            "pfi": ("pfs_days", "pfs_event"),  # PFI = PFS in TCGA-OV
+        }
+        if args.endpoint in endpoint_map:
+            args.time_col, args.event_col = endpoint_map[args.endpoint]
+        else:
+            # Fallback to PFS if endpoint not recognized
+            args.time_col, args.event_col = endpoint_map["pfs"]
 
     root = Path(__file__).resolve().parent.parent
     cohort_path = Path(args.cohort_json)

@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-12-04T21:41:04.633678",
+  "cohort_file": "data/validation/sae_cohort/tcga_ov_platinum_with_mutations.json",
+  "total_patients": 149,
+  "total_errors": 453,
+  "outcome_distribution": {
+    "sensitive": 125,
+    "resistant": 7,
+    "refractory": 17
+  },
+  "tier_results": {
+    "tier_1": {
+      "status": "complete",
+      "tier": 1,
+      "patients": 10,
+      "errors": 30
+    },
+    "tier_1_correlation": {
+      "status": "imbalanced",
+      "sensitive": 10,
+      "resistant": 0
+    },
+    "tier_2": {
+      "status": "complete",
+      "tier": 2,
+      "patients": 49,
+      "errors": 150
+    },
+    "tier_2_correlation": {
+      "status": "complete",
+      "n_sensitive": 43,
+      "n_resistant": 6,
+      "mean_sensitive": 0.6132853625358179,
+      "mean_resistant": 0.6255479639565613,
+      "t_statistic": -0.8603222517090566,
+      "p_value": 0.3939788866405236,
+      "cohens_d": 0.30310551019846194,
+      "signal_detected": 

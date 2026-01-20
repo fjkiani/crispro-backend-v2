@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-28T09:24:16.935983",
+    "deliverable": "D2",
+    "source": "cBioPortal API",
+    "total_studies_scanned": 16,
+    "studies_with_ca125": 0,
+    "studies_without_ca125": 16
+  },
+  "results": [
+    {
+      "study_id": "ovarian_msk_2025",
+      "study_name": "Serous Ovarian Cancer (MSK, 2025)",
+      "ca125_attributes": [],
+      "total_attributes": 189,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "ov_tcga_pub",
+      "study_name": "Ovarian Serous Cystadenocarcinoma (TCGA, Nature 2011)",
+      "ca125_attributes": [],
+      "total_attributes": 3068,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "ov_tcga_pan_can_atlas_2018",
+      "study_name": "Ovarian Serous Cystadenocarcinoma (TCGA, PanCancer Atlas)",
+      "ca125_attributes": [],
+      "total_attributes": 14753,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "mixed_msk_tcga_2021",
+      "study_name": "RAD51B Associated Mixed Cancers (MSK, NPJ Breast Cancer 2021)",
+      "ca125_attributes": [],
+      "total_attributes": 17,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "msk_met_2021",
+      "study_name": "MSK MetTropism (MSK, Cell 2021)",
+      "ca125_attributes": [],
+      "total_attributes": 224455,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "ucec_msk_2024",
+      "study_name": "Endometrial and Ovarian Cancer (MSK, Nature Medicine 2024)",
+      "ca125_attributes": [],
+      "total_attributes": 231,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "hgsoc_msk_2021",
+      "study_name": "High-Grade Serous Ovarian Cancer (MSK, NPJ Genome Med 2021)",
+      "ca125_attributes": [],
+      "total_attributes": 405,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "cscc_hgsc_bcm_2014",
+      "study_name": "Cutaneous Squamous Cell Carcinoma (MD Anderson, Clin Cancer Res 2014)",
+      "ca125_attributes": [],
+      "total_attributes": 1268,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "hgsoc_tcga_gdc",
+      "study_name": "High-Grade Serous Ovarian Cancer (TCGA, GDC)",
+      "ca125_attributes": [],
+      "total_attributes": 14114,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "ovary_cptac_gdc",
+      "study_name": "Ovarian Cancer (CPTAC GDC, 2025)",
+      "ca125_attributes": [],
+      "total_attributes": 855,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "ovary_geomx_gray_foundation_2024",
+      "study_name": "Ovarian Cancer (Gray Foundation, Cancer Discov 2024)",
+      "ca125_attributes": [],
+      "total_attributes": 708,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "pact_jhu_2011",
+      "study_name": "Cystic Tumor of the Pancreas (Johns Hopkins, PNAS 2011)",
+      "ca125_attributes": [],
+      "total_attributes": 200,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "msk_spectrum_tme_2022",
+      "study_name": "Ovarian Cancer - MSK SPECTRUM (MSK, Nature 2022)",
+      "ca125_attributes": [],
+      "total_attributes": 394,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "ov_tcga",
+      "study_name": "Ovarian Serous Cystadenocarcinoma (TCGA, Firehose Legacy)",
+      "ca125_attributes": [],
+      "total_attributes": 14513,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "scco_mskcc",
+      "study_name": "Small Cell Carcinoma of the Ovary (MSK, Nat Genet 2014)",
+      "ca125_attributes": [],
+      "total_attributes": 48,
+      "has_ca125": false,
+      "status": "success"
+    },
+    {
+      "study_id": "lgsoc_mapk_msk_2022",
+      "study_name": "Low-Grade Serous Ovarian Cancer (MSK, Clin Cancer Res 2022)",
+      "ca125_attributes": [],
+      "total_attributes": 119,
+      "has_ca125": false,
+      "status": "success"
+    }
+  ]
+}

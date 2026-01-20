@@ -1,0 +1,93 @@
+{
+  "timestamp": "2025-11-24T19:17:06.958682",
+  "disease": "ovarian_cancer",
+  "metrics": {
+    "auroc": 0.5,
+    "auprc": 0.5,
+    "n_variants": 2,
+    "n_sensitive": 2,
+    "n_resistant": 0
+  },
+  "target": {
+    "auroc": 0.65
+  },
+  "results": [
+    {
+      "variant": "BRCA2 C711*",
+      "score": 0.768,
+      "confidence": 0.4,
+      "drug_name": "olaparib",
+      "evidence_tier": "supported",
+      "top_5_drugs": [
+        {
+          "name": "olaparib",
+          "efficacy_score": 0.768,
+          "confidence": 0.4
+        },
+        {
+          "name": "niraparib",
+          "efficacy_score": 0.768,
+          "confidence": 0.4
+        },
+        {
+          "name": "rucaparib",
+          "efficacy_score": 0.768,
+          "confidence": 0.4
+        },
+        {
+          "name": "carboplatin",
+          "efficacy_score": 0.96,
+          "confidence": 0.4
+        },
+        {
+          "name": "bevacizumab",
+          "efficacy_score": 0.5,
+          "confidence": 0.4
+        }
+      ],
+      "expected_outcome": 1
+    },
+    {
+      "variant": "BRCA1 I1108*",
+      "score": 0.6480000000000001,
+      "confidence": 0.4,
+      "drug_name": "olaparib",
+      "evidence_tier": "consider",
+      "top_5_drugs": [
+        {
+          "name": "olaparib",
+          "efficacy_score": 0.6480000000000001,
+          "confidence": 0.4
+        },
+        {
+          "name": "niraparib",
+          "efficacy_score": 0.6480000000000001,
+          "confidence": 0.4
+        },
+        {
+          "name": "rucaparib",
+          "efficacy_score": 0.6480000000000001,
+          "confidence": 0.4
+        },
+        {
+          "name": "carboplatin",
+          "efficacy_score": 0.81,
+          "confidence": 0.4
+        },
+        {
+          "name": "bevacizumab",
+          "efficacy_score": 0.35,
+          "confidence": 0.4
+        }
+      ],
+      "expected_outcome": 1
+    }
+  ],
+  "provenance": {
+    "script": "benchmark_sota_ovarian.py",
+    "api_base": "http://127.0.0.1:8000",
+    "model_id": "evo2_1b",
+    "ablation_mode": "SPE",
+    "data_source": "hrd_tcga_ov_labeled_sample_results.json"
+  }
+}

@@ -1,54 +1,34 @@
 # Hypoxia Surrogate Validation for Platinum Resistance
 
-**Generated:** 2026-01-02T18:12:24Z
+**Generated:** 2026-01-03T05:00:28Z
 **Cohort:** tcga_ov
-**Hypoxia Score:** BUFFA
+**Hypoxia score:** WINTER (median split threshold=10.000)
+**Endpoint:** PFS (pfs_days/pfs_event)
 
-## Summary
+## Cohort
+- N total: 203
+- Platinum resistant: 33 (16.3%)
+- High hypoxia: 98 (48.3%)
 
-- **Total Patients:** 203
-- **High Hypoxia:** 101 (49.8%)
-- **Low Hypoxia:** 102 (50.2%)
-- **Platinum Resistant:** 33 (16.3%)
-- **Median Threshold:** 11.00
+## Survival (High vs Low hypoxia)
+- Log-rank p: 0.2702750351573804
+- Median PFS Low: 544.41 days
+- Median PFS High: 505.38 days
+- Cox HR (High vs Low): 0.83 (CI 0.59–1.16), p=0.26675734787643457
 
-## Survival Analysis
+## Classification (5-fold CV logistic regression)
+- n analyzed: 203
+- Baseline features: brca_mutated, hrd_high
 
-- **Log-rank p-value:** 0.7733
-- **Median PFS (Low Hypoxia):** 547.4 days
-- **Median PFS (High Hypoxia):** 473.4 days
-- **Cox HR (High vs Low):** 1.05 (0.75-1.46), p=0.7758
+### AUROC
+- Hypoxia: 0.452 (0.353-0.549)
+- Baseline: 0.429 (0.326-0.544)
+- Combined: 0.402 (0.312-0.503)
 
-## Classification Validation
-
-### Hypoxia Alone
-- **AUROC:** 0.495 (0.395-0.592)
-- **Sensitivity:** 0.485
-- **Specificity:** 0.588
-
-### Baseline Model (BRCA/HRD Alone)
-- **AUROC:** 0.429 (0.326-0.544)
-- **Sensitivity:** 0.000
-- **Specificity:** 1.000
-
-### Combined Model (Hypoxia + BRCA/HRD)
-- **AUROC:** 0.465 (0.365-0.564)
-- **Sensitivity:** 0.485
-- **Specificity:** 0.582
-
-## Model Comparison
-
-### Hypoxia vs Baseline
-- **Improvement:** +0.070 (+15.8%)
-- **DeLong test p-value:** 0.6948
-- **Significant:** False
-
-### Combined vs Baseline
-- **Improvement:** +0.048 (+10.9%)
-- **DeLong test p-value:** 0.7853
-- **Significant:** False
+### DeLong comparisons (RUO approx)
+- Combined vs baseline: Δ=-0.027, p=0.8692
+- Hypoxia vs baseline: Δ=+0.022, p=0.8955
 
 ## Figures
-
-- **KM Curves:** /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_hypoxia_km_curves_tcga_ov.png
-- **ROC Curves:** /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/biomarker_enriched_cohorts/figures/figure_hypoxia_roc_curves_tcga_ov.png
+- KM curves: figure_hypoxia_km_curves_tcga_ov.png
+- ROC curves: figure_hypoxia_roc_curves_tcga_ov.png

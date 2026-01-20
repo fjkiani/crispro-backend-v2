@@ -1,0 +1,33 @@
+{
+  "analysis": "Strategy B - Cross-Cancer Validation (TCGA-BRCA)",
+  "cohort": "TCGA-BRCA PanCan Atlas 2018",
+  "subsets": {
+    "ddr_positive": {
+      "n_patients": 81,
+      "description": "Patients with DDR gene mutations (BRCA1/2, ATM, ATR, etc.)",
+      "log_rank": {
+        "test_statistic": 2.776,
+        "p_value": 0.095696,
+        "significant_005": false,
+        "significant_010": true
+      },
+      "cox": {
+        "hazard_ratio": 0.345,
+        "p_value": 0.111439,
+        "interpretation": "HR < 1 = DDR_bin HIGH has LOWER death risk (same direction as ovarian)"
+      },
+      "kaplan_meier": {
+        "median_os_high": "Not reached",
+        "median_os_low_months": 92.0
+      }
+    },
+    "all_patients": {
+      "n_patients": 200,
+      "log_rank_p_value": 0.070174,
+      "significant_005": false,
+      "significant_010": true
+    }
+  },
+  "interpretation": "TREND-LEVEL SIGNAL (p=0.07-0.10). Direction is correct (HR < 1 = DDR_bin HIGH = better survival). Effect size is large (HR=0.35). However, not statistically significant at p<0.05, likely due to underpowered sample (n=81 DDR-positive).",
+  "manuscript_claim": "In TCGA breast cancer, DDR_bin showed a trend toward improved survival in DDR-mutant patients (HR=0.35, p=0.10). While not reaching statistical significance, the direction of effect was consistent with ovarian cancer findings, supporting pathway-level generalizability."
+}

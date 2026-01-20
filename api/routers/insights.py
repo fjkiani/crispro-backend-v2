@@ -23,13 +23,15 @@ curl -sS -X POST http://127.0.0.1:8000/api/insights/predict_spacer_efficacy \
   -H 'Content-Type: application/json' \
   -d '{"spacer":"GAGTCCGAGCAGAAGAAGA","target_sequence":"TTTGAGTCCGAGCAGAAGAAGAA"}'
 """
-from fastapi import APIRouter, HTTPException
-from typing import Dict, Any
+from fastapi import APIRouter, HTTPException, Depends, Request
+from typing import Dict, Any, Optional
 import httpx
 
 from ..config import get_feature_flags, ENFORMER_URL, BORZOI_URL
 from ..services.gene_calibration import get_calibration_service
 from ..services.supabase_service import supabase
+from ..services import enformer_client
+from ..middleware.auth_middleware import get_optional_user
 from . import evo as evo_proxy
 
 router = APIRouter(prefix="/api/insights", tags=["insights"])
@@ -42,15 +44,27 @@ def _ensure_enabled():
 
 
 @router.post("/predict_gene_essentiality")
-async def predict_gene_essentiality(request: Dict[str, Any]):
+async def predict_gene_essentiality(
+    request: Dict[str, Any],
+    req_ctx: Request,
+    user: Optional[Dict[str, Any]] = Depends(get_optional_user)
+):
     """Compute an essentiality score in [0,1] based on truncation check and Evo2 deltas.
     Inputs: { gene, variants[], model_id?, options{adaptive?, ensemble?} }
     """
     _ensure_enabled()
+    
+    # Check quota if authenticated
+    if user and user.get("user_id"):
+        from ..middleware.quota_middleware import check_quota
+        quota_check = check_quota("variant_analyses")
+        user = await quota_check(user)
+    
     try:
         gene = (request or {}).get("gene")
         variants = (request or {}).get("variants") or []
-        model_id = (request or {}).get("model_id", "evo2_7b")
+        # Default to the platform's configured Evo model (typically evo2_1b for stability/cost control).
+        model_id = (request or {}).get("model_id") or DEFAULT_EVO_MODEL
 
         if not gene:
             raise HTTPException(status_code=400, detail="gene required")
@@ -77,19 +91,20 @@ async def predict_gene_essentiality(request: Dict[str, Any]):
                 for v in variants if v.get("chrom") and v.get("pos")
             ]
             if coords:
+                api_base = str(req_ctx.base_url).rstrip("/")
                 async with httpx.AsyncClient(timeout=60.0) as client:
                     for c in coords:
                         try:
                             # score_variant_multi
                             mreq = {"assembly": "GRCh38", **{k: c[k] for k in ["chrom","pos","ref","alt"]}, "model_id": model_id}
-                            mr = await client.post("http://127.0.0.1:8000/api/evo/score_variant_multi", json=mreq, headers={"Content-Type": "application/json"})
+                            mr = await client.post(f"{api_base}/api/evo/score_variant_multi", json=mreq, headers={"Content-Type": "application/json"})
                             md = (mr.json() or {}).get("min_delta") if mr.status_code < 400 else None
                         except Exception:
                             md = None
                         try:
                             # score_variant_exon (moderate flank)
                             ereq = {"assembly": "GRCh38", **{k: c[k] for k in ["chrom","pos","ref","alt"]}, "flank": 4096, "model_id": model_id}
-                            er = await client.post("http://127.0.0.1:8000/api/evo/score_variant_exon", json=ereq, headers={"Content-Type": "application/json"})
+                            er = await client.post(f"{api_base}/api/evo/score_variant_exon", json=ereq, headers={"Content-Type": "application/json"})
                             ed = (er.json() or {}).get("exon_delta") if er.status_code < 400 else None
                         except Exception:
                             ed = None
@@ -151,16 +166,46 @@ async def predict_gene_essentiality(request: Dict[str, Any]):
 
 
 @router.post("/predict_protein_functionality_change")
-async def predict_protein_functionality_change(request: Dict[str, Any]):
+async def predict_protein_functionality_change(
+    request: Dict[str, Any],
+    req_ctx: Request,
+    user: Optional[Dict[str, Any]] = Depends(get_optional_user)
+):
     _ensure_enabled()
+    
+    # Check quota if authenticated
+    if user and user.get("user_id"):
+        from ..middleware.quota_middleware import check_quota
+        quota_check = check_quota("variant_analyses")
+        user = await quota_check(user)
+    
     try:
+        # Accept either top-level fields or extract from the first entry in mutations/variants
         gene = (request or {}).get("gene")
         hgvs_p = (request or {}).get("hgvs_p")
-        model_id = (request or {}).get("model_id", "evo2_7b")
+        mutations = (request or {}).get("mutations") or (request or {}).get("variants") or []
+        if not gene and mutations:
+            try:
+                gene = mutations[0].get("gene")
+            except Exception:
+                pass
+        if not hgvs_p and mutations:
+            try:
+                # Common alternate keys for protein change notation
+                hgvs_p = (
+                    mutations[0].get("hgvs_p")
+                    or mutations[0].get("protein_change")
+                    or mutations[0].get("aa_change")
+                )
+            except Exception:
+                pass
+        # Default to the platform's configured Evo model (typically evo2_1b for stability/cost control).
+        model_id = (request or {}).get("model_id") or DEFAULT_EVO_MODEL
         if not (gene and hgvs_p):
             raise HTTPException(status_code=400, detail="gene and hgvs_p required")
-        # Combine simple rule with Evo2 delta magnitude if available
-        functionality_change_score = 0.6
+        # Combine simple rule with richer Evo2 delta magnitudes if available
+        # Start from conservative baseline and lift with model signals
+        functionality_change_score = 0.55
         affected_domains = []
         # Simple domain hints for common MM genes/hotspots
         try:
@@ -178,14 +223,19 @@ async def predict_protein_functionality_change(request: Dict[str, Any]):
         except Exception:
             pass
         try:
-            # Only attempt quick Evo min_delta when genomic coords are present in variants
+            # Attempt richer Evo signals (min_delta + exon_delta with larger flank)
             flags = get_feature_flags()
             if flags.get("disable_evo2"):
                 raise Exception("evo2 disabled by flag")
-            variants = (request or {}).get("variants") or []
-            coords = [v for v in variants if v.get("chrom") and v.get("pos") and v.get("ref") and v.get("alt")]
+            variants = (request or {}).get("variants") or (request or {}).get("mutations") or []
+            coords = [
+                v
+                for v in variants
+                if v.get("chrom") and v.get("pos") and v.get("ref") and v.get("alt")
+            ]
             if coords:
                 c0 = coords[0]
+                api_base = str(req_ctx.base_url).rstrip("/")
                 async with httpx.AsyncClient(timeout=30.0) as client:
                     mreq = {
                         "assembly": "GRCh38",
@@ -195,12 +245,30 @@ async def predict_protein_functionality_change(request: Dict[str, Any]):
                         "alt": str(c0.get("alt")).upper(),
                         "model_id": model_id,
                     }
-                    mr = await client.post("http://127.0.0.1:8000/api/evo/score_variant_multi", json=mreq, headers={"Content-Type": "application/json"})
+                    mr = await client.post(f"{api_base}/api/evo/score_variant_multi", json=mreq, headers={"Content-Type": "application/json"})
+                    ed_mag = 0.0
+                    md_mag = 0.0
                     if mr.status_code < 400:
                         js = mr.json() or {}
-                        md = abs(float(js.get("min_delta") or 0.0))
-                        domain_lift = 0.05 if affected_domains else 0.0
-                        functionality_change_score = max(functionality_change_score, min(1.0, 0.5 + md + domain_lift))
+                        md_mag = abs(float(js.get("min_delta") or 0.0))
+                    # Exon-context scoring with larger flank to capture domain effects
+                    ereq = {
+                        "assembly": "GRCh38",
+                        "chrom": str(c0.get("chrom")),
+                        "pos": int(c0.get("pos")),
+                        "ref": str(c0.get("ref")).upper(),
+                        "alt": str(c0.get("alt")).upper(),
+                        "flank": 8192,
+                        "model_id": model_id,
+                    }
+                    er = await client.post(f"{api_base}/api/evo/score_variant_exon", json=ereq, headers={"Content-Type": "application/json"})
+                    if er.status_code < 400:
+                        js2 = er.json() or {}
+                        ed_mag = abs(float(js2.get("exon_delta") or 0.0))
+                    # Combine magnitudes with modest weight on exon context
+                    combined_mag = max(md_mag, ed_mag * 0.8)
+                    domain_lift = 0.05 if affected_domains else 0.0
+                    functionality_change_score = min(1.0, 0.55 + combined_mag + domain_lift)
         except Exception:
             pass
         return {
@@ -222,11 +290,33 @@ async def predict_protein_functionality_change(request: Dict[str, Any]):
 
 
 @router.post("/predict_chromatin_accessibility")
-async def predict_chromatin_accessibility(request: Dict[str, Any]):
+async def predict_chromatin_accessibility(
+    request: Dict[str, Any],
+    user: Optional[Dict[str, Any]] = Depends(get_optional_user)
+):
     _ensure_enabled()
+    
+    # Check quota if authenticated
+    if user and user.get("user_id"):
+        from ..middleware.quota_middleware import check_quota
+        quota_check = check_quota("variant_analyses")
+        user = await quota_check(user)
+    
     try:
-        chrom = str((request or {}).get("chrom"))
+        # Accept either top-level fields or extract from the first entry in mutations/variants
+        chrom = (request or {}).get("chrom")
         pos_raw = (request or {}).get("pos")
+        if not (chrom and pos_raw):
+            mv = (request or {}).get("mutations") or (request or {}).get("variants") or []
+            if mv:
+                try:
+                    if not chrom:
+                        chrom = mv[0].get("chrom")
+                    if pos_raw is None:
+                        pos_raw = mv[0].get("pos")
+                except Exception:
+                    pass
+        chrom = str(chrom) if chrom is not None else ""
         radius_raw = (request or {}).get("radius", 500)
         
         # Add null checks and validation before int() conversion
@@ -242,51 +332,32 @@ async def predict_chromatin_accessibility(request: Dict[str, Any]):
             radius = int(radius_raw)
         except (ValueError, TypeError):
             radius = 500  # Default fallback
-        # Try Enformer/Borzoi services if configured; fallback to heuristic
-        score = None
-        provenance_method = "heuristic_v0"
-        confidence = 0.4
-        try:
-            window_start = max(1, pos - max(1000, radius))
-            window_end = pos + max(1000, radius)
-            # Prefer Enformer
-            if ENFORMER_URL:
-                async with httpx.AsyncClient(timeout=30.0) as client:
-                    r = await client.post(
-                        f"{ENFORMER_URL}/predict",
-                        json={"chrom": chrom, "start": window_start, "end": window_end}
-                    )
-                if r.status_code < 400:
-                    js = r.json() or {}
-                    score = float(js.get("accessibility_score") or js.get("dnase_score") or 0.0)
-                    provenance_method = "enformer"
-                    confidence = 0.6
-            # Fallback to Borzoi if Enformer not set or failed
-            if score is None and BORZOI_URL:
-                async with httpx.AsyncClient(timeout=30.0) as client:
-                    r = await client.post(
-                        f"{BORZOI_URL}/predict",
-                        json={"chrom": chrom, "start": window_start, "end": window_end}
-                    )
-                if r.status_code < 400:
-                    js = r.json() or {}
-                    score = float(js.get("accessibility_score") or 0.0)
-                    provenance_method = "borzoi"
-                    confidence = 0.55
-        except Exception:
-            score = None
-        if score is None:
-            center_score = 0.7
-            score = max(0.0, min(1.0, round(center_score - (radius / 5000.0), 3)))
-            provenance_method = "heuristic_v0"
-            confidence = 0.4
+        
+        # Extract ref/alt if available
+        ref = (request or {}).get("ref", "N")
+        alt = (request or {}).get("alt", "N")
+        
+        # Use Enformer client (handles retries, fallbacks, provenance)
+        result = await enformer_client.predict_chromatin_accessibility(
+            chrom=chrom,
+            pos=pos,
+            ref=ref,
+            alt=alt,
+            context_bp=32000,  # ±32kb per MASTER_STATUS.md spec
+            use_cache=True
+        )
+        
+        # Map to insights schema
         return {
             "chrom": chrom,
             "pos": pos,
-            "radius": radius,
-            "accessibility_score": score,
-            "confidence": confidence,
-            "provenance": {"method": provenance_method, "feature_flags": get_feature_flags()},
+            "radius": radius,  # Legacy field for compatibility
+            "accessibility_score": result["accessibility_score"],
+            "dnase_signal": result.get("dnase_signal"),
+            "cage_signal": result.get("cage_signal"),
+            "atac_signal": result.get("atac_signal"),
+            "confidence": 0.6 if result["provenance"]["method"] == "deepmind_enformer_tfhub" else 0.4,
+            "provenance": result["provenance"],
         }
     except HTTPException:
         raise
@@ -295,18 +366,30 @@ async def predict_chromatin_accessibility(request: Dict[str, Any]):
 
 
 @router.post("/predict_splicing_regulatory")
-async def predict_splicing_regulatory(request: Dict[str, Any]):
+async def predict_splicing_regulatory(
+    request: Dict[str, Any],
+    req_ctx: Request,
+    user: Optional[Dict[str, Any]] = Depends(get_optional_user)
+):
     """Splicing/regulatory (noncoding) variant impact proxy.
     Input: { chrom, pos, ref, alt, model_id? }
     Output: { regulatory_impact_score in [0,1], provenance }
     """
     _ensure_enabled()
+    
+    # Check quota if authenticated
+    if user and user.get("user_id"):
+        from ..middleware.quota_middleware import check_quota
+        quota_check = check_quota("variant_analyses")
+        user = await quota_check(user)
+    
     try:
         chrom = str((request or {}).get("chrom"))
         pos = int((request or {}).get("pos"))
         ref = str((request or {}).get("ref") or "").upper()
         alt = str((request or {}).get("alt") or "").upper()
-        model_id = (request or {}).get("model_id", "evo2_7b")
+        # Default to the platform's configured Evo model (typically evo2_1b for stability/cost control).
+        model_id = (request or {}).get("model_id") or DEFAULT_EVO_MODEL
         if not (chrom and pos and ref and alt):
             raise HTTPException(status_code=400, detail="chrom,pos,ref,alt required")
         # Use evo/score_variant_multi as a proxy signal for regulatory change magnitude
@@ -317,7 +400,8 @@ async def predict_splicing_regulatory(request: Dict[str, Any]):
                 if flags.get("disable_evo2"):
                     raise Exception("evo2 disabled by flag")
                 payload = {"assembly": "GRCh38", "chrom": chrom, "pos": pos, "ref": ref, "alt": alt, "model_id": model_id}
-                r = await client.post("http://127.0.0.1:8000/api/evo/score_variant_multi", json=payload, headers={"Content-Type": "application/json"})
+                api_base = str(req_ctx.base_url).rstrip("/")
+                r = await client.post(f"{api_base}/api/evo/score_variant_multi", json=payload, headers={"Content-Type": "application/json"})
                 if r.status_code < 400:
                     js = r.json() or {}
                     delta = float(js.get("min_delta") or 0.0)
@@ -374,4 +458,268 @@ async def predict_spacer_efficacy(request: Dict[str, Any]):
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"predict_spacer_efficacy failed: {e}")
+
+        mag = min(1.0, abs(delta) / 1.0)
+        score = round(0.1 + 0.8 * mag, 3)
+        return {
+            "regulatory_impact_score": score,
+            "provenance": {"method": "evo2_mindelta_proxy_v0", "model_id": model_id, "feature_flags": get_feature_flags()},
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_splicing_regulatory failed: {e}")
+
+@router.post("/predict_spacer_efficacy")
+async def predict_spacer_efficacy(request: Dict[str, Any]):
+    _ensure_enabled()
+    try:
+        spacer = (request or {}).get("spacer", "")
+        target = (request or {}).get("target_sequence", "")
+        if not spacer:
+            raise HTTPException(status_code=400, detail="spacer required")
+        gc = (spacer.count("G") + spacer.count("C")) / max(1, len(spacer))
+        gc_penalty = abs(gc - 0.5)
+        motif_bonus = 0.05 if "GGG" in spacer else 0.0
+        # Target-aware simple penalties: repeated homopolymers, extreme GC, short length
+        length_penalty = 0.1 if len(spacer) < 19 or len(spacer) > 23 else 0.0
+        homopolymer_penalty = 0.05 if any(h in spacer for h in ["AAAA","TTTT","CCCC","GGGG"]) else 0.0
+        # If target provided, add a naive complementarity check window
+        on_target_bonus = 0.0
+        try:
+            if target and spacer in target:
+                on_target_bonus = 0.05
+        except Exception:
+            pass
+        raw = 0.7 - gc_penalty - length_penalty - homopolymer_penalty + motif_bonus + on_target_bonus
+        efficacy = max(0.0, min(1.0, round(raw, 3)))
+        return {
+            "spacer": spacer,
+            "target_sequence": target,
+            "spacer_efficacy_heuristic": efficacy,
+            "confidence": 0.4,
+            "provenance": {"method": "gc_motif_rule_v0", "feature_flags": get_feature_flags()},
+        }
+        # Log event (non-blocking)
+        try:
+            await supabase.log_event(run_signature="insights", stage="predict_spacer_efficacy", message=f"len={len(spacer)}")
+        except Exception:
+            pass
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_spacer_efficacy failed: {e}")
+
+
+        mag = min(1.0, abs(delta) / 1.0)
+        score = round(0.1 + 0.8 * mag, 3)
+        return {
+            "regulatory_impact_score": score,
+            "provenance": {"method": "evo2_mindelta_proxy_v0", "model_id": model_id, "feature_flags": get_feature_flags()},
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_splicing_regulatory failed: {e}")
+
+@router.post("/predict_spacer_efficacy")
+async def predict_spacer_efficacy(request: Dict[str, Any]):
+    _ensure_enabled()
+    try:
+        spacer = (request or {}).get("spacer", "")
+        target = (request or {}).get("target_sequence", "")
+        if not spacer:
+            raise HTTPException(status_code=400, detail="spacer required")
+        gc = (spacer.count("G") + spacer.count("C")) / max(1, len(spacer))
+        gc_penalty = abs(gc - 0.5)
+        motif_bonus = 0.05 if "GGG" in spacer else 0.0
+        # Target-aware simple penalties: repeated homopolymers, extreme GC, short length
+        length_penalty = 0.1 if len(spacer) < 19 or len(spacer) > 23 else 0.0
+        homopolymer_penalty = 0.05 if any(h in spacer for h in ["AAAA","TTTT","CCCC","GGGG"]) else 0.0
+        # If target provided, add a naive complementarity check window
+        on_target_bonus = 0.0
+        try:
+            if target and spacer in target:
+                on_target_bonus = 0.05
+        except Exception:
+            pass
+        raw = 0.7 - gc_penalty - length_penalty - homopolymer_penalty + motif_bonus + on_target_bonus
+        efficacy = max(0.0, min(1.0, round(raw, 3)))
+        return {
+            "spacer": spacer,
+            "target_sequence": target,
+            "spacer_efficacy_heuristic": efficacy,
+            "confidence": 0.4,
+            "provenance": {"method": "gc_motif_rule_v0", "feature_flags": get_feature_flags()},
+        }
+        # Log event (non-blocking)
+        try:
+            await supabase.log_event(run_signature="insights", stage="predict_spacer_efficacy", message=f"len={len(spacer)}")
+        except Exception:
+            pass
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_spacer_efficacy failed: {e}")
+
+
+        mag = min(1.0, abs(delta) / 1.0)
+        score = round(0.1 + 0.8 * mag, 3)
+        return {
+            "regulatory_impact_score": score,
+            "provenance": {"method": "evo2_mindelta_proxy_v0", "model_id": model_id, "feature_flags": get_feature_flags()},
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_splicing_regulatory failed: {e}")
+
+@router.post("/predict_spacer_efficacy")
+async def predict_spacer_efficacy(request: Dict[str, Any]):
+    _ensure_enabled()
+    try:
+        spacer = (request or {}).get("spacer", "")
+        target = (request or {}).get("target_sequence", "")
+        if not spacer:
+            raise HTTPException(status_code=400, detail="spacer required")
+        gc = (spacer.count("G") + spacer.count("C")) / max(1, len(spacer))
+        gc_penalty = abs(gc - 0.5)
+        motif_bonus = 0.05 if "GGG" in spacer else 0.0
+        # Target-aware simple penalties: repeated homopolymers, extreme GC, short length
+        length_penalty = 0.1 if len(spacer) < 19 or len(spacer) > 23 else 0.0
+        homopolymer_penalty = 0.05 if any(h in spacer for h in ["AAAA","TTTT","CCCC","GGGG"]) else 0.0
+        # If target provided, add a naive complementarity check window
+        on_target_bonus = 0.0
+        try:
+            if target and spacer in target:
+                on_target_bonus = 0.05
+        except Exception:
+            pass
+        raw = 0.7 - gc_penalty - length_penalty - homopolymer_penalty + motif_bonus + on_target_bonus
+        efficacy = max(0.0, min(1.0, round(raw, 3)))
+        return {
+            "spacer": spacer,
+            "target_sequence": target,
+            "spacer_efficacy_heuristic": efficacy,
+            "confidence": 0.4,
+            "provenance": {"method": "gc_motif_rule_v0", "feature_flags": get_feature_flags()},
+        }
+        # Log event (non-blocking)
+        try:
+            await supabase.log_event(run_signature="insights", stage="predict_spacer_efficacy", message=f"len={len(spacer)}")
+        except Exception:
+            pass
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_spacer_efficacy failed: {e}")
+
+
+        mag = min(1.0, abs(delta) / 1.0)
+        score = round(0.1 + 0.8 * mag, 3)
+        return {
+            "regulatory_impact_score": score,
+            "provenance": {"method": "evo2_mindelta_proxy_v0", "model_id": model_id, "feature_flags": get_feature_flags()},
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_splicing_regulatory failed: {e}")
+
+@router.post("/predict_spacer_efficacy")
+async def predict_spacer_efficacy(request: Dict[str, Any]):
+    _ensure_enabled()
+    try:
+        spacer = (request or {}).get("spacer", "")
+        target = (request or {}).get("target_sequence", "")
+        if not spacer:
+            raise HTTPException(status_code=400, detail="spacer required")
+        gc = (spacer.count("G") + spacer.count("C")) / max(1, len(spacer))
+        gc_penalty = abs(gc - 0.5)
+        motif_bonus = 0.05 if "GGG" in spacer else 0.0
+        # Target-aware simple penalties: repeated homopolymers, extreme GC, short length
+        length_penalty = 0.1 if len(spacer) < 19 or len(spacer) > 23 else 0.0
+        homopolymer_penalty = 0.05 if any(h in spacer for h in ["AAAA","TTTT","CCCC","GGGG"]) else 0.0
+        # If target provided, add a naive complementarity check window
+        on_target_bonus = 0.0
+        try:
+            if target and spacer in target:
+                on_target_bonus = 0.05
+        except Exception:
+            pass
+        raw = 0.7 - gc_penalty - length_penalty - homopolymer_penalty + motif_bonus + on_target_bonus
+        efficacy = max(0.0, min(1.0, round(raw, 3)))
+        return {
+            "spacer": spacer,
+            "target_sequence": target,
+            "spacer_efficacy_heuristic": efficacy,
+            "confidence": 0.4,
+            "provenance": {"method": "gc_motif_rule_v0", "feature_flags": get_feature_flags()},
+        }
+        # Log event (non-blocking)
+        try:
+            await supabase.log_event(run_signature="insights", stage="predict_spacer_efficacy", message=f"len={len(spacer)}")
+        except Exception:
+            pass
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_spacer_efficacy failed: {e}")
+
+
+        mag = min(1.0, abs(delta) / 1.0)
+        score = round(0.1 + 0.8 * mag, 3)
+        return {
+            "regulatory_impact_score": score,
+            "provenance": {"method": "evo2_mindelta_proxy_v0", "model_id": model_id, "feature_flags": get_feature_flags()},
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_splicing_regulatory failed: {e}")
+
+@router.post("/predict_spacer_efficacy")
+async def predict_spacer_efficacy(request: Dict[str, Any]):
+    _ensure_enabled()
+    try:
+        spacer = (request or {}).get("spacer", "")
+        target = (request or {}).get("target_sequence", "")
+        if not spacer:
+            raise HTTPException(status_code=400, detail="spacer required")
+        gc = (spacer.count("G") + spacer.count("C")) / max(1, len(spacer))
+        gc_penalty = abs(gc - 0.5)
+        motif_bonus = 0.05 if "GGG" in spacer else 0.0
+        # Target-aware simple penalties: repeated homopolymers, extreme GC, short length
+        length_penalty = 0.1 if len(spacer) < 19 or len(spacer) > 23 else 0.0
+        homopolymer_penalty = 0.05 if any(h in spacer for h in ["AAAA","TTTT","CCCC","GGGG"]) else 0.0
+        # If target provided, add a naive complementarity check window
+        on_target_bonus = 0.0
+        try:
+            if target and spacer in target:
+                on_target_bonus = 0.05
+        except Exception:
+            pass
+        raw = 0.7 - gc_penalty - length_penalty - homopolymer_penalty + motif_bonus + on_target_bonus
+        efficacy = max(0.0, min(1.0, round(raw, 3)))
+        return {
+            "spacer": spacer,
+            "target_sequence": target,
+            "spacer_efficacy_heuristic": efficacy,
+            "confidence": 0.4,
+            "provenance": {"method": "gc_motif_rule_v0", "feature_flags": get_feature_flags()},
+        }
+        # Log event (non-blocking)
+        try:
+            await supabase.log_event(run_signature="insights", stage="predict_spacer_efficacy", message=f"len={len(spacer)}")
+        except Exception:
+            pass
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"predict_spacer_efficacy failed: {e}")
+
+
+
+        raise HTTPException(status_code=500, detail=f"predict_spacer_efficacy failed: {e}")
+
 

@@ -1,0 +1,28 @@
+{
+  "trial_id": "NCT02657889",
+  "trial_name": "TOPACIO",
+  "drugs": [
+    "niraparib",
+    "pembrolizumab"
+  ],
+  "moa_vector": [
+    0.9,
+    0.1,
+    0.15,
+    0.1,
+    0.05,
+    0.8,
+    0.05
+  ],
+  "pathways": [
+    "DDR",
+    "MAPK",
+    "PI3K",
+    "VEGF",
+    "HER2",
+    "IO",
+    "Efflux"
+  ],
+  "source": "Vinayak et al. JAMA Oncol 2019;5(8):1151-1157",
+  "extraction_date": "2026-01-13T01:39:15.199625"
+}

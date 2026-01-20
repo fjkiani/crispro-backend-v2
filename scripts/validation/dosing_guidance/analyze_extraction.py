@@ -86,3 +86,6 @@ print("\nFILE INFO:")
 print(f"  Location: {file_path}")
 print(f"  Size: {file_path.stat().st_size:,} bytes")
 
+
+
+

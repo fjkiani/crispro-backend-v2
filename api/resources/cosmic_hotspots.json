@@ -1,0 +1,195 @@
+{
+  "KRAS": {
+    "G12C": {
+      "codon": 12,
+      "aa_change": "G12C",
+      "cosmic_id": "COSV97851923",
+      "evidence": "highly_recurrent",
+      "frequency_in_cancer": 0.14,
+      "pathway": "MAPK",
+      "cancers": ["lung_adenocarcinoma", "colorectal", "pancreatic"],
+      "source": "COSMIC v98"
+    },
+    "G12D": {
+      "codon": 12,
+      "aa_change": "G12D",
+      "cosmic_id": "COSV97851924",
+      "evidence": "highly_recurrent",
+      "frequency_in_cancer": 0.36,
+      "pathway": "MAPK",
+      "cancers": ["pancreatic", "colorectal", "lung_adenocarcinoma"],
+      "source": "COSMIC v98"
+    },
+    "G12V": {
+      "codon": 12,
+      "aa_change": "G12V",
+      "cosmic_id": "COSV97851925",
+      "evidence": "highly_recurrent",
+      "frequency_in_cancer": 0.23,
+      "pathway": "MAPK",
+      "cancers": ["colorectal", "lung_adenocarcinoma", "pancreatic"],
+      "source": "COSMIC v98"
+    },
+    "G12A": {
+      "codon": 12,
+      "aa_change": "G12A",
+      "cosmic_id": "COSV97851926",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.07,
+      "pathway": "MAPK",
+      "cancers": ["pancreatic", "colorectal"],
+      "source": "COSMIC v98"
+    },
+    "G12S": {
+      "codon": 12,
+      "aa_change": "G12S",
+      "cosmic_id": "COSV97851927",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.05,
+      "pathway": "MAPK",
+      "cancers": ["pancreatic", "colorectal"],
+      "source": "COSMIC v98"
+    },
+    "G12R": {
+      "codon": 12,
+      "aa_change": "G12R",
+      "cosmic_id": "COSV97851928",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.03,
+      "pathway": "MAPK",
+      "cancers": ["pancreatic", "colorectal"],
+      "source": "COSMIC v98"
+    },
+    "G13D": {
+      "codon": 13,
+      "aa_change": "G13D",
+      "cosmic_id": "COSV97851929",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.05,
+      "pathway": "MAPK",
+      "cancers": ["colorectal", "pancreatic"],
+      "source": "COSMIC v98"
+    },
+    "Q61H": {
+      "codon": 61,
+      "aa_change": "Q61H",
+      "cosmic_id": "COSV97851930",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.02,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid"],
+      "source": "COSMIC v98"
+    },
+    "Q61L": {
+      "codon": 61,
+      "aa_change": "Q61L",
+      "cosmic_id": "COSV97851931",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.01,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid"],
+      "source": "COSMIC v98"
+    }
+  },
+  "BRAF": {
+    "V600E": {
+      "codon": 600,
+      "aa_change": "V600E",
+      "cosmic_id": "COSV52742978",
+      "evidence": "highly_recurrent",
+      "frequency_in_cancer": 0.66,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid", "colorectal", "ovarian"],
+      "source": "COSMIC v98"
+    },
+    "V600K": {
+      "codon": 600,
+      "aa_change": "V600K",
+      "cosmic_id": "COSV52742979",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.18,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid"],
+      "source": "COSMIC v98"
+    },
+    "V600D": {
+      "codon": 600,
+      "aa_change": "V600D",
+      "cosmic_id": "COSV52742980",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.05,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid"],
+      "source": "COSMIC v98"
+    },
+    "V600R": {
+      "codon": 600,
+      "aa_change": "V600R",
+      "cosmic_id": "COSV52742981",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.04,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid"],
+      "source": "COSMIC v98"
+    }
+  },
+  "NRAS": {
+    "Q61K": {
+      "codon": 61,
+      "aa_change": "Q61K",
+      "cosmic_id": "COSV52711786",
+      "evidence": "highly_recurrent",
+      "frequency_in_cancer": 0.35,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid", "colorectal"],
+      "source": "COSMIC v98"
+    },
+    "Q61R": {
+      "codon": 61,
+      "aa_change": "Q61R",
+      "cosmic_id": "COSV52711787",
+      "evidence": "highly_recurrent",
+      "frequency_in_cancer": 0.28,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid", "colorectal"],
+      "source": "COSMIC v98"
+    },
+    "Q61L": {
+      "codon": 61,
+      "aa_change": "Q61L",
+      "cosmic_id": "COSV52711788",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.15,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid"],
+      "source": "COSMIC v98"
+    },
+    "Q61H": {
+      "codon": 61,
+      "aa_change": "Q61H",
+      "cosmic_id": "COSV52711789",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.08,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "thyroid"],
+      "source": "COSMIC v98"
+    },
+    "G12D": {
+      "codon": 12,
+      "aa_change": "G12D",
+      "cosmic_id": "COSV52711790",
+      "evidence": "recurrent",
+      "frequency_in_cancer": 0.05,
+      "pathway": "MAPK",
+      "cancers": ["melanoma", "colorectal"],
+      "source": "COSMIC v98"
+    }
+  }
+}
+
+
+
+
+
+
+

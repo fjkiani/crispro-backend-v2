@@ -1,0 +1,35 @@
+{
+  "description": "L1 completeness: mutations-only MVP (no CA-125 series; no partial markers)",
+  "expected_input_level": "L1",
+  "expected_confidence_cap": 0.6,
+  "expected_flags": ["INPUT_LEVEL_L1", "MISSING_CA125_HISTORY"],
+  "patient_profile": {
+    "patient_id": "fixture-ov-l0-001",
+    "disease": "ovarian_cancer_hgs",
+    "tumor_context": {
+      "somatic_mutations": [
+        {
+          "gene": "MBD4",
+          "hgvs_p": "p.Ile413Serfs*2",
+          "consequence": "frameshift_variant",
+          "chrom": "3",
+          "pos": 1292935,
+          "ref": "A",
+          "alt": "del"
+        },
+        {
+          "gene": "TP53",
+          "hgvs_p": "p.Arg175His",
+          "consequence": "missense_variant",
+          "chrom": "17",
+          "pos": 7577120,
+          "ref": "G",
+          "alt": "A"
+        }
+      ]
+    },
+    "biomarker_history": null,
+    "hrd_score": null
+  }
+}
+

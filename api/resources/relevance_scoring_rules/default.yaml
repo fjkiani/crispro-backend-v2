@@ -1,0 +1,94 @@
+# Relevance Scoring Rules Configuration
+# Defines how to compute patient-specific relevance scores
+
+scoring_rules:
+  # Biomarker mentions in trial text
+  biomarker_mentions:
+    - biomarker: "MBD4"
+      keywords: ["MBD4", "base excision repair", "BER deficiency", "base excision"]
+      score: 0.3
+      fields: ["title", "eligibility", "interventions", "summary"]
+      priority: "high"
+      
+    - biomarker: "TP53"
+      keywords: ["TP53", "p53 mutant", "p53 mutation", "p53"]
+      score: 0.2
+      fields: ["eligibility", "interventions"]
+      priority: "medium"
+      
+    - biomarker: "PD-L1"
+      keywords: ["PD-L1", "PDL1", "programmed death ligand 1", "CPS"]
+      score: 0.1
+      fields: ["eligibility", "interventions"]
+      priority: "medium"
+  
+  # Intervention matches
+  intervention_matches:
+    - intervention: "PARP"
+      keywords: ["PARP", "olaparib", "niraparib", "rucaparib", "PARP inhibitor"]
+      score: 0.25
+      fields: ["interventions", "title"]
+      priority: "high"
+      
+    - intervention: "ATR"
+      keywords: ["ATR", "ATR inhibitor", "ceralasertib", "berzosertib"]
+      score: 0.15
+      fields: ["interventions", "title"]
+      priority: "medium"
+      
+    - intervention: "WEE1"
+      keywords: ["WEE1", "WEE1 inhibitor", "adavosertib", "AZD1775"]
+      score: 0.15
+      fields: ["interventions", "title"]
+      priority: "medium"
+      
+    - intervention: "PD-1"
+      keywords: ["pembrolizumab", "nivolumab", "PD-1", "PD1", "checkpoint inhibitor"]
+      score: 0.1
+      fields: ["interventions", "title"]
+      priority: "medium"
+  
+  # Intervention combinations (extra boost)
+  intervention_combos:
+    - combo: ["PARP", "ATR"]
+      keywords: ["PARP", "ATR", "olaparib", "ceralasertib"]
+      score: 0.15  # Extra boost
+      fields: ["interventions", "title"]
+      priority: "high"
+      
+    - combo: ["PARP", "WEE1"]
+      keywords: ["PARP", "WEE1", "olaparib", "adavosertib"]
+      score: 0.15  # Extra boost
+      fields: ["interventions", "title"]
+      priority: "high"
+      
+    - combo: ["PARP", "checkpoint"]
+      keywords: ["PARP", "pembrolizumab", "nivolumab", "checkpoint"]
+      score: 0.1  # Extra boost
+      fields: ["interventions", "title"]
+      priority: "medium"
+  
+  # Pathway mentions
+  pathway_mentions:
+    - pathway: "DDR"
+      keywords: ["DNA damage repair", "DDR", "DDR deficiency", "homologous recombination"]
+      score: 0.1
+      fields: ["eligibility", "summary"]
+      priority: "low"
+      
+    - pathway: "BER"
+      keywords: ["base excision repair", "BER", "BER deficiency"]
+      score: 0.1
+      fields: ["eligibility", "summary"]
+      priority: "low"
+
+# Scoring configuration
+scoring_config:
+  max_score: 1.0
+  score_normalization: "clamp"  # clamp to [0, 1]
+  field_weights:
+    title: 1.0
+    eligibility: 1.0
+    interventions: 1.0
+    summary: 0.5
+  combo_boost_multiplier: 1.5  # Multiply combo scores by this

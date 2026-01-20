@@ -1,0 +1,407 @@
+{
+  "trials": {
+    "trials": [],
+    "summary": {
+      "total_candidates": 50,
+      "hard_filtered": 0,
+      "top_results": 0,
+      "avg_match_score": 0,
+      "avg_confidence_gate": 0
+    },
+    "provenance": {
+      "search_method": "hybrid_astradb_neo4j",
+      "filtering_applied": [
+        "hard_eligibility",
+        "soft_boosts",
+        "germline_negative"
+      ],
+      "confidence_gate_formula": "max(soc=0.95, trial_eligibility=0.90) with hard/soft split",
+      "ca125_intelligence_version": "v1",
+      "generated_at": "2025-11-15T05:49:33.207667",
+      "for_patient": "AK (Stage IVB ovarian cancer)",
+      "run_id": "ayesha_trials_1763203773"
+    }
+  },
+  "soc_recommendation": {
+    "regimen": "Carboplatin AUC 5-6 + Paclitaxel 175 mg/m\u00b2",
+    "add_ons": [],
+    "detailed_dosing": {
+      "carboplatin": {
+        "dose": "AUC 5-6 mg/mL/min",
+        "calculation": "Calvert formula using CrCl (GFR)",
+        "infusion_time": "30-60 minutes",
+        "premedication": "Antiemetics (5-HT3 antagonist + dexamethasone)"
+      },
+      "paclitaxel": {
+        "dose": "175 mg/m\u00b2 IV",
+        "infusion_time": "3 hours",
+        "premedication": "Dexamethasone 20mg PO/IV, diphenhydramine 50mg IV, ranitidine 50mg IV (prevent hypersensitivity)"
+      }
+    },
+    "schedule": "Every 3 weeks for 6 cycles (carboplatin + paclitaxel) + bevacizumab continuation",
+    "schedule_detailed": {
+      "induction": "6 cycles every 21 days (carboplatin + paclitaxel \u00b1 bevacizumab)",
+      "maintenance": "Bevacizumab continuation (if started) up to 15 months total OR progression",
+      "typical_duration": "~18 weeks induction (6 cycles \u00d7 3 weeks) + up to 12 months maintenance",
+      "adjustments": {
+        "dose_reduction": "Consider for Grade 3-4 toxicity (neuropathy, cytopenias)",
+        "delay": "Up to 2 weeks for recovery from toxicity",
+        "discontinuation": "Disease progression, unacceptable toxicity, patient preference"
+      }
+    },
+    "monitoring_protocol": {
+      "baseline": [
+        "CBC with differential",
+        "CMP (renal/hepatic function)",
+        "CA-125",
+        "CT chest/abdomen/pelvis with contrast",
+        "Pregnancy test (if applicable)"
+      ],
+      "during_treatment": [
+        "CBC before each cycle (watch for cytopenias)",
+        "CMP every cycle (carboplatin nephrotoxicity)",
+        "CA-125 every cycle (track response)",
+        "Imaging every 3 cycles (RECIST 1.1)",
+        "Blood pressure every visit (if on bevacizumab)",
+        "Urinalysis for proteinuria (if on bevacizumab)"
+      ],
+      "toxicity_watch": [
+        "Peripheral neuropathy (paclitaxel) - consider dose reduction if Grade \u22652",
+        "Thrombocytopenia (carboplatin) - hold if platelets <100K, reduce if persistent",
+        "GI perforation risk (bevacizumab) - educate patient on warning signs",
+        "Hypertension (bevacizumab) - target BP <140/90, add antihypertensives if needed"
+      ],
+      "response_assessment": "RECIST 1.1 criteria + CA-125 GCIG criteria (confirmed by repeat measurement)"
+    },
+    "confidence": 0.95,
+    "confidence_gate_reasons": [
+      "NCCN Category 1 recommendation for Stage IVB HGSOC",
+      "Carboplatin + Paclitaxel is standard frontline therapy",
+      "Bevacizumab add-on indicated for ascites/peritoneal disease (GOG-218, ICON7)"
+    ],
+    "rationale": "NCCN first-line for Stage IVB high-grade serous ovarian cancer",
+    "evidence": {
+      "carboplatin_paclitaxel": "Standard of care (multiple Phase III trials)",
+      "bevacizumab": "GOG-218 (HR 0.72, p<0.001), ICON7 (HR 0.81, p=0.04)"
+    },
+    "monitoring": "CA-125 every cycle, imaging every 3 cycles",
+    "nccn_guidelines": {
+      "version": "NCCN Ovarian Cancer Guidelines v2024",
+      "category": "Category 1 (uniform NCCN consensus)",
+      "url": "https://www.nccn.org/professionals/physician_gls/pdf/ovarian.pdf"
+    },
+    "clinical_notes": "This is a guideline-based recommendation (NOT prediction). Actual regimen selection should be made by treating oncologist considering patient-specific factors (performance status, organ function, comorbidities).",
+    "provenance": {
+      "source": "NCCN Ovarian Cancer Guidelines v2024",
+      "category": "Category 1 (uniform NCCN consensus)",
+      "generated_at": "2025-11-15T05:49:33.207493"
+    }
+  },
+  "ca125_intelligence": {
+    "burden_class": "EXTENSIVE",
+    "burden_score": 0.7775280682546419,
+    "forecast": {
+      "complete_response_target": 35,
+      "complete_response_target_unit": "U/mL",
+      "note": "Baseline CA-125 not available. General expectations: \u226570% drop by cycle 3, \u226590% by cycle 6 for chemo-sensitive disease."
+    },
+    "resistance_signals": [],
+    "monitoring_strategy": {
+      "frequency": "every_2_weeks",
+      "timing": "Until treatment initiation",
+      "rationale": "High baseline; track any changes before treatment",
+      "method": "Serum CA-125 (U/mL)"
+    },
+    "clinical_notes": "CA-125 of 2842.0 U/mL indicates EXTENSIVE disease burden (>1,000). CA-125 is highly trackable and suitable for response monitoring. Complete response target: <35 U/mL. Additional therapy cycles likely needed.",
+    "provenance": {
+      "method": "ca125_intelligence_v1",
+      "data_sources": [
+        "GOG-218",
+        "ICON7",
+        "NCCN Guidelines v2024"
+      ],
+      "thresholds": {
+        "MINIMAL": [
+          0,
+          100
+        ],
+        "MODERATE": [
+          100,
+          500
+        ],
+        "SIGNIFICANT": [
+          500,
+          1000
+        ],
+        "EXTENSIVE": [
+          1000,
+          null
+        ]
+      },
+      "expectations": {
+        "cycle3_drop_percent": 70,
+        "cycle6_drop_percent": 90,
+        "complete_response_threshold": 35,
+        "resistance_threshold_percent": 50
+      },
+      "analyzed_at": "2025-11-15T05:49:33.207573",
+      "run_id": "ca125_1763203773"
+    }
+  },
+  "wiwfm": {
+    "status": "awaiting_ngs",
+    "message": "Personalized drug efficacy predictions require tumor NGS data (somatic mutations, HRD, TMB, MSI)",
+    "ngs_fast_track": {
+      "ctDNA": "Guardant360 - somatic BRCA/HRR, TMB, MSI (7-10 days)",
+      "tissue_HRD": "MyChoice - HRD score for PARP maintenance planning (7-14 days)",
+      "IHC": "WT1/PAX8/p53 - confirm high-grade serous histology (1-3 days)"
+    },
+    "confidence": null,
+    "note": "Once NGS available, WIWFM will provide Evo2-powered S/P/E drug ranking with 70-85% confidence"
+  },
+  "food_validation": null,
+  "resistance_playbook": null,
+  "next_test_recommender": {
+    "recommendations": [
+      {
+        "test_name": "HRD Score (MyChoice CDx or tissue-based NGS)",
+        "priority": 1,
+        "turnaround_days": 10,
+        "cost_estimate": "$4,000-$6,000 (typically covered by insurance for Stage III/IV ovarian)",
+        "impact_if_positive": "HRD \u226542 \u2192 PARP maintenance eligible (NCCN Category 1), confidence 90% for olaparib/niraparib/rucaparib. Unlock mechanism map DDR chip (green if \u22650.70).",
+        "impact_if_negative": "HRD <42 \u2192 PARP reduced benefit (confidence 60%), consider ATR/CHK1 combo trials (NCT03462342, NCT02264678) or platinum-based standard without PARP maintenance.",
+        "rationale": "HRD score determines PARP inhibitor eligibility and confidence level. Critical for first-line maintenance decision after platinum response. Germline-negative patients can still have somatic HRD.",
+        "urgency": "high",
+        "test_type": "tissue",
+        "ordering_info": "Order via Myriad Genetics (MyChoice CDx) or include in comprehensive tumor NGS panel. Requires FFPE tissue block or fresh tumor biopsy."
+      },
+      {
+        "test_name": "ctDNA Comprehensive Panel (Guardant360 CDx or FoundationOne Liquid CDx)",
+        "priority": 2,
+        "turnaround_days": 7,
+        "cost_estimate": "$5,000-$7,000 (typically covered by insurance)",
+        "impact_if_positive": "MSI-High OR TMB \u226520 \u2192 Immunotherapy eligible (pembrolizumab + chemo), confidence 85%. IO mechanism chip \u2192 green. Somatic BRCA1/BRCA2 or HRR mutations \u2192 PARP confidence 90% (even with germline-negative). DDR mechanism chip \u2192 green if somatic HRR detected.",
+        "impact_if_negative": "MSI-Stable AND TMB <20 \u2192 Immunotherapy lower priority (confidence 40%). IO mechanism chip \u2192 red. No somatic HRR \u2192 standard platinum backbone (no PARP unless tissue HRD \u226542).",
+        "rationale": "MSI/TMB unlock immunotherapy eligibility (critical in platinum-resistant setting). Somatic HRR mutations enable PARP strategies even when germline negative (15-20% of HGSOC). ctDNA faster than tissue (7d vs 10-14d) and tracks clonal evolution.",
+        "urgency": "high",
+        "test_type": "blood",
+        "ordering_info": "Order via Guardant Health (Guardant360 CDx) or Foundation Medicine (FoundationOne Liquid CDx). Requires 2-3 tubes of blood (10mL EDTA). No tissue needed."
+      },
+      {
+        "test_name": "SLFN11 IHC (Immunohistochemistry)",
+        "priority": 3,
+        "turnaround_days": 5,
+        "cost_estimate": "$300-$500",
+        "impact_if_positive": "SLFN11+ \u2192 Normal PARP sensitivity maintained, confidence 85%. Proceed with PARP maintenance if HRD \u226542. No adjustment to DDR mechanism burden.",
+        "impact_if_negative": "SLFN11- \u2192 Reduced PARP sensitivity (confidence drops to 50%), consider ATR/CHK1 or platinum-based alternatives. Flag in hint tiles: 'SLFN11 loss \u2192 favor ATR over PARP'.",
+        "rationale": "SLFN11 (Schlafen 11) expression correlates with PARP inhibitor response. Low/absent SLFN11 indicates intrinsic PARP resistance risk. Important for germline-negative patients where PARP benefit less certain.",
+        "urgency": "medium",
+        "test_type": "ihc",
+        "ordering_info": "Order via pathology lab IHC panel. Requires FFPE tissue block (same block used for HRD/tumor NGS). Not always covered by insurance (check prior authorization)."
+      }
+    ],
+    "top_priority": {
+      "test_name": "HRD Score (MyChoice CDx or tissue-based NGS)",
+      "priority": 1,
+      "turnaround_days": 10,
+      "cost_estimate": "$4,000-$6,000 (typically covered by insurance for Stage III/IV ovarian)",
+      "impact_if_positive": "HRD \u226542 \u2192 PARP maintenance eligible (NCCN Category 1), confidence 90% for olaparib/niraparib/rucaparib. Unlock mechanism map DDR chip (green if \u22650.70).",
+      "impact_if_negative": "HRD <42 \u2192 PARP reduced benefit (confidence 60%), consider ATR/CHK1 combo trials (NCT03462342, NCT02264678) or platinum-based standard without PARP maintenance.",
+      "rationale": "HRD score determines PARP inhibitor eligibility and confidence level. Critical for first-line maintenance decision after platinum response. Germline-negative patients can still have somatic HRD.",
+      "urgency": "high",
+      "test_type": "tissue",
+      "ordering_info": "Order via Myriad Genetics (MyChoice CDx) or include in comprehensive tumor NGS panel. Requires FFPE tissue block or fresh tumor biopsy."
+    },
+    "total_tests": 3,
+    "high_priority_count": 2,
+    "estimated_turnaround": "10 days (if tests run in parallel)",
+    "urgency_summary": "2 high-priority tests recommended",
+    "checklist_markdown": "## \ud83d\udccb NGS Fast-Track Checklist\n\n### Priority 1: HRD Score\n- **Test**: HRD Score (MyChoice CDx or tissue-based NGS)\n- **Turnaround**: 10 days\n- **Cost**: $4,000-$6,000 (typically covered by insurance for Stage III/IV ovarian)\n- **Urgency**: HIGH\n\n**What This Unlocks**:\n- \u2705 If Positive: HRD \u226542 \u2192 PARP maintenance eligible (NCCN Category 1), confidence 90% for olaparib/niraparib/rucaparib. Unlock mechanism map DDR chip (green if \u22650.70)...\n- \u26a0\ufe0f If Negative: HRD <42 \u2192 PARP reduced benefit (confidence 60%), consider ATR/CHK1 combo trials (NCT03462342, NCT02264678) or platinum-based standard without PARP mai...\n\n**Why**: HRD score determines PARP inhibitor eligibility and confidence level. Critical for first-line maintenance decision after platinum response. Germline-negative patients can still have somatic HRD....\n\n**Ordering**: Order via Myriad Genetics (MyChoice CDx) or include in comprehensive tumor NGS panel. Requires FFPE tissue block or fresh tumor biopsy.\n\n---\n\n### Priority 2: ctDNA Comprehensive Panel\n- **Test**: ctDNA Comprehensive Panel (Guardant360 CDx or FoundationOne Liquid CDx)\n- **Turnaround**: 7 days\n- **Cost**: $5,000-$7,000 (typically covered by insurance)\n- **Urgency**: HIGH\n\n**What This Unlocks**:\n- \u2705 If Positive: MSI-High OR TMB \u226520 \u2192 Immunotherapy eligible (pembrolizumab + chemo), confidence 85%. IO mechanism chip \u2192 green. Somatic BRCA1/BRCA2 or HRR mutations ...\n- \u26a0\ufe0f If Negative: MSI-Stable AND TMB <20 \u2192 Immunotherapy lower priority (confidence 40%). IO mechanism chip \u2192 red. No somatic HRR \u2192 standard platinum backbone (no PARP ...\n\n**Why**: MSI/TMB unlock immunotherapy eligibility (critical in platinum-resistant setting). Somatic HRR mutations enable PARP strategies even when germline negative (15-20% of HGSOC). ctDNA faster than tissue ...\n\n**Ordering**: Order via Guardant Health (Guardant360 CDx) or Foundation Medicine (FoundationOne Liquid CDx). Requires 2-3 tubes of blood (10mL EDTA). No tissue needed.\n\n---\n\n### Priority 3: SLFN11 IHC\n- **Test**: SLFN11 IHC (Immunohistochemistry)\n- **Turnaround**: 5 days\n- **Cost**: $300-$500\n- **Urgency**: MEDIUM\n\n**What This Unlocks**:\n- \u2705 If Positive: SLFN11+ \u2192 Normal PARP sensitivity maintained, confidence 85%. Proceed with PARP maintenance if HRD \u226542. No adjustment to DDR mechanism burden....\n- \u26a0\ufe0f If Negative: SLFN11- \u2192 Reduced PARP sensitivity (confidence drops to 50%), consider ATR/CHK1 or platinum-based alternatives. Flag in hint tiles: 'SLFN11 loss \u2192 fav...\n\n**Why**: SLFN11 (Schlafen 11) expression correlates with PARP inhibitor response. Low/absent SLFN11 indicates intrinsic PARP resistance risk. Important for germline-negative patients where PARP benefit less ce...\n\n**Ordering**: Order via pathology lab IHC panel. Requires FFPE tissue block (same block used for HRD/tumor NGS). Not always covered by insurance (check prior authorization).\n\n---\n",
+    "provenance": {
+      "version": "v1.0",
+      "policy_source": "MANAGER_ANSWERS_TO_ZO_SAE_QUESTIONS.md (P1, C6)",
+      "manager": "SR",
+      "date": "2025-01-13",
+      "note": "Priority order: 1) HRD (PARP gate), 2) ctDNA (IO+DDR), 3) SLFN11 (PARP sensitivity), 4) ABCB1 (if prior taxane)"
+    }
+  },
+  "hint_tiles": {
+    "hint_tiles": [
+      {
+        "category": "next_test",
+        "title": "\ud83d\udccb Recommended Next Test",
+        "message": "Consider ordering HRD Score",
+        "reasons": [
+          "HRD score determines PARP inhibitor eligibility and confidence level. Critical for first-line maintenance decision after...",
+          "Turnaround: 10 days",
+          "Unlocks: HRD \u226542 \u2192 PARP maintenance eligible (NCCN Category 1), confidence 90% for olaparib/niraparib/rucapar..."
+        ],
+        "priority": 1,
+        "icon": "\ud83e\uddea",
+        "action_link": "/ngs-fast-track",
+        "provenance": "next_test_recommender.priority_1"
+      },
+      {
+        "category": "trials_lever",
+        "title": "\ud83d\udd2c Clinical Trial Opportunities",
+        "message": "Consider frontline trial enrollment (0 trials matched)",
+        "reasons": [
+          "Stage IVB frontline - prime trial candidate",
+          "NYC metro - multiple sites within 50 miles",
+          "Once NGS available \u2192 mechanism-matched trial prioritization"
+        ],
+        "priority": 2,
+        "icon": "\ud83c\udfaf",
+        "action_link": "/ayesha-trials",
+        "provenance": "ayesha_trials.frontline_filter"
+      }
+    ],
+    "total_tiles": 2,
+    "categories": [
+      "next_test",
+      "trials_lever"
+    ],
+    "by_category": {
+      "next_test": {
+        "category": "next_test",
+        "title": "\ud83d\udccb Recommended Next Test",
+        "message": "Consider ordering HRD Score",
+        "reasons": [
+          "HRD score determines PARP inhibitor eligibility and confidence level. Critical for first-line maintenance decision after...",
+          "Turnaround: 10 days",
+          "Unlocks: HRD \u226542 \u2192 PARP maintenance eligible (NCCN Category 1), confidence 90% for olaparib/niraparib/rucapar..."
+        ],
+        "priority": 1,
+        "icon": "\ud83e\uddea",
+        "action_link": "/ngs-fast-track",
+        "provenance": "next_test_recommender.priority_1"
+      },
+      "trials_lever": {
+        "category": "trials_lever",
+        "title": "\ud83d\udd2c Clinical Trial Opportunities",
+        "message": "Consider frontline trial enrollment (0 trials matched)",
+        "reasons": [
+          "Stage IVB frontline - prime trial candidate",
+          "NYC metro - multiple sites within 50 miles",
+          "Once NGS available \u2192 mechanism-matched trial prioritization"
+        ],
+        "priority": 2,
+        "icon": "\ud83c\udfaf",
+        "action_link": "/ayesha-trials",
+        "provenance": "ayesha_trials.frontline_filter"
+      }
+    },
+    "summary_text": "## \ud83c\udfaf Recommended Actions\n\n### \ud83e\uddea \ud83d\udccb Recommended Next Test\n**Consider ordering HRD Score**\n\n**Why:**\n- HRD score determines PARP inhibitor eligibility and confidence level. Critical for first-line maintenance decision after...\n- Turnaround: 10 days\n- Unlocks: HRD \u226542 \u2192 PARP maintenance eligible (NCCN Category 1), confidence 90% for olaparib/niraparib/rucapar...\n\n### \ud83c\udfaf \ud83d\udd2c Clinical Trial Opportunities\n**Consider frontline trial enrollment (0 trials matched)**\n\n**Why:**\n- Stage IVB frontline - prime trial candidate\n- NYC metro - multiple sites within 50 miles\n- Once NGS available \u2192 mechanism-matched trial prioritization\n",
+    "provenance": {
+      "version": "v1.0",
+      "policy_source": "MANAGER_ANSWERS_TO_ZO_SAE_QUESTIONS.md (P5, C8)",
+      "manager": "SR",
+      "date": "2025-01-13",
+      "max_tiles": 4,
+      "tone": "suggestive",
+      "note": "Priority: Test \u2192 Trials \u2192 Monitor \u2192 Avoid. Pre-NGS excludes 'avoid' tile."
+    }
+  },
+  "mechanism_map": {
+    "chips": [
+      {
+        "pathway": "DDR",
+        "burden": 0.0,
+        "color": "default",
+        "label": "Awaiting NGS",
+        "tooltip": "DNA damage repair pathway burden - requires tumor NGS to assess. High burden (\u226570%) indicates PARP/ATR/CHK1 eligibility.",
+        "status": "awaiting_ngs"
+      },
+      {
+        "pathway": "MAPK",
+        "burden": 0.0,
+        "color": "default",
+        "label": "Awaiting NGS",
+        "tooltip": "RAS/RAF/MEK pathway burden - requires tumor NGS. High burden (\u226570%) indicates MEK/RAF inhibitor eligibility.",
+        "status": "awaiting_ngs"
+      },
+      {
+        "pathway": "PI3K",
+        "burden": 0.0,
+        "color": "default",
+        "label": "Awaiting NGS",
+        "tooltip": "PI3K/AKT/mTOR pathway burden - requires tumor NGS. High burden (\u226570%) indicates PI3K/mTOR inhibitor eligibility.",
+        "status": "awaiting_ngs"
+      },
+      {
+        "pathway": "VEGF",
+        "burden": 0.0,
+        "color": "default",
+        "label": "Awaiting NGS",
+        "tooltip": "Angiogenesis pathway burden - requires tumor NGS. High burden (\u226570%) supports bevacizumab addition.",
+        "status": "awaiting_ngs"
+      },
+      {
+        "pathway": "IO",
+        "burden": 0.0,
+        "color": "default",
+        "label": "Awaiting NGS",
+        "tooltip": "Immune checkpoint pathway - requires MSI/TMB testing. MSI-High OR TMB \u226520 \u2192 Immunotherapy eligible.",
+        "status": "awaiting_ngs"
+      },
+      {
+        "pathway": "Efflux",
+        "burden": 0.0,
+        "color": "default",
+        "label": "Awaiting NGS",
+        "tooltip": "Drug efflux resistance (ABCB1) - requires tumor NGS. High expression \u2192 Cross-resistance to taxanes/anthracyclines.",
+        "status": "awaiting_ngs"
+      }
+    ],
+    "status": "awaiting_ngs",
+    "message": "Mechanism map will be available once tumor NGS results are uploaded (7-10 days). Order HRD + ctDNA to unlock.",
+    "provenance": {
+      "mode": "pre_ngs",
+      "policy": "All chips gray per Manager C9"
+    }
+  },
+  "sae_features": {
+    "status": "awaiting_ngs"
+  },
+  "resistance_alert": {
+    "status": "awaiting_ngs"
+  },
+  "summary": {
+    "components_included": [
+      "clinical_trials",
+      "soc_recommendation",
+      "ca125_monitoring",
+      "wiwfm",
+      "next_test_recommender",
+      "hint_tiles",
+      "mechanism_map"
+    ],
+    "ngs_status": "pending",
+    "confidence_level": "high (90-100%)",
+    "reasoning": "Confidence is high for guideline-based recommendations (trials, SOC, CA-125). Confidence is moderate for personalized predictions (WIWFM requires NGS)."
+  },
+  "provenance": {
+    "orchestrator": "complete_care_v2",
+    "for_patient": "AK (Stage IVB ovarian cancer)",
+    "endpoints_called": [
+      "clinical_trials",
+      "soc_recommendation",
+      "ca125_monitoring",
+      "wiwfm",
+      "next_test_recommender",
+      "hint_tiles",
+      "mechanism_map"
+    ],
+    "ngs_status": "pending",
+    "generated_at": "2025-11-15T05:49:33.212713",
+    "run_id": "complete_care_v2_1763203773",
+    "note": "This is NOT a demo. Real clinical decision support for Ayesha's life.",
+    "sae_phase1_enabled": true,
+    "sae_services": [
+      "next_test_recommender",
+      "hint_tiles",
+      "mechanism_map"
+    ],
+    "manager_policy": "MANAGER_ANSWERS_TO_ZO_SAE_QUESTIONS.md (Jan 13, 2025)"
+  }
+}

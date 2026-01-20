@@ -1,0 +1,59 @@
+================================================================================
+🏷️  ADC RESISTANCE AUTO-LABELING PIPELINE
+================================================================================
+Start time: 2025-10-18 03:02:01
+
+
+================================================================================
+PROCESSING: brca_tcga_pan_can_atlas_2018
+================================================================================
+
+✅ Loaded 218 mutations from brca_tcga_pan_can_atlas_2018
+✅ Loaded clinical data for brca_tcga_pan_can_atlas_2018
+⚠️  Expression file not found: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/raw/brca_tcga_pan_can_atlas_2018_expression.csv (will use mutation-only labels)
+✅ Created mutation matrix: 128 patients × 17 genes
+
+✅ Labeled 128 patients
+
+ADC Resistance Distribution:
+adc_resistance_risk
+LOW_RISK       110
+MEDIUM_RISK     18
+Name: count, dtype: int64
+
+SG Cross-Resistance Distribution:
+sg_cross_resistance_risk
+LOW_RISK    128
+Name: count, dtype: int64
+
+================================================================================
+PROCESSING: brca_metabric
+================================================================================
+
+✅ Loaded 3066 mutations from brca_metabric
+✅ Loaded clinical data for brca_metabric
+⚠️  Expression file not found: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/raw/brca_metabric_expression.csv (will use mutation-only labels)
+✅ Created mutation matrix: 1892 patients × 15 genes
+
+✅ Labeled 1892 patients
+
+ADC Resistance Distribution:
+adc_resistance_risk
+LOW_RISK       1620
+MEDIUM_RISK     261
+HIGH_RISK        11
+Name: count, dtype: int64
+
+SG Cross-Resistance Distribution:
+sg_cross_resistance_risk
+LOW_RISK    1892
+Name: count, dtype: int64
+
+================================================================================
+✅ LABELING COMPLETE
+================================================================================
+Total patients labeled: 2020
+Output file: /Users/fahadkiani/Desktop/development/crispr-assistant-main/oncology-coPilot/oncology-backend-minimal/data/yale_tdzd_project/processed/brca_adc_resistance_cohort.csv
+
+Next step: Train prediction models using train_adc_models.py
+End time: 2025-10-18 03:02:01

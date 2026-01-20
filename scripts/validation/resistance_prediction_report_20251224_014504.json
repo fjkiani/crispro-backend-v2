@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-12-24T06:45:04.963354",
+  "overall_passed": true,
+  "tasks_passed": 7,
+  "results": [
+    {
+      "task_id": 1,
+      "task_name": "Signal Detection Logic",
+      "passed": true,
+      "details": "Signals detected: 2 (need \u22651 for resistance)",
+      "metrics": {
+        "signal_count": 2,
+        "risk_level": "HIGH"
+      }
+    },
+    {
+      "task_id": 2,
+      "task_name": "Mechanism Breakdown",
+      "passed": true,
+      "details": "DNA threshold: True, Pathway threshold: True",
+      "metrics": {}
+    },
+    {
+      "task_id": 3,
+      "task_name": "Risk Stratification",
+      "passed": true,
+      "details": "Risk level: HIGH, Probability: 0.96",
+      "metrics": {
+        "risk_level": "HIGH",
+        "probability": 0.9583321161476851
+      }
+    },
+    {
+      "task_id": 4,
+      "task_name": "Signal Fusion",
+      "passed": true,
+      "details": "Signal types: ['DNA_REPAIR_RESTORATION', 'PATHWAY_ESCAPE', 'CA125_KINETICS', 'MM_HIGH_RISK_GENE', 'MM_CYTOGENETICS']",
+      "metrics": {}
+    },
+    {
+      "task_id": 5,
+      "task_name": "Pathway Escape Detection",
+      "passed": true,
+      "details": "Pathway escape signal: detected, shifts: []",
+      "metrics": {
+        "escape_detected": true
+      }
+    },
+    {
+      "task_id": 6,
+      "task_name": "Baseline Handling",
+      "passed": false,
+      "details": "Baseline source: patient_baseline",
+      "metrics": {
+        "baseline_source": "patient_baseline"
+      }
+    },
+    {
+      "task_id": 7,
+      "task_name": "Confidence Modulation",
+      "passed": true,
+      "details": "Confidence modulation requires live prediction test",
+      "metrics": {}
+    },
+    {
+      "task_id": 8,
+      "task_name": "Consistency",
+      "passed": true,
+      "details": "3 runs: probabilities=[0.622, 0.622, 0.622] (consistent)",
+      "metrics": {
+        "consistent": true
+      }
+    }
+  ],
+  "metrics": {
+    "signal_detection": 2,
+    "risk_level": "HIGH",
+    "probability": 0.9583321161476851
+  }
+}

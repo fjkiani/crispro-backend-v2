@@ -1,0 +1,277 @@
+{
+  "provenance": {
+    "run_id": "f1f5ae73-4195-460f-bf50-b1b7949e4bb5",
+    "created_at": "2025-12-30T04:59:21.230244+00:00",
+    "script": "run_spe_profiles_benchmark.py",
+    "api_root": "http://127.0.0.1:8000",
+    "model_id": "evo2_1b",
+    "profile": "SP",
+    "flags": {
+      "DISABLE_LITERATURE": "1",
+      "DISABLE_FUSION": "1",
+      "EVO_FORCE_MODEL": "evo2_1b",
+      "EVO_USE_DELTA_ONLY": "1",
+      "GUIDANCE_FAST": ""
+    }
+  },
+  "summary": {
+    "n_total": 12,
+    "n_positive": 8,
+    "n_negative": 4,
+    "positive": {
+      "class_at1": 0.375,
+      "drug_at1": 0.25
+    },
+    "negative": {
+      "parp_fp_rate": 1.0
+    }
+  },
+  "cases": [
+    {
+      "case_id": "HS_001",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.67,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": true,
+        "gt_drugs": [
+          "Adavosertib"
+        ],
+        "gt_classes": [
+          "wee1"
+        ],
+        "class_at1": false,
+        "drug_at1": false
+      }
+    },
+    {
+      "case_id": "HS_002",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.6,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": true,
+        "gt_drugs": [
+          "Ceralasertib"
+        ],
+        "gt_classes": [
+          "atr"
+        ],
+        "class_at1": false,
+        "drug_at1": false
+      }
+    },
+    {
+      "case_id": "HS_003",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.53,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": true,
+        "gt_drugs": [
+          "Trametinib"
+        ],
+        "gt_classes": [
+          "mapk"
+        ],
+        "class_at1": false,
+        "drug_at1": false
+      }
+    },
+    {
+      "case_id": "HS_004",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.608,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": false,
+        "gt_drugs": [],
+        "gt_classes": [],
+        "neg_parp_fp": true
+      }
+    },
+    {
+      "case_id": "HS_005",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.608,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": false,
+        "gt_drugs": [],
+        "gt_classes": [],
+        "neg_parp_fp": true
+      }
+    },
+    {
+      "case_id": "HS_006",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.608,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": false,
+        "gt_drugs": [],
+        "gt_classes": [],
+        "neg_parp_fp": true
+      }
+    },
+    {
+      "case_id": "HS_007",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.608,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": true,
+        "gt_drugs": [
+          "Adavosertib"
+        ],
+        "gt_classes": [
+          "wee1"
+        ],
+        "class_at1": false,
+        "drug_at1": false
+      }
+    },
+    {
+      "case_id": "HS_008",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.217,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": false,
+        "gt_drugs": [],
+        "gt_classes": [],
+        "neg_parp_fp": true
+      }
+    },
+    {
+      "case_id": "HS_009",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.605,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": true,
+        "gt_drugs": [
+          "Trametinib"
+        ],
+        "gt_classes": [
+          "mapk"
+        ],
+        "class_at1": false,
+        "drug_at1": false
+      }
+    },
+    {
+      "case_id": "HS_010",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.6,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": true,
+        "gt_drugs": [
+          "Olaparib"
+        ],
+        "gt_classes": [
+          "parp"
+        ],
+        "class_at1": true,
+        "drug_at1": true
+      }
+    },
+    {
+      "case_id": "HS_011",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.7,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": true,
+        "gt_drugs": [
+          "Rucaparib"
+        ],
+        "gt_classes": [
+          "parp"
+        ],
+        "class_at1": true,
+        "drug_at1": false
+      }
+    },
+    {
+      "case_id": "HS_012",
+      "disease": "ovarian_cancer",
+      "profile": "SP",
+      "prediction": {
+        "top_drug": "olaparib",
+        "top_class": "parp",
+        "confidence": 0.7,
+        "moa": "PARP inhibitor"
+      },
+      "eval": {
+        "is_positive": true,
+        "gt_drugs": [
+          "Olaparib",
+          "Niraparib",
+          "Rucaparib"
+        ],
+        "gt_classes": [
+          "parp"
+        ],
+        "class_at1": true,
+        "drug_at1": true
+      }
+    }
+  ]
+}

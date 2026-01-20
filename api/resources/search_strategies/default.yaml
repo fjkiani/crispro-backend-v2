@@ -1,0 +1,71 @@
+# Search Strategy Configuration
+# Defines how to build CT.gov queries from patient search criteria
+
+search_strategies:
+  # Biomarker-based keyword searches
+  biomarker_keywords:
+    strategy_type: "keyword"
+    priority: "high"
+    query_field: "query.term"
+    build_query: |
+      keywords = criteria.biomarkers.map(b => biomarker_keywords[b] || [b]).flatten()
+      query = keywords.join(" OR ")
+    
+  # Pathway-based intervention searches
+  pathway_interventions:
+    strategy_type: "intervention"
+    priority: "high"
+    query_field: "query.intr"
+    build_query: |
+      interventions = criteria.pathways.map(p => pathway_interventions[p] || []).flatten()
+      query = interventions.join(" OR ")
+    
+  # Intervention combination searches (e.g., PARP + ATR)
+  intervention_combos:
+    strategy_type: "intervention_combo"
+    priority: "medium"
+    query_field: "query.intr"
+    build_query: |
+      # Find common combos (e.g., PARP + ATR for DDR pathway)
+      combos = find_combos(criteria.pathways)
+      query = combos.map(c => c.join(" AND ")).join(" OR ")
+    
+  # Biomarker + intervention searches (e.g., PD-L1 + pembrolizumab)
+  biomarker_interventions:
+    strategy_type: "biomarker_intervention"
+    priority: "high"
+    query_field: "query.intr"
+    build_query: |
+      # Match interventions to biomarkers (e.g., PD-L1 → pembrolizumab)
+      matches = match_biomarker_interventions(criteria.biomarkers, criteria.interventions)
+      query = matches.map(m => m.join(" AND ")).join(" OR ")
+
+# Biomarker → keyword mapping
+biomarker_keywords:
+  MBD4: ["MBD4", "base excision repair", "BER deficiency", "base excision"]
+  TP53: ["TP53", "p53 mutant", "p53 mutation", "p53"]
+  "PD-L1": ["PD-L1", "PDL1", "programmed death ligand 1"]
+  PD1: ["PD-1", "PD1", "programmed death 1"]
+  BRCA1: ["BRCA1", "BRCA"]
+  BRCA2: ["BRCA2", "BRCA"]
+  MSI: ["MSI-H", "microsatellite instability", "MSI"]
+  TMB: ["TMB-H", "tumor mutational burden", "TMB"]
+
+# Pathway → intervention mapping
+pathway_interventions:
+  BER: ["PARP inhibitor", "PARP"]
+  HRR: ["PARP inhibitor", "PARP", "olaparib", "niraparib"]
+  DDR: ["PARP", "ATR inhibitor", "WEE1 inhibitor", "DNA damage repair"]
+  checkpoint: ["PD-1", "PD-L1", "checkpoint inhibitor", "immune checkpoint"]
+  IO: ["pembrolizumab", "nivolumab", "atezolizumab", "checkpoint inhibitor"]
+  VEGF: ["bevacizumab", "avastin", "VEGF"]
+  PARP: ["olaparib", "niraparib", "rucaparib", "PARP"]
+  ATR: ["ceralasertib", "berzosertib", "ATR"]
+  WEE1: ["adavosertib", "AZD1775", "WEE1"]
+
+# Intervention combinations (for combo searches)
+intervention_combos:
+  - ["PARP", "ATR"]
+  - ["PARP", "WEE1"]
+  - ["PARP", "checkpoint inhibitor"]
+  - ["PD-1", "chemotherapy"]

@@ -1,0 +1,70 @@
+{
+  "timestamp": "2025-11-05T06:02:07.599960",
+  "total_tests": 4,
+  "passed_tests": 1,
+  "results": [
+    {
+      "test_id": 1,
+      "compound": "Vitamin D",
+      "disease": "ovarian_cancer_hgs",
+      "status": "SUCCESS",
+      "verdict": "NOT_SUPPORTED",
+      "pathway_score": 0.2,
+      "overall_score": 0.44,
+      "confidence": 0.526,
+      "spe_breakdown": {
+        "sequence": 0.5,
+        "pathway": 0.2,
+        "evidence": 0.6
+      },
+      "passed": true,
+      "issues": []
+    },
+    {
+      "test_id": 2,
+      "compound": "Curcumin",
+      "disease": "breast_cancer",
+      "status": "SUCCESS",
+      "verdict": "NOT_SUPPORTED",
+      "pathway_score": 0.2,
+      "overall_score": 0.44,
+      "confidence": 0.511,
+      "spe_breakdown": {
+        "sequence": 0.5,
+        "pathway": 0.2,
+        "evidence": 0.6
+      },
+      "passed": false,
+      "issues": [
+        "P score too low: 0.200 < 0.500"
+      ]
+    },
+    {
+      "test_id": 3,
+      "compound": "Resveratrol",
+      "disease": "pancreatic_cancer",
+      "status": "SUCCESS",
+      "verdict": "NOT_SUPPORTED",
+      "pathway_score": 0.2,
+      "overall_score": 0.44,
+      "confidence": 0.511,
+      "spe_breakdown": {
+        "sequence": 0.5,
+        "pathway": 0.2,
+        "evidence": 0.6
+      },
+      "passed": false,
+      "issues": [
+        "P score too low: 0.200 < 0.600"
+      ]
+    },
+    {
+      "test_id": 4,
+      "compound": "Omega-3 fatty acids",
+      "disease": "alzheimers_disease",
+      "status": "ERROR",
+      "passed": false,
+      "error": "unsupported format string passed to NoneType.__format__"
+    }
+  ]
+}

@@ -2,12 +2,13 @@
 Efficacy Router: Thin FastAPI endpoints delegating to orchestrator.
 """
 import os
-from fastapi import APIRouter, HTTPException
-from typing import Dict, Any, List
+from fastapi import APIRouter, HTTPException, Depends
+from typing import Dict, Any, List, Optional
 
 from api.services.efficacy_orchestrator import create_efficacy_orchestrator, EfficacyRequest
 from api.services.pathway import get_default_panel
-from api.config import get_feature_flags
+from api.config import get_feature_flags, DEFAULT_EVO_MODEL
+from api.middleware.auth_middleware import get_optional_user
 
 router = APIRouter(prefix="/api/efficacy", tags=["efficacy"])
 
@@ -54,19 +55,45 @@ async def get_efficacy_config():
 
 
 @router.post("/predict")
-async def predict_efficacy(request: Dict[str, Any]):
+async def predict_efficacy(
+    request: Dict[str, Any],
+    user: Optional[Dict[str, Any]] = Depends(get_optional_user)
+):
     """Predict drug efficacy for given mutations."""
     try:
+        # Check quota if authenticated
+        if user and user.get("user_id"):
+            from ..middleware.quota_middleware import check_quota
+            quota_check = check_quota("drug_queries")
+            await quota_check(user)
+        
+        # Check feature flag if authenticated (SAE features require Pro+)
+        if user and user.get("user_id"):
+            from ..middleware.feature_flag_middleware import require_feature
+            feature_check = require_feature("sae_features")
+            await feature_check(user)
+        
+        # Log user_id if authenticated (for usage tracking)
+        if user:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.info(f"Efficacy prediction requested by user {user.get('user_id')[:8]}...")
         if not isinstance(request, dict):
             raise HTTPException(status_code=400, detail="invalid payload")
         
         # Extract request parameters
-        model_id = request.get("model_id", os.getenv("DEFAULT_EVO_MODEL", "evo2_7b"))
+        model_id = request.get("model_id", DEFAULT_EVO_MODEL)
         mutations = request.get("mutations") or []
         options = request.get("options") or {}
+        # Enforce single-model 1B unless explicitly overridden via env
+        options["ensemble"] = False
         api_base = request.get("api_base", "http://127.0.0.1:8000")
         disease = request.get("disease")
         moa_terms = request.get("moa_terms")
+        
+        # Extract sporadic cancer fields (Agent Jr Mission 4)
+        germline_status = request.get("germline_status", "unknown")
+        tumor_context = request.get("tumor_context")
         
         if not mutations:
             raise HTTPException(status_code=400, detail="mutations required")
@@ -83,7 +110,10 @@ async def predict_efficacy(request: Dict[str, Any]):
             include_fda_badges=options.get("include_fda_badges", False),
             include_cohort_overlays=options.get("include_cohort_overlays", False),
             include_calibration_snapshot=options.get("include_calibration_snapshot", False),
-            ablation_mode=options.get("ablation_mode")
+            ablation_mode=options.get("ablation_mode"),
+            # Sporadic cancer fields (Agent Jr Mission 4)
+            germline_status=germline_status,
+            tumor_context=tumor_context
         )
         
         # Predict efficacy
@@ -120,7 +150,7 @@ async def explain_efficacy(request: Dict[str, Any]):
             raise HTTPException(status_code=400, detail="invalid payload")
         
         # Extract request parameters
-        model_id = request.get("model_id", os.getenv("DEFAULT_EVO_MODEL", "evo2_7b"))
+        model_id = request.get("model_id", DEFAULT_EVO_MODEL)
         mutations = request.get("mutations") or []
         options = request.get("options") or {}
         api_base = request.get("api_base", "http://127.0.0.1:8000")
@@ -196,4 +226,6 @@ async def get_calibration_status():
                 "error": str(e)
             }
         }
+
+
 

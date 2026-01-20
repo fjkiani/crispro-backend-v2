@@ -1,0 +1,33 @@
+{
+  "analysis": "Multi-Biomarker v2: DDR_bin + TP53",
+  "cohort": "TCGA-OV TRUE-SAE v2 (Extreme Survival)",
+  "groups": {
+    "early_death": {
+      "threshold": "<36 months",
+      "n": 53
+    },
+    "long_survivor": {
+      "threshold": ">=84 months",
+      "n": 31
+    }
+  },
+  "individual_aurocs": {
+    "ddr_bin": 0.7181984175289106,
+    "tp53": 0.7035909920876445
+  },
+  "combined_model": {
+    "cv_aurocs": [
+      0.8257575757575758,
+      0.6818181818181819,
+      0.7121212121212122,
+      0.8285714285714285,
+      0.75
+    ],
+    "mean_auroc": 0.7596536796536796,
+    "std_auroc": 0.0592119496721486,
+    "ci_lower": 0.7077521173911691,
+    "ci_upper": 0.8115552419161901
+  },
+  "improvement": "+4.1% over DDR_bin alone",
+  "manuscript_claim": "An integrated DDR_bin + TP53 model achieved CV-AUROC = 0.76 (95% CI: 0.71-0.81) for extreme survival prediction, outperforming DDR_bin alone (AUROC = 0.72)."
+}

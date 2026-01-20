@@ -1,0 +1,22 @@
+{
+  "cached_at": "2025-11-14T19:58:03.546710",
+  "trial_data": {
+    "id": "NCT00677079",
+    "title": "Single Arm Study of BSI-201 in Patients With BRCA-1 or BRCA-2 Associated Advanced Epithelial Ovarian, Fallopian Tube, or Primary Peritoneal Cancer",
+    "status": "COMPLETED",
+    "phases": "[\"PHASE2\"]",
+    "summary": "The goal of this study was to determine the efficacy of iniparib (BSI-201/SAR240550) in patients with breast cancer gene-associated (BRCA) ovarian cancer.\n\nUp to 35 patients were to be treated using a Simon 2-stage optimal design, i.e. twelve were to be treated in a first stage, then if 2/12 patients responded to treatment as defined by Response Evaluation Criteria in Solid Tumor (RECIST), 23 additional patients were be treated in the second stage.",
+    "conditions": "[\"Primary Peritoneal Cancer\", \"Advanced Epithelial Ovarian Cancer\"]",
+    "interventions": "[\"Iniparib\"]",
+    "source": "ClinicalTrials.gov",
+    "inclusion_criteria": "* Female, age 18 or older;\n* Histologically or cytologically confirmed advanced epithelial ovarian cancer, fallopian tube cancer or primary peritoneal cancer (stage III or IV);\n* At least one previous regimen with platinum/taxane combination therapy and no curative options as determined by their physician (no limit on the number of prior therapies);\n* Confirmed BRCA1 or BRCA2 status;\n* One or more measurable lesions, at least 10mm in longest diameter by spiral computed tomography (CT) scan or 20mm in longest diameter when measured with conventional techniques (palpation, plain x-ray, CT or magnetic resonance imaging (MRI));\n* Karnofsky performance status \u226570%;\n* Estimated life expectancy of at least 16 weeks.",
+    "exclusion_criteria": "* Normal clinical laboratory values;\n* Any anti-cancer therapy within 21 days prior to study start;\n* Any other malignancy within 3 years of study start, except adequately treated carcinoma in situ of the cervix, ductal carcinoma in situ (DCIS) of the breast, or basal or squamous cell skin cancer;\n* Active viral infection including HIV/AIDS, Hepatitis B or Hepatitis C infection;\n* Active central nervous system or brain metastases;\n* History of seizures or current treatment with anti-epileptic medication;\n* Persistent grade 2 or greater toxicities from prior therapy, excluding alopecia.",
+    "inclusion_criteria_full": "* Female, age 18 or older;\n* Histologically or cytologically confirmed advanced epithelial ovarian cancer, fallopian tube cancer or primary peritoneal cancer (stage III or IV);\n* At least one previous regimen with platinum/taxane combination therapy and no curative options as determined by their physician (no limit on the number of prior therapies);\n* Confirmed BRCA1 or BRCA2 status;\n* One or more measurable lesions, at least 10mm in longest diameter by spiral computed tomography (CT) scan or 20mm in longest diameter when measured with conventional techniques (palpation, plain x-ray, CT or magnetic resonance imaging (MRI));\n* Karnofsky performance status \u226570%;\n* Estimated life expectancy of at least 16 weeks.",
+    "exclusion_criteria_full": "* Normal clinical laboratory values;\n* Any anti-cancer therapy within 21 days prior to study start;\n* Any other malignancy within 3 years of study start, except adequately treated carcinoma in situ of the cervix, ductal carcinoma in situ (DCIS) of the breast, or basal or squamous cell skin cancer;\n* Active viral infection including HIV/AIDS, Hepatitis B or Hepatitis C infection;\n* Active central nervous system or brain metastases;\n* History of seizures or current treatment with anti-epileptic medication;\n* Persistent grade 2 or greater toxicities from prior therapy, excluding alopecia.",
+    "primary_endpoint": null,
+    "interventions_json": null,
+    "locations_full_json": null,
+    "scraped_data_json": null,
+    "scraped_at": null
+  }
+}

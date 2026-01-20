@@ -1,0 +1,144 @@
+{
+  "nct_id": "NCT02351479",
+  "trial_title": "Hula, a Physical Activity Intervention for Female-Cancer Survivors",
+  "patient_id": "ayesha_001",
+  "generated_at": "2025-11-14T18:00:10.188110",
+  "sections": {
+    "1_trial_overview": {
+      "title": "Hula, a Physical Activity Intervention for Female-Cancer Survivors",
+      "phase": "",
+      "status": "COMPLETED",
+      "sponsor": "",
+      "estimated_enrollment": 0,
+      "primary_endpoint": null
+    },
+    "2_eligibility_assessment": {
+      "table": [
+        {
+          "criterion": "Disease Match",
+          "status": "PASS",
+          "confidence": 0.9,
+          "notes": "Ovarian/gynecologic match: [\"physical activity\", \"breast cancer\", \"cervical cancer\", \"ovarian cancer\", \"endometrial cancer\"]"
+        },
+        {
+          "criterion": "Treatment Line",
+          "status": "PASS",
+          "confidence": 0.8,
+          "notes": "Line match assumed (not explicitly excluded)"
+        },
+        {
+          "criterion": "Biomarker Requirements",
+          "status": "PASS",
+          "confidence": 1.0,
+          "notes": "No biomarker requirements",
+          "pending_tests": []
+        },
+        {
+          "criterion": "Location (NYC Metro)",
+          "status": "PASS",
+          "confidence": 0.5,
+          "notes": "No location data (assume match)"
+        },
+        {
+          "criterion": "Inclusion Criteria (Full Text Available)",
+          "status": "REVIEW",
+          "confidence": 0.8,
+          "notes": "See full text: * Lives on Oahu\n* Diagnosed with primary breast,cervical, endometrial or ovarian cancer (stage I-III)\n* Completed initial regional and systemic treatment for breast cancer 2 months ago\n* Physically ca..."
+        },
+        {
+          "criterion": "Exclusion Criteria (Full Text Available)",
+          "status": "REVIEW",
+          "confidence": 0.8,
+          "notes": "See full text: * Currently undergoing chemotherapy or radiation therapy..."
+        }
+      ],
+      "summary": "4/6 criteria met"
+    },
+    "3_strategic_scenarios": {
+      "best_case": {
+        "probability": 0.6666666666666666,
+        "scenario": "All pending biomarker tests return favorable results",
+        "eligibility": "HIGH"
+      },
+      "most_likely": {
+        "probability": 0.6666666666666666,
+        "scenario": "50% of pending tests pass, some may require additional screening",
+        "eligibility": "MODERATE"
+      },
+      "challenge": {
+        "probability": 0.6666666666666666,
+        "scenario": "Some pending tests fail, may need alternative trials",
+        "eligibility": "LOW"
+      }
+    },
+    "4_tactical_recommendations": [
+      {
+        "action": "Proceed with trial enrollment",
+        "lab": "N/A",
+        "cost": "N/A",
+        "timeline": "Immediate",
+        "priority": "HIGH",
+        "rationale": "All eligibility criteria met"
+      }
+    ],
+    "5_drug_mechanisms": {
+      "[": {
+        "mechanism": "[NEEDS VERIFICATION] Mechanism not found in database for [",
+        "layman": "[NEEDS VERIFICATION] Please consult oncologist for mechanism explanation.",
+        "evidence_tier": "UNKNOWN"
+      },
+      "\"": {
+        "mechanism": "[NEEDS VERIFICATION] Mechanism not found in database for \"",
+        "layman": "[NEEDS VERIFICATION] Please consult oncologist for mechanism explanation.",
+        "evidence_tier": "UNKNOWN"
+      },
+      "H": {
+        "mechanism": "Alkylating agent. Forms DNA cross-links, causing apoptosis.",
+        "layman": "A chemotherapy drug that damages cancer cell DNA.",
+        "evidence_tier": "STANDARD"
+      },
+      "u": {
+        "mechanism": "Anti-VEGF monoclonal antibody. Blocks vascular endothelial growth factor, inhibiting angiogenesis.",
+        "layman": "A targeted therapy that starves tumors by cutting off their blood supply.",
+        "evidence_tier": "SUPPORTED"
+      },
+      "l": {
+        "mechanism": "Platinum-based alkylating agent. Forms DNA cross-links, causing double-strand breaks and apoptosis.",
+        "layman": "A chemotherapy drug that damages cancer cell DNA, preventing cell division.",
+        "evidence_tier": "STANDARD"
+      },
+      "a": {
+        "mechanism": "Platinum-based alkylating agent. Forms DNA cross-links, causing double-strand breaks and apoptosis.",
+        "layman": "A chemotherapy drug that damages cancer cell DNA, preventing cell division.",
+        "evidence_tier": "STANDARD"
+      },
+      "]": {
+        "mechanism": "[NEEDS VERIFICATION] Mechanism not found in database for ]",
+        "layman": "[NEEDS VERIFICATION] Please consult oncologist for mechanism explanation.",
+        "evidence_tier": "UNKNOWN"
+      }
+    },
+    "6_location_details": [],
+    "7_timeline": {
+      "study_start": "",
+      "primary_completion": ""
+    },
+    "8_full_eligibility_text": {
+      "inclusion_criteria": "* Lives on Oahu\n* Diagnosed with primary breast,cervical, endometrial or ovarian cancer (stage I-III)\n* Completed initial regional and systemic treatment for breast cancer 2 months ago\n* Physically capable of doing the hula-based physical activity\n* Receives approval by attending physician to participate in trial",
+      "exclusion_criteria": "* Currently undergoing chemotherapy or radiation therapy"
+    },
+    "9_contact_information": [],
+    "10_provenance": {
+      "generated_by": "JR2",
+      "data_sources": [
+        "SQLite",
+        "Diffbot",
+        "DRUG_MECHANISM_DB"
+      ],
+      "confidence_flags": [
+        "[INFERRED]",
+        "[NEEDS VERIFICATION]"
+      ]
+    }
+  }
+}

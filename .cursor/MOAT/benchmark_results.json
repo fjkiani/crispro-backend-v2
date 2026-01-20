@@ -1,0 +1,237 @@
+{
+  "benchmark_date": "2025-12-15T16:57:29.647331",
+  "total_questions": 6,
+  "results": [
+    {
+      "question_id": "q1",
+      "category": "Toxicity-Aware Nutrition",
+      "question": "I'm on carboplatin and have a BRCA1 variant. What foods can help reduce side effects?",
+      "moat": {
+        "toxicity_risk": {
+          "risk_score": 1.0,
+          "confidence": 0.48,
+          "reason": "MoA overlaps toxicity pathways with germline variants",
+          "mitigating_foods": [
+            {
+              "compound": "NAC (N-Acetyl Cysteine)",
+              "dose": "600mg twice daily",
+              "timing": "post-chemo (not during infusion)",
+              "mechanism": "Glutathione precursor, supports DNA repair enzymes",
+              "evidence_tier": "MODERATE",
+              "pathway": "dna_repair",
+              "care_plan_ref": "Section 7: Antioxidants - After chemo: Use - helps recovery"
+            },
+            {
+              "compound": "Vitamin D3",
+              "dose": "5000 IU daily",
+              "timing": "continuous, with fatty meal",
+              "mechanism": "Modulates DNA repair gene expression (VDR-mediated)",
+              "evidence_tier": "MODERATE",
+              "pathway": "dna_repair",
+              "care_plan_ref": "Section 7: Vitamin D - HRD context repletion (DNA repair support)"
+            },
+            {
+              "compound": "Folate (5-MTHF)",
+              "dose": "400-800mcg daily",
+              "timing": "continuous",
+              "mechanism": "DNA synthesis and repair cofactor",
+              "evidence_tier": "MODERATE",
+              "pathway": "dna_repair",
+              "care_plan_ref": "DNA repair support - continuous supplementation"
+            }
+          ]
+        },
+        "mechanism": "BRCA1 variant (DNA repair gene) + platinum agent \u2192 DNA repair stress pathway \u2192 Mitigating foods recommended",
+        "personalization": "Uses patient's specific BRCA1 variant to calculate risk",
+        "evidence": "Pathway-based analysis with evidence tiers"
+      },
+      "gpt": "Carboplatin is a chemotherapy drug that can have various side effects, such as nausea, fatigue, and changes in blood counts. While no specific food can eliminate these side effects, adopting a balanced diet can help manage them and support overall health.\n\n1. **Protein-Rich Foods**: Ensure you get enough protein to help repair tissues and maintain strength. Good options include lean meats, poultry, fish, eggs, beans, and tofu.\n\n2. **Hydration**: Stay well-hydrated to help manage side effects like nausea and kidney function. Water, herbal teas, and broths are good options.\n\n3. **Fruits and Vegetables**: These provide essential vitamins and antioxidants. Focus on a variety of colors to ensure a range of nutrients. Soft or cooked vegetables might be easier to digest if you're experiencing nausea.\n\n4. **Whole Grains**: Foods like oatmeal, whole grain bread, and brown rice can provide energy and help with digestion.\n\n5. **Ginger and Peppermint**: These can help alleviate nausea. Ginger tea or peppermint candies are easy ways to incorporate these into your diet.\n\n6. **Small, Frequent Meals**: Eating smaller portions more frequently can help manage nausea and maintain energy levels.\n\n7. **Low-Fiber Foods**: If you're experiencing diarrhea, opt for low-fiber foods like white rice, bananas, and applesauce.\n\nWhile these dietary suggestions can help, it's crucial to tailor them to your specific needs and symptoms. Always consult with your healthcare provider or a dietitian for personalized advice, especially given your BRCA1 variant, which can influence your treatment and nutritional needs.",
+      "timestamp": "2025-12-15T16:57:03.657309"
+    },
+    {
+      "question_id": "q2",
+      "category": "Personalized Genomics",
+      "question": "I have homozygous MBD4 c.1293delA. What supplements support my DNA repair?",
+      "moat": {
+        "genomic_analysis": {
+          "variant": "MBD4 c.1293delA (homozygous)",
+          "pathway_affected": "Base Excision Repair (BER)",
+          "clinical_implication": "Complete MBD4 loss \u2192 BER deficiency \u2192 C>T hypermutator phenotype"
+        },
+        "recommendations": [
+          {
+            "compound": "NAC (N-Acetyl Cysteine)",
+            "dose": "600mg twice daily",
+            "timing": "post-chemo (not during infusion)",
+            "mechanism": "Glutathione precursor, supports DNA repair enzymes",
+            "evidence_tier": "MODERATE",
+            "pathway": "dna_repair",
+            "care_plan_ref": "Section 7: Antioxidants - After chemo: Use - helps recovery"
+          },
+          {
+            "compound": "Vitamin D3",
+            "dose": "5000 IU daily",
+            "timing": "continuous, with fatty meal",
+            "mechanism": "Modulates DNA repair gene expression (VDR-mediated)",
+            "evidence_tier": "MODERATE",
+            "pathway": "dna_repair",
+            "care_plan_ref": "Section 7: Vitamin D - HRD context repletion (DNA repair support)"
+          },
+          {
+            "compound": "Folate (5-MTHF)",
+            "dose": "400-800mcg daily",
+            "timing": "continuous",
+            "mechanism": "DNA synthesis and repair cofactor",
+            "evidence_tier": "MODERATE",
+            "pathway": "dna_repair",
+            "care_plan_ref": "DNA repair support - continuous supplementation"
+          }
+        ],
+        "mechanism": "MBD4 loss \u2192 BER impaired \u2192 NAC provides glutathione for APEX1 (BER enzyme)",
+        "personalization": "Uses exact variant and zygosity to determine pathway impact",
+        "evidence": "Sanders MA et al. Blood. 2018, Palles C et al. Am J Hum Genet. 2022"
+      },
+      "gpt": "The MBD4 gene is involved in DNA repair, and a variant like c.1293delA could potentially impact this process. While specific supplements cannot directly address a genetic variant, some nutrients are known to support overall DNA repair and cellular health:\n\n1. **Antioxidants**: Vitamins C and E, selenium, and beta-carotene can help protect cells from oxidative stress, which can damage DNA.\n\n2. **Folate (Vitamin B9)**: Folate is essential for DNA synthesis and repair. Good sources include leafy greens, legumes, and fortified foods.\n\n3. **Vitamin B12 and B6**: These vitamins work alongside folate in DNA synthesis and repair. Foods like fish, meat, eggs, and dairy are good sources.\n\n4. **Zinc**: This mineral is crucial for DNA synthesis and repair. Foods rich in zinc include meat, shellfish, legumes, and seeds.\n\n5. **Omega-3 Fatty Acids**: Found in fish oil, flaxseeds, and walnuts, omega-3s can support cell membrane health, which indirectly supports DNA integrity.\n\n6. **Polyphenols**: Compounds found in green tea, dark chocolate, and berries that may support DNA repair processes.\n\nBefore starting any supplements, it's important to consult with a healthcare provider or a genetic counselor. They can provide personalized advice based on your specific health needs and ensure there are no interactions with any medications you may be taking.",
+      "timestamp": "2025-12-15T16:57:09.579168"
+    },
+    {
+      "question_id": "q3",
+      "category": "Toxicity-Aware Nutrition",
+      "question": "I'm on doxorubicin. What can I take to protect my heart?",
+      "moat": {
+        "toxicity_risk": {
+          "risk_score": 0.65,
+          "pathway": "cardiometabolic",
+          "pathway_weight": 0.9
+        },
+        "recommendations": [
+          {
+            "compound": "CoQ10 (Ubiquinol)",
+            "dose": "200-400mg daily",
+            "timing": "with fatty meal, continuous during anthracycline",
+            "mechanism": "Mitochondrial support, cardioprotective against doxorubicin",
+            "evidence_tier": "SUPPORTED",
+            "pathway": "cardiometabolic",
+            "care_plan_ref": "Section 4: Anthracycline cardiotoxicity - CoQ10 for protection"
+          },
+          {
+            "compound": "L-Carnitine",
+            "dose": "1000-2000mg daily",
+            "timing": "morning, with breakfast",
+            "mechanism": "Fatty acid transport, cardiac energy metabolism",
+            "evidence_tier": "MODERATE",
+            "pathway": "cardiometabolic",
+            "care_plan_ref": "Cardiac metabolism support"
+          },
+          {
+            "compound": "Magnesium Glycinate",
+            "dose": "400mg daily",
+            "timing": "evening (aids sleep, cardiac rhythm)",
+            "mechanism": "Cardiac rhythm support, ATP synthesis, QT stabilization",
+            "evidence_tier": "MODERATE",
+            "pathway": "cardiometabolic",
+            "care_plan_ref": "QT prolongation risk mitigation"
+          }
+        ],
+        "mechanism": "Anthracycline cardiotoxicity \u2192 Cardiometabolic pathway (0.9) \u2192 CoQ10, Carnitine for mitochondrial support",
+        "personalization": "Drug MoA-based pathway mapping",
+        "evidence": "Pathway-based recommendations with evidence tiers"
+      },
+      "gpt": "Doxorubicin is an effective chemotherapy drug but is known to potentially cause cardiotoxicity, which can affect heart function. To help protect your heart while you're on doxorubicin, your healthcare provider might consider several strategies:\n\n1. **Dexrazoxane**: This medication can be used specifically to protect the heart from the cardiotoxic effects of doxorubicin in certain patients. It works by chelating iron, which helps reduce oxidative stress on the heart.\n\n2. **Monitoring**: Regular cardiac monitoring through echocardiograms or other imaging techniques can help detect early changes in heart function.\n\n3. **Lifestyle Modifications**: Maintaining a heart-healthy lifestyle is crucial. This includes eating a balanced diet low in sodium and saturated fats, regular physical activity as tolerated, maintaining a healthy weight, and avoiding smoking and excessive alcohol consumption.\n\n4. **Medications**: Your doctor may prescribe medications such as beta-blockers or ACE inhibitors, which can help manage heart function and reduce the risk of heart damage.\n\n5. **Adjusting the Doxorubicin Dose**: In some cases, adjusting the dosage or schedule of doxorubicin can help minimize cardiac risks.\n\nIt's important to work closely with your healthcare team to tailor a plan that's best for you. Always consult your oncologist or cardiologist before making any changes to your treatment or adding new medications.",
+      "timestamp": "2025-12-15T16:57:13.887768"
+    },
+    {
+      "question_id": "q4",
+      "category": "Personalized Genomics",
+      "question": "I have a DPYD variant. Can I take 5-FU?",
+      "moat": {
+        "toxicity_risk": {
+          "risk_score": 0.4,
+          "confidence": 0.6999999999999998,
+          "reason": "Germline pharmacogene variants detected (affects drug metabolism)"
+        },
+        "recommendation": "High risk - dose adjustment required",
+        "mechanism": "DPYD encodes dihydropyrimidine dehydrogenase. Variant reduces enzyme activity \u2192 5-FU accumulates \u2192 severe toxicity",
+        "personalization": "Uses patient's DPYD variant to calculate pharmacogene risk",
+        "evidence": "Pharmacogene analysis with high confidence"
+      },
+      "gpt": "The DPYD gene encodes the enzyme dihydropyrimidine dehydrogenase, which is crucial in breaking down 5-fluorouracil (5-FU), a chemotherapy drug. Variants in the DPYD gene can lead to reduced or absent enzyme activity, affecting the metabolism of 5-FU. This can result in increased toxicity and severe side effects if 5-FU is administered to individuals with certain DPYD variants.\n\nIf you have a DPYD variant, it is important to discuss this with your healthcare provider before starting treatment with 5-FU. They may recommend genetic testing to determine the specific variant and its impact on enzyme activity. Based on this information, your healthcare provider might adjust the dosage of 5-FU or consider alternative treatments to minimize the risk of adverse effects.\n\nAlways consult with your oncologist or a clinical pharmacologist for personalized advice and management options tailored to your genetic profile and overall health condition.",
+      "timestamp": "2025-12-15T16:57:17.401037"
+    },
+    {
+      "question_id": "q5",
+      "category": "Mechanism Explanations",
+      "question": "Why exactly does NAC help with carboplatin side effects? What's the mechanism?",
+      "moat": {
+        "mechanism_explanation": {
+          "drug": "carboplatin",
+          "drug_moa": "platinum_agent",
+          "pathway": "NAC \u2192 Cysteine \u2192 GSH \u2192 APEX1 \u2192 BER \u2192 Reduced toxicity",
+          "pathway_overlap": {
+            "dna_repair": 1.0,
+            "inflammation": 0.0,
+            "cardiometabolic": 0.0
+          },
+          "mitigating_food": "NAC",
+          "steps": [
+            "Carboplatin \u2192 DNA interstrand crosslinks \u2192 Base damage",
+            "Base damage \u2192 BER pathway activated (APEX1, POLB enzymes)",
+            "APEX1 processes abasic sites \u2192 Requires glutathione (GSH)",
+            "NAC \u2192 Cysteine \u2192 Glutathione synthesis \u2192 GSH available for APEX1",
+            "APEX1 + GSH \u2192 Efficient BER \u2192 Reduced platinum toxicity in normal cells"
+          ],
+          "evidence": "De Flora S et al. Carcinogenesis. 2001, Kelland L. Nat Rev Cancer. 2007"
+        },
+        "personalization": "Pathway-specific mechanism explanation",
+        "evidence": "Step-by-step mechanism with enzyme names and citations"
+      },
+      "gpt": "N-acetylcysteine (NAC) is a compound known for its antioxidant properties and its role in replenishing intracellular levels of glutathione, a powerful antioxidant in the body. In the context of chemotherapy with carboplatin, NAC can help mitigate some of the drug's side effects, primarily due to its ability to combat oxidative stress.\n\nCarboplatin, like other platinum-based chemotherapeutic agents, can lead to the generation of reactive oxygen species (ROS) during its metabolism. These ROS can cause oxidative damage to cells, contributing to side effects such as nephrotoxicity (kidney damage) and ototoxicity (hearing damage). NAC works by:\n\n1. **Replenishing Glutathione Levels**: NAC serves as a precursor to glutathione, increasing its levels within cells. Glutathione is a key antioxidant that neutralizes ROS, thereby protecting cells from oxidative stress and reducing the risk of damage.\n\n2. **Direct Antioxidant Activity**: NAC itself can directly scavenge free radicals, providing additional protection against oxidative damage.\n\n3. **Modulating Inflammatory Pathways**: By reducing oxidative stress, NAC might also modulate inflammatory pathways, potentially reducing inflammation-related side effects.\n\nIt's important to note that while these mechanisms suggest potential benefits, the use of NAC as an adjunct to chemotherapy should always be discussed with a healthcare provider. This ensures that there are no adverse interactions with the treatment regimen and that its use is appropriate for the patient's specific situation.",
+      "timestamp": "2025-12-15T16:57:23.028725"
+    },
+    {
+      "question_id": "q6",
+      "category": "Treatment Line Intelligence",
+      "question": "What foods should I take during first-line chemo vs maintenance therapy?",
+      "moat": {
+        "first_line": {
+          "recommendations": [
+            {
+              "compound": "NAC",
+              "line_appropriateness": 0.95,
+              "rationale": "Supports DNA repair during active treatment, reduces platinum toxicity",
+              "timing": "Post-infusion (not during)"
+            },
+            {
+              "compound": "Vitamin D",
+              "line_appropriateness": 0.9,
+              "rationale": "DNA repair support, immune modulation during active treatment"
+            }
+          ]
+        },
+        "maintenance": {
+          "recommendations": [
+            {
+              "compound": "Omega-3",
+              "line_appropriateness": 0.85,
+              "rationale": "Anti-inflammatory, supports long-term health, lower risk of treatment interference",
+              "timing": "Continuous"
+            },
+            {
+              "compound": "Curcumin",
+              "line_appropriateness": 0.8,
+              "rationale": "Anti-inflammatory, lower risk of drug interactions during maintenance phase"
+            }
+          ]
+        },
+        "differences": {
+          "first_line_focus": "DNA repair support, toxicity mitigation, treatment-specific timing",
+          "maintenance_focus": "Long-term health, inflammation reduction, lower interaction risk"
+        },
+        "personalization": "Different recommendations for L1 vs L2/L3 with specific foods and timing",
+        "evidence": "Treatment line intelligence with appropriateness scores"
+      },
+      "gpt": "During cancer treatment, including first-line chemotherapy and maintenance therapy, nutrition plays a critical role in supporting your body and enhancing your overall well-being. While specific dietary recommendations can vary based on individual health needs, here are some general guidelines to consider for each phase:\n\n### First-Line Chemotherapy:\n\n1. **Balanced Diet:**\n   - Focus on a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats.\n   - Aim for nutrient-dense foods to help maintain energy levels and support immune function.\n\n2. **Protein-Rich Foods:**\n   - Include lean meats, poultry, fish, eggs, beans, and legumes to help repair tissues and maintain muscle mass.\n\n3. **Small, Frequent Meals:**\n   - Eat smaller, more frequent meals throughout the day to help manage nausea and maintain appetite.\n\n4. **Hydration:**\n   - Stay well-hydrated with water, herbal teas, or broths. Avoid sugary drinks and limit caffeine.\n\n5. **Manage Side Effects:**\n   - For nausea, consider ginger tea or crackers.\n   - For diarrhea, opt for low-fiber foods, while for constipation, increase fiber intake with fruits and grains.\n\n### Maintenance Therapy:\n\n1. **Continue a Balanced Diet:**\n   - Maintain a varied diet similar to the first-line therapy, ensuring continued intake of essential nutrients.\n\n2. **Focus on Antioxidant-Rich Foods:**\n   - Include berries, leafy greens, and nuts to help combat oxidative stress.\n\n3. **Monitor Weight:**\n   - Keep an eye on any unintentional weight loss or gain and adjust your diet accordingly.\n\n4. **Gut Health:**\n   - Incorporate probiotics like yogurt or fermented foods to support digestion, especially if antibiotics were used during treatment.\n\n5. **Adjust for Long-term Health:**\n   - Gradually reintroduce foods you may have avoided due to treatment side effects and focus on long-term healthy eating habits.\n\nAlways consult with a healthcare provider or registered dietitian to tailor dietary recommendations to your specific health needs and treatment plan. They can provide personalized advice that considers your medical history, treatment side effects, and nutritional requirements.",
+      "timestamp": "2025-12-15T16:57:29.645416"
+    }
+  ]
+}

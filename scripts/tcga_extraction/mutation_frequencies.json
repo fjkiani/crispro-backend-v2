@@ -1,0 +1,548 @@
+{
+  "ovarian_cancer_hgs": {
+    "hrd_ddr": {
+      "weight": 0.112,
+      "source": "TCGA (11% altered, n=89)",
+      "genes": [
+        "BRCA1",
+        "BRCA2"
+      ],
+      "samples_altered": 9,
+      "total_samples": 89,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:02.573249"
+    },
+    "pi3k_akt_mtor": {
+      "weight": 0.045,
+      "source": "TCGA (4% altered, n=89)",
+      "genes": [
+        "PIK3CA",
+        "PTEN",
+        "AKT1"
+      ],
+      "samples_altered": 4,
+      "total_samples": 89,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:02.573446"
+    },
+    "angiogenesis": {
+      "weight": 0.011,
+      "source": "TCGA (1% altered, n=89)",
+      "genes": [
+        "VEGFA"
+      ],
+      "samples_altered": 0,
+      "total_samples": 89,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:02.573612"
+    },
+    "tp53": {
+      "weight": 0.955,
+      "source": "TCGA (95% altered, n=89)",
+      "genes": [
+        "TP53"
+      ],
+      "samples_altered": 84,
+      "total_samples": 89,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:02.573798"
+    },
+    "ras_mapk": {
+      "weight": 0.022,
+      "source": "TCGA (2% altered, n=89)",
+      "genes": [
+        "KRAS",
+        "NRAS",
+        "BRAF"
+      ],
+      "samples_altered": 1,
+      "total_samples": 89,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:02.573966"
+    }
+  },
+  "breast_cancer": {
+    "her2_signaling": {
+      "weight": 0.053,
+      "source": "TCGA (5% altered, n=75)",
+      "genes": [
+        "ERBB2"
+      ],
+      "samples_altered": 3,
+      "total_samples": 75,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:04.799893"
+    },
+    "er_pr_signaling": {
+      "weight": 0.0,
+      "source": "TCGA (0% altered, n=75)",
+      "genes": [
+        "ESR1",
+        "PGR"
+      ],
+      "samples_altered": 0,
+      "total_samples": 75,
+      "extraction_type": "mutation_proxy",
+      "extracted_at": "2025-11-05T04:36:04.800047"
+    },
+    "pi3k_akt_mtor": {
+      "weight": 0.827,
+      "source": "TCGA (82% altered, n=75)",
+      "genes": [
+        "PIK3CA",
+        "PTEN",
+        "AKT1"
+      ],
+      "samples_altered": 62,
+      "total_samples": 75,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:04.800230"
+    },
+    "hrd_ddr": {
+      "weight": 0.133,
+      "source": "TCGA (13% altered, n=75)",
+      "genes": [
+        "BRCA1",
+        "BRCA2"
+      ],
+      "samples_altered": 9,
+      "total_samples": 75,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:04.800401"
+    },
+    "cell_cycle": {
+      "weight": 0.04,
+      "source": "TCGA (4% altered, n=75)",
+      "genes": [
+        "CDK4",
+        "CDK6",
+        "CCND1",
+        "RB1"
+      ],
+      "samples_altered": 3,
+      "total_samples": 75,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:04.800561"
+    }
+  },
+  "lung_cancer": {
+    "egfr_signaling": {
+      "weight": 0.25,
+      "source": "TCGA (25% altered, n=16)",
+      "genes": [
+        "EGFR"
+      ],
+      "samples_altered": 4,
+      "total_samples": 16,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:07.006328"
+    },
+    "alk_ros1": {
+      "weight": 0.188,
+      "source": "TCGA (18% altered, n=16)",
+      "genes": [
+        "ALK",
+        "ROS1"
+      ],
+      "samples_altered": 3,
+      "total_samples": 16,
+      "extraction_type": "mutation_proxy",
+      "extracted_at": "2025-11-05T04:36:07.006500"
+    },
+    "angiogenesis": {
+      "weight": 0.062,
+      "source": "TCGA (6% altered, n=16)",
+      "genes": [
+        "VEGFA"
+      ],
+      "samples_altered": 0,
+      "total_samples": 16,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:07.006648"
+    },
+    "pd_l1_immune": {
+      "weight": 0.062,
+      "source": "TCGA (6% altered, n=16)",
+      "genes": [
+        "CD274"
+      ],
+      "samples_altered": 0,
+      "total_samples": 16,
+      "extraction_type": "mutation_proxy",
+      "extracted_at": "2025-11-05T04:36:07.006794"
+    },
+    "kras_signaling": {
+      "weight": 0.562,
+      "source": "TCGA (56% altered, n=16)",
+      "genes": [
+        "KRAS"
+      ],
+      "samples_altered": 8,
+      "total_samples": 16,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:07.006933"
+    }
+  },
+  "colorectal_cancer": {
+    "wnt_beta_catenin": {
+      "weight": 0.933,
+      "source": "TCGA (93% altered, n=15)",
+      "genes": [
+        "APC",
+        "CTNNB1"
+      ],
+      "samples_altered": 13,
+      "total_samples": 15,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:09.194799"
+    },
+    "egfr_signaling": {
+      "weight": 0.067,
+      "source": "TCGA (6% altered, n=15)",
+      "genes": [
+        "EGFR"
+      ],
+      "samples_altered": 1,
+      "total_samples": 15,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:09.194987"
+    },
+    "angiogenesis": {
+      "weight": 0.0,
+      "source": "TCGA (0% altered, n=15)",
+      "genes": [
+        "VEGFA"
+      ],
+      "samples_altered": 0,
+      "total_samples": 15,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:09.195116"
+    },
+    "msi_mmr": {
+      "weight": 0.133,
+      "source": "TCGA (13% altered, n=15)",
+      "genes": [
+        "MLH1",
+        "MSH2",
+        "MSH6",
+        "PMS2"
+      ],
+      "samples_altered": 1,
+      "total_samples": 15,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:09.195269"
+    },
+    "ras_mapk": {
+      "weight": 0.8,
+      "source": "TCGA (80% altered, n=15)",
+      "genes": [
+        "KRAS",
+        "NRAS",
+        "BRAF"
+      ],
+      "samples_altered": 12,
+      "total_samples": 15,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:09.195414"
+    }
+  },
+  "melanoma": {
+    "ras_mapk_braf": {
+      "weight": 0.909,
+      "source": "TCGA (90% altered, n=11)",
+      "genes": [
+        "BRAF",
+        "NRAS",
+        "KRAS"
+      ],
+      "samples_altered": 9,
+      "total_samples": 11,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:11.361146"
+    },
+    "pd1_immune": {
+      "weight": 0.0,
+      "source": "TCGA (0% altered, n=11)",
+      "genes": [
+        "CD274"
+      ],
+      "samples_altered": 0,
+      "total_samples": 11,
+      "extraction_type": "mutation_proxy",
+      "extracted_at": "2025-11-05T04:36:11.361286"
+    },
+    "kit_signaling": {
+      "weight": 0.182,
+      "source": "TCGA (18% altered, n=11)",
+      "genes": [
+        "KIT"
+      ],
+      "samples_altered": 2,
+      "total_samples": 11,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:11.361426"
+    },
+    "nras": {
+      "weight": 0.545,
+      "source": "TCGA (54% altered, n=11)",
+      "genes": [
+        "NRAS"
+      ],
+      "samples_altered": 5,
+      "total_samples": 11,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:11.361794"
+    },
+    "cdkn2a": {
+      "weight": 0.182,
+      "source": "TCGA (18% altered, n=11)",
+      "genes": [
+        "CDKN2A"
+      ],
+      "samples_altered": 2,
+      "total_samples": 11,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:11.362126"
+    }
+  },
+  "prostate_cancer": {
+    "androgen_receptor": {
+      "weight": 0.016,
+      "source": "TCGA (1% altered, n=64)",
+      "genes": [
+        "AR"
+      ],
+      "samples_altered": 1,
+      "total_samples": 64,
+      "extraction_type": "mutation_proxy",
+      "extracted_at": "2025-11-05T04:36:13.565158"
+    },
+    "pi3k_akt_pten": {
+      "weight": 0.328,
+      "source": "TCGA (32% altered, n=64)",
+      "genes": [
+        "PTEN",
+        "PIK3CA",
+        "AKT1"
+      ],
+      "samples_altered": 20,
+      "total_samples": 64,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:13.565345"
+    },
+    "ddr": {
+      "weight": 0.25,
+      "source": "TCGA (25% altered, n=64)",
+      "genes": [
+        "BRCA2",
+        "ATM",
+        "CHEK2"
+      ],
+      "samples_altered": 16,
+      "total_samples": 64,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:13.565505"
+    },
+    "tp53": {
+      "weight": 0.484,
+      "source": "TCGA (48% altered, n=64)",
+      "genes": [
+        "TP53"
+      ],
+      "samples_altered": 30,
+      "total_samples": 64,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:13.565674"
+    },
+    "tmprss2_erg": {
+      "weight": 0.016,
+      "source": "TCGA (1% altered, n=64)",
+      "genes": [
+        "ERG",
+        "ETV1"
+      ],
+      "samples_altered": 1,
+      "total_samples": 64,
+      "extraction_type": "mutation_proxy",
+      "extracted_at": "2025-11-05T04:36:13.565823"
+    }
+  },
+  "pancreatic_cancer": {
+    "kras_signaling": {
+      "weight": 0.854,
+      "source": "TCGA (85% altered, n=96)",
+      "genes": [
+        "KRAS"
+      ],
+      "samples_altered": 81,
+      "total_samples": 96,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:15.766481"
+    },
+    "tp53": {
+      "weight": 0.781,
+      "source": "TCGA (78% altered, n=96)",
+      "genes": [
+        "TP53"
+      ],
+      "samples_altered": 74,
+      "total_samples": 96,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:15.766675"
+    },
+    "smad4_tgf_beta": {
+      "weight": 0.24,
+      "source": "TCGA (24% altered, n=96)",
+      "genes": [
+        "SMAD4"
+      ],
+      "samples_altered": 23,
+      "total_samples": 96,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:15.766835"
+    },
+    "cdkn2a": {
+      "weight": 0.25,
+      "source": "TCGA (25% altered, n=96)",
+      "genes": [
+        "CDKN2A"
+      ],
+      "samples_altered": 24,
+      "total_samples": 96,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:15.767000"
+    },
+    "ddr": {
+      "weight": 0.073,
+      "source": "TCGA (7% altered, n=96)",
+      "genes": [
+        "BRCA1",
+        "BRCA2",
+        "ATM"
+      ],
+      "samples_altered": 7,
+      "total_samples": 96,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:15.767159"
+    }
+  },
+  "glioblastoma": {
+    "egfr_signaling": {
+      "weight": 0.366,
+      "source": "TCGA (36% altered, n=82)",
+      "genes": [
+        "EGFR"
+      ],
+      "samples_altered": 30,
+      "total_samples": 82,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:17.988440"
+    },
+    "pten_pi3k_akt": {
+      "weight": 0.671,
+      "source": "TCGA (67% altered, n=82)",
+      "genes": [
+        "PTEN",
+        "PIK3CA",
+        "PIK3R1"
+      ],
+      "samples_altered": 55,
+      "total_samples": 82,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:17.988650"
+    },
+    "tp53_rb": {
+      "weight": 0.488,
+      "source": "TCGA (48% altered, n=82)",
+      "genes": [
+        "TP53",
+        "RB1"
+      ],
+      "samples_altered": 40,
+      "total_samples": 82,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:17.988815"
+    },
+    "angiogenesis": {
+      "weight": 0.0,
+      "source": "TCGA (0% altered, n=82)",
+      "genes": [
+        "VEGFA"
+      ],
+      "samples_altered": 0,
+      "total_samples": 82,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:17.988941"
+    },
+    "idh1": {
+      "weight": 0.085,
+      "source": "TCGA (8% altered, n=82)",
+      "genes": [
+        "IDH1"
+      ],
+      "samples_altered": 6,
+      "total_samples": 82,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:17.989088"
+    }
+  },
+  "leukemia": {
+    "flt3_signaling": {
+      "weight": 0.434,
+      "source": "TCGA (43% altered, n=136)",
+      "genes": [
+        "FLT3"
+      ],
+      "samples_altered": 59,
+      "total_samples": 136,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:24.239262"
+    },
+    "idh1_idh2": {
+      "weight": 0.279,
+      "source": "TCGA (27% altered, n=136)",
+      "genes": [
+        "IDH1",
+        "IDH2"
+      ],
+      "samples_altered": 37,
+      "total_samples": 136,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:24.239495"
+    },
+    "npm1": {
+      "weight": 0.397,
+      "source": "TCGA (39% altered, n=136)",
+      "genes": [
+        "NPM1"
+      ],
+      "samples_altered": 53,
+      "total_samples": 136,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:24.239693"
+    },
+    "tp53": {
+      "weight": 0.118,
+      "source": "TCGA (11% altered, n=136)",
+      "genes": [
+        "TP53"
+      ],
+      "samples_altered": 16,
+      "total_samples": 136,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:24.239878"
+    },
+    "cell_differentiation": {
+      "weight": 0.235,
+      "source": "TCGA (23% altered, n=136)",
+      "genes": [
+        "CEBPA",
+        "RUNX1"
+      ],
+      "samples_altered": 31,
+      "total_samples": 136,
+      "extraction_type": "mutation",
+      "extracted_at": "2025-11-05T04:36:24.240062"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "patient_id": "AYESHA_BASELINE",
+  "disease": "ovarian",
+  "stage": "IVB",
+  "mutations": [
+    { "gene": "MBD4", "hgvs_p": "p.E322Vfs*10", "consequence": "frameshift_variant" },
+    { "gene": "TP53", "hgvs_p": "p.R175H", "consequence": "missense_variant" }
+  ],
+  "ca125_data": {
+    "baseline": 2842,
+    "current": 2842,
+    "cycle": 0,
+    "unit": "U/mL"
+  },
+  "clinical_context": {
+    "treatment_line": "1L",
+    "current_regimen": "carboplatin_paclitaxel"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

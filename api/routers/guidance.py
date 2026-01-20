@@ -412,15 +412,47 @@ async def guidance_synthetic_lethality(request: Dict[str, Any]):
         # Fast-path: if DDR genes present, short-circuit and suggest platinum without heavy upstream calls
         # Enable via GUIDANCE_FAST (default on). This prevents large fan-out and timeouts for HRD benchmarks.
         from collections import defaultdict
-        dna_repair_genes = {"BRCA1","BRCA2","ATM","ATR","CHEK2"}
+        # DDR/HRR genes that suggest synthetic lethality with PARP/platinum
+        dna_repair_genes = {"BRCA1","BRCA2","ATM","ATR","CHEK2","MBD4","PALB2","RAD51C","RAD51D"}
+        # BER pathway genes specifically (MBD4 is BER - Base Excision Repair)
+        ber_genes = {"MBD4", "MUTYH", "OGG1", "NTHL1"}
+        # HRR genes
+        hrr_genes = {"BRCA1", "BRCA2", "PALB2", "RAD51C", "RAD51D"}
+        
         fast_enabled = os.getenv("GUIDANCE_FAST", "1").strip() not in {"0", "false", "False"}
         by_gene = defaultdict(list)
         for v in mutations:
             if v.get("gene"):
                 by_gene[v["gene"].strip().upper()].append(v)
-        if fast_enabled and any(g in dna_repair_genes for g in by_gene.keys()):
+        
+        genes_present = set(by_gene.keys())
+        
+        if fast_enabled and (genes_present & dna_repair_genes):
+            # Determine if synthetic lethality detected
+            has_ber = bool(genes_present & ber_genes)  # MBD4 = BER deficiency
+            has_hrr = bool(genes_present & hrr_genes)  # BRCA1/2 = HRR deficiency
+            has_tp53 = "TP53" in genes_present
+            
+            # MBD4 homozygous + TP53 = synthetic lethality with PARP
+            if has_ber and has_tp53:
+                therapy = "PARP inhibitor (synthetic lethality: BER + checkpoint bypass)"
+            elif has_ber:
+                therapy = "PARP inhibitor (BER deficiency - synthetic lethality)"
+            elif has_hrr:
+                therapy = "PARP inhibitor (HRD - synthetic lethality)"
+            else:
+                therapy = "platinum (DDR deficiency)"
+            
             return {
-                "suggested_therapy": "platinum",
+                "suggested_therapy": therapy,
+                "synthetic_lethality_detected": has_ber or has_hrr,
+                "pathway_disruption": {
+                    "BER": 1.0 if has_ber else 0.0,
+                    "HRR": 1.0 if has_hrr else 0.0,
+                    "CHECKPOINT": 0.7 if has_tp53 else 0.0
+                },
+                "genes_detected": list(genes_present & dna_repair_genes),
+                "parp_eligible": has_ber or has_hrr,
                 "damage_report": damage_report,
                 "essentiality_report": essentiality_report,
                 "guidance": None,
@@ -470,7 +502,7 @@ async def guidance_synthetic_lethality(request: Dict[str, Any]):
 
             # Map damage+dependency to therapy class (heuristic)
             # If any DNA repair gene appears (BRCA1/2, ATM, ATR), suggest platinum
-            dna_repair_genes = {"BRCA1","BRCA2","ATM","ATR","CHEK2"}
+            dna_repair_genes = {"BRCA1","BRCA2","ATM","ATR","CHEK2","MBD4","PALB2","RAD51C","RAD51D"}
             suggest = None
             if any(g in dna_repair_genes for g in by_gene.keys()):
                 suggest = "platinum"

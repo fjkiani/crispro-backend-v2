@@ -1,0 +1,38 @@
+{
+  "run_meta": {
+    "tier3": "oncology-coPilot/oncology-backend-minimal/data/validation/sae_cohort/checkpoints/Tier3_validation_cohort.json",
+    "diamonds": "oncology-coPilot/oncology-backend-minimal/api/resources/sae_feature_mapping.true_sae_diamonds.v1.json",
+    "positive_class": "resistant_refractory"
+  },
+  "results": [
+    {
+      "method": "mean_of_sum",
+      "auroc_resistant": 0.707,
+      "n_labeled": 149,
+      "notes": "higher score = more resistant",
+      "rank": 1
+    },
+    {
+      "method": "sum_of_max",
+      "auroc_resistant": 0.7026666666666667,
+      "n_labeled": 149,
+      "notes": "higher score = more resistant",
+      "rank": 2
+    },
+    {
+      "method": "top3_mean",
+      "auroc_resistant": 0.7026666666666667,
+      "n_labeled": 149,
+      "notes": "higher score = more resistant",
+      "rank": 3
+    },
+    {
+      "method": "max_of_max",
+      "auroc_resistant": 0.698,
+      "n_labeled": 149,
+      "notes": "higher score = more resistant",
+      "rank": 4
+    }
+  ],
+  "interpretation": "Compares alternative ways to aggregate per-variant diamond hits into a patient-level resistance score."
+}

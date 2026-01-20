@@ -1,0 +1,150 @@
+{
+  "patient_id": "TEST-CARE-001",
+  "disease": "ovarian_cancer",
+  "phase": "planning",
+  "created_at": "2025-12-22T19:23:59.755377",
+  "updated_at": "2025-12-22T19:23:59.755542",
+  "patient_profile": {
+    "current_medications": [
+      "carboplatin"
+    ],
+    "germline_panel": {
+      "variants": [
+        {
+          "gene": "BRCA1",
+          "chrom": "17",
+          "pos": 41276045,
+          "ref": "A",
+          "alt": "G"
+        }
+      ]
+    }
+  },
+  "biomarker_profile": null,
+  "resistance_prediction": null,
+  "drug_ranking": null,
+  "trial_matches": null,
+  "nutrition_plan": null,
+  "care_plan": {
+    "patient_id": "TEST-CARE-001",
+    "disease": "ovarian_cancer",
+    "generated_at": "2025-12-22T19:24:00.114939",
+    "error": "'AgentExecution' object has no attribute 'agent_name'",
+    "sections": []
+  },
+  "monitoring_config": null,
+  "mechanism_vector": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "mutations": [
+    {
+      "gene": "BRCA1",
+      "type": "germline",
+      "chrom": "17",
+      "pos": 41276045,
+      "ref": "A",
+      "alt": "G"
+    }
+  ],
+  "data_quality_flags": [],
+  "alerts": [],
+  "history": [],
+  "agent_executions": [
+    {
+      "agent_id": "toxicity_risk",
+      "started_at": "2025-12-22T19:23:59.755842",
+      "completed_at": "2025-12-22T19:24:00.114204",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "patient_id": "TEST-CARE-001",
+        "toxicity_assessments": [
+          {
+            "drug_name": "carboplatin",
+            "drug_moa": "platinum_agent",
+            "risk_score": 1.0,
+            "risk_level": "HIGH",
+            "confidence": 0.48,
+            "reason": "MoA overlaps toxicity pathways with germline variants",
+            "factors": [
+              {
+                "type": "pathway",
+                "detail": "MoA overlaps dna repair pathway (germline variants present)",
+                "weight": 1.0,
+                "confidence": 0.6
+              }
+            ],
+            "mitigating_foods": [
+              {
+                "compound": "NAC (N-Acetyl Cysteine)",
+                "dose": "600mg twice daily",
+                "timing": "post-chemo (not during infusion)",
+                "mechanism": "Glutathione precursor, supports DNA repair enzymes",
+                "evidence_tier": "MODERATE",
+                "pathway": "dna_repair",
+                "care_plan_ref": "Section 7: Antioxidants - After chemo: Use - helps recovery"
+              },
+              {
+                "compound": "Vitamin D3",
+                "dose": "5000 IU daily",
+                "timing": "continuous, with fatty meal",
+                "mechanism": "Modulates DNA repair gene expression (VDR-mediated)",
+                "evidence_tier": "MODERATE",
+                "pathway": "dna_repair",
+                "care_plan_ref": "Section 7: Vitamin D - HRD context repletion (DNA repair support)"
+              },
+              {
+                "compound": "Folate (5-MTHF)",
+                "dose": "400-800mcg daily",
+                "timing": "continuous",
+                "mechanism": "DNA synthesis and repair cofactor",
+                "evidence_tier": "MODERATE",
+                "pathway": "dna_repair",
+                "care_plan_ref": "DNA repair support - continuous supplementation"
+              }
+            ]
+          }
+        ],
+        "summary": {
+          "total_assessed": 1,
+          "high_risk_count": 1,
+          "moderate_risk_count": 0,
+          "low_risk_count": 0,
+          "pharmacogene_flags": []
+        },
+        "provenance": {
+          "method": "toxicity_risk_agent",
+          "run_id": "e2d64fcf-359d-49e0-a54d-6638927e63ba",
+          "timestamp": "2025-12-22T19:24:00.114202Z"
+        }
+      },
+      "duration_ms": 358.362
+    },
+    {
+      "agent_id": "care_plan",
+      "started_at": "2025-12-22T19:24:00.114861",
+      "completed_at": "2025-12-22T19:24:00.114942",
+      "status": "complete",
+      "error": null,
+      "output_summary": {
+        "sections": 0
+      },
+      "duration_ms": 0.081
+    },
+    {
+      "agent_id": "care_plan",
+      "started_at": "2025-12-22T19:24:00.114864",
+      "completed_at": "2025-12-22T19:24:00.114873",
+      "status": "error",
+      "error": "'AgentExecution' object has no attribute 'agent_name'",
+      "output_summary": null,
+      "duration_ms": 0.009000000000000001
+    }
+  ]
+}

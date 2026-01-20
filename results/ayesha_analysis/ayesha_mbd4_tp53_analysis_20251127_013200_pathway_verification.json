@@ -1,0 +1,69 @@
+{
+  "timestamp": "2025-11-27T03:34:52.737991",
+  "analysis_file": "oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json",
+  "pathway_mappings": [
+    {
+      "gene": "MBD4",
+      "expected_pathway": "ddr",
+      "checks": {
+        "kegg": {
+          "verified": true,
+          "expected": "ddr",
+          "actual": [
+            "Base excision repair",
+            "DNA repair",
+            "DNA damage response"
+          ],
+          "confidence": 0.9,
+          "error": null
+        },
+        "reactome": {
+          "verified": true,
+          "expected": "ddr",
+          "actual": [
+            "Base excision repair",
+            "DNA repair"
+          ],
+          "confidence": 0.9,
+          "error": null
+        }
+      }
+    },
+    {
+      "gene": "TP53",
+      "expected_pathway": "ddr",
+      "checks": {
+        "kegg": {
+          "verified": true,
+          "expected": "ddr",
+          "actual": [
+            "p53 signaling pathway",
+            "Cell cycle checkpoint",
+            "DNA damage response"
+          ],
+          "confidence": 0.9,
+          "error": null
+        },
+        "reactome": {
+          "verified": true,
+          "expected": "ddr",
+          "actual": [
+            "TP53 regulates transcription",
+            "Cell cycle checkpoint",
+            "DNA damage response"
+          ],
+          "confidence": 0.9,
+          "error": null
+        }
+      }
+    }
+  ],
+  "formula_check": null,
+  "tcga_validation": null,
+  "overall_score": {
+    "total_checks": 4,
+    "passed": 4,
+    "failed": 0,
+    "pass_rate": 1.0
+  }
+}

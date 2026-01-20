@@ -8,6 +8,11 @@ from pydantic import BaseModel
 from typing import Dict, Any, List, Optional
 import json
 from api.routers import evidence
+from api.routers import ayesha_orchestrator_v2
+from api.routers import ayesha_trials
+from api.routers import efficacy
+from api.routers import care
+from api.routers import io_selection
 
 app = FastAPI(
     title="CrisPRO Oncology Backend v2",
@@ -181,6 +186,51 @@ try:
     print("✅ Evidence router included successfully")
 except Exception as e:
     print(f"❌ Error including evidence router: {e}")
+    import traceback
+    traceback.print_exc()
+
+# Include Ayesha Complete Care v2 orchestrator
+try:
+    app.include_router(ayesha_orchestrator_v2.router)
+    print("✅ Ayesha Complete Care v2 router included successfully")
+except Exception as e:
+    print(f"❌ Error including Ayesha router: {e}")
+    import traceback
+    traceback.print_exc()
+
+# Include Ayesha Trials router (for SOC, CA-125, trials)
+try:
+    app.include_router(ayesha_trials.router)
+    print("✅ Ayesha Trials router included successfully")
+except Exception as e:
+    print(f"❌ Error including Ayesha Trials router: {e}")
+    import traceback
+    traceback.print_exc()
+
+# Include Efficacy router (for WIWFM)
+try:
+    app.include_router(efficacy.router)
+    print("✅ Efficacy router included successfully")
+except Exception as e:
+    print(f"❌ Error including Efficacy router: {e}")
+    import traceback
+    traceback.print_exc()
+
+# Include Care router (for resistance playbook)
+try:
+    app.include_router(care.router)
+    print("✅ Care router included successfully")
+except Exception as e:
+    print(f"❌ Error including Care router: {e}")
+    import traceback
+    traceback.print_exc()
+
+# Include IO selouter (safest IO regimen selection)
+try:
+    app.include_router(io_selection.router)
+    print("✅ IO selection router included successfully")
+except Exception as e:
+    print(f"❌ Error including IO selection router: {e}")
     import traceback
     traceback.print_exc()
 

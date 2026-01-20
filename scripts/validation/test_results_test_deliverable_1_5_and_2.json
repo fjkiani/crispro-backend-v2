@@ -1,0 +1,43 @@
+{
+  "deliverable_1_5": {
+    "test_name": "Deliverable 1.5 Backend",
+    "passed": true,
+    "details": [
+      "_compute_sae_diagnostics method exists",
+      "Mock trial created with sae_source and ddr_bin_score",
+      "Found 47 trials with MoA vectors"
+    ],
+    "errors": []
+  },
+  "deliverable_2": {
+    "test_name": "Deliverable 2 Mechanism Fit",
+    "passed": true,
+    "details": [
+      "Loaded 47 trials",
+      "Mechanism fit claim verified",
+      "Only 47 trials available (target: 50+)"
+    ],
+    "errors": [],
+    "metrics": {
+      "total_trials": 47,
+      "ddr_trials": 31,
+      "non_ddr_trials": 16,
+      "ddr_mean_fit": 0.9827456955168785,
+      "ddr_min_fit": 0.7947026838323166,
+      "ddr_max_fit": 0.9890137959063646,
+      "ddr_count": 31,
+      "non_ddr_mean_fit": 0.045948550895988774,
+      "non_ddr_min_fit": 0.0,
+      "non_ddr_max_fit": 0.13486551762359517,
+      "non_ddr_count": 16,
+      "claim_passed": true,
+      "mean_ddr_fit": 0.9827456955168785,
+      "mean_non_ddr_fit": 0.045948550895988774,
+      "separation_delta": 0.9367971446208897,
+      "total_trials_ranked": 47,
+      "aligned_trials": 31,
+      "compression_ratio": 0.6595744680851063,
+      "reduction_pct": 34.04255319148937
+    }
+  }
+}

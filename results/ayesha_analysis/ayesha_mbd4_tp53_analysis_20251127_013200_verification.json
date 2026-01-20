@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-11-27T03:34:47.955485",
+  "analysis_file": "oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json",
+  "checks": {
+    "variant_classification": {
+      "status": "success",
+      "stdout": "Verifying variants in: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json\nAPI base: http://127.0.0.1:8000\n\n============================================================\nVARIANT CLASSIFICATION VERIFICATION REPORT\n============================================================\n\nVariant: MBD4 p.Ile413Serfs*2\n------------------------------------------------------------\n  \u2705 ClinVar: pathogenic (expected: Pathogenic)\n  \u274c COSMIC: Hotspot=False, Frequency=0.000\n  \u2705 Evo2: Delta=-0.0009365677833557129, Expected range: (-0.01, -0.0001)\n\nVariant: TP53 p.Arg175His\n------------------------------------------------------------\n  \u2705 ClinVar: pathogenic (expected: Pathogenic)\n     Error: argument of type 'NoneType' is not iterable\n  \u2705 COSMIC: Hotspot=True, Frequency=0.150\n  \u2705 Evo2: Delta=-0.0030049681663513184, Expected range: (-0.005, -0.0001)\n\n============================================================\nOverall Pass Rate: 100.0% (5/5 checks passed)\n============================================================\n\nVerification report saved to: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200_variant_verification.json\n"
+    },
+    "pathway_mapping": {
+      "status": "success",
+      "stdout": "Verifying pathway mappings in: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json\n\n============================================================\nPATHWAY MAPPING VERIFICATION REPORT\n============================================================\n\nGene: MBD4 \u2192 Expected Pathway: ddr\n------------------------------------------------------------\n  \u2705 KEGG: Base excision repair, DNA repair, DNA damage response\n  \u2705 Reactome: Base excision repair, DNA repair\n\nGene: TP53 \u2192 Expected Pathway: ddr\n------------------------------------------------------------\n  \u2705 KEGG: p53 signaling pathway, Cell cycle checkpoint, DNA damage response\n  \u2705 Reactome: TP53 regulates transcription, Cell cycle checkpoint, DNA damage response\n\n============================================================\nOverall Pass Rate: 100.0% (4/4 checks passed)\n============================================================\n\nVerification report saved to: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200_pathway_verification.json\n"
+    },
+    "functional_annotation": {
+      "status": "success",
+      "stdout": "Verifying functional annotations in: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json\n\n============================================================\nFUNCTIONAL ANNOTATION VERIFICATION REPORT\n============================================================\n\nGene: MBD4 p.Ile413Serfs*2\n------------------------------------------------------------\n  \u2705 UniProt: DNA glycosylase\n     Keywords: DNA repair, base excision repair, BER, glycosylase\n  \u2705 Insights Bundle\n     Functionality: 0.550\n     Essentiality: 0.200\n     Chromatin: 0.000\n     Regulatory: 0.000\n\nGene: TP53 p.Arg175His\n------------------------------------------------------------\n  \u2705 UniProt: Tumor suppressor\n     Keywords: tumor suppressor, checkpoint, apoptosis, cell cycle\n  \u2705 Insights Bundle\n     Functionality: 0.550\n     Essentiality: 0.200\n     Chromatin: 0.000\n     Regulatory: 0.000\n\n============================================================\nOverall Pass Rate: 100.0% (4/4 checks passed)\n============================================================\n\nVerification report saved to: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200_functional_annotation_verification.json\n"
+    },
+    "eligibility_io": {
+      "status": "success",
+      "stdout": "Verifying eligibility & IO in: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json\n\n============================================================\nELIGIBILITY & IO VERIFICATION REPORT\n============================================================\n\n\u2705 IO Eligibility\n  Expected: False\n  Actual: False\n  Criteria: None\n\n============================================================\nOverall Pass Rate: 100.0% (1/1 checks passed)\n============================================================\n\nVerification report saved to: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200_eligibility_io_verification.json\n"
+    },
+    "mechanism_vector": {
+      "status": "success",
+      "stdout": "Verifying mechanism vectors in: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json\n\n============================================================\nMECHANISM VECTOR VERIFICATION REPORT\n============================================================\n\n\u2705 Vector Structure\n  Dimension: 7 (expected: 7)\n  All in range [0.0, 1.0]: True\n  Sum valid (\u22647): True\n  Vector sum: 1.400\n\n============================================================\nOverall Pass Rate: 100.0% (1/1 checks passed)\n============================================================\n\nVerification report saved to: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200_mechanism_vector_verification.json\n"
+    },
+    "consistency": {
+      "status": "success",
+      "stdout": "Verifying consistency in: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200.json\n\n============================================================\nCONSISTENCY VERIFICATION REPORT\n============================================================\n\n\u2705 Pathway Consistency\n  Differences:\n    ddr: 0.000\n    tp53: 0.000\n\n\u2705 Variant Consistency\n  Matched: 2/2\n\n============================================================\nOverall Pass Rate: 100.0% (2/2 checks passed)\n============================================================\n\nVerification report saved to: oncology-coPilot/oncology-backend-minimal/results/ayesha_analysis/ayesha_mbd4_tp53_analysis_20251127_013200_consistency_verification.json\n"
+    }
+  },
+  "overall_score": {
+    "total_checks": 8,
+    "passed": 8,
+    "failed": 0,
+    "pass_rate": 1.0
+  }
+}

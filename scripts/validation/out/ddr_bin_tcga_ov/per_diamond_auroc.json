@@ -1,0 +1,82 @@
+{
+  "run_meta": {
+    "tier3": "oncology-coPilot/oncology-backend-minimal/data/validation/sae_cohort/checkpoints/Tier3_validation_cohort.json",
+    "diamonds": "oncology-coPilot/oncology-backend-minimal/api/resources/sae_feature_mapping.true_sae_diamonds.v1.json",
+    "positive_class": "resistant_refractory",
+    "n_labeled": 149
+  },
+  "results": [
+    {
+      "feature_index": 9738,
+      "auroc_resistant": 0.7596666666666667,
+      "n_patients": 149,
+      "n_nonzero": 25,
+      "pct_nonzero": 16.778523489932887,
+      "rank": 1
+    },
+    {
+      "feature_index": 12893,
+      "auroc_resistant": 0.751,
+      "n_patients": 149,
+      "n_nonzero": 35,
+      "pct_nonzero": 23.48993288590604,
+      "rank": 2
+    },
+    {
+      "feature_index": 27607,
+      "auroc_resistant": 0.7466666666666667,
+      "n_patients": 149,
+      "n_nonzero": 40,
+      "pct_nonzero": 26.845637583892618,
+      "rank": 3
+    },
+    {
+      "feature_index": 16337,
+      "auroc_resistant": 0.746,
+      "n_patients": 149,
+      "n_nonzero": 31,
+      "pct_nonzero": 20.80536912751678,
+      "rank": 4
+    },
+    {
+      "feature_index": 26220,
+      "auroc_resistant": 0.7323333333333333,
+      "n_patients": 149,
+      "n_nonzero": 39,
+      "pct_nonzero": 26.174496644295303,
+      "rank": 5
+    },
+    {
+      "feature_index": 31362,
+      "auroc_resistant": 0.732,
+      "n_patients": 149,
+      "n_nonzero": 28,
+      "pct_nonzero": 18.79194630872483,
+      "rank": 6
+    },
+    {
+      "feature_index": 6020,
+      "auroc_resistant": 0.7296666666666667,
+      "n_patients": 149,
+      "n_nonzero": 31,
+      "pct_nonzero": 20.80536912751678,
+      "rank": 7
+    },
+    {
+      "feature_index": 22868,
+      "auroc_resistant": 0.726,
+      "n_patients": 149,
+      "n_nonzero": 32,
+      "pct_nonzero": 21.476510067114095,
+      "rank": 8
+    },
+    {
+      "feature_index": 1407,
+      "auroc_resistant": 0.6836666666666666,
+      "n_patients": 149,
+      "n_nonzero": 63,
+      "pct_nonzero": 42.281879194630875,
+      "rank": 9
+    }
+  ]
+}

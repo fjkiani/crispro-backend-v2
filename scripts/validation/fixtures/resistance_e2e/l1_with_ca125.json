@@ -1,0 +1,45 @@
+{
+  "description": "L2 completeness: mutations + CA-125 series (serial biomarker present)",
+  "expected_input_level": "L2",
+  "expected_confidence_cap": 0.8,
+  "expected_flags": ["INPUT_LEVEL_L2"],
+  "patient_profile": {
+    "patient_id": "fixture-ov-l1-001",
+    "disease": "ovarian_cancer_hgs",
+    "tumor_context": {
+      "somatic_mutations": [
+        {
+          "gene": "MBD4",
+          "hgvs_p": "p.Ile413Serfs*2",
+          "consequence": "frameshift_variant"
+        },
+        {
+          "gene": "TP53",
+          "hgvs_p": "p.Arg175His",
+          "consequence": "missense_variant"
+        }
+      ]
+    },
+    "biomarker_history": {
+      "ca125_history": [
+        {
+          "date": "2025-01-15",
+          "value": 450.0,
+          "unit": "U/mL"
+        },
+        {
+          "date": "2025-02-01",
+          "value": 380.0,
+          "unit": "U/mL"
+        },
+        {
+          "date": "2025-02-15",
+          "value": 420.0,
+          "unit": "U/mL"
+        }
+      ]
+    },
+    "hrd_score": null
+  }
+}
+
