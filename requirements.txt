@@ -24,3 +24,6 @@ structlog>=23.0.0
 # Testing dependencies moved to requirements-dev.txt
 # Install dev deps with: pip install -r requirements-dev.txt
 
+
+# Logging - loguru for structured logging
+loguru>=0.7.0
