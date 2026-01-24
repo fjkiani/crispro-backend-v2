@@ -132,6 +132,14 @@ try:
 except ImportError as e:
     logger.warning(f"⚠️ IO selection router not available: {e}")
 
+# Include auth router
+try:
+    from api.routers import auth as auth_router
+    app.include_router(auth_router.router)
+    logger.info("✅ Auth router registered")
+except ImportError as e:
+    logger.warning(f"⚠️ Auth router not available: {e}")
+
 @app.on_event("startup")
 async def startup_event():
     """Initialize services on startup."""
